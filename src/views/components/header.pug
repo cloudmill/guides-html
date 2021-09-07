@@ -10,10 +10,12 @@ mixin header
               .header__left 
                 .header__left-col
                   a.header__logo(href="#")  
-
+                    img.header__img(src="assets/images/logo-black.jpg", alt="")
                 .header__left-col 
-                  a.header__phone(href="tel:+78124413163") 
-                    |+7 812 441-31-63
+                  .header__phone
+                    a.header__phone-link(href="tel:+78124413163") 
+                      |#{data.phone}
+                    .header__phone-icon
                   .header__category 
                     .header__category-item 
                       a.header__category-link(href="#") 
@@ -27,7 +29,7 @@ mixin header
                   +nav
                   .header__search
                     .header__search-item 
-                      input.header__header__search-input(type="text" placeholder="Search")
+                      input.header__search-input(type="text" placeholder="Search")
                       .header__search-button 
                         |12
                 .header__right-col

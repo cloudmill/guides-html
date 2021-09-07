@@ -1,0 +1,123 @@
+.header {
+  border-bottom: 1px solid $color-light-gray;
+
+  &__inner {
+    padding: 10px 0;
+    @media (min-width: $breakpoint) {
+      padding: 20px 0;
+    }
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      @media (min-width: $breakpoint) {
+        width: calc(#{$col-part-d} * 6);
+      }
+    }
+    &:nth-child(2) {
+      @media (min-width: $breakpoint) {
+        width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+      }
+    }
+  }
+
+  &__left {
+    display: flex;
+    // @media (min-width: ) {
+      
+    // }
+  }
+  &__left-col {
+    &:nth-child(1) {
+      @media (min-width: $breakpoint) {
+        margin-right: 82px;
+      }
+    }
+    
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    width: 36px;
+    @media (min-width: $breakpoint) {
+      width: 105px;
+    }
+  }
+
+  &__phone {
+
+  }
+  &__phone-link {
+    font-weight: 500;
+    transition: $transition;
+
+    &:hover {
+      color: $color-blue;
+    }
+  }
+
+  &__category {
+    @media (min-width: $breakpoint) {
+      margin-top: 22px;
+
+      display: flex;
+    }
+  }
+  &__category-item {
+    &:not(:first-child) {
+      @media (min-width: $breakpoint - 1px) {
+        margin-left: 51px;
+      }
+    }
+  }
+  &__category-link {
+    font-weight: 500;
+    transition: $transition;
+
+    &:hover {
+      color: $color-blue;
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__right-col {
+    @media (min-width: $breakpoint) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &:nth-child(1) {
+      @media (min-width: $breakpoint) {
+        flex-shrink: 0;
+        width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+      }
+    }
+  }
+
+  &__search {}
+  &__search-item {
+    position: relative;
+  }
+  &__search-input {
+    padding: 13px 20px;
+
+    width: 100%;
+
+    border-radius: 14px;
+    outline: none;
+    border: none;
+    background: rgba($color-black, 0.05);
+  }
+}

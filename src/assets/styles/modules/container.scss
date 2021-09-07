@@ -1,0 +1,6 @@
+.container {
+  padding: 0 $col-pad-m;
+  @media (min-width: $breakpoint) {
+    padding: 0 $col-pad-d;
+  }
+}
