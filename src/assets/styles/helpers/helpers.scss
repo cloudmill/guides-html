@@ -72,3 +72,21 @@ $col-width-d: '((100vw - (#{$col-pad-d} * 2) - (#{$col-gap-d} * #{$col-count-d -
 $col-part-m: '(#{$col-width-m} + #{$col-gap-m})';
 $col-part-d: '(#{$col-width-d} + #{$col-gap-d})';
 
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder{
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::placeholder  {
+    @content;
+  }
+}
