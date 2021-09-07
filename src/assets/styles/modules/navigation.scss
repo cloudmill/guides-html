@@ -1,0 +1,9 @@
+.navigation {
+
+  &__inner {
+    margin-bottom: 10px;
+    @media (min-width: $breakpoint) {
+      margin-bottom: 20px;
+    }
+  }
+}

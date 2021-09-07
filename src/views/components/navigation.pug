@@ -1,0 +1,18 @@
+mixin navigation  
+  .navigation   
+    .navigation__inner
+      .breadcrumb
+        ul.breadcrumb__list 
+          li.breadcrumb__item 
+            a.breadcrumb__link(href="#") 
+              |Home
+          if (attributes.items)
+            each item in attributes.items
+              li.breadcrumb__item 
+                a.breadcrumb__link(href="#") 
+                  |#{item}
+          li.breadcrumb__item.breadcrumb__item--active 
+            a.breadcrumb__link(href="#")
+              |#{attributes.page}
+    h1 
+      |#{attributes.page}
