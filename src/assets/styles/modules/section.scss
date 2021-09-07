@@ -1,0 +1,19 @@
+.section {
+  margin-top: 60px;
+  @media (min-width: $breakpoint) {
+    margin-top: 100px;
+  }
+
+  &--first {
+    margin-top: 70px;
+    @media (min-width: $breakpoint) {
+      margin-top: 173px;
+    }
+  }
+  &--md {
+    margin-top: 20px;
+    @media (min-width: $breakpoint) {
+      margin-top: 50px;
+    }
+  }
+}
