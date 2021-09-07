@@ -1,0 +1,64 @@
+// fonts
+
+$fs: 16px;
+
+$ff-main: 'DM Sans', sans-serif;
+$ff-2: 'Agoka', sans-serif;
+$ff-3: 'BonVivant', sans-serif;
+
+@mixin f-main($font-weight: 400) {
+  font-weight: $font-weight;
+  font-family: $ff-main;
+}
+
+@mixin f-2($font-weight: 400) {
+  font-weight: $font-weight;
+  font-family: $ff-2;
+}
+
+@mixin f-3($font-weight: 400) {
+  font-weight: $font-weight;
+  font-family: $ff-3;
+}
+
+@mixin fsl($font-size, $line-height: null) {
+  font-size: unquote('#{$font-size / $fs}rem');
+  @if $line-height {
+    line-height: $line-height;
+  }
+}
+
+// media breakpoints
+$breakpoint-xs: 375px;
+$breakpoint-s: 576px;
+$breakpoint-m: 768px;
+$breakpoint-m: 768px;
+$breakpoint-t: 1024px;
+$breakpoint: 1280px;
+$breakpoint-l: 1366px;
+$breakpoint-ll: 1440px;
+$breakpoint-xl: 1680px;
+$breakpoint-xxl: 1920px;
+
+// color vars
+$color-black: #292929;
+$color-white: #fff;
+
+
+
+// grid columns
+$col-count-m: 4;
+$col-count-d: 12;
+
+$col-pad-m: 20px;
+$col-pad-d: 60px;
+
+$col-gap-m: 20px;
+$col-gap-d: 40px;
+
+$col-width-m: '((100vw - (#{$col-pad-m} * 2) - (#{$col-gap-m} * #{$col-count-m - 1})) / #{$col-count-m})';
+$col-width-d: '((100vw - (#{$col-pad-d} * 2) - (#{$col-gap-d} * #{$col-count-d - 1})) / #{$col-count-d})';
+
+$col-part-m: '(#{$col-width-m} + #{$col-gap-m})';
+$col-part-d: '(#{$col-width-d} + #{$col-gap-d})';
+

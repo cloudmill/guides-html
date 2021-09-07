@@ -1,5 +1,7 @@
 
 
+include ../components/grid-test
+
 doctype html
 html(lang='en')
   head
@@ -11,14 +13,16 @@ html(lang='en')
     meta(name="viewport", content="width=device-width, initial-scale=1")
     meta(name="format-detection", content="telephone=no")
     meta(name="format-detection", content="address=no")
+    link(href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet")
 
   body.body
+    +grid-test
+    .wrapper
+      block header
 
-    block header
+      main.main
+        block content
 
-    main.main
-      block content
+      block footer
 
-    block footer
-
-    block scripts
+      block scripts
