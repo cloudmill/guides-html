@@ -4,5 +4,25 @@
       "page": "main",
       "href": "main.html"
     }
+  ],
+  "nav": [
+    {
+      "link": "About"
+    },
+    {
+      "link": "Our guides"
+    },
+    {
+      "link": "FAQ"
+    },
+    {
+      "link": "Clients"
+    },
+    {
+      "link": "Contacts"
+    },
+    {
+      "link": "Landmarks"
+    }
   ]
 }
