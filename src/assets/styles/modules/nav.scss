@@ -1,0 +1,23 @@
+.nav {
+  
+
+  &__list {
+    @media (min-width: $breakpoint) {
+      display: flex;
+    }
+  }
+
+  &__item {
+    &:not(:first-child) {
+      @media (min-width: $breakpoint - 1px) {
+        margin-left: 36px;
+      }
+    }
+  }
+
+  &__link {
+    @media (min-width: $breakpoint) {
+      @include fsl(14px);
+    }
+  }
+}
