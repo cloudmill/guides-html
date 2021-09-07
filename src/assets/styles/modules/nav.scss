@@ -1,6 +1,4 @@
 .nav {
-  
-
   &__list {
     @media (min-width: $breakpoint) {
       display: flex;
@@ -18,6 +16,11 @@
   &__link {
     @media (min-width: $breakpoint) {
       @include fsl(14px);
+    }
+    transition: $transition;
+
+    &:hover {
+      color: $color-blue;
     }
   }
 }

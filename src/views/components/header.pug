@@ -27,19 +27,21 @@ mixin header
               .header__right  
                 .header__right-col
                   +nav
-                  .header__search
+                  form.header__search
                     .header__search-item 
                       input.header__search-input(type="text" placeholder="Search")
-                      .header__search-button 
-                        |12
+                      button.header__search-button(type="submit")
+                        +search-svg.header__search-icon
                 .header__right-col
                   .header__lang 
                     .header__lang-text 
                       |En 
                     .header__lang-icon 
-                      |6
-                  .header__store 
+                      +arrow-svg.header__lang-svg
+                  .header__store
                     .header__store-count 
-                      |4
+                      .header__store-num 
+                        |4
                     .header__store-icon
+                      +bag-svg
         .header__mobile
