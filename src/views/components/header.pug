@@ -1,0 +1,43 @@
+include ./nav
+
+mixin header  
+  header.header 
+    .container 
+      .header__inner
+        .header__header
+          .header__row 
+            .header__col
+              .header__left 
+                .header__left-col
+                  a.header__logo(href="#")  
+
+                .header__left-col 
+                  a.header__phone(href="tel:+78124413163") 
+                    |+7 812 441-31-63
+                  .header__category 
+                    .header__category-item 
+                      a.header__category-link(href="#") 
+                        |Shore excursions
+                    .header__category-item 
+                      a.header__category-link(href="#") 
+                        |For hotel guests
+            .header__col 
+              .header__right  
+                .header__right-col
+                  +nav
+                  .header__search
+                    .header__search-item 
+                      input.header__header__search-input(type="text" placeholder="Search")
+                      .header__search-button 
+                        |12
+                .header__right-col
+                  .header__lang 
+                    .header__lang-text 
+                      |En 
+                    .header__lang-icon 
+                      |6
+                  .header__store 
+                    .header__store-count 
+                      |4
+                    .header__store-icon
+        .header__mobile
