@@ -185,16 +185,16 @@ module.exports = env => {
 						['gifsicle', {interlaced: true}],
 						['mozjpeg', { quality: 70 }],
 						['optipng', {optimizationLevel: 5}],
-						[
-							'svgo',
-							{
-								plugins: [
-									{
-										removeViewBox: false,
-									},
-								],
-							},
-						],
+						// [
+						// 	'svgo',
+						// 	{
+						// 		plugins: [
+						// 			{
+						// 				removeViewBox: false,
+						// 			},
+						// 		],
+						// 	},
+						// ],
 					],
 				},
 			}),
