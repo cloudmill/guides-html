@@ -24,7 +24,7 @@ $ff-3: 'BonVivant', sans-serif;
 @mixin fsl($font-size, $line-height: null) {
   font-size: unquote('#{$font-size / $fs}rem');
   @if $line-height {
-    line-height: $line-height;
+    line-height: $line-height / 100%;
   }
 }
 

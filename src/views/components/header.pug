@@ -10,7 +10,7 @@ mixin header
               .header__left 
                 .header__left-col
                   a.header__logo(href="#")  
-                    img.header__img(src="assets/images/logo-black.jpg", alt="")
+                    img.header__img(src="assets/images/logo-black.png", alt="")
                 .header__left-col 
                   .header__phone
                     a.header__phone-link(href="tel:+78124413163") 
@@ -26,7 +26,7 @@ mixin header
             .header__col 
               .header__right  
                 .header__right-col
-                  +nav
+                  +nav(links = data.nav)
                   form.header__search
                     .header__search-item 
                       input.header__search-input(type="text" placeholder="Search")

@@ -25,6 +25,26 @@
       "link": "Landmarks"
     }
   ],
+  "navFooter": [
+    {
+      "link": "About"
+    },
+    {
+      "link": "Our guides"
+    },
+    {
+      "link": "Q&A"
+    },
+    {
+      "link": "Clients"
+    },
+    {
+      "link": "Contacts"
+    },
+    {
+      "link": "Landmarks"
+    }
+  ],
   "phone": "+7 812 441-31-63",
   "guides": [
     {
