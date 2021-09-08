@@ -71,5 +71,16 @@
       "src": "guide-3.jpg",
       "name": "Ira Borisova"
     }
+  ],
+  "mainReviews": [
+    {
+      "name": "Mulatka99"
+    },
+    {
+      "name": "Alena"
+    },
+    {
+      "name": "Igor"
+    }
   ]
 }

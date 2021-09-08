@@ -1,0 +1,44 @@
+.media-card {
+
+  display: flex;
+  justify-content: center;
+  
+  background: $color-beige;
+  border-radius: 20px;
+
+  &__inner {
+    margin-top: 30px;
+    @media (min-width: $breakpoint) {
+      margin-top: 40px;
+    }
+    @media (min-width: $breakpoint-xl) {
+      margin-top: 95px;
+    }
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__svg {
+    @media (max-width: $breakpoint - 1px) {
+      width: 60px;
+      height: 59px;
+    }
+  }
+
+  &__label {
+    margin-top: 10px;
+    @media (min-width: $breakpoint) {
+      margin-top: 28px;
+    }
+
+    text-align: center;
+    @include fsl(16px);
+    @media (min-width: $breakpoint) {
+      @include fsl(22px);
+    }
+  }
+}

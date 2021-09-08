@@ -1,0 +1,71 @@
+.reviews-card {
+  
+  border-radius: 10px;
+  border: 1px solid $color-blue;
+  
+  &__container {
+    padding: 20px;
+    @media (min-width: $breakpoint) {
+      padding: 40px;
+    }
+  }
+
+  &__top {
+    margin-bottom: 20px;
+    @media (min-width: $breakpoint) {
+      margin-bottom: 40px;
+    }
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-right: 10px;
+    @media (min-width: $breakpoint) {
+      margin-right: 20px;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__name {
+    font-weight: 500;
+    @include fsl(16px);
+    @media (min-width: $breakpoint) {
+      @include fsl(25px);
+    }
+  }
+
+  &__date {
+    color: $color-gray;
+    font-weight: 500;
+    @include fsl(12px);
+    @media (min-width: $breakpoint) {
+      @include fsl(14px);
+    }
+  }
+
+  &__content {
+    margin-bottom: 20px;
+    @media (min-width: $breakpoint) {
+      margin-bottom: 34px;
+    }
+    @media (min-width: $breakpoint-xl) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__text {
+    @include fsl(14px, 160%);
+    @media (min-width: $breakpoint) {
+      @include fsl(16px);
+    }
+  }
+
+  &__button {
+    display: flex;
+  }
+}

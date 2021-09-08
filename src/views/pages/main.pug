@@ -1,1 +1,49 @@
 extends ../layouts/master.pug
+
+include ../components/reviews-card
+
+block content 
+  .main-page
+    section.section--first 
+    section.section
+      .container 
+        .team 
+
+    section.section 
+      .container 
+        .main-page__header 
+          h3.main-page__title   
+            |Reviews
+        .main-page__reviews 
+          each item in data.mainReviews
+            +reviews-card(name = item.name)
+    section.section   
+      .container 
+        .main-page__header 
+          h3.main-page__title   
+            |Find us in social media
+        .main-page__media 
+          a.media-card(href="#")  
+            .media-card__inner
+              .media-card__img 
+                +media-instagram-svg.media-card__svg
+              .media-card__label 
+                |Instagram
+          a.media-card(href="#")  
+            .media-card__inner
+              .media-card__img 
+                +media-facebook-svg.media-card__svg
+              .media-card__label 
+                |Facebook
+          a.media-card(href="#")  
+            .media-card__inner
+              .media-card__img 
+                +media-tripadvisor-svg.media-card__svg
+              .media-card__label 
+                |Tripadvisor
+          a.media-card(href="#")  
+            .media-card__inner
+              .media-card__img 
+                +media-twitter-svg.media-card__svg
+              .media-card__label 
+                |Twitter

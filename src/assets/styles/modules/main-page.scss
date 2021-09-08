@@ -1,0 +1,46 @@
+.main-page {
+
+  &__header {
+    margin-bottom: 20px;
+    @media (min-width: $breakpoint) {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    @include fsl(26px);
+    @media (min-width: $breakpoint) {
+      @include fsl(60px);
+    }
+  }
+
+  &__reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 266px);
+    column-gap: 20px;
+    @media (min-width: $breakpoint) {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 40px;
+    }
+  }
+  
+  &__media {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 150px;
+    row-gap: 20px;
+    column-gap: 20px;
+    @media (min-width: $breakpoint-m) {
+      grid-template-columns: repeat(4, 1fr);
+      row-gap: 0;
+    }
+    @media (min-width: $breakpoint) {
+      column-gap: 40px;
+      grid-template-rows: 227px;
+    }
+    @media (min-width: $breakpoint-xl) {
+      grid-template-rows: 290px;
+    }
+  }
+}
