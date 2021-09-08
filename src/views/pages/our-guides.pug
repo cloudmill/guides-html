@@ -1,10 +1,13 @@
 extends ../layouts/master.pug
 
 include  ../components/navigation
+include ../components/guides-card
 
 block content 
   .container
     section.section.section--first 
       +navigation(page="Our guides")
     section.section.section--md 
-      
+      .guides-grid 
+        each item in data.guides
+          +guides-card(name = item.name src = item.src)

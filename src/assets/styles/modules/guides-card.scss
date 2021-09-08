@@ -1,0 +1,138 @@
+.guides-card {
+  $comp: &;
+  $scale-rate: 1.2;
+
+  cursor: pointer;
+  
+  &:hover {
+
+    #{$comp}__img {
+      transform: scale($scale-rate);
+    }
+    #{$comp}__ball {
+      transform: translate(-50%, 50%) scale($scale-rate);
+    }
+  }
+
+  &__container {
+    position: relative;
+    z-index: 0;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      height: 73px;
+      @media (min-width: $breakpoint-m) {
+        height: 77px;
+      }
+      @media (min-width: $breakpoint) {
+        height: 108px;
+      }
+
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+      opacity: 0.4;
+      border-radius: 10px;
+    }
+  }
+
+  &__img {
+    position: relative;
+    z-index: -1;
+
+    transition: $transition;
+  }
+
+  &__name {
+    position: absolute;
+    z-index: 1;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: $color-white;
+    white-space: nowrap;
+    font-weight: 500;
+    @include fsl(20px);
+    @media (min-width: $breakpoint) {
+      @include fsl(26px);
+    }
+  }
+
+  &__button {
+    position: absolute;
+    z-index: 1;
+    left: 14px;
+    bottom: 14px; 
+    @media (min-width: $breakpoint) {
+      left: 20px;
+      bottom: 20px; 
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__ball {
+    $size-d: 178px;
+    $size-t: 127px;
+    $size-m: 121px;
+
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 50%);
+
+    width: $size-m;
+    height: $size-m;
+    @media (min-width: $breakpoint-m) {
+      width: $size-t;
+      height: $size-t;
+    }
+    @media (min-width: $breakpoint) {
+      width: $size-d;
+      height: $size-d;
+    }
+
+    transition: $transition;
+    border-radius: 50%;
+    background: $color-blue;
+  }
+
+  &__bot {
+    margin-top: 15px;
+    @media (min-width: $breakpoint) {
+      margin-top: 20px;
+    }
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__label {
+    margin-right: 20px;
+    @media (min-width: $breakpoint) {
+      margin-right: 62px;
+    }
+
+    font-weight: 500;
+    @include fsl(14px);
+    color: $color-gray;
+  }
+
+  &__text {
+    @include fsl(16px, 160%);
+  }
+}

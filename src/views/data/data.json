@@ -25,5 +25,31 @@
       "link": "Landmarks"
     }
   ],
-  "phone": "+7 812 441-31-63"
+  "phone": "+7 812 441-31-63",
+  "guides": [
+    {
+      "src": "guide-1.jpg",
+      "name": "Svetlana Polykova"
+    },
+    {
+      "src": "guide-2.jpg",
+      "name": "Anna Nekrasova"
+    },
+    {
+      "src": "guide-3.jpg",
+      "name": "Ira Borisova"
+    },
+    {
+      "src": "guide-1.jpg",
+      "name": "Svetlana Polykova"
+    },
+    {
+      "src": "guide-2.jpg",
+      "name": "Anna Nekrasova"
+    },
+    {
+      "src": "guide-3.jpg",
+      "name": "Ira Borisova"
+    }
+  ]
 }
