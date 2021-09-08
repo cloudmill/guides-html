@@ -7,6 +7,7 @@
 
   transition: $transition;
   border-bottom: 1px solid $color-light-gray;
+  background: $color-white;
 
   &__inner {
     padding: 10px 0;
