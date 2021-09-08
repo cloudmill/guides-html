@@ -3,6 +3,10 @@
     {
       "page": "main",
       "href": "main.html"
+    },
+    {
+      "page": "our-guides",
+      "href": "our-guides.html"
     }
   ],
   "nav": [

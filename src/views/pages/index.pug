@@ -1,4 +1,14 @@
 extends ../layouts/master.pug
 
+block header
+
 block content 
+  .container 
+    .pages 
+      ul.pages__list 
+        each item in data.routing
+          li.pages__item 
+            +button(text = item.page href = item.href)
+
+block footer
   
