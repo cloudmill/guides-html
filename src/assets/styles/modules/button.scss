@@ -1,0 +1,21 @@
+.button {
+  padding: 11px 25px;
+  @media (min-width: $breakpoint) {
+    padding: 15px 25px;
+  }
+
+  display: block;
+
+  @include fsl(14px);
+  @media (min-width: $breakpoint) {
+    @include fsl(16px);
+  }
+  border-radius: 12px;
+  border: 1px solid $color-black;
+  transition: $transition;
+
+  &:hover {
+    border-color: $color-brown;
+    background: $color-brown;
+  }
+}
