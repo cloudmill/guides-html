@@ -1,0 +1,23 @@
+.social {
+  display: flex;
+
+  &__item {
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+  }
+
+  &__link {
+    $size: 50px;
+
+    width: $size;
+    height: $size;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 18px;
+    background: $color-white;
+  }
+}

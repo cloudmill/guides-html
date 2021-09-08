@@ -1,7 +1,7 @@
 mixin nav
-  nav.nav
+  nav.nav(class=attributes.class)
     ul.nav__list 
-      each item in data.nav
+      each item in attributes.links
         li.nav__item 
           a.nav__link(href="#") 
             |#{item.link}

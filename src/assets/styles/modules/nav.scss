@@ -1,4 +1,23 @@
 .nav {
+  $comp: &;
+
+  &--big {
+
+    #{$comp}__item {
+      &:not(:first-child) {
+        margin-left: 30px;
+      }
+    }
+
+    #{$comp}__link {
+      @include fsl(20px);
+
+      &:hover {
+        color: $color-white;
+      }
+    }
+  } 
+
   &__list {
     @media (min-width: $breakpoint) {
       display: flex;
@@ -7,7 +26,9 @@
 
   &__item {
     &:not(:first-child) {
+      margin-top: 20px;
       @media (min-width: $breakpoint - 1px) {
+        margin-top: 0;
         margin-left: 36px;
       }
     }

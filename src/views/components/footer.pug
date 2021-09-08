@@ -1,5 +1,42 @@
+include ./nav
+include ./social
+
 mixin footer 
   footer.footer 
     .container 
       .footer__inner 
-        
+        .footer__container
+          .footer__choice 
+            .footer__choice-item  
+              |Shore excursions
+            .footer__choice-item  
+              |For hotel guests
+          .footer__nav 
+            +nav.nav--big(links = data.navFooter)
+          .footer__media
+            .footer__media-item
+              .footer__media-icon 
+                +call-svg
+              a.footer__media-phone(href="tel:+78124413163") 
+                |#{data.phone}
+            .footer__media-item
+              .footer__media-icon 
+                +message-svg
+              a.footer__media-mail(href="") 
+                |info@bestguides-spb.com
+            .footer__media-item
+              .footer__media-icon 
+                +location-svg
+              .footer__media-text
+                |191186, Russia, St. Petersburg, Kanal #[br] Griboedova embankment., H. 5, Off. 205
+          .footer__bot
+            .footer__social 
+              +social
+            .footer__logo 
+              img.footer__logo-img(src="assets/images/logo-black.png", alt="")
+            .footer__privacy
+              |Privacy Policy
+            .footer__award  
+              |© 2021 Best Guides
+            .footer__corp 
+              |Made in #[a.footer__corp-link(href='#') CloudMill]
