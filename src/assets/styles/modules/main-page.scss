@@ -23,6 +23,15 @@
       grid-template-columns: repeat(3, 1fr);
       column-gap: 40px;
     }
+
+    @media (max-width: $breakpoint - 1px) {
+      padding: 0 20px;
+      margin-left: -20px;
+
+      width: calc(100% + 40px);
+      overflow-x: scroll;
+      @include scrollbar-hidden;
+    }
   }
   
   &__media {
@@ -41,6 +50,59 @@
     }
     @media (min-width: $breakpoint-xl) {
       grid-template-rows: 290px;
+    }
+  }
+
+  &__standarts {}
+  &__standarts-inner {
+    padding: 20px 0;
+    @media (min-width: $breakpoint-m) {
+      padding: 20px 0 40px;
+    }
+    @media (min-width: $breakpoint) {
+      padding: 60px 0;
+    }
+  }
+  &__standarts-wrapper {
+    margin-bottom: 40px;
+    @media (min-width: $breakpoint) {
+      margin-bottom: 80px;
+      margin-left: calc(#{$col-part-d} * 3);
+
+      max-width: 669px;
+    }
+    max-width: 335px;
+  }
+  &__standarts-row {
+    display: flex;
+  }
+  &__standarts-col {
+    flex-shrink: 0;
+    @media (min-width: $breakpoint) {
+      width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+    }
+
+    &:not(:last-child) {
+      @media (min-width: $breakpoint) {
+        padding-right: calc(#{$col-gap-d});
+        width: calc(#{$col-part-d} * 3);
+      }
+    }
+  }  
+  &__standarts-img {
+    display: flex;
+    align-items: center;
+
+    @media (min-width: $breakpoint) {
+      height: 100px;
+    }
+  }
+  &__standarts-text {
+    margin-top: 30px;
+
+    @include fsl(16px);
+    @media (min-width: $breakpoint) {
+      @include fsl(22px);
     }
   }
 }

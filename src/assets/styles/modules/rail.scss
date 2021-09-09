@@ -1,0 +1,17 @@
+.rail {
+  width: 100%;
+  height: 30px;
+  @media (min-width: $breakpoint) {
+    height: 47px;
+  }
+
+  border: 1px solid $color-blue;
+  border-bottom: none;
+  border-radius: 20px 20px 0 0;
+
+  &--reverse {
+    border: 1px solid $color-blue;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+  }
+}
