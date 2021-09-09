@@ -1,0 +1,43 @@
+.slider-buttons {
+  $comp: &;
+
+  display: flex;
+
+  &__item {
+
+    &:not(:first-child) {
+      margin-left: 8px;
+    }
+  }
+
+  &__button {
+    $size: 69px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: $size;
+    height: $size;
+
+    border: 1px solid $color-black;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      border-color: $color-brown;
+      background: $color-brown;
+    }
+
+    &--right {
+      #{$comp}__icon {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &__icon {
+    transform: rotate(90deg);
+  }
+}

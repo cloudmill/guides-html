@@ -1,0 +1,15 @@
+.swiper-container {
+  &--visible {
+    overflow: visible;
+  }
+  &--slide-width-auto {
+    .swiper-slide {
+      width: auto;
+    }
+  }
+  &--slide-height-max {
+    .swiper-slide {
+      height: auto;
+    }
+  }
+}
