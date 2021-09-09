@@ -1,9 +1,26 @@
 .main-page {
 
-  &__header {
+  &__top {
     margin-bottom: 20px;
     @media (min-width: $breakpoint) {
       margin-bottom: 80px;
+    }
+  }
+  &__top-row {
+    display: flex;
+    align-items: center;
+  }
+  &__top-col {
+    flex-shrink: 0;
+    &:nth-child(1) {
+      display: none;
+      @media (min-width: $breakpoint) {
+        display: block;
+        width: calc(#{$col-part-d} * 3);
+      }
+    }
+    &:nth-child(3) {
+      margin-left: auto;
     }
   }
 

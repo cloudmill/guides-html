@@ -1,13 +1,31 @@
 extends ../layouts/master.pug
 
 include ../components/reviews-card
+include ../components/guides-card
+include ../components/slider-buttons
 
 block content 
   .main-page
     section.section--first 
     section.section
       .container 
-        .team 
+        .main-page__top
+          .main-page__top-row 
+            .main-page__top-col
+              +slider-buttons(next = 3 prev = 4)
+            .main-page__top-col
+              .main-page__title 
+                |Team
+            .main-page__top-col
+              +button(tag = 'a' href = '#')
+                |Read more
+        .team
+          .swiper-container.swiper-container--slide-width-auto.swiper-container--slide-height-max.swiper-container--visible(data-slider-id='1' data-slider-next='3' data-slider-prev='4')
+            .swiper-wrapper 
+              each item in data.mainTeam
+                .swiper-slide 
+                  .team__item
+                    +guides-card(sign = item.sign name = item.name src = item.src)
 
     section.section 
       .container 
@@ -42,7 +60,7 @@ block content
 
     section.section 
       .container 
-        .main-page__header 
+        .main-page__top
           h3.main-page__title   
             |Reviews
         .main-page__reviews 
@@ -50,7 +68,7 @@ block content
             +reviews-card(name = item.name)
     section.section   
       .container 
-        .main-page__header 
+        .main-page__top
           h3.main-page__title   
             |Find us in social media
         .main-page__media 

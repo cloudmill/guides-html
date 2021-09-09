@@ -5,6 +5,11 @@
   
   background: $color-beige;
   border-radius: 20px;
+  transition: $transition;
+
+  &:hover {
+    background: $color-blue;
+  }
 
   &__inner {
     margin-top: 30px;

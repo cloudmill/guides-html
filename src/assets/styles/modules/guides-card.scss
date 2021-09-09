@@ -135,4 +135,14 @@
   &__text {
     @include fsl(16px, 160%);
   }
+
+  &__sign {
+    position: absolute;
+    top: 46px;
+    right: 51px;
+
+    @include fsl(60px);
+    color: $color-white;
+    @include f-3;
+  }
 }
