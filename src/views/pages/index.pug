@@ -8,7 +8,8 @@ block content
       ul.pages__list 
         each item in data.routing
           li.pages__item 
-            +button(text = item.page href = item.href)
+            +button(tag = 'a' href = item.href)
+              |#{item.page}
 
 block footer
   
