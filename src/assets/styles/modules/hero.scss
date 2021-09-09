@@ -1,0 +1,70 @@
+.hero {
+  position: relative;
+  z-index: 0;
+
+  height: calc(100vh - 100px);
+
+  &__frame {
+    height: 100%;
+
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left bottom;
+  }
+
+  &__content {
+    position: absolute;
+    
+    @media (min-width: $breakpoint) {
+      top: 178px;
+      left: 60px;
+    }
+  }
+
+  &__title {
+    display: block;
+
+    white-space: nowrap;
+    color: $color-white;
+    @include f-2;
+    @include fsl(24px);
+    @media (min-width: $breakpoint-m) {
+      @include fsl(35px);
+    }
+    @media (min-width: $breakpoint) {
+      @include fsl(60px);
+    }
+
+    &:first-child {
+      padding-left: 68px;
+      @media (min-width: $breakpoint) {
+        padding-left: 187px;
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    bottom: 0;
+    right: -179px;
+    @media (min-width: $breakpoint) {
+      right: -72px;
+    }
+
+    white-space: nowrap;
+    @include f-3;
+    @include fsl(30px);
+    @media (min-width: $breakpoint-m) {
+      @include fsl(40px);
+    }
+    @media (min-width: $breakpoint) {
+      @include fsl(60px);
+    }
+  }
+}
