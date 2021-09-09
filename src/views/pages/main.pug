@@ -54,7 +54,22 @@ block content
               each item in data.mainSellers 
                 .swiper-slide 
                   +excursion-card(title = item.title walk = item.walk src = item.src)
-
+    section.section 
+      .container 
+        .main-page__about 
+          .main-page__about-layout
+          .main-page__about-container 
+            .main-page__about-top  
+              .main-page__about-title  
+                |Best Guides
+              .main-page__about-label 
+                |Saint Petersburg
+            .main-page__about-content 
+              p.main-page__about-text 
+                |Back in 2010, several St. Petersburg guides, graduates of St. Petersburg University, joined together, created their own website and started working together. We saw no obstacles and were ready to move mountains. And most importantly, we loved our city and our profession very much.
+              .main-page__about-button 
+                +button(tag = 'a' href = '#')
+                  |More about us
     section.section
       .container 
         .main-page__top
