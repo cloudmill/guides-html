@@ -1,4 +1,6 @@
 .hero {
+  $comp: &;
+
   position: relative;
   z-index: 0;
 
@@ -66,5 +68,96 @@
     @media (min-width: $breakpoint) {
       @include fsl(60px);
     }
+  }
+
+  &__tabs {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    @media (min-width: $breakpoint) {
+      right: 60px;
+    }
+
+    display: flex;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-left: 10px;
+      @media (min-width: $breakpoint) {
+        margin-left: 40px;
+      }
+    }
+  }
+
+  &__tab {
+    @media (min-width: $breakpoint) {
+      width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+    }
+
+    background: linear-gradient(231.17deg, #86E1FF 0%, #42D0FF 100%);
+    border-radius: 20px 20px 0 0;
+    transition: $transition;
+    cursor: pointer;
+
+    &:hover {
+      // background: linear-gradient(221.46deg, #F2D5B9 0%, #E8BE94 100%);
+    }
+  }
+
+  &__container {
+    padding: 30px 30px 90px;
+  }
+
+  &__top {
+    margin-bottom: 40px;
+    @media (min-width: $breakpoint) {
+      margin-bottom: 70px;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__tab-title {
+    color: $color-white;
+    @include fsl(20px, 90%);
+    @media (min-width: $breakpoint) {
+      @include fsl(40px);
+    }
+  }
+
+  &__button {
+    $size: 67px;
+
+    width: $size;
+    height: $size;
+
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    border: 1px solid $color-white;
+    transition: $transition;
+  }
+
+  &__arrow {
+    transform: rotate(-90deg);
+
+    path {
+      stroke: $color-white;
+      transition: $transition;
+    }
+  }
+
+  &__icon {
+    height: 79px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
