@@ -1,0 +1,71 @@
+mixin excursion-card 
+  a.excursion-card(href="#")
+    .excursion-card__body   
+      .excursion-card__container
+        img.excursion-card__img(src="assets/images/" + attributes.src , alt="")
+        .excursion-card__items
+          each item in ['Individual', 'First choice', '-20% off']
+            .excursion-card__item
+              |#{item}
+      .excursion-card__content
+        .excursion-card__title 
+          |#{attributes.title}
+        .excursion-card__location 
+          .excursion-card__icon 
+            +landmark-svg
+          .excursion-card__landmarks 
+            .excursion-card__label 
+              |Landmarks
+            .excursion-card__text   
+              |Hermitage, Peterhof, Fountains of Peterhof
+    .excursion-card__bot
+      if (attributes.cruise)
+        .excursion-card__row 
+          .excursion-card__col
+            .excursion-card__info-item 
+              .excursion-card__info-icon 
+                +clock-svg
+              .excursion-card__info-text
+                |1 days/10 hours
+          .excursion-card__col
+            .excursion-card__activity
+              .excursion-card__activity-text 
+                |Activity
+              ul.excursion-card__activity-dots  
+                - for (i = 0; i < 5; i++)
+                  li.excursion-card__activity-dot(class = (i < 3) ? 'excursion-card__activity-dot--active' : '')
+        .excursion-card__wrapper
+          .excursion-card__row
+            .excursion-card__col
+              .excursion-card__price
+                span.excursion-card__price-num $129 
+                |/ person
+            .excursion-card__col
+              +button(tag='a' href='#')
+                |Compare
+      else
+        .excursion-card__info 
+          .excursion-card__info-item 
+            .excursion-card__info-icon 
+              +clock-svg
+            .excursion-card__info-text
+              |3 hours
+          if (attributes.walk)
+            .excursion-card__info-item 
+              .excursion-card__info-icon 
+                +walk-svg
+              .excursion-card__info-text
+                |Walking
+          else 
+            .excursion-card__info-item 
+              .excursion-card__info-icon 
+                +bus-svg
+              .excursion-card__info-text
+                |Transport
+        .excursion-card__wrapper
+          .excursion-card__price
+            |from 
+            if (attributes.discont)
+              span.excursion-card__price-discont #{attributes.discont}
+            span.excursion-card__price-num $129 
+            |/ person

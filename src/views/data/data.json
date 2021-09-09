@@ -118,5 +118,47 @@
       "src": "team-3.jpg",
       "sign": "OS"
     }
+  ],
+  "mainSellers": [
+    {
+      "src": "sellers-1.jpg",
+      "title": "Walking tour of St. Petersburg",
+      "walk": true
+    },
+    {
+      "src": "sellers-2.jpg",
+      "title": "Sightseeing tour of St. Petersburg",
+      "walk": false
+    },
+    {
+      "src": "sellers-3.jpg",
+      "title": "Walking tour of St. Petersburg",
+      "walk": true
+    },
+    {
+      "src": "sellers-4.jpg",
+      "title": "Dostoevsky's Petersburg",
+      "walk": false
+    },
+    {
+      "src": "sellers-1.jpg",
+      "title": "Walking tour of St. Petersburg",
+      "walk": true
+    },
+    {
+      "src": "sellers-2.jpg",
+      "title": "Sightseeing tour of St. Petersburg",
+      "walk": false
+    },
+    {
+      "src": "sellers-3.jpg",
+      "title": "Walking tour of St. Petersburg",
+      "walk": true
+    },
+    {
+      "src": "sellers-4.jpg",
+      "title": "Dostoevsky's Petersburg",
+      "walk": false
+    }
   ]
 }
