@@ -58,8 +58,12 @@
 
   &__label {
     position: absolute;
-    bottom: 0;
-    right: -179px;
+    bottom: -5px;
+    right: -79px;
+    @media (min-width: $breakpoint-m) {
+      bottom: 0;
+      right: -119px;
+    }
     @media (min-width: $breakpoint) {
       right: -72px;
     }

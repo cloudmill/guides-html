@@ -117,8 +117,12 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, 20%);
+    transform: translate(-50%, 40%);
+    @media (min-width: $breakpoint-m) {
+      transform: translate(-50%, 20%);
+    }
 
+    white-space: nowrap;
     @include f-3;
     color: $color-white;
     @include fsl(30px);
