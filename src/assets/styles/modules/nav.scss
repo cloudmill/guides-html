@@ -5,7 +5,11 @@
 
     #{$comp}__item {
       &:not(:first-child) {
-        margin-left: 30px;
+        margin-top: 20px;
+        @media (min-width: $breakpoint) {
+          margin-top: 0;
+          margin-left: 30px;
+        }
       }
     }
 

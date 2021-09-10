@@ -160,5 +160,31 @@
       "title": "Dostoevsky's Petersburg",
       "walk": false
     }
+  ],
+  "mainFeatures": [
+    {
+      "src": "main-features-1.svg",
+      "text": "We can organize excursions in 12 European languages"
+    },
+    {
+      "src": "main-features-2.svg",
+      "text": "300+ positive reviews"
+    },
+    {
+      "src": "main-features-3.svg",
+      "text": "Individual approach"
+    },
+    {
+      "src": "main-features-4.svg",
+      "text": "Handmade tours"
+    },
+    {
+      "src": "main-features-5.svg",
+      "text": "Visa-free visit to the city"
+    },
+    {
+      "src": "main-features-6.svg",
+      "text": "We have been working since 2010"
+    }
   ]
 }
