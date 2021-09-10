@@ -9,6 +9,10 @@
     width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
   }
 
+  &--response {
+    width: auto;
+  }
+
   &__body {
     padding-bottom: 15px;
     @media (min-width: $breakpoint) {

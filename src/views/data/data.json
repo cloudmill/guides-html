@@ -261,5 +261,46 @@
     {
       "text": "Will we see the impressionist collection during our Hermitage tour?"
     }
+  ],
+  "landExcursion": [
+    {
+      "title": "Sightseeing tour of St. Petersburg",
+      "src": "sellers-2.jpg",
+      "discont": "$159"
+    },
+    {
+      "title": "Walking tour of St. Petersburg",
+      "src": "sellers-3.jpg"
+    },
+    {
+      "title": "Dostoevsky's Petersburg",
+      "src": "sellers-4.jpg"
+    },
+    {
+      "title": "Sightseeing tour of St. Petersburg",
+      "src": "sellers-2.jpg",
+      "discont": "$159"
+    },
+    {
+      "title": "Walking tour of St. Petersburg",
+      "src": "sellers-3.jpg"
+    },
+    {
+      "title": "Dostoevsky's Petersburg",
+      "src": "sellers-4.jpg"
+    },
+    {
+      "title": "Sightseeing tour of St. Petersburg",
+      "src": "sellers-2.jpg",
+      "discont": "$159"
+    },
+    {
+      "title": "Walking tour of St. Petersburg",
+      "src": "sellers-3.jpg"
+    },
+    {
+      "title": "Dostoevsky's Petersburg",
+      "src": "sellers-4.jpg"
+    }
   ]
 }

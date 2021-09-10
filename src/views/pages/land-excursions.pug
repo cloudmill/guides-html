@@ -1,0 +1,22 @@
+extends ../layouts/master.pug
+
+include  ../components/navigation
+include  ../components/excursion-card
+
+block content
+  .excursions-page
+    section.section.section--md
+      .container
+        +navigation(page="FAQ")
+    section.section.section--md 
+      .container 
+        .row 
+          .row__col
+            .aside 
+              .tes
+          .row__col
+            .row__grid  
+              each item in data.landExcursion
+                .row__item 
+                  +excursion-card.excursion-card--response(title = item.title src = item.src discont = item.discont)
+
