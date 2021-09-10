@@ -4,10 +4,11 @@ include  ../components/navigation
 include ../components/guides-card
 
 block content 
-  .container
-    section.section.section--first 
+  section.section.section--first
+    .container
       +navigation(page="Our guides")
-    section.section.section--md 
+  section.section.section--md 
+    .container
       .guides-grid 
         each item in data.guides
           +guides-card(name = item.name src = item.src)
