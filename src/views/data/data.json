@@ -7,6 +7,10 @@
     {
       "page": "our-guides",
       "href": "our-guides.html"
+    },
+    {
+      "page": "faq",
+      "href": "faq.html"
     }
   ],
   "nav": [
