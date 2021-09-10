@@ -22,8 +22,13 @@
 
   &__content {
     position: absolute;
-    
-    @media (min-width: $breakpoint) {
+    top: 80px;
+    left: 20px;
+    @media (min-width: $breakpoint-xl) {
+      top: 163px;
+      left: 60px;
+    }
+    @media (min-width: $breakpoint-xl) {
       top: 178px;
       left: 60px;
     }
@@ -92,6 +97,9 @@
 
   &__tab {
     @media (min-width: $breakpoint) {
+      width: 360px;
+    }
+    @media (min-width: $breakpoint-xl) {
       width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
     }
 
@@ -106,7 +114,13 @@
   }
 
   &__container {
-    padding: 30px 30px 90px;
+    
+    @media (min-width: $breakpoint) {
+      padding: 30px 30px 70px;
+    }
+    @media (min-width: $breakpoint-xl) {
+      padding: 30px 30px 90px;
+    }
   }
 
   &__top {

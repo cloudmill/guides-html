@@ -5,6 +5,8 @@ include ../components/guides-card
 include ../components/excursion-card 
 include ../components/slider-buttons
 
+block header
+
 block content 
   .main-page
     section.hero
@@ -89,7 +91,16 @@ block content
                 .swiper-slide 
                   .team__item
                     +guides-card(sign = item.sign name = item.name src = item.src)
-
+    section.section 
+      .container 
+        .main-page__features
+          .main-page__features-container 
+            .main-page__features-row 
+              .main-page__features-col
+                .main-page__features-img 
+                  img.main-page__features-icon(src="assets/images/svg/main-features-1.svg", alt="")
+                .main-page__features-text 
+                  |We can organize excursions in 12 European languages
     section.section 
       .container 
         .main-page__standarts 
