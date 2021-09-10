@@ -186,5 +186,72 @@
       "src": "main-features-6.svg",
       "text": "We have been working since 2010"
     }
+  ],
+  "faqPagination": [
+    {
+      "text": "Visa questions"
+    },
+    {
+      "text": "Booking a tour"
+    },
+    {
+      "text": "Mini group tours"
+    },
+    {
+      "text": "Payment and gratuities"
+    },
+    {
+      "text": "Discounts"
+    },
+    {
+      "text": "Museums / sights"
+    },
+    {
+      "text": "Transportation"
+    },
+    {
+      "text": "Pocket money"
+    },
+    {
+      "text": "Families with children"
+    },
+    {
+      "text": "Cancelation policy"
+    },
+    {
+      "text": "Meeting time / place"
+    },
+    {
+      "text": "Meals / food"
+    }
+  ],
+  "faqAccordion": [
+    {
+      "text": "Do I need a visa to come to Russia?"
+    },
+    {
+      "text": "I was told I can't leave the ship in Russia unless I book my shore excursions with the cruise line. Is that true?"
+    },
+    {
+      "text": "When is it worth to get a Russian visa?"
+    },
+    {
+      "text": "What documents will I need to get off the ship in Russia?"
+    },
+    {
+      "text": "What is a Tour Ticket? "
+    },
+    {
+      "text": "How shall I book a tour?"
+    },
+    {
+      "text": "Do you require a deposit?"
+    },
+    {
+      "text": "Can you guarantee a tour if no other people sign for the same dates?"
+    },
+    {
+      "text": "Will we see the impressionist collection during our Hermitage tour?"
+    }
   ]
 }

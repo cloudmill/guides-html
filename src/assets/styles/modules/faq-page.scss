@@ -1,0 +1,208 @@
+.faq-page {
+  $comp: &;
+
+  &__top {
+    margin-bottom: 20px;
+    @media (min-width: $breakpoint) {
+      margin-bottom: 40px;
+    }
+  }
+  &__top-items {
+    display: flex;
+  }
+
+  &__pagination {
+    
+    padding: 0 20px;
+    margin-left: -20px;
+    @media (min-width: $breakpoint) {
+      padding: 0;
+      margin-left: -5px;
+      margin-top: -5px;
+    }
+    width: calc(100% + (20px * 2));
+    display: flex;
+    @media (min-width: $breakpoint) {
+      flex-wrap: wrap;
+      width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+    }
+
+    overflow-y: scroll;
+    @include scrollbar-hidden;
+  }
+  &__pagination-item {
+    @media (min-width: $breakpoint) {
+      margin-left: 5px;
+      margin-top: 5px;
+    }
+
+    &:not(:first-child) {
+      @media (max-width: $breakpoint - 1px) {
+        margin-left: 5px;
+      }
+    }
+
+    &--active {
+      #{$comp}__pagination-button {
+        background: $color-blue;
+        color: $color-white;
+        border-color: $color-blue;
+      }
+    }
+  }
+  &__pagination-button {
+    padding: 7px 30px;
+
+    white-space: nowrap;
+    @include fsl(16px, 160%);
+    border-radius: 30px;
+    background: $color-white;
+    transition: $transition;
+    border: 1px solid $color-light-gray;
+    cursor: pointer;
+
+    &:hover {
+      border-color: $color-blue;
+    }
+  }
+
+  &__bot {
+    margin-top: 40px;
+    display: flex;
+  }
+
+  &__item {
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  &__accordion {
+    border: 1px solid $color-light-gray;
+    border-radius: 10px;
+  }
+  &__accordion-head {
+    padding: 30px 0;
+
+    cursor: pointer;
+  }
+  &__accordion-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media (min-width: $breakpoint-m) {
+      flex-wrap: nowrap;
+    }
+  }
+  &__accordion-col {
+    &:nth-child(1) {
+      padding-left: 20px;
+      width: calc(#{$col-part-m} * 3 - #{$col-gap-m});
+      @media (min-width: $breakpoint) {
+        width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+      }
+      @media (min-width: $breakpoint-ll) {
+        width: calc(#{$col-part-d} * 4);
+      }
+      flex-shrink: 0;
+    }
+
+    &:nth-child(2) {
+      @media (max-width: $breakpoint-m - 1px) {
+        padding-top: 20px;
+        padding-left: 20px;
+        order: 3;
+      }
+      @media (min-width: $breakpoint-m) {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+
+    &:nth-child(3) {
+      padding-right: 20px;
+      @media (min-width: $breakpoint-m) {
+        padding-top: 3px;
+      }
+      @media (min-width: $breakpoint) {
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__accordion-title {
+    font-weight: 500;
+    @include fsl(18px);
+    @media (min-width: $breakpoint) {
+      @include fsl(20px);
+    }
+  }
+
+  &__accordion-tags {
+    @media (min-width: $breakpoint-m) {
+      margin-right: 20px;
+      display: block;
+    }
+    display: flex;
+  }
+
+  &__accordion-tag {
+    padding: 9px 10px;
+
+    border: 1px solid $color-light-gray;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-weight: 500;
+    @include fsl(12px);
+    text-transform: uppercase;
+
+    &:not(:first-child) {
+      margin-left: 5px;
+      @media (min-width: $breakpoint-m) {
+        margin-left: 0;
+        margin-top: 5px;
+      }
+    }
+  }
+  &__accordion-button {
+    $size-d: 34px;
+    $size-m: 28px;
+
+    width: $size-m;
+    height: $size-m;
+    @media (min-width: $breakpoint) {
+      width: $size-d;
+      height: $size-d;
+    }
+
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    border: 1.5px solid $color-blue;
+  }
+  &__accordion-icon {
+    $size: 18px;
+
+    width: $size;
+    height: $size;
+
+    path {
+      stroke: $color-blue;
+    }
+  }
+
+  &__button {
+    margin-top: 40px;
+    @media (min-width: $breakpoint) {
+      margin-top: 60px;
+    }
+
+    display: flex;
+    justify-content: center;
+  }
+}

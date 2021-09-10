@@ -16,4 +16,27 @@
       margin-top: 50px;
     }
   }
+
+  &__row {
+    @media (min-width: $breakpoint) {
+      display: flex;
+    }
+  }
+
+  &__col {
+    @media (min-width: $breakpoint) {
+      flex-shrink: 0;
+    }
+
+    &:nth-child(1) {
+      @media (min-width: $breakpoint) {
+        width: calc(#{$col-part-d} * 6);
+      }
+    }
+    &:nth-child(2) {
+      @media (min-width: $breakpoint) {
+        width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+      }
+    }
+  }
 }

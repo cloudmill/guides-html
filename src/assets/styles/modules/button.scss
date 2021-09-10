@@ -4,7 +4,9 @@
     padding: 15px 25px;
   }
 
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @include fsl(14px);
   @media (min-width: $breakpoint) {
@@ -13,6 +15,7 @@
   border-radius: 12px;
   border: 1px solid $color-black;
   transition: $transition;
+  cursor: pointer;
 
   &:hover {
     border-color: $color-brown;
@@ -21,5 +24,12 @@
 
   &--m {
     padding: 9px 25px;
+  }
+
+  &--xl {
+    width: 227px;
+    @media (min-width: $breakpoint) {
+      width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+    }
   }
 }

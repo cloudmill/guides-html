@@ -1,0 +1,48 @@
+extends ../layouts/master.pug
+
+include  ../components/navigation
+
+block content 
+  .faq-page
+    section.section.section--first
+      .container
+        +navigation(page="FAQ")
+    section.section.section--md
+      .container 
+        .section__row
+          .section__col
+            .faq-page__top 
+              .faq-page__top-items 
+                .faq-page__top-item 
+                  |Cruise ship
+                .faq-page__top-item 
+                  |On land
+            ul.faq-page__pagination
+              each item, index in data.faqPagination
+                li.faq-page__pagination-item(class=((index===0) ? 'faq-page__pagination-item--active' : ''))
+                  .faq-page__pagination-button 
+                    |#{item.text}
+            .faq-page__bot 
+              +button.button--xl(tag = 'a' href = '#')
+                |Ask your question
+          .section__col
+            ul.faq-page__list
+              each item in data.faqAccordion
+                li.faq-page__item
+                  .faq-page__accordion 
+                    .faq-page__accordion-head
+                      .faq-page__accordion-row 
+                        .faq-page__accordion-col
+                          .faq-page__accordion-title 
+                            |#{item.text}
+                        .faq-page__accordion-col 
+                          .faq-page__accordion-tags
+                            .faq-page__accordion-tag 
+                              |Visa questions
+                        .faq-page__accordion-col
+                          .faq-page__accordion-button 
+                            +plus-svg.faq-page__accordion-icon
+                    .faq-page__accordion-body
+            .faq-page__button 
+              +button(tag='div')
+                |Show more
