@@ -1,0 +1,17 @@
+mixin media 
+  .media(class=attributes.class)
+    .media__item
+      .media__icon 
+        +call-svg
+      a.media__phone(href="tel:+78124413163") 
+        |#{data.phone}
+    .media__item
+      .media__icon 
+        +message-svg
+      a.media__mail(href="mailto:info@bestguides-spb.com") 
+        |info@bestguides-spb.com
+    .media__item
+      .media__icon 
+        +location-svg
+      .media__text
+        |191186, Russia, St. Petersburg, Kanal #[br] Griboedova embankment., H. 5, Off. 205

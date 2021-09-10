@@ -1,0 +1,53 @@
+.media {
+  grid-area: C;
+  @media (min-width: $breakpoint) {
+    margin-top: 20px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+      @media (min-width: $breakpoint) {
+        margin-top: 0;
+      }
+    }
+    &:last-child {
+      @media (min-width: $breakpoint) {
+        margin-top: 40px;
+      }
+
+      align-items: flex-start;
+    }
+  }
+  &__icon {
+    margin-right: 20px;
+    @media (min-width: $breakpoint) {
+      margin-right: 0;
+      width: calc(#{$col-width-d});
+    }
+
+    display: flex;
+    align-items: center;
+  }
+  &__phone {
+    @include fsl(30px);
+    @media (min-width: $breakpoint) {
+      @include fsl(60px);
+    }
+  }
+  &__mail {
+    @include fsl(16px, 160%);
+    @media (min-width: $breakpoint) {
+      @include fsl(25px, 130%);
+    }
+  }
+  &__text {
+    @include fsl(14px);
+    @media (min-width: $breakpoint) {
+      @include fsl(16px);
+    }
+  }
+}

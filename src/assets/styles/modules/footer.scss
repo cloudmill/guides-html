@@ -24,6 +24,7 @@
     @media (min-width: $breakpoint-m) {
       grid-template-areas: 
         "A C"
+        "B C"
         "B D"
       ;
     }
@@ -105,6 +106,7 @@
     grid-area: D;
     display: grid;
     grid-template-columns : repeat(2, 1fr);
+    row-gap: 10px;
     grid-template-areas: 
       "A A"
       "B C"
@@ -112,6 +114,7 @@
       "B E"
     ;
     @media (min-width: $breakpoint-m) {
+      grid-template-columns : 1fr;
       grid-template-areas: 
         "A"
         "C"
@@ -132,9 +135,22 @@
 
   &__social {
     grid-area: A;
+    
+    margin-bottom: 30px;
+    @media (min-width: $breakpoint) {
+      margin-bottom: 0;
+    }
   }
 
   &__logo {
+    @media (min-width: $breakpoint-m) {
+      margin-top: 30px;
+    }
+    
+    @media (min-width: $breakpoint) {
+      margin-top: 0;
+    }
+
     grid-area: B;
     display: flex;
     align-items: center;
@@ -156,11 +172,14 @@
       grid-area: none;
       display: none;
     }
+    @include fsl(15px);
   }
 
   &__corp {
     grid-area: E;
-    justify-self: end;
+    @media (min-width: $breakpoint) {
+      justify-self: end;
+    }
 
     @include fsl(15px);
   }
