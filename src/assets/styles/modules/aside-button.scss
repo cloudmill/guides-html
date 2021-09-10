@@ -1,0 +1,28 @@
+.aside-button {
+  padding: 15px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+  border: 1px solid $color-gray;
+  transition: $transition;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-brown;
+  }
+
+  &__icon {
+    margin-right: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    @include fsl(16px);
+  }
+}

@@ -7,7 +7,7 @@
     flex-shrink: 0;
     &:nth-child(1) {
       @media (min-width: $breakpoint) {
-        padding-right: calc(#{$col-width-d});
+        padding-right: calc(#{$col-gap-d});
         width: calc(#{$col-part-d} * 3);
       }
     }

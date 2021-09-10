@@ -1,0 +1,101 @@
+.aside {
+  $comp: &;
+
+  border: 1px solid $color-light-gray;
+  border-radius: 14px;
+
+  &__container {
+    padding: 30px;
+  }
+
+  &__item {
+
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+  }
+
+  &__type {
+    font-weight: 500;
+    @include fsl(16px);
+  }
+
+  &__select {
+    color: $color-blue;
+    @include fsl(14px);
+  }
+
+  &__body {
+    margin-top: 20px;
+  }
+
+  &__label {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+  
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    opacity: 0;
+    visibility: hidden;
+
+    &:checked {
+      ~#{$comp}__checkbox {
+        background: $color-blue;
+        border-color: $color-blue;
+
+        #{$comp}__svg {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__checkbox {
+    $size: 25px;
+
+    width: $size;
+    height: $size;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid $color-light-gray;
+    border-radius: 3px;
+    transition: $transition;
+  }
+
+  &__svg {
+    opacity: 0;
+    transition: $transition;
+  }
+
+  &__text {
+    margin-left: 10px;
+
+    @include fsl(14px);
+  }
+
+  &__buttons {
+    margin-top: 30px;
+
+  }
+}

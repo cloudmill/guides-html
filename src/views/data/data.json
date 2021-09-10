@@ -1,19 +1,23 @@
 {
   "routing": [
     {
-      "page": "main",
+      "page": "Главня",
       "href": "main.html"
     },
     {
-      "page": "our-guides",
+      "page": "Наземеная экскурсия",
+      "href": "land-excursions.html"
+    },
+    {
+      "page": "Наши гиды",
       "href": "our-guides.html"
     },
     {
-      "page": "faq",
+      "page": "Вопрос-ответ",
       "href": "faq.html"
     },
     {
-      "page": "contacts",
+      "page": "Контакты",
       "href": "contacts.html"
     }
   ],
@@ -301,6 +305,80 @@
     {
       "title": "Dostoevsky's Petersburg",
       "src": "sellers-4.jpg"
+    }
+  ],
+  "asideExcursion": [
+    {
+      "type": "Type",
+      "options": [
+        {
+          "text": "Individual"
+        },
+        {
+          "text": "Group"
+        }
+      ]
+    },
+    {
+      "type": "Features",
+      "options": [
+        {
+          "text": "First choice"
+        },
+        {
+          "text": "Off the beaten path "
+        },
+        {
+          "text": "Child friendly "
+        },
+        {
+          "text": "Evening/night"
+        },
+        {
+          "text": "Master class"
+        }
+      ]
+    },
+    {
+      "type": "Tour duration",
+      "options": [
+        {
+          "text": "Half-Day tour (3-4 hours)"
+        },
+        {
+          "text": "1 day (5-8 hours)"
+        },
+        {
+          "text": "2 days"
+        }
+      ]
+    },
+    {
+      "type": "Location",
+      "options": [
+        {
+          "text": "In the city"
+        },
+        {
+          "text": "Suburbs"
+        }
+      ]
+    },
+    {
+      "type": "Availability for wheelchair-users",
+      "options": [
+        {
+          "text": "Wheelchair-friendly"
+        }
+      ]
+    },
+    {
+      "type": "Sale",
+      "options": [
+        {
+          "text": "On sale "
+        }
+      ]
     }
   ]
 }

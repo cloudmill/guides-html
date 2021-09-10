@@ -1,0 +1,34 @@
+mixin aside 
+  .aside
+    .aside__container 
+      ul.aside__list
+        li.aside__item 
+          .aside__top 
+            .aside__type 
+              |Language
+            .aside__select
+              |Select
+          .aside__body
+            |select
+        each item in data.asideExcursion
+          li.aside__item 
+            .aside__top 
+              .aside__type 
+                |#{item.type}
+              .aside__select
+                |Select
+            .aside__body 
+              each text in item.options
+                label.aside__label
+                  input.aside__input(type="checkbox" name='checkbox')
+                  .aside__checkbox
+                    +check-svg.aside__svg
+                  .aside__text 
+                    |#{text.text}
+      .aside__buttons 
+        .aside__buttons-item 
+          .aside-button 
+            .aside-button__icon 
+              +repeat-svg.aside-button__svg
+            .aside-button__text 
+              |Clear

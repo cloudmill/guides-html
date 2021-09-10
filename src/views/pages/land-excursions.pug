@@ -1,19 +1,19 @@
 extends ../layouts/master.pug
 
 include  ../components/navigation
+include  ../components/aside
 include  ../components/excursion-card
 
 block content
   .excursions-page
-    section.section.section--md
+    section.section.section--first
       .container
         +navigation(page="FAQ")
     section.section.section--md 
       .container 
         .row 
           .row__col
-            .aside 
-              .tes
+            +aside
           .row__col
             .row__grid  
               each item in data.landExcursion
