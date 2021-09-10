@@ -1,7 +1,28 @@
 .media {
+  $comp: &;
+
   grid-area: C;
   @media (min-width: $breakpoint) {
     margin-top: 20px;
+  }
+
+  &--contacts {
+    #{$comp}__icon {
+      width: auto;
+      margin-right: 20px;
+      @media (min-width: $breakpoint) {
+        margin-right: 40px;
+      }
+    }
+
+    #{$comp}__svg {
+      path {
+        stroke: $color-blue;
+      }
+      circle {
+        stroke: $color-blue;
+      }
+    }
   }
 
   &__item {
@@ -48,6 +69,20 @@
     @include fsl(14px);
     @media (min-width: $breakpoint) {
       @include fsl(16px);
+    }
+  }
+  &__link {
+    margin-top: 10px;
+
+    display: block;
+
+    font-weight: 500;
+    @include fsl(14px);
+    text-decoration: underline;
+    transition: $transition;
+
+    &:hover {
+      color: $color-blue;
     }
   }
 }

@@ -1,0 +1,40 @@
+extends ../layouts/master.pug
+
+include  ../components/navigation
+include  ../components/media
+include  ../components/social
+
+block content 
+  .contacts-page
+    section.section.section--first
+      .container
+        +navigation(page="Contacts")
+    section.section.section--md
+      .container 
+        .contacts-page__row
+          .contacts-page__col
+            +media.media--contacts(link = 'On map')
+          .contacts-page__col
+            .contacts-page__social 
+              .contacts-page__social-item 
+                .contacts-page__social-label
+                  |Social
+                +social.social--contacts 
+              .contacts-page__social-item 
+                .contacts-page__social-label
+                  |Skype
+                a.contacts-page__social-link(href="#")  
+                  |bestguides-spb
+          .contacts-page__col
+            .contacts-page__social-label
+              |Duty Manager
+            .contacts-page__phone
+              .contacts-page__phone-icon
+                +call-svg.contacts-page__phone-svg
+              a.contacts-page__phone-number(href="tel:+79214022048")
+                |+7 921 402-20-48 
+            .contacts-page__links 
+              each item in ['WhatsApp', 'Viber', 'Telegram']
+                .contacts-page__links-item
+                  a.contacts-page__links-link(href="#") 
+                    |#{item}

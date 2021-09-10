@@ -1,0 +1,129 @@
+.contacts-page {
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 60px;
+    @media (min-width: $breakpoint) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+      grid-template-areas: 
+        "A B"
+        "C C"
+      ;
+    }
+    @media (min-width: $breakpoint) {
+      grid-template-areas: 
+        "A B"
+        "A C"
+      ;
+      column-gap: 40px;
+      row-gap: 80px;
+    }
+  }
+  
+  &__col {
+
+    &:nth-child(1) {
+      @media (min-width: $breakpoint-m) {
+        grid-area: A;
+      }
+    }
+    &:nth-child(2) {
+      @media (min-width: $breakpoint-m) {
+        grid-area: B;
+      }
+    }
+    &:nth-child(3) {
+      @media (min-width: $breakpoint-m) {
+        grid-area: C;
+      }
+    }
+  }
+
+  &__social {
+    
+    @media (min-width: $breakpoint) {
+      display: flex;
+    }
+  }
+  &__social-item {
+
+    &:nth-child(1) {
+      @media (min-width: $breakpoint) {
+        width: calc(#{$col-part-d} * 3);
+      }
+    }
+
+    &:not(:first-child) {
+      margin-top: 40px;
+      @media (min-width: $breakpoint) {
+        margin-top: 0;
+      }
+    }
+  }
+  &__social-label {
+    margin-bottom: 20px;
+    
+    font-weight: 500;
+  }
+  &__social-link {
+    text-decoration: underline;
+    @media (min-width: $breakpoint) {
+      @include fsl(25px);
+    }
+    transition: $transition;
+
+    &:hover {
+      color: $color-blue;
+    }
+  }
+
+  &__phone {
+    display: flex;
+    align-content: center;
+  }
+  &__phone-icon {
+    margin-right: 20px;
+    @media (min-width: $breakpoint) {
+      margin-right: 40px;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__phone-svg {
+    path {
+      stroke: $color-blue;
+    }
+  }
+  &__phone-number {
+    @include fsl(30px);
+    @media (min-width: $breakpoint) {
+      @include fsl(60px);
+    }
+  }
+
+  &__links {
+    margin-top: 10px;
+
+    display: flex;
+  }
+  &__links-item {
+
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+  }
+  &__links-link {
+    text-decoration: underline;
+    font-weight: 500;
+    @include fsl(18px);
+    transition: $transition;
+
+    &:hover {
+      color: $color-blue;
+    }
+  }
+}

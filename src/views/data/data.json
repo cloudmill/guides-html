@@ -11,6 +11,10 @@
     {
       "page": "faq",
       "href": "faq.html"
+    },
+    {
+      "page": "contacts",
+      "href": "contacts.html"
     }
   ],
   "nav": [

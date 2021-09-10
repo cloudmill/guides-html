@@ -1,5 +1,18 @@
 .social {
+  $comp: &;
+
   display: flex;
+
+  &--contacts {
+
+    #{$comp}__link {
+      border: 1px solid $color-blue;
+
+      &:hover {
+        background: $color-blue;
+      }
+    }
+  }
 
   &__item {
     &:not(:first-child) {
@@ -19,5 +32,7 @@
 
     border-radius: 18px;
     background: $color-white;
+    transition: $transition;
+
   }
 }
