@@ -16,22 +16,39 @@
     }
   }
 
+  &__header {
+    display: none;
+    @media (min-width: $breakpoint) {
+      display: block;
+    }
+  }
+
   &__row {
     display: flex;
+    @media (max-width: $breakpoint - 1px) {
+      justify-content: space-between;
+    }
   }
 
   &__col {
     flex-shrink: 0;
+    align-items: center;
+    @media (min-width: $breakpoint) {
+      align-items: flex-start;
+    }
 
     &:nth-child(1) {
+      display: flex;
       @media (min-width: $breakpoint) {
+        display: block;
+
         width: calc(#{$col-part-d} * 6);
       }
     }
     &:nth-child(2) {
+      display: flex;
       @media (min-width: $breakpoint) {
         width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
-        display: flex;
       }
     }
   }
@@ -121,7 +138,9 @@
     }
   }
 
-  &__search {}
+  &__search {
+    margin-top: 20px;
+  }
   &__search-item {
     position: relative;
   }
@@ -141,15 +160,29 @@
     }
   }
   &__search-button {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+    @media (min-width: $breakpoint) {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     border: none;
     outline: none;
     background: none;
     cursor: pointer;
+  }
+  &__search-icon {
+    @media (max-width: $breakpoint - 1px) {
+      flex-shrink: 0;
+
+      width: 23px;
+      height: 24px;
+    }
   }
 
   &__lang {
@@ -191,5 +224,42 @@
   }
   &__store-icon {
     margin-left: 5px;
+  }
+
+  &__mobile {
+    @media (min-width: $breakpoint) {
+      display: none;
+    }
+  }
+  &__menu {
+    $size: 30px;
+
+    width: $size;
+    height: $size;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid $color-light-gray;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  &__burger {
+    position: relative;
+
+    width: 14px;
+    height: 10px;
+
+    border-top: 1.5px solid $color-black;
+    border-bottom: 1.5px solid $color-black;
+  }
+
+  &__item {
+
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
   }
 }
