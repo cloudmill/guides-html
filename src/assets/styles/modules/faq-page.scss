@@ -10,6 +10,11 @@
   &__top-items {
     display: flex;
   }
+  &__top-item {
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
 
   &__pagination {
     
