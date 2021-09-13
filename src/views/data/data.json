@@ -9,6 +9,10 @@
       "href": "land-excursions.html"
     },
     {
+      "page": "Круизные экскурсия",
+      "href": "cruise-excursions.html"
+    },
+    {
       "page": "Наши гиды",
       "href": "our-guides.html"
     },
@@ -379,6 +383,23 @@
           "text": "On sale "
         }
       ]
+    }
+  ],
+  "cruiseTour": [
+    {
+      "text": "Palaces, castles and mansions. There are about six hundred old mansions, large and small, preserved here."
+    },
+    {
+      "text": "The noble nobles left behind a legacy in the form of magnificent palaces that perpetuated their names — Menshikov, Stroganov, Sheremetyevo, Vorontsov. Most of them today hold museum collections and cultural masterpieces."
+    },
+    {
+      "text": "Rivers, canals, and bridges. The waterways that run the length and breadth of St. Petersburg are the business card of the city, which gave it the well-deserved fame of the\"Venice of the north\". - You will see the embankments and drawbridges bound in impregnable granite, soaring up above the snow-white motor ships, on unforgettable walks along the river \"avenues\"."
+    },
+    {
+      "text": "Summer residences and palace and park ensembles. Not only the State Hermitage Museum, St. Isaac's Cathedral, the Winter Palace and the Arrow of Vasilievsky Island delight travelers."
+    },
+    {
+      "text": "Bus tours around the suburbs of St. Petersburg will give you an introduction to the pearls of the Leningrad region — the fountains of Peterhof, the forts of Kronstadt, the Amber Room of the Catherine Palace, the Chinese Palace of Oranienbaum."
     }
   ]
 }
