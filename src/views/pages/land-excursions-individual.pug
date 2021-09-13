@@ -1,0 +1,58 @@
+extends ../layouts/master.pug
+
+include  ../components/panel
+include  ../components/navigation
+include  ../components/thumb-slider
+
+block content 
+  section.section.section--panel 
+    +panel
+  section.section.section--md 
+    .container
+      .section__grid
+        .section__item
+          +thumb-slider
+        .section__item
+          .sticky
+            +navigation(items=['For hotel guests'] page="Walking tour of St. Petersburg")
+            .sticky__category 
+              .category
+                each item in ['Individual', 'First choice', '-20% off']
+                  .category__item
+                    |#{item}
+            .sticky__inner 
+              .sticky__grid
+                -
+                  var ddata = [
+                    {
+                      label: 'country',
+                      text: 'Russia',
+                    },
+                    {
+                      label: 'city',
+                      text: 'Saint Petersburg',
+                    },
+                    {
+                      label: 'Tour duration',
+                      text: '3 hours',
+                    },
+                    {
+                      label: 'moving',
+                      text: 'Walking',
+                    },
+                    {
+                      label: 'Availability for wheelchair-users',
+                      text: 'Wheelchair-friendly',
+                    },
+                  ]
+                each item in ddata
+                  .sticky__item 
+                    .sticky__label 
+                      |#{item.label}
+                    .sticky__text 
+                      |#{item.text}
+            .sticky__inner 
+              .sticky__price 
+                |from #[span.sticky__price-discont $159] #[span.sticky__price-price $129] / person
+            .sticky__button 
+              |button

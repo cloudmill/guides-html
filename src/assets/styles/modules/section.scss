@@ -46,4 +46,21 @@
       }
     }
   }
+
+  &__grid {
+    display: grid;
+    // grid-template-columns: max-content;
+    @media (min-width: $breakpoint) {
+      grid-template-columns: calc(#{$col-part-d} * 7 - #{$col-gap-d}) calc(#{$col-part-d} * 5);
+    }
+  }
+
+  &__item {
+
+    &:nth-child(2) {
+      @media (min-width: $breakpoint) {
+        padding-left: calc(#{$col-part-d});
+      }
+    }
+  }
 }

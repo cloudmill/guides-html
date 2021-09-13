@@ -1,0 +1,64 @@
+.sticky {
+
+  &__category {
+    margin-top: 20px;
+  }
+
+  &__inner {
+    margin-top: 40px;
+    @media (min-width: $breakpoint) {
+      margin-top: 50px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+    @media (min-width: $breakpoint-m) {
+      column-gap: 60px;
+      grid-template-columns: max-content max-content max-content;
+    }
+    @media (min-width: $breakpoint) {
+      column-gap: 0;
+      grid-template-columns: calc(#{$col-part-d}) calc(#{$col-part-d} * 2) calc(#{$col-part-d});
+      row-gap: 40px;
+    }
+  } 
+
+  &__item {
+
+  }
+
+  &__label {
+    margin-bottom: 5px;
+
+    text-transform: uppercase;
+    color: $color-gray;
+    font-weight: 500;
+    @include fsl(12px);
+  }
+
+  &__text {
+    @include fsl(16px);
+  }
+
+  &__price {
+    @include fsl(16px);
+  }
+  &__price-discont {
+    font-weight: 500;
+    @include fsl(30px);
+    color: $color-gray;
+    text-decoration: line-through;
+  }
+  &__price-price {
+    @include fsl(30px);
+    font-weight: 500;
+  }
+
+  &__button {
+    margin-top: 40px;
+
+  }
+}
