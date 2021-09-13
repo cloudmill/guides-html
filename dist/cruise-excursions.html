@@ -135,7 +135,7 @@
 									<div class="panel__row">
 										<div class="panel__col">
 											<div class="excursion-btn">
-												<div class="panel__item"><a class="excursion-btn__button" href="#">
+												<div class="panel__item"><a class="excursion-btn__button excursion-btn__button--active" href="#">
 														<div class="excursion-btn__icon"><svg class="excursion-btn__cruise" width="29" height="19" viewbox="0 0 29 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path d="M1.31647 11.2413C1.12934 10.4558 1.72495 9.70166 2.53244 9.70166H23.2145C24.4018 9.70166 24.9203 11.2015 23.9865 11.9348L17.1669 17.2896C16.9467 17.4625 16.6749 17.5565 16.395 17.5565H3.80815C3.22939 17.5565 2.72631 17.1592 2.59219 16.5962L1.31647 11.2413Z" stroke="#5DD7FF" stroke-width="1.5"></path>
 																<path d="M21.5161 9.8872L19.5296 6.62514C19.3481 6.32713 19.0245 6.14526 18.6755 6.14526H6.58254C6.23362 6.14526 5.90993 6.32713 5.72845 6.62514L3.74194 9.8872" stroke="#5DD7FF" stroke-width="1.5"></path>
@@ -143,7 +143,7 @@
 															</svg></div>
 														<div class="excursion-btn__text">Shore excursions</div>
 													</a></div>
-												<div class="panel__item"><a class="excursion-btn__button excursion-btn__button--active" href="#">
+												<div class="panel__item"><a class="excursion-btn__button" href="#">
 														<div class="excursion-btn__icon"><svg class="excursion-btn__walk" width="11" height="22" viewbox="0 0 11 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path d="M5.3565 0.294922C6.76971 0.294922 7.91895 1.44416 7.91895 2.85737C7.91895 4.27058 6.76971 5.42005 5.3565 5.42005C3.94376 5.42005 2.79452 4.27034 2.79452 2.85737C2.79452 1.44439 3.94376 0.294922 5.3565 0.294922ZM5.3565 4.24724C6.12274 4.24724 6.7459 3.62361 6.7459 2.85737C6.7459 2.09113 6.12274 1.46797 5.3565 1.46797C4.59073 1.46797 3.96756 2.09113 3.96756 2.85737C3.96756 3.62361 4.59073 4.24724 5.3565 4.24724Z" fill="#5DD7FF"></path>
 																<path d="M1.15513 13.3959C0.83141 13.3959 0.568842 13.1333 0.568842 12.8091V9.80997C0.568842 6.23248 6.22144 6.19141 6.46207 6.19141C6.78626 6.19141 7.04883 6.45398 7.04883 6.7777V13.2367C7.04883 13.5604 6.78626 13.823 6.46207 13.823C6.13835 13.823 5.87578 13.5604 5.87578 13.2367V7.39643C4.61078 7.50122 1.74165 7.94584 1.74165 9.8102V12.8093C1.74189 13.1333 1.47932 13.3959 1.15513 13.3959Z" fill="#5DD7FF"></path>
@@ -159,6 +159,26 @@
 											<div class="panel__item"><select name="location">
 													<option value="default" selected="selected">location</option>
 												</select></div>
+											<div class="panel__item">
+												<div class="panel__date">
+													<div class="panel__date-label">Cruise start date</div>
+													<div class="panel__date-button">
+														<div class="panel__date-icon"><svg width="18" height="20" viewbox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M0.833984 7.62091H17.1726" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M13.0727 11.2005H13.0812" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M9.00434 11.2005H9.01283" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M4.92817 11.2005H4.93666" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M13.0727 14.7635H13.0812" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M9.00434 14.7635H9.01283" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M4.92817 14.7635H4.93666" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M12.7059 0.833496V3.85004" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M5.30155 0.833496V3.85004" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M12.8851 2.28125H5.12338C2.43142 2.28125 0.75 3.78086 0.75 6.53736V14.8329C0.75 17.6327 2.43142 19.167 5.12338 19.167H12.8766C15.577 19.167 17.25 17.6587 17.25 14.9022V6.53736C17.2585 3.78086 15.5855 2.28125 12.8851 2.28125Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															</svg></div>
+														<div class="panel__date-text">28.10.2021</div>
+													</div>
+												</div>
+											</div>
 										</div>
 										<div class="panel__col">
 											<div class="panel__button">Apply</div>
@@ -175,11 +195,11 @@
 									<div class="breadcrumb">
 										<ul class="breadcrumb__list">
 											<li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Home</a></li>
-											<li class="breadcrumb__item breadcrumb__item--active"><a class="breadcrumb__link" href="#">For hotel guests</a></li>
+											<li class="breadcrumb__item breadcrumb__item--active"><a class="breadcrumb__link" href="#">Shore excursions</a></li>
 										</ul>
 									</div>
 								</div>
-								<h1>For hotel guests</h1>
+								<h1>Shore excursions</h1>
 							</div>
 						</div>
 					</section>
@@ -375,28 +395,38 @@
 													</div>
 												</div>
 												<div class="excursion-card__bot">
-													<div class="excursion-card__info">
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																	<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																</svg></div>
-															<div class="excursion-card__info-text">3 hours</div>
+													<div class="excursion-card__row">
+														<div class="excursion-card__col">
+															<div class="excursion-card__info-item">
+																<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="excursion-card__info-text">1 days/10 hours</div>
+															</div>
 														</div>
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="18" height="20" viewbox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M2.5 15.5H7.5V17C7.5 18.3807 6.38071 19.5 5 19.5C3.61929 19.5 2.5 18.3807 2.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M10.5 15.5H15.5V17C15.5 18.3807 14.3807 19.5 13 19.5C11.6193 19.5 10.5 18.3807 10.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M0.5 6C0.5 2.96243 2.96243 0.5 6 0.5H12C15.0376 0.5 17.5 2.96243 17.5 6V15C17.5 15.8284 16.8284 16.5 16 16.5H2C1.17157 16.5 0.5 15.8284 0.5 15V6Z" fill="white" stroke="#5DD7FF"></path>
-																	<rect x="3.5" y="3.5" width="11" height="3" rx="1.5" stroke="#5DD7FF"></rect>
-																	<circle cx="5.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																	<circle cx="12.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																</svg></div>
-															<div class="excursion-card__info-text">Transport</div>
+														<div class="excursion-card__col">
+															<div class="excursion-card__activity">
+																<div class="excursion-card__activity-text">Activity</div>
+																<ul class="excursion-card__activity-dots">
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																</ul>
+															</div>
 														</div>
 													</div>
 													<div class="excursion-card__wrapper">
-														<div class="excursion-card__price">from <span class="excursion-card__price-discont">$159</span><span class="excursion-card__price-num">$129 </span>/ person</div>
+														<div class="excursion-card__row">
+															<div class="excursion-card__col">
+																<div class="excursion-card__price"><span class="excursion-card__price-num">$129 </span>/ person</div>
+															</div>
+															<div class="excursion-card__col">
+																<div class="button button-m">Compare</div>
+															</div>
+														</div>
 													</div>
 												</div>
 											</a></div>
@@ -429,28 +459,38 @@
 													</div>
 												</div>
 												<div class="excursion-card__bot">
-													<div class="excursion-card__info">
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																	<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																</svg></div>
-															<div class="excursion-card__info-text">3 hours</div>
+													<div class="excursion-card__row">
+														<div class="excursion-card__col">
+															<div class="excursion-card__info-item">
+																<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="excursion-card__info-text">1 days/10 hours</div>
+															</div>
 														</div>
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="18" height="20" viewbox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M2.5 15.5H7.5V17C7.5 18.3807 6.38071 19.5 5 19.5C3.61929 19.5 2.5 18.3807 2.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M10.5 15.5H15.5V17C15.5 18.3807 14.3807 19.5 13 19.5C11.6193 19.5 10.5 18.3807 10.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M0.5 6C0.5 2.96243 2.96243 0.5 6 0.5H12C15.0376 0.5 17.5 2.96243 17.5 6V15C17.5 15.8284 16.8284 16.5 16 16.5H2C1.17157 16.5 0.5 15.8284 0.5 15V6Z" fill="white" stroke="#5DD7FF"></path>
-																	<rect x="3.5" y="3.5" width="11" height="3" rx="1.5" stroke="#5DD7FF"></rect>
-																	<circle cx="5.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																	<circle cx="12.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																</svg></div>
-															<div class="excursion-card__info-text">Transport</div>
+														<div class="excursion-card__col">
+															<div class="excursion-card__activity">
+																<div class="excursion-card__activity-text">Activity</div>
+																<ul class="excursion-card__activity-dots">
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																</ul>
+															</div>
 														</div>
 													</div>
 													<div class="excursion-card__wrapper">
-														<div class="excursion-card__price">from <span class="excursion-card__price-num">$129 </span>/ person</div>
+														<div class="excursion-card__row">
+															<div class="excursion-card__col">
+																<div class="excursion-card__price"><span class="excursion-card__price-num">$129 </span>/ person</div>
+															</div>
+															<div class="excursion-card__col">
+																<div class="button button-m">Compare</div>
+															</div>
+														</div>
 													</div>
 												</div>
 											</a></div>
@@ -483,28 +523,38 @@
 													</div>
 												</div>
 												<div class="excursion-card__bot">
-													<div class="excursion-card__info">
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																	<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																</svg></div>
-															<div class="excursion-card__info-text">3 hours</div>
+													<div class="excursion-card__row">
+														<div class="excursion-card__col">
+															<div class="excursion-card__info-item">
+																<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="excursion-card__info-text">1 days/10 hours</div>
+															</div>
 														</div>
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="18" height="20" viewbox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M2.5 15.5H7.5V17C7.5 18.3807 6.38071 19.5 5 19.5C3.61929 19.5 2.5 18.3807 2.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M10.5 15.5H15.5V17C15.5 18.3807 14.3807 19.5 13 19.5C11.6193 19.5 10.5 18.3807 10.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M0.5 6C0.5 2.96243 2.96243 0.5 6 0.5H12C15.0376 0.5 17.5 2.96243 17.5 6V15C17.5 15.8284 16.8284 16.5 16 16.5H2C1.17157 16.5 0.5 15.8284 0.5 15V6Z" fill="white" stroke="#5DD7FF"></path>
-																	<rect x="3.5" y="3.5" width="11" height="3" rx="1.5" stroke="#5DD7FF"></rect>
-																	<circle cx="5.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																	<circle cx="12.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																</svg></div>
-															<div class="excursion-card__info-text">Transport</div>
+														<div class="excursion-card__col">
+															<div class="excursion-card__activity">
+																<div class="excursion-card__activity-text">Activity</div>
+																<ul class="excursion-card__activity-dots">
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																</ul>
+															</div>
 														</div>
 													</div>
 													<div class="excursion-card__wrapper">
-														<div class="excursion-card__price">from <span class="excursion-card__price-num">$129 </span>/ person</div>
+														<div class="excursion-card__row">
+															<div class="excursion-card__col">
+																<div class="excursion-card__price"><span class="excursion-card__price-num">$129 </span>/ person</div>
+															</div>
+															<div class="excursion-card__col">
+																<div class="button button-m">Compare</div>
+															</div>
+														</div>
 													</div>
 												</div>
 											</a></div>
@@ -537,28 +587,38 @@
 													</div>
 												</div>
 												<div class="excursion-card__bot">
-													<div class="excursion-card__info">
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																	<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																</svg></div>
-															<div class="excursion-card__info-text">3 hours</div>
+													<div class="excursion-card__row">
+														<div class="excursion-card__col">
+															<div class="excursion-card__info-item">
+																<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="excursion-card__info-text">1 days/10 hours</div>
+															</div>
 														</div>
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="18" height="20" viewbox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M2.5 15.5H7.5V17C7.5 18.3807 6.38071 19.5 5 19.5C3.61929 19.5 2.5 18.3807 2.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M10.5 15.5H15.5V17C15.5 18.3807 14.3807 19.5 13 19.5C11.6193 19.5 10.5 18.3807 10.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M0.5 6C0.5 2.96243 2.96243 0.5 6 0.5H12C15.0376 0.5 17.5 2.96243 17.5 6V15C17.5 15.8284 16.8284 16.5 16 16.5H2C1.17157 16.5 0.5 15.8284 0.5 15V6Z" fill="white" stroke="#5DD7FF"></path>
-																	<rect x="3.5" y="3.5" width="11" height="3" rx="1.5" stroke="#5DD7FF"></rect>
-																	<circle cx="5.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																	<circle cx="12.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																</svg></div>
-															<div class="excursion-card__info-text">Transport</div>
+														<div class="excursion-card__col">
+															<div class="excursion-card__activity">
+																<div class="excursion-card__activity-text">Activity</div>
+																<ul class="excursion-card__activity-dots">
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																</ul>
+															</div>
 														</div>
 													</div>
 													<div class="excursion-card__wrapper">
-														<div class="excursion-card__price">from <span class="excursion-card__price-discont">$159</span><span class="excursion-card__price-num">$129 </span>/ person</div>
+														<div class="excursion-card__row">
+															<div class="excursion-card__col">
+																<div class="excursion-card__price"><span class="excursion-card__price-num">$129 </span>/ person</div>
+															</div>
+															<div class="excursion-card__col">
+																<div class="button button-m">Compare</div>
+															</div>
+														</div>
 													</div>
 												</div>
 											</a></div>
@@ -591,28 +651,38 @@
 													</div>
 												</div>
 												<div class="excursion-card__bot">
-													<div class="excursion-card__info">
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																	<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																</svg></div>
-															<div class="excursion-card__info-text">3 hours</div>
+													<div class="excursion-card__row">
+														<div class="excursion-card__col">
+															<div class="excursion-card__info-item">
+																<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="excursion-card__info-text">1 days/10 hours</div>
+															</div>
 														</div>
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="18" height="20" viewbox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M2.5 15.5H7.5V17C7.5 18.3807 6.38071 19.5 5 19.5C3.61929 19.5 2.5 18.3807 2.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M10.5 15.5H15.5V17C15.5 18.3807 14.3807 19.5 13 19.5C11.6193 19.5 10.5 18.3807 10.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M0.5 6C0.5 2.96243 2.96243 0.5 6 0.5H12C15.0376 0.5 17.5 2.96243 17.5 6V15C17.5 15.8284 16.8284 16.5 16 16.5H2C1.17157 16.5 0.5 15.8284 0.5 15V6Z" fill="white" stroke="#5DD7FF"></path>
-																	<rect x="3.5" y="3.5" width="11" height="3" rx="1.5" stroke="#5DD7FF"></rect>
-																	<circle cx="5.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																	<circle cx="12.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																</svg></div>
-															<div class="excursion-card__info-text">Transport</div>
+														<div class="excursion-card__col">
+															<div class="excursion-card__activity">
+																<div class="excursion-card__activity-text">Activity</div>
+																<ul class="excursion-card__activity-dots">
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																</ul>
+															</div>
 														</div>
 													</div>
 													<div class="excursion-card__wrapper">
-														<div class="excursion-card__price">from <span class="excursion-card__price-num">$129 </span>/ person</div>
+														<div class="excursion-card__row">
+															<div class="excursion-card__col">
+																<div class="excursion-card__price"><span class="excursion-card__price-num">$129 </span>/ person</div>
+															</div>
+															<div class="excursion-card__col">
+																<div class="button button-m">Compare</div>
+															</div>
+														</div>
 													</div>
 												</div>
 											</a></div>
@@ -645,28 +715,38 @@
 													</div>
 												</div>
 												<div class="excursion-card__bot">
-													<div class="excursion-card__info">
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																	<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																</svg></div>
-															<div class="excursion-card__info-text">3 hours</div>
+													<div class="excursion-card__row">
+														<div class="excursion-card__col">
+															<div class="excursion-card__info-item">
+																<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="excursion-card__info-text">1 days/10 hours</div>
+															</div>
 														</div>
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="18" height="20" viewbox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M2.5 15.5H7.5V17C7.5 18.3807 6.38071 19.5 5 19.5C3.61929 19.5 2.5 18.3807 2.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M10.5 15.5H15.5V17C15.5 18.3807 14.3807 19.5 13 19.5C11.6193 19.5 10.5 18.3807 10.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M0.5 6C0.5 2.96243 2.96243 0.5 6 0.5H12C15.0376 0.5 17.5 2.96243 17.5 6V15C17.5 15.8284 16.8284 16.5 16 16.5H2C1.17157 16.5 0.5 15.8284 0.5 15V6Z" fill="white" stroke="#5DD7FF"></path>
-																	<rect x="3.5" y="3.5" width="11" height="3" rx="1.5" stroke="#5DD7FF"></rect>
-																	<circle cx="5.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																	<circle cx="12.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																</svg></div>
-															<div class="excursion-card__info-text">Transport</div>
+														<div class="excursion-card__col">
+															<div class="excursion-card__activity">
+																<div class="excursion-card__activity-text">Activity</div>
+																<ul class="excursion-card__activity-dots">
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																</ul>
+															</div>
 														</div>
 													</div>
 													<div class="excursion-card__wrapper">
-														<div class="excursion-card__price">from <span class="excursion-card__price-num">$129 </span>/ person</div>
+														<div class="excursion-card__row">
+															<div class="excursion-card__col">
+																<div class="excursion-card__price"><span class="excursion-card__price-num">$129 </span>/ person</div>
+															</div>
+															<div class="excursion-card__col">
+																<div class="button button-m">Compare</div>
+															</div>
+														</div>
 													</div>
 												</div>
 											</a></div>
@@ -699,28 +779,38 @@
 													</div>
 												</div>
 												<div class="excursion-card__bot">
-													<div class="excursion-card__info">
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																	<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																</svg></div>
-															<div class="excursion-card__info-text">3 hours</div>
+													<div class="excursion-card__row">
+														<div class="excursion-card__col">
+															<div class="excursion-card__info-item">
+																<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="excursion-card__info-text">1 days/10 hours</div>
+															</div>
 														</div>
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="18" height="20" viewbox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M2.5 15.5H7.5V17C7.5 18.3807 6.38071 19.5 5 19.5C3.61929 19.5 2.5 18.3807 2.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M10.5 15.5H15.5V17C15.5 18.3807 14.3807 19.5 13 19.5C11.6193 19.5 10.5 18.3807 10.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M0.5 6C0.5 2.96243 2.96243 0.5 6 0.5H12C15.0376 0.5 17.5 2.96243 17.5 6V15C17.5 15.8284 16.8284 16.5 16 16.5H2C1.17157 16.5 0.5 15.8284 0.5 15V6Z" fill="white" stroke="#5DD7FF"></path>
-																	<rect x="3.5" y="3.5" width="11" height="3" rx="1.5" stroke="#5DD7FF"></rect>
-																	<circle cx="5.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																	<circle cx="12.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																</svg></div>
-															<div class="excursion-card__info-text">Transport</div>
+														<div class="excursion-card__col">
+															<div class="excursion-card__activity">
+																<div class="excursion-card__activity-text">Activity</div>
+																<ul class="excursion-card__activity-dots">
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																</ul>
+															</div>
 														</div>
 													</div>
 													<div class="excursion-card__wrapper">
-														<div class="excursion-card__price">from <span class="excursion-card__price-discont">$159</span><span class="excursion-card__price-num">$129 </span>/ person</div>
+														<div class="excursion-card__row">
+															<div class="excursion-card__col">
+																<div class="excursion-card__price"><span class="excursion-card__price-num">$129 </span>/ person</div>
+															</div>
+															<div class="excursion-card__col">
+																<div class="button button-m">Compare</div>
+															</div>
+														</div>
 													</div>
 												</div>
 											</a></div>
@@ -753,28 +843,38 @@
 													</div>
 												</div>
 												<div class="excursion-card__bot">
-													<div class="excursion-card__info">
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																	<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																</svg></div>
-															<div class="excursion-card__info-text">3 hours</div>
+													<div class="excursion-card__row">
+														<div class="excursion-card__col">
+															<div class="excursion-card__info-item">
+																<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="excursion-card__info-text">1 days/10 hours</div>
+															</div>
 														</div>
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="18" height="20" viewbox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M2.5 15.5H7.5V17C7.5 18.3807 6.38071 19.5 5 19.5C3.61929 19.5 2.5 18.3807 2.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M10.5 15.5H15.5V17C15.5 18.3807 14.3807 19.5 13 19.5C11.6193 19.5 10.5 18.3807 10.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M0.5 6C0.5 2.96243 2.96243 0.5 6 0.5H12C15.0376 0.5 17.5 2.96243 17.5 6V15C17.5 15.8284 16.8284 16.5 16 16.5H2C1.17157 16.5 0.5 15.8284 0.5 15V6Z" fill="white" stroke="#5DD7FF"></path>
-																	<rect x="3.5" y="3.5" width="11" height="3" rx="1.5" stroke="#5DD7FF"></rect>
-																	<circle cx="5.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																	<circle cx="12.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																</svg></div>
-															<div class="excursion-card__info-text">Transport</div>
+														<div class="excursion-card__col">
+															<div class="excursion-card__activity">
+																<div class="excursion-card__activity-text">Activity</div>
+																<ul class="excursion-card__activity-dots">
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																</ul>
+															</div>
 														</div>
 													</div>
 													<div class="excursion-card__wrapper">
-														<div class="excursion-card__price">from <span class="excursion-card__price-num">$129 </span>/ person</div>
+														<div class="excursion-card__row">
+															<div class="excursion-card__col">
+																<div class="excursion-card__price"><span class="excursion-card__price-num">$129 </span>/ person</div>
+															</div>
+															<div class="excursion-card__col">
+																<div class="button button-m">Compare</div>
+															</div>
+														</div>
 													</div>
 												</div>
 											</a></div>
@@ -807,28 +907,38 @@
 													</div>
 												</div>
 												<div class="excursion-card__bot">
-													<div class="excursion-card__info">
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																	<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																</svg></div>
-															<div class="excursion-card__info-text">3 hours</div>
+													<div class="excursion-card__row">
+														<div class="excursion-card__col">
+															<div class="excursion-card__info-item">
+																<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="excursion-card__info-text">1 days/10 hours</div>
+															</div>
 														</div>
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="18" height="20" viewbox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M2.5 15.5H7.5V17C7.5 18.3807 6.38071 19.5 5 19.5C3.61929 19.5 2.5 18.3807 2.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M10.5 15.5H15.5V17C15.5 18.3807 14.3807 19.5 13 19.5C11.6193 19.5 10.5 18.3807 10.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M0.5 6C0.5 2.96243 2.96243 0.5 6 0.5H12C15.0376 0.5 17.5 2.96243 17.5 6V15C17.5 15.8284 16.8284 16.5 16 16.5H2C1.17157 16.5 0.5 15.8284 0.5 15V6Z" fill="white" stroke="#5DD7FF"></path>
-																	<rect x="3.5" y="3.5" width="11" height="3" rx="1.5" stroke="#5DD7FF"></rect>
-																	<circle cx="5.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																	<circle cx="12.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																</svg></div>
-															<div class="excursion-card__info-text">Transport</div>
+														<div class="excursion-card__col">
+															<div class="excursion-card__activity">
+																<div class="excursion-card__activity-text">Activity</div>
+																<ul class="excursion-card__activity-dots">
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																</ul>
+															</div>
 														</div>
 													</div>
 													<div class="excursion-card__wrapper">
-														<div class="excursion-card__price">from <span class="excursion-card__price-num">$129 </span>/ person</div>
+														<div class="excursion-card__row">
+															<div class="excursion-card__col">
+																<div class="excursion-card__price"><span class="excursion-card__price-num">$129 </span>/ person</div>
+															</div>
+															<div class="excursion-card__col">
+																<div class="button button-m">Compare</div>
+															</div>
+														</div>
 													</div>
 												</div>
 											</a></div>
@@ -839,7 +949,11 @@
 									<div class="tour">
 										<div class="tour__container">
 											<h3 class="tour__title">Tours</h3>
-											<p class="tour__text">There may be no greater American than George Washington. Washington became the first United States President in 1789 with his unanimous victory in the first American election. He was also unanimously elected to a second term in 1793, the only president ever to garner 100 percent of the electoral votes. Washington was also the Commander-in-Chief of the First Continental Army that fought the British when the country was not yet established.</p>
+											<p class="tour__text">Palaces, castles and mansions. There are about six hundred old mansions, large and small, preserved here.</p>
+											<p class="tour__text">The noble nobles left behind a legacy in the form of magnificent palaces that perpetuated their names — Menshikov, Stroganov, Sheremetyevo, Vorontsov. Most of them today hold museum collections and cultural masterpieces.</p>
+											<p class="tour__text">Rivers, canals, and bridges. The waterways that run the length and breadth of St. Petersburg are the business card of the city, which gave it the well-deserved fame of the&quot;Venice of the north&quot;. - You will see the embankments and drawbridges bound in impregnable granite, soaring up above the snow-white motor ships, on unforgettable walks along the river &quot;avenues&quot;.</p>
+											<p class="tour__text">Summer residences and palace and park ensembles. Not only the State Hermitage Museum, St. Isaac's Cathedral, the Winter Palace and the Arrow of Vasilievsky Island delight travelers.</p>
+											<p class="tour__text">Bus tours around the suburbs of St. Petersburg will give you an introduction to the pearls of the Leningrad region — the fountains of Peterhof, the forts of Kronstadt, the Amber Room of the Catherine Palace, the Chinese Palace of Oranienbaum.</p>
 										</div>
 									</div>
 								</div>
