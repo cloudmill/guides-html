@@ -33,3 +33,13 @@
     }
   }
 }
+
+.button-wrapper {
+  margin-top: 40px;
+  @media (min-width: $breakpoint) {
+    margin-top: 60px;
+  }
+
+  display: flex;
+  justify-content: center;
+}
