@@ -1,0 +1,38 @@
+mixin panel 
+  .panel 
+    .container
+      .panel__inner 
+        .panel__row 
+          .panel__col
+            .excursion-btn
+              .panel__item
+                a.excursion-btn__button(href="#" class=(attributes.cruise ? 'excursion-btn__button--active' : '')) 
+                  .excursion-btn__icon
+                    +cruise-svg.excursion-btn__cruise
+                  .excursion-btn__text
+                    |Shore excursions
+              .panel__item
+                a.excursion-btn__button(href="#" class=(attributes.cruise ? '' : 'excursion-btn__button--active')) 
+                  .excursion-btn__icon 
+                    +walk-svg.excursion-btn__walk
+                  .excursion-btn__text
+                    |For hotel guests
+          .panel__col
+            .panel__item
+              select(name="location") 
+                option(value="default" selected="selected")
+                  |location 
+            if (attributes.cruise)
+              .panel__item
+                .panel__date 
+                  .panel__date-label
+                    |Cruise start date
+                  .panel__date-button
+                    .panel__date-icon 
+                      +calendar-svg
+                    .panel__date-text 
+                      |28.10.2021
+          .panel__col
+            .panel__button
+              |Apply
+//- .excursion-btn__button--active

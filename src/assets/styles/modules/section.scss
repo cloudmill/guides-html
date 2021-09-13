@@ -17,6 +17,13 @@
     }
   }
 
+  &--panel {
+    margin-top: 64px;
+    @media (min-width: $breakpoint) {
+      margin-top: 127px;
+    }
+  }
+
   &__row {
     @media (min-width: $breakpoint) {
       display: flex;

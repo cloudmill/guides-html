@@ -2,11 +2,14 @@ extends ../layouts/master.pug
 
 include  ../components/navigation
 include  ../components/aside
+include  ../components/panel
 include  ../components/excursion-card
 
 block content
   .excursions-page
-    section.section.section--first
+    section.section.section--panel 
+      +panel
+    section.section.section--md
       .container
         +navigation(page="FAQ")
     section.section.section--md 
