@@ -1,0 +1,14 @@
+mixin thumb-slider
+  .thumb-slider
+    .thumb-slider__container 
+      .thumb-slider__thumb 
+      .thumb-slider__control 
+      .swiper-container(data-slider-id='10')
+        .swiper-wrapper 
+          - for (i = 0; i < 2; i++)
+            .swiper-slide 
+              .thumb-slider__slide 
+                img.thumb-slider__slide-img(src="assets/images/thumb-slider-1.jpg", alt="")
+            .swiper-slide 
+              .thumb-slider__slide 
+                img.thumb-slider__slide-img(src="assets/images/thumb-slider-2.jpg", alt="")

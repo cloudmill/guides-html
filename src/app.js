@@ -30,20 +30,20 @@ import Swiper from 'swiper/bundle';
           // },
         };
 
-        // switch (slider_id) {
-        //   case 1:
-        //     slider_options = {
-        //       ...slider_options,
+        switch (slider_id) {
+          case 10:
+            slider_options = {
+              // ...slider_options,
 
-        //       breakpoints: {
-        //         [BREAKPOINT]: {
-        //           spaceBetween: 60,
-        //         },
-        //       },
-        //     }
-        //     break;
+              breakpoints: {
+                // [BREAKPOINT]: {
+                //   spaceBetween: 60,
+                // },
+              },
+            }
+            break;
 
-        // }
+        }
 
         const slider_swiper = new Swiper(slider_el[0], slider_options);
 
