@@ -4,9 +4,10 @@ mixin excursion-card
       .excursion-card__container
         img.excursion-card__img(src="assets/images/" + attributes.src , alt="")
         .excursion-card__items
-          each item in ['Individual', 'First choice', '-20% off']
-            .excursion-card__item
-              |#{item}
+          .category
+            each item in ['Individual', 'First choice', '-20% off']
+              .category__item
+                |#{item}
       .excursion-card__content
         .excursion-card__title 
           |#{attributes.title}
