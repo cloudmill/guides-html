@@ -1,0 +1,32 @@
+.tour {
+  margin-top: 60px;
+  @media (min-width: $breakpoint) {
+    margin-top: 100px;
+  }
+
+  &__container {
+    @media (min-width: $breakpoint) {
+      width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    @media (min-width: $breakpoint) {
+      margin-bottom: 20px;
+    }
+
+    font-weight: 500;
+    @include fsl(20px);
+    @media (min-width: $breakpoint) {
+      @include fsl(50px);
+    }
+  }
+
+  &__text {
+    @include fsl(14px, 160%);
+    @media (min-width: $breakpoint) {
+      @include fsl(16px);
+    }
+  }
+}

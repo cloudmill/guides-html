@@ -6,7 +6,9 @@
   &__col {
     flex-shrink: 0;
     &:nth-child(1) {
+      margin-bottom: 20px;
       @media (min-width: $breakpoint) {
+        margin-bottom: 0;
         padding-right: calc(#{$col-gap-d});
         width: calc(#{$col-part-d} * 3);
       }
@@ -15,6 +17,11 @@
       @media (min-width: $breakpoint) {
         width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
       }
+    }
+  }
+  &__col-aside {
+    @media (max-width: $breakpoint - 1px) {
+      display: none;
     }
   }
 

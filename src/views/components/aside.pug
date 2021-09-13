@@ -9,7 +9,13 @@ mixin aside
             .aside__select
               |Select
           .aside__body
-            |select
+            select(name="lang")
+              option(value="default" selected="selected")
+                |Select language 
+              option(value="en")
+                |English
+              option(value="ru")
+                |Russian
         each item in data.asideExcursion
           li.aside__item 
             .aside__top 
@@ -27,8 +33,14 @@ mixin aside
                     |#{text.text}
       .aside__buttons 
         .aside__buttons-item 
-          .aside-button 
-            .aside-button__icon 
-              +repeat-svg.aside-button__svg
-            .aside-button__text 
+          .button-icon
+            .button-icon__icon 
+              +repeat-svg.button-icon__svg
+            .button-icon__text 
               |Clear
+mixin aside-button 
+  .aside-button 
+    .aside-button__text 
+      |Filters
+    .aside-button__icon 
+      +plus-svg.aside-button__svg

@@ -1,28 +1,37 @@
 .aside-button {
-  padding: 15px 0;
+  padding: 9px 20px;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  @media (min-width: $breakpoint) {
+    display: none;
+  }
+  width: 100%;
+  @media (min-width: $breakpoint-m) {
+    width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
+  }
 
-  border-radius: 12px;
-  border: 1px solid $color-gray;
-  transition: $transition;
+  border-radius: 10px;
+  border: 1px solid $color-light-gray;
   cursor: pointer;
 
-  &:hover {
-    background: $color-brown;
+  &__text {
+    @include fsl(16px);
   }
 
   &__icon {
-    margin-right: 10px;
-
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  &__text {
-    @include fsl(16px);
+  &__svg {
+    width: 20px;
+    height: 20px;
+
+    path {
+      stroke: $color-black;
+    }
   }
 }
