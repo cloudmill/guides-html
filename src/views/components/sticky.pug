@@ -7,15 +7,35 @@ mixin sticky-mobile
             |#{item}
     .sticky__inner 
       .sticky__grid
-        each item in attributes.data
+        if (!attributes.activity)
+          each item in attributes.data
+            .sticky__item 
+              .sticky__label 
+                |#{item.label}
+              .sticky__text 
+                |#{item.text}
+        else 
+          each item in data.cruiseSticky.first
+            .sticky__item 
+              .sticky__label 
+                |#{item.label}
+              .sticky__text 
+                |#{item.text}
           .sticky__item 
             .sticky__label 
-              |#{item.label}
-            .sticky__text 
-              |#{item.text}
+              |activity
+            ul.sticky__dots
+              - for (i = 0; i < 5; i++)
+                li.sticky__dot(class=((i < 3) ? 'sticky__dot--active' : ''))
+          each item in data.cruiseSticky.second
+            .sticky__item 
+              .sticky__label 
+                |#{item.label}
+              .sticky__text 
+                |#{item.text}
     .sticky__inner 
       .sticky__price 
         |from #[span.sticky__price-discont $159] #[span.sticky__price-price $129] / person
     .sticky__button 
-      .button.button--sticky
+      a.button.button--sticky(href="#") 
         |Arrange a tour

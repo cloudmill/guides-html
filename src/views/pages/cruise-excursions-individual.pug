@@ -34,7 +34,7 @@ block content
             .excursion-page__mobile  
               h1 
                 |Relax tour
-              +sticky-mobile(data = data.landSticky)
+              +sticky-mobile(activity = true)
             .excursion-page__price 
               +price
               .excursion-page__price-btn 
@@ -60,7 +60,19 @@ block content
                       |#{item}
               .sticky__inner 
                 .sticky__grid
-                  each item in data.landSticky
+                  each item in data.cruiseSticky.first
+                    .sticky__item 
+                      .sticky__label 
+                        |#{item.label}
+                      .sticky__text 
+                        |#{item.text}
+                  .sticky__item 
+                    .sticky__label 
+                      |activity
+                    ul.sticky__dots
+                      - for (i = 0; i < 5; i++)
+                        li.sticky__dot(class=((i < 3) ? 'sticky__dot--active' : ''))
+                  each item in data.cruiseSticky.second
                     .sticky__item 
                       .sticky__label 
                         |#{item.label}
@@ -70,7 +82,7 @@ block content
                 .sticky__price 
                   |from #[span.sticky__price-discont $159] #[span.sticky__price-price $129] / person
               .sticky__button 
-                .button.button--sticky
+                a.button.button--sticky(href="#") 
                   |Arrange a tour
     section.section 
       .container
@@ -88,5 +100,5 @@ block content
             .swiper-wrapper
               each item in data.mainSellers 
                 .swiper-slide 
-                  +excursion-card(title = item.title walk = item.walk src = item.src)
+                  +excursion-card(title = item.title src = item.src cruise=true)
 

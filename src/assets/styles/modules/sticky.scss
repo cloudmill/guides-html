@@ -78,4 +78,26 @@
       width: 100%;
     }
   }
+
+  &__dots {
+    display: flex;
+  }
+
+  &__dot {
+    $size: 8px;
+
+    width: $size;
+    height: $size;
+
+    border-radius: 50%;
+    background: $color-aqua;
+
+    &:not(:first-child) {
+      margin-left: 5px;
+    }
+
+    &--active {
+      background: $color-blue;
+    }
+  }
 }

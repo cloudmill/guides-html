@@ -468,5 +468,31 @@
       "label": "Availability for wheelchair-users",
       "text": "Wheelchair-friendly"
     }
-  ]
+  ],
+  "cruiseSticky": {
+    "first": [
+      {
+        "label": "country",
+        "text": "Russia"
+      },
+      {
+        "label": "port",
+        "text": "Saint Petersburg"
+      },
+      {
+        "label": "Tour duration",
+        "text": "10 hours"
+      }
+    ],
+    "second": [
+      {
+        "label": "Availability for wheelchair-users",
+        "text": "Wheelchair-friendly"
+      },
+      {
+        "label": "Collection point",
+        "text": "Port"
+      }
+    ]
+  }
 }
