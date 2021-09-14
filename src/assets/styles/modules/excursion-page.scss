@@ -1,0 +1,9 @@
+.excursion-page {
+
+  &__price {
+    margin-top: 60px;
+    @media (min-width: $breakpoint) {
+      margin-top: 40px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+mixin price
+  .price
+    .price__item.price__item--blue
+      .price__container 
+        .price__title 
+          |The price includes
+        ul.price__list 
+          each item in ['Guide services', 'Transport (4 hours)', 'Entrance tickets', 'Port fee', 'Lunch', 'Visa service']
+            li.price__point 
+              .price__icon 
+                +price-mark-svg
+              .price__text 
+                |#{item}
+    .price__item
+      .price__container 
+        .price__title 
+          |The price includes
+        ul.price__list  
+          each item in ['Umbrella', 'Blanket', 'Drinks']
+            li.price__point 
+              .price__icon  
+                +price-not-svg
+              .price__text 
+                |#{item}

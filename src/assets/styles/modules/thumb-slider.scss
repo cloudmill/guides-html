@@ -7,5 +7,9 @@
 
     overflow: hidden;
     border-radius: 10px;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: calc(#{$col-part-m} * 4 - #{$col-gap-m});
+    }
   }
 }
