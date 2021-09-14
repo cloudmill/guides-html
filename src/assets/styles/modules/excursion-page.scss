@@ -6,4 +6,226 @@
       margin-top: 40px;
     }
   }
+
+  &__title {
+    font-weight: 500;
+    @media (min-width: $breakpoint) {
+      @include fsl(35px);
+    }
+  }
+
+  &__button {
+    padding: 8px 25px;
+
+    @include fsl(14px);
+    border: 1px solid $color-light-gray;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      background: $color-brown;
+      border-color: $color-brown;
+    }
+  }
+
+  &__breadcrumbs {
+    margin-bottom: 20px;
+    @media (min-width: $breakpoint) {
+      display: none;
+    }
+  }
+
+  &__mobile {
+    margin-top: 20px;
+    @media (min-width: $breakpoint) {
+      display: none;
+    }
+  }
+
+  &__programm {}
+  &__programm-list {
+    margin-top: 20px;
+    @media (min-width: $breakpoint) {
+      margin-top: 50px;
+    }
+
+    @media (min-width: $breakpoint-m) {
+      width: calc(#{$col-part-m} * 3 - #{$col-gap-m});
+    }
+    @media (min-width: $breakpoint) {
+      width: 100%;
+    }
+  }
+  &__programm-item {
+    padding-bottom: 10px;
+    @media (min-width: $breakpoint) {
+      padding-bottom: 20px;
+    }
+
+    border-bottom: 1px solid $color-light-gray;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+      @media (min-width: $breakpoint) {
+        margin-top: 20px;
+      }
+    }
+  }
+  &__programm-row {
+    @media (min-width: $breakpoint) {
+      display: flex;
+    }
+  }
+  &__programm-col {
+    @media (min-width: $breakpoint) {
+      flex-shrink: 0;
+    }
+    &:nth-child(1) {
+      margin-bottom: 5px;
+      @media (min-width: $breakpoint) {
+        margin-bottom: 0;
+        width: calc(#{$col-part-d} * 2);
+      }
+    }
+    &:nth-child(2) {
+      @media (min-width: $breakpoint) {
+        
+      }
+    }
+  }
+  &__programm-time {
+    font-weight: 500;
+    @include fsl(16px);
+    @media (min-width: $breakpoint) {
+      @include fsl(20px);
+    }
+  }
+  &__programm-text {
+    @include fsl(16px, 160%);
+    @media (min-width: $breakpoint) {
+      @include fsl(20px, 130%);
+    }
+  }
+  &__programm-card {
+    margin: 20px 0 0;
+
+    display: none;
+    @media (min-width: $breakpoint) {
+      display: block;
+    }
+
+    max-width: 345px;
+
+    background: $color-aqua;
+    border-radius: 10px;
+  }
+  &__programm-label {
+    padding: 10px 20px;
+
+    @include fsl(12px, 160%);
+  }
+
+  &__landmarks {}
+  &__landmarks-row {
+    @media (min-width: $breakpoint-m) {
+      display: flex;
+    }
+  }
+  &__landmarks-col {
+    @media (min-width: $breakpoint-m) {
+      flex-shrink: 0;
+    }
+
+    &:nth-child(1) {
+      margin-bottom: 20px;
+      @media (min-width: $breakpoint-m) {
+        margin-bottom: 0;
+        width: calc(#{$col-part-m});
+      }
+      @media (min-width: $breakpoint) {
+        width: calc(#{$col-part-d} * 3);
+      }
+    }
+  }
+  &__landmarks-item {
+    padding-left: 26px;
+    position: relative;
+
+    @include fsl(16px);
+
+    &::before {
+      $size: 6px;
+
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      width: $size;
+      height: $size;
+
+      border-radius: 50%;
+      background: $color-blue;
+    }
+
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+  }
+  &__landmarks-btn {
+    margin-top: 20px;
+
+    display: none;
+    @media (min-width: $breakpoint) {
+      display: flex;
+    }
+  }
+
+  &__about {}
+  &__about-content {
+    margin-top: 20px;
+    @media (min-width: $breakpoint) {
+      margin-top: 40px;
+    }
+  }
+  &__about-text {
+    margin-bottom: 10px;
+    @media (min-width: $breakpoint) {
+      margin-bottom: 20px;
+    }
+
+    @include fsl(16px, 160%);
+  }
+  &__about-btn {
+    display: flex;
+    justify-content: flex-end;
+    @media (min-width: $breakpoint-m) {
+      justify-content: flex-start;
+    }
+    @media (min-width: $breakpoint) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__slider {}
+  &__slider-row {
+    margin-bottom: 25px;
+    @media (min-width: $breakpoint) {
+      margin-bottom: 50px;
+    }
+
+    display: flex;
+    justify-content: space-between;
+  }
+  &__slider-col {
+
+    &:nth-child(2) {
+      display: none;
+      @media (min-width: $breakpoint) {
+        display: block;
+      }
+    }
+  }
 }

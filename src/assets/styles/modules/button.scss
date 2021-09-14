@@ -32,6 +32,17 @@
       width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
     }
   }
+
+  &--sticky {
+    padding: 19px;
+
+    width: 100%;
+
+    border-color: $color-blue;
+    background: $color-blue;
+    border-radius: 14px;
+    @include fsl(16px);
+  }
 }
 
 .button-wrapper {

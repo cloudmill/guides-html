@@ -1,0 +1,278 @@
+.calculator {
+  position: relative;
+
+  &__container {
+    @media (min-width: $breakpoint) {
+      padding: 50px 50px 120px;
+
+      border: 1px solid $color-light-gray;
+      border-radius: 14px;
+    }
+  }
+
+  &__grid {
+    margin-top: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+      "A B"
+      "C C"
+      "D D"
+      "E F"
+      "G H"
+      "I I"
+    ;
+    row-gap: 20px;
+    column-gap: 20px;
+    @media (min-width: $breakpoint-m) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: 
+        "A B C C"
+        "D D D D"
+        "E F G H"
+        "I I J K"
+      ;
+    }
+    @media (min-width: $breakpoint) {
+      row-gap: 30px;
+      column-gap: 30px;
+      grid-template-areas: 
+        "A B C E F"
+        "D D D D D"
+      ;
+      grid-template-columns: repeat(5, max-content);
+    }
+  }
+
+  &__item {
+
+    &:nth-child(3) {
+      grid-area: C;
+      @media (min-width: $breakpoint-m) {
+        align-self: end;
+      }
+      @media (min-width: $breakpoint) {
+        grid-area: auto;
+      }
+    }
+    &:nth-child(4) {
+      margin: 20px 0 7px;
+      @media (min-width: $breakpoint) {
+        margin: 20px 0 0;
+      }
+      grid-area: D;
+    }
+    &:nth-child(9) {
+      grid-area: I;
+      @media (min-width: $breakpoint) {
+        grid-area: auto;
+      }
+    }
+    &:nth-child(10) {
+      @media (min-width: $breakpoint) {
+        grid-area: E;
+      }
+    }
+    &:nth-child(11) {
+      @media (min-width: $breakpoint) {
+        grid-area: F;
+      }
+    }
+  }
+  
+  &__label {
+    margin-bottom: 10px;
+
+    @include fsl(16px, 160%);
+  }
+
+  &__title {
+    font-weight: 500;
+    @include fsl(16px);
+    @media (min-width: $breakpoint) {
+      @include fsl(20px);
+    }
+  }
+
+  &__num {
+    font-weight: 500;
+  }
+
+  &__description {
+    margin-top: 10px;
+
+    color: $color-gray;
+    @include fsl(13px, 160%);
+  }
+
+  &__payments {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    @media (min-width: $breakpoint-m) {
+      bottom: 37px;
+      left: 20px  ;
+    }
+    @media (min-width: $breakpoint) {
+      top: 58px;
+      right: calc(#{$col-width-d});
+      left: auto;
+      bottom: auto;
+    }
+  }
+  &__payments-row {
+    margin-top: 20px;
+
+    display: flex;
+  }
+  &__payments-item {
+
+    padding: 8px;
+    @media (min-width: $breakpoint) {
+      padding: 10px 12px;
+    }
+
+    background: $color-light-gray;
+    border-radius: 10px;
+
+    &:not(:first-child) {
+      margin-left: 5px;
+    }
+  }
+  &__payments-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 49px;
+    height: 23px;
+    @media (min-width: $breakpoint) {
+      width: 60px;
+      height: 38px;
+    }
+  }
+
+  &__price {
+    margin-top: 20px;
+    padding: 0 20px;
+    margin-left: -20px;
+
+    width: calc(100% + (20px * 2));
+    @media (min-width: $breakpoint-m) {
+      margin-top: 40px;
+      margin-left: 0;
+      padding: 0;
+      width: auto;
+    }
+    @media (min-width: $breakpoint) {
+      margin: -65px 40px 0;
+    }
+
+    background: $color-aqua;
+    @media (min-width: $breakpoint) {
+      border-radius: 14px;
+    }
+  }
+  &__price-container {
+    padding: 20px 0 108px;
+    @media (min-width: $breakpoint-m) {
+      padding: 20px 20px 35px;
+    }
+    @media (min-width: $breakpoint) {
+      padding: 34px 40px 24px;
+    }
+  }
+  &__price-row {
+    display: flex;
+    flex-wrap: wrap;
+    @media (min-width: $breakpoint) {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__price-col {
+    flex-shrink: 0;
+    width: 100%;
+    @media (min-width: $breakpoint) {
+      width: auto;
+    }
+    display: flex;
+
+    &:nth-child(1) {
+      @media (min-width: $breakpoint-m) {
+        width: 50%;
+      }
+      @media (min-width: $breakpoint) {
+        width: auto;
+      }
+    }
+    &:nth-child(2) {
+      margin-top: 20px;
+      @media (min-width: $breakpoint-m) {
+        margin-top: 0;
+        width: 50%;
+      }
+      @media (min-width: $breakpoint) {
+        width: auto;
+      }
+    }
+    &:nth-child(3) {
+      margin-top: 20px;
+      @media (min-width: $breakpoint-m) {
+        width: 50%;
+        margin-left: auto;
+      }
+      @media (min-width: $breakpoint) {
+        margin-top: 0;
+        margin-left: 0;
+        width: calc(#{$col-part-d} * 3 - #{$col-gap-d} - 40px);
+      }
+    }
+  }
+  &__price-item {
+    width: calc(100% / 2);
+    @media (min-width: $breakpoint) {
+      width: auto;
+    }
+
+    &:not(:first-child) {
+      @media (min-width: $breakpoint) {
+        margin-left: 92px;
+      }
+    }
+  }
+  &__price-left {
+    width: 50%;
+    @media (min-width: $breakpoint) {
+      width: auto;
+    }
+  }
+  &__price-right {
+    width: 50%;
+    @media (min-width: $breakpoint) {
+      margin-left: 66px;
+      width: auto;
+    }
+  }
+  &__price-label {
+    @include fsl(16px, 160%);
+    white-space: nowrap;
+  }
+  &__price-num {
+    margin-top: 10px;
+    @media (min-width: $breakpoint) {
+      margin-top: 20px;
+    }
+    font-weight: 500;
+  }
+  &__price-number {
+    margin-top: 10px;
+    @media (min-width: $breakpoint) {
+      margin-top: 0;
+      @include fsl(40px);
+    }
+    font-weight: 500;
+  }
+}

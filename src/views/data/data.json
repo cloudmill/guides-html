@@ -405,5 +405,68 @@
     {
       "text": "Bus tours around the suburbs of St. Petersburg will give you an introduction to the pearls of the Leningrad region — the fountains of Peterhof, the forts of Kronstadt, the Amber Room of the Catherine Palace, the Chinese Palace of Oranienbaum."
     }
+  ],
+  "landProgramm": [
+    {
+      "time": "14.30-15.30",
+      "text": "Visit to the Peter and Paul Fortress"
+    },
+    {
+      "time": "15.30-16.30",
+      "text": "Saved on Blood"
+    },
+    {
+      "time": "16.30-17.30",
+      "text": "Photographing"
+    },
+    {
+      "time": "17.30-18.30",
+      "text": "Visit to the Russian Museum"
+    }
+  ],
+  "landmarks": [
+    {
+      "text": "Kazan Cathedral"
+    },
+    {
+      "text": "Catherine's Garden"
+    },
+    {
+      "text": "Anichkov Palace and Anichkov Bridge"
+    },
+    {
+      "text": "Shuvalovsky and Sheremetyevo palaces"
+    },
+    {
+      "text": "Circus and its history"
+    },
+    {
+      "text": "Mikhailovsky Castle"
+    },
+    {
+      "text": "Arts Square"
+    }
+  ],
+  "landSticky": [
+    {
+      "label": "country",
+      "text": "Russia"
+    },
+    {
+      "label": "city",
+      "text": "Saint Petersburg"
+    },
+    {
+      "label": "Tour duration",
+      "text": "3 hours"
+    },
+    {
+      "label": "moving",
+      "text": "Walking"
+    },
+    {
+      "label": "Availability for wheelchair-users",
+      "text": "Wheelchair-friendly"
+    }
   ]
 }

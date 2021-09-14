@@ -1,9 +1,13 @@
 .button-icon {
+  $comp: &;
+
   padding: 15px 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  width: 100%;
 
   border-radius: 12px;
   border: 1px solid $color-gray;
@@ -12,6 +16,21 @@
 
   &:hover {
     background: $color-brown;
+  }
+
+  &--calculator {
+    background: $color-blue;
+    border-color: $color-blue;
+    border-radius: 14px;
+
+    &:hover {
+      border-color: $color-brown;
+    }
+
+    #{$comp}__icon {
+      width: 26px;
+      height: 26px;
+    }
   }
 
   &__icon {

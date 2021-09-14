@@ -4,6 +4,9 @@ include  ../components/panel
 include  ../components/navigation
 include  ../components/thumb-slider
 include  ../components/price
+include  ../components/slider-buttons
+include ../components/excursion-card 
+include  ../components/excursion-individual
 
 block content 
   .excursion-page
@@ -13,11 +16,51 @@ block content
       .container
         .section__row
           .section__col
-            +thumb-slider
+            .excursion-page__breadcrumbs 
+              .breadcrumb
+                ul.breadcrumb__list 
+                  li.breadcrumb__item 
+                    a.breadcrumb__link(href="#") 
+                      |Home
+                  li.breadcrumb__item 
+                    a.breadcrumb__link(href="#") 
+                      |For hotel guests
+                  li.breadcrumb__item.breadcrumb__item--active 
+                    a.breadcrumb__link(href="#")
+                      |Walking tour of St. Petersburg
+            .excursion-page__thumb-slider
+              +thumb-slider
+            .excursion-page__mobile  
+              h1 
+                |Walking tour of St. Petersburg
+              .sticky
+                .sticky__category 
+                  .category
+                    each item in ['Individual', 'First choice', '-20% off']
+                      .category__item
+                        |#{item}
+                .sticky__inner 
+                  .sticky__grid
+                    each item in data.landSticky
+                      .sticky__item 
+                        .sticky__label 
+                          |#{item.label}
+                        .sticky__text 
+                          |#{item.text}
+                .sticky__inner 
+                  .sticky__price 
+                    |from #[span.sticky__price-discont $159] #[span.sticky__price-price $129] / person
+                .sticky__button 
+                  .button.button--sticky
+                    |Arrange a tour
             .excursion-page__price 
               +price
             section.section
-              .asd
+              +programm
+            section.section 
+              +landmarks
+            section.section 
+              +about
           .section__col
             .sticky
               +navigation(items=['For hotel guests'] page="Walking tour of St. Petersburg")
@@ -28,30 +71,7 @@ block content
                       |#{item}
               .sticky__inner 
                 .sticky__grid
-                  -
-                    var ddata = [
-                      {
-                        label: 'country',
-                        text: 'Russia',
-                      },
-                      {
-                        label: 'city',
-                        text: 'Saint Petersburg',
-                      },
-                      {
-                        label: 'Tour duration',
-                        text: '3 hours',
-                      },
-                      {
-                        label: 'moving',
-                        text: 'Walking',
-                      },
-                      {
-                        label: 'Availability for wheelchair-users',
-                        text: 'Wheelchair-friendly',
-                      },
-                    ]
-                  each item in ddata
+                  each item in data.landSticky
                     .sticky__item 
                       .sticky__label 
                         |#{item.label}
@@ -61,4 +81,23 @@ block content
                 .sticky__price 
                   |from #[span.sticky__price-discont $159] #[span.sticky__price-price $129] / person
               .sticky__button 
-                |button
+                .button.button--sticky
+                  |Arrange a tour
+    section.section 
+      .container
+        +calculator
+    section.section 
+      .container 
+        .excursion-page__slider 
+          .excursion-page__slider-row 
+            .excursion-page__slider-col
+              h3.excursion-page__title
+                |Similar tours
+            .excursion-page__slider-col
+              +slider-buttons(next = 1 prev = 2)
+          .swiper-container.swiper-container--slide-width-auto.swiper-container--visible.swiper-container--slide-height-max(data-slider-id='1' data-slider-next='1' data-slider-prev='2')
+            .swiper-wrapper
+              each item in data.mainSellers 
+                .swiper-slide 
+                  +excursion-card(title = item.title walk = item.walk src = item.src)
+

@@ -1,8 +1,20 @@
 .breadcrumb {
   $comp: &;
 
+  @media (max-width: $breakpoint) {
+    padding: 0 20px;
+    margin-left: -20px;
+
+    width: calc(100% + (20px * 2));
+    display: flex;
+
+    overflow-x: scroll;
+    @include scrollbar-hidden;
+  }
+
   &__list {
     display: flex;
+    flex-shrink: 0;
   }
 
   &__item {

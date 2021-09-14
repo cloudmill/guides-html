@@ -1,0 +1,153 @@
+//- Все миксины используются внутри индивидуальных экскурсий
+mixin programm 
+  .excursion-page__programm 
+    h3.excursion-page__title 
+      |Programm
+    if (attributes.tabs)
+      .excursion-page__programm-tabs
+    ul.excursion-page__programm-list 
+      if (attributes.text)
+        li.excursion-page__programm-item 
+          .excursion-page__programm-row 
+            .excursion-page__programm-col
+              .excursion-page__programm-time 
+                |8.30
+            .excursion-page__programm-col
+              .excursion-page__programm-text
+                |Gathering on the ship
+              .excursion-page__programm-card  
+                .excursion-page__programm-label
+                  |We can choose the most convenient time for you. Write about it in the tour when ordering
+      each item in data.landProgramm
+        li.excursion-page__programm-item 
+          .excursion-page__programm-row 
+            .excursion-page__programm-col
+              .excursion-page__programm-time 
+                |#{item.time}
+            .excursion-page__programm-col
+              .excursion-page__programm-text
+                |#{item.text}
+
+mixin landmarks 
+  .excursion-page__landmarks 
+    .excursion-page__landmarks-row 
+      .excursion-page__landmarks-col
+        h3.excursion-page__title
+          |Landmarks
+      .excursion-page__landmarks-col
+        ul.excursion-page__landmarks-list
+          each item in data.landmarks 
+            li.excursion-page__landmarks-item 
+              |#{item.text}
+        if (attributes.button)
+          .excursion-page__landmarks-btn
+            .excursion-page__button 
+              |Show all
+
+mixin about
+  .excursion-page__about
+    h3.excursion-page__title  
+      |About tour
+    .excursion-page__about-content 
+      p.excursion-page__about-text  
+        |Walking tour of St. Petersburg is one of our most popular, most popular excursions. In fact, this is a fascinating walking tour with a guide around St. Petersburg, in the very center, in the most beautiful and romantic places of the city. Fresh air, a beautiful city, an interesting story-what could be better!
+      p.excursion-page__about-text 
+        |We tried to include the most beautiful places and the most important sights of St. Petersburg in our excursion-walk. We tried to make this route interesting and dynamic, but the tour route can be changed according to your wishes.
+    .excursion-page__about-btn
+      .excursion-page__button
+        |Read more 
+
+mixin calculator
+  .calculator
+    .calculator__container 
+      h3.excursion-page__title  
+        |Calculate the cost
+      .calculator__grid
+        .calculator__item
+          .calculator__label 
+            |Date
+          .calculator__date 
+            |date
+        .calculator__item
+          .calculator__label 
+            |Time
+          .calculator__time   
+            |time
+        .calculator__item   
+          select(name="lang")
+            option(value="lang")
+              |Language  
+        .calculator__item
+          .calculator__title 
+            |Number of people
+        .calculator__item
+          .calculator__label 
+            |Adults
+        .calculator__item
+          .calculator__label 
+            |Students with ISC  
+        .calculator__item
+          .calculator__label 
+            |Children 6-16 years old
+        .calculator__item
+          .calculator__label 
+            |Children 0-6 years old
+        .calculator__item
+          .calculator__label
+            |Among them wheelchair users
+          .calculator__description 
+            |Doesn’t influence the cost
+        .calculator__item
+          .calculator__label
+            |Number of people
+          .calculator__num 
+            |7
+        .calculator__item
+          .calculator__label
+            |Total amount
+          .calculator__num 
+            |$1300
+    .calculator__payments
+      .calculator__title  
+        |We accept payments
+      .calculator__payments-row 
+        .calculator__payments-item 
+          .calculator__payments-icon 
+            +visa-svg
+        .calculator__payments-item 
+          .calculator__payments-icon 
+            +master-card-svg
+        .calculator__payments-item 
+          .calculator__payments-icon 
+            +world-svg
+    .calculator__price 
+      .calculator__price-container
+        .calculator__price-row 
+          .calculator__price-col
+            .calculator__price-item
+              .calculator__price-label 
+                |Old price
+              .calculator__price-num
+                |$1280
+            .calculator__price-item
+              .calculator__price-label 
+                |You save money
+              .calculator__price-num
+                |$20
+          .calculator__price-col
+            .calculator__price-left
+              .calculator__price-label
+                |Number of people
+              .calculator__price-number   
+                |7
+            .calculator__price-right
+              .calculator__price-label
+                |Total amount
+              .calculator__price-number   
+                |$1280
+          .calculator__price-col
+            .button-icon.button-icon--calculator
+              .button-icon__icon
+                +bag-svg
+              .button-icon__text
+                |Add to cart

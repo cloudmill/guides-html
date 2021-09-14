@@ -14,8 +14,14 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+      "A B"
+      "C D"
+      "E E"
+    ;
     row-gap: 20px;
     @media (min-width: $breakpoint-m) {
+      grid-template-areas: none;
       column-gap: 60px;
       grid-template-columns: max-content max-content max-content;
     }
@@ -28,6 +34,12 @@
 
   &__item {
 
+    &:nth-child(5) {
+      grid-area: E;
+      @media (min-width: $breakpoint-m) {
+        grid-area: auto;
+      }
+    }
   }
 
   &__label {
@@ -59,6 +71,11 @@
 
   &__button {
     margin-top: 40px;
-
+    @media (min-width: $breakpoint-m) {
+      width: 50%;
+    }
+    @media (min-width: $breakpoint) {
+      width: 100%;
+    }
   }
 }
