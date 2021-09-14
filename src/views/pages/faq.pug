@@ -9,8 +9,8 @@ block content
         +navigation(page="FAQ")
     section.section.section--md
       .container 
-        .section__row
-          .section__col
+        .faq-page__row
+          .faq-page__col
             .faq-page__top 
               .faq-page__top-items 
                 .faq-page__top-item 
@@ -25,7 +25,7 @@ block content
             .faq-page__bot 
               +button.button--xl(tag = 'a' href = '#')
                 |Ask your question
-          .section__col
+          .faq-page__col
             ul.faq-page__list
               each item in data.faqAccordion
                 li.faq-page__item

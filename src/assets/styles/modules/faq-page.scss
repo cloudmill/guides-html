@@ -1,6 +1,31 @@
 .faq-page {
   $comp: &;
 
+  &__row {
+    @media (min-width: $breakpoint) {
+      display: flex;
+    }
+  }
+
+  &__col {
+    @media (min-width: $breakpoint) {
+      flex-shrink: 0;
+    }
+
+    &:nth-child(1) {
+      margin-bottom: 60px;
+      @media (min-width: $breakpoint) {
+        margin-bottom: 0;
+        width: calc(#{$col-part-d} * 6);
+      }
+    }
+    &:nth-child(2) {
+      @media (min-width: $breakpoint) {
+        width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+      }
+    }
+  }
+
   &__top {
     margin-bottom: 20px;
     @media (min-width: $breakpoint) {
