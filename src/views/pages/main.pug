@@ -85,7 +85,7 @@ block content
         .team
           .swiper-container.swiper-container--slide-width-auto.swiper-container--slide-height-max.swiper-container--visible(data-slider-id='1' data-slider-next='3' data-slider-prev='4')
             .swiper-wrapper 
-              each item in data.mainTeam
+              each item in data.team
                 .swiper-slide 
                   .team__item
                     +guides-card(sign = item.sign name = item.name src = item.src)

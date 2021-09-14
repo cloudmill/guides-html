@@ -1,7 +1,14 @@
 .team {
 
   &__item {
+    width: 315px;
+    @media (min-width: $breakpoint-m) {
+      width: 335px  ;
+    }
     @media (min-width: $breakpoint) {
+      width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+    }
+    @media (min-width: $breakpoint-xl) {
       width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
     }
   }

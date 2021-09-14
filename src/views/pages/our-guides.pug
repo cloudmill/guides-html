@@ -10,5 +10,5 @@ block content
   section.section.section--md 
     .container
       .guides-grid 
-        each item in data.guides
-          +guides-card(name = item.name src = item.src)
+        each item in data.team
+          +guides-card(sign = item.sign name = item.name src = item.src)

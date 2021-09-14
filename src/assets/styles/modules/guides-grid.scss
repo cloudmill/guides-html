@@ -5,7 +5,7 @@
   row-gap: 40px;
   @media (min-width: $breakpoint-m) {
     grid-template-columns : repeat(2, 1fr);
-    column-gap: 20px;
+    column-gap: 60px;
   }
   @media (min-width: $breakpoint) {
     grid-template-columns : repeat(3, 1fr);
