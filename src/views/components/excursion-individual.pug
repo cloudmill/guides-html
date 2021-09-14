@@ -107,6 +107,58 @@ mixin calculator
             |Total amount
           .calculator__num 
             |$1300
+      if (attributes.events)
+        .events 
+          .events__container 
+            .events__head
+              .events__head-row 
+                .events__head-col
+                  .calculator__title
+                    |Evening events are available
+                .events__head-col
+                  .events__head-icon 
+                    +arrow-svg.events__head-svg
+            .events__body 
+              .events__top
+                .events__top-row 
+                  .events__top-col 
+                    each item, i in ['Folk show', 'Evening in the Faberge museum', 'Ballet evening', 'Classical Music Evening']
+                      .events__top-item
+                        .events__tab(class=((i === 0) ? 'events__tab--active' : ''))
+                          |#{item}
+                        .events__top-button
+                          |Read more
+                  .events__top-col 
+                    each item in ['Evening boat trip', 'Russian dinner', 'Private car/minivan for an evening', 'White Nights Tour" (Draw Bridges)']
+                      .events__top-item
+                        .events__tab  
+                          |#{item}
+                        .events__top-button
+                          |Read more
+              .events__bot
+                .events__bot-row 
+                  .events__bot-col
+                    .events__bot-item
+                      .calculator__label
+                        |Date
+                      .testdata   
+                        |data
+                    .events__bot-item
+                      .calculator__label
+                        |Number of people
+                      .testdata   
+                        |click
+                  .events__bot-col
+                    .events__bot-left
+                      .calculator__label
+                        |Number of tickets
+                      .calculator__num 
+                        |7
+                    .events__bot-right
+                      .calculator__label
+                        |Total amount
+                      .calculator__title
+                        |Discussed separately. #[br] The manager contact you.
     .calculator__payments
       .calculator__title  
         |We accept payments
