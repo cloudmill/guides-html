@@ -1,0 +1,21 @@
+mixin sticky-mobile
+  .sticky
+    .sticky__category 
+      .category
+        each item in ['Individual', 'First choice', '-20% off']
+          .category__item
+            |#{item}
+    .sticky__inner 
+      .sticky__grid
+        each item in attributes.data
+          .sticky__item 
+            .sticky__label 
+              |#{item.label}
+            .sticky__text 
+              |#{item.text}
+    .sticky__inner 
+      .sticky__price 
+        |from #[span.sticky__price-discont $159] #[span.sticky__price-price $129] / person
+    .sticky__button 
+      .button.button--sticky
+        |Arrange a tour

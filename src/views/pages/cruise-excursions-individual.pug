@@ -25,27 +25,34 @@ block content
                       |Home
                   li.breadcrumb__item 
                     a.breadcrumb__link(href="#") 
-                      |For hotel guests
+                      |Shore excursions
                   li.breadcrumb__item.breadcrumb__item--active 
                     a.breadcrumb__link(href="#")
-                      |Walking tour of St. Petersburg
+                      |Relax tour
             .excursion-page__thumb-slider
               +thumb-slider
             .excursion-page__mobile  
               h1 
-                |Walking tour of St. Petersburg
+                |Relax tour
               +sticky-mobile(data = data.landSticky)
             .excursion-page__price 
               +price
-            section.section
-              +programm
+              .excursion-page__price-btn 
+                +button.button--xxl(tag = 'div')
+                  |Compare
             section.section 
               +landmarks
-            section.section 
-              +about
+            section.section
+              +programm(label=true)
+              .excursion-page__btn
+                .excursion-page__btn-col
+                  |Evening events are available
+                .excursion-page__btn-col
+                  +button.button--xl(tag = 'div')
+                    |View
           .section__col
             .sticky
-              +navigation(items=['For hotel guests'] page="Walking tour of St. Petersburg")
+              +navigation(items=['Shore excursions'] page="Relax tour")
               .sticky__category 
                 .category
                   each item in ['Individual', 'First choice', '-20% off']

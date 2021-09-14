@@ -33,6 +33,11 @@
     }
   }
 
+  &--xxl {
+    width: 100%;
+    @include fsl(16px);
+  }
+
   &--sticky {
     padding: 19px;
 

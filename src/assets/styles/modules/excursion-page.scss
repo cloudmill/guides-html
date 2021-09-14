@@ -43,6 +43,11 @@
     }
   }
 
+  &__price {}
+  &__price-btn {
+    margin-top: 20px;
+  }
+
   &__programm {}
   &__programm-list {
     margin-top: 20px;
@@ -124,6 +129,32 @@
     padding: 10px 20px;
 
     @include fsl(12px, 160%);
+  }
+
+  &__btn {
+    margin-top: 40px;
+
+    @media (min-width: $breakpoint) {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__btn-col {
+    @media (min-width: $breakpoint) {
+      flex-shrink: 0;
+    }
+
+    &:nth-child(1) {
+      margin-bottom: 20px;
+      @media (min-width: $breakpoint) {
+        margin-bottom: 0;
+        width: calc(#{$col-part-d} * 2);
+      }
+      @include fsl(16px);
+    }
+    &:nth-child(2) {
+
+    }
   }
 
   &__landmarks {}
