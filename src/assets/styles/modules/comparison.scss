@@ -1,0 +1,116 @@
+.comparison {
+
+  &__row {
+    display: flex;
+  }
+
+  &__col {
+
+    flex-shrink: 0;
+    
+    &:nth-child(1) {
+      padding-right: calc(#{$col-gap-m});
+      @media (min-width: $breakpoint-m) {
+        padding-right: calc(#{$col-gap-d});
+      }
+      @media (min-width: $breakpoint) {
+        width: calc(#{$col-part-d} * 2);
+      }
+    }
+    &:nth-child(2) {
+      @media (min-width: $breakpoint) {
+        width: calc(#{$col-part-d} * 10 - #{$col-gap-d});
+      }
+    }
+  }
+
+  &__top {
+    padding-top: 10px;
+
+    border-top: 1px solid $color-blue;
+  }
+
+  &__label {
+    color: $color-gray;
+    @include fsl(12px);
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__grid {
+    // margin-top: 10px;
+    // @media (min-width: $breakpoint-m) {
+    //   margin-top: 20px;
+    // }
+
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  &__line {
+    margin: 15px 0 30px;
+    @media (min-width: $breakpoint-m) {
+      margin: 20px 0 40px;
+    }
+
+    display: flex;
+    // ali
+  }
+
+  &__item {
+    padding: 7px 0;
+
+    min-height: 66px;
+    display: flex;
+    align-items: center;
+
+    border-top: 1px solid $color-light-gray;
+  }
+
+  &__cell {
+    @media (min-width: $breakpoint) {
+      width: calc(#{$col-part-d} * 2);
+    }
+
+    &:last-child {
+      @media (min-width: $breakpoint) {
+        width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    @include fsl(20px);
+  }
+
+  &__text {
+    @include fsl(16px, 160%);
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+  }
+
+  &__price {
+    padding: 30px 0;
+
+    display: flex;
+    align-items: center;
+
+    border-top: 1px solid $color-light-gray;
+    border-bottom: 1px solid $color-light-gray;
+  }
+  &__price-text {
+    @include fsl(16px);
+  }
+  &__price-price {
+    font-weight: 700;
+    @include fsl(22px);
+  }
+
+  &__wrapper {
+    margin: 5px 0 20px;
+  }
+}
