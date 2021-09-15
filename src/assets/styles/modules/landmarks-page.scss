@@ -13,4 +13,51 @@
       row-gap: 60px;
     }
   }
+
+  &__aside {
+
+    border: 1px solid $color-light-gray;
+    border-radius: 14px;
+  }
+
+  &__container {
+    @media (min-width: $breakpoint) {
+      padding: 30px;
+    }
+  }
+
+  &__city {
+    font-weight: 500;
+    @include fsl(16px);
+    color: $color-blue;
+  }
+
+  &__list {
+    margin-top: 20px;
+  }
+
+  &__item {
+
+    display: flex;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  &__link {
+    @include fsl(14px);
+    transition: $transition;
+  }
+
+  &__button {
+    font-weight: 500;
+    @include fsl(16px);
+    transition: $transition;
+  }
 }
+
+
+
+
+

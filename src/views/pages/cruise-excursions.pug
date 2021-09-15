@@ -2,6 +2,7 @@ extends ../layouts/master.pug
 
 include  ../components/navigation
 include  ../components/aside
+include  ../components/tour
 include  ../components/panel
 include  ../components/excursion-card
 
@@ -27,10 +28,4 @@ block content
             .button-wrapper 
               +button(tag='div')
                 |Show more
-            .tour 
-              .tour__container 
-                h3.tour__title 
-                  |Tours
-                each item in data.cruiseTour
-                  p.tour__text 
-                    |#{item.text}
+            +tour(text = data.cruiseTour)
