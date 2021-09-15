@@ -1,0 +1,19 @@
+.landmark-card {
+
+  display: block;
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  &__title {
+    margin-top: 20px;
+
+    font-weight: 500;
+    @include fsl(20px);
+  }
+}

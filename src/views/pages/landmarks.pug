@@ -1,0 +1,15 @@
+extends ../layouts/master.pug
+
+include  ../components/navigation
+include  ../components/landmark-card
+
+block content
+  .landmarks-page
+    section.section.section--first
+      .container
+        +navigation(page="Landmarks")
+    section.section.section--md 
+      .container 
+        .landmarks-page__row
+          each item in data.landmarkCity
+            +landmark-card(src = item.src title = item.title) 

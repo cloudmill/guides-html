@@ -480,5 +480,47 @@
         "text": "Port"
       }
     ]
-  }
+  },
+  "landmarkCity": [
+    {
+      "title": "Saint Petersburg",
+      "src": "city-1.jpg"
+    },
+    {
+      "title": "Moscow",
+      "src": "city-2.jpg"
+    },
+    {
+      "title": "Novgorod",
+      "src": "city-3.jpg"
+    },
+    {
+      "title": "Tallin",
+      "src": "city-4.jpg"
+    },
+    {
+      "title": "Helsinki",
+      "src": "city-5.jpg"
+    },
+    {
+      "title": "Porvoo",
+      "src": "city-6.jpg"
+    },
+    {
+      "title": "Rostock/Warnemünde",
+      "src": "city-7.jpg"
+    },
+    {
+      "title": "Schwerin",
+      "src": "city-8.jpg"
+    },
+    {
+      "title": "Stockholm",
+      "src": "city-9.jpg"
+    },
+    {
+      "title": "Berlin",
+      "src": "city-10.jpg"
+    }
+  ]
 }

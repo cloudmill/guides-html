@@ -1,0 +1,6 @@
+mixin landmark-card   
+  a.landmark-card(href="#") 
+    .landmark-card__container 
+      img.landmark-card__img(src="assets/images/" + attributes.src, alt="")
+    h5.landmark-card__title
+      |#{attributes.title}
