@@ -3,8 +3,17 @@
 
   display: flex;
 
-  &__item {
+  &--wide {
+    justify-content: space-between;
 
+    #{$comp}__button {
+      border: none;
+      background: $color-white;
+    }
+  }
+
+  &__item {
+    pointer-events: all;
     &:not(:first-child) {
       margin-left: 8px;
     }
@@ -12,13 +21,18 @@
 
   &__button {
     $size: 69px;
+    $size-m: 50px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    width: $size;
-    height: $size;
+    width: $size-m;
+    height: $size-m;
+    @media (min-width: $breakpoint) {
+      width: $size;
+      height: $size;
+    }
 
     border: 1px solid $color-black;
     border-radius: 50%;

@@ -57,3 +57,63 @@ import Swiper from 'swiper/bundle';
     }
   });
 }
+
+// indvidual excursions
+{
+	$(() => {
+		// thumb slider
+		{
+			const SPEED = 600;
+
+			const slider = $('.thumb-slider');
+
+			if (slider.length !== 0) {
+				const thumbsSwiperEl = slider.find('.thumb-slider__thumbs');
+        // const slider_prev_id = slider_el.data('slider-prev');
+        // const slider_next_id = slider_el.data('slider-next');
+        // const slider_prev = $(`[data-slider-button="${slider_prev_id}"]`);
+        // const slider_next = $(`[data-slider-button="${slider_next_id}"]`);
+        
+				const thumbsSwiper = new Swiper(thumbsSwiperEl[0], {
+					speed: SPEED,
+					slidesPerView: 'auto',
+					spaceBetween: 10,
+				});
+
+				const thumbsSlide = slider.find('.thumb-slider__thumb');
+
+				const sliderSwiperEl = slider.find('.swiper-container');
+				const sliderSwiper = new Swiper(sliderSwiperEl[0], {
+					speed: SPEED,
+				});
+
+				// control
+				let lastAction = 'nothing';
+				sliderSwiper.on('sliderFirstMove', () => {
+					lastAction = 'slider swipe';
+				})
+				thumbsSwiper.on('click', event => {
+					lastAction = 'thumbs click';
+
+					sliderSwiper.slideTo(event.clickedIndex);
+
+					thumbsSlide.removeClass('thumb-slider__thumb--active');
+					thumbsSlide.eq(event.clickedIndex).addClass('thumb-slider__thumb--active');
+				});
+
+				sliderSwiper.on('slideChange', event => {
+					if (lastAction === 'slider swipe') {
+						thumbsSwiper.slideTo(event.realIndex);
+
+						thumbsSlide.removeClass('thumb-slider__thumb--active');
+						thumbsSlide.eq(event.realIndex).addClass('thumb-slider__thumb--active');
+					}
+
+					lastAction = 'nothing';
+				});
+
+
+			}
+		}
+	});
+}

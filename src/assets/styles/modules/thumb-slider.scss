@@ -1,15 +1,112 @@
 .thumb-slider {
 
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  @media (min-width: $breakpoint-m) {
+    width: auto;
+    margin-left: 0;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__inner {
+    padding: 0 20px;
+    @media (min-width: $breakpoint-m) {
+      padding: 0;
+    }
+  }
+
+  &__thumbs {
+    margin-top: 10px;
+    @media (min-width: $breakpoint-m) {
+      margin-left: 0;
+      padding: 0;
+      margin-top: 0;
+
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      bottom: 15px;
+      transform: translateX(-50%);
+    }
+    @media (min-width: $breakpoint) {
+      bottom: 20px;
+    }
+
+    @media (min-width: $breakpoint-m) {
+      overflow: hidden;
+      width: 360px;
+    }
+
+    .swiper-slide {
+      width: auto;
+    }
+  }
+
+  &__thumb {
+
+    width: 80px;
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+    border: 2px solid $color-white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: $transition;
+
+    // &:not(:first-child) {
+    //   margin-left: 10px;
+    // }
+
+    &--active {
+      border-color: $color-blue;
+    }
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__control {
+    position: absolute;
+    z-index: 2;
+    left: 10px;
+    right: 10px;
+    @media (min-width: $breakpoint-m) {
+      left: 20px;
+      right: 20px;
+    }
+    @media (min-width: $breakpoint) {
+      left: 40px;
+      right: 40px;
+    }
+    top: 50%;
+    transform: translateY(-50%);
+
+    pointer-events: none;
+  }
+
   &__slide {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    overflow: hidden;
-    border-radius: 10px;
+    @media (min-width: $breakpoint-m) {
+      overflow: hidden;
+      border-radius: 10px;
+    }
 
-    @media (max-width: $breakpoint - 1px) {
+    width: 100%;
+    @media (min-width: $breakpoint-m) {
       width: calc(#{$col-part-m} * 4 - #{$col-gap-m});
+    }
+    @media (min-width: $breakpoint) {
+      width: auto;
     }
   }
 }
+
+

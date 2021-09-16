@@ -1,14 +1,38 @@
+include ./slider-buttons
+
 mixin thumb-slider
   .thumb-slider
     .thumb-slider__container 
-      .thumb-slider__thumb 
-      .thumb-slider__control 
-      .swiper-container.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='10')
-        .swiper-wrapper 
-          - for (i = 0; i < 2; i++)
-            .swiper-slide 
-              .thumb-slider__slide 
-                img.thumb-slider__slide-img(src="assets/images/thumb-slider-1.jpg", alt="")
-            .swiper-slide 
-              .thumb-slider__slide 
-                img.thumb-slider__slide-img(src="assets/images/thumb-slider-2.jpg", alt="")
+      .thumb-slider__slider
+        .thumb-slider__control
+          +slider-buttons.slider-buttons--wide(next = 11 prev = 12)
+        .swiper-container.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-prev='12' data-slider-next='11')
+          .swiper-wrapper
+            - for (i = 0; i < 3; i++)
+              .swiper-slide 
+                .thumb-slider__slide 
+                  img.thumb-slider__slide-img(src="assets/images/thumb-slider-1.jpg", alt="")
+              .swiper-slide 
+                .thumb-slider__slide 
+                  img.thumb-slider__slide-img(src="assets/images/thumb-slider-2.jpg", alt="")
+      .thumb-slider__inner
+        .thumb-slider__thumbs
+          .swiper-wrapper
+            .swiper-slide
+              .thumb-slider__thumb.thumb-slider__thumb--active
+                img(src="assets/images/thumb-slider-1.jpg", alt="")
+            .swiper-slide
+              .thumb-slider__thumb
+                img(src="assets/images/thumb-slider-2.jpg", alt="")
+            .swiper-slide
+              .thumb-slider__thumb
+                img(src="assets/images/thumb-slider-1.jpg", alt="")
+            .swiper-slide
+              .thumb-slider__thumb
+                img(src="assets/images/thumb-slider-2.jpg", alt="")
+            .swiper-slide
+              .thumb-slider__thumb
+                img(src="assets/images/thumb-slider-1.jpg", alt="")
+            .swiper-slide
+              .thumb-slider__thumb
+                img(src="assets/images/thumb-slider-2.jpg", alt="")
