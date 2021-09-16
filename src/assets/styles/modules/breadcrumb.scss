@@ -1,16 +1,17 @@
 .breadcrumb {
   $comp: &;
-
+  padding-right: 60px;
+  width: calc(100% + 60px);
   @media (max-width: $breakpoint) {
     padding: 0 20px;
     margin-left: -20px;
 
     width: calc(100% + (20px * 2));
-    display: flex;
-
-    overflow-x: scroll;
-    @include scrollbar-hidden;
   }
+  display: flex;
+
+  overflow-x: scroll;
+  @include scrollbar-hidden;
 
   &__list {
     display: flex;
@@ -58,6 +59,7 @@
   }
 
   &__link {
+    white-space: nowrap;
     color: $color-gray;
     @include fsl(14px);
   }

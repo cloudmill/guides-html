@@ -1,0 +1,71 @@
+extends ../layouts/master.pug
+
+include  ../components/navigation
+include  ../components/sticky
+include  ../components/thumb-slider
+include  ../components/excursion-card 
+include  ../components/slider-buttons
+include  ../components/excursion-individual
+
+block content
+  .excursion-page
+    section.section.section--first 
+      .container
+        .section__row
+          .section__col
+            .excursion-page__breadcrumbs 
+              .breadcrumb
+                ul.breadcrumb__list 
+                  li.breadcrumb__item 
+                    a.breadcrumb__link(href="#") 
+                      |Home
+                  li.breadcrumb__item 
+                    a.breadcrumb__link(href="#") 
+                      |For hotel guests
+                  li.breadcrumb__item.breadcrumb__item--active 
+                    a.breadcrumb__link(href="#")
+                      |Walking tour of St. Petersburg
+            .excursion-page__thumb-slider
+              +thumb-slider
+            .excursion-page__mobile  
+              h1 
+                |Walking tour of St. Petersburg
+              +sticky-mobile(data = data.landSticky)
+            section.section 
+              +about
+          .section__col
+            .sticky
+              +navigation(items=['Landmarks', 'Cathedrals and Monasteries of St. Petersburg'] page="Peter and Paul Fortress")
+              .sticky__inner 
+                .sticky__grid
+                  -
+                    var ddata = [
+                      {
+                        label: 'city',
+                        text: 'Saint Petersburg'
+                      },
+                      {
+                        label: 'landmark type',
+                        text: 'Cathedrals and monasteries'
+                      },
+                    ]
+                  each item in ddata
+                    .sticky__item 
+                      .sticky__label 
+                        |#{item.label}
+                      .sticky__text 
+                        |#{item.text}
+    section.section 
+      .container 
+        .excursion-page__slider 
+          .excursion-page__slider-row 
+            .excursion-page__slider-col
+              h3.excursion-page__title
+                |Similar tours
+            .excursion-page__slider-col
+              +slider-buttons(next = 1 prev = 2)
+          .swiper-container.swiper-container--slide-width-auto.swiper-container--visible.swiper-container--slide-height-max(data-slider-id='1' data-slider-next='1' data-slider-prev='2')
+            .swiper-wrapper
+              each item in data.mainSellers 
+                .swiper-slide 
+                  +excursion-card(title = item.title walk = item.walk src = item.src)

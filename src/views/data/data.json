@@ -33,6 +33,10 @@
       "href": "landmarks-city.html"
     },
     {
+      "page": "Достопримечательности детальная",
+      "href": "landmarks-single.html"
+    },
+    {
       "page": "Сравнение",
       "href": "comparison.html"
     },
