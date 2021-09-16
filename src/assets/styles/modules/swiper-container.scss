@@ -1,6 +1,11 @@
 .swiper-container {
   &--visible {
     overflow: visible;
+    &--mobile {
+      @media (min-width: $breakpoint) {
+        overflow: hidden;
+      }
+    }
   }
   &--slide-width-auto {
     .swiper-slide {

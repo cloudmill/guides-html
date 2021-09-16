@@ -51,6 +51,10 @@
     {
       "page": "Контакты",
       "href": "contacts.html"
+    },
+    {
+      "page": "О нас",
+      "href": "about.html"
     }
   ],
   "nav": [
@@ -95,6 +99,15 @@
   ],
   "phone": "+7 812 441-31-63",
   "mainReviews": [
+    {
+      "name": "Mulatka99"
+    },
+    {
+      "name": "Alena"
+    },
+    {
+      "name": "Igor"
+    },
     {
       "name": "Mulatka99"
     },

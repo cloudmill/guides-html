@@ -16,6 +16,21 @@
       margin-top: 50px;
     }
   }
+  &--xl {
+    margin-top: 87px;
+    @media (min-width: $breakpoint-m) {
+      margin-top: 121px;
+    }
+    @media (min-width: $breakpoint) {
+      margin-top: 186px;
+    }
+  }
+  &--xxl {
+    margin-top: 110px;
+    @media (min-width: $breakpoint) {
+      margin-top: 100px;
+    }
+  }
 
   &--panel {
     margin-top: 64px;

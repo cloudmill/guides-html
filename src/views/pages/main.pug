@@ -153,9 +153,11 @@ block content
         .main-page__top
           h3.main-page__title   
             |Reviews
-        .main-page__reviews 
-          each item in data.mainReviews
-            +reviews-card(name = item.name)
+        .swiper-container.swiper-container--visible.swiper-container--visible--mobile.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='1')
+          .swiper-wrapper
+            each item in data.mainReviews
+              .swiper-slide
+                +reviews-card(name = item.name)
     section.section   
       .container 
         .main-page__top

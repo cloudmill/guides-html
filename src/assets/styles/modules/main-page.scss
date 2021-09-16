@@ -364,4 +364,11 @@
       text-align: center;
     }
   }
+
+  &__mobile {
+    display: none;
+    @media (min-width: $breakpoint-m) {
+      display: block;
+    }
+  }
 }
