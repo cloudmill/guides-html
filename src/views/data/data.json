@@ -45,6 +45,14 @@
       "href": "our-guides.html"
     },
     {
+      "page": "Корзина",
+      "href": "cart.html"
+    },
+    {
+      "page": "Клиента",
+      "href": "clients.html"
+    },
+    {
       "page": "Вопрос-ответ",
       "href": "faq.html"
     },

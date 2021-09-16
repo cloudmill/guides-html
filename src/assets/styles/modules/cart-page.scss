@@ -1,0 +1,247 @@
+.cart-page {
+  
+  &__section {
+    margin-bottom: 20px;
+
+    display: none;
+    @media (min-width: $breakpoint) {
+      display: block;
+    }
+  }
+  &__section-row {
+    display: flex;
+  }
+  &__section-col {
+    flex-shrink: 0;
+    &:nth-child(1) {
+      width: calc(#{$col-part-d} * 7);
+    }
+  }
+
+  &__row {
+    @media (min-width: $breakpoint) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      @media (min-width: $breakpoint) {
+        width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
+      }
+    }
+    &:nth-child(2) {
+      margin-top: 20px;
+      @media (min-width: $breakpoint-m) {
+        margin-top: 40px;
+      }
+      @media (min-width: $breakpoint) {
+        margin-top: 0;
+        width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+      }
+    }
+  }
+
+  &__label {
+    color: $color-gray;
+    @include fsl(16px, 160%);
+  }
+
+  &__text {
+    margin-top: 5px;
+
+    @include fsl(16px);
+  }
+
+  &__item {
+
+    &:not(:first-child) {
+      margin-top: -1px;
+      @media (min-width: $breakpoint-m) {
+        margin-top: 20px;
+      }
+      @media (min-width: $breakpoint) {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__price {
+    @include fsl(16px);
+  }
+  &__price-span {
+    text-decoration: line-through;
+    color: $color-gray;
+    @include fsl(13px);
+  }
+
+  &__product {
+    margin-left: -20px;
+    width: calc(100% + (20px * 2));
+    @media (min-width: $breakpoint-m) {
+      margin-left: 0;
+      width: auto;
+    }
+
+    border-top: 1px solid $color-light-gray;
+    border-bottom: 1px solid $color-light-gray;
+    @media (min-width: $breakpoint-m) {
+      border: 1px solid $color-light-gray;
+      border-radius: 14px;
+    }
+  }
+  &__product-row {
+    @media (min-width: $breakpoint-m) {
+      display: flex;
+      justify-content: space-between;
+    }
+    @media (min-width: $breakpoint) {
+      align-items: center;
+    }
+  }
+  &__product-container {
+    padding: 20px;
+    @media (min-width: $breakpoint) {
+      padding: 30px 40px;
+    }
+  }
+  &__product-title {
+    margin-bottom: 20px;
+
+    font-weight: 500;
+    @include fsl(16px);
+    @media (min-width: $breakpoint) {
+      @include fsl(20px);
+    }
+  }
+  &__product-label {
+    font-weight: 500;
+    @include fsl(12px);
+    color: $color-gray;
+    text-transform: uppercase;
+  }
+
+  &__left {}
+  &__left-row {
+    @media (min-width: $breakpoint) {
+      display: flex;
+    }
+  } 
+  &__left-col {
+    display: flex;
+
+    &:nth-child(2) {
+      margin-top: 20px;
+      @media (min-width: $breakpoint) {
+        margin-top: 0;
+      }
+    }
+
+    &:not(:first-child) {
+      @media (min-width: $breakpoint) {
+        margin-left: 40px;
+      }
+    }
+  }
+  &__left-item {
+    &:nth-child(1) {
+      flex-shrink: 0;
+      width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
+      @media (min-width: $breakpoint-m) {
+        width: calc(#{$col-width-m} - 20px);
+      }
+      @media (min-width: $breakpoint) {
+        width: auto;
+      }
+    }
+
+    &:not(:first-child) {
+      @media (min-width: $breakpoint) {
+        margin-left: 40px;
+      }
+    }
+  }
+
+  &__right {
+    margin-top: 20px;
+    @media (min-width: $breakpoint-m) {
+      margin-top: 30px;
+    }
+    @media (min-width: $breakpoint) {
+      margin-top: 0;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (min-width: $breakpoint-m) {
+      align-items: flex-start;
+      width: calc(#{$col-part-m} - 20px);
+    }
+    @media (min-width: $breakpoint) {
+      align-items: center;
+      width: calc((#{$col-part-d} * 2) - #{$col-gap-d} - 40px);
+    }
+  }
+  &__right-col {
+
+    &:nth-child(2) {
+      @media (min-width: $breakpoint-m) {
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+      }
+      @media (min-width: $breakpoint) {
+        height: auto;
+        align-items: center;
+      }
+    }
+  }
+  &__right-label {
+    @media (min-width: $breakpoint) {
+      display: none;
+    }
+  }
+
+  &__button {
+    $size: 35px;
+
+    position: relative;
+
+    width: $size;
+    height: $size;
+
+    border-radius: 50%;
+    background: $color-light-gray;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      background: $color-brown;
+    }
+  }
+  &__button-mark {
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 14px;
+      height: 1px;
+
+      background: $color-black;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    &::after {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+}

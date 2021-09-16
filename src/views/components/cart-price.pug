@@ -1,0 +1,34 @@
+mixin cart-price  
+  .cart-price
+    .cart-price__container 
+      .cart-price__row 
+        .cart-price__col 
+          -
+            var ddata = [
+              {
+                text: 'Price without discount',
+                num: '$3000'
+              },
+              {
+                text: 'Discount on the promotion',
+                num: '$200'
+              },
+              {
+                text: 'Discount on the "Baltika+SPB" promotion"',
+                num: '$200'
+              },
+            ]
+          each item in ddata
+            .cart-price__item 
+              .cart-price__text 
+                |#{item.text}
+              .cart-price__num 
+                |#{item.num}
+          .cart-price__item 
+            .cart-price__caption 
+              |Discounted price
+            .cart-price__number 
+              |$2800
+        .cart-price__col 
+          +button.button--sticky(tag = 'div')
+            |Arrange a tour
