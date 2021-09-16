@@ -1,0 +1,91 @@
+.clients {
+
+  @media (min-width: $breakpoint) {
+    width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+  }
+
+  &__content {
+    margin-top: 20px;
+    @media (min-width: $breakpoint) {
+      margin-top: 40px;
+    }
+
+    &--first {
+      margin-top: 40px;
+      @media (min-width: $breakpoint) {
+        margin-top: 60px;
+      }
+    }
+  } 
+  &__content-title {
+    padding-left: 51px;
+  } 
+  &__content-list {
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+  &__content-item {
+    padding-left: 26px;
+    position: relative;
+
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+
+    &::before {
+      $size: 6px;
+
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 7px;
+
+      width: $size;
+      height: $size;
+
+      background: $color-blue;
+      border-radius: 50%; 
+    }
+  }
+  &__content-text {
+    @include fsl(16px);
+  }
+
+  &__list {
+    counter-reset: index;
+  }
+
+  &__item {
+    position: relative;
+    counter-increment: index;
+
+    &::before {
+      content: "1." counter(index);
+      position: absolute;
+      top: -9px;
+      padding: 9px 10px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include fsl(14px);
+      border: 1px solid $color-blue;
+      border-radius: 8px;
+    }
+
+    &:not(:first-child) {
+      margin-top: 45px;
+    }
+  }
+
+  &__text {
+    @include fsl(16px, 160%);
+    
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+}

@@ -32,11 +32,25 @@ img {
   max-height: 100%;
 }
 
-h1 {
+h1, h2, h3, h4, h5 {
   font-weight: 500;
+}
+
+h1 {
   @include fsl(26px);
   @media (min-width: $breakpoint) {
     @include fsl(50px);
+  }
+}
+
+h3 {
+  @include fsl(20px);
+  
+  @media (min-width: $breakpoint) {
+    @include fsl(26px);
+  }
+  @media (min-width: $breakpoint-l) {
+    @include fsl(35px);
   }
 }
 

@@ -1,0 +1,7 @@
+mixin nav-page 
+  .nav-page 
+    ul.nav-page__list
+      each item, i in ['Booking', 'Payment', 'Cancelation', 'For wheelchair users']
+        li.nav-page__item(class=((i === 0) ? 'nav-page__item--active' : ''))
+          a.nav-page__link(href="#") 
+            |#{item}
