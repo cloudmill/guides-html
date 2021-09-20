@@ -1,5 +1,59 @@
 .calculator {
+  $comp: &;
+
   position: relative;
+
+  &--simple {
+    #{$comp}__grid {
+      
+      @media (min-width: $breakpoint-m) {
+        grid-template-areas: "A B C D";
+      }
+      @media (min-width: $breakpoint) {
+        column-gap: 30px;
+      }
+    }
+
+    #{$comp}__item {
+
+      &:nth-child(4) {
+        margin: 0;
+      }
+    }
+
+    #{$comp}__payments {
+      @media (min-width: $breakpoint-m) {
+        left: auto;
+        bottom: 109px;
+        right: 25px;
+      }
+      @media (min-width: $breakpoint) {
+        bottom: auto;
+        top: 58px;
+        right: calc(#{$col-width-d});
+      }
+    }
+
+    #{$comp}__price-col {
+
+      &:nth-child(1) {
+        @media (min-width: $breakpoint) {
+          padding-left: calc(#{$col-part-d} * 4 + 30px);
+        }
+      }
+
+      &:nth-child(2) {
+        @media (min-width: $breakpoint-m) {
+          margin-top: 20px;
+          width: 100%;
+        }
+        @media (min-width: $breakpoint) {
+          margin-top: 0;
+          width: calc(#{$col-part-d} * 3 - #{$col-gap-d} - 40px);
+        }
+      }
+    }
+  }
 
   &__container {
     @media (min-width: $breakpoint) {
@@ -101,6 +155,12 @@
     margin-bottom: 10px;
 
     @include fsl(16px, 160%);
+
+    &--big {
+      @media (min-width: $breakpoint) {
+        margin-bottom: 20px;
+      }
+    }
   }
 
   &__title {
@@ -137,8 +197,18 @@
       bottom: auto;
     }
   }
+  &__payments-title {
+    font-weight: 500;
+    @include fsl(14px);
+    @media (min-width: $breakpoint) {
+      @include fsl(20px);
+    }
+  }
   &__payments-row {
-    margin-top: 20px;
+    margin-top: 10px;
+    @media (min-width: $breakpoint) {
+      margin-top: 20px
+    }
 
     display: flex;
   }

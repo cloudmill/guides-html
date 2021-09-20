@@ -1,0 +1,83 @@
+extends ../layouts/master.pug
+
+include  ../components/navigation
+include  ../components/thumb-slider
+include  ../components/excursion-individual
+
+block content 
+  -
+    var ddata = [
+      {
+        label: 'country',
+        text: 'Russia'
+      },
+      {
+        label: 'city',
+        text: 'Saint Petersburg'
+      },
+    ]
+  .excursion-page
+    section.section.section--first 
+      .container 
+        .section__row 
+          .section__col
+            .excursion-page__breadcrumbs 
+              .breadcrumb
+                ul.breadcrumb__list 
+                  li.breadcrumb__item 
+                    a.breadcrumb__link(href="#") 
+                      |Home
+                  li.breadcrumb__item 
+                    a.breadcrumb__link(href="#") 
+                      |For hotel guests
+                  li.breadcrumb__item.breadcrumb__item--active 
+                    a.breadcrumb__link(href="#")
+                      |Walking tour of St. Petersburg
+            .excursion-page__thumb-slider
+              +thumb-slider
+            .excursion-page__mobile  
+              h1 
+                |Walking tour of St. Petersburg
+              .sticky
+                .sticky__inner 
+                  .sticky__grid
+                    each item in ddata
+                      .sticky__item 
+                        .sticky__label 
+                          |#{item.label}
+                        .sticky__text 
+                          |#{item.text}
+                    .sticky__item 
+                      .sticky__label 
+                        |tour duration
+                      .sticky__text 
+                        |3 hours
+                .sticky__inner 
+                  .sticky__price 
+                    |from #[span.sticky__price-discont $159] #[span.sticky__price-price $129] / person
+            section.section 
+              +about
+          .section__col
+            .sticky
+              +navigation(items=['Shore excursions', 'Relax tour'] page="Russian Ballet")
+              .sticky__inner 
+                .sticky__grid
+                  each item in ddata
+                    .sticky__item 
+                      .sticky__label 
+                        |#{item.label}
+                      .sticky__text 
+                        |#{item.text}
+              .sticky__inner 
+                .sticky__grid
+                  .sticky__item 
+                    .sticky__label 
+                      |tour duration
+                    .sticky__text 
+                      |3 hours
+              .sticky__inner 
+                .sticky__price 
+                  |from #[span.sticky__price-discont $159] #[span.sticky__price-price $129] / person
+    section.section 
+      .container 
+        +calculator-alt(price = '$1280')

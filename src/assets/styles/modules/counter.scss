@@ -31,7 +31,10 @@
 
   &__number {
 
-    width: $size-n;
+    width: $size;
+    @media (min-width: $breakpoint) {
+      width: $size-n;
+    }
     height: $size;
     
     display: flex;
