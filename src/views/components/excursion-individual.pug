@@ -83,18 +83,53 @@ mixin calculator
         .calculator__item
           .calculator__label 
             |Adults
+          .counter 
+            .counter__item.counter__item--minus
+              +minus-svg.counter__minus
+            .counter__number 
+              |0
+            .counter__item.counter__item--plus
+              +plus-svg.counter__plus
         .calculator__item
           .calculator__label 
             |Students with ISC  
+          .counter 
+            .counter__item.counter__item--minus
+              +minus-svg.counter__minus
+            .counter__number 
+              |0
+            .counter__item.counter__item--plus
+              +plus-svg.counter__plus
         .calculator__item
           .calculator__label 
             |Children 6-16 years old
+          .counter 
+            .counter__item.counter__item--minus
+              +minus-svg.counter__minus
+            .counter__number 
+              |0
+            .counter__item.counter__item--plus
+              +plus-svg.counter__plus
         .calculator__item
           .calculator__label 
             |Children 0-6 years old
+          .counter 
+            .counter__item.counter__item--minus
+              +minus-svg.counter__minus
+            .counter__number 
+              |0
+            .counter__item.counter__item--plus
+              +plus-svg.counter__plus
         .calculator__item
           .calculator__label
             |Among them wheelchair users
+          .counter 
+            .counter__item.counter__item--minus
+              +minus-svg.counter__minus
+            .counter__number 
+              |0
+            .counter__item.counter__item--plus
+              +plus-svg.counter__plus
           .calculator__description 
             |Doesn’t influence the cost
         .calculator__item
@@ -146,8 +181,13 @@ mixin calculator
                     .events__bot-item
                       .calculator__label
                         |Number of people
-                      .testdata   
-                        |click
+                      .counter 
+                        .counter__item.counter__item--minus
+                          +minus-svg.counter__minus
+                        .counter__number 
+                          |0
+                        .counter__item.counter__item--plus
+                          +plus-svg.counter__plus
                   .events__bot-col
                     .events__bot-left
                       .calculator__label

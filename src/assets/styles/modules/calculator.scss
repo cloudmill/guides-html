@@ -36,7 +36,7 @@
     }
     @media (min-width: $breakpoint) {
       row-gap: 30px;
-      column-gap: 30px;
+      column-gap: 0;
       grid-template-areas: 
         "A B C E F"
         "D D D D D"
@@ -63,10 +63,26 @@
       }
       grid-area: D;
     }
+    &:nth-child(6) {
+      @media (min-width: $breakpoint) {
+        margin-left: 30px;
+      }
+    }
+    &:nth-child(7) {
+      @media (min-width: $breakpoint) {
+        margin-left: 30px;
+      }
+    }
+    &:nth-child(8) {
+      @media (min-width: $breakpoint) {
+        margin-left: 30px;
+      }
+    }
     &:nth-child(9) {
       grid-area: I;
       @media (min-width: $breakpoint) {
         grid-area: auto;
+        margin-left: 30px;
       }
     }
     &:nth-child(10) {
