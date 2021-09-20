@@ -5,9 +5,16 @@
 
   &--simple {
     #{$comp}__grid {
-      
+      grid-template-areas: 
+        "A B"
+        "C C"
+        "D I"
+      ;
       @media (min-width: $breakpoint-m) {
-        grid-template-areas: "A B C D";
+        grid-template-areas: 
+          "A B C D"
+          "I I I I"
+        ;
       }
       @media (min-width: $breakpoint) {
         column-gap: 30px;
@@ -16,8 +23,21 @@
 
     #{$comp}__item {
 
+      &:nth-child(3) {
+        @media (min-width: $breakpoint-m) {
+          align-self: auto;
+        }
+      }
+
       &:nth-child(4) {
         margin: 0;
+      }
+
+      &:nth-child(5) {
+        grid-area: I;
+        @media (min-width: $breakpoint) {
+          grid-area: auto;
+        }
       }
     }
 
@@ -51,6 +71,55 @@
           margin-top: 0;
           width: calc(#{$col-part-d} * 3 - #{$col-gap-d} - 40px);
         }
+      }
+    }
+  }
+
+  &--price {
+
+    #{$comp}__grid {
+      
+      @media (max-width: $breakpoint-m - 1px) {
+        grid-template-areas: 
+          "A B"
+          "C C"
+          "D D"
+          "I I"
+        ;
+      }
+    }
+
+    #{$comp}__price-col {
+
+      &:nth-child(1) {
+        flex-wrap: wrap;
+        @media (min-width: $breakpoint-m) {
+          flex-wrap: nowrap;
+        }
+        @media (min-width: $breakpoint) {
+          padding-left: calc(#{$col-part-d} * 4 + 30px);
+        }
+      }
+    }
+
+    #{$comp}__price-left {
+      flex-shrink: 0;
+      width: calc(#{$col-part-m} * 2);
+      @media (min-width: $breakpoint-m) {
+        margin-right: 53px;
+        width: calc(#{$col-width-m} - 20px);
+      }
+      @media (min-width: $breakpoint) {
+        margin-right: 0;
+        width: auto;
+      }
+    }
+    #{$comp}__price-right {
+      margin-top: 20px;
+      width: auto;
+      @media (min-width: $breakpoint-m) {
+        margin-top: 0;
+        flex-shrink: 0;
       }
     }
   }

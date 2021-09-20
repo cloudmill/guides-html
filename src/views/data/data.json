@@ -49,6 +49,18 @@
       "href": "cart.html"
     },
     {
+      "page": "Вечернее мероприятие с ценой",
+      "href": "evening-events.html"
+    },
+    {
+      "page": "Вечернее мероприятие без цены",
+      "href": "evening-events-1.html"
+    },
+    {
+      "page": "Вечернее мероприятие удобные даты",
+      "href": "evening-events-2.html"
+    },
+    {
       "page": "Клиента",
       "href": "clients.html"
     },
