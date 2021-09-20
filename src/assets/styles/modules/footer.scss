@@ -46,12 +46,36 @@
 
   &__choice {
     grid-area: A;
+
+    counter-reset: index;
   }
   &__choice-item {
+    position: relative;
+    z-index: 0;
+    counter-increment: index;
+
+    &::before {
+      content: counter(index);
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 70%;
+      transform: translateY(-50%);
+
+      @include f-3;
+      color: $color-white;
+      @include fsl(60px);
+      @media (min-width: $breakpoint) {
+        @include fsl(110px);
+      }
+    }
+  }
+  &__choice-link {
     @include fsl(30px);
     @media (min-width: $breakpoint) {
       @include fsl(60px);
     }
+    transition: $transition;
   }
 
   &__nav {

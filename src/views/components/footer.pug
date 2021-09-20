@@ -9,9 +9,11 @@ mixin footer
         .footer__container
           .footer__choice 
             .footer__choice-item  
-              |Shore excursions
+              a.footer__choice-link(href="#") 
+                |Shore excursions
             .footer__choice-item  
-              |For hotel guests
+              a.footer__choice-link(href="#") 
+                |For hotel guests
           .footer__nav 
             +nav.nav--big(links = data.navFooter)
           +media
