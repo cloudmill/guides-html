@@ -1,12 +1,16 @@
-include ./slider-buttons
-
 mixin thumb-slider
   .thumb-slider
     .thumb-slider__container 
       .thumb-slider__slider
         .thumb-slider__control
-          +slider-buttons.slider-buttons--wide(next = 11 prev = 12)
-        .swiper-container.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-prev='12' data-slider-next='11')
+          .slider-buttons.slider-buttons--wide
+            .slider-buttons__item   
+              .slider-buttons__button.slider-buttons__button--left
+                +arrow-svg.slider-buttons__icon
+            .slider-buttons__item   
+              .slider-buttons__button.slider-buttons__button--right
+                +arrow-svg.slider-buttons__icon
+        .swiper-container.swiper-container--slide-width-auto.swiper-container--slide-height-max
           .swiper-wrapper
             - for (i = 0; i < 3; i++)
               .swiper-slide 

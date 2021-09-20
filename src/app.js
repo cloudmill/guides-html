@@ -69,10 +69,6 @@ import Swiper from 'swiper/bundle';
 
 			if (slider.length !== 0) {
 				const thumbsSwiperEl = slider.find('.thumb-slider__thumbs');
-        // const slider_prev_id = slider_el.data('slider-prev');
-        // const slider_next_id = slider_el.data('slider-next');
-        // const slider_prev = $(`[data-slider-button="${slider_prev_id}"]`);
-        // const slider_next = $(`[data-slider-button="${slider_next_id}"]`);
         
 				const thumbsSwiper = new Swiper(thumbsSwiperEl[0], {
 					speed: SPEED,
@@ -86,6 +82,9 @@ import Swiper from 'swiper/bundle';
 				const sliderSwiper = new Swiper(sliderSwiperEl[0], {
 					speed: SPEED,
 				});
+
+        const buttonPrev = slider.find('.slider-buttons__button--left')
+        const buttonNext = slider.find('.slider-buttons__button--right')
 
 				// control
 				let lastAction = 'nothing';
@@ -101,6 +100,16 @@ import Swiper from 'swiper/bundle';
 					thumbsSlide.eq(event.clickedIndex).addClass('thumb-slider__thumb--active');
 				});
 
+        buttonPrev.on('click', function() {
+          lastAction = 'slider swipe'
+          sliderSwiper.slidePrev()
+        })
+
+        buttonNext.on('click', function() {
+          lastAction = 'slider swipe'
+          sliderSwiper.slideNext()
+        })
+
 				sliderSwiper.on('slideChange', event => {
 					if (lastAction === 'slider swipe') {
 						thumbsSwiper.slideTo(event.realIndex);
@@ -111,8 +120,6 @@ import Swiper from 'swiper/bundle';
 
 					lastAction = 'nothing';
 				});
-
-
 			}
 		}
 	});
