@@ -80,46 +80,17 @@ mixin calculator
         .calculator__item
           .calculator__title 
             |Number of people
-        .calculator__item
-          .calculator__label 
-            |Adults
-          .counter 
-            .counter__item.counter__item--minus
-              +minus-svg.counter__minus
-            .counter__number 
-              |0
-            .counter__item.counter__item--plus
-              +plus-svg.counter__plus
-        .calculator__item
-          .calculator__label 
-            |Students with ISC  
-          .counter 
-            .counter__item.counter__item--minus
-              +minus-svg.counter__minus
-            .counter__number 
-              |0
-            .counter__item.counter__item--plus
-              +plus-svg.counter__plus
-        .calculator__item
-          .calculator__label 
-            |Children 6-16 years old
-          .counter 
-            .counter__item.counter__item--minus
-              +minus-svg.counter__minus
-            .counter__number 
-              |0
-            .counter__item.counter__item--plus
-              +plus-svg.counter__plus
-        .calculator__item
-          .calculator__label 
-            |Children 0-6 years old
-          .counter 
-            .counter__item.counter__item--minus
-              +minus-svg.counter__minus
-            .counter__number 
-              |0
-            .counter__item.counter__item--plus
-              +plus-svg.counter__plus
+        each item in ['Adults', 'Students with ISC', 'Children 6-16 years old', 'Children 0-6 years old']
+          .calculator__item
+            .calculator__label 
+              |#{item}
+            .counter 
+              .counter__item.counter__item--minus
+                +minus-svg.counter__minus
+              .counter__number 
+                |0
+              .counter__item.counter__item--plus
+                +plus-svg.counter__plus
         .calculator__item
           .calculator__label
             |Among them wheelchair users
@@ -200,7 +171,7 @@ mixin calculator
                       .calculator__title
                         |Discussed separately. #[br] The manager contact you.
     .calculator__payments
-      .calculator__title  
+      .calculator__payments-title  
         |We accept payments
       .calculator__payments-row 
         .calculator__payments-item 
@@ -237,6 +208,84 @@ mixin calculator
                 |Total amount
               .calculator__price-number   
                 |$1280
+          .calculator__price-col
+            .button-icon.button-icon--calculator
+              .button-icon__icon
+                +bag-svg
+              .button-icon__text
+                |Add to cart
+
+mixin calculator-alt 
+  .calculator.calculator--simple
+    .calculator__container 
+      h3.excursion-page__title  
+        |Calculate the cost
+      .calculator__grid
+        .calculator__item
+          .calculator__label 
+            |Date
+          .calculator__date 
+            |date
+        .calculator__item
+          .calculator__label 
+            |Time
+          .calculator__time   
+            |time
+        .calculator__item
+          .calculator__label 
+            |Number of people
+          .counter 
+            .counter__item.counter__item--minus
+              +minus-svg.counter__minus
+            .counter__number 
+              |0
+            .counter__item.counter__item--plus
+              +plus-svg.counter__plus
+        .calculator__item
+          .calculator__label.calculator__label--big
+            |Number of tickets
+          .calculator__num 
+            |7
+        .calculator__item
+          .calculator__label.calculator__label--big
+            |Total amount
+          if (attributes.price)
+            .calculator__num 
+              |#{attributes.price}
+          else 
+            .calculator__num 
+              |Discussed separately. #[br] The manager contact you.
+    .calculator__payments
+      .calculator__payments-title  
+        |We accept payments
+      .calculator__payments-row 
+        .calculator__payments-item 
+          .calculator__payments-icon 
+            +visa-svg
+        .calculator__payments-item 
+          .calculator__payments-icon 
+            +master-card-svg
+        .calculator__payments-item 
+          .calculator__payments-icon 
+            +world-svg
+    .calculator__price 
+      .calculator__price-container
+        .calculator__price-row 
+          .calculator__price-col
+            .calculator__price-left
+              .calculator__price-label
+                |Number of people
+              .calculator__price-number   
+                |7
+            .calculator__price-right
+              .calculator__price-label
+                |Total amount
+              if (attributes.price)
+                .calculator__price-number   
+                  |#{attributes.price}
+              else 
+                .calculator__num  
+                  |Discussed separately. #[br] The manager contact you.
           .calculator__price-col
             .button-icon.button-icon--calculator
               .button-icon__icon
