@@ -4,8 +4,22 @@
   border: 1px solid $color-light-gray;
   border-radius: 14px;
 
+  &--active {
+    @media (max-width: $breakpoint - 1px) {
+      border-color: $color-blue;
+    }
+
+    #{$comp}-button__icon {
+      transform: rotate(45deg);
+    }
+
+    #{$comp}__dropdown {
+      display: block;
+    }
+  }
+
   &__container {
-    padding: 10px 20px 20px;
+    padding: 10px 20px;
     @media (min-width: $breakpoint) {
       padding: 30px;
     }
@@ -13,8 +27,15 @@
 
   &__dropdown {
     margin-top: 20px;
+    padding-bottom: 10px;
     @media (min-width: $breakpoint) {
       margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    display: none;
+    @media (min-width: $breakpoint) {
+      display: block;
     }
   }
 

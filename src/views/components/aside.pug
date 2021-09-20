@@ -1,6 +1,6 @@
 mixin aside 
-  .aside
-    .aside__container 
+  .aside.aside--active
+    .aside__container
       +aside-button
       .aside__dropdown
         ul.aside__list
@@ -28,7 +28,7 @@ mixin aside
               .aside__body 
                 each text in item.options
                   label.aside__label
-                    input.aside__input(type="checkbox" name='checkbox')
+                    input.aside__input(type="checkbox" name='checkbox' value='1')
                     .aside__checkbox
                       +check-svg.aside__svg
                     .aside__text 
