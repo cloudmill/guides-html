@@ -14,18 +14,6 @@
     }
   }
 
-  &__aside {
-
-    border: 1px solid $color-light-gray;
-    border-radius: 14px;
-  }
-
-  &__container {
-    @media (min-width: $breakpoint) {
-      padding: 30px;
-    }
-  }
-
   &__city {
     font-weight: 500;
     @include fsl(16px);

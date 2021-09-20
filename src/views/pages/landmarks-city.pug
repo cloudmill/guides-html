@@ -2,6 +2,7 @@ extends ../layouts/master.pug
 
 include  ../components/navigation
 include  ../components/tour
+include  ../components/aside
 include  ../components/landmark-card
 
 block content 
@@ -13,20 +14,22 @@ block content
       .container 
         .row 
           .row__col
-            .landmarks-page__aside 
-              .landmarks-page__container 
-                .landmarks-page__city.landmarks-page__city--active
-                  |Saint Petersburg
-                ul.landmarks-page__list 
-                  each item in ['City sights', 'Museums', 'Palaces', 'Cathedrals and monasteries', 'Fortresses', 'Theaters', 'Suburbs', ]
-                    li.landmarks-page__item 
-                      a.landmarks-page__link(href="#") 
-                        |#{item}
-                ul.landmarks-page__list 
-                  each item in ['Moscow', 'Novgorod', 'Tallinn', 'Helsinki', 'Porvoo', 'Berlin', 'Rostock/Warnemünde', 'Schwerin', 'Stockholm', 'Copenhagen']
-                    li.landmarks-page__item 
-                      a.landmarks-page__button(href="#") 
-                        |#{item}
+            .aside 
+              .aside__container 
+                +aside-button
+                .aside__dropdown
+                  .landmarks-page__city.landmarks-page__city--active
+                    |Saint Petersburg
+                  ul.landmarks-page__list 
+                    each item in ['City sights', 'Museums', 'Palaces', 'Cathedrals and monasteries', 'Fortresses', 'Theaters', 'Suburbs', ]
+                      li.landmarks-page__item 
+                        a.landmarks-page__link(href="#") 
+                          |#{item}
+                  ul.landmarks-page__list 
+                    each item in ['Moscow', 'Novgorod', 'Tallinn', 'Helsinki', 'Porvoo', 'Berlin', 'Rostock/Warnemünde', 'Schwerin', 'Stockholm', 'Copenhagen']
+                      li.landmarks-page__item 
+                        a.landmarks-page__button(href="#") 
+                          |#{item}
           .row__col
             .row__grid 
               each item in data.landmarksSaintPeter

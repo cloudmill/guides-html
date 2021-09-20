@@ -5,7 +5,17 @@
   border-radius: 14px;
 
   &__container {
-    padding: 30px;
+    padding: 10px 20px 20px;
+    @media (min-width: $breakpoint) {
+      padding: 30px;
+    }
+  }
+
+  &__dropdown {
+    margin-top: 20px;
+    @media (min-width: $breakpoint) {
+      margin-top: 0;
+    }
   }
 
   &__item {

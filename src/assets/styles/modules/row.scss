@@ -19,11 +19,6 @@
       }
     }
   }
-  &__col-aside {
-    @media (max-width: $breakpoint - 1px) {
-      display: none;
-    }
-  }
 
   &__grid {
     display: grid;
