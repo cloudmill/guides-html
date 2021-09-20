@@ -1,0 +1,57 @@
+.counter {
+  $size: 52px;
+  $size-n: 68px;
+
+  display: flex;
+  align-items: center;
+
+  &__item {
+
+    width: $size;
+    height: $size;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid $color-light-gray;
+    cursor: pointer;
+
+    &:first-child {
+      border-radius: 14px 0 0 14px;
+      border-right: none;
+    }
+
+    &:last-child {
+      border-radius: 0 14px 14px 0;
+      border-left: none;
+    }
+  } 
+
+
+  &__number {
+
+    width: $size-n;
+    height: $size;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid $color-light-gray;
+    @include fsl(16px);
+  }
+
+  &__plus {
+    width: 24px;
+    height: 24px;
+
+    path {
+      stroke: $color-black;
+    }
+  }
+}
+
+.test {
+  margin: 20px;
+}

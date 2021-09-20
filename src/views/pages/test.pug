@@ -3,6 +3,14 @@ extends ../layouts/master.pug
 block header 
 
 block content 
-  
+  .test
+    .counter 
+      .counter__item.counter__item--minus
+        +minus-svg.counter__minus 
+      .counter__number
+        |1
+      .counter__item.counter__item--plus
+        +plus-svg.counter__plus 
+
 
 block footer
