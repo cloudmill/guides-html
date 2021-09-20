@@ -82,7 +82,10 @@
   &__tabs {
     position: absolute;
     bottom: 0;
-    right: 20px;
+    right: 10px;
+    @media (min-width: $breakpoint-m) {
+      right: 20px;
+    }
     @media (min-width: $breakpoint) {
       right: 60px;
     }
@@ -100,6 +103,10 @@
   }
 
   &__tab {
+    width: 173px;
+    @media (min-width: $breakpoint-m) {
+      width: 235px;
+    }
     @media (min-width: $breakpoint) {
       width: 360px;
     }
@@ -118,7 +125,10 @@
   }
 
   &__container {
-    
+    padding: 20px 20px 37px;
+    @media (min-width: $breakpoint-m) {
+      padding: 20px 20px 60px;
+    }
     @media (min-width: $breakpoint) {
       padding: 30px 30px 70px;
     }
@@ -139,6 +149,11 @@
   }
 
   &__tab-title {
+    max-width: 108px;
+    @media (min-width: $breakpoint) {
+      max-width: none;
+    }
+
     color: $color-white;
     @include fsl(20px, 90%);
     @media (min-width: $breakpoint) {
@@ -153,7 +168,10 @@
     height: $size;
 
     flex-shrink: 0;
-    display: flex;
+    display: none;
+    @media (min-width: $breakpoint) {
+      display: flex;
+    }
     align-items: center;
     justify-content: center;
 
@@ -172,10 +190,27 @@
   }
 
   &__icon {
-    height: 79px;
+    height: 55px;
+    @media (min-width: $breakpoint) {
+      height: 79px;
+    }
 
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  &__cruise {
+    height: 55px;
+    @media (min-width: $breakpoint) {
+      height: auto;
+    }
+  }
+
+  &__walk {
+    height: 60px;
+    @media (min-width: $breakpoint) {
+      height: auto;
+    }
   }
 }

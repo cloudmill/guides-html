@@ -29,7 +29,7 @@ block content
                 .hero__button 
                   +arrow-svg.hero__arrow
               .hero__icon
-                +hero-cruise-svg
+                +hero-cruise-svg.hero__cruise
         .hero__item 
           .hero__tab 
             .hero__container
@@ -39,7 +39,7 @@ block content
                 .hero__button 
                   +arrow-svg.hero__arrow
               .hero__icon
-                +hero-walk-svg
+                +hero-walk-svg.hero__walk
     section.section
       .container
         .main-page__top 
@@ -49,7 +49,7 @@ block content
             .main-page__top-col 
               h3.main-page__title
                 |Best sellers
-        .swiper-container.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='1' data-slider-next='1' data-slider-prev='2')
+        .swiper-container.swiper-container--slide-width-auto.swiper-container--slide-height-max.swiper-container--visible.swiper-container--visible--mobile(data-slider-id='1' data-slider-next='1' data-slider-prev='2')
             .swiper-wrapper
               each item in data.mainSellers 
                 .swiper-slide 
