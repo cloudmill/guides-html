@@ -85,10 +85,14 @@
   }
 
   &--up {
-    transform: translateY(-50px);
+    @media (min-width: $breakpoint) {
+      transform: translateY(-50px);
+    }
 
     #{$comp}__logo {
-      transform: scale(0.75) translateY(30px);
+      @media (min-width: $breakpoint) {
+        transform: scale(0.75) translateY(30px);
+      }
     }
   }
 
