@@ -1,4 +1,6 @@
 .header {
+  $comp: &;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -8,6 +10,85 @@
   transition: $transition;
   border-bottom: 1px solid $color-light-gray;
   background: $color-white;
+
+  &--transparent {
+    background: transparent;
+
+    #{$comp}__img {
+      opacity: 0;
+
+      &--white {
+        opacity: 1;
+      }
+    }
+
+    #{$comp}__phone-link {
+      color: $color-white;
+    }
+    #{$comp}__phone-icon {
+      background: rgba(157, 231, 255, 0.6);
+    }
+    #{$comp}__phone-svg {
+      path {
+        stroke: $color-white;
+      }
+    }
+
+    #{$comp}__category-link {
+      color: $color-white;
+    }
+    #{$comp}__category-svg {
+      path {
+        fill: $color-white;
+      }
+    }
+
+    .nav__link {
+      color: $color-white;
+    }
+
+    #{$comp}__search-input {
+      background: rgba($color-white, 0.18);
+
+      @include placeholder {
+        color: $color-white;
+      }
+    }
+    #{$comp}__search-icon {
+      circle {
+        stroke: $color-white;
+      }
+      path {
+        stroke: $color-white;
+      }
+    }
+
+    #{$comp}__lang-text {
+      color: $color-white;
+    }
+    #{$comp}__lang-icon {
+      path {
+        stroke: $color-white;
+      }
+    }
+
+    #{$comp}__store-num {
+      color: $color-white;
+    }
+    #{$comp}__store-svg {
+      path {
+        stroke: $color-white;
+      }
+    }
+  }
+
+  &--up {
+    transform: translateY(-50px);
+
+    #{$comp}__logo {
+      transform: scale(0.75) translateY(30px);
+    }
+  }
 
   &__inner {
     padding: 10px 0;
@@ -69,24 +150,77 @@
   }
 
   &__logo {
+    position: relative;
+
     display: flex;
     align-items: center;
 
-    width: 36px;
+    max-width: 36px;
     @media (min-width: $breakpoint) {
-      width: 105px;
+      max-width: 105px;
+    }
+
+    transition: $transition;
+  }
+
+  &__img {
+    transition: $transition;
+    &--white {
+      position: absolute;
+      left: 0;
+      top: 0;
+      
+      opacity: 0;
     }
   }
 
   &__phone {
+    @media (max-width: $breakpoint - 1px) {
+      margin-left: 15px;
+    }
 
+    display: flex;
+    align-items: center;
   }
   &__phone-link {
     font-weight: 500;
     transition: $transition;
 
+    @media (max-width: $breakpoint - 1px) {
+      @include fsl(12px);
+    }
+
     &:hover {
       color: $color-blue;
+    }
+  }
+  &__phone-icon {
+    $size: 22px;
+
+    margin-left: 5px;
+
+    width: $size;
+    height: $size;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: $color-light-gray;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      background: $color-blue;
+    }
+  }
+  &__phone-svg {
+    display: flex;
+    align-items: center;
+
+    path {
+      transition: $transition;
     }
   }
 
@@ -118,6 +252,11 @@
     justify-content: center;
 
     width: 36px;
+  }
+  &__category-svg {
+    path {
+      transition: $transition;
+    }
   }
   &__category-link {
     font-weight: 500;
@@ -167,11 +306,13 @@
     border-radius: 14px;
     border: none;
     background: rgba($color-black, 0.05);
+    transition: $transition;
 
     @include placeholder {
       @include f-main;
       color: $color-black;
       @include fsl(14px, 130%);
+      transition: $transition;
     }
   }
   &__search-button {
@@ -198,6 +339,13 @@
       width: 23px;
       height: 24px;
     }
+    circle {
+      transition: $transition;
+    }
+
+    path {
+      transition: $transition;
+    }
   }
 
   &__lang {
@@ -210,15 +358,36 @@
   &__lang-text {
     margin-right: 5px;
     font-weight: 500;
+    transition: $transition
+  }
+  &__lang-icon {
+    display: flex;
+    align-items: center;
+
+    path {
+      transition: $transition
+    }
   }
 
   &__store {
+    @media (max-width: $breakpoint - 1px) {
+      position: relative;
+      margin-left: calc(27px / 2);
+    }
+
     display: flex;
     align-items: center;
   }
   &__store-count {
     $size-d: 34px;
     $size-m: 27px;
+
+    @media (max-width: $breakpoint) {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
 
     display: flex;
     align-items: center;
@@ -236,9 +405,23 @@
   }
   &__store-num {
     font-weight: 500;
+    color: $color-white;
+    transition: $transition;
+    @include fsl(12px);
+    @media (min-width: $breakpoint) {
+      @include fsl(14px);
+      color: $color-black;
+    }
   }
   &__store-icon {
-    margin-left: 5px;
+    @media (min-width: $breakpoint) {
+      margin-left: 5px;
+    }
+  }
+  &__store-svg {
+    path {
+      transition: $transition;
+    }
   }
 
   &__mobile {

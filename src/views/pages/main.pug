@@ -5,8 +5,11 @@ include ../components/guides-card
 include ../components/excursion-card 
 include ../components/slider-buttons
 
+block header 
+  +header(transparent = true)
+
 block content 
-  .main-page
+  .main-page.page-transparent
     section.hero
       .hero__frame 
         img.hero__img(src="assets/images/hero-main.jpg", alt="")
