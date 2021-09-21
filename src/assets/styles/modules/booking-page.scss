@@ -1,0 +1,112 @@
+.booking-page {
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $breakpoint) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__col {
+    @media (min-width: $breakpoint-m) {
+      flex-shrink: 0;
+    }
+    &:nth-child(1) {
+      margin-top: 20px;
+      @media (min-width: $breakpoint) {
+        margin-top: 0;
+        width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+      }
+    }
+    &:nth-child(2) {
+      order: -1;
+      @media (min-width: $breakpoint-m) {
+        width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
+      }
+      @media (min-width: $breakpoint) {
+        order: 2;
+        width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+      }
+    }
+  }
+
+  &__top {
+    @media (min-width: $breakpoint-m) {
+      display: flex;
+      justify-content: space-between;
+    }
+    @media (min-width: $breakpoint) {
+      display: block;
+    }
+  }
+
+  &__item {
+    @media (min-width: $breakpoint-m) {
+      flex-shrink: 0;
+      width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
+    }
+    @media (min-width: $breakpoint) {
+      width: auto;
+    }
+
+    &:not(:first-child) {
+      margin-top: 10px;
+      @media (min-width: $breakpoint-m) {
+        margin-top: 0;
+      }
+      @media (min-width: $breakpoint) {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__inner {
+    margin-top: 40px;
+    @media (min-width: $breakpoint) {
+      margin-top: 50px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__card {
+
+    border: 1px solid $color-light-gray;
+    border-radius: 14px;
+  }
+  &__card-container {
+    padding: 20px;
+    @media (min-width: $breakpoint) {
+      padding: 30px 40px;
+    }
+  }
+  &__card-info {
+    display: flex;
+  }
+  &__card-item {
+    &:not(:first-child) {
+      margin-left: 72px;
+    }
+  }
+  &__card-label {
+    margin-bottom: 5px;
+
+    font-weight: 500;
+    color: $color-gray;
+    @include fsl(12px);
+  }
+  &__card-time {
+    @include fsl(16px);
+  }
+
+  &__list {}
+  &__list-item {
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+}

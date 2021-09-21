@@ -1,0 +1,99 @@
+extends ../layouts/master.pug
+
+include  ../components/navigation
+include  ../components/form-components
+
+block content 
+  -
+    var ddata = {
+      first: [
+        {
+          type: 'text',
+          name: 'name',
+          placeholder: 'Name'
+        },
+        {
+          type: 'text',
+          name: 'surname',
+          placeholder: 'Surname'
+        },
+        {
+          type: 'email',
+          name: 'email',
+          placeholder: 'E-mail'
+        },
+        {
+          type: 'email',
+          name: 'rep-email',
+          placeholder: 'Replay e-mail'
+        },
+      ],
+      second: [
+        {
+          type: 'phone',
+          name: 'phone',
+          placeholder: 'Phone'
+        },
+        {
+          type: 'text',
+          name: 'hotel-name',
+          placeholder: 'Hotel name'
+        },
+        {
+          type: 'text',
+          name: 'addres',
+          placeholder: 'Hotel address'
+        },
+      ]
+    }
+
+  .booking-page
+    section.section.section--first
+      .container
+        +navigation(page="Booking an excursion")
+    section.section.section--md 
+      .container
+        .booking-page__row 
+          .booking-page__col
+            form.form(action="/") 
+              .booking-page__top
+                .booking-page__item
+                  each item in ddata.first
+                    .form__item 
+                      +input(name = item.name placeholder = item.placeholder type = item.type)
+                .booking-page__item
+                  each item in ddata.second
+                    .form__item 
+                      +input(name = item.name placeholder = item.placeholder type = item.type)
+              .booking-page__inner 
+                .booking-page__title 
+                  |Tour comment
+                .booking-page__item
+                  +input(name = 'requests' placeholder = 'Special requests' type = 'text')
+                .form__wrapper 
+                  .booking-page__top
+                    .booking-page__item
+                      +checkbox
+                    .booking-page__item
+                      +checkbox(text = 'I allow you to write to Viber, Telegram, and WhatsApp')
+                .form__button 
+                  +button.button--sticky(tag = 'button')
+                    |Further
+          .booking-page__col
+            ul.booking-page__list 
+              li.booking-page__list-item
+                .booking-page__card 
+                  .booking-page__card-container 
+                    .booking-page__title 
+                      |Walking tour of St. Petersburg
+                    .booking-page__card-info 
+                      .booking-page__card-item 
+                        .booking-page__card-label 
+                          |date
+                        .booking-page__card-time 
+                          |29.10.2021
+                      .booking-page__card-item 
+                        .booking-page__card-label 
+                          |time
+                        .booking-page__card-time 
+                          |11:00

@@ -16,6 +16,7 @@
   border: 1px solid $color-black;
   transition: $transition;
   cursor: pointer;
+  @include f-main;
 
   &:hover {
     border-color: $color-brown;
