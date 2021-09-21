@@ -1,0 +1,144 @@
+.confirmation-page {
+
+  &__container {
+    @media (min-width: $breakpoint) {
+      margin-left: calc(#{$col-part-d} * 3);
+      width: calc(#{$col-part-d} * 7 - #{$col-gap-d});
+    }
+  }
+
+  &__info {
+    @media (min-width: $breakpoint-m) {
+      width: calc(#{$col-part-m} * 3 - #{$col-gap-m});
+    }
+    @media (min-width: $breakpoint) {
+      width: auto;
+    }
+  }
+
+  &__list {
+    margin-bottom: 40px;
+  }
+  &__list-item {
+    padding-bottom: 10px;
+    @media (min-width: $breakpoint) {
+      padding-bottom: 20px;
+
+      display: flex;
+      align-items: center;
+    }
+
+    border-bottom: 1px solid $color-light-gray;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+      @media (min-width: $breakpoint) {
+        margin-top: 20px;
+      }
+    }
+  }
+  &__list-col {
+    @media (min-width: $breakpoint) {
+      flex-shrink: 0;
+    }
+    &:nth-child(1) {
+      margin-bottom: 5px;
+      @media (min-width: $breakpoint) {
+        margin-bottom: 0;
+        width: calc(#{$col-part-d} * 3);
+      }
+    }
+  }
+  &__list-name {
+    font-weight: 500;
+    @include fsl(14px);
+  }
+  &__list-text {
+    @include fsl(16px, 160%);
+  }
+
+  &__total {
+    display: flex;
+    @media (min-width: $breakpoint-m) {
+      display: block;
+    }
+  }
+  &__total-item {
+    &:nth-child(1) {
+      flex-shrink: 0;
+      width: calc(#{$col-part-m});
+      @media (min-width: $breakpoint-m) {
+        width: auto;
+        flex-shrink: 1;
+      }
+    } 
+    &:nth-child(2) {
+      flex-shrink: 0;
+      width: calc(#{$col-part-m} * 3 - #{$col-gap-m});
+      @media (min-width: $breakpoint-m) {
+        width: auto;
+        flex-shrink: 1;
+      }
+    }
+
+    &:not(:first-child) {
+      @media (min-width: $breakpoint-m) {
+        margin-top: 40px;
+      }
+    }
+  }
+  &__total-row {
+    @media (min-width: $breakpoint-m) {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__total-col {
+    &:nth-child(1) {
+      @media (min-width: $breakpoint-m) {
+        flex-shrink: 0;
+        width: 50%;
+      }
+      @media (min-width: $breakpoint) {
+        width: calc(#{$col-part-d} * 3);
+      }
+    }
+    &:nth-child(2) {
+      position: relative;
+    }
+  }
+  &__total-title {
+    margin-bottom: 20px;
+    @media (min-width: $breakpoint-m) {
+      margin-bottom: 0;
+    }
+
+    font-weight: 500;
+  }
+  &__total-label {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 10px);
+
+    @media (min-width: $breakpoint-m) {
+      white-space: nowrap;
+    }
+    @media (min-width: $breakpoint) {
+      white-space: normal;
+    }
+
+    color: $color-gray;
+    @include fsl(12px, 160%);
+  }
+
+  &__pay {
+    margin-top: 70px;
+    @media (min-width: $breakpoint) {
+      margin-top: 92px;
+    }
+  }
+  &__pay-text {
+    font-weight: 500;
+    @include fsl(18px, 160%);
+  }
+}

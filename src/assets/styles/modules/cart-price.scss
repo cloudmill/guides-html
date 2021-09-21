@@ -1,7 +1,33 @@
 .cart-price {
+  $comp: &;
 
   background: $color-aqua;
   border-radius: 14px;
+
+  &--row {
+    #{$comp}__col {
+      &:nth-child(1) {
+        @media (min-width: $breakpoint-m) {
+          display: flex;
+        }
+      }
+    }
+    #{$comp}__item {
+      &:nth-child(1) {
+        @media (min-width: $breakpoint-m) {
+          width: calc(#{$col-part-m} - 20px);
+        }
+        @media (min-width: $breakpoint) {
+          width: calc(#{$col-part-d} * 3 - 40px);
+        }
+      }
+      &:not(:first-child) {
+        @media (min-width: $breakpoint) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
 
   &__container {
     padding: 20px;
@@ -68,5 +94,11 @@
   &__number {
     font-weight: 500;
     @include fsl(40px);
+  }
+
+  &__link {
+    display: block;
+    text-decoration: underline;
+    @include fsl(12px, 160%);
   }
 }

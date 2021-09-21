@@ -1,0 +1,46 @@
+.tabs {
+  $comp: &;
+
+  display: flex;
+
+  &__item {
+
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+  }
+
+  &__tab {
+    width: 83px;
+    height: 40px;
+    @media (min-width: $breakpoint-m) {
+      width: 110px;
+    }
+    @media (min-width: $breakpoint) {
+      height: 60px;
+    }
+
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include fsl(16px);
+    border: 1px solid $color-light-gray;
+    transition: $transition;
+    cursor: pointer;
+    border-radius: 10px;
+    @media (min-width: $breakpoint) {
+      border-radius: 14px;
+    }
+
+    &:hover {
+      border-color: $color-blue;
+    }
+
+    &--active {
+      background: $color-blue;
+      border-color: $color-blue;
+    }
+  }
+}

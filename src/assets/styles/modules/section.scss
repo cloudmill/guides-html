@@ -62,4 +62,28 @@
       }
     }
   }
+
+  &__nav {
+    @media (min-width: $breakpoint) {
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+  &__nav-item {
+
+    &:not(:first-child) {
+      @media (min-width: $breakpoint) {
+        margin-left: 40px;
+      }
+    }
+  }
+  &__nav-label {
+    text-transform: uppercase;
+    color: $color-gray;
+    font-weight: 500;
+    @include fsl(16px);
+    @media (min-width: $breakpoint) {
+      @include fsl(20px);
+    }
+  }
 }
