@@ -164,150 +164,92 @@
 				</div>
 			</header>
 			<main class="main">
-				<section class="section section--first">
-					<div class="container">
-						<div class="navigation">
-							<div class="navigation__inner">
-								<div class="breadcrumb">
-									<ul class="breadcrumb__list">
-										<li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Home</a></li>
-										<li class="breadcrumb__item breadcrumb__item--active"><a class="breadcrumb__link" href="#">Clients</a></li>
-									</ul>
-								</div>
-							</div>
-							<h1>Clients</h1>
-						</div>
-					</div>
-				</section>
-				<section class="section section--md">
-					<div class="container">
-						<div class="row">
-							<div class="row__col">
-								<div class="nav-page">
-									<ul class="nav-page__list">
-										<li class="nav-page__item nav-page__item--active"><a class="nav-page__link" href="#">Booking</a></li>
-										<li class="nav-page__item"><a class="nav-page__link" href="#">Payment</a></li>
-										<li class="nav-page__item"><a class="nav-page__link" href="#">Cancelation</a></li>
-										<li class="nav-page__item"><a class="nav-page__link" href="#">For wheelchair users</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="row__col">
-								<div class="clients">
-									<h3 class="clients__title">Booking</h3>
-									<div class="clients__content clients__content--first">
-										<ul class="clients__list">
-											<li class="clients__item">
-												<h4 class="clients__content-title">Booking a standard excursion.</h4>
-												<p class="clients__text">You can book a standard excursion on our website. At the same time, in most cases you have the opportunity to choose from 2 options:</p>
-												<ul class="clients__content-list">
-													<li class="clients__content-item">
-														<div class="clients__content-text">30% prepayment</div>
-													</li>
-													<li class="clients__content-item">
-														<div class="clients__content-text">100 % prepayment</div>
-													</li>
-												</ul>
-												<p class="clients__text">Some programs (for example, tickets for folklore) it is possible to book only with 100% prepayment.</p>
-												<p class="clients__text">When booking cruise programs, excursions to the Smolny Institute and some other programs, you will need the passport data of all participants, which are sent through a special page of the site using a secure protocol.</p>
-											</li>
-											<li class="clients__item">
-												<h4 class="clients__content-title">Booking an individual excursion</h4>
-												<p class="clients__text">Booking is carried out after full agreement of the program and the price. When booking, we will ask you to make a prepayment in the amount of 20% to 100% of the cost. The amount of the prepayment depends on the content of the program. When booking some programs, you will need the passport details of the participants.</p>
-											</li>
-											<li class="clients__item">
-												<h4 class="clients__content-title">Booking an individual excursion</h4>
-												<p class="clients__text">After the booking process is completed, a booking confirmation is sent to the specified email. Please check all the information carefully. If you find any errors, please contact our manager.</p>
-											</li>
+				<div class="booking-page">
+					<section class="section section--first">
+						<div class="container">
+							<div class="navigation">
+								<div class="navigation__inner">
+									<div class="breadcrumb">
+										<ul class="breadcrumb__list">
+											<li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Home</a></li>
+											<li class="breadcrumb__item breadcrumb__item--active"><a class="breadcrumb__link" href="#">Booking an excursion</a></li>
 										</ul>
 									</div>
-									<section class="section">
-										<h3 class="clients__title">Payment for the excursion</h3>
-										<div class="clients__content">
-											<ul class="clients__content-list">
-												<li class="clients__content-item">
-													<div class="clients__content-text">You can pay for the cruise program in cash (to the manager or guide) or by card (to the manager). Payment is made either in the morning before the start of the excursion program on day 2 for 2 and 3 day programs and on the first day for one-day programs, or during lunch.</div>
-												</li>
-												<li class="clients__content-item">
-													<div class="clients__content-text">You can pay for the ground program in cash to the guide before or after the tour. To pay for the ground program with a card, you must approach the company's office during business hours.</div>
-												</li>
-												<li class="clients__content-item">
-													<div class="clients__content-text">Payment by bank transfer (rubles, US $, euro)is possible by prior arrangement.</div>
-												</li>
-											</ul>
+								</div>
+								<h1>Booking an excursion</h1>
+							</div>
+						</div>
+					</section>
+					<section class="section section--md">
+						<div class="container">
+							<div class="booking-page__row">
+								<div class="booking-page__col">
+									<form class="form" action="/">
+										<div class="booking-page__top">
+											<div class="booking-page__item">
+												<div class="form__item"><input class="form__input" placeholder="Name" name="name" /></div>
+												<div class="form__item"><input class="form__input" placeholder="Surname" name="surname" /></div>
+												<div class="form__item"><input class="form__input" type="email" placeholder="E-mail" name="email" /></div>
+												<div class="form__item"><input class="form__input" type="email" placeholder="Replay e-mail" name="rep-email" /></div>
+											</div>
+											<div class="booking-page__item">
+												<div class="form__item"><input class="form__input" type="phone" placeholder="Phone" name="phone" /></div>
+												<div class="form__item"><input class="form__input" placeholder="Hotel name" name="hotel-name" /></div>
+												<div class="form__item"><input class="form__input" placeholder="Hotel address" name="addres" /></div>
+											</div>
 										</div>
-									</section>
-									<section class="section">
-										<h3 class="clients__title">Cancellation policy</h3>
-										<div class="clients__content">
-											<ul class="clients__content-list">
-												<li class="clients__content-item">
-													<div class="clients__content-text">You can pay for the cruise program in cash (to the manager or guide) or by card (to the manager). Payment is made either in the morning before the start of the excursion program on day 2 for 2 and 3 day programs and on the first day for one-day programs, or during lunch.</div>
-												</li>
-												<li class="clients__content-item">
-													<div class="clients__content-text">You can pay for the ground program in cash to the guide before or after the tour. To pay for the ground program with a card, you must approach the company's office during business hours.</div>
-												</li>
-												<li class="clients__content-item">
-													<div class="clients__content-text">Payment by bank transfer (rubles, US $, euro)is possible by prior arrangement.</div>
-												</li>
-											</ul>
+										<div class="booking-page__inner">
+											<div class="booking-page__title">Tour comment</div>
+											<div class="booking-page__item"><input class="form__input" placeholder="Special requests" name="requests" /></div>
+											<div class="form__wrapper">
+												<div class="booking-page__top">
+													<div class="booking-page__item">
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox" />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__text">I give my consent to <a class="checkbox__link" href="#">the processing of personal data</a></div>
+															</label></div>
+													</div>
+													<div class="booking-page__item">
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox" />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__text">I allow you to write to Viber, Telegram, and WhatsApp</div>
+															</label></div>
+													</div>
+												</div>
+											</div>
+											<div class="form__button"><button class="button button--sticky">Further</button></div>
 										</div>
-										<div class="clients__content clients__content--first">
-											<h4>St. Petersburg, Moscow</h4>
-											<ul class="clients__content-list">
-												<li class="clients__content-item">
-													<div class="clients__content-text">24 hours free cancellation of the reservation</div>
-												</li>
-												<li class="clients__content-item">
-													<div class="clients__content-text">Exceptions are programs that contain non-refundable tickets (the Hermitage, the Catherine Palace, theater tickets, tickets for the Peregrine Falcon). In this case, the deposit amount is refunded minus the cost of non-refundable tickets.</div>
-												</li>
-												<li class="clients__content-item">
-													<div class="clients__content-text">The deposit amount is fully deducted in less than 24 hours.</div>
-												</li>
-											</ul>
-										</div>
-										<div class="clients__content clients__content--first">
-											<h4>Tallin</h4>
-											<ul class="clients__content-list">
-												<li class="clients__content-item">
-													<div class="clients__content-text">48 hours free cancellation of the reservation in less than 48 hours 100 % payment of the tour</div>
-												</li>
-											</ul>
-										</div>
-										<div class="clients__content clients__content--first">
-											<h4>Stockholm, Copenhagen</h4>
-											<ul class="clients__content-list">
-												<li class="clients__content-item">
-													<div class="clients__content-text">3 days in advance, free cancellation of the reservation</div>
-												</li>
-												<li class="clients__content-item">
-													<div class="clients__content-text">In less than 3 days, 100 % payment for the tour</div>
-												</li>
-												<p class="clients__caption">For individual tours for groups of 8 people or more, there may be more stringent cancellation conditions. They will be indicated in the confirmation of your booking.</p>
-											</ul>
-										</div>
-									</section>
-									<section class="section">
-										<h3>Information for wheelchair users</h3>
-										<div class="clients__content">
-											<ul class="clients__content-list">
-												<li class="clients__content-item">
-													<div class="clients__content-text">You can pay for the cruise program in cash (to the manager or guide) or by card (to the manager). Payment is made either in the morning before the start of the excursion program on day 2 for 2 and 3 day programs and on the first day for one-day programs, or during lunch.</div>
-												</li>
-												<li class="clients__content-item">
-													<div class="clients__content-text">You can pay for the ground program in cash to the guide before or after the tour. To pay for the ground program with a card, you must approach the company's office during business hours.</div>
-												</li>
-												<li class="clients__content-item">
-													<div class="clients__content-text">Payment by bank transfer (rubles, US $, euro)is possible by prior arrangement.</div>
-												</li>
-											</ul>
-										</div>
-									</section>
+									</form>
+								</div>
+								<div class="booking-page__col">
+									<ul class="booking-page__list">
+										<li class="booking-page__list-item">
+											<div class="booking-page__card">
+												<div class="booking-page__card-container">
+													<div class="booking-page__title">Walking tour of St. Petersburg</div>
+													<div class="booking-page__card-info">
+														<div class="booking-page__card-item">
+															<div class="booking-page__card-label">date</div>
+															<div class="booking-page__card-time">29.10.2021</div>
+														</div>
+														<div class="booking-page__card-item">
+															<div class="booking-page__card-label">time</div>
+															<div class="booking-page__card-time">11:00</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
-					</div>
-				</section>
+					</section>
+				</div>
 			</main>
 			<footer class="footer">
 				<div class="container">
