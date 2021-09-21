@@ -1,8 +1,8 @@
 mixin aside 
-  .aside.aside--active
+  .aside.active(data-accordion='')
     .aside__container
       +aside-button
-      .aside__dropdown
+      .aside__dropdown(data-accordion-dropdown='')
         ul.aside__list
           li.aside__item 
             .aside__top 
@@ -41,7 +41,7 @@ mixin aside
               .button-icon__text 
                 |Clear
 mixin aside-button 
-  .aside-button 
+  .aside-button(data-accordion-button='')
     .aside-button__text 
       |Filters
     .aside-button__icon 

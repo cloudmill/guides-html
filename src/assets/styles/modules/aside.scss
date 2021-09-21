@@ -4,17 +4,17 @@
   border: 1px solid $color-light-gray;
   border-radius: 14px;
 
-  &--active {
+  &.active {
     @media (max-width: $breakpoint - 1px) {
       border-color: $color-blue;
     }
 
     #{$comp}-button__icon {
-      transform: rotate(45deg);
+      transform: rotate(135deg);
     }
 
     #{$comp}__dropdown {
-      display: block;
+      // display: block;
     }
   }
 
@@ -33,7 +33,7 @@
       padding-bottom: 0;
     }
 
-    display: none;
+    // display: none;
     @media (min-width: $breakpoint) {
       display: block;
     }
@@ -77,6 +77,12 @@
     &:not(:first-child) {
       margin-top: 10px;
     }
+
+    &:hover {
+      #{$comp}__checkbox {
+        border-color: $color-blue;
+      }
+    }
   }
   
   &__input {
@@ -89,8 +95,8 @@
 
     &:checked {
       ~#{$comp}__checkbox {
-        background: $color-blue;
-        border-color: $color-blue;
+        background: $color-azure;
+        border-color: $color-azure;
 
         #{$comp}__svg {
           opacity: 1;

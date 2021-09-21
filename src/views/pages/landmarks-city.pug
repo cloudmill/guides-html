@@ -14,10 +14,10 @@ block content
       .container 
         .row 
           .row__col
-            .aside.aside--active
+            .aside.active(data-accordion='')
               .aside__container 
                 +aside-button
-                .aside__dropdown
+                .aside__dropdown(data-accordion-dropdown='')
                   .landmarks-page__city.landmarks-page__city--active
                     |Saint Petersburg
                   ul.landmarks-page__list 
