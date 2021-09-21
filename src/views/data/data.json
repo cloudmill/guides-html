@@ -75,6 +75,14 @@
     {
       "page": "О нас",
       "href": "about.html"
+    },
+    {
+      "page": "Бронирование тура",
+      "href": "booking.html"
+    },
+    {
+      "page": "Подтверждение бронирования",
+      "href": "confirmation.html"
     }
   ],
   "nav": [
