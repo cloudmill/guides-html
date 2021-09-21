@@ -1,0 +1,143 @@
+.team-modal {
+  width: 100%;
+  @media (min-width: $breakpoint-m) {
+    margin: 0 54px;
+    width: 100%;
+  }
+  @media (min-width: $breakpoint) {
+    margin: 0;
+    width: calc(#{$col-part-d} * 6 + #{$col-gap-d});
+  }
+
+  display: none;
+
+  background: $color-white;
+  // border-radius: 14px 14px 0 0;
+  border-radius: 14px;
+
+  &__container {
+    padding: 67px 20px 40px;
+    @media (min-width: $breakpoint-m) {
+      padding: 50px 25px;
+    }
+    @media (min-width: $breakpoint) {
+      padding: 20px 80px 60px 20px;
+    }
+  }
+
+  &__row {
+    @media (min-width: $breakpoint-m) {
+      display: flex;
+    }
+    @media (min-width: $breakpoint) {
+      align-items: center;
+    }
+  }
+
+  &__col {
+    &:nth-child(1) {
+      @media (min-width: $breakpoint-m) {
+        flex-shrink: 0;
+        width: 50%;
+      }
+      @media (min-width: $breakpoint) {
+        width: calc(#{$col-part-d} * 3 - 20px);
+      }
+    }
+    &:nth-child(2) {
+      @media (min-width: $breakpoint-m) {
+        margin-left: calc(#{$col-gap-m});
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      @media (min-width: $breakpoint) {
+        display: block;
+        margin-left: calc(#{$col-gap-d});
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    border-radius: 10px;
+  }
+
+  &__content {
+    margin-top: 20px;
+    @media (min-width: $breakpoint-m) {
+      margin-top: 0;
+    }
+  }
+
+  &__title {
+
+  }
+
+  &__list {
+    margin-top: 23px;
+    @media (min-width: $breakpoint) {
+      margin-top: 30px;
+    }
+  }
+
+  &__item {
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+
+  &__label {
+    margin-bottom: 5px;
+
+    font-weight: 500;
+    color: $color-gray;
+    @include fsl(14px);
+  }
+
+  &__caption {
+    @include fsl(16px, 160%);
+  }
+
+  &__bottom {
+    position: relative;
+    z-index: 0;
+    margin-top: 51px;
+    margin-left: 40px;
+    @media (min-width: $breakpoint) {
+      margin-left: calc(#{$col-part-d} - 20px);
+      margin-top: 80px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -11px;
+      left: -40px;
+      @media (min-width: $breakpoint) {
+        top: -20px;
+        left: -72px;
+      }
+
+      width: 69px;
+      height: 50px;
+      @media (min-width: $breakpoint) {
+        width: 113px;
+        height: 83px;
+      }
+
+      background-image: url("data:image/svg+xml,%3Csvg width='76' height='57' viewBox='0 0 76 57' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M76 2.98109C74.0338 11.0573 71.1602 19.9716 67.3791 29.7239C63.7493 39.4763 60.1194 48.3906 56.4896 56.4668H41.5164C43.0289 50.6763 44.4657 44.5049 45.8269 37.9525C47.3393 31.2477 48.7005 24.6954 49.9104 18.2954C51.2716 11.743 52.3304 5.80013 53.0866 0.466797H74.4119L76 2.98109ZM34.0299 2.98109C32.0637 11.0573 29.1901 19.9716 25.409 29.7239C21.7791 39.4763 18.1493 48.3906 14.5194 56.4668H0C1.51244 50.6763 2.94925 44.5049 4.31045 37.9525C5.67164 31.2477 6.95721 24.6954 8.16716 18.2954C9.37712 11.743 10.3602 5.80013 11.1164 0.466797H32.4418L34.0299 2.98109Z' fill='%23E0F7FF'/%3E%3C/svg%3E%0A");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__text {
+    @include fsl(18px, 160%);
+    font-style: italic;
+  }
+}

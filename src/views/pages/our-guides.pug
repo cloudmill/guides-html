@@ -4,6 +4,7 @@ include  ../components/navigation
 include ../components/guides-card
 
 block content 
+  
   section.section.section--first
     .container
       +navigation(page="Our guides")
@@ -12,3 +13,40 @@ block content
       .guides-grid 
         each item in data.team
           +guides-card(sign = item.sign name = item.name src = item.src)
+  .modals 
+    .team-modal(data-fancy-modal='1')
+      .team-modal__container 
+        .team-modal__row 
+          .team-modal__col
+            img.team-modal__img(src="assets/images/guide-1.jpg", alt="")
+          .team-modal__col
+            .team-modal__content 
+              .team-modal__title 
+                |Svetlana Polykova 
+              ul.team-modal__list
+                -
+                  var ddata = [
+                    {
+                      label: 'Languages',
+                      text: 'English, Spanish, Portuguese'
+                    },
+                    {
+                      label: 'Specialization',
+                      text: 'Jewish excursions, excursions for families with children'
+                    },
+                    {
+                      label: 'Graduated from',
+                      text: 'St. Petersburg State Pedagogical University'
+                    },
+                  ]
+                each item in ddata 
+                  li.team-modal__item 
+                    .team-modal__label 
+                      |#{item.label}
+                    .team-modal__caption
+                      |#{item.text}
+        .team-modal__bottom 
+          .team-modal__layot  
+            //- +quotes-svg.team-modal__svg
+          p.team-modal__text 
+            |Hi! I'm Inna. I graduated from St. Petersburg State University where I majored in philology. I speak English and French. I also teach these languages at the same university. I love art and I'm very much interested in history. That's the main reason why I chose guiding as my second profession or I should rather say my favourite pastime. St. Petersburg is an amazing city, there is so much to see, to discover and experience here. It'll be my pleasure to help you do that!
