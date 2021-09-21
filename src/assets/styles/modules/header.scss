@@ -180,6 +180,35 @@
     }
   }
 
+  &__dropdown {
+    padding-top: 5px;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 100%;
+
+    transition: $transition;
+    opacity: 0;
+    pointer-events: none;
+  }
+  &__dropdown-container {
+    padding: 10px 20px;
+
+    background: $color-white;
+    border-radius: 14px;
+    border: 1px solid $color-blue;
+  }
+  &__dropdown-item {
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+  &__dropdown-link {
+    @include fsl(16px);
+    transition: $transition;
+  }
+
   &__phone {
     @media (max-width: $breakpoint - 1px) {
       margin-left: 15px;
@@ -204,6 +233,7 @@
     $size: 22px;
 
     margin-left: 5px;
+    position: relative;
 
     width: $size;
     height: $size;
@@ -219,6 +249,11 @@
 
     &:hover {
       background: $color-blue;
+
+      #{$comp}__dropdown {
+        opacity: 1;
+        pointer-events: all;
+      }
     }
   }
   &__phone-svg {
@@ -356,20 +391,47 @@
 
   &__lang {
     display: flex;
-    align-items: center;
     justify-content: flex-end;
 
     cursor: pointer;
   }
+  &__lang-container {
+    position: relative;
+
+    &:hover {
+      #{$comp}__dropdown {
+        opacity: 1;
+        pointer-events: all;
+      }
+      #{$comp}__lang-text {
+        color: $color-blue;
+      }
+      #{$comp}__lang-icon {
+        transform: rotate(180deg);
+      }
+      #{$comp}__lang-svg {
+        path {
+          stroke: $color-blue;
+        }
+      }
+    }
+  }
+  &__lang-row {
+    display: flex;
+    align-items: center;
+  }
   &__lang-text {
     margin-right: 5px;
     font-weight: 500;
+    @include fsl(14px);
     transition: $transition
   }
   &__lang-icon {
     display: flex;
     align-items: center;
-
+    transition: $transition;
+  }
+  &__lang-svg {
     path {
       transition: $transition
     }

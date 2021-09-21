@@ -19,6 +19,13 @@ mixin header
                       |#{data.phone}
                     .header__phone-icon
                       +arrow-svg.header__phone-svg
+                      .header__dropdown 
+                        .header__dropdown-container 
+                          ul.header__dropdown-list 
+                            each item in ['Telegram', 'What’sApp', 'Viber']
+                              li.header__dropdown-item 
+                                a.header__dropdown-link(href="#") 
+                                  |#{item}
                   .header__category 
                     .header__category-item 
                       .header__category-icon 
@@ -41,10 +48,19 @@ mixin header
                         +search-svg.header__search-icon
                 .header__right-col
                   .header__lang 
-                    .header__lang-text 
-                      |En 
-                    .header__lang-icon 
-                      +arrow-svg.header__lang-svg
+                    .header__lang-container 
+                      .header__lang-row
+                        .header__lang-text 
+                          |En 
+                        .header__lang-icon 
+                          +arrow-svg.header__lang-svg
+                      .header__dropdown
+                        .header__dropdown-container 
+                          ul.header__dropdown-list 
+                            each item in ['De', 'It']
+                              li.header__dropdown-item 
+                                a.header__dropdown-link(href="#") 
+                                  |#{item}
                   a.header__store(href="#")
                     .header__store-count 
                       .header__store-num 
