@@ -1,0 +1,36 @@
+.form {
+
+  &__item {
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  &__input {
+    padding: 9px 20px;
+    @media (min-width: $breakpoint) {
+      padding: 19px 20px;
+    }
+
+    width: 100%;
+
+    @include fsl(16px);
+    
+    border: 1px solid $color-light-gray;
+    border-radius: 10px;
+    @media (min-width: $breakpoint) {
+      border-radius: 14px;
+    }
+
+    @include placeholder {
+      color: $color-black;
+    }
+  }
+
+  &__wrapper {
+    margin: 20px 0;
+    @media (min-width: $breakpoint) {
+      margin: 25px 0;
+    }
+  }
+}

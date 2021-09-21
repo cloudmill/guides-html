@@ -1,0 +1,72 @@
+.checkbox {
+  $comp: &;
+
+  &__label {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+
+    &:hover {
+      #{$comp}__box {
+        border-color: $color-blue;
+      }
+    }
+  }
+
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    opacity: 0;
+    visibility: hidden;
+
+    &:checked {
+      ~#{$comp}__box {
+        background: $color-azure;
+        border-color: $color-azure;
+
+        #{$comp}__svg {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__svg {
+    opacity: 0;
+    transition: $transition;
+  }
+
+  &__box {
+    $size: 25px;
+
+    width: $size;
+    height: $size;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid $color-light-gray;
+    border-radius: 3px;
+    transition: $transition;
+  }
+
+  &__text {
+    margin-left: 10px;
+
+    @include fsl(12px);
+  }
+
+  &__link {
+    color: $color-blue;
+  }
+}

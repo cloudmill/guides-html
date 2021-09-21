@@ -1,0 +1,17 @@
+//- элементы блока form
+
+mixin input
+  input.form__input(type=attributes.type placeholder=attributes.placeholder name=attributes.name)
+
+mixin checkbox 
+  .checkbox 
+    label.checkbox__label
+      input.checkbox__input(type="checkbox" name='checkbox')
+      .checkbox__box 
+        +check-svg.checkbox__svg
+      if (attributes.text)
+        .checkbox__text 
+          |#{attributes.text}
+      else 
+        .checkbox__text 
+          |I give my consent to #[a.checkbox__link(href='#') the processing of personal data]
