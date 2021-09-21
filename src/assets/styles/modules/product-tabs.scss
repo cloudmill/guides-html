@@ -1,0 +1,40 @@
+.product-tabs {
+  $comp: &;
+
+  display: flex;
+
+  &__item {
+
+    &:not(:first-child) {
+      margin-left: 20px;
+      @media (min-width: $breakpoint) {
+        margin-left: 30px;
+      }
+    }
+
+    &--active {
+
+      #{$comp}__tab {
+        color: $color-azure;
+        border-color: $color-azure;
+      }
+    }
+  }
+
+  &__tab {
+    padding-bottom: 10px;
+
+    @include fsl(16px, 160%);
+    @media (min-width: $breakpoint) {
+      @include fsl(20px, 130%);
+      font-weight: 500;
+    }
+    border-bottom: 2px solid $color-aqua;
+    transition: $transition;
+    cursor: pointer;
+
+    &:hover {
+      border-color: $color-azure;
+    }
+  }
+}
