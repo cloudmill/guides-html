@@ -18,6 +18,13 @@ block content
           placeholder: 'Surname'
         },
         {
+          type: 'phone',
+          name: 'phone',
+          placeholder: 'Phone'
+        }
+      ],
+      second: [
+        {
           type: 'email',
           name: 'email',
           placeholder: 'E-mail'
@@ -26,27 +33,9 @@ block content
           type: 'email',
           name: 'rep-email',
           placeholder: 'Replay e-mail'
-        },
-      ],
-      second: [
-        {
-          type: 'phone',
-          name: 'phone',
-          placeholder: 'Phone'
-        },
-        {
-          type: 'text',
-          name: 'hotel-name',
-          placeholder: 'Hotel name'
-        },
-        {
-          type: 'text',
-          name: 'addres',
-          placeholder: 'Hotel address'
-        },
+        }
       ]
     }
-
   .booking-page
     section.section.section--first
       .container
@@ -65,11 +54,7 @@ block content
                   each item in ddata.second
                     .form__item 
                       +input(name = item.name placeholder = item.placeholder type = item.type)
-              .booking-page__inner 
-                .booking-page__title 
-                  |Tour comment
-                .booking-page__item
-                  +input(name = 'requests' placeholder = 'Special requests' type = 'text')
+              .booking-page__bot
                 .form__wrapper 
                   .booking-page__top
                     .booking-page__item
@@ -78,22 +63,23 @@ block content
                       +checkbox(text = 'I allow you to write to Viber, Telegram, and WhatsApp')
                 .form__button 
                   +button.button--sticky(tag = 'button')
-                    |Further
+                    |Proceed to filling out the temporary visa application forms
           .booking-page__col
-            .booking-page__grid 
-              .booking-page__grid-item
-                .booking-page__card 
-                  .booking-page__card-container 
-                    .booking-page__title 
-                      |Walking tour of St. Petersburg
-                    .booking-page__card-info 
-                      .booking-page__card-item 
-                        .booking-page__card-label 
-                          |date
-                        .booking-page__card-time 
-                          |29.10.2021
-                      .booking-page__card-item 
-                        .booking-page__card-label 
-                          |time
-                        .booking-page__card-time 
-                          |11:00
+            .booking-page__grid
+              each item in ['Intensive guided tour', 'Relax tour', 'Russian Ballet']
+                .booking-page__grid-item
+                  .booking-page__card 
+                    .booking-page__card-container 
+                      .booking-page__title 
+                        |#{item}
+                      .booking-page__card-info 
+                        .booking-page__card-item 
+                          .booking-page__card-label 
+                            |date
+                          .booking-page__card-time 
+                            |29.10.2021
+                        .booking-page__card-item 
+                          .booking-page__card-label 
+                            |time
+                          .booking-page__card-time 
+                            |11:00
