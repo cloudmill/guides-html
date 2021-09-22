@@ -1,0 +1,60 @@
+.modal {
+  display: none;
+
+  margin: 38px 0 0;
+  @media (min-width: $breakpoint-m) {
+    margin: 0 54px;
+  }
+  @media (min-width: $breakpoint) {
+    margin: 0;
+    width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+  }
+
+  background: $color-white;
+  @media (min-width: $breakpoint-m) {
+    border-radius: 14px;
+  }
+
+  &__container {
+    padding: 65px 20px;
+    @media (min-width: $breakpoint-m) {
+      padding: 60px;
+    }
+    @media (min-width: $breakpoint) {
+      padding: 60px calc(#{$col-width-d});
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    @media (min-width: $breakpoint) {
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: $breakpoint-m) {
+      text-align: center;
+    }
+  }
+
+  &__btns {
+    display: flex;
+  }
+
+  &__item {
+    width: calc(50% - 5px);
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+
+    &--active {
+      .button {
+        background: $color-blue;
+        border-color: $color-blue;
+      }
+    }
+  }
+}
+
+.form-modal {
+
+}

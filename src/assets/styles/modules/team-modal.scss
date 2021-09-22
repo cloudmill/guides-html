@@ -1,8 +1,7 @@
 .team-modal {
-  width: 100%;
+  margin: 39px 0 0;  
   @media (min-width: $breakpoint-m) {
     margin: 0 54px;
-    width: 100%;
   }
   @media (min-width: $breakpoint) {
     margin: 0;
@@ -12,8 +11,9 @@
   display: none;
 
   background: $color-white;
-  // border-radius: 14px 14px 0 0;
-  border-radius: 14px;
+  @media (min-width: $breakpoint-m) {
+    border-radius: 14px;
+  }
 
   &__container {
     padding: 67px 20px 40px;
@@ -139,5 +139,36 @@
   &__text {
     @include fsl(18px, 160%);
     font-style: italic;
+  }
+}
+
+.fancybox-button.fancybox-close-small {
+  $size: 50px;
+
+  padding: 0;
+  top: 7px;
+  right: 20px;
+  @media (min-width: $breakpoint-m) {
+    top: 18px;
+    right: 18px;
+  }
+  @media (min-width: $breakpoint) {
+    top: 20px;
+    right: 20px;
+  }
+
+  width: $size;
+  height: $size;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  border-radius: 50%;
+  background: $color-light-gray;
+
+  svg {
+    height: 30px;
+    width: 30px;
   }
 }

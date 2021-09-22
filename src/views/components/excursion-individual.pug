@@ -132,14 +132,14 @@ mixin calculator
                       .events__top-item
                         .events__tab(class=((i === 0) ? 'events__tab--active' : ''))
                           |#{item}
-                        .events__top-button
+                        .events__top-button(data-fancy-button='2')
                           |Read more
                   .events__top-col 
                     each item in ['Evening boat trip', 'Russian dinner', 'Private car/minivan for an evening', 'White Nights Tour" (Draw Bridges)']
                       .events__top-item
                         .events__tab  
                           |#{item}
-                        .events__top-button
+                        .events__top-button(data-fancy-button='2')
                           |Read more
               .events__bot
                 .events__bot-row 

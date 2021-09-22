@@ -1,7 +1,28 @@
 .price {
+  $comp: &;
+
   width: 100%;
   @media (min-width: $breakpoint-m) {
     display: flex;
+  }
+
+  &--modal {
+    #{$comp}__item {
+      background: none;
+    }
+
+    #{$comp}__container {
+      padding: 0;
+    }
+
+    #{$comp}__title {
+      margin-bottom: 10px;
+
+      @include fsl(16px);
+      @media (min-width: $breakpoint) {
+        @include fsl(20px);
+      }
+    }
   }
 
   &__item {

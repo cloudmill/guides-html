@@ -1,0 +1,39 @@
+.event-modal {
+
+  &__item {
+
+    &:not(:first-child) {
+      margin-top: 20px;
+      @media (min-width: $breakpoint) {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__col {
+    &:nth-child(2) {
+      margin-left: 72px;
+    }
+  }
+
+  &__label {
+    margin-bottom: 5px;
+
+    color: $color-gray;
+    font-weight: 500;
+    text-transform: uppercase;
+    @include fsl(12px);
+  }
+
+  &__caption {
+    @include fsl(16px);
+  }
+
+  &__text {
+    @include fsl(16px, 160%);
+  }
+}

@@ -6,8 +6,10 @@ include  ../components/thumb-slider
 include  ../components/price
 include  ../components/sticky
 include  ../components/slider-buttons
+include  ../components/form-components
 include  ../components/excursion-card 
 include  ../components/excursion-individual
+include  ../components/modals
 
 block content 
   .excursion-page
@@ -37,7 +39,7 @@ block content
               +sticky-mobile(activity = true)
             .excursion-page__price 
               +price
-              .excursion-page__price-btn 
+              .excursion-page__price-btn
                 +button.button--xxl(tag = 'div')
                   |Compare
             section.section 
@@ -101,4 +103,29 @@ block content
               each item in data.mainSellers 
                 .swiper-slide 
                   +excursion-card(title = item.title src = item.src cruise=true)
-
+  .modals 
+    .modal(data-fancy-modal='2')
+      .modal__container
+        .event-modal
+          .event-modal__item 
+            h3 
+              |Russian Ballet
+          .event-modal__item 
+            .event-modal__row 
+              .event-modal__col
+                .event-modal__label
+                  |Duration
+                .event-modal__caption
+                  |4 hours
+              .event-modal__col
+                .event-modal__label
+                  |type
+                .event-modal__caption
+                  |Group
+          .event-modal__item 
+            +price.price--modal
+          .event-modal__item 
+            p.event-modal__text
+              |Russian ballet is primarily a classical ballet that preserves the traditions of the 19th century. This does not mean that we do not have a modern ballet, we have one, and it is a very good modern ballet (for example, the Boris Eifman troupe). But it is classical ballet that is truly unique, because nowhere else in the world is it raised to such a high level.
+    +form-modal(id = '1')
+    +modal(id = '4')

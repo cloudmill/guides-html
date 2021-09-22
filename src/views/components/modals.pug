@@ -1,0 +1,33 @@
+//- Наземная индивидуальная экскурсия, карточка экскурсии. Сообщение, если больше 15-ти человек
+mixin form-modal 
+  .modal(data-fancy-modal=attributes.id)
+    .modal__container 
+      form.form(action="/") 
+        h3.form__title 
+          |You book a tour for a large group, and we are ready to provide you with special conditions/benefits. Please write to us.
+        .form-modal
+          .form__item 
+            +input(type = 'text' name = 'name' placeholder = 'Name')
+          .form__item 
+            +input(type = 'email' name = 'mail' placeholder = 'E-mail')
+          .form__item 
+            +input(type = 'phone' name = 'phone' placeholder = 'Phone')
+          .form__wrapper 
+            +checkbox 
+          .form__button 
+            +button.button--sticky(tag = 'button')
+              |Send
+
+//- Наземная индивидуальная экскурсия, карточка экскурсии. Когда добаваили товар в корзину
+mixin modal 
+  .modal(data-fancy-modal=attributes.id)
+    .modal__container 
+      h3.modal__title 
+        |Excursion added to cart
+      .modal__btns 
+        .modal__item.modal__item--active
+          +button.button--xxl(tag='div')
+            |To cart
+        .modal__item
+          +button.button--xxl(tag='div')
+            |Continue purchase

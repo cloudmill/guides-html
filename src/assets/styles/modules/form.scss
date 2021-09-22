@@ -2,8 +2,12 @@
 
   &__title {
     margin-bottom: 20px;
-    @media (min-width: $breakpoint) {
+    @media (min-width: $breakpoint-m) {
       margin-bottom: 40px;
+    }
+
+    @media (min-width: $breakpoint-m) {
+      text-align: center;
     }
   }
 
