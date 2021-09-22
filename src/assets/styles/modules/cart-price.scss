@@ -15,6 +15,7 @@
     #{$comp}__item {
       &:nth-child(1) {
         @media (min-width: $breakpoint-m) {
+          flex-shrink: 0;
           width: calc(#{$col-part-m} - 20px);
         }
         @media (min-width: $breakpoint) {
@@ -24,6 +25,12 @@
       &:not(:first-child) {
         @media (min-width: $breakpoint) {
           margin-top: 0;
+        }
+      }
+
+      &:last-child {
+        @media (min-width: $breakpoint-m) {
+          flex-shrink: 1;
         }
       }
     }

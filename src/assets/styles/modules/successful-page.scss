@@ -53,4 +53,26 @@
       height: 249px;
     }
   }
+
+  &__icon {
+    @media (max-width: $breakpoint - 1px) {
+      width: 326px;
+      height: 191px;
+    }
+  }
+
+  &__inner {
+    @media (min-width: $breakpoint) {
+      padding-bottom: 120px;
+    }
+  }
+
+  &__caption {
+    margin-top: 20px;
+    
+    @include fsl(16px, 160%);
+    @media (min-width: $breakpoint) {
+      @include fsl(18px);
+    }
+  }
 }

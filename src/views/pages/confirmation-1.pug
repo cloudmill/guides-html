@@ -1,0 +1,135 @@
+extends ../layouts/master.pug
+
+include ../components/tabs
+include ../components/cart-price
+
+block content 
+  -
+    var ddata = [
+      {
+        name: 'City',
+        text: 'Saint Petersburg'
+      },
+      {
+        name: 'Type',
+        text: 'Individual/group'
+      },
+      {
+        name: 'Special requests',
+        text: 'Special requests'
+      },
+      {
+        name: 'Start date',
+        text: '23.11.2021'
+      },
+      {
+        name: 'Start time',
+        text: '11:00'
+      },
+      {
+        name: 'Name',
+        text: 'Kirill'
+      },
+      {
+        name: 'Surname',
+        text: 'Sherbakov'
+      },
+      {
+        name: 'Phone',
+        text: '+79112862563'
+      },
+      {
+        name: 'E-mail',
+        text: 'ksh@cloudmill.ru'
+      },
+      {
+        name: 'Hotel name',
+        text: 'Redisson Blue'
+      },
+      {
+        name: 'Hotel address',
+        text: 'Nevskiy, 145'
+      },
+      {
+        name: 'Language',
+        text: 'English'
+      },
+      {
+        name: 'Adults',
+        text: '2'
+      },
+      {
+        name: 'Children from 6 to 16 years old',
+        text: '1'
+      },
+      {
+        name: 'Wheelchair users',
+        text: '1'
+      },
+      {
+        name: 'Children from 0 to 6 years old',
+        text: '2'
+      },
+      {
+        name: 'Tour cost',
+        text: '$1200'
+      },
+    ]
+  .confirmation-page
+    section.section.section--first 
+      .container
+        .navigation   
+          .navigation__inner
+            .breadcrumb
+              ul.breadcrumb__list 
+                li.breadcrumb__item 
+                  a.breadcrumb__link(href="#") 
+                    |Home
+                li.breadcrumb__item.breadcrumb__item--active 
+                  a.breadcrumb__link(href="#")
+                    |Booking an excursion
+          .section__nav 
+            .section__nav-item
+              .section__nav-label 
+                |tour
+            .section__nav-item
+              h1 
+                |3 hours walking tour of St. Petersburg
+    section.section.section--md 
+      .container 
+        .confirmation-page__container 
+          .confirmation-page__info 
+            ul.confirmation-page__list
+              each item in ddata
+                li.confirmation-page__list-item 
+                  .confirmation-page__list-col
+                    .confirmation-page__list-name
+                      |#{item.name}
+                  .confirmation-page__list-col
+                    .confirmation-page__list-text 
+                      |#{item.text}
+            .confirmation-page__total 
+              .confirmation-page__total-item
+                .confirmation-page__total-row 
+                  .confirmation-page__total-col
+                    .confirmation-page__total-title 
+                      |Total
+                  .confirmation-page__total-col
+                    .confirmation-page__total-text 
+                      |$1200
+          .confirmation-page__pay
+            .cart-price.cart-price--row
+              .cart-price__container 
+                .cart-price__row 
+                  .cart-price__col 
+                    .cart-price__item 
+                      .cart-price__text 
+                        |Total amount
+                      .cart-price__number
+                        |$360
+                    .cart-price__item 
+                      .confirmation-page__text
+                        |This tour can only be booked after consultation with the manager. Our manager will contact you as soon as possible»
+                  .cart-price__col 
+                    +button.button--sticky(tag = 'a' href='#')
+                      |Send request

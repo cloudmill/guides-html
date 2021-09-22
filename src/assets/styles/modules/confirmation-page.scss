@@ -90,7 +90,7 @@
   &__total-row {
     @media (min-width: $breakpoint-m) {
       display: flex;
-      align-items: center;
+      // align-items: center;
     }
   }
   &__total-col {
@@ -103,9 +103,6 @@
         width: calc(#{$col-part-d} * 3);
       }
     }
-    &:nth-child(2) {
-      position: relative;
-    }
   }
   &__total-title {
     margin-bottom: 20px;
@@ -116,9 +113,7 @@
     font-weight: 500;
   }
   &__total-label {
-    position: absolute;
-    left: 0;
-    top: calc(100% + 10px);
+    margin-top: 10px;
 
     @media (min-width: $breakpoint-m) {
       white-space: nowrap;
@@ -132,13 +127,17 @@
   }
 
   &__pay {
-    margin-top: 70px;
+    margin-top: 20px;
     @media (min-width: $breakpoint) {
-      margin-top: 92px;
+      margin-top: 40px;
     }
   }
   &__pay-text {
     font-weight: 500;
     @include fsl(18px, 160%);
+  }
+
+  &__text {
+    @include fsl(14px, 160%);
   }
 }
