@@ -66,7 +66,7 @@
   &__nav {
     @media (min-width: $breakpoint) {
       display: flex;
-      align-items: flex-end;
+      align-items: center;
     }
   }
   &__nav-item {
