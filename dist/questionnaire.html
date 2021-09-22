@@ -176,7 +176,9 @@
 										</ul>
 									</div>
 								</div>
-								<h1>Booking an excursion</h1>
+								<div class="booking-page__wrapper">
+									<h1>Fill out the application forms for obtaining a temporary visa</h1>
+								</div>
 							</div>
 						</div>
 					</section>
@@ -185,62 +187,49 @@
 							<div class="booking-page__row">
 								<div class="booking-page__col">
 									<form class="form" action="/">
-										<div class="booking-page__top">
-											<div class="booking-page__item">
-												<div class="form__item"><input class="form__input" placeholder="Name" name="name" /></div>
-												<div class="form__item"><input class="form__input" placeholder="Surname" name="surname" /></div>
-												<div class="form__item"><input class="form__input" type="email" placeholder="E-mail" name="email" /></div>
-												<div class="form__item"><input class="form__input" type="email" placeholder="Reply e-mail" name="rep-email" /></div>
-											</div>
-											<div class="booking-page__item">
-												<div class="form__item"><input class="form__input" type="phone" placeholder="Phone" name="phone" /></div>
-												<div class="form__item"><input class="form__input" placeholder="Hotel name" name="hotel-name" /></div>
-												<div class="form__item"><input class="form__input" placeholder="Hotel address" name="addres" /></div>
+										<div class="booking-page__inner">
+											<h3 class="form__title form__title--left">Guest 1</h3>
+											<div class="booking-page__top">
+												<div class="booking-page__item">
+													<div class="form__item"><input class="form__input" placeholder="Name" name="name" /></div>
+													<div class="form__item"><input class="form__input" placeholder="Surname" name="surname" /></div>
+													<div class="form__item"><input class="form__input" placeholder="DOB (dd.mm.yyyy)" name="dob" /></div>
+													<div class="form__item"><select name="gender">
+															<option value="male">male</option>
+														</select></div>
+												</div>
+												<div class="booking-page__item">
+													<div class="form__item"><input class="form__input" placeholder="Citizenship" name="citizenship" /></div>
+													<div class="form__item"><input class="form__input" placeholder="Passport number" name="passport-number" /></div>
+													<div class="form__item"><input class="form__input" placeholder="Passport issue date (dd.mm.yyyy)" name="passport-issue" /></div>
+													<div class="form__item"><input class="form__input" placeholder="Passport expiry date (dd.mm.yyyy)" name="passport-expire" /></div>
+												</div>
 											</div>
 										</div>
 										<div class="booking-page__inner">
-											<h4 class="booking-page__title">Tour comment</h4>
-											<div class="booking-page__item"><input class="form__input" placeholder="Special requests" name="requests" /></div>
-											<div class="form__wrapper">
-												<div class="booking-page__top">
-													<div class="booking-page__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox" />
-																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-																	</svg></div>
-																<div class="checkbox__text">I give my consent to <a class="checkbox__link" href="#">the processing of personal data</a></div>
-															</label></div>
-													</div>
-													<div class="booking-page__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox" />
-																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-																	</svg></div>
-																<div class="checkbox__text">I allow you to write to Viber, Telegram, and WhatsApp</div>
-															</label></div>
-													</div>
+											<div class="form__item">
+												<div class="button-icon">
+													<div class="button-icon__icon"><svg class="button-icon__svg button-icon__plus" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															<path d="M17.699 28.0233L17.699 7.37456" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="button-icon__text">Add guest</div>
 												</div>
 											</div>
-											<div class="form__button"><button class="button button--sticky">Further</button></div>
+											<div class="form__item"><button class="button button--sticky">Further</button></div>
 										</div>
 									</form>
 								</div>
 								<div class="booking-page__col">
-									<div class="booking-page__grid">
-										<div class="booking-page__grid-item">
-											<div class="booking-page__card">
-												<div class="booking-page__card-container">
-													<h4 class="booking-page__title">Walking tour of St. Petersburg</h4>
-													<div class="booking-page__card-info">
-														<div class="booking-page__card-item">
-															<div class="booking-page__card-label">date</div>
-															<div class="booking-page__card-time">29.10.2021</div>
-														</div>
-														<div class="booking-page__card-item">
-															<div class="booking-page__card-label">time</div>
-															<div class="booking-page__card-time">11:00</div>
-														</div>
-													</div>
+									<div class="booking-page__card">
+										<div class="booking-page__card-container">
+											<div class="booking-page__card-row">
+												<div class="booking-page__card-col">
+													<h4 class="booking-page__title">Applying for a temporary visa</h4>
+												</div>
+												<div class="booking-page__card-col">
+													<p class="booking-page__card-text">Attention! In order to take this tour, you need to apply for a temporary visa.</p>
+													<p class="booking-page__card-text">Without a temporary visa, you will not be allowed out of the port.</p>
 												</div>
 											</div>
 										</div>
