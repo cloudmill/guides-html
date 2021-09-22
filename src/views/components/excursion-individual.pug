@@ -2,7 +2,7 @@
 mixin programm 
   .excursion-page__programm 
     h3.excursion-page__title 
-      |Programm
+      |Programme
     if (attributes.tabs)
       .excursion-page__programm-tabs
     ul.excursion-page__programm-list 
@@ -80,7 +80,7 @@ mixin calculator
         .calculator__item
           .calculator__title 
             |Number of people
-        each item in ['Adults', 'Students with ISC', 'Children 6-16 years old', 'Children 0-6 years old']
+        each item in ['Adults', 'Students with ISIC', 'Children 6-16 years old', 'Children 0-6 years old']
           .calculator__item
             .calculator__label 
               |#{item}
@@ -168,8 +168,8 @@ mixin calculator
                     .events__bot-right
                       .calculator__label
                         |Total amount
-                      .calculator__title
-                        |Discussed separately. #[br] The manager contact you.
+                      .events__title
+                        |To be discussed separately. The manager will contact you as soon as possible
     .calculator__payments
       .calculator__payments-title  
         |We accept payments
@@ -254,7 +254,7 @@ mixin calculator-alt
               |#{attributes.price}
           else 
             .calculator__num 
-              |Discussed separately. #[br] The manager contact you.
+              |To be discussed separately. #[br] The manager will contact you as soon as possible.
     .calculator__payments
       .calculator__payments-title  
         |We accept payments
@@ -285,7 +285,7 @@ mixin calculator-alt
                   |#{attributes.price}
               else 
                 .calculator__num  
-                  |Discussed separately. #[br] The manager contact you.
+                  |To be discussed separately. #[br] The manager will contact you as soon as possible.
           .calculator__price-col
             .button-icon.button-icon--calculator
               .button-icon__icon

@@ -27,6 +27,21 @@
     }
   }
 
+  &__title {
+    @media (min-width: $breakpoint-m) {
+      max-width: 401px;
+    }
+    @media (min-width: $breakpoint) {
+      max-width: 276px;
+    }
+
+    font-weight: 500;
+    @include fsl(16px);
+    @media (min-width: $breakpoint) {
+      @include fsl(20px);
+    }
+  }
+
   &__head {
     padding: 30px 0 20px;
     @media (min-width: $breakpoint-m) {

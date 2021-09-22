@@ -241,6 +241,10 @@
   }
 
   &__num {
+    @media (min-width: $breakpoint) {
+      max-width: 303px;
+    }
+    
     font-weight: 500;
   }
 
