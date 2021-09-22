@@ -2,10 +2,10 @@ mixin tour
   .tour 
     .tour__container 
       if (attributes.title)
-        h3.tour__title 
+        h2
           |#{attributes.title}
       else 
-        h3.tour__title 
+        h2 
           |Tours
       each item in attributes.text
         p.tour__text 

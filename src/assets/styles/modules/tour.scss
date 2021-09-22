@@ -10,14 +10,6 @@
     }
   }
 
-  &__title {
-    font-weight: 500;
-    @include fsl(20px);
-    @media (min-width: $breakpoint) {
-      @include fsl(50px);
-    }
-  }
-
   &__text {
     margin-top: 10px;
     @media (min-width: $breakpoint) {

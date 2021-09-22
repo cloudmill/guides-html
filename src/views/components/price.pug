@@ -2,7 +2,7 @@ mixin price
   .price(class=attributes.class)
     .price__item.price__item--blue
       .price__container 
-        .price__title 
+        h3.price__title 
           |The price includes
         ul.price__list 
           each item in ['Guide services', 'Transport (4 hours)', 'Entrance tickets', 'Port fee', 'Lunch', 'Visa service']
@@ -13,7 +13,7 @@ mixin price
                 |#{item}
     .price__item
       .price__container 
-        .price__title 
+        h3.price__title 
           |The price includes
         ul.price__list  
           each item in ['Umbrella', 'Blanket', 'Drinks']

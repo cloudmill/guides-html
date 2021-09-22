@@ -58,11 +58,11 @@
   &__title {
     margin-bottom: 20px;
 
-    font-weight: 500;
-    @include fsl(20px);
-    @media (min-width: $breakpoint) {
-      @include fsl(26px);
-    }
+    // font-weight: 500;
+    // @include fsl(20px);
+    // @media (min-width: $breakpoint) {
+    //   @include fsl(26px);
+    // }
   }
 
   &__point {

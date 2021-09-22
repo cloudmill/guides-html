@@ -232,14 +232,6 @@
     }
   }
 
-  &__title {
-    font-weight: 500;
-    @include fsl(16px);
-    @media (min-width: $breakpoint) {
-      @include fsl(20px);
-    }
-  }
-
   &__num {
     @media (min-width: $breakpoint) {
       max-width: 303px;

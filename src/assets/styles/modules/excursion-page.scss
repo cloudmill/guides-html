@@ -7,13 +7,6 @@
     }
   }
 
-  &__title {
-    font-weight: 500;
-    @media (min-width: $breakpoint) {
-      @include fsl(35px);
-    }
-  }
-
   &__button {
     padding: 8px 25px;
 

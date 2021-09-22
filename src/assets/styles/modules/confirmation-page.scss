@@ -16,6 +16,17 @@
     }
   }
 
+  &__title {
+    @include fsl(26px);
+    @media (min-width: $breakpoint-m) {
+      @include fsl(48px);
+    }
+    @media (min-width: $breakpoint) {
+      @include fsl(50px);
+    }
+    font-weight: 500;
+  }
+
   &__list {
     margin-bottom: 40px;
   }

@@ -9,6 +9,10 @@
     @media (min-width: $breakpoint-m) {
       text-align: center;
     }
+
+    &--left {
+      text-align: left;
+    }
   }
 
   &__item {

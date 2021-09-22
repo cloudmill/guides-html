@@ -110,12 +110,6 @@
   }
   &__product-title {
     margin-bottom: 20px;
-
-    font-weight: 500;
-    @include fsl(16px);
-    @media (min-width: $breakpoint) {
-      @include fsl(20px);
-    }
   }
   &__product-label {
     font-weight: 500;
