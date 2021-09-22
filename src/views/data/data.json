@@ -83,6 +83,30 @@
     {
       "page": "Подтверждение бронирования",
       "href": "confirmation.html"
+    },
+    {
+      "page": "Сообщение об успешной оплате",
+      "href": "successful.html"
+    },
+    {
+      "page": "Ручное бронирование",
+      "href": "confirmation-1.html"
+    },
+    {
+      "page": "Сообщение после отправки заявки",
+      "href": "successful-1.html"
+    },
+    {
+      "page": "Круизное, подтверждение бронирования",
+      "href": "successful-2.html"
+    },
+    {
+      "page": "Круизное, ручное бронирования",
+      "href": "successful-3.html"
+    },
+    {
+      "page": "Круизное, анкета / несколько гостей",
+      "href": "questionnaire.html"
     }
   ],
   "nav": [
