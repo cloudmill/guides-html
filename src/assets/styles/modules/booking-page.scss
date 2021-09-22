@@ -1,5 +1,14 @@
 .booking-page {
 
+  &__wrapper {
+    @media (min-width: $breakpoint-m) {
+      max-width: calc(#{$col-part-m} * 3 - #{$col-gap-m});
+    }
+    @media (min-width: $breakpoint) {
+      max-width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
+    }
+  }
+
   &__row {
     display: flex;
     flex-direction: column;
@@ -23,7 +32,7 @@
     &:nth-child(2) {
       order: -1;
       @media (min-width: $breakpoint-m) {
-        width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
+        // width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
       }
       @media (min-width: $breakpoint) {
         order: 2;
@@ -63,9 +72,11 @@
   }
 
   &__inner {
-    margin-top: 40px;
-    @media (min-width: $breakpoint) {
-      margin-top: 50px;
+    &:not(:first-child) {
+      margin-top: 40px;
+      @media (min-width: $breakpoint) {
+        margin-top: 50px;
+      }
     }
   }
 
@@ -102,11 +113,46 @@
   &__card-time {
     @include fsl(16px);
   }
+  &__card-text {
+    @include fsl(14px, 160%);
 
-  &__list {}
-  &__list-item {
     &:not(:first-child) {
-      margin-top: 10px;
+      margin-top: 20px;
     }
   }
+  &__card-row {
+    @media (min-width: $breakpoint-m) {
+      display: flex;
+    }
+    @media (min-width: $breakpoint) {
+      display: block;
+    }
+  }
+  &__card-col {
+    &:nth-child(1) {
+      @media (min-width: $breakpoint-m) {
+        flex-shrink: 0;
+        width: calc(#{$col-part-m} * 2 - 20px);
+      }
+      @media (min-width: $breakpoint) {
+        flex-shrink: 1;
+        width: auto;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    @media (min-width: $breakpoint-m) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 10px;
+    }
+    @media (min-width: $breakpoint) {
+      grid-template-columns: 1fr;
+      column-gap: 0;
+    }
+  }
+  &__grid-item {}
 }

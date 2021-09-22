@@ -1,0 +1,107 @@
+extends ../layouts/master.pug
+
+include  ../components/navigation
+include  ../components/form-components
+
+block content 
+  -
+    var ddata = {
+      first: [
+        {
+          type: 'text',
+          name: 'name',
+          placeholder: 'Name'
+        },
+        {
+          type: 'text',
+          name: 'surname',
+          placeholder: 'Surname'
+        },
+        {
+          type: 'text',
+          name: 'dob',
+          placeholder: 'DOB (dd.mm.yyyy)'
+        }
+      ],
+      second: [
+        {
+          type: 'text',
+          name: 'citizenship',
+          placeholder: 'Citizenship'
+        },
+        {
+          type: 'text',
+          name: 'passport-number',
+          placeholder: 'Passport number'
+        },
+        {
+          type: 'text',
+          name: 'passport-issue',
+          placeholder: 'Passport issue date (dd.mm.yyyy)'
+        },
+        {
+          type: 'text',
+          name: 'passport-expire',
+          placeholder: 'Passport expire date (dd.mm.yyyy)'
+        },
+      ]
+    }
+  .booking-page
+    section.section.section--first
+      .container
+        .navigation   
+          .navigation__inner
+            .breadcrumb
+              ul.breadcrumb__list 
+                li.breadcrumb__item 
+                  a.breadcrumb__link(href="#") 
+                    |Home
+                li.breadcrumb__item.breadcrumb__item--active 
+                  a.breadcrumb__link(href="#")
+                    |Booking an excursion
+          .booking-page__wrapper
+            h1
+              |Fill out the application forms for obtaining a temporary visa
+    section.section.section--md 
+      .container
+        .booking-page__row 
+          .booking-page__col
+            form.form(action="/") 
+              .booking-page__inner  
+                h4.form__title
+                  |Guest 1
+                .booking-page__top
+                  .booking-page__item
+                    each item in ddata.first
+                      .form__item 
+                        +input(name = item.name placeholder = item.placeholder type = item.type)
+                    .form__item 
+                      select(name="gender") 
+                        option(value="male") 
+                          |male
+                  .booking-page__item
+                    each item in ddata.second
+                      .form__item 
+                        +input(name = item.name placeholder = item.placeholder type = item.type)
+              .booking-page__inner
+                .form__item
+                  .button-icon
+                    .button-icon__icon 
+                      +plus-svg.button-icon__svg.button-icon__plus
+                    .button-icon__text 
+                      |Add guest
+                .form__item
+                  +button.button--sticky(tag = 'button')
+                    |Further
+          .booking-page__col
+            .booking-page__card 
+              .booking-page__card-container 
+                .booking-page__card-row 
+                  .booking-page__card-col
+                    .booking-page__title 
+                      |Applying for a temporary visa
+                  .booking-page__card-col
+                    p.booking-page__card-text
+                      |Attention! In order to visit this tour, you need to apply for a temporary visa.
+                    p.booking-page__card-text
+                      |Without a temporary visa, you will not be allowed out of the port.

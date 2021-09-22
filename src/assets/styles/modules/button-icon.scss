@@ -44,4 +44,15 @@
   &__text {
     @include fsl(16px);
   }
+
+  &__plus {
+    $size: 28px;
+
+    width: $size;
+    height: $size;
+    
+    path {
+      stroke: $color-blue;
+    }
+  }
 }
