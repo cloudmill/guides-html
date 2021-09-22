@@ -16,6 +16,12 @@
       margin-top: 50px;
     }
   }
+  &--l {
+    margin-top: 40px;
+    @media (min-width: $breakpoint) {
+      margin-top: 80px;
+    }
+  }
   &--xl {
     margin-top: 87px;
     @media (min-width: $breakpoint-m) {
@@ -36,6 +42,13 @@
     margin-top: 64px;
     @media (min-width: $breakpoint) {
       margin-top: 127px;
+    }
+  }
+
+  &__inner {
+    margin-top: 20px;
+    @media (min-width: $breakpoint) {
+      margin-top: 50px;
     }
   }
 

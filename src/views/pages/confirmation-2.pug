@@ -1,0 +1,173 @@
+extends ../layouts/master.pug
+
+include ../components/tabs
+include ../components/cart-price
+
+block content 
+  -
+    var ddata = {
+      first: [
+        {
+          name: 'Name',
+          text: 'Kirill'
+        },
+        {
+          name: 'Surname',
+          text: 'Sherbakov'
+        },
+        {
+          name: 'Phone',
+          text: '+79112862563'
+        },
+        {
+          name: 'E-mail',
+          text: 'ksh@cloudmill.ru'
+        },
+      ],
+      second: [
+        {
+          name: 'Port',
+          text: 'Saint Petersburg'
+        },
+        {
+          name: 'Type',
+          text: 'Individual/group'
+        },
+        {
+          name: 'Special requests',
+          text: 'Special requests'
+        },
+        {
+          name: 'Start date',
+          text: '23.11.2021'
+        },
+        {
+          name: 'Start time',
+          text: '11:00'
+        },
+        {
+          name: 'Language',
+          text: 'English'
+        },
+        {
+          name: 'Adults',
+          text: '2'
+        },
+        {
+          name: 'Children from 0 to 3 years old',
+          text: '1'
+        },
+        {
+          name: 'Children from 4 to 6 years old',
+          text: '1'
+        },
+        {
+          name: 'Tour cost',
+          text: '$1200'
+        },
+      ],
+      third: [
+        {
+          name: 'Number of people',
+          text: '1'
+        },
+        {
+          name: 'Price',
+          text: 'To be discussed separately'
+        },
+      ]
+    }
+  .confirmation-page
+    section.section.section--first 
+      .container
+        .navigation   
+          .navigation__inner
+            .breadcrumb
+              ul.breadcrumb__list 
+                li.breadcrumb__item 
+                  a.breadcrumb__link(href="#") 
+                    |Home
+                li.breadcrumb__item.breadcrumb__item--active 
+                  a.breadcrumb__link(href="#")
+                    |Booking an excursion
+            h1 
+              |Contacts
+        .confirmation-page__container.section__inner
+          .confirmation-page__info 
+            ul.confirmation-page__list
+              each item in ddata.first
+                li.confirmation-page__list-item 
+                  .confirmation-page__list-col
+                    .confirmation-page__list-name
+                      |#{item.name}
+                  .confirmation-page__list-col
+                    .confirmation-page__list-text 
+                      |#{item.text}
+    section.section.section--l 
+      .container 
+        h2 
+          |Relax tour
+        .confirmation-page__container.section__inner
+          .confirmation-page__info 
+            ul.confirmation-page__list
+              each item in ddata.second
+                li.confirmation-page__list-item 
+                  .confirmation-page__list-col
+                    .confirmation-page__list-name
+                      |#{item.name}
+                  .confirmation-page__list-col
+                    .confirmation-page__list-text 
+                      |#{item.text}
+    section.section.section--l 
+      .container 
+        h2 
+          |Russian Ballet
+        .confirmation-page__container.section__inner
+          .confirmation-page__info 
+            ul.confirmation-page__list
+              each item in ddata.third
+                li.confirmation-page__list-item 
+                  .confirmation-page__list-col
+                    .confirmation-page__list-name
+                      |#{item.name}
+                  .confirmation-page__list-col
+                    .confirmation-page__list-text 
+                      |#{item.text}
+            .confirmation-page__total 
+              .confirmation-page__total-item
+                .confirmation-page__total-row 
+                  .confirmation-page__total-col
+                    .confirmation-page__total-title 
+                      |Total
+                  .confirmation-page__total-col
+                    .confirmation-page__total-text 
+                      |$1200
+              .confirmation-page__total-item
+                .confirmation-page__total-row 
+                  .confirmation-page__total-col
+                    .confirmation-page__total-title 
+                      |Prepayment
+                  .confirmation-page__total-col
+                    +tabs
+                    .confirmation-page__total-label 
+                      |70% to be paid in cash to the guide after the tour
+          .confirmation-page__pay
+            .cart-price.cart-price--row
+              .cart-price__container 
+                .cart-price__row 
+                  .cart-price__col 
+                    .cart-price__item 
+                      .cart-price__text 
+                        |Total amount
+                      .cart-price__number
+                        |$960
+                    .cart-price__item 
+                      .cart-price__text 
+                        |Payment
+                      .confirmation-page__pay-text 
+                        |Bank card
+                      a.cart-price__link(href="#") 
+                        |Payment security is ensured
+                  .cart-price__col 
+                    +button.button--sticky(tag = 'a' href='#')
+                      |Pay
