@@ -1,5 +1,6 @@
 import Swiper from 'swiper/bundle';
 
+const BREAKPOINT = 1280;
 
 // swiper 
 {
@@ -18,14 +19,13 @@ import Swiper from 'swiper/bundle';
         let slider_options = {
           slidesPerView: 'auto',
 
-          spaceBetween: 40,
-          // loop: true,
+          spaceBetween: 20,
 
-          // breakpoints: {
-          //   [BREAKPOINT]: {
-          //     spaceBetween: 30,
-          //   },
-          // },
+          breakpoints: {
+            [BREAKPOINT]: {
+              spaceBetween: 40,
+            },
+          },
         };
 
         switch (slider_id) {
