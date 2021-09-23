@@ -49,7 +49,7 @@ mixin landmarks
               |Show all
 
 mixin about
-  .excursion-page__about
+  .excursion-page__about(data-accordion)
     h2
       |About tour
     .excursion-page__about-content 
@@ -57,9 +57,19 @@ mixin about
         |Walking tour of St. Petersburg is one of our most popular, most popular excursions. In fact, this is a fascinating walking tour with a guide around St. Petersburg, in the very center, in the most beautiful and romantic places of the city. Fresh air, a beautiful city, an interesting story-what could be better!
       p.excursion-page__about-text 
         |We tried to include the most beautiful places and the most important sights of St. Petersburg in our excursion-walk. We tried to make this route interesting and dynamic, but the tour route can be changed according to your wishes.
+    .excursion-page__about-dropdown(data-accordion-dropdown='')
+      .video 
+        .video__container 
+          .video__img
+            img(src="assets/images/video.jpg", alt="")
+          .video__button 
+            +play-svg.video__icon
     .excursion-page__about-btn
-      .excursion-page__button
-        |Read more 
+      .excursion-page__button(data-accordion-button='')
+        span.excursion-page__about-default
+          |Read more 
+        span.excursion-page__about-open
+          |Roll up
 
 mixin calculator
   .calculator

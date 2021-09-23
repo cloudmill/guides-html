@@ -1,0 +1,87 @@
+.video {
+
+  cursor: pointer;
+
+  &__container {
+    position: relative;
+
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+    $size-d: 73px;
+    $size-m: 49px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: $size-m;
+    height: $size-m;
+    @media (min-width: $breakpoint) {
+      width: $size-d;
+      height: $size-d;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: $color-blue;
+    border-radius: 50%;
+    transition: $transition;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      border-radius: 50%;
+      border: 1px solid $color-blue;
+    }
+
+    &::before {
+      $size-m: 61px;
+      $size-d: 91px;
+
+      width: $size-m;
+      height: $size-m;
+      @media (min-width: $breakpoint) {
+        width: $size-d;
+        height: $size-d;
+      }
+
+      opacity: 0.6;
+    }
+
+    &::after {
+      $size-m: 80px;
+      $size-d: 119px;
+
+      width: $size-m;
+      height: $size-m;
+      @media (min-width: $breakpoint) {
+        width: $size-d;
+        height: $size-d;
+      }
+
+      opacity: 0.3;
+    }
+  }
+
+  &__icon {
+    @media (max-width: $breakpoint - 1px) {
+      width: 9px;
+    }
+  }
+}
