@@ -3,6 +3,7 @@
 
   border: 1px solid $color-light-gray;
   border-radius: 14px;
+  transition: $transition;
 
   &.active {
     @media (max-width: $breakpoint - 1px) {

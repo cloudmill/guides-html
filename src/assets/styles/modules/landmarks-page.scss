@@ -1,4 +1,5 @@
 .landmarks-page {
+  $comp: &;
 
   &__row {
     display: grid;
@@ -14,34 +15,106 @@
     }
   }
 
-  &__city {
-    font-weight: 500;
-    @include fsl(16px);
-    color: $color-blue;
-  }
-
   &__list {
     margin-top: 20px;
   }
 
   &__item {
-
-    display: flex;
-
     &:not(:first-child) {
-      margin-top: 10px;
+      margin-top: 15px;
+    }
+
+    &.active {
+
+      
+      #{$comp}__button {
+        #{$comp}__city {
+          color: $color-blue;
+        }
+
+        #{$comp}__svg {
+          transform: rotate(135deg);
+        }
+      }
     }
   }
 
-  &__link {
-    @include fsl(14px);
-    transition: $transition;
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: pointer;
   }
 
-  &__button {
+  &__city {
     font-weight: 500;
     @include fsl(16px);
     transition: $transition;
+  }
+
+  &__icon {
+    $size: 21px;
+
+    width: $size;
+    height: $size;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: $color-light-gray;
+  }
+
+  &__svg {
+    $size: 15px;
+
+    width: $size;
+    height: $size;
+
+    transition: $transition;
+    path {
+      stroke: $color-black;
+    }
+  }
+
+  &__dropdown {
+    padding-left: 15px;
+
+    display: none;
+  }
+  &__dropdown-list {}
+  &__dropdown-item {
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+
+    &.active {
+      #{$comp}__dropdown-button {
+        #{$comp}__dropdown-text {
+          color: $color-blue;
+        }
+        #{$comp}__svg {
+          transform: rotate(135deg);
+        }
+      }
+    }
+  }
+  &__dropdown-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: pointer;
+  }
+  &__dropdown-text {
+    @include fsl(14px);
+  }
+  &__dropdown-dropdown {
+    padding-left: 15px;
+
+    display: none;
   }
 }
 
