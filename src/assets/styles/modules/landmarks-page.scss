@@ -111,11 +111,6 @@
   &__dropdown-text {
     @include fsl(14px);
   }
-  &__dropdown-dropdown {
-    padding-left: 15px;
-
-    display: none;
-  }
 }
 
 
