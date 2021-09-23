@@ -76,11 +76,20 @@ mixin header
               .header__item
                 a.header__logo(href="#")  
                   img.header__img(src="assets/images/logo-black.png", alt="")
+                  if (attributes.transparent)
+                    img.header__img.header__img--white(src="assets/images/logo-white.png", alt="")
               .header__phone
                 a.header__phone-link(href="tel:+78124413163") 
                   |#{data.phone}
                 .header__phone-icon
                   +arrow-svg.header__phone-svg
+                  .header__dropdown 
+                      .header__dropdown-container 
+                        ul.header__dropdown-list 
+                          each item in ['Telegram', 'What’sApp', 'Viber']
+                            li.header__dropdown-item 
+                              a.header__dropdown-link(href="#") 
+                                |#{item}
             .header__col
               .header__item
                 .header__search-button
@@ -91,4 +100,4 @@ mixin header
                     .header__store-num 
                       |4
                   .header__store-icon
-                    +bag-svg
+                    +bag-svg.header__store-svg
