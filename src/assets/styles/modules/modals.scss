@@ -61,6 +61,7 @@
 
 .search-modal {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
@@ -172,21 +173,5 @@
         opacity: 0;
       }
     }
-  }
-}
-
-.burger {
-  position: relative;
-  // margin: auto;
-  
-  width: 20px; 
-  height: 15px;
-  
-  
-  
-  &__span {
-    
-  
-    
   }
 }
