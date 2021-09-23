@@ -1,4 +1,5 @@
 .excursion-page {
+  $comp: &;
 
   &__price {
     margin-top: 60px;
@@ -39,6 +40,39 @@
   &__price {}
   &__price-btn {
     margin-top: 20px;
+  }
+
+  &__tabs {
+    margin-top: 60px;
+
+    display: flex;
+  }
+  &__tabs-item {
+
+    &:not(:first-child) {
+      margin-left: 5px;
+    }
+
+    &--active {
+      #{$comp}__tabs-tab {
+        background: $color-blue;
+        border-color: $color-blue;
+        color: $color-white;
+      }
+    }
+  }
+  &__tabs-tab {
+    padding: 7px 30px;
+
+    @include fsl(16px, 160%);
+    border-radius: 30px;
+    border: 1px solid $color-gray;
+    transition: $transition;
+    cursor: pointer;
+
+    &:hover {
+      border-color: $color-blue;
+    }
   }
 
   &__programm {}

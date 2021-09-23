@@ -516,12 +516,20 @@
 
     display: flex;
     align-items: center;
+
+    &:hover {
+      #{$comp}__store-svg {
+        path {
+          stroke: $color-brown;
+        }
+      }
+    }
   }
   &__store-count {
     $size-d: 34px;
     $size-m: 27px;
 
-    @media (max-width: $breakpoint) {
+    @media (max-width: $breakpoint - 1px) {
       position: absolute;
       left: 0;
       top: 50%;

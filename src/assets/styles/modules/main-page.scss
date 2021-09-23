@@ -218,6 +218,8 @@
     margin-top: 10px;
     @media (min-width: $breakpoint) {
       margin-top: 35px;
+
+      max-width: 250px;
     }
     text-align: center;
     @include fsl(16px);
@@ -358,6 +360,7 @@
 
     @include fsl(16px);
     @media (min-width: $breakpoint) {
+      max-width: 300px;
       @include fsl(22px);
     }
     @media (max-width: $breakpoint - 1px) {
