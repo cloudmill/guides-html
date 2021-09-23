@@ -3,5 +3,15 @@ extends ../layouts/master.pug
 block header 
 
 block content 
+  .test
+    .select  
+      select.select__select(name='test' style='width: 200px')
+        option(value="1" selected)
+          |value-1 
+        option(value="3")
+          |value-2
+        option(value="2")
+          |value-3 
+    .select-wrapper 
 
 block footer

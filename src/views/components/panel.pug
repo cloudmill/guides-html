@@ -19,9 +19,10 @@ mixin panel
                     |For hotel guests
           .panel__col
             .panel__item
-              select(name="location") 
-                option(value="default" selected="selected")
-                  |location 
+              .select-wrapper
+                select.select__select(name="location") 
+                  option(value="default" selected="selected")
+                    |location 
             if (attributes.cruise)
               .panel__item
                 .panel__date 

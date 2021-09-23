@@ -4,6 +4,7 @@ import 'scripts/swipers.js';
 import 'scripts/header.js';
 import 'scripts/modals.js';
 import 'scripts/accordion.js';
+import 'scripts/select.js';
 
 const BREAKPOINT = 1280;
 
