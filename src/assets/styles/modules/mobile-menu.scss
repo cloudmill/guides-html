@@ -1,0 +1,25 @@
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-100%);
+  
+  @media (min-width: $breakpoint) {
+    display: none;
+  }
+
+  background: $color-white;
+  transition: $transition;
+
+  &__container {
+    padding: 20px 20px 40px;
+  }
+
+  &__top {
+    margin-bottom: 34px;
+
+    display: flex;
+    justify-content: flex-end;
+  }
+}

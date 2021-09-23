@@ -58,3 +58,135 @@
 .form-modal {
 
 }
+
+.search-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-100%);
+
+  background: $color-white;
+  transition: $transition;
+  border-bottom: 1px solid $color-light-gray;
+
+  &__container {
+    padding: 20px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+  }
+
+  &__col {
+
+    &:nth-child(1) {
+      flex-grow: 1;
+    }
+
+    &:nth-child(2) {
+      margin-left: 20px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  &__button {
+    $size: 45px;
+
+    position: relative;
+
+    width: $size;
+    height: $size;
+
+    border-radius: 50%;
+    background: $color-light-gray;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 18px;
+      height: 1px;
+
+      background: $color-black;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}
+
+.menu {
+  $size: 50px;
+  
+  width: $size;
+  height: $size;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background: black;
+  border-radius: 14px;
+  cursor: pointer;
+  
+  &:hover {
+    .burger {
+      
+      &::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0, -50%);
+      }
+      
+      &::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0, 50%);
+      }
+    }
+    .burger__span {
+      &::before {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.burger {
+  position: relative;
+  // margin: auto;
+  
+  width: 20px; 
+  height: 15px;
+  
+  
+  
+  &__span {
+    
+  
+    
+  }
+}

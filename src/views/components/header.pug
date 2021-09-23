@@ -71,10 +71,11 @@ mixin header
           .header__row 
             .header__col
               .header__item
-                .header__menu 
-                  .header__burger
+                .header__menu(data-modal-button='menu')
+                  .header__burger 
+                    span.header__burger-span
               .header__item
-                a.header__logo(href="#")  
+                a.header__logo(href="#")
                   img.header__img(src="assets/images/logo-black.png", alt="")
                   if (attributes.transparent)
                     img.header__img.header__img--white(src="assets/images/logo-white.png", alt="")
@@ -92,7 +93,7 @@ mixin header
                                 |#{item}
             .header__col
               .header__item
-                .header__search-button
+                .header__search-button(data-modal-button='search')
                   +search-svg.header__search-icon
               .header__item
                 a.header__store(href="#") 
@@ -101,3 +102,44 @@ mixin header
                       |4
                   .header__store-icon
                     +bag-svg.header__store-svg
+          .header__modals 
+            .mobile-menu 
+              .mobile-menu__container 
+                .mobile-menu__top 
+                  .header__lang 
+                    .header__lang-container 
+                      .header__lang-row
+                        .header__lang-text 
+                          |En 
+                        .header__lang-icon 
+                          +arrow-svg.header__lang-svg
+                      .header__dropdown
+                        .header__dropdown-container 
+                          ul.header__dropdown-list 
+                            each item in ['De', 'It']
+                              li.header__dropdown-item 
+                                a.header__dropdown-link(href="#") 
+                                  |#{item}
+                .header__category 
+                  .header__category-item 
+                    .header__category-icon 
+                      +one-svg.header__category-svg
+                    a.header__category-link(href="#") 
+                      |Shore excursions
+                  .header__category-item
+                    .header__category-icon 
+                      +two-svg.header__category-svg 
+                    a.header__category-link(href="#") 
+                      |For hotel guests
+                +nav(links = data.nav)
+            .search-modal 
+              .search-modal__container 
+                .search-modal__row 
+                  .search-modal__col 
+                    form.header__search
+                      .header__search-item 
+                        input.header__search-input(type="text" placeholder="Search")
+                        button.header__search-button(type="submit")
+                          +search-svg.search-modal__icon
+                  .search-modal__col
+                    .search-modal__button(data-modal-button='search') 

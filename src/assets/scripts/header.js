@@ -50,5 +50,26 @@
 
 // header modals
 {
-  // const 
+  const button = $('[data-modal-button]')
+  let modalName
+
+  button.on('click', function() {
+    const buttonId = $(this).data('modal-button')
+    modalName = 'header--' + buttonId
+
+    $('.header').toggleClass(modalName)
+
+    if (!(buttonId === 'search')) {
+      $('.body').toggleClass('body--overflow')
+    }
+  })
+
+  $(window).on('click', function (event) {
+    const target = $(event.target);
+
+    if (!target.closest('.header__modals').length && !target.closest(button).length) {
+      $('.header').removeClass(modalName)
+      $('.body').removeClass('body--overflow')
+    }
+  });
 }
