@@ -20,9 +20,12 @@ mixin panel
           .panel__col
             .panel__item
               .select-wrapper
-                select.select__select(name="location") 
-                  option(value="default" selected="selected")
-                    |location 
+                .select
+                  select.select__select(name="location" style='width: 100%' data-select-placeholder='Location') 
+                    option
+                    each item in data.selectValues.locations
+                      option(value = item.value)
+                        |#{item.value} 
             if (attributes.cruise)
               .panel__item
                 .panel__date 

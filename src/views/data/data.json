@@ -662,5 +662,35 @@
       "title": "Metro (Underground)",
       "src": "landmark-11.jpg"
     }
-  ]
+  ],
+  "selectValues": {
+    "locations": [
+      {
+        "value": "Saint Petersburg"
+      },
+      {
+        "value": "Moscow"
+      },
+      {
+        "value": "Tallin"
+      },
+      {
+        "value": "Helsinki"
+      }
+    ],
+    "excursions": [
+      {
+        "value": "value-1"
+      },
+      {
+        "value": "value-2"
+      },
+      {
+        "value": "value-3"
+      },
+      {
+        "value": "value-4"
+      }
+    ]
+  }
 }
