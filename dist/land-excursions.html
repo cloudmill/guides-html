@@ -10,7 +10,7 @@
 		<meta name="format-detection" content="address=no">
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
 		<script defer="defer" src="assets/app.js"></script>
-		<link href="83.css" rel="stylesheet">
+		<link href="759.css" rel="stylesheet">
 		<link href="app.css" rel="stylesheet">
 	</head>
 
@@ -267,10 +267,16 @@
 											</div>
 										</div>
 										<div class="panel__col">
-											<div class="panel__item">
-												<div class="select-wrapper"><select class="select__select" name="location">
-														<option value="default" selected="selected">location</option>
-													</select></div>
+											<div class="panel__select">
+												<div class="select-wrapper">
+													<div class="select"><select class="select__select" name="location" style="width: 100%" data-select-placeholder="Location">
+															<option></option>
+															<option value="Saint Petersburg">Saint Petersburg</option>
+															<option value="Moscow">Moscow</option>
+															<option value="Tallin">Tallin</option>
+															<option value="Helsinki">Helsinki</option>
+														</select></div>
+												</div>
 											</div>
 										</div>
 										<div class="panel__col">
@@ -316,11 +322,16 @@
 															<div class="aside__type">Language</div>
 															<div class="aside__select">Select</div>
 														</div>
-														<div class="aside__body"><select name="lang">
-																<option value="default" selected="selected">Select language</option>
-																<option value="en">English</option>
-																<option value="ru">Russian</option>
-															</select></div>
+														<div class="aside__body">
+															<div class="select-wrapper">
+																<div class="select select--md"><select class="select__select" name="lang" style="width: 100%" data-select-placeholder="Select language">
+																		<option></option>
+																		<option value="Value-1">Value-1</option>
+																		<option value="Value-2">Value-2</option>
+																		<option value="Value-3">Value-3</option>
+																	</select></div>
+															</div>
+														</div>
 													</li>
 													<li class="aside__item">
 														<div class="aside__top">

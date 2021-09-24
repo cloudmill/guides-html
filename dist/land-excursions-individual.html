@@ -10,7 +10,7 @@
 		<meta name="format-detection" content="address=no">
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
 		<script defer="defer" src="assets/app.js"></script>
-		<link href="83.css" rel="stylesheet">
+		<link href="759.css" rel="stylesheet">
 		<link href="app.css" rel="stylesheet">
 	</head>
 
@@ -267,10 +267,16 @@
 											</div>
 										</div>
 										<div class="panel__col">
-											<div class="panel__item">
-												<div class="select-wrapper"><select class="select__select" name="location">
-														<option value="default" selected="selected">location</option>
-													</select></div>
+											<div class="panel__select">
+												<div class="select-wrapper">
+													<div class="select"><select class="select__select" name="location" style="width: 100%" data-select-placeholder="Location">
+															<option></option>
+															<option value="Saint Petersburg">Saint Petersburg</option>
+															<option value="Moscow">Moscow</option>
+															<option value="Tallin">Tallin</option>
+															<option value="Helsinki">Helsinki</option>
+														</select></div>
+												</div>
 											</div>
 										</div>
 										<div class="panel__col">
@@ -573,8 +579,8 @@
 										</div>
 									</section>
 								</div>
-								<div class="section__col">
-									<div class="sticky">
+								<div class="section__col" data-sticky-container="">
+									<div class="sticky sticky--width" data-margin-top="178">
 										<div class="navigation">
 											<div class="navigation__inner">
 												<div class="breadcrumb">
@@ -621,13 +627,13 @@
 										<div class="sticky__inner">
 											<div class="sticky__price">from <span class="sticky__price-discont">$159</span> <span class="sticky__price-price">$129</span> / person</div>
 										</div>
-										<div class="sticky__button"><a class="button button--sticky" href="#">Arrange a tour</a></div>
+										<div class="sticky__button"><a class="button button--sticky" href="#" data-scroll="#calculator">Arrange a tour</a></div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</section>
-					<section class="section">
+					<section class="section" id="calculator">
 						<div class="container">
 							<div class="calculator">
 								<div class="calculator__container">
