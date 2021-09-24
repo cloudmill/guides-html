@@ -15,37 +15,38 @@ block content
             +nav-page
           .row__col
             .clients
-              h2
-                |Booking
-              .clients__content.clients__content--first
-                ul.clients__list 
-                  li.clients__item 
-                    h4.clients__content-title 
-                      |Booking a standard excursion.
-                    p.clients__text 
-                      |You can book a standard excursion on our website. At the same time, in most cases you have the opportunity to choose from 2 options:
-                    ul.clients__content-list 
-                      li.clients__content-item 
-                        .clients__content-text 
-                          |30% prepayment
-                      li.clients__content-item 
-                        .clients__content-text 
-                          |100 % prepayment
-                    p.clients__text 
-                      |Some programs (for example, tickets for folklore) it is possible to book only with 100% prepayment.
-                    p.clients__text 
-                      |When booking cruise programs, excursions to the Smolny Institute and some other programs, you will need the passport data of all participants, which are sent through a special page of the site using a secure protocol.
-                  li.clients__item 
-                    h4.clients__content-title 
-                      |Booking an individual excursion
-                    p.clients__text 
-                      |Booking is carried out after full agreement of the program and the price. When booking, we will ask you to make a prepayment in the amount of 20% to 100% of the cost. The amount of the prepayment depends on the content of the program. When booking some programs, you will need the passport details of the participants.
-                  li.clients__item 
-                    h4.clients__content-title 
-                      |Booking an individual excursion
-                    p.clients__text 
-                      |After the booking process is completed, a booking confirmation is sent to the specified email. Please check all the information carefully. If you find any errors, please contact our manager.
-              section.section   
+              section#booking(data-section='')
+                h2
+                  |Booking
+                .clients__content.clients__content--first
+                  ul.clients__list 
+                    li.clients__item 
+                      h4.clients__content-title 
+                        |Booking a standard excursion.
+                      p.clients__text 
+                        |You can book a standard excursion on our website. At the same time, in most cases you have the opportunity to choose from 2 options:
+                      ul.clients__content-list 
+                        li.clients__content-item 
+                          .clients__content-text 
+                            |30% prepayment
+                        li.clients__content-item 
+                          .clients__content-text 
+                            |100 % prepayment
+                      p.clients__text 
+                        |Some programs (for example, tickets for folklore) it is possible to book only with 100% prepayment.
+                      p.clients__text 
+                        |When booking cruise programs, excursions to the Smolny Institute and some other programs, you will need the passport data of all participants, which are sent through a special page of the site using a secure protocol.
+                    li.clients__item 
+                      h4.clients__content-title 
+                        |Booking an individual excursion
+                      p.clients__text 
+                        |Booking is carried out after full agreement of the program and the price. When booking, we will ask you to make a prepayment in the amount of 20% to 100% of the cost. The amount of the prepayment depends on the content of the program. When booking some programs, you will need the passport details of the participants.
+                    li.clients__item 
+                      h4.clients__content-title 
+                        |Booking an individual excursion
+                      p.clients__text 
+                        |After the booking process is completed, a booking confirmation is sent to the specified email. Please check all the information carefully. If you find any errors, please contact our manager.
+              section.section#payment(data-section='')
                 h2
                   |Payment for the excursion
                 .clients__content
@@ -54,7 +55,7 @@ block content
                       li.clients__content-item 
                         .clients__content-text 
                           |#{item}
-              section.section
+              section.section#cancellation(data-section='')
                 h2
                   |Cancellation policy
                 .clients__content
@@ -89,7 +90,7 @@ block content
                           |#{item}
                     p.clients__caption 
                       |For individual tours for groups of 8 people or more, there may be more stringent cancellation conditions. They will be indicated in the confirmation of your booking.
-              section.section 
+              section.section#wheelchair(data-section='')
                 h2
                   |Information for wheelchair users
                 .clients__content

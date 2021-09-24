@@ -5,10 +5,10 @@ import 'scripts/header.js';
 import 'scripts/modals.js';
 import 'scripts/accordion.js';
 import 'scripts/select.js';
+import 'scripts/nav-links.js';
 import 'scripts/sticky.js';
 import 'scripts/data-picker.js';
 
-const BREAKPOINT = 1280;
 
 // counter
 {

@@ -1,7 +1,26 @@
 mixin nav-page 
   .nav-page.sticky(data-margin-top='178')
     ul.nav-page__list
-      each item, i in ['Booking', 'Payment', 'Cancellation', 'For wheelchair users']
+      -
+        var ddata = [
+          {
+            text: 'Booking',
+            href: '#booking'
+          },
+          {
+            text: 'Payment',
+            href: '#payment'
+          },
+          {
+            text: 'Cancellation',
+            href: '#cancellation'
+          },
+          {
+            text: 'For wheelchair users',
+            href: '#wheelchair'
+          },
+        ]
+      each item, i in ddata
         li.nav-page__item(class=((i === 0) ? 'nav-page__item--active' : ''))
-          a.nav-page__link(href="#") 
-            |#{item}
+          a.nav-page__link(href='#' data-scroll = item.href) 
+            |#{item.text}
