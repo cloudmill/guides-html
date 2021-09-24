@@ -52,8 +52,8 @@ block content
                 .excursion-page__btn-col
                   +button.button--xl(tag = 'div')
                     |View
-          .section__col
-            .sticky
+          .section__col(data-sticky-container='')
+            .sticky.sticky--width(data-margin-top='178')
               +navigation(items=['Shore excursions'] page="Relax tour")
               .sticky__category 
                 .category
@@ -84,9 +84,9 @@ block content
                 .sticky__price 
                   |from #[span.sticky__price-discont $159] #[span.sticky__price-price $129] / person
               .sticky__button 
-                +button.button--sticky(tag = 'a' href="#") 
+                a.button.button--sticky(href="#" data-scroll='#calculator') 
                   |Arrange a tour
-    section.section 
+    section.section#calculator
       .container
         +calculator(events=true)
     section.section 

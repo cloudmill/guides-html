@@ -1,5 +1,9 @@
 .sticky {
 
+  &--width {
+    max-width: calc(#{$col-part-d} * 4);
+  }
+
   &__category {
     margin-top: 20px;
   }
