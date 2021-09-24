@@ -11,13 +11,13 @@ mixin aside
               .aside__select
                 |Select
             .aside__body
-              select(name="lang")
-                option(value="default" selected="selected")
-                  |Select language 
-                option(value="en")
-                  |English
-                option(value="ru")
-                  |Russian
+              .select-wrapper
+                .select.select--md
+                  select.select__select(name="lang" style='width: 100%' data-select-placeholder='Select language') 
+                    option
+                    each item in data.selectValues.language
+                      option(value = item.value)
+                        |#{item.value}
           each item in data.asideExcursion
             li.aside__item 
               .aside__top 

@@ -76,9 +76,14 @@ block content
                       .form__item 
                         +input(name = item.name placeholder = item.placeholder type = item.type)
                     .form__item 
-                      select(name="gender") 
-                        option(value="male") 
-                          |male
+                      .select-wrapper
+                        .select
+                          select.select__select(name="location" style='width: 100%' data-select-placeholder='Gender') 
+                            option
+                            option(value = 'male')
+                              |Male
+                            option(value = 'female')
+                              |Female
                   .booking-page__item
                     each item in ddata.second
                       .form__item 
