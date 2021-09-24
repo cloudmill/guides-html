@@ -4,96 +4,97 @@ include  ../components/navigation
 include  ../components/nav-page
 
 block content
-  section.section.section--first
-    .container
-      +navigation(page="Clients")
-  section.section.section--md 
-    .container 
-      .row 
-        .row__col
-          +nav-page
-        .row__col
-          .clients
-            h2
-              |Booking
-            .clients__content.clients__content--first
-              ul.clients__list 
-                li.clients__item 
-                  h4.clients__content-title 
-                    |Booking a standard excursion.
-                  p.clients__text 
-                    |You can book a standard excursion on our website. At the same time, in most cases you have the opportunity to choose from 2 options:
+  .clients(data-sticky-container='')
+    section.section.section--first
+      .container
+        +navigation(page="Clients")
+    section.section.section--md 
+      .container 
+        .row 
+          .row__col
+            +nav-page
+          .row__col
+            .clients
+              h2
+                |Booking
+              .clients__content.clients__content--first
+                ul.clients__list 
+                  li.clients__item 
+                    h4.clients__content-title 
+                      |Booking a standard excursion.
+                    p.clients__text 
+                      |You can book a standard excursion on our website. At the same time, in most cases you have the opportunity to choose from 2 options:
+                    ul.clients__content-list 
+                      li.clients__content-item 
+                        .clients__content-text 
+                          |30% prepayment
+                      li.clients__content-item 
+                        .clients__content-text 
+                          |100 % prepayment
+                    p.clients__text 
+                      |Some programs (for example, tickets for folklore) it is possible to book only with 100% prepayment.
+                    p.clients__text 
+                      |When booking cruise programs, excursions to the Smolny Institute and some other programs, you will need the passport data of all participants, which are sent through a special page of the site using a secure protocol.
+                  li.clients__item 
+                    h4.clients__content-title 
+                      |Booking an individual excursion
+                    p.clients__text 
+                      |Booking is carried out after full agreement of the program and the price. When booking, we will ask you to make a prepayment in the amount of 20% to 100% of the cost. The amount of the prepayment depends on the content of the program. When booking some programs, you will need the passport details of the participants.
+                  li.clients__item 
+                    h4.clients__content-title 
+                      |Booking an individual excursion
+                    p.clients__text 
+                      |After the booking process is completed, a booking confirmation is sent to the specified email. Please check all the information carefully. If you find any errors, please contact our manager.
+              section.section   
+                h2
+                  |Payment for the excursion
+                .clients__content
                   ul.clients__content-list 
-                    li.clients__content-item 
-                      .clients__content-text 
-                        |30% prepayment
-                    li.clients__content-item 
-                      .clients__content-text 
-                        |100 % prepayment
-                  p.clients__text 
-                    |Some programs (for example, tickets for folklore) it is possible to book only with 100% prepayment.
-                  p.clients__text 
-                    |When booking cruise programs, excursions to the Smolny Institute and some other programs, you will need the passport data of all participants, which are sent through a special page of the site using a secure protocol.
-                li.clients__item 
-                  h4.clients__content-title 
-                    |Booking an individual excursion
-                  p.clients__text 
-                    |Booking is carried out after full agreement of the program and the price. When booking, we will ask you to make a prepayment in the amount of 20% to 100% of the cost. The amount of the prepayment depends on the content of the program. When booking some programs, you will need the passport details of the participants.
-                li.clients__item 
-                  h4.clients__content-title 
-                    |Booking an individual excursion
-                  p.clients__text 
-                    |After the booking process is completed, a booking confirmation is sent to the specified email. Please check all the information carefully. If you find any errors, please contact our manager.
-            section.section   
-              h2
-                |Payment for the excursion
-              .clients__content
-                ul.clients__content-list 
-                  each item in ['You can pay for the cruise program in cash (to the manager or guide) or by card (to the manager). Payment is made either in the morning before the start of the excursion program on day 2 for 2 and 3 day programs and on the first day for one-day programs, or during lunch.', 'You can pay for the ground program in cash to the guide before or after the tour. To pay for the ground program with a card, you must approach the company\'s office during business hours.', 'Payment by bank transfer (rubles, US $, euro)is possible by prior arrangement.']
-                    li.clients__content-item 
-                      .clients__content-text 
-                        |#{item}
-            section.section
-              h2
-                |Cancellation policy
-              .clients__content
-                ul.clients__content-list 
-                  each item in ['You can pay for the cruise program in cash (to the manager or guide) or by card (to the manager). Payment is made either in the morning before the start of the excursion program on day 2 for 2 and 3 day programs and on the first day for one-day programs, or during lunch.', 'You can pay for the ground program in cash to the guide before or after the tour. To pay for the ground program with a card, you must approach the company\'s office during business hours.', 'Payment by bank transfer (rubles, US $, euro)is possible by prior arrangement.']
-                    li.clients__content-item 
-                      .clients__content-text 
-                        |#{item}
-              .clients__content.clients__content--first
-                h4 
-                  |St. Petersburg, Moscow
-                ul.clients__content-list 
-                  each item in ['24 hours free cancellation of the reservation', 'Exceptions are programs that contain non-refundable tickets (the Hermitage, the Catherine Palace, theater tickets, tickets for the Peregrine Falcon). In this case, the deposit amount is refunded minus the cost of non-refundable tickets.', 'The deposit amount is fully deducted in less than 24 hours.']
-                    li.clients__content-item 
-                      .clients__content-text 
-                        |#{item}
-              .clients__content.clients__content--first
-                h4 
-                  |Tallin
-                ul.clients__content-list 
-                  each item in ['48 hours free cancellation of the reservation in less than 48 hours 100 % payment of the tour']
-                    li.clients__content-item 
-                      .clients__content-text 
-                        |#{item}
-              .clients__content.clients__content--first
-                h4 
-                  |Stockholm, Copenhagen
-                ul.clients__content-list 
-                  each item in ['3 days in advance, free cancellation of the reservation', 'In less than 3 days, 100 % payment for the tour']
-                    li.clients__content-item 
-                      .clients__content-text 
-                        |#{item}
-                  p.clients__caption 
-                    |For individual tours for groups of 8 people or more, there may be more stringent cancellation conditions. They will be indicated in the confirmation of your booking.
-            section.section 
-              h2
-                |Information for wheelchair users
-              .clients__content
-                ul.clients__content-list 
-                  each item in ['You can pay for the cruise program in cash (to the manager or guide) or by card (to the manager). Payment is made either in the morning before the start of the excursion program on day 2 for 2 and 3 day programs and on the first day for one-day programs, or during lunch.', 'You can pay for the ground program in cash to the guide before or after the tour. To pay for the ground program with a card, you must approach the company\'s office during business hours.', 'Payment by bank transfer (rubles, US $, euro)is possible by prior arrangement.']
-                    li.clients__content-item 
-                      .clients__content-text 
-                        |#{item}
+                    each item in ['You can pay for the cruise program in cash (to the manager or guide) or by card (to the manager). Payment is made either in the morning before the start of the excursion program on day 2 for 2 and 3 day programs and on the first day for one-day programs, or during lunch.', 'You can pay for the ground program in cash to the guide before or after the tour. To pay for the ground program with a card, you must approach the company\'s office during business hours.', 'Payment by bank transfer (rubles, US $, euro)is possible by prior arrangement.']
+                      li.clients__content-item 
+                        .clients__content-text 
+                          |#{item}
+              section.section
+                h2
+                  |Cancellation policy
+                .clients__content
+                  ul.clients__content-list 
+                    each item in ['You can pay for the cruise program in cash (to the manager or guide) or by card (to the manager). Payment is made either in the morning before the start of the excursion program on day 2 for 2 and 3 day programs and on the first day for one-day programs, or during lunch.', 'You can pay for the ground program in cash to the guide before or after the tour. To pay for the ground program with a card, you must approach the company\'s office during business hours.', 'Payment by bank transfer (rubles, US $, euro)is possible by prior arrangement.']
+                      li.clients__content-item 
+                        .clients__content-text 
+                          |#{item}
+                .clients__content.clients__content--first
+                  h4 
+                    |St. Petersburg, Moscow
+                  ul.clients__content-list 
+                    each item in ['24 hours free cancellation of the reservation', 'Exceptions are programs that contain non-refundable tickets (the Hermitage, the Catherine Palace, theater tickets, tickets for the Peregrine Falcon). In this case, the deposit amount is refunded minus the cost of non-refundable tickets.', 'The deposit amount is fully deducted in less than 24 hours.']
+                      li.clients__content-item 
+                        .clients__content-text 
+                          |#{item}
+                .clients__content.clients__content--first
+                  h4 
+                    |Tallin
+                  ul.clients__content-list 
+                    each item in ['48 hours free cancellation of the reservation in less than 48 hours 100 % payment of the tour']
+                      li.clients__content-item 
+                        .clients__content-text 
+                          |#{item}
+                .clients__content.clients__content--first
+                  h4 
+                    |Stockholm, Copenhagen
+                  ul.clients__content-list 
+                    each item in ['3 days in advance, free cancellation of the reservation', 'In less than 3 days, 100 % payment for the tour']
+                      li.clients__content-item 
+                        .clients__content-text 
+                          |#{item}
+                    p.clients__caption 
+                      |For individual tours for groups of 8 people or more, there may be more stringent cancellation conditions. They will be indicated in the confirmation of your booking.
+              section.section 
+                h2
+                  |Information for wheelchair users
+                .clients__content
+                  ul.clients__content-list 
+                    each item in ['You can pay for the cruise program in cash (to the manager or guide) or by card (to the manager). Payment is made either in the morning before the start of the excursion program on day 2 for 2 and 3 day programs and on the first day for one-day programs, or during lunch.', 'You can pay for the ground program in cash to the guide before or after the tour. To pay for the ground program with a card, you must approach the company\'s office during business hours.', 'Payment by bank transfer (rubles, US $, euro)is possible by prior arrangement.']
+                      li.clients__content-item 
+                        .clients__content-text 
+                          |#{item}

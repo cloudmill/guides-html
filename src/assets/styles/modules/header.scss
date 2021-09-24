@@ -324,6 +324,7 @@
   &__category {
     margin-bottom: 30px;
     @media (min-width: $breakpoint) {
+      margin-bottom: 0;
       margin-top: 22px;
 
       display: flex;

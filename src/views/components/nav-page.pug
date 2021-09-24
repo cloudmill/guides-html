@@ -1,5 +1,5 @@
 mixin nav-page 
-  .nav-page 
+  .nav-page.sticky(data-margin-top='178')
     ul.nav-page__list
       each item, i in ['Booking', 'Payment', 'Cancellation', 'For wheelchair users']
         li.nav-page__item(class=((i === 0) ? 'nav-page__item--active' : ''))
