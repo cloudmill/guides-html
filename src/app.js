@@ -5,6 +5,7 @@ import 'scripts/header.js';
 import 'scripts/modals.js';
 import 'scripts/accordion.js';
 import 'scripts/select.js';
+import 'scripts/data-picker.js';
 
 const BREAKPOINT = 1280;
 

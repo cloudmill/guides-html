@@ -87,13 +87,24 @@
 
   &__select {
     width: 100%;
+    @media (min-width: $breakpoint-m) {
+      flex-shrink: 0;
+      width: calc(#{$col-part-m} + 10px);
+    }
     @media (min-width: $breakpoint) {
       width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
     }
   }
 
   &__date {
-    position: relative;
+    margin-left: 10px;
+    
+    width: 137px;
+    flex-shrink: 0;
+    @media (min-width: $breakpoint-m) {
+      flex-shrink: 1;
+      width: auto;
+    }
   } 
   &__date-label {
     position: absolute;

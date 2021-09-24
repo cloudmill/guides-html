@@ -27,15 +27,15 @@ mixin panel
                       option(value = item.value)
                         |#{item.value} 
             if (attributes.cruise)
-              .panel__item
-                .panel__date 
-                  .panel__date-label
-                    |Cruise start date
-                  .panel__date-button
-                    .panel__date-icon 
-                      +calendar-svg
-                    .panel__date-text 
-                      |28.10.2021
+              .panel__date
+                .data-picker-wrapper
+                  .data-picker
+                    .panel__date-label
+                      |Cruise start date
+                    label.data-picker__label
+                      .data-picker__icon 
+                        +calendar-svg.data-picker__svg
+                      input.data-picker__input(type="text" placeholder='28.10.2021')
           .panel__col
             .panel__button
               |Apply
