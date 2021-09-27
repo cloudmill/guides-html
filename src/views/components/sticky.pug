@@ -1,5 +1,5 @@
 mixin sticky-mobile
-  .sticky
+  .sticky(data-sticky-for='1279')
     .sticky__category 
       .category
         each item in ['Individual', 'First choice', '-20% off']
@@ -37,5 +37,5 @@ mixin sticky-mobile
       .sticky__price 
         |from #[span.sticky__price-discont $159] #[span.sticky__price-price $129] / person
     .sticky__button 
-      a.button.button--sticky(href="#") 
+      a.button.button--sticky(href="#" data-scroll='#calculator') 
         |Arrange a tour
