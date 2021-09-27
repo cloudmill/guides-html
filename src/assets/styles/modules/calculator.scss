@@ -232,12 +232,24 @@
     }
   }
 
+  &__data {
+    width: 158px;
+    @media (min-width: $breakpoint) {
+      width: 146px;
+    }
+  }
+
   &__num {
     @media (min-width: $breakpoint) {
       max-width: 303px;
     }
     
     font-weight: 500;
+  }
+
+  &__text {
+    font-weight: 500;
+    @include fsl(16px);
   }
 
   &__description {

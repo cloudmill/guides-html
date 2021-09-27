@@ -62,7 +62,10 @@
     }
   }
   &__tabs-tab {
-    padding: 7px 30px;
+    padding: 7px 25px;
+    @media (min-width: $breakpoint) {
+      padding: 7px 30px;
+    }
 
     @include fsl(16px, 160%);
     border-radius: 30px;
