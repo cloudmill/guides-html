@@ -47,7 +47,20 @@
 
     display: flex;
   }
+  &__tabs-container {
+    @media (max-width: $breakpoint - 1px) {
+      margin-left: -20px;
+      padding: 0 20px;
+
+      width: calc(100% + (20px * 2));
+      display: flex;
+      flex-shrink: 0;
+      overflow-x: scroll;
+      @include scrollbar-hidden;
+    }
+  }
   &__tabs-item {
+    flex-shrink: 0;
 
     &:not(:first-child) {
       margin-left: 5px;
