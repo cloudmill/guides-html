@@ -48,12 +48,12 @@
     display: flex;
   }
   &__tabs-container {
+    display: flex;
     @media (max-width: $breakpoint - 1px) {
       margin-left: -20px;
       padding: 0 20px;
 
       width: calc(100% + (20px * 2));
-      display: flex;
       flex-shrink: 0;
       overflow-x: scroll;
       @include scrollbar-hidden;

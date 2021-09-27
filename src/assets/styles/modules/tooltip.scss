@@ -1,0 +1,61 @@
+.tooltip {
+  $comp: &;
+
+  position: relative;
+
+  &__icon {
+    position: absolute;
+    bottom: 100%;
+    left: 100%;
+    transform: translateY(50%);
+    @media (min-width: $breakpoint) {
+      left: calc(100% - 3px);
+    }
+
+    cursor: pointer;
+
+    &:hover {
+      #{$comp}__svg {
+
+        path {
+          fill: $color-white;
+        }
+        circle {
+          
+          fill: $color-azure;
+        }
+      }
+    }
+  }
+
+  &__svg {
+    path,
+    circle {
+      transition: $transition;
+    }
+  }
+
+  &__container {
+    display: none;
+  }
+}
+
+.tippy {
+
+  &-box {
+    padding: 10px;
+
+    width: 202px;
+
+    border-radius: 14px;
+    border: 1px solid $color-light-gray;
+  }
+
+  &-content {
+    @include fsl(12px, 160%);
+  }
+}
+
+.tippy-content {
+  
+}
