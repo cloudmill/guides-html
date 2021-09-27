@@ -38,7 +38,7 @@ block content
             .excursion-page__mobile  
               h1 
                 |Folk show
-              .sticky
+              .sticky(data-sticky-for='1279')
                 .sticky__inner 
                   .sticky__grid
                     each item in ddata
@@ -57,8 +57,8 @@ block content
                     |from #[span.sticky__price-discont $159] #[span.sticky__price-price $129] / person
             section.section 
               +about
-          .section__col
-            .sticky
+          .section__col(data-sticky-container='')
+            .sticky.sticky--width(data-margin-top='178')
               +navigation(items=['For hotel guests'] page="Folk show")
               .sticky__inner 
                 .sticky__grid

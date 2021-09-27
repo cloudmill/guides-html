@@ -8,7 +8,8 @@
       grid-template-areas: 
         "A B"
         "C C"
-        "D I"
+        "D D"
+        "I I"
       ;
       @media (min-width: $breakpoint-m) {
         grid-template-areas: 
@@ -41,22 +42,21 @@
       }
     }
 
-    #{$comp}__payments {
+    #{$comp}__payments--mobile {
       @media (min-width: $breakpoint-m) {
+        top: 25px;
+        right: 28px;
         left: auto;
-        bottom: 109px;
-        right: 25px;
-      }
-      @media (min-width: $breakpoint) {
         bottom: auto;
-        top: 58px;
-        right: calc(#{$col-width-d});
       }
     }
 
     #{$comp}__price-col {
 
       &:nth-child(1) {
+        @media (min-width: $breakpoint-m) {
+          width: auto;
+        }
         @media (min-width: $breakpoint) {
           padding-left: calc(#{$col-part-d} * 4 + 30px);
         }
@@ -71,6 +71,21 @@
           margin-top: 0;
           width: calc(#{$col-part-d} * 3 - #{$col-gap-d} - 40px);
         }
+      }
+    }
+    #{$comp}__price-left {
+      @media (min-width: $breakpoint-m) {
+        width: auto;
+      }
+    }
+    #{$comp}__price-right {
+      @media (min-width: $breakpoint-m) {
+        margin-left: 43px;
+        width: auto;
+        max-width: 275px;
+      }
+      @media (min-width: $breakpoint) {
+        margin-left: 66px;
       }
     }
   }
@@ -271,17 +286,26 @@
 
   &__payments {
     position: absolute;
-    bottom: 20px;
-    left: 0;
-    @media (min-width: $breakpoint-m) {
-      bottom: 37px;
-      left: 20px  ;
-    }
+    display: none;
     @media (min-width: $breakpoint) {
+      display: block;
       top: 58px;
       right: calc(#{$col-width-d});
-      left: auto;
-      bottom: auto;
+      
+    }
+    
+    &--mobile {
+      left: 0;
+      bottom: 20px;
+      @media (min-width: $breakpoint-m) {
+        left: 20px;
+        bottom: 37px;
+      }
+      
+      display: block;
+      @media (min-width: $breakpoint) {
+        display: none;
+      }
     }
   }
   &__payments-title {
@@ -348,6 +372,7 @@
     }
   }
   &__price-container {
+    position: relative;
     padding: 20px 0 108px;
     @media (min-width: $breakpoint-m) {
       padding: 20px 20px 35px;
