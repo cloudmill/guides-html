@@ -147,7 +147,8 @@
       "I I"
     ;
     row-gap: 20px;
-    column-gap: 20px;
+    column-gap: 21px;
+    align-items: flex-end;
     @media (min-width: $breakpoint-m) {
       grid-template-columns: repeat(4, 1fr);
       grid-template-areas: 
@@ -158,6 +159,7 @@
       ;
     }
     @media (min-width: $breakpoint) {
+      align-items: flex-start;
       row-gap: 30px;
       column-gap: 0;
       grid-template-areas: 
@@ -209,11 +211,13 @@
       }
     }
     &:nth-child(10) {
+      align-self: flex-start;
       @media (min-width: $breakpoint) {
         grid-area: E;
       }
     }
     &:nth-child(11) {
+      align-self: flex-start;
       @media (min-width: $breakpoint) {
         grid-area: F;
       }
@@ -234,6 +238,12 @@
 
   &__data {
     width: 158px;
+    @media (min-width: $breakpoint) {
+      width: 146px;
+    }
+  }
+
+  &__select {
     @media (min-width: $breakpoint) {
       width: 146px;
     }

@@ -5,6 +5,15 @@
     
   }
 
+  &.select--small {
+    .select2-container {
+
+      .select2-selection {
+        padding: 15px 20px;
+      }
+    }
+  }
+
   &.select--md {
     .select2-container {
       .select2-selection {
