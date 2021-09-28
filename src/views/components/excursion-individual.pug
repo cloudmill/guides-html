@@ -113,12 +113,13 @@ mixin calculator
                 +plus-svg.counter__plus
         .calculator__item
           .tooltip
-            .calculator__label
-              |Among them wheelchair users
-            .tooltip__icon 
-              +tooltip-svg.tooltip__svg
-            .tooltip__container
-              |Attention! In order to visit this tour, you need to apply for a temporary visa. Without a temporary visa, you will not be allowed out of the port.
+            .tooltip__wrapper
+              .calculator__label
+                |Among them wheelchair users
+              .tooltip__icon 
+                +tooltip-svg.tooltip__svg
+              .tooltip__container
+                |Attention! In order to visit this tour, you need to apply for a temporary visa. Without a temporary visa, you will not be allowed out of the port.
           .counter 
             .counter__item.counter__item--minus
               +minus-svg.counter__minus
@@ -139,9 +140,9 @@ mixin calculator
           .calculator__num 
             |$1300
       if (attributes.events)
-        .events 
+        .events#events.active(data-accordion='')
           .events__container 
-            .events__head
+            .events__head(data-accordion-button='')
               .events__head-row 
                 .events__head-col
                   h4
@@ -149,7 +150,7 @@ mixin calculator
                 .events__head-col
                   .events__head-icon 
                     +arrow-svg.events__head-svg
-            .events__body 
+            .events__body(data-accordion-dropdown='')
               .events__top
                 .events__top-row 
                   .events__top-col 

@@ -1,7 +1,11 @@
 .tooltip {
   $comp: &;
 
-  position: relative;
+  display: flex;
+  
+  &__wrapper {
+    position: relative;
+  }
 
   &__icon {
     position: absolute;
@@ -49,6 +53,7 @@
 
     border-radius: 14px;
     border: 1px solid $color-light-gray;
+    background: $color-white;
   }
 
   &-content {

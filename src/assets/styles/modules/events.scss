@@ -1,4 +1,6 @@
 .events {
+  $comp: &;
+
   margin-top: 40px;
   margin-left: -20px;
   @media (min-width: $breakpoint-m) {
@@ -13,11 +15,20 @@
     width: calc(#{$col-part-d} * 8 - #{$col-gap-d} - 53px);
   }
 
-  border-top: 1px solid $color-blue;
-  border-bottom: 1px solid $color-blue;
+  transition: $transition;
+  border-top: 1px solid $color-light-gray;
+  border-bottom: 1px solid $color-light-gray;
   @media (min-width: $breakpoint-m) {
-    border: 1px solid $color-blue;
+    border: 1px solid $color-light-gray;
     border-radius: 14px;
+  }
+
+  &.active {
+    border-color: $color-blue;
+
+    #{$comp}__head-icon {
+      transform: rotate(180deg);
+    }
   }
 
   &__container {
@@ -43,10 +54,12 @@
   }
 
   &__head {
-    padding: 30px 0 20px;
+    padding: 20px 0;
     @media (min-width: $breakpoint-m) {
       padding: 30px 0;
     }
+
+    cursor: pointer;
   }
   &__head-row {
     display: flex;
@@ -59,6 +72,8 @@
   &__head-icon {
     display: flex;
     align-items: center;
+
+    transition: $transition;
   }
   
   &__body {
@@ -112,6 +127,11 @@
     white-space: nowrap;
     @include fsl(16px);
     cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      color: $color-brown;
+    }
   }
 
   &__tab {

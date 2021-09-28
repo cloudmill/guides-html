@@ -40,7 +40,7 @@ block content
             .excursion-page__price 
               +price
               .excursion-page__price-btn
-                +button.button--xxl(tag = 'div')
+                +button.button--xxl(tag = 'a' href="#")
                   |Compare
             section.section 
               +landmarks(button = true)
@@ -50,7 +50,7 @@ block content
                 .excursion-page__btn-col
                   |Evening events are available
                 .excursion-page__btn-col
-                  +button.button--xl(tag = 'div')
+                  a.button.button--xl(href='#' data-scroll='#events')
                     |View
           .section__col(data-sticky-container='')
             .sticky.sticky--width(data-margin-top='178')
