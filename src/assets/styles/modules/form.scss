@@ -1,4 +1,11 @@
 .form {
+  $comp: &;
+
+  &[data-form-hidden] {
+    #{$comp}__container {
+      display: none;
+    }
+  }
 
   &__title {
     margin-bottom: 20px;
@@ -47,5 +54,17 @@
     @media (min-width: $breakpoint) {
       margin: 25px 0;
     }
+  }
+  
+
+  &__response {
+    display: none;
+
+    &[data-response-active] {
+      display: block;
+    }
+  }
+  &__response-message {
+    text-align: center;
   }
 }

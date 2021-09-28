@@ -9,6 +9,7 @@ import 'scripts/select.js';
 import 'scripts/nav-links.js';
 import 'scripts/sticky.js';
 import 'scripts/data-picker.js';
+import 'scripts/form-response.js';
 
 
 // counter
