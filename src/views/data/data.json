@@ -1,7 +1,7 @@
 {
   "routing": [
     {
-      "page": "Главня",
+      "page": "Главная",
       "href": "main.html"
     },
     {

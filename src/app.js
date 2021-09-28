@@ -10,6 +10,7 @@ import 'scripts/nav-links.js';
 import 'scripts/sticky.js';
 import 'scripts/parsley.js';
 import 'scripts/hero.js';
+import 'scripts/footer.js';
 import 'scripts/data-picker.js';
 import 'scripts/form-response.js';
 
@@ -40,3 +41,4 @@ import 'scripts/form-response.js';
     }
   })
 }
+
