@@ -17,6 +17,23 @@
       #{$comp}__box {
         border-color: $color-blue;
       }
+
+      #{$comp}__link {
+        color: $color-brown;
+      }
+    }
+
+    &.parsley-error {
+      #{$comp}__box {
+        border-color: $color-red;
+      }
+
+      #{$comp}__text {
+        color: $color-red;
+      }
+      #{$comp}__link {
+        color: $color-red;
+      }
     }
   }
 
@@ -64,9 +81,15 @@
     margin-left: 10px;
 
     @include fsl(12px);
+    transition: $transition;
   }
 
   &__link {
     color: $color-blue;
+    transition: $transition;
+  }
+
+  .parsley-errors-list  {
+    display: none;
   }
 }

@@ -1,12 +1,12 @@
 //- элементы блока form
 
 mixin input
-  input.form__input(type=attributes.type placeholder=attributes.placeholder name=attributes.name)
+  input.form__input(type=attributes.type placeholder=attributes.placeholder name=attributes.name required)
 
 mixin checkbox 
   .checkbox 
     label.checkbox__label
-      input.checkbox__input(type="checkbox" name='checkbox')
+      input.checkbox__input(type="checkbox" name='checkbox-1' required)
       .checkbox__box 
         +check-svg.checkbox__svg
       if (attributes.text)
