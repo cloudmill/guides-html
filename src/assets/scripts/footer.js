@@ -5,8 +5,6 @@ const FPS = 60
 
 $(window).on('load', function() {
   
-  console.log(1);
-
   update()
 
   function update() {
