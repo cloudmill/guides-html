@@ -2,9 +2,45 @@ extends ../layouts/master.pug
 
 block header 
 
-block content 
-  .test 
-    form(action="/") 
-      input(type="text" required)
+block content
+  section.section.section--md 
+    .container 
+      .comparison 
+        .comparison__row
+          .comparison__col
+            .comparison__top
+              .comparison__label 
+                |Landmarks
+          .comparison__col
+            .comparison__top
+              .comparison__label 
+                |Tours
+        .comparison__grid 
+          .comparison__line
+            .comparison__cell
+            each item in ['Intensive tour', 'The best of the best', 'Happy Tour: Two days of adventure', "Singer's House", 'Intensive tour']
+              .comparison__cell
+                .comparison__title 
+                  |#{item}
+          each item in ['Hermitage', 'Peterhof', 'Fountains of Peterhof', 'Peter and Paul Fortress', "St. Isaac's Cathedral", 'Church on Spilled Blood']
+            .comparison__item
+              .comparison__cell
+                .comparison__text 
+                  |#{item}
+              - for (i = 0; i < 5; i++)
+                .comparison__cell 
+                  .comparison__icon 
+                    +price-mark-svg
+          .comparison__price 
+            .comparison__cell
+            - for (i = 0; i < 5; i++)
+              .comparison__cell   
+                .comparison__label 
+                  |Tour duration
+                .comparison__wrapper
+                  .comparison__price-text 
+                    |10 hours
+                .comparison__price-text 
+                  |from #[span.comparison__price-price $129] / person
 
 block footer
