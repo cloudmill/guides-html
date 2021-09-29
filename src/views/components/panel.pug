@@ -1,5 +1,5 @@
 mixin panel 
-  .panel 
+  .panel(class=attributes.class)
     .container
       .panel__inner 
         .panel__row 
@@ -18,9 +18,13 @@ mixin panel
                   .excursion-btn__text
                     |For hotel guests
           .panel__col
-            .panel__select
+            .panel__select(class=(!attributes.cruise ? 'panel__select--land' : ''))
               .select-wrapper
                 .select
+                  select.select__mobile(name="location-mob")
+                    each item in data.selectValues.locations
+                      option(value = item.value)
+                        |#{item.value}
                   select.select__select(name="location" style='width: 100%' data-select-placeholder='Location') 
                     option
                     each item in data.selectValues.locations

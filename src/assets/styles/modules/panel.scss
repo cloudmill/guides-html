@@ -1,4 +1,5 @@
 .panel {
+  $comp: &;
 
   @media (min-width: $breakpoint) {
     border-bottom: 1px solid $color-light-gray;
@@ -93,6 +94,16 @@
     }
     @media (min-width: $breakpoint) {
       width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+    }
+
+    &--land {
+      @media (min-width: $breakpoint-m) {
+        flex-shrink: 0;
+        width: 100%;
+      }
+      @media (min-width: $breakpoint) {
+        width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+      }
     }
   }
 
