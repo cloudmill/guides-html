@@ -1,0 +1,25 @@
+extends ../layouts/master.pug
+
+block content 
+  .cart-page
+    section.section.section--first 
+      .container
+        .navigation   
+          .navigation__inner
+            .breadcrumb
+              ul.breadcrumb__list 
+                li.breadcrumb__item 
+                  a.breadcrumb__link(href="#") 
+                    |Home
+                li.breadcrumb__item.breadcrumb__item--active 
+                  a.breadcrumb__link(href="#")
+                    |Cart
+        .cart-page__empty
+          .cart-page__empty-col
+            h1 
+              |Cart
+            h3.cart-page__empty-title 
+              |There are no selected tours.
+          .cart-page__empty-col
+            .cart-page__empty-image 
+              +bag-empty-svg.cart-page__empty-svg

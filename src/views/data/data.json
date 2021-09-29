@@ -49,6 +49,10 @@
       "href": "cart.html"
     },
     {
+      "page": "Корзина без товара",
+      "href": "cart-1.html"
+    },
+    {
       "page": "Вечернее мероприятие с ценой",
       "href": "evening-events.html"
     },
