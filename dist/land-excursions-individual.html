@@ -240,7 +240,7 @@
 			<main class="main">
 				<div class="excursion-page">
 					<section class="section section--panel">
-						<div class="panel">
+						<div class="panel panel--disabled">
 							<div class="container">
 								<div class="panel__inner">
 									<div class="panel__row">
@@ -285,9 +285,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="panel__col">
-											<div class="panel__button">Apply</div>
-										</div>
+										<div class="panel__col"><a class="panel__button" href="#">Change</a></div>
 									</div>
 								</div>
 							</div>
@@ -644,117 +642,243 @@
 							<div class="calculator">
 								<div class="calculator__container">
 									<h2>Calculate the cost</h2>
-									<div class="calculator__grid">
-										<div class="calculator__item">
-											<div class="calculator__label">Date</div>
-											<div class="calculator__text">28.10.2021</div>
-										</div>
-										<div class="calculator__item">
-											<div class="calculator__label">Time</div>
-											<div class="calculator__text">11:00</div>
-										</div>
-										<div class="calculator__item">
-											<div class="calculator__select">
-												<div class="select-wrapper">
-													<div class="select select--small"><select class="select__mobile" name="location-mob">
-															<option value="" disabled="disabled" selected="selected">Location</option>
-															<option value="Value-1">Value-1</option>
-															<option value="Value-2">Value-2</option>
-															<option value="Value-3">Value-3</option>
-														</select><select class="select__select" name="location" style="width: 100%" data-select-placeholder="Location">
-															<option></option>
-															<option value="Value-1">Value-1</option>
-															<option value="Value-2">Value-2</option>
-															<option value="Value-3">Value-3</option>
-														</select></div>
+									<div class="calculator__mobile">
+										<div class="calculator__top">
+											<div class="calculator__top-col">
+												<div class="calculator__top-item">
+													<div class="calculator__label">Date</div>
+													<div class="calculator__text">28.10.2021</div>
+												</div>
+												<div class="calculator__top-item">
+													<div class="calculator__label">Time</div>
+													<div class="calculator__text">11:00</div>
+												</div>
+											</div>
+											<div class="calculator__top-col">
+												<div class="calculator__select">
+													<div class="select-wrapper">
+														<div class="select select--small"><select class="select__mobile" name="location-mob">
+																<option value="" disabled="disabled" selected="selected">Location</option>
+																<option value="Value-1">Value-1</option>
+																<option value="Value-2">Value-2</option>
+																<option value="Value-3">Value-3</option>
+															</select><select class="select__select" name="location" style="width: 100%" data-select-placeholder="Location">
+																<option></option>
+																<option value="Value-1">Value-1</option>
+																<option value="Value-2">Value-2</option>
+																<option value="Value-3">Value-3</option>
+															</select></div>
+													</div>
 												</div>
 											</div>
 										</div>
-										<div class="calculator__item">
+										<div class="calculator__title">
 											<h4>Number of people</h4>
 										</div>
-										<div class="calculator__item">
-											<div class="calculator__label">Adults</div>
-											<div class="counter">
-												<div class="counter__item counter__item--minus"><svg class="counter__minus" width="16" height="2" viewbox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M1 1H15" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-													</svg></div>
-												<div class="counter__number">0</div>
-												<div class="counter__item counter__item--plus"><svg class="counter__plus" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-														<path d="M17.699 28.0233L17.699 7.37456" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-													</svg></div>
+										<div class="calculator__grid">
+											<div class="calculator__item">
+												<div class="calculator__label">Adults</div>
 											</div>
-										</div>
-										<div class="calculator__item">
-											<div class="calculator__label">Students with ISIC</div>
-											<div class="counter">
-												<div class="counter__item counter__item--minus"><svg class="counter__minus" width="16" height="2" viewbox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M1 1H15" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-													</svg></div>
-												<div class="counter__number">0</div>
-												<div class="counter__item counter__item--plus"><svg class="counter__plus" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-														<path d="M17.699 28.0233L17.699 7.37456" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-													</svg></div>
-											</div>
-										</div>
-										<div class="calculator__item">
-											<div class="calculator__label">Children 6-16 years old</div>
-											<div class="counter">
-												<div class="counter__item counter__item--minus"><svg class="counter__minus" width="16" height="2" viewbox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M1 1H15" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-													</svg></div>
-												<div class="counter__number">0</div>
-												<div class="counter__item counter__item--plus"><svg class="counter__plus" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-														<path d="M17.699 28.0233L17.699 7.37456" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-													</svg></div>
-											</div>
-										</div>
-										<div class="calculator__item">
-											<div class="calculator__label">Children 0-6 years old</div>
-											<div class="counter">
-												<div class="counter__item counter__item--minus"><svg class="counter__minus" width="16" height="2" viewbox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M1 1H15" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-													</svg></div>
-												<div class="counter__number">0</div>
-												<div class="counter__item counter__item--plus"><svg class="counter__plus" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-														<path d="M17.699 28.0233L17.699 7.37456" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-													</svg></div>
-											</div>
-										</div>
-										<div class="calculator__item">
-											<div class="tooltip">
-												<div class="tooltip__wrapper">
-													<div class="calculator__label">Among them wheelchair users</div>
-													<div class="tooltip__icon"><svg class="tooltip__svg" width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<circle cx="7.5" cy="7.5" r="7.5" fill="#E0F7FF"></circle>
-															<path d="M6.50036 9.33008L6.44679 7.28691H6.95568C7.43778 7.28691 7.87971 7.24513 8.28147 7.16156C8.69215 7.07799 9.01802 6.91504 9.25907 6.6727C9.50905 6.43036 9.63404 6.07103 9.63404 5.59471C9.63404 5.1351 9.48226 4.77577 9.17872 4.51671C8.87517 4.2493 8.47788 4.1156 7.98685 4.1156C7.47796 4.1156 7.07621 4.24513 6.78159 4.50418C6.48697 4.76323 6.33966 5.11421 6.33966 5.5571H5.00048C4.99155 5.05571 5.10761 4.61281 5.34866 4.22841C5.59864 3.84401 5.94683 3.54318 6.39322 3.3259C6.84855 3.10863 7.37975 3 7.98685 3C8.57609 3 9.09837 3.10446 9.55369 3.31337C10.009 3.52228 10.3617 3.82312 10.6116 4.21588C10.8705 4.60028 11 5.06407 11 5.60724C11 6.20056 10.8616 6.68942 10.5849 7.07382C10.3081 7.44986 9.92866 7.72981 9.44655 7.91365C8.96445 8.08914 8.41092 8.17688 7.78597 8.17688L7.7458 9.33008H6.50036ZM7.12977 12C6.85301 12 6.62981 11.9206 6.46018 11.7618C6.29055 11.5947 6.20574 11.3983 6.20574 11.1727C6.20574 10.9387 6.29055 10.7423 6.46018 10.5836C6.62981 10.4164 6.85301 10.3329 7.12977 10.3329C7.38868 10.3329 7.60295 10.4164 7.77258 10.5836C7.95114 10.7423 8.04041 10.9387 8.04041 11.1727C8.04041 11.3983 7.95114 11.5947 7.77258 11.7618C7.60295 11.9206 7.38868 12 7.12977 12Z" fill="#0CB9F2"></path>
+											<div class="calculator__item">
+												<div class="counter">
+													<div class="counter__item counter__item--minus"><svg class="counter__minus" width="16" height="2" viewbox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 1H15" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
 														</svg></div>
-													<div class="tooltip__container">Attention! In order to visit this tour, you need to apply for a temporary visa. Without a temporary visa, you will not be allowed out of the port.</div>
+													<div class="counter__number">0</div>
+													<div class="counter__item counter__item--plus"><svg class="counter__plus" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															<path d="M17.699 28.0233L17.699 7.37456" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
 												</div>
 											</div>
-											<div class="counter">
-												<div class="counter__item counter__item--minus"><svg class="counter__minus" width="16" height="2" viewbox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M1 1H15" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-													</svg></div>
-												<div class="counter__number">0</div>
-												<div class="counter__item counter__item--plus"><svg class="counter__plus" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-														<path d="M17.699 28.0233L17.699 7.37456" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-													</svg></div>
+											<div class="calculator__item">
+												<div class="calculator__label">Students with ISIC</div>
 											</div>
-											<div class="calculator__description">Doesn’t influence the cost</div>
+											<div class="calculator__item">
+												<div class="counter">
+													<div class="counter__item counter__item--minus"><svg class="counter__minus" width="16" height="2" viewbox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 1H15" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="counter__number">0</div>
+													<div class="counter__item counter__item--plus"><svg class="counter__plus" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															<path d="M17.699 28.0233L17.699 7.37456" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+												</div>
+											</div>
+											<div class="calculator__item">
+												<div class="calculator__label">Children 6-16 years old</div>
+											</div>
+											<div class="calculator__item">
+												<div class="counter">
+													<div class="counter__item counter__item--minus"><svg class="counter__minus" width="16" height="2" viewbox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 1H15" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="counter__number">0</div>
+													<div class="counter__item counter__item--plus"><svg class="counter__plus" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															<path d="M17.699 28.0233L17.699 7.37456" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+												</div>
+											</div>
+											<div class="calculator__item">
+												<div class="calculator__label">Children 0-6 years old</div>
+											</div>
+											<div class="calculator__item">
+												<div class="counter">
+													<div class="counter__item counter__item--minus"><svg class="counter__minus" width="16" height="2" viewbox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 1H15" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="counter__number">0</div>
+													<div class="counter__item counter__item--plus"><svg class="counter__plus" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															<path d="M17.699 28.0233L17.699 7.37456" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+												</div>
+											</div>
+											<div class="calculator__grid-row">
+												<div class="calculator__grid-col">
+													<div class="calculator__label">Among them wheelchair users</div>
+													<div class="counter">
+														<div class="counter__item counter__item--minus"><svg class="counter__minus" width="16" height="2" viewbox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M1 1H15" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															</svg></div>
+														<div class="counter__number">0</div>
+														<div class="counter__item counter__item--plus"><svg class="counter__plus" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M17.699 28.0233L17.699 7.37456" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															</svg></div>
+													</div>
+													<div class="calculator__description">Doesn’t influence the cost</div>
+												</div>
+												<div class="calculator__grid-col">
+													<div class="calculator__grid-item">
+														<div class="calculator__label">Number of people</div>
+														<div class="calculator__num">7</div>
+													</div>
+													<div class="calculator__grid-item">
+														<div class="calculator__label">Total amount</div>
+														<div class="calculator__num">$1300</div>
+													</div>
+												</div>
+											</div>
 										</div>
-										<div class="calculator__item">
-											<div class="calculator__label">Number of people</div>
-											<div class="calculator__num">7</div>
+									</div>
+									<div class="calculator__desktop">
+										<div class="calculator__top">
+											<div class="calculator__top-col">
+												<div class="calculator__top-item">
+													<div class="calculator__label">Date</div>
+													<div class="calculator__text">28.10.2021</div>
+												</div>
+												<div class="calculator__top-item">
+													<div class="calculator__label">Time</div>
+													<div class="calculator__text">11:00</div>
+												</div>
+											</div>
+											<div class="calculator__top-col">
+												<div class="calculator__select">
+													<div class="select-wrapper">
+														<div class="select select--small"><select class="select__select" name="location" style="width: 100%" data-select-placeholder="Location">
+																<option></option>
+																<option value="Value-1">Value-1</option>
+																<option value="Value-2">Value-2</option>
+																<option value="Value-3">Value-3</option>
+															</select></div>
+													</div>
+												</div>
+											</div>
+											<div class="calculator__top-col">
+												<div class="calculator__top-item">
+													<div class="calculator__label">Number of people</div>
+													<div class="calculator__num">7</div>
+												</div>
+												<div class="calculator__top-item">
+													<div class="calculator__label">Total amount</div>
+													<div class="calculator__num">$1265</div>
+												</div>
+											</div>
 										</div>
-										<div class="calculator__item">
-											<div class="calculator__label">Total amount</div>
-											<div class="calculator__num">$1300</div>
+										<div class="calculator__title">
+											<h4>Number of people</h4>
+										</div>
+										<div class="calculator__grid">
+											<div class="calculator__item">
+												<div class="calculator__label">Adults</div>
+											</div>
+											<div class="calculator__item">
+												<div class="counter">
+													<div class="counter__item counter__item--minus"><svg class="counter__minus" width="16" height="2" viewbox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 1H15" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="counter__number">0</div>
+													<div class="counter__item counter__item--plus"><svg class="counter__plus" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															<path d="M17.699 28.0233L17.699 7.37456" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+												</div>
+											</div>
+											<div class="calculator__item">
+												<div class="calculator__label">Students with ISIC</div>
+											</div>
+											<div class="calculator__item">
+												<div class="counter">
+													<div class="counter__item counter__item--minus"><svg class="counter__minus" width="16" height="2" viewbox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 1H15" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="counter__number">0</div>
+													<div class="counter__item counter__item--plus"><svg class="counter__plus" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															<path d="M17.699 28.0233L17.699 7.37456" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+												</div>
+											</div>
+											<div class="calculator__item">
+												<div class="calculator__label">Children 6-16 years old</div>
+											</div>
+											<div class="calculator__item">
+												<div class="counter">
+													<div class="counter__item counter__item--minus"><svg class="counter__minus" width="16" height="2" viewbox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 1H15" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="counter__number">0</div>
+													<div class="counter__item counter__item--plus"><svg class="counter__plus" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															<path d="M17.699 28.0233L17.699 7.37456" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+												</div>
+											</div>
+											<div class="calculator__item">
+												<div class="calculator__label">Children 0-6 years old</div>
+											</div>
+											<div class="calculator__item">
+												<div class="counter">
+													<div class="counter__item counter__item--minus"><svg class="counter__minus" width="16" height="2" viewbox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 1H15" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="counter__number">0</div>
+													<div class="counter__item counter__item--plus"><svg class="counter__plus" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															<path d="M17.699 28.0233L17.699 7.37456" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+												</div>
+											</div>
+											<div class="calculator__item">
+												<div class="calculator__label">Among them wheelchair users</div>
+											</div>
+											<div class="calculator__item">
+												<div class="counter">
+													<div class="counter__item counter__item--minus"><svg class="counter__minus" width="16" height="2" viewbox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 1H15" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="counter__number">0</div>
+													<div class="counter__item counter__item--plus"><svg class="counter__plus" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															<path d="M17.699 28.0233L17.699 7.37456" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+												</div>
+												<div class="calculator__description">Doesn’t influence the cost</div>
+											</div>
 										</div>
 									</div>
 								</div>
