@@ -79,15 +79,17 @@ block content
                       .select-wrapper
                         .select
                           select.select__mobile(name="location-mob")
-                            option(value = 'male')
+                            option(value="" disabled selected)
+                              |Gender
+                            option(value = 'Male')
                               |Male
-                            option(value = 'female')
+                            option(value = 'Female')
                               |Female
                           select.select__select(name="location" style='width: 100%' data-select-placeholder='Gender') 
                             option
-                            option(value = 'male')
+                            option(value = 'Male')
                               |Male
-                            option(value = 'female')
+                            option(value = 'Female')
                               |Female
                   .booking-page__item
                     each item in ddata.second

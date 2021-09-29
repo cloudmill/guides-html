@@ -14,6 +14,8 @@ mixin aside
               .select-wrapper
                 .select.select--md
                   select.select__mobile(name="location-mob")
+                    option(value="" disabled selected)
+                      |Select language
                     each item in data.selectValues.language
                       option(value = item.value)
                         |#{item.value}

@@ -93,6 +93,8 @@ mixin calculator
             .select-wrapper
               .select.select--small
                 select.select__mobile(name="location-mob")
+                  option(value="" disabled selected)
+                    |Location
                   each item in data.selectValues.language
                     option(value = item.value)
                       |#{item.value}

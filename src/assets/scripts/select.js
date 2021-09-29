@@ -1,4 +1,5 @@
 import 'select2';
+import {mediaQueryTable} from './mediaQueries'
 
 // select
 {
@@ -66,4 +67,22 @@ import 'select2';
       });
     });
   });
+}
+
+// mobile picker text change
+{
+  $(() => {
+    const select = $('.select')
+    if (select.length && !mediaQueryTable.matches) {
+
+      select.each(function() {
+        const selectMobile = $(this).find('.select__mobile')
+        const selectPlaceholder = $(this).find('.select2-selection__placeholder')
+
+        selectMobile.on('change', function() {
+          selectPlaceholder.text(this.value)
+        })
+      })
+    }
+  })
 }

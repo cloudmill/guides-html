@@ -22,6 +22,8 @@ mixin panel
               .select-wrapper
                 .select
                   select.select__mobile(name="location-mob")
+                    option(value="" disabled selected)
+                      |Location
                     each item in data.selectValues.locations
                       option(value = item.value)
                         |#{item.value}
