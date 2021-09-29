@@ -37,9 +37,9 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  @include fsl(26px);
+  @include fsl(22px);
   @media (min-width: $breakpoint-m) {
-    @include fsl(48px);
+    @include fsl(40px);
   }
   @media (min-width: $breakpoint) {
     @include fsl(50px);
