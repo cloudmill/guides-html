@@ -53,8 +53,9 @@ $color-light-gray: #E7E7E7;
 $color-azure: #0CB9F2;
 $color-red: #FF3950;
 
-
-$transition: .5s;
+$transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+$transition-duration: .5s;
+$transition: $transition-duration $transition-timing-function;
 
 
 // grid columns
