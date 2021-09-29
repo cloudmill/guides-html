@@ -5,6 +5,16 @@
     border-bottom: 1px solid $color-light-gray;
   }
 
+  &--disabled {
+    #{$comp}__col {
+      &:nth-child(1),
+      &:nth-child(2) {
+        opacity: 0.4;
+        pointer-events: none;
+      }
+    }
+  }
+
   &__inner {
     padding: 20px 0;
     @media (min-width: $breakpoint) {
@@ -79,11 +89,16 @@
     display: flex;
     justify-content: center;
 
-    background: $color-light-gray;
-    opacity: 0.5;
+    
+    background: $color-brown;
     border-radius: 14px;
     @include fsl(16px);
     cursor: pointer;
+
+    &--disable {
+      background: $color-light-gray;
+      opacity: 0.5;
+    }
   }
 
   &__select {

@@ -42,6 +42,6 @@ mixin panel
                       +calendar-svg.data-picker__svg
                     input.data-picker__input(type="text" placeholder='28.10.2021')
           .panel__col
-            .panel__button
-              |Apply
+            a.panel__button(href="#" class=(attributes.disabled ? 'panel__button--disable' : ''))
+              |#{attributes.button}
 //- .excursion-btn__button--active
