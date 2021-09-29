@@ -1,9 +1,9 @@
-
+import { mediaQuery } from './mediaQueries.js'
 
 $(() => {
   const table = $('.comparison')
 
-  if (table.length) {
+  if (table.length && !mediaQuery.matches) {
     const grid = $('.comparison__grid')
 
     const tableRowHeight = table.find('.comparison__row').innerHeight()
@@ -32,7 +32,6 @@ $(() => {
 
     tableTemplate.css('padding-top', `${tableRowHeight}px`)
     tableLine.css('height', `${lineHeight}px`)
-
 
     grid.on('scroll', function() {
       if (this.scrollLeft > 0) {
