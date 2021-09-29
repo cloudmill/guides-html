@@ -1,4 +1,6 @@
 .excursion-card {
+  $comp: &;
+  $scale-rate: 1.2;
   // display: block;
 
   display: flex;
@@ -12,6 +14,12 @@
   }
   @media (min-width: $breakpoint-xl) {
     width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+  }
+
+  &:hover {
+    #{$comp}__img {
+      transform: scale($scale-rate);
+    }
   }
 
   &--response {
@@ -34,14 +42,13 @@
 
   &__img {
     display: block;
+    transition: $transition;
   }
 
   &__items {
     position: absolute;
     top: 5px;
     left: 5px;
-
-    // display: flex;
   }
   
   &__content {
