@@ -1,31 +1,31 @@
-
-
+import { mediaQuery } from './mediaQueries.js'
 
 const FPS = 60
 
 $(window).on('load', function() {
-  
-  update()
+  if (mediaQuery.matches) {
+    update()
 
-  function update() {
-    const footerHeight = $('.footer').innerHeight()
+    function update() {
+      const footerHeight = $('.footer').innerHeight()
 
-    $('.main').css('margin-bottom', `${footerHeight}px`)
-  }
-
-  const handeResize = (() => {
-    let enabled = true
-
-    return () => {
-      if (enabled) {
-        enabled = false
-
-        update()
-
-        setTimeout(() => enabled = true, 1000 / FPS)
-      }
+      $('.main').css('margin-bottom', `${footerHeight}px`)
     }
-  })()
 
-  window.addEventListener('resize', handeResize)
+    const handeResize = (() => {
+      let enabled = true
+
+      return () => {
+        if (enabled) {
+          enabled = false
+
+          update()
+
+          setTimeout(() => enabled = true, 1000 / FPS)
+        }
+      }
+    })()
+
+    window.addEventListener('resize', handeResize)
+  }
 })
