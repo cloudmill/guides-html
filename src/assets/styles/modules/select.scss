@@ -1,8 +1,7 @@
 .select {
   width: 100%;
-  // width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
-  @media (min-width: $breakpoint) {
-    
+  @media (max-width: $breakpoint-m - 1px) {
+    position: relative;
   }
 
   &.select--small {
@@ -88,12 +87,27 @@
       }
     }
   }
+
+  &__mobile {
+    @include cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    @media (min-width: $breakpoint-m) {
+      display: none;
+    }
+  }
 }
 
 .select-wrapper {
+  
 
   .select2-container {
     margin-top: -1px;
+    @media (max-width: $breakpoint-m - 1px) {
+      pointer-events: none;
+    }
   }
 
   .select2-dropdown {

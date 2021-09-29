@@ -78,6 +78,11 @@ block content
                     .form__item 
                       .select-wrapper
                         .select
+                          select.select__mobile(name="location-mob")
+                            option(value = 'male')
+                              |Male
+                            option(value = 'female')
+                              |Female
                           select.select__select(name="location" style='width: 100%' data-select-placeholder='Gender') 
                             option
                             option(value = 'male')

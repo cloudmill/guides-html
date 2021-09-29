@@ -13,6 +13,10 @@ mixin aside
             .aside__body
               .select-wrapper
                 .select.select--md
+                  select.select__mobile(name="location-mob")
+                    each item in data.selectValues.language
+                      option(value = item.value)
+                        |#{item.value}
                   select.select__select(name="lang" style='width: 100%' data-select-placeholder='Select language') 
                     option
                     each item in data.selectValues.language

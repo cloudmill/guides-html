@@ -92,6 +92,10 @@ mixin calculator
           .calculator__select 
             .select-wrapper
               .select.select--small
+                select.select__mobile(name="location-mob")
+                  each item in data.selectValues.language
+                    option(value = item.value)
+                      |#{item.value}
                 select.select__select(name="location" style='width: 100%' data-select-placeholder='Location') 
                   option
                   each item in data.selectValues.language
