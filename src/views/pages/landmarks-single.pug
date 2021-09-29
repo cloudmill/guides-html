@@ -34,7 +34,7 @@ block content
             section.section 
               +about
           .section__col(data-sticky-container='')
-            .sticky(data-margin-top='178')
+            .sticky.sticky--width(data-margin-top='178')
               +navigation(items=['Landmarks', 'Cathedrals and Monasteries of St. Petersburg'] page="Peter and Paul Fortress")
               .sticky__inner 
                 .sticky__grid
@@ -68,4 +68,4 @@ block content
             .swiper-wrapper
               each item in data.mainSellers 
                 .swiper-slide 
-                  +excursion-card(title = item.title walk = item.walk src = item.src)
+                  +excursion-card(tag='a' href='#' title = item.title walk = item.walk src = item.src)

@@ -102,7 +102,7 @@ block content
             .swiper-wrapper
               each item in data.mainSellers 
                 .swiper-slide 
-                  +excursion-card(title = item.title src = item.src cruise=true)
+                  +excursion-card(tag='div' title = item.title src = item.src cruise=true)
   .modals 
     .modal(data-fancy-modal='2')
       .modal__container

@@ -22,7 +22,7 @@ block content
             .row__grid  
               each item in data.landExcursion
                 .row__item 
-                  +excursion-card.excursion-card--response(title = item.title src = item.src cruise=true)
+                  +excursion-card.excursion-card--response(tag='div' title = item.title src = item.src cruise=true)
             .button-wrapper 
               +button(tag='div')
                 |Show more

@@ -1,5 +1,5 @@
 mixin excursion-card 
-  a.excursion-card(href="#" class=attributes.class)
+  #{attributes.tag}.excursion-card(href=attributes.href class=attributes.class)
     .excursion-card__body   
       .excursion-card__container
         img.excursion-card__img(src="assets/images/" + attributes.src , alt="")
@@ -42,7 +42,7 @@ mixin excursion-card
                 span.excursion-card__price-num $129 
                 |/ person
             .excursion-card__col
-              +button.button-m(tag='div')
+              +button.button-m(tag='a' href='#')
                 |Compare
       else
         .excursion-card__info 
