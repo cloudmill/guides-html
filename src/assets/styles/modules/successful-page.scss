@@ -10,7 +10,8 @@
 
     &:nth-child(1) {
       @media (min-width: $breakpoint-m) {
-        padding-right: 72px;
+        // padding-right: 72px;
+        padding-right: calc(#{$col-gap-m});
         flex-shrink: 0;
         width: calc(#{$col-part-m} * 2);
       }
@@ -29,6 +30,12 @@
 
   &__text {
     margin-top: 20px;
+    @media (min-width: $breakpoint-m) {
+      margin-right: 53px;
+    }
+    @media (min-width: $breakpoint) {
+      margin-right: 0;
+    }
 
     @include fsl(16px, 160%);
   }
