@@ -77,39 +77,127 @@ mixin calculator
     .calculator__container 
       h2
         |Calculate the cost
-      .calculator__grid
-        .calculator__item
-          .calculator__label 
-            |Date
-          .calculator__text 
-            |28.10.2021
-        .calculator__item
-          .calculator__label 
-            |Time
-          .calculator__text   
-            |11:00
-        .calculator__item  
-          .calculator__select 
-            .select-wrapper
-              .select.select--small
-                select.select__mobile(name="location-mob")
-                  option(value="" disabled selected)
-                    |Location
-                  each item in data.selectValues.language
-                    option(value = item.value)
-                      |#{item.value}
-                select.select__select(name="location" style='width: 100%' data-select-placeholder='Location') 
-                  option
-                  each item in data.selectValues.language
-                    option(value = item.value)
-                      |#{item.value}   
-        .calculator__item
+      .calculator__mobile 
+        .calculator__top 
+          .calculator__top-col
+            .calculator__top-item 
+              .calculator__label
+                |Date
+              .calculator__text
+                |28.10.2021
+            .calculator__top-item 
+              .calculator__label
+                |Time
+              .calculator__text
+                |11:00
+          .calculator__top-col
+            .calculator__select 
+              .select-wrapper
+                .select.select--small
+                  select.select__mobile(name="location-mob")
+                    option(value="" disabled selected)
+                      |Location
+                    each item in data.selectValues.language
+                      option(value = item.value)
+                        |#{item.value}
+                  select.select__select(name="location" style='width: 100%' data-select-placeholder='Location') 
+                    option
+                    each item in data.selectValues.language
+                      option(value = item.value)
+                        |#{item.value} 
+        .calculator__title
           h4
             |Number of people
-        each item in ['Adults', 'Students with ISIC', 'Children 6-16 years old', 'Children 0-6 years old']
-          .calculator__item
+        .calculator__grid
+          each item in ['Adults', 'Students with ISIC', 'Children 6-16 years old', 'Children 0-6 years old',]
+            .calculator__item
+              .calculator__label 
+                |#{item}
+            .calculator__item
+              .counter 
+                .counter__item.counter__item--minus
+                  +minus-svg.counter__minus
+                .counter__number 
+                  |0
+                .counter__item.counter__item--plus
+                  +plus-svg.counter__plus
+          .calculator__grid-row 
+            .calculator__grid-col
+              .calculator__label 
+                |Among them wheelchair users
+              .counter 
+                .counter__item.counter__item--minus
+                  +minus-svg.counter__minus
+                .counter__number 
+                  |0
+                .counter__item.counter__item--plus
+                  +plus-svg.counter__plus
+              .calculator__description 
+                |Doesn’t influence the cost
+            .calculator__grid-col
+              .calculator__grid-item
+                .calculator__label
+                  |Number of people
+                .calculator__num 
+                  |7
+              .calculator__grid-item
+                .calculator__label
+                  |Total amount
+                .calculator__num 
+                  |$1300
+      .calculator__desktop
+        .calculator__top 
+          .calculator__top-col
+            .calculator__top-item 
+              .calculator__label
+                |Date
+              .calculator__text
+                |28.10.2021
+            .calculator__top-item 
+              .calculator__label
+                |Time
+              .calculator__text
+                |11:00
+          .calculator__top-col
+            .calculator__select 
+              .select-wrapper
+                .select.select--small
+                  select.select__select(name="location" style='width: 100%' data-select-placeholder='Location') 
+                    option
+                    each item in data.selectValues.language
+                      option(value = item.value)
+                        |#{item.value}
+          .calculator__top-col
+            .calculator__top-item 
+              .calculator__label
+                |Number of people
+              .calculator__num 
+                |7
+            .calculator__top-item 
+              .calculator__label
+                |Total amount
+              .calculator__num 
+                |$1265
+        .calculator__title
+          h4
+            |Number of people
+        .calculator__grid 
+          each item in ['Adults', 'Students with ISIC', 'Children 6-16 years old', 'Children 0-6 years old',]
+            .calculator__item
+              .calculator__label 
+                |#{item}
+            .calculator__item
+              .counter 
+                .counter__item.counter__item--minus
+                  +minus-svg.counter__minus
+                .counter__number 
+                  |0
+                .counter__item.counter__item--plus
+                  +plus-svg.counter__plus
+          .calculator__item 
             .calculator__label 
-              |#{item}
+                |Among them wheelchair users
+          .calculator__item
             .counter 
               .counter__item.counter__item--minus
                 +minus-svg.counter__minus
@@ -117,34 +205,8 @@ mixin calculator
                 |0
               .counter__item.counter__item--plus
                 +plus-svg.counter__plus
-        .calculator__item
-          .tooltip
-            .tooltip__wrapper
-              .calculator__label
-                |Among them wheelchair users
-              .tooltip__icon 
-                +tooltip-svg.tooltip__svg
-              .tooltip__container
-                |Attention! In order to visit this tour, you need to apply for a temporary visa. Without a temporary visa, you will not be allowed out of the port.
-          .counter 
-            .counter__item.counter__item--minus
-              +minus-svg.counter__minus
-            .counter__number 
-              |0
-            .counter__item.counter__item--plus
-              +plus-svg.counter__plus
-          .calculator__description 
-            |Doesn’t influence the cost
-        .calculator__item
-          .calculator__label
-            |Number of people
-          .calculator__num 
-            |7
-        .calculator__item
-          .calculator__label
-            |Total amount
-          .calculator__num 
-            |$1300
+            .calculator__description 
+              |Doesn’t influence the cost
       if (attributes.events)
         .events#events.active(data-accordion='')
           .events__container 

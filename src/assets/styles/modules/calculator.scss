@@ -148,93 +148,183 @@
     }
   }
 
-  &__grid {
-    margin-top: 20px;
+  &__mobile {
+    margin-top: 15px;
+    @media (min-width: $breakpoint) {
+      display: none;
+    }
+  }
+  &__desktop {
+    margin-top: 45px;
+    @media (max-width: $breakpoint - 1px) {
+      display: none;
+    }
+  }
 
+  &__top {
+    margin-bottom: 40px;
+    @media (min-width: $breakpoint-m) {
+      margin-bottom: 20px;
+    }
+    @media (min-width: $breakpoint) {
+      margin-bottom: 50px;
+    }
+
+    display: flex;
+    flex-wrap: wrap;
+    @media (min-width: $breakpoint-m) {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+    @media (min-width: $breakpoint) {
+      justify-content: flex-start;
+    }
+  }
+  &__top-col {
+    flex-shrink: 0;
+    width: 100%;
+    @media (min-width: $breakpoint-m) {
+      width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
+    }
+    @media (min-width: $breakpoint) {
+      width: auto;
+    }
+
+    &:nth-child(1) {
+      margin-bottom: 20px;
+      @media (min-width: $breakpoint-m) {
+        margin-bottom: 0;
+      }
+      display: flex;
+      justify-content: space-between;
+      @media (min-width: $breakpoint) {
+        justify-content: flex-start;
+      }
+    }
+
+    &:nth-child(2) {
+      @media (min-width: $breakpoint) {
+        margin: 0 60px;
+      }
+      @media (min-width: $breakpoint-xl) {
+        margin-left: 139px;
+        margin-right: 103px;
+      }
+    }
+
+    &:nth-child(3) {
+      @media (min-width: $breakpoint) {
+        display: flex;
+      }
+    }
+
+  }
+  &__top-item {
+    flex-shrink: 0;
+    width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
+    @media (min-width: $breakpoint-m) {
+      width: calc(#{$col-width-m});
+    }
+    @media (min-width: $breakpoint) {
+      width: auto;
+    }
+
+    &:not(:first-child) {
+      @media (min-width: $breakpoint) {
+        margin-left: 66px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 21px;
     grid-template-areas: 
       "A B"
-      "C C"
-      "D D"
+      "C D"
       "E F"
       "G H"
       "I I"
     ;
-    row-gap: 20px;
-    column-gap: 21px;
-    align-items: flex-end;
+    grid-template-columns: repeat(2, 1fr);
     @media (min-width: $breakpoint-m) {
       grid-template-columns: repeat(4, 1fr);
       grid-template-areas: 
-        "A B C C"
-        "D D D D"
-        "E F G H"
-        "I I J K"
+        "A B E F"
+        "C D G H"
+        "I I I I"
       ;
     }
     @media (min-width: $breakpoint) {
-      align-items: flex-start;
-      row-gap: 30px;
-      column-gap: 0;
+      grid-template-columns: repeat(4, max-content);
       grid-template-areas: 
-        "A B C E F"
-        "D D D D D"
+        "A B E F I"
+        "C D G H J"
       ;
-      grid-template-columns: repeat(5, max-content);
+    }
+  }
+  &__grid-row {
+    grid-area: I;
+    display: flex;
+    flex-wrap: wrap;
+    @media (min-width: $breakpoint-m) {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+  }
+  &__grid-col {
+    flex-shrink: 0;
+    width: 100%;
+    @media (min-width: $breakpoint-m) {
+      width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
+    }
+
+    &:nth-child(2) {
+      margin-top: 20px;
+      @media (min-width: $breakpoint-m) {
+        margin-top: 0;
+        align-items: center;
+      }
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__grid-item {
+    flex-shrink: 0;
+    width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
+    @media (min-width: $breakpoint-m) {
+      width: calc(#{$col-width-m});
     }
   }
 
   &__item {
+    $text-item: (
+      1: A,
+      3: B,
+      5: E,
+      7: F,
+    );
 
-    &:nth-child(3) {
-      grid-area: C;
-      @media (min-width: $breakpoint-m) {
-        align-self: end;
-      }
-      @media (min-width: $breakpoint) {
-        grid-area: auto;
-      }
-    }
-    &:nth-child(4) {
-      margin: 20px 0 7px;
-      @media (min-width: $breakpoint) {
-        margin: 20px 0 0;
-      }
-      grid-area: D;
-    }
-    &:nth-child(6) {
-      @media (min-width: $breakpoint) {
-        margin-left: 30px;
+    $count-item: (
+      2: C,
+      4: D,
+      6: G,
+      8: H,
+    );
+    @each $index, $item in $text-item {
+      &:nth-child(#{$index}) {
+        grid-area: $item;
       }
     }
-    &:nth-child(7) {
-      @media (min-width: $breakpoint) {
-        margin-left: 30px;
-      }
-    }
-    &:nth-child(8) {
-      @media (min-width: $breakpoint) {
-        margin-left: 30px;
-      }
-    }
-    &:nth-child(9) {
-      grid-area: I;
-      @media (min-width: $breakpoint) {
-        grid-area: auto;
-        margin-left: 30px;
-      }
-    }
-    &:nth-child(10) {
-      align-self: flex-start;
-      @media (min-width: $breakpoint) {
-        grid-area: E;
-      }
-    }
-    &:nth-child(11) {
-      align-self: flex-start;
-      @media (min-width: $breakpoint) {
-        grid-area: F;
+    @each $index, $item in $count-item {
+      &:nth-child(#{$index}) {
+        margin-bottom: 20px;
+        grid-area: $item;
       }
     }
   }
