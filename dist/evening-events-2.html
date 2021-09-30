@@ -259,12 +259,12 @@
 													<div class="thumb-slider__control">
 														<div class="slider-buttons slider-buttons--wide">
 															<div class="slider-buttons__item">
-																<div class="slider-buttons__button slider-buttons__button--left"><svg class="slider-buttons__icon" width="12" height="8" viewbox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<div class="slider-buttons__button slider-buttons__button--left animation"><svg class="slider-buttons__icon" width="12" height="8" viewbox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M10.6666 1.66669L5.99992 6.33335L1.33325 1.66669" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
 															</div>
 															<div class="slider-buttons__item">
-																<div class="slider-buttons__button slider-buttons__button--right"><svg class="slider-buttons__icon" width="12" height="8" viewbox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<div class="slider-buttons__button slider-buttons__button--right animation"><svg class="slider-buttons__icon" width="12" height="8" viewbox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M10.6666 1.66669L5.99992 6.33335L1.33325 1.66669" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
 															</div>
@@ -492,17 +492,47 @@
 					</section>
 					<section class="section">
 						<div class="container">
-							<div class="calculator calculator--simple">
+							<div class="calculator calculator--simple calculator--noprice">
 								<div class="calculator__container">
 									<h2>Calculate the cost</h2>
 									<div class="calculator__grid">
 										<div class="calculator__item">
 											<div class="calculator__label">Date</div>
-											<div class="calculator__date">date</div>
+											<div class="calculator__data">
+												<div class="data-picker data-picker--small"><label class="data-picker__label">
+														<div class="data-picker__icon"><svg class="data-picker__svg" width="18" height="20" viewbox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M0.833984 7.62091H17.1726" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M13.0727 11.2005H13.0812" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M9.00434 11.2005H9.01283" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M4.92817 11.2005H4.93666" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M13.0727 14.7635H13.0812" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M9.00434 14.7635H9.01283" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M4.92817 14.7635H4.93666" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M12.7059 0.833496V3.85004" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M5.30155 0.833496V3.85004" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M12.8851 2.28125H5.12338C2.43142 2.28125 0.75 3.78086 0.75 6.53736V14.8329C0.75 17.6327 2.43142 19.167 5.12338 19.167H12.8766C15.577 19.167 17.25 17.6587 17.25 14.9022V6.53736C17.2585 3.78086 15.5855 2.28125 12.8851 2.28125Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															</svg></div><input class="data-picker__input" placeholder="28.10.2021" />
+													</label></div>
+											</div>
 										</div>
 										<div class="calculator__item">
 											<div class="calculator__label">Time</div>
-											<div class="calculator__time">time</div>
+											<div class="calculator__select">
+												<div class="select-wrapper">
+													<div class="select select--small"><select class="select__mobile" name="location-mob">
+															<option value="" disabled="disabled" selected="selected">Location</option>
+															<option value="Value-1">Value-1</option>
+															<option value="Value-2">Value-2</option>
+															<option value="Value-3">Value-3</option>
+														</select><select class="select__select" name="location" style="width: 100%">
+															<option value="19:00">19:00</option>
+															<option value="20:00">20:00</option>
+															<option value="21:00">21:00</option>
+															<option value="22:00">22:00</option>
+															<option value="23:00">23:00</option>
+														</select></div>
+												</div>
+											</div>
 										</div>
 										<div class="calculator__item">
 											<div class="calculator__label">Number of people</div>
@@ -595,12 +625,11 @@
 												</div>
 											</div>
 											<div class="calculator__price-col">
-												<div class="button-icon button-icon--calculator">
+												<div class="button-icon button-icon--calculator animation">
 													<div class="button-icon__icon"><svg width="36" height="37" viewbox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
 															<path d="M24.9169 14.0592V8.50055C24.9169 4.67988 21.8204 1.58338 18.0016 1.58338C14.1809 1.56688 11.0697 4.64871 11.0532 8.46938V8.50055V14.0592" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
 															<path fill-rule="evenodd" clip-rule="evenodd" d="M26.6941 35.5006H9.30594C4.99377 35.5006 1.5 32.0081 1.5 27.6998V17.5871C1.5 13.2788 4.99377 9.78632 9.30594 9.78632H26.6941C31.0062 9.78632 34.5 13.2788 34.5 17.5871V27.6998C34.5 32.0081 31.0062 35.5006 26.6941 35.5006Z" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-														</svg></div>
-													<div class="button-icon__text">Add to cart</div>
+														</svg></div><span class="button-icon__text animation__span">Add to cart</span>
 												</div>
 											</div>
 										</div>

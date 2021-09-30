@@ -306,7 +306,9 @@
 											<div class="faq-page__pagination-button">Meals / food</div>
 										</li>
 									</ul>
-									<div class="faq-page__bot"><a class="button button--xl" href="#">Ask your question</a></div>
+									<div class="faq-page__bot">
+										<div class="button button--xl animation" data-fancy-button="1"><span class="animation__span">Ask your question</span></div>
+									</div>
 								</div>
 								<div class="faq-page__col">
 									<ul class="faq-page__list">
@@ -555,12 +557,41 @@
 										</li>
 									</ul>
 									<div class="button-wrapper">
-										<div class="button">Show more</div>
+										<div class="button animation"><span class="animation__span">Show more</span></div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</section>
+				</div>
+				<div class="modals">
+					<div class="modal" data-fancy-modal="1">
+						<div class="modal__container">
+							<form class="form" action="/" data-form="1" data-feedback-form="data-feedback-form">
+								<div class="form__container">
+									<h3 class="form__title">Ask your question</h3>
+									<div class="form-modal">
+										<div class="form__item"><input class="form__input" placeholder="Name" name="name" required="required" /></div>
+										<div class="form__item"><input class="form__input" type="email" placeholder="E-mail" name="mail" required="required" /></div>
+										<div class="form__item"><input class="form__input" type="phone" placeholder="Phone" name="phone" required="required" /></div>
+										<div class="form__item"><textarea class="form__textarea" placeholder="Question"></textarea></div>
+										<div class="form__wrapper">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__text">I give my consent to <a class="checkbox__link" href="#">the processing of personal data</a></div>
+												</label></div>
+										</div>
+										<div class="form__button"><button class="button button--sticky animation" data-form-button="1"><span class="animation__span">Send</span></button></div>
+									</div>
+								</div>
+								<div class="form__response" data-response="1">
+									<h3 class="form__response-message form__response-message--md">Thank you! We have received your question and will respond soon.</h3>
+								</div>
+							</form>
+						</div>
+					</div>
 				</div>
 			</main>
 			<footer class="footer">
