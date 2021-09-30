@@ -22,8 +22,9 @@ block content
                   .faq-page__pagination-button 
                     |#{item.text}
             .faq-page__bot 
-              .button.button--xl(data-fancy-button='1')
-                |Ask your question
+              .button.button--xl.animation(data-fancy-button='1')
+                span.animation__span 
+                  |Ask your question
           .faq-page__col
             ul.faq-page__list
               each item in data.faqAccordion

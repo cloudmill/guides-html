@@ -46,8 +46,9 @@ mixin landmarks
               |#{item.text}
         if (attributes.button)
           .excursion-page__landmarks-btn
-            .excursion-page__button 
-              |Show all
+            .excursion-page__button.animation 
+              span.animation__span 
+                |Show all
 
 mixin about
   .excursion-page__about(data-accordion)
@@ -320,10 +321,10 @@ mixin calculator
               .calculator__price-number   
                 |$1280
           .calculator__price-col
-            .button-icon.button-icon--calculator(data-fancy-button='11')
+            .button-icon.button-icon--calculator.animation(data-fancy-button='11')
               .button-icon__icon
                 +bag-svg
-              .button-icon__text
+              span.button-icon__text.animation__span
                 |Add to cart
 
 mixin calculator-alt 
@@ -411,8 +412,8 @@ mixin calculator-alt
                 .calculator__num  
                   |To be discussed separately. #[br] The manager will contact you as soon as possible.
           .calculator__price-col
-            .button-icon.button-icon--calculator
+            .button-icon.button-icon--calculator.animation
               .button-icon__icon
                 +bag-svg
-              .button-icon__text
+              span.button-icon__text.animation__span
                 |Add to cart

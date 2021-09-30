@@ -41,14 +41,14 @@ mixin aside
                       |#{text.text}
         .aside__buttons 
           .aside__buttons-item 
-            .button-icon
+            .button-icon.animation
               .button-icon__icon 
                 +repeat-svg.button-icon__svg
-              .button-icon__text 
+              span.button-icon__text.animation__span
                 |Clear
 mixin aside-button 
-  .aside-button(data-accordion-button='')
-    .aside-button__text 
+  .aside-button.animation(data-accordion-button='')
+    span.aside-button__text.animation__span
       |Filters
     .aside-button__icon 
       +plus-svg.aside-button__svg

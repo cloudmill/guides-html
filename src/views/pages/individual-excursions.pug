@@ -82,8 +82,9 @@ block content
                 .sticky__price 
                   |from #[span.sticky__price-price $129] / person
               .sticky__button 
-                a.button.button--sticky(href="#" data-scroll='#calculator') 
-                  |Arrange a tour
+                a.button.button--sticky.animation(href="#" data-scroll='#calculator') 
+                  span.animation__span 
+                    |Arrange a tour
     section.section#calculator
       .container
         +calculator(events=true)

@@ -1,0 +1,33 @@
+.animation {
+  $comp: &;
+
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-brown;
+    transition: $transition;
+    transform: translateY(100%);
+  }
+
+  &:hover::before {
+    transform: translateY(0);
+  }
+
+  &:hover {
+    border-color: $color-brown;
+  }
+
+  &__span {
+    position: relative;
+    z-index: 0;
+  }
+}
+

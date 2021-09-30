@@ -8,12 +8,7 @@
     display: none;
   }
   width: 100%;
-  @media (min-width: $breakpoint-m) {
-    // width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
-  }
-
-  // border-radius: 10px;
-  // border: 1px solid $color-light-gray;
+  
   cursor: pointer;
 
   &__text {

@@ -16,8 +16,9 @@ mixin form-modal
             .form__wrapper 
               +checkbox 
             .form__button 
-              button.button.button--sticky(data-form-button='1')
-                |Send
+              button.button.button--sticky.animation(data-form-button='1')
+                span.animation__span 
+                  |Send
         .form__response(data-response='1') 
           h3.form__response-message
             |The application has been sent! #[br] We will contact you as soon as possible.
@@ -56,8 +57,9 @@ mixin faq-modal
             .form__wrapper 
               +checkbox 
             .form__button 
-              button.button.button--sticky(data-form-button='1')
-                |Send
+              button.button.button--sticky.animation(data-form-button='1')
+                span.animation__span 
+                  |Send
         .form__response(data-response='1') 
           h3.form__response-message.form__response-message--md
             |Thank you! We have received your question and will respond soon.
