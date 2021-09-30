@@ -2,6 +2,8 @@ extends ../layouts/master.pug
 
 include  ../components/navigation
 include  ../components/product-tabs
+include  ../components/form-components
+include  ../components/modals
 
 block content 
   .faq-page
@@ -20,7 +22,7 @@ block content
                   .faq-page__pagination-button 
                     |#{item.text}
             .faq-page__bot 
-              +button.button--xl(tag = 'a' href = '#')
+              .button.button--xl(data-fancy-button='1')
                 |Ask your question
           .faq-page__col
             ul.faq-page__list
@@ -46,3 +48,5 @@ block content
             .button-wrapper
               +button(tag='div')
                 |Show more
+  .modals 
+    +faq-modal(id='1')
