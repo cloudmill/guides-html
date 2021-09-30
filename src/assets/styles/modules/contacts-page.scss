@@ -99,7 +99,15 @@
   &__phone-number {
     @include fsl(30px);
     @media (min-width: $breakpoint) {
+      @include fsl(55px);
+    }
+    @media (min-width: $breakpoint-l) {
       @include fsl(60px);
+    }
+    transition: $transition;
+
+    &:hover {
+      color: $color-blue;
     }
   }
 

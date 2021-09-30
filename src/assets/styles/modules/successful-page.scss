@@ -10,13 +10,12 @@
 
     &:nth-child(1) {
       @media (min-width: $breakpoint-m) {
-        // padding-right: 72px;
         padding-right: calc(#{$col-gap-m});
         flex-shrink: 0;
         width: calc(#{$col-part-m} * 2);
       }
       @media (min-width: $breakpoint) {
-        padding-right: 0;
+        padding-right: calc(#{$col-gap-d});
         width: calc(#{$col-part-d} * 6);
       }
     }

@@ -8,6 +8,9 @@
         margin-top: 20px;
         @media (min-width: $breakpoint) {
           margin-top: 0;
+          margin-left: 20px;
+        }
+        @media (min-width: $breakpoint-l) {
           margin-left: 30px;
         }
       }
@@ -31,8 +34,11 @@
   &__item {
     &:not(:first-child) {
       margin-top: 20px;
-      @media (min-width: $breakpoint - 1px) {
+      @media (min-width: $breakpoint) {
         margin-top: 0;
+        margin-left: 28px;
+      }
+      @media (min-width: $breakpoint-l) {
         margin-left: 36px;
       }
     }

@@ -274,6 +274,7 @@
       ;
     }
     @media (min-width: $breakpoint) {
+      align-items: flex-start;
       grid-template-columns: repeat(4, max-content);
       grid-template-areas: 
         "A B E F I"
