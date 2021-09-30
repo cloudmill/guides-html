@@ -336,13 +336,28 @@ mixin calculator-alt
         .calculator__item
           .calculator__label 
             |Date
-          .calculator__date 
-            |date
+          .calculator__data
+            .data-picker.data-picker--small
+              label.data-picker__label
+                .data-picker__icon 
+                  +calendar-svg.data-picker__svg
+                input.data-picker__input(type="text" placeholder='28.10.2021')
         .calculator__item
           .calculator__label 
             |Time
-          .calculator__time   
-            |time
+          .calculator__select
+            .select-wrapper
+              .select.select--small
+                select.select__mobile(name="location-mob")
+                  option(value="" disabled selected)
+                    |Location
+                  each item in data.selectValues.language
+                    option(value = item.value)
+                      |#{item.value}
+                select.select__select(name="location" style='width: 100%') 
+                  each item in data.selectValues.time
+                    option(value = item.value)
+                      |#{item.value} 
         .calculator__item
           .calculator__label 
             |Number of people

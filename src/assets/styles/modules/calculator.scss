@@ -9,42 +9,45 @@
       grid-template-areas: 
         "A B"
         "C C"
-        "D D"
-        "I I"
+        "D E"
       ;
+      align-items: flex-start;
+      row-gap: 20px;
       @media (min-width: $breakpoint-m) {
         grid-template-areas: 
           "A B C D"
-          "I I I I"
+          "E E E E"
         ;
       }
       @media (min-width: $breakpoint) {
         margin-top: 45px;
         column-gap: 30px;
         grid-template-areas: 
-          "A B C D I"
+          "A B C D E"
         ;
-        align-items: flex-start;
       }
     }
 
     #{$comp}__item {
+      $grid-items: (
+        1: A,
+        2: B,
+        3: C,
+        5: E,
+      );
 
-      &:nth-child(3) {
-        @media (min-width: $breakpoint-m) {
-          align-self: auto;
+      @each $index, $item in $grid-items {
+        &:nth-child(#{$index}) {
+          grid-area: $item;
         }
+      }
+
+      &:nth-child(2) {
+        margin: 0;
       }
 
       &:nth-child(4) {
         margin: 0;
-      }
-
-      &:nth-child(5) {
-        grid-area: I;
-        @media (min-width: $breakpoint) {
-          grid-area: auto;
-        }
       }
     }
 
@@ -103,51 +106,25 @@
     }
   }
 
-  &--price {
+  &--noprice {
 
     #{$comp}__grid {
-      
-      @media (max-width: $breakpoint-m - 1px) {
+      grid-template-areas: 
+        "A B"
+        "C C"
+        "D D"
+        "E E"
+      ;
+      @media (min-width: $breakpoint-m) {
         grid-template-areas: 
-          "A B"
-          "C C"
-          "D D"
-          "I I"
+          "A B C D"
+          "E E E E"
         ;
       }
-    }
-
-    #{$comp}__price-col {
-
-      &:nth-child(1) {
-        flex-wrap: wrap;
-        @media (min-width: $breakpoint-m) {
-          flex-wrap: nowrap;
-        }
-        @media (min-width: $breakpoint) {
-          padding-left: calc(#{$col-part-d} * 4 + 30px);
-        }
-      }
-    }
-
-    #{$comp}__price-left {
-      flex-shrink: 0;
-      width: calc(#{$col-part-m} * 2);
-      @media (min-width: $breakpoint-m) {
-        margin-right: 53px;
-        width: calc(#{$col-width-m} - 20px);
-      }
       @media (min-width: $breakpoint) {
-        margin-right: 0;
-        width: auto;
-      }
-    }
-    #{$comp}__price-right {
-      margin-top: 20px;
-      width: auto;
-      @media (min-width: $breakpoint-m) {
-        margin-top: 0;
-        flex-shrink: 0;
+        grid-template-areas: 
+          "A B C D E"
+        ;
       }
     }
   }
