@@ -15,15 +15,19 @@ $(() => {
     gridText.each(function() {
       arr.push($(this).text())
     })
-    const textItems = arr.map(item => `<div class="comparison__item">
-    <div class="comparison__cell">
-    <div class="comparison__text">${item}</div>
-    </div>
-    </div>`).join('')
-    const template = `<div class="comparison__template">
-    <div class="comparison__line"></div>
-    ${textItems}
-    </div>`
+    const textItems = arr.map(item => 
+      `<div class="comparison__item">
+      <div class="comparison__cell">
+      <div class="comparison__text">${item}</div>
+      </div>
+      </div>`
+    ).join('')
+    const template = (
+      `<div class="comparison__template">
+      <div class="comparison__line"></div>
+      ${textItems}
+      </div>` 
+    )
 
     table.append(template)
 
