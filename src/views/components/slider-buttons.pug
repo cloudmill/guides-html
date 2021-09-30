@@ -1,8 +1,8 @@
 mixin slider-buttons 
   .slider-buttons(class = attributes.class)
     .slider-buttons__item   
-      .slider-buttons__button(data-slider-button = attributes.prev)
+      .slider-buttons__button.animation(data-slider-button = attributes.prev)
         +arrow-svg.slider-buttons__icon
-    .slider-buttons__item   
-      .slider-buttons__button.slider-buttons__button--right(data-slider-button = attributes.next)
+    .slider-buttons__item  
+      .slider-buttons__button.slider-buttons__button--right.animation(data-slider-button = attributes.next)
         +arrow-svg.slider-buttons__icon
