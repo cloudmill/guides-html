@@ -4,11 +4,11 @@ mixin aside
       +aside-button
       .aside__dropdown(data-accordion-dropdown='')
         ul.aside__list
-          li.aside__item 
+          li.aside__item(data-select-parent='')
             .aside__top 
               .aside__type 
                 |Language
-              .aside__select.aside__select--disabled
+              .aside__select.disabled(data-select-button='')
                 |Select
             .aside__body
               .select-wrapper
@@ -29,7 +29,7 @@ mixin aside
               .aside__top 
                 .aside__type 
                   |#{item.type}
-                .aside__select.aside__select--disabled
+                .aside__select.disabled
                   |Select
               .aside__body 
                 each text in item.options

@@ -94,10 +94,12 @@
     border-radius: 14px;
     @include fsl(16px);
     cursor: pointer;
+    transition: $transition;
 
-    &--disable {
+    &.disabled {
       background: $color-light-gray;
       opacity: 0.5;
+      pointer-events: none;
     }
   }
 

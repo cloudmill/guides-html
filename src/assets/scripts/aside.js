@@ -15,10 +15,10 @@ $(() => {
 
       itemCheckbox.each(function() {
         if (this.checked === true) {
-          itemLabel.removeClass('aside__select--disabled')
+          itemLabel.removeClass('disabled')
           return false
         } else {
-          itemLabel.addClass('aside__select--disabled')
+          itemLabel.addClass('disabled')
         }
       })
     })

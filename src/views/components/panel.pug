@@ -1,5 +1,5 @@
 mixin panel 
-  .panel(class=attributes.class)
+  .panel(class=attributes.class data-select-parent='')
     .container
       .panel__inner 
         .panel__row 
@@ -42,7 +42,7 @@ mixin panel
                       +calendar-svg.data-picker__svg
                     input.data-picker__input(type="text" placeholder='28.10.2021')
           .panel__col
-            a.panel__button.animation(href="#" class=(attributes.disabled ? 'panel__button--disable' : ''))
+            a.panel__button.animation(href="#" data-select-button='' class=(attributes.disabled ? 'disabled' : ''))
               span.animation__span 
                 |#{attributes.button}
 //- .excursion-btn__button--active

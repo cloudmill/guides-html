@@ -21,6 +21,15 @@ import {mediaQueryTable} from './mediaQueries'
         placeholder: selectPlaceholder,
       });
 
+      
+      select.one('change', function() {
+        const item = $(this).closest('[data-select-parent]')
+        const btn = item.find('[data-select-button]')
+        console.log(btn);
+        console.log(item);
+        btn.removeClass('disabled')
+      })
+
       select.on('select2:open', () => {
         selectWrapper.css('z-index', '100000');
 
