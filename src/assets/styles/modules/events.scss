@@ -135,7 +135,7 @@
   }
 
   &__tab {
-    padding: 0 30px;
+    padding: 4px 30px;
     @media (min-width: $breakpoint) {
       padding: 0 19px;
     }
@@ -181,6 +181,17 @@
   &__bot-col {
     &:nth-child(1) {
       display: flex;
+      @media (max-width: $breakpoint-xs - 1px) {
+        flex-wrap: wrap;
+
+        #{$comp}__bot-item {
+          width: 100%;
+
+          &:not(:first-child) {
+            margin-top: 10px;
+          }
+        }
+      }
     }
     &:nth-child(2) {
       margin-top: 20px;

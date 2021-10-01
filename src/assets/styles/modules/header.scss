@@ -269,6 +269,9 @@
     @media (max-width: $breakpoint - 1px) {
       margin-left: 15px;
     }
+    @media (max-width: $breakpoint-xs - 1px) {
+      margin-left: 5px;
+    }
 
     display: flex;
     align-items: center;
@@ -643,6 +646,9 @@
 
     &:not(:first-child) {
       margin-left: 20px;
+      @media (max-width: $breakpoint-xs - 1px) {
+        margin-left: 5px;
+      }
     }
   }
 }

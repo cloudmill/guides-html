@@ -37,9 +37,11 @@
 
     &:nth-child(1) {
       @media (min-width: $breakpoint-m) {
+        padding-right: calc(#{$col-gap-m});
         width: calc(#{$col-part-m} * 2);
       }
       @media (min-width: $breakpoint) {
+        padding-right: 0;
         width: calc(#{$col-part-d} * 6);
       }
     }
@@ -74,6 +76,10 @@
   }
 
   &__item {
+    width: calc((100% / 2) - 5px);
+    @media (min-width: $breakpoint) {
+      width: 200px;
+    }
 
     &:not(:first-child) {
       margin-left: 10px;

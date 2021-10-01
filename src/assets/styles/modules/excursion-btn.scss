@@ -2,15 +2,18 @@
   $comp: &;
 
   display: flex;
-  
+  width: 100%;
+
   &__button {
-    padding: 9px 13px;
+    // padding: 9px 11px;
+    padding: 9px 0;
     @media (min-width: $breakpoint) {
-      padding: 19px 16px;
+      padding: 19px 11px 19px 12px;
     }
 
     display: flex;
     align-items: center;
+    justify-content: center;
 
     border: 1px solid $color-light-gray;
     border-radius: 14px;
@@ -46,10 +49,19 @@
     height: 22px;
   }
 
+  &__cruise {
+    @media (max-width: $breakpoint-xs - 1px) {
+      width: 20px;
+    }
+  }
+
   &__text {
     margin-left: 8px;
     @media (min-width: $breakpoint) {
       margin-left: 20px;
+    }
+    @media (max-width: $breakpoint-xs - 1px) {
+      margin-left: 3px;
     }
 
     @include fsl(14px);

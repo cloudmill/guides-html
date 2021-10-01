@@ -1,13 +1,27 @@
 .landmark-card {
+  $comp: &;
 
   display: block;
 
+  &:hover {
+    #{$comp}__img {
+      transform: scale(1.2);
+    }
+  }
+
   &__container {
+    position: relative;
+    z-index: 0;
+
     display: flex;
     align-items: center;
 
     border-radius: 10px;
     overflow: hidden;
+  }
+
+  &__img {
+    transition: $transition;
   }
 
   &__title {
