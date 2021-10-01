@@ -2,6 +2,6 @@ mixin nav
   nav.nav(class=attributes.class)
     ul.nav__list 
       each item in attributes.links
-        li.nav__item 
+        li.nav__item(data-aos='fade-up') 
           a.nav__link(href="#") 
             |#{item.link}

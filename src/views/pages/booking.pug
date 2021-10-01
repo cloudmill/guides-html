@@ -49,7 +49,7 @@ block content
 
   .booking-page
     section.section.section--first
-      .container
+      .container(data-aos='fade-up')
         +navigation(page="Booking an excursion")
     section.section.section--md 
       .container
@@ -59,22 +59,22 @@ block content
               .booking-page__top
                 .booking-page__item
                   each item in ddata.first
-                    .form__item 
+                    .form__item(data-aos='fade-up') 
                       +input(name = item.name placeholder = item.placeholder type = item.type)
                 .booking-page__item
                   each item in ddata.second
-                    .form__item 
+                    .form__item(data-aos='fade-up') 
                       +input(name = item.name placeholder = item.placeholder type = item.type)
               .booking-page__inner 
-                h4.booking-page__title 
+                h4.booking-page__title(data-aos='fade-up') 
                   |Tour comment
-                .booking-page__item
+                .booking-page__item(data-aos='fade-up')
                   +input(name = 'requests' placeholder = 'Special requests' type = 'text')
                 .form__wrapper 
                   .booking-page__top
-                    .booking-page__item
+                    .booking-page__item(data-aos='fade-up')
                       +checkbox
-                    .booking-page__item
+                    .booking-page__item(data-aos='fade-up')
                       +checkbox(text = 'I allow you to write to Viber, Telegram, and WhatsApp')
                 .form__button 
                   +button.button--sticky(tag = 'button')
@@ -84,15 +84,15 @@ block content
               .booking-page__grid-item
                 .booking-page__card 
                   .booking-page__card-container 
-                    h4.booking-page__title 
+                    h4.booking-page__title(data-aos='fade-up') 
                       |Walking tour of St. Petersburg
                     .booking-page__card-info 
-                      .booking-page__card-item 
+                      .booking-page__card-item(data-aos='fade-up') 
                         .booking-page__card-label 
                           |date
                         .booking-page__card-time 
                           |29.10.2021
-                      .booking-page__card-item 
+                      .booking-page__card-item(data-aos='fade-up') 
                         .booking-page__card-label 
                           |time
                         .booking-page__card-time 

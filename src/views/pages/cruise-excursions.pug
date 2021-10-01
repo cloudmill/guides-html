@@ -8,9 +8,9 @@ include  ../components/excursion-card
 
 block content
   .excursions-page
-    section.section.section--panel 
+    section.section.section--panel(data-aos='fade-up') 
       +panel(cruise=true disabled=true button='Apply')
-    section.section.section--md
+    section.section.section--md(data-aos='fade-up')
       .container
         +navigation(page="Shore excursions")
     section.section.section--md 
@@ -21,9 +21,9 @@ block content
           .row__col
             .row__grid  
               each item in data.landExcursion
-                .row__item 
+                .row__item(data-aos='fade-up') 
                   +excursion-card.excursion-card--response(tag='div' title = item.title src = item.src cruise=true)
-            .button-wrapper 
+            .button-wrapper(data-aos='fade-up') 
               +button(tag='div')
                 |Show more
             +tour(text = data.cruiseTour)

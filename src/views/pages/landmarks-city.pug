@@ -20,7 +20,7 @@ block content
                 .aside__dropdown(data-accordion-dropdown='')
                   ul.landmarks-page__list 
                     each item, i in ['Saint Petersburg', 'Moscow', 'Novgorod', 'Tallinn', 'Helsinki', 'Porvoo', 'Berlin', 'Rostock/Warnemünde', 'Schwerin', 'Stockholm', 'Copenhagen']
-                      li.landmarks-page__item(class=((i === 0) ? 'active' : '') data-accordion='')
+                      li.landmarks-page__item(class=((i === 0) ? 'active' : '') data-accordion='' data-aos='fade-up')
                         .landmarks-page__button(data-accordion-button='')
                           .landmarks-page__city
                             |#{item}
@@ -60,10 +60,10 @@ block content
                                       a.landmarks-page__dropdown-text(href="#") 
                                         |#{item}
           .row__col
-            .row__grid 
+            .row__grid
               each item in data.landmarksSaintPeter
                 +landmark-card(src = item.src title = item.title)
-            .button-wrapper
+            .button-wrapper(data-aos='fade-up')
               +button(tag='div')
                 |Show more
             +tour(text = data.landmarksTour title = 'Landmarks of Saint Petersburg')

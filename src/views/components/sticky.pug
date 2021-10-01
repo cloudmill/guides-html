@@ -3,40 +3,40 @@ mixin sticky-mobile
     .sticky__category 
       .category
         each item in ['Individual', 'First choice', '-20% off']
-          .category__item
+          .category__item(data-aos='fade-up') 
             |#{item}
     .sticky__inner 
       .sticky__grid
         if (!attributes.activity)
           each item in attributes.data
-            .sticky__item 
+            .sticky__item(data-aos='fade-up')  
               .sticky__label 
                 |#{item.label}
               .sticky__text 
                 |#{item.text}
         else 
           each item in data.cruiseSticky.first
-            .sticky__item 
+            .sticky__item(data-aos='fade-up')  
               .sticky__label 
                 |#{item.label}
               .sticky__text 
                 |#{item.text}
-          .sticky__item 
+          .sticky__item(data-aos='fade-up')  
             .sticky__label 
               |activity
             ul.sticky__dots
               - for (i = 0; i < 5; i++)
                 li.sticky__dot(class=((i < 3) ? 'sticky__dot--active' : ''))
           each item in data.cruiseSticky.second
-            .sticky__item 
+            .sticky__item(data-aos='fade-up')  
               .sticky__label 
                 |#{item.label}
               .sticky__text 
                 |#{item.text}
-    .sticky__inner 
+    .sticky__inner(data-aos='fade-up')  
       .sticky__price 
         |from #[span.sticky__price-discont $159] #[span.sticky__price-price $129] / person
-    .sticky__button 
+    .sticky__button(data-aos='fade-up')  
       a.button.button--sticky.animation(href="#" data-scroll='#calculator') 
         span.animation__span 
           |Arrange a tour

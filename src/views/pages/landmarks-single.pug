@@ -14,7 +14,7 @@ block content
         .section__row
           .section__col
             .excursion-page__breadcrumbs 
-              .breadcrumb
+              .breadcrumb(data-aos='fade-up')
                 ul.breadcrumb__list 
                   li.breadcrumb__item 
                     a.breadcrumb__link(href="#") 
@@ -25,10 +25,10 @@ block content
                   li.breadcrumb__item.breadcrumb__item--active 
                     a.breadcrumb__link(href="#")
                       |Walking tour of St. Petersburg
-            .excursion-page__thumb-slider
+            .excursion-page__thumb-slider(data-aos='fade-up')
               +thumb-slider
             .excursion-page__mobile  
-              h1 
+              h1(data-aos='fade-up') 
                 |Walking tour of St. Petersburg
               +sticky-mobile(data = data.landSticky)
             section.section 
@@ -50,7 +50,7 @@ block content
                       },
                     ]
                   each item in ddata
-                    .sticky__item 
+                    .sticky__item(data-aos='fade-up') 
                       .sticky__label 
                         |#{item.label}
                       .sticky__text 
@@ -58,13 +58,13 @@ block content
     section.section 
       .container 
         .excursion-page__slider 
-          .excursion-page__slider-row 
+          .excursion-page__slider-row(data-aos='fade-up')
             .excursion-page__slider-col
               h2
                 |Similar tours
             .excursion-page__slider-col
               +slider-buttons(next = 1 prev = 2)
-          .swiper-container.swiper-container--slide-width-auto.swiper-container--visible.swiper-container--slide-height-max(data-slider-id='1' data-slider-next='1' data-slider-prev='2')
+          .swiper-container.swiper-container--slide-width-auto.swiper-container--visible.swiper-container--slide-height-max(data-slider-id='1' data-slider-next='1' data-slider-prev='2' data-aos='fade-up')
             .swiper-wrapper
               each item in data.mainSellers 
                 .swiper-slide 

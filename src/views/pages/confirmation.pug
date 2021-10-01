@@ -78,7 +78,7 @@ block content
   .confirmation-page
     section.section.section--first 
       .container
-        .navigation   
+        .navigation(data-aos='fade-up')   
           .navigation__inner
             .breadcrumb
               ul.breadcrumb__list 
@@ -101,7 +101,7 @@ block content
           .confirmation-page__info 
             ul.confirmation-page__list
               each item in ddata
-                li.confirmation-page__list-item 
+                li.confirmation-page__list-item(data-aos='fade-up') 
                   .confirmation-page__list-col
                     .confirmation-page__list-name
                       |#{item.name}
@@ -111,18 +111,18 @@ block content
             .confirmation-page__total 
               .confirmation-page__total-item
                 .confirmation-page__total-row 
-                  .confirmation-page__total-col
+                  .confirmation-page__total-col(data-aos='fade-up')
                     .confirmation-page__total-title 
                       |Total
-                  .confirmation-page__total-col
+                  .confirmation-page__total-col(data-aos='fade-up')
                     .confirmation-page__total-text 
                       |$1200
               .confirmation-page__total-item
                 .confirmation-page__total-row 
-                  .confirmation-page__total-col
+                  .confirmation-page__total-col(data-aos='fade-up')
                     .confirmation-page__total-title 
                       |Prepayment
-                  .confirmation-page__total-col
+                  .confirmation-page__total-col(data-aos='fade-up')
                     +tabs
                     .confirmation-page__total-label 
                       |70% to be paid in cash to the guide after the tour
@@ -131,18 +131,18 @@ block content
               .cart-price__container 
                 .cart-price__row 
                   .cart-price__col 
-                    .cart-price__item 
+                    .cart-price__item(data-aos='fade-up') 
                       .cart-price__text 
                         |Total amount
                       .cart-price__number
                         |$360
-                    .cart-price__item 
+                    .cart-price__item(data-aos='fade-up') 
                       .cart-price__text 
                         |Payment
                       .confirmation-page__pay-text 
                         |Bank card
                       a.cart-price__link(href="#") 
                         |Payment security is ensured
-                  .cart-price__col 
+                  .cart-price__col(data-aos='fade-up')
                     +button.button--sticky(tag = 'a' href='#')
                       |Pay

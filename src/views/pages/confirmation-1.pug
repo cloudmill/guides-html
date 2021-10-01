@@ -78,7 +78,7 @@ block content
   .confirmation-page
     section.section.section--first 
       .container
-        .navigation   
+        .navigation(data-aos='fade-up')  
           .navigation__inner
             .breadcrumb
               ul.breadcrumb__list 
@@ -101,14 +101,14 @@ block content
           .confirmation-page__info 
             ul.confirmation-page__list
               each item in ddata
-                li.confirmation-page__list-item 
+                li.confirmation-page__list-item(data-aos='fade-up') 
                   .confirmation-page__list-col
                     .confirmation-page__list-name
                       |#{item.name}
                   .confirmation-page__list-col
                     .confirmation-page__list-text 
                       |#{item.text}
-            .confirmation-page__total 
+            .confirmation-page__total(data-aos='fade-up') 
               .confirmation-page__total-item
                 .confirmation-page__total-row 
                   .confirmation-page__total-col
@@ -122,14 +122,14 @@ block content
               .cart-price__container 
                 .cart-price__row 
                   .cart-price__col 
-                    .cart-price__item 
+                    .cart-price__item(data-aos='fade-up') 
                       .cart-price__text 
                         |Total amount
                       .cart-price__number
                         |$360
-                    .cart-price__item 
+                    .cart-price__item(data-aos='fade-up') 
                       .confirmation-page__text
                         |This tour can only be booked after consultation with the manager. Our manager will contact you as soon as possible»
-                  .cart-price__col 
+                  .cart-price__col(data-aos='fade-up') 
                     +button.button--sticky(tag = 'a' href='#')
                       |Send request

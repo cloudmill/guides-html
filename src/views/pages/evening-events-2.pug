@@ -23,7 +23,7 @@ block content
         .section__row 
           .section__col
             .excursion-page__breadcrumbs 
-              .breadcrumb
+              .breadcrumb(data-aos='fade-up')
                 ul.breadcrumb__list 
                   li.breadcrumb__item 
                     a.breadcrumb__link(href="#") 
@@ -34,26 +34,26 @@ block content
                   li.breadcrumb__item.breadcrumb__item--active 
                     a.breadcrumb__link(href="#")
                       |Folk show
-            .excursion-page__thumb-slider
+            .excursion-page__thumb-slider(data-aos='fade-up')
               +thumb-slider
             .excursion-page__mobile  
-              h1 
+              h1(data-aos='fade-up') 
                 |Folk show
               .sticky(data-sticky-for='1279')
                 .sticky__inner 
                   .sticky__grid
                     each item in ddata
-                      .sticky__item 
+                      .sticky__item(data-aos='fade-up')
                         .sticky__label 
                           |#{item.label}
                         .sticky__text 
                           |#{item.text}
-                    .sticky__item 
+                    .sticky__item(data-aos='fade-up') 
                       .sticky__label 
                         |tour duration
                       .sticky__text 
                         |3 hours
-                .sticky__inner 
+                .sticky__inner(data-aos='fade-up') 
                   .sticky__price 
                     |from #[span.sticky__price-discont $159] #[span.sticky__price-price $129] / person
             .excursion-page__price
@@ -66,19 +66,19 @@ block content
               .sticky__inner 
                 .sticky__grid
                   each item in ddata
-                    .sticky__item 
+                    .sticky__item(data-aos='fade-up') 
                       .sticky__label 
                         |#{item.label}
                       .sticky__text 
                         |#{item.text}
               .sticky__inner 
                 .sticky__grid
-                  .sticky__item 
+                  .sticky__item(data-aos='fade-up')
                     .sticky__label 
                       |tour duration
                     .sticky__text 
                       |3 hours
-              .sticky__inner 
+              .sticky__inner(data-aos='fade-up') 
                 .sticky__price 
                   |from #[span.sticky__price-discont $159] #[span.sticky__price-price $129] / person
     section.section 

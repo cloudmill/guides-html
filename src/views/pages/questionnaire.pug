@@ -51,7 +51,7 @@ block content
       .container
         .navigation   
           .navigation__inner
-            .breadcrumb
+            .breadcrumb(data-aos='fade-up') 
               ul.breadcrumb__list 
                 li.breadcrumb__item 
                   a.breadcrumb__link(href="#") 
@@ -59,7 +59,7 @@ block content
                 li.breadcrumb__item.breadcrumb__item--active 
                   a.breadcrumb__link(href="#")
                     |Booking an excursion
-          .booking-page__wrapper
+          .booking-page__wrapper(data-aos='fade-up') 
             h1
               |Fill out the application forms for obtaining a temporary visa
     section.section.section--md 
@@ -68,14 +68,14 @@ block content
           .booking-page__col
             form.form(action="/") 
               .booking-page__inner  
-                h3.form__title.form__title--left
+                h3.form__title.form__title--left(data-aos='fade-up') 
                   |Guest 1
                 .booking-page__top
                   .booking-page__item
                     each item in ddata.first
-                      .form__item 
+                      .form__item(data-aos='fade-up')  
                         +input(name = item.name placeholder = item.placeholder type = item.type)
-                    .form__item 
+                    .form__item(data-aos='fade-up')  
                       .select-wrapper
                         .select
                           select.select__mobile(name="location-mob")
@@ -93,16 +93,16 @@ block content
                               |Female
                   .booking-page__item
                     each item in ddata.second
-                      .form__item 
+                      .form__item(data-aos='fade-up')  
                         +input(name = item.name placeholder = item.placeholder type = item.type)
               .booking-page__inner
-                .form__item
+                .form__item(data-aos='fade-up') 
                   .button-icon.animation
                     .button-icon__icon 
                       +plus-svg.button-icon__svg.button-icon__plus
                     span.button-icon__text.animation__span
                       |Add guest
-                .form__item
+                .form__item(data-aos='fade-up') 
                   +button.button--sticky(tag = 'button')
                     |Further
           .booking-page__col
@@ -110,10 +110,10 @@ block content
               .booking-page__card-container 
                 .booking-page__card-row 
                   .booking-page__card-col
-                    h4.booking-page__title 
+                    h4.booking-page__title(data-aos='fade-up')  
                       |Applying for a temporary visa
                   .booking-page__card-col
-                    p.booking-page__card-text
+                    p.booking-page__card-text(data-aos='fade-up') 
                       |Attention! In order to take this tour, you need to apply for a temporary visa.
-                    p.booking-page__card-text
+                    p.booking-page__card-text(data-aos='fade-up') 
                       |Without a temporary visa, you will not be allowed out of the port.

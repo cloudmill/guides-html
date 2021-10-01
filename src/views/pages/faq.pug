@@ -7,7 +7,7 @@ include  ../components/modals
 
 block content 
   .faq-page
-    section.section.section--first
+    section.section.section--first(data-aos='fade-up')
       .container
         +navigation(page="FAQ")
     section.section.section--md
@@ -18,17 +18,17 @@ block content
               +product-tabs
             ul.faq-page__pagination
               each item, index in data.faqPagination
-                li.faq-page__pagination-item(class=((index===0) ? 'faq-page__pagination-item--active' : ''))
+                li.faq-page__pagination-item(class=((index===0) ? 'faq-page__pagination-item--active' : '') data-aos='fade-up')
                   .faq-page__pagination-button 
                     |#{item.text}
-            .faq-page__bot 
+            .faq-page__bot(data-aos='fade-up') 
               .button.button--xl.animation(data-fancy-button='1')
                 span.animation__span 
                   |Ask your question
           .faq-page__col
             ul.faq-page__list
               each item in data.faqAccordion
-                li.faq-page__item
+                li.faq-page__item(data-aos='fade-up')
                   .faq-page__accordion(data-accordion) 
                     .faq-page__accordion-head(data-accordion-button)
                       .faq-page__accordion-row 
@@ -46,7 +46,7 @@ block content
                       .faq-page__accordion-container 
                         .faq-page__accordion-text
                           |Booking is carried out after full agreement of the program and the price. When booking, we will ask you to make a prepayment in the amount of 20% to 100% of the cost. The amount of the prepayment depends on the content of the program. When booking some programs, you will need the passport details of the participants.
-            .button-wrapper
+            .button-wrapper(data-aos='fade-up')
               +button(tag='div')
                 |Show more
   .modals 

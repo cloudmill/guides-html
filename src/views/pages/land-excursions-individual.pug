@@ -18,7 +18,7 @@ block content
         .section__row
           .section__col
             .excursion-page__breadcrumbs 
-              .breadcrumb
+              .breadcrumb(data-aos='fade-up')
                 ul.breadcrumb__list 
                   li.breadcrumb__item 
                     a.breadcrumb__link(href="#") 
@@ -29,10 +29,10 @@ block content
                   li.breadcrumb__item.breadcrumb__item--active 
                     a.breadcrumb__link(href="#")
                       |Walking tour of St. Petersburg
-            .excursion-page__thumb-slider
+            .excursion-page__thumb-slider(data-aos='fade-up')
               +thumb-slider
             .excursion-page__mobile  
-              h1 
+              h1(data-aos='fade-up') 
                 |Walking tour of St. Petersburg
               +sticky-mobile(data = data.landSticky)
             .excursion-page__price 
@@ -46,7 +46,7 @@ block content
           .section__col(data-sticky-container='')
             .sticky.sticky--width(data-margin-top='178')
               +navigation(items=['For hotel guests'] page="Walking tour of St. Petersburg")
-              .sticky__category 
+              .sticky__category(data-aos='fade-up') 
                 .category
                   each item in ['Individual', 'First choice', '-20% off']
                     .category__item
@@ -54,15 +54,15 @@ block content
               .sticky__inner 
                 .sticky__grid
                   each item in data.landSticky
-                    .sticky__item 
+                    .sticky__item(data-aos='fade-up') 
                       .sticky__label 
                         |#{item.label}
                       .sticky__text 
                         |#{item.text}
-              .sticky__inner 
+              .sticky__inner(data-aos='fade-up') 
                 .sticky__price 
                   |from #[span.sticky__price-discont $159] #[span.sticky__price-price $129] / person
-              .sticky__button 
+              .sticky__button(data-aos='fade-up') 
                 a.button.button--sticky.animation(href="#" data-scroll='#calculator') 
                   span.animation__span 
                     |Arrange a tour
@@ -72,13 +72,13 @@ block content
     section.section 
       .container 
         .excursion-page__slider 
-          .excursion-page__slider-row 
+          .excursion-page__slider-row(data-aos='fade-up')
             .excursion-page__slider-col
               h2
                 |Similar tours
             .excursion-page__slider-col
               +slider-buttons(next = 1 prev = 2)
-          .swiper-container.swiper-container--slide-width-auto.swiper-container--visible.swiper-container--slide-height-max(data-slider-id='1' data-slider-next='1' data-slider-prev='2')
+          .swiper-container.swiper-container--slide-width-auto.swiper-container--visible.swiper-container--slide-height-max(data-slider-id='1' data-slider-next='1' data-slider-prev='2' data-aos='fade-up')
             .swiper-wrapper
               each item in data.mainSellers 
                 .swiper-slide 

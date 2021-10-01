@@ -6,35 +6,35 @@ include  ../components/social
 
 block content 
   .contacts-page
-    section.section.section--first
+    section.section.section--first(data-aos='fade-up')
       .container
         +navigation(page="Contacts")
     section.section.section--md
       .container 
         .contacts-page__row
-          .contacts-page__col
+          .contacts-page__col(data-aos='fade-up')
             +media.media--contacts(link = 'On map')
           .contacts-page__col
             .contacts-page__social 
-              .contacts-page__social-item 
+              .contacts-page__social-item(data-aos='fade-up') 
                 h4.contacts-page__social-label
                   |Social
                 +social.social--contacts 
-              .contacts-page__social-item 
+              .contacts-page__social-item(data-aos='fade-up') 
                 h4.contacts-page__social-label
                   |Skype
                 a.contacts-page__social-link(href="#")  
                   |bestguides-spb
           .contacts-page__col
-            h4.contacts-page__social-label
+            h4.contacts-page__social-label(data-aos='fade-up')
               |Duty Manager
-            .contacts-page__phone
+            .contacts-page__phone(data-aos='fade-up')
               .contacts-page__phone-icon
                 +call-svg.contacts-page__phone-svg
               a.contacts-page__phone-number(href="tel:+79214022048")
                 |+7 921 402-20-48 
             .contacts-page__links 
               each item in ['WhatsApp', 'Viber', 'Telegram']
-                .contacts-page__links-item
+                .contacts-page__links-item(data-aos='fade-up')
                   a.contacts-page__links-link(href="#") 
                     |#{item}

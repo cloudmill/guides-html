@@ -6,7 +6,7 @@ block content
       .container
         .navigation   
           .navigation__inner
-            .breadcrumb
+            .breadcrumb(data-aos='fade-up')
               ul.breadcrumb__list 
                 li.breadcrumb__item 
                   a.breadcrumb__link(href="#") 
@@ -15,11 +15,11 @@ block content
                   a.breadcrumb__link(href="#")
                     |Cart
         .cart-page__empty
-          .cart-page__empty-col
+          .cart-page__empty-col(data-aos='fade-up')
             h1 
               |Cart
             h3.cart-page__empty-title 
               |There are no selected tours.
-          .cart-page__empty-col
+          .cart-page__empty-col(data-aos='fade-up')
             .cart-page__empty-image 
               +bag-empty-svg.cart-page__empty-svg

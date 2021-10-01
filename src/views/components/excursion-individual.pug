@@ -1,18 +1,18 @@
 //- Все миксины используются внутри индивидуальных экскурсий
 mixin programm 
   .excursion-page__programm 
-    h2
+    h2(data-aos='fade-up') 
       |Programme
     if (attributes.tabs)
       .excursion-page__tabs
         .excursion-page__tabs-container
           each item, i in ['1st day', '2nd day', '3rd day']
-            .excursion-page__tabs-item(class=((i === 0) ? 'excursion-page__tabs-item--active' : ''))
+            .excursion-page__tabs-item(data-aos='fade-up'  class=((i === 0) ? 'excursion-page__tabs-item--active' : ''))
               .excursion-page__tabs-tab 
                 |#{item}
     ul.excursion-page__programm-list 
       if (attributes.label)
-        li.excursion-page__programm-item 
+        li.excursion-page__programm-item(data-aos='fade-up')  
           .excursion-page__programm-row 
             .excursion-page__programm-col
               .excursion-page__programm-time 
@@ -24,7 +24,7 @@ mixin programm
                 .excursion-page__programm-label
                   |We can choose the most convenient time for you. Write about it in the tour when ordering
       each item in data.landProgramm
-        li.excursion-page__programm-item 
+        li.excursion-page__programm-item(data-aos='fade-up')  
           .excursion-page__programm-row 
             .excursion-page__programm-col
               .excursion-page__programm-time 
@@ -36,37 +36,37 @@ mixin programm
 mixin landmarks 
   .excursion-page__landmarks 
     .excursion-page__landmarks-row 
-      .excursion-page__landmarks-col
+      .excursion-page__landmarks-col(data-aos='fade-up') 
         h2
           |Landmarks
       .excursion-page__landmarks-col
         ul.excursion-page__landmarks-list
           each item in data.landmarks 
-            li.excursion-page__landmarks-item 
+            li.excursion-page__landmarks-item(data-aos='fade-up') 
               |#{item.text}
         if (attributes.button)
-          .excursion-page__landmarks-btn
+          .excursion-page__landmarks-btn(data-aos='fade-up') 
             .excursion-page__button.animation 
               span.animation__span 
                 |Show all
 
 mixin about
   .excursion-page__about(data-accordion)
-    h2
+    h2(data-aos='fade-up') 
       |About tour
     .excursion-page__about-content 
-      p.excursion-page__about-text  
+      p.excursion-page__about-text(data-aos='fade-up')   
         |Walking tour of St. Petersburg is one of our most popular, most popular excursions. In fact, this is a fascinating walking tour with a guide around St. Petersburg, in the very center, in the most beautiful and romantic places of the city. Fresh air, a beautiful city, an interesting story-what could be better!
-      p.excursion-page__about-text 
+      p.excursion-page__about-text(data-aos='fade-up') 
         |We tried to include the most beautiful places and the most important sights of St. Petersburg in our excursion-walk. We tried to make this route interesting and dynamic, but the tour route can be changed according to your wishes.
     .excursion-page__about-dropdown(data-accordion-dropdown='')
       .video 
-        .video__container 
+        .video__container(data-aos='fade-up') 
           .video__img
             img(src="assets/images/video.jpg", alt="")
           .video__button 
             +play-svg.video__icon
-    .excursion-page__about-btn
+    .excursion-page__about-btn(data-aos='fade-up') 
       .excursion-page__button(data-accordion-button='')
         span.excursion-page__about-default
           |Read more 
@@ -76,23 +76,23 @@ mixin about
 mixin calculator
   .calculator
     .calculator__container 
-      h2
+      h2(data-aos='fade-up') 
         |Calculate the cost
       .calculator__mobile 
         .calculator__top 
           .calculator__top-col
-            .calculator__top-item 
+            .calculator__top-item(data-aos='fade-up')  
               .calculator__label
                 |Date
               .calculator__text
                 |28.10.2021
-            .calculator__top-item 
+            .calculator__top-item(data-aos='fade-up')  
               .calculator__label
                 |Time
               .calculator__text
                 |11:00
           .calculator__top-col
-            .calculator__select 
+            .calculator__select(data-aos='fade-up')  
               .select-wrapper
                 .select.select--small
                   select.select__mobile(name="location-mob")
@@ -106,15 +106,14 @@ mixin calculator
                     each item in data.selectValues.language
                       option(value = item.value)
                         |#{item.value} 
-        .calculator__title
-          h4
-            |Number of people
+        h4.calculator__title(data-aos='fade-up') 
+          |Number of people
         .calculator__grid
           each item in ['Adults', 'Students with ISIC', 'Children 6-16 years old', 'Children 0-6 years old',]
-            .calculator__item
+            .calculator__item(data-aos='fade-up') 
               .calculator__label 
                 |#{item}
-            .calculator__item
+            .calculator__item(data-aos='fade-up') 
               .counter 
                 .counter__item.counter__item--minus
                   +minus-svg.counter__minus
@@ -123,7 +122,7 @@ mixin calculator
                 .counter__item.counter__item--plus
                   +plus-svg.counter__plus
           .calculator__grid-row 
-            .calculator__grid-col
+            .calculator__grid-col(data-aos='fade-up') 
               .calculator__label 
                 |Among them wheelchair users
               .counter 
@@ -135,7 +134,7 @@ mixin calculator
                   +plus-svg.counter__plus
               .calculator__description 
                 |Doesn’t influence the cost
-            .calculator__grid-col
+            .calculator__grid-col(data-aos='fade-up') 
               .calculator__grid-item
                 .calculator__label
                   |Number of people
@@ -148,7 +147,7 @@ mixin calculator
                   |$1300
       .calculator__desktop
         .calculator__top 
-          .calculator__top-col
+          .calculator__top-col(data-aos='fade-up') 
             .calculator__top-item 
               .calculator__label
                 |Date
@@ -159,7 +158,7 @@ mixin calculator
                 |Time
               .calculator__text
                 |11:00
-          .calculator__top-col
+          .calculator__top-col(data-aos='fade-up') 
             .calculator__select 
               .select-wrapper
                 .select.select--small
@@ -168,7 +167,7 @@ mixin calculator
                     each item in data.selectValues.language
                       option(value = item.value)
                         |#{item.value}
-          .calculator__top-col
+          .calculator__top-col(data-aos='fade-up') 
             .calculator__top-item 
               .calculator__label
                 |Number of people
@@ -179,15 +178,14 @@ mixin calculator
                 |Total amount
               .calculator__num 
                 |$1265
-        .calculator__title
-          h4
-            |Number of people
+        h4.calculator__title(data-aos='fade-up') 
+          |Number of people
         .calculator__grid 
           each item in ['Adults', 'Students with ISIC', 'Children 6-16 years old', 'Children 0-6 years old',]
-            .calculator__item
+            .calculator__item(data-aos='fade-up')
               .calculator__label 
                 |#{item}
-            .calculator__item
+            .calculator__item(data-aos='fade-up')
               .counter 
                 .counter__item.counter__item--minus
                   +minus-svg.counter__minus
@@ -195,10 +193,10 @@ mixin calculator
                   |0
                 .counter__item.counter__item--plus
                   +plus-svg.counter__plus
-          .calculator__item 
+          .calculator__item(data-aos='fade-up') 
             .calculator__label 
                 |Among them wheelchair users
-          .calculator__item
+          .calculator__item(data-aos='fade-up')
             .counter 
               .counter__item.counter__item--minus
                 +minus-svg.counter__minus
@@ -213,10 +211,10 @@ mixin calculator
           .events__container 
             .events__head(data-accordion-button='')
               .events__head-row 
-                .events__head-col
+                .events__head-col(data-aos='fade-up')
                   h4
                     |Evening events are available
-                .events__head-col
+                .events__head-col(data-aos='fade-up')
                   .events__head-icon 
                     +arrow-svg.events__head-svg
             .events__body(data-accordion-dropdown='')
@@ -224,14 +222,14 @@ mixin calculator
                 .events__top-row 
                   .events__top-col 
                     each item, i in ['Folk show', 'Evening in the Faberge museum', 'Ballet evening', 'Classical Music Evening']
-                      .events__top-item
+                      .events__top-item(data-aos='fade-up')
                         .events__tab(class=((i === 0) ? 'events__tab--active' : ''))
                           |#{item}
                         .events__top-button(data-fancy-button='2')
                           |Read more
                   .events__top-col 
                     each item in ['Evening boat trip', 'Russian dinner', 'Private car/minivan for an evening', 'White Nights Tour" (Draw Bridges)']
-                      .events__top-item
+                      .events__top-item(data-aos='fade-up')
                         .events__tab  
                           |#{item}
                         .events__top-button(data-fancy-button='2')
@@ -239,7 +237,7 @@ mixin calculator
               .events__bot
                 .events__bot-row 
                   .events__bot-col
-                    .events__bot-item
+                    .events__bot-item(data-aos='fade-up')
                       .calculator__label
                         |Date
                       .calculator__data  
@@ -248,7 +246,7 @@ mixin calculator
                             .data-picker__icon 
                               +calendar-svg.data-picker__svg
                             input.data-picker__input(type="text" placeholder='28.10.2021')
-                    .events__bot-item
+                    .events__bot-item(data-aos='fade-up')
                       .calculator__label
                         |Number of people
                       .counter 
@@ -259,20 +257,20 @@ mixin calculator
                         .counter__item.counter__item--plus
                           +plus-svg.counter__plus
                   .events__bot-col
-                    .events__bot-left
+                    .events__bot-left(data-aos='fade-up')
                       .calculator__label
                         |Number of tickets
                       .calculator__num 
                         |7
-                    .events__bot-right
+                    .events__bot-right(data-aos='fade-up')
                       .calculator__label
                         |Total amount
                       .events__title
                         |To be discussed separately. The manager will contact you as soon as possible
     .calculator__payments
-      .calculator__payments-title  
+      .calculator__payments-title(data-aos='fade-up')  
         |We accept payments
-      .calculator__payments-row 
+      .calculator__payments-row(data-aos='fade-up') 
         .calculator__payments-item 
           .calculator__payments-icon 
             +visa-svg
@@ -285,9 +283,9 @@ mixin calculator
     .calculator__price 
       .calculator__price-container
         .calculator__payments.calculator__payments--mobile
-          .calculator__payments-title  
+          .calculator__payments-title(data-aos='fade-up')  
             |We accept payments
-          .calculator__payments-row 
+          .calculator__payments-row(data-aos='fade-up') 
             .calculator__payments-item 
               .calculator__payments-icon 
                 +visa-svg
@@ -299,28 +297,28 @@ mixin calculator
                 +world-svg
         .calculator__price-row 
           .calculator__price-col
-            .calculator__price-item
+            .calculator__price-item(data-aos='fade-up')
               .calculator__price-label 
                 |Old price
               .calculator__price-num
                 |$1280
-            .calculator__price-item
+            .calculator__price-item(data-aos='fade-up')
               .calculator__price-label 
                 |You save money
               .calculator__price-num
                 |$20
           .calculator__price-col
-            .calculator__price-left
+            .calculator__price-left(data-aos='fade-up')
               .calculator__price-label
                 |Number of people
               .calculator__price-number   
                 |7
-            .calculator__price-right
+            .calculator__price-right(data-aos='fade-up')
               .calculator__price-label
                 |Total amount
               .calculator__price-number   
                 |$1280
-          .calculator__price-col
+          .calculator__price-col(data-aos='fade-up')
             .button-icon.button-icon--calculator.animation(data-fancy-button='11')
               .button-icon__icon
                 +bag-svg
@@ -330,10 +328,10 @@ mixin calculator
 mixin calculator-alt 
   .calculator.calculator--simple(class=attributes.class)
     .calculator__container 
-      h2
+      h2(data-aos='fade-up')
         |Calculate the cost
       .calculator__grid
-        .calculator__item
+        .calculator__item(data-aos='fade-up')
           .calculator__label 
             |Date
           .calculator__data
@@ -342,7 +340,7 @@ mixin calculator-alt
                 .data-picker__icon 
                   +calendar-svg.data-picker__svg
                 input.data-picker__input(type="text" placeholder='28.10.2021')
-        .calculator__item
+        .calculator__item(data-aos='fade-up')
           .calculator__label 
             |Time
           .calculator__select
@@ -358,7 +356,7 @@ mixin calculator-alt
                   each item in data.selectValues.time
                     option(value = item.value)
                       |#{item.value} 
-        .calculator__item
+        .calculator__item(data-aos='fade-up')
           .calculator__label 
             |Number of people
           .counter 
@@ -368,12 +366,12 @@ mixin calculator-alt
               |1
             .counter__item.counter__item--plus
               +plus-svg.counter__plus
-        .calculator__item
+        .calculator__item(data-aos='fade-up')
           .calculator__label.calculator__label--big
             |Number of tickets
           .calculator__num 
             |7
-        .calculator__item
+        .calculator__item(data-aos='fade-up')
           .calculator__label.calculator__label--big
             |Total amount
           if (attributes.price)
@@ -383,9 +381,9 @@ mixin calculator-alt
             .calculator__num 
               |To be discussed separately. #[br] The manager will contact you as soon as possible.
     .calculator__payments
-      .calculator__payments-title  
+      .calculator__payments-title(data-aos='fade-up')  
         |We accept payments
-      .calculator__payments-row 
+      .calculator__payments-row(data-aos='fade-up') 
         .calculator__payments-item 
           .calculator__payments-icon 
             +visa-svg
@@ -398,9 +396,9 @@ mixin calculator-alt
     .calculator__price 
       .calculator__price-container
         .calculator__payments.calculator__payments--mobile
-          .calculator__payments-title  
+          .calculator__payments-title(data-aos='fade-up')  
             |We accept payments
-          .calculator__payments-row 
+          .calculator__payments-row(data-aos='fade-up') 
             .calculator__payments-item 
               .calculator__payments-icon 
                 +visa-svg
@@ -412,12 +410,12 @@ mixin calculator-alt
                 +world-svg
         .calculator__price-row 
           .calculator__price-col
-            .calculator__price-left
+            .calculator__price-left(data-aos='fade-up')
               .calculator__price-label
                 |Number of people
               .calculator__price-number   
                 |7
-            .calculator__price-right
+            .calculator__price-right(data-aos='fade-up')
               .calculator__price-label
                 |Total amount
               if (attributes.price)
@@ -426,7 +424,7 @@ mixin calculator-alt
               else 
                 .calculator__num  
                   |To be discussed separately. #[br] The manager will contact you as soon as possible.
-          .calculator__price-col
+          .calculator__price-col(data-aos='fade-up')
             .button-icon.button-icon--calculator.animation
               .button-icon__icon
                 +bag-svg

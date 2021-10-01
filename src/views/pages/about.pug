@@ -7,14 +7,14 @@ include ../components/slider-buttons
 
 block content 
   .about-page.main-page
-    section.section.section--first
+    section.section.section--first(data-aos='fade-up')
       .container
         +navigation(page="About")
     section.section.section--md 
       .about-page__hero
-        .about-page__hero-container 
+        .about-page__hero-container(data-aos='fade-up') 
           img.about-page__hero-img(src="assets/images/about-hero.jpg", alt="")
-        .about-page__hero-content 
+        .about-page__hero-content(data-aos='fade-up')
           .about-page__hero-title 
             |Best Guides
           .about-page__hero-label 
@@ -22,43 +22,43 @@ block content
     section.section.section--xl 
       .container
         .about-page__section 
-          .about-page__section-container 
+          .about-page__section-container(data-aos='fade-up') 
             p.about-page__section-text 
               |Back in 2010, several St. Petersburg guides, graduates of St. Petersburg University, joined together, created their own website and started working together. We saw no obstacles and were ready to move mountains. And&nbsp;most importantly, we loved our city and our profession very much.
-          .about-page__section-title 
+          .about-page__section-title(data-aos='fade-up') 
             |This is how the Best Guides company appeared.
     section.section 
       .container
         .about-page__row 
-          .about-page__col
+          .about-page__col(data-aos='fade-up')
             .about-page__caption 
               |We grew and developed very quickly. After 2 years, we have already started conducting excursions in Moscow, then in Novgorod. And a couple of years later we had wonderful guides in Tallinn, then in Berlin, in Stockholm, in Helsinki and, finally, in Copenhagen.
-          .about-page__col
+          .about-page__col(data-aos='fade-up')
             p.about-page__text 
               |Time passed. A new generation of guides has arrived. Then-another one. But the selection criteria have remained the same – young, energetic, talented people who are in love with their city and their profession come to us.
     section.section   
       .container 
         .about-page__team 
           .about-page__team-container 
-            .about-page__team-frame
+            .about-page__team-frame(data-aos='fade-up')
               img.about-page__team-img(src="assets/images/about-team.jpg", alt="")
-            .about-page__team-label 
+            .about-page__team-label(data-aos='fade-up') 
               |Best Guides
           section.section.section--xxl
             .about-page__team-row 
-              .about-page__team-col
+              .about-page__team-col(data-aos='fade-up')
                 p.about-page__text 
                   |We are sure that the profession of a guide is not just one of the most interesting professions in the world, but also one of the most important. Guides are the face of the city. They meet guests, they tell about the city, they bring knowledge. It depends on the guide how interesting, meaningful, and informative your trip will be.
-              .about-page__team-col
+              .about-page__team-col(data-aos='fade-up')
                 p.about-page__text 
                   |We have our own criterion for a good excursion. If after the tour our guests say: "How interesting! I had no idea! I will definitely read more about it, what exactly can I read? " - so the tour was a success.
           section.section 
-            h2.about-page__title  
+            h2.about-page__title(data-aos='fade-up')  
               |We are proud of our guides and we are sure that they are the best!
     section.section 
       .container 
         .main-page__top
-          .main-page__top-row 
+          .main-page__top-row(data-aos='fade-up')
             .main-page__top-col
               +slider-buttons(next = 3 prev = 4)
             .main-page__top-col
@@ -67,7 +67,7 @@ block content
             .main-page__top-col
               +button(tag = 'a' href = '#')
                 |Read more
-        .team
+        .team(data-aos='fade-up')
           .swiper-container.swiper-container--slide-width-auto.swiper-container--slide-height-max.swiper-container--visible(data-slider-id='1' data-slider-next='3' data-slider-prev='4')
             .swiper-wrapper 
               each item in data.team
@@ -76,7 +76,7 @@ block content
                     +guides-card(sign = item.sign name = item.name src = item.src)
     section.section 
       .container 
-        .main-page__top
+        .main-page__top(data-aos='fade-up')
           .main-page__top-row 
             .main-page__top-col
               +slider-buttons(next = 5 prev = 6)
@@ -86,12 +86,12 @@ block content
             .main-page__top-col.main-page__mobile
               +button(tag = 'a' href = '#' target='_blank')
                 |All reviews on Tripadviser
-        .swiper-container.swiper-container--visible.swiper-container--visible--mobile.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='1' data-slider-next='5' data-slider-prev='6')
+        .swiper-container.swiper-container--visible.swiper-container--visible--mobile.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='1' data-slider-next='5' data-slider-prev='6' data-aos='fade-up')
           .swiper-wrapper
             each item in data.mainReviews
               .swiper-slide
                 +reviews-card(name = item.name)
-        .about-page__button 
+        .about-page__button(data-aos='fade-up') 
           +button(tag = 'a' href = '#' target='_blank')
             |All reviews on Tripadviser
     section.section 
@@ -99,26 +99,26 @@ block content
         .main-page__standarts 
           .rail
           .main-page__standarts-inner 
-            .main-page__standarts-wrapper
+            .main-page__standarts-wrapper(data-aos='fade-up')
               .main-page__title 
                 |We observe sanitary and hygienic standards
             .main-page__standarts-row
-              .main-page__standarts-col
+              .main-page__standarts-col(data-aos='fade-up')
                 .main-page__standarts-img
                   +standarts-1-svg
                 .main-page__standarts-text  
                   |All the equipment we used is disinfected before each trip
-              .main-page__standarts-col
+              .main-page__standarts-col(data-aos='fade-up')
                 .main-page__standarts-img
                   +standarts-2-svg
                 .main-page__standarts-text  
                   |We provide individual protection for each person on our tours
-              .main-page__standarts-col
+              .main-page__standarts-col(data-aos='fade-up')
                 .main-page__standarts-img
                   +standarts-3-svg
                 .main-page__standarts-text  
                   |Antiseptics are available on all tours
-              .main-page__standarts-col
+              .main-page__standarts-col(data-aos='fade-up')
                 .main-page__standarts-img
                   +standarts-4-svg
                 .main-page__standarts-text  
@@ -130,7 +130,7 @@ block content
           .main-page__features-container 
             .main-page__features-row 
               each item in data.mainFeatures
-                .main-page__features-col
+                .main-page__features-col(data-aos='fade-up')
                   .main-page__features-img 
                     img.main-page__features-icon(src="assets/images/svg/" + item.src, alt="")
                   .main-page__features-text 
@@ -138,17 +138,17 @@ block content
               .main-page__properties
                 .main-page__properties-container 
                   .main-page__properties-row 
-                    .main-page__properties-col 
+                    .main-page__properties-col(data-aos='fade-up') 
                       .main-page__properties-img 
                         +properties-1-svg
                       .main-page__properties-text 
                         |Tripadvisor rating
-                    .main-page__properties-col 
+                    .main-page__properties-col(data-aos='fade-up') 
                       .main-page__properties-img 
                         img.main-page__properties-image(src="assets/images/properties-2.jpg", alt="")
                       .main-page__properties-text 
                         |Unified Federal Register of Tour Operators
-                    .main-page__properties-col 
+                    .main-page__properties-col(data-aos='fade-up') 
                       .main-page__properties-img 
                         +properties-3-svg
                       .main-page__properties-text 

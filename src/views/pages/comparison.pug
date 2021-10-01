@@ -10,23 +10,23 @@ block content
     .container 
       .comparison 
         .comparison__row
-          .comparison__col
+          .comparison__col(data-aos='fade-up')
             .comparison__top
               .comparison__label 
                 |Landmarks
-          .comparison__col
+          .comparison__col(data-aos='fade-up')
             .comparison__top
               .comparison__label 
                 |Tours
         .comparison__grid 
-          .comparison__line
+          .comparison__line(data-aos='fade-up')
             .comparison__cell
             each item in ['Intensive tour', 'The best of the best', 'Happy Tour: Two days of adventure', "Singer's House", 'Intensive tour']
               .comparison__cell
                 .comparison__title 
                   |#{item}
           each item in ['Hermitage', 'Peterhof', 'Fountains of Peterhof', 'Peter and Paul Fortress', "St. Isaac's Cathedral", 'Church on Spilled Blood']
-            .comparison__item
+            .comparison__item(data-aos='fade-up')
               .comparison__cell
                 .comparison__text 
                   |#{item}
@@ -34,7 +34,7 @@ block content
                 .comparison__cell 
                   .comparison__icon 
                     +price-mark-svg
-          .comparison__price 
+          .comparison__price(data-aos='fade-up') 
             .comparison__cell
             - for (i = 0; i < 5; i++)
               .comparison__cell   

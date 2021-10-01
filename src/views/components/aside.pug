@@ -4,7 +4,7 @@ mixin aside
       +aside-button
       .aside__dropdown(data-accordion-dropdown='')
         ul.aside__list
-          li.aside__item(data-select-parent='')
+          li.aside__item(data-select-parent='' data-aos='fade-up')
             .aside__top 
               .aside__type 
                 |Language
@@ -25,7 +25,7 @@ mixin aside
                       option(value = item.value)
                         |#{item.value}
           each item in data.asideExcursion
-            li.aside__item 
+            li.aside__item(data-aos='fade-up')  
               .aside__top 
                 .aside__type 
                   |#{item.type}
@@ -39,7 +39,7 @@ mixin aside
                       +check-svg.aside__svg
                     .aside__text 
                       |#{text.text}
-        .aside__buttons 
+        .aside__buttons(data-aos='fade-up')  
           .aside__buttons-item 
             .button-icon.animation
               .button-icon__icon 
@@ -47,7 +47,7 @@ mixin aside
               span.button-icon__text.animation__span
                 |Clear
 mixin aside-button 
-  .aside-button.animation(data-accordion-button='')
+  .aside-button.animation(data-accordion-button='' data-aos='fade-up')
     span.aside-button__text.animation__span
       |Filters
     .aside-button__icon 

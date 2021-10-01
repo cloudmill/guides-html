@@ -7,7 +7,7 @@ block content
       .container
         .navigation   
           .navigation__inner
-            .breadcrumb
+            .breadcrumb(data-aos='fade-up') 
               ul.breadcrumb__list 
                 li.breadcrumb__item 
                   a.breadcrumb__link(href="#") 
@@ -17,10 +17,10 @@ block content
                     |Booking an excursion
         .successful-page__row
           .successful-page__col
-            h1 
+            h1(data-aos='fade-up')  
               |Payment was successful
-            .successful-page__text 
+            .successful-page__text(data-aos='fade-up')  
               |Receipt and ticket sent to your e-mail address #[a.successful-page__link(href='#') ksh@cloudmill.ru.]
           .successful-page__col
-            .successful-page__image 
+            .successful-page__image(data-aos='fade-up')  
               +receipt-svg.successful-page__svg

@@ -15,6 +15,7 @@ import 'scripts/data-picker.js';
 import 'scripts/form-response.js';
 import 'scripts/table.js';
 import 'scripts/aside.js';
+import 'scripts/aos.js';
 
 
 // counter
@@ -43,4 +44,3 @@ import 'scripts/aside.js';
     }
   })
 }
-

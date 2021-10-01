@@ -37,7 +37,7 @@ block content
       ]
     }
   .booking-page
-    section.section.section--first
+    section.section.section--first(data-aos='fade-up')
       .container
         +navigation(page="Booking an excursion")
     section.section.section--md 
@@ -48,26 +48,26 @@ block content
               .booking-page__top
                 .booking-page__item
                   each item in ddata.first
-                    .form__item 
+                    .form__item(data-aos='fade-up') 
                       +input(name = item.name placeholder = item.placeholder type = item.type)
                 .booking-page__item
                   each item in ddata.second
-                    .form__item 
+                    .form__item(data-aos='fade-up') 
                       +input(name = item.name placeholder = item.placeholder type = item.type)
               .booking-page__bot
                 .form__wrapper 
                   .booking-page__top
-                    .booking-page__item
+                    .booking-page__item(data-aos='fade-up')
                       +checkbox
-                    .booking-page__item
+                    .booking-page__item(data-aos='fade-up')
                       +checkbox(text = 'I allow you to write to Viber, Telegram, and WhatsApp')
-                .form__button 
+                .form__button(data-aos='fade-up') 
                   +button.button--sticky(tag = 'button')
                     |Proceed to filling out the temporary visa application forms
           .booking-page__col
             .booking-page__grid
               each item in ['Intensive guided tour', 'Relax tour', 'Russian Ballet']
-                .booking-page__grid-item
+                .booking-page__grid-item(data-aos='fade-up')
                   .booking-page__card 
                     .booking-page__card-container 
                       h4.booking-page__title 

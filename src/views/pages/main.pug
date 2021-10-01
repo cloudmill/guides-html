@@ -10,8 +10,8 @@ block header
 
 block content 
   .main-page.page-transparent
-    section.hero
-      .hero__container 
+    section.hero 
+      .hero__container(data-aos='fade-up')
         img.hero__img(src="assets/images/hero-main.jpg", alt="")
         .hero__frame.hero__frame--hidden(data-hero-frame='1')
           img.hero__img(src="assets/images/hero-main-1.jpg", alt="")
@@ -26,7 +26,7 @@ block content
           |Baltic Ports
         .hero__label 
           |with Best Guides
-      .hero__tabs 
+      .hero__tabs(data-aos='fade-up')
         .hero__item 
           .hero__tab(data-hero-tab='1') 
             .hero__tab-layout
@@ -52,13 +52,13 @@ block content
     section.section
       .container
         .main-page__top 
-          .main-page__top-row 
+          .main-page__top-row(data-aos='fade-up')
             .main-page__top-col
               +slider-buttons(next = 1 prev = 2)
             .main-page__top-col 
               h3.main-page__title
                 |Best sellers
-        .swiper-container.swiper-container--slide-width-auto.swiper-container--slide-height-max.swiper-container--visible.swiper-container--visible--mobile(data-slider-id='1' data-slider-next='1' data-slider-prev='2')
+        .swiper-container.swiper-container--slide-width-auto.swiper-container--slide-height-max.swiper-container--visible.swiper-container--visible--mobile(data-slider-id='1' data-slider-next='1' data-slider-prev='2' data-aos='fade-up')
             .swiper-wrapper
               each item in data.mainSellers 
                 .swiper-slide 
@@ -68,12 +68,12 @@ block content
         .main-page__about 
           .main-page__about-layout
           .main-page__about-container 
-            .main-page__about-top  
+            .main-page__about-top(data-aos='fade-up')  
               .main-page__about-title  
                 |Best Guides
               .main-page__about-label 
                 |Saint Petersburg
-            .main-page__about-content 
+            .main-page__about-content(data-aos='fade-up') 
               p.main-page__about-text 
                 |Back in 2010, several St. Petersburg guides, graduates of St. Petersburg University, joined together, created their own website and started working together. We saw no obstacles and were ready to move mountains. And most importantly, we loved our city and our profession very much.
               .main-page__about-button 
@@ -82,7 +82,7 @@ block content
     section.section
       .container 
         .main-page__top
-          .main-page__top-row 
+          .main-page__top-row(data-aos='fade-up')
             .main-page__top-col
               +slider-buttons(next = 3 prev = 4)
             .main-page__top-col
@@ -91,7 +91,7 @@ block content
             .main-page__top-col
               +button(tag = 'a' href = '#')
                 |Read more
-        .team
+        .team(data-aos='fade-up')
           .swiper-container.swiper-container--slide-width-auto.swiper-container--slide-height-max.swiper-container--visible(data-slider-id='1' data-slider-next='3' data-slider-prev='4')
             .swiper-wrapper 
               each item in data.team
@@ -104,7 +104,7 @@ block content
           .main-page__features-container 
             .main-page__features-row 
               each item in data.mainFeatures
-                .main-page__features-col
+                .main-page__features-col(data-aos='fade-up')
                   .main-page__features-img 
                     img.main-page__features-icon(src="assets/images/svg/" + item.src, alt="")
                   .main-page__features-text 
@@ -112,17 +112,17 @@ block content
               .main-page__properties
                 .main-page__properties-container 
                   .main-page__properties-row 
-                    .main-page__properties-col 
+                    .main-page__properties-col(data-aos='fade-up') 
                       .main-page__properties-img 
                         +properties-1-svg
                       .main-page__properties-text 
                         |Tripadvisor rating
-                    .main-page__properties-col 
+                    .main-page__properties-col(data-aos='fade-up') 
                       .main-page__properties-img 
                         img.main-page__properties-image(src="assets/images/properties-2.jpg", alt="")
                       .main-page__properties-text 
                         |Unified Federal Register of Tour Operators
-                    .main-page__properties-col 
+                    .main-page__properties-col(data-aos='fade-up') 
                       .main-page__properties-img 
                         +properties-3-svg
                       .main-page__properties-text 
@@ -133,25 +133,25 @@ block content
           .rail
           .main-page__standarts-inner 
             .main-page__standarts-wrapper
-              h3.main-page__title 
+              h3.main-page__title(data-aos='fade-up') 
                 |We observe sanitary and hygienic standards
             .main-page__standarts-row
-              .main-page__standarts-col
+              .main-page__standarts-col(data-aos='fade-up')
                 .main-page__standarts-img
                   +standarts-1-svg
                 .main-page__standarts-text  
                   |All equipment we use is disinfected before each trip
-              .main-page__standarts-col
+              .main-page__standarts-col(data-aos='fade-up')
                 .main-page__standarts-img
                   +standarts-2-svg
                 .main-page__standarts-text  
                   |We provide individual protection for each person on our tours
-              .main-page__standarts-col
+              .main-page__standarts-col(data-aos='fade-up')
                 .main-page__standarts-img
                   +standarts-3-svg
                 .main-page__standarts-text  
                   |Antiseptics are available on all tours
-              .main-page__standarts-col
+              .main-page__standarts-col(data-aos='fade-up')
                 .main-page__standarts-img
                   +standarts-4-svg
                 .main-page__standarts-text  
@@ -159,20 +159,20 @@ block content
           .rail.rail--reverse
     section.section 
       .container 
-        .main-page__top
+        .main-page__top(data-aos='fade-up')
           h3.main-page__title   
             |Reviews
-        .swiper-container.swiper-container--visible.swiper-container--visible--mobile.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='1')
+        .swiper-container.swiper-container--visible.swiper-container--visible--mobile.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='1' data-aos='fade-up')
           .swiper-wrapper
             each item in data.mainReviews
               .swiper-slide
                 +reviews-card(name = item.name)
     section.section   
       .container 
-        .main-page__top
+        .main-page__top(data-aos='fade-up')
           h3.main-page__title   
             |Find us in social media
-        .main-page__media 
+        .main-page__media(data-aos='fade-up') 
           a.media-card(href="#" target="_blank")  
             .media-card__inner
               .media-card__img 

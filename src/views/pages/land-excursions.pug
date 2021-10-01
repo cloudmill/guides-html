@@ -8,9 +8,9 @@ include  ../components/excursion-card
 
 block content
   .excursions-page
-    section.section.section--panel 
+    section.section.section--panel(data-aos='fade-up') 
       +panel(disabled = true button='Apply')
-    section.section.section--md
+    section.section.section--md(data-aos='fade-up')
       .container
         +navigation(page="For hotel guests")
     section.section.section--md 
@@ -21,9 +21,9 @@ block content
           .row__col
             .row__grid  
               each item in data.landExcursion
-                .row__item 
+                .row__item(data-aos='fade-up') 
                   +excursion-card.excursion-card--response(tag='a' href='#' title = item.title src = item.src discont = item.discont)
-            .button-wrapper 
+            .button-wrapper(data-aos='fade-up') 
               +button(tag='div')
                 |Show more
             +tour(text = [{text: 'There may be no greater American than George Washington. Washington became the first United States President in 1789 with his unanimous victory in the first American election. He was also unanimously elected to a second term in 1793, the only president ever to garner 100 percent of the electoral votes. Washington was also the Commander-in-Chief of the First Continental Army that fought the British when the country was not yet established.'}])

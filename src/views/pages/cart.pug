@@ -5,24 +5,24 @@ include  ../components/cart-price
 
 block content 
   .cart-page
-    section.section.section--first
+    section.section.section--first(data-aos='fade-up')
       .container
         +navigation(page="Cart")
     section.section.section--md
       .container 
         .cart-page__section 
           .cart-page__section-row 
-            .cart-page__section-col
+            .cart-page__section-col(data-aos='fade-up')
               .cart-page__label 
                 |Name
-            .cart-page__section-col
+            .cart-page__section-col(data-aos='fade-up')
               .cart-page__label 
                 |Price
         .cart-page__row 
           .cart-page__col
             ul.cart-page__list
               - for (i = 0; i < 4; i++)
-                li.cart-page__item
+                li.cart-page__item(data-aos='fade-up')
                   .cart-page__product 
                     .cart-page__product-container 
                       .cart-page__product-row 

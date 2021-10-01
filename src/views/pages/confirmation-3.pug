@@ -90,7 +90,7 @@ block content
   .confirmation-page
     section.section.section--first 
       .container
-        .navigation   
+        .navigation(data-aos='fade-up')   
           .navigation__inner
             .breadcrumb
               ul.breadcrumb__list 
@@ -111,7 +111,7 @@ block content
           .confirmation-page__info 
             ul.confirmation-page__list
               each item in ddata.first
-                li.confirmation-page__list-item 
+                li.confirmation-page__list-item(data-aos='fade-up') 
                   .confirmation-page__list-col
                     .confirmation-page__list-name
                       |#{item.name}
@@ -121,17 +121,17 @@ block content
     section.section.section--l 
       .container 
         .section__nav 
-          .section__nav-item
+          .section__nav-item(data-aos='fade-up')
             .section__nav-label 
               |tour
-          .section__nav-item
+          .section__nav-item(data-aos='fade-up')
             .confirmation-page__title
               |Folklore
         .confirmation-page__container.section__inner
           .confirmation-page__info 
             ul.confirmation-page__list
               each item in ddata.second
-                li.confirmation-page__list-item 
+                li.confirmation-page__list-item(data-aos='fade-up') 
                   .confirmation-page__list-col
                     .confirmation-page__list-name
                       |#{item.name}
@@ -141,13 +141,13 @@ block content
             .confirmation-page__total 
               .confirmation-page__total-item
                 .confirmation-page__total-row 
-                  .confirmation-page__total-col
+                  .confirmation-page__total-col(data-aos='fade-up')
                     .confirmation-page__total-title 
                       |Total
-                  .confirmation-page__total-col
+                  .confirmation-page__total-col(data-aos='fade-up')
                     .confirmation-page__total-text 
                       |$2130
-          .confirmation-page__pay
+          .confirmation-page__pay(data-aos='fade-up')
             .cart-price.cart-price--row
               .cart-price__container 
                 .cart-price__row 

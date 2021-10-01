@@ -8,16 +8,16 @@ mixin footer
       .footer__inner 
         .footer__container
           .footer__choice 
-            .footer__choice-item  
+            .footer__choice-item(data-aos='fade-up')  
               a.footer__choice-link(href="#") 
                 |Shore excursions
-            .footer__choice-item  
+            .footer__choice-item(data-aos='fade-up')  
               a.footer__choice-link(href="#") 
                 |For hotel guests
           .footer__nav 
             +nav.nav--big(links = data.navFooter)
           +media
-          .footer__bot
+          .footer__bot(data-aos='fade-up')
             .footer__social 
               +social
             a.footer__logo(href="#") 
