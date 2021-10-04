@@ -266,6 +266,8 @@
   }
 
   &__phone {
+    position: relative;
+    z-index: 1;
     @media (max-width: $breakpoint - 1px) {
       margin-left: 15px;
     }

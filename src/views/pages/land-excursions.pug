@@ -22,7 +22,7 @@ block content
             .row__grid  
               each item in data.landExcursion
                 .row__item(data-aos='fade-up') 
-                  +excursion-card.excursion-card--response(tag='a' href='#' title = item.title src = item.src discont = item.discont)
+                  +excursion-card.excursion-card--response(tag='a' href='#' title = item.title src = item.src discont = item.discont body='div')
             .button-wrapper(data-aos='fade-up') 
               +button(tag='div')
                 |Show more

@@ -4,7 +4,7 @@ mixin aside
       +aside-button
       .aside__dropdown(data-accordion-dropdown='')
         ul.aside__list
-          li.aside__item(data-select-parent='' data-aos='fade-up')
+          li.aside__item.aside__item--select(data-select-parent='' data-aos='fade-up')
             .aside__top 
               .aside__type 
                 |Language
@@ -25,13 +25,13 @@ mixin aside
                       option(value = item.value)
                         |#{item.value}
           each item in data.asideExcursion
-            li.aside__item(data-aos='fade-up')  
-              .aside__top 
+            li.aside__item(data-aos='fade-up') 
+              .aside__top
                 .aside__type 
                   |#{item.type}
                 .aside__select.disabled
                   |Select
-              .aside__body 
+              .aside__body
                 each text in item.options
                   label.aside__label
                     input.aside__input(type="checkbox" name='checkbox' value='1')

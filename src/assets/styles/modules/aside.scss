@@ -45,6 +45,11 @@
     &:not(:first-child) {
       margin-top: 30px;
     }
+
+    &--select {
+      position: relative;
+      z-index: 1;
+    }
   }
 
   &__top {

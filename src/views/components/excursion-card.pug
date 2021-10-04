@@ -1,6 +1,6 @@
 mixin excursion-card 
   #{attributes.tag}.excursion-card(href=attributes.href class=attributes.class)
-    .excursion-card__body   
+    #{attributes.body}.excursion-card__body(href=attributes.bodyHref)
       .excursion-card__container
         img.excursion-card__img(src="assets/images/" + attributes.src , alt="")
         .excursion-card__items
