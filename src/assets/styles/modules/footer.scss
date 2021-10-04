@@ -53,9 +53,17 @@
     counter-reset: index;
   }
   &__choice-item {
+    counter-increment: index;
+  }
+  &__choice-link {
     position: relative;
     z-index: 0;
-    counter-increment: index;
+
+    @include fsl(30px);
+    @media (min-width: $breakpoint) {
+      @include fsl(60px);
+    }
+    transition: $transition;
 
     &::before {
       content: counter(index);
@@ -67,18 +75,19 @@
 
       @include f-3;
       color: $color-white;
+      transition: $transition;
       @include fsl(60px);
       @media (min-width: $breakpoint) {
         @include fsl(110px);
       }
     }
-  }
-  &__choice-link {
-    @include fsl(30px);
-    @media (min-width: $breakpoint) {
-      @include fsl(60px);
+
+    &:hover {
+      color: $color-white;
     }
-    transition: $transition;
+    &:hover::before {
+      color: $color-black;
+    }
   }
 
   &__nav {
@@ -191,6 +200,11 @@
   &__privacy {
     grid-area: C;
     @include fsl(15px);
+    transition: $transition;
+
+    &:hover {
+      color: $color-white;
+    }
   }
 
   &__award {

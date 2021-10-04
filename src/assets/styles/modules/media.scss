@@ -23,6 +23,17 @@
         stroke: $color-blue;
       }
     }
+
+    #{$comp}__phone {
+      &:hover {
+        color: $color-blue;
+      }
+    }
+    #{$comp}__mail {
+      &:hover {
+        color: $color-blue;
+      }
+    }
   }
 
   &__item {
@@ -58,11 +69,21 @@
     @media (min-width: $breakpoint) {
       @include fsl(60px);
     }
+    transition: $transition;
+
+    &:hover {
+      color: $color-white;
+    }
   }
   &__mail {
     @include fsl(16px, 160%);
     @media (min-width: $breakpoint) {
       @include fsl(25px, 130%);
+    }
+    transition: $transition;
+
+    &:hover {
+      color: $color-white;
     }
   }
   &__text {

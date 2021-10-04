@@ -18,6 +18,7 @@
     transition: $transition;
 
     &:hover {
+      border-color: $color-blue;
       // background: $color-brown;
       // border-color: $color-brown;
     }

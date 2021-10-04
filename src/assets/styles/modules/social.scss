@@ -6,7 +6,7 @@
   &--contacts {
 
     #{$comp}__link {
-      border: 1px solid $color-blue;
+      border-color: $color-blue;
 
       &:hover {
         background: $color-blue;
@@ -31,8 +31,12 @@
     align-items: center;
 
     border-radius: 18px;
-    background: $color-white;
+    // background: $color-white;
     transition: $transition;
+    border: 1px solid $color-white;
 
+    &:hover {
+      background: $color-white;
+    }
   }
 }
