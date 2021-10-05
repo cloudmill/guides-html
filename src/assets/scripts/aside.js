@@ -1,14 +1,10 @@
 
 
-
 $(() => {
   const aside = $('.aside')
 
   if (aside.length) {
     const checkbox = aside.find('.aside__input')
-    const dropdown = aside.find('.aside__dropdown')
-    const button = $('.aside-button')
-    
 
     checkbox.on('change', function() {
       const item = $(this).closest('.aside__item')
@@ -26,17 +22,15 @@ $(() => {
     })
     
     let arr = []
+    let isOpen = true
     const select = $('[data-aside-select]')
-    // let isOpen
+    const buttonText = $('.aside-button__text').text()
     
-    button.on('click', function() {
-      // accordion toggle
-      aside.toggleClass('active')
-      // isOpen = true
-      dropdown.slideToggle()
+    window.addEventListener('accordion-toggle', function () {
+      isOpen = !isOpen
 
-      // if (isOpen)  {
-      //   isOpen = false
+      if (!isOpen) {
+
         if (select.val() !== null) {
           arr.push(select.val())
         }
@@ -48,10 +42,14 @@ $(() => {
         })
   
         if (arr.length) {
-          $('.aside-button__text').text(arr.join(', '))
+          $('.aside-button__text').text(arr.length)
         }
+
         arr = []
-      // }
-    })
+
+      } else {
+        $('.aside-button__text').text(buttonText)
+      }
+    });
   }
 })
