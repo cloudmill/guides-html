@@ -557,8 +557,12 @@
       height: $size-d;
     }
 
-    background: $color-brown;
+    border: 1px solid $color-brown;
     border-radius: 50%;
+
+    &--put {
+      background: $color-brown;
+    }
   }
   &__store-num {
     font-weight: 500;

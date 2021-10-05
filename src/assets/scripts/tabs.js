@@ -9,7 +9,6 @@ export class Tabs {
       this.roots.forEach(item => {
         this.rootsTabs.push(item.querySelectorAll('[data-tabs-item]'))
       })
-      console.log(this.rootsTabs);
       this.init()
     }
   }
@@ -19,7 +18,6 @@ export class Tabs {
       item.addEventListener('click', (e) => {
         const target = e.target.closest('[data-tabs-item]')
         if (target) {
-          console.log(1);
           this.setActive(target, index)
         }
       })
