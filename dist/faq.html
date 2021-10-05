@@ -9,8 +9,9 @@
 		<meta name="format-detection" content="telephone=no">
 		<meta name="format-detection" content="address=no">
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+		<script defer="defer" src="assets/vendor.js"></script>
 		<script defer="defer" src="assets/app.js"></script>
-		<link href="759.css" rel="stylesheet">
+		<link href="369.css" rel="stylesheet">
 		<link href="app.css" rel="stylesheet">
 	</head>
 
@@ -112,7 +113,7 @@
 													</div>
 												</div>
 											</div><a class="header__store" href="#">
-												<div class="header__store-count">
+												<div class="header__store-count header__store-count--put">
 													<div class="header__store-num">4</div>
 												</div>
 												<div class="header__store-icon"><svg class="header__store-svg" width="36" height="37" viewbox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -259,51 +260,54 @@
 							<div class="faq-page__row">
 								<div class="faq-page__col">
 									<div class="faq-page__top">
-										<div class="product-tabs">
-											<div class="product-tabs__item product-tabs__item--active">
-												<div class="product-tabs__tab">Cruise ship</div>
+										<div class="product-tabs" data-tabs="">
+											<div class="product-tabs__item">
+												<div class="product-tabs__tab active" data-tabs-item="">Cruise ship</div>
 											</div>
 											<div class="product-tabs__item">
-												<div class="product-tabs__tab">On land</div>
+												<div class="product-tabs__tab" data-tabs-item="">On land</div>
 											</div>
 										</div>
 									</div>
-									<ul class="faq-page__pagination">
-										<li class="faq-page__pagination-item faq-page__pagination-item--active" data-aos="fade-up">
-											<div class="faq-page__pagination-button">Visa questions</div>
+									<ul class="faq-page__pagination" data-tabs="">
+										<li class="faq-page__pagination-item" data-aos="fade-up">
+											<div class="faq-page__pagination-button active" data-tabs-item="">All</div>
 										</li>
 										<li class="faq-page__pagination-item" data-aos="fade-up">
-											<div class="faq-page__pagination-button">Booking a tour</div>
+											<div class="faq-page__pagination-button" data-tabs-item="">Visa questions</div>
 										</li>
 										<li class="faq-page__pagination-item" data-aos="fade-up">
-											<div class="faq-page__pagination-button">Mini group tours</div>
+											<div class="faq-page__pagination-button" data-tabs-item="">Booking a tour</div>
 										</li>
 										<li class="faq-page__pagination-item" data-aos="fade-up">
-											<div class="faq-page__pagination-button">Payment and gratuities</div>
+											<div class="faq-page__pagination-button" data-tabs-item="">Mini group tours</div>
 										</li>
 										<li class="faq-page__pagination-item" data-aos="fade-up">
-											<div class="faq-page__pagination-button">Discounts</div>
+											<div class="faq-page__pagination-button" data-tabs-item="">Payment and gratuities</div>
 										</li>
 										<li class="faq-page__pagination-item" data-aos="fade-up">
-											<div class="faq-page__pagination-button">Museums / sights</div>
+											<div class="faq-page__pagination-button" data-tabs-item="">Discounts</div>
 										</li>
 										<li class="faq-page__pagination-item" data-aos="fade-up">
-											<div class="faq-page__pagination-button">Transportation</div>
+											<div class="faq-page__pagination-button" data-tabs-item="">Museums / sights</div>
 										</li>
 										<li class="faq-page__pagination-item" data-aos="fade-up">
-											<div class="faq-page__pagination-button">Pocket money</div>
+											<div class="faq-page__pagination-button" data-tabs-item="">Transportation</div>
 										</li>
 										<li class="faq-page__pagination-item" data-aos="fade-up">
-											<div class="faq-page__pagination-button">Families with children</div>
+											<div class="faq-page__pagination-button" data-tabs-item="">Pocket money</div>
 										</li>
 										<li class="faq-page__pagination-item" data-aos="fade-up">
-											<div class="faq-page__pagination-button">Cancellation policy</div>
+											<div class="faq-page__pagination-button" data-tabs-item="">Families with children</div>
 										</li>
 										<li class="faq-page__pagination-item" data-aos="fade-up">
-											<div class="faq-page__pagination-button">Meeting time / place</div>
+											<div class="faq-page__pagination-button" data-tabs-item="">Cancellation policy</div>
 										</li>
 										<li class="faq-page__pagination-item" data-aos="fade-up">
-											<div class="faq-page__pagination-button">Meals / food</div>
+											<div class="faq-page__pagination-button" data-tabs-item="">Meeting time / place</div>
+										</li>
+										<li class="faq-page__pagination-item" data-aos="fade-up">
+											<div class="faq-page__pagination-button" data-tabs-item="">Meals / food</div>
 										</li>
 									</ul>
 									<div class="faq-page__bot" data-aos="fade-up">
