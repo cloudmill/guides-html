@@ -1,8 +1,8 @@
 mixin tabs 
-  .tabs 
+  .tabs(data-tabs='')
     .tabs__item 
-      .tabs__tab.tabs__tab--active 
+      .tabs__tab.active(data-tabs-item='') 
         |30%
     .tabs__item 
-      .tabs__tab 
+      .tabs__tab(data-tabs-item='')
         |100%

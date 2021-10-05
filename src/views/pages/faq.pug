@@ -16,10 +16,10 @@ block content
           .faq-page__col
             .faq-page__top 
               +product-tabs
-            ul.faq-page__pagination
+            ul.faq-page__pagination(data-tabs='')
               each item, index in data.faqPagination
-                li.faq-page__pagination-item(class=((index===0) ? 'faq-page__pagination-item--active' : '') data-aos='fade-up')
-                  .faq-page__pagination-button 
+                li.faq-page__pagination-item(data-aos='fade-up')
+                  .faq-page__pagination-button(data-tabs-item='' class=((index===0) ? 'active' : ''))
                     |#{item.text}
             .faq-page__bot(data-aos='fade-up') 
               .button.button--xl.animation(data-fancy-button='1')

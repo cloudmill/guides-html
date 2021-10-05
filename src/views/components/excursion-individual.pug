@@ -4,11 +4,11 @@ mixin programm
     h2(data-aos='fade-up') 
       |Programme
     if (attributes.tabs)
-      .excursion-page__tabs
+      .excursion-page__tabs(data-tabs='')
         .excursion-page__tabs-container
           each item, i in ['1st day', '2nd day', '3rd day']
-            .excursion-page__tabs-item(data-aos='fade-up'  class=((i === 0) ? 'excursion-page__tabs-item--active' : ''))
-              .excursion-page__tabs-tab 
+            .excursion-page__tabs-item(data-aos='fade-up'  )
+              .excursion-page__tabs-tab(data-tabs-item='' class=((i === 0) ? 'active' : ''))
                 |#{item}
     ul.excursion-page__programm-list 
       if (attributes.label)

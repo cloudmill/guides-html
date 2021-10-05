@@ -71,14 +71,6 @@
         margin-left: 5px;
       }
     }
-
-    &--active {
-      #{$comp}__pagination-button {
-        background: $color-blue;
-        color: $color-white;
-        border-color: $color-blue;
-      }
-    }
   }
   &__pagination-button {
     padding: 7px 30px;
@@ -92,6 +84,11 @@
     cursor: pointer;
 
     &:hover {
+      border-color: $color-blue;
+    }
+    &.active {
+      background: $color-blue;
+      color: $color-white;
       border-color: $color-blue;
     }
   }

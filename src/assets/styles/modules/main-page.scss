@@ -3,6 +3,9 @@
   &__top {
     margin-bottom: 20px;
     @media (min-width: $breakpoint) {
+      margin-bottom: 60px;
+    }
+    @media (min-width: $breakpoint-l) {
       margin-bottom: 80px;
     }
   }

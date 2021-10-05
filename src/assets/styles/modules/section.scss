@@ -1,6 +1,9 @@
 .section {
   margin-top: 60px;
   @media (min-width: $breakpoint) {
+    margin-top: 80px;
+  }
+  @media (min-width: $breakpoint-l) {
     margin-top: 100px;
   }
 

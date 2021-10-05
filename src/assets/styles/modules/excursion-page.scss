@@ -66,14 +66,6 @@
     &:not(:first-child) {
       margin-left: 5px;
     }
-
-    &--active {
-      #{$comp}__tabs-tab {
-        background: $color-blue;
-        border-color: $color-blue;
-        color: $color-white;
-      }
-    }
   }
   &__tabs-tab {
     padding: 7px 25px;
@@ -89,6 +81,12 @@
 
     &:hover {
       border-color: $color-blue;
+    }
+
+    &.active {
+      background: $color-blue;
+      border-color: $color-blue;
+      color: $color-white;
     }
   }
 

@@ -16,6 +16,7 @@ import 'scripts/form-response.js';
 import 'scripts/table.js';
 import 'scripts/aside.js';
 import 'scripts/aos.js';
+import 'scripts/tabs.js';
 
 
 // counter
