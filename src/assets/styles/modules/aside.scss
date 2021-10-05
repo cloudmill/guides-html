@@ -5,12 +5,16 @@
   border-radius: 14px;
   transition: $transition;
 
+  &:hover {
+    border-color: $color-blue;
+  }
+
   &.active {
     @media (max-width: $breakpoint - 1px) {
       border-color: $color-blue;
     }
 
-    #{$comp}-button__icon {
+    #{$comp}-button__svg {
       transform: rotate(135deg);
     }
 

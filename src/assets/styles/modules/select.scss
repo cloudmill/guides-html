@@ -94,7 +94,7 @@
     height: 100%;
     opacity: 0;
 
-    @media (min-width: $breakpoint-m) {
+    @media (min-width: $breakpoint) {
       display: none;
     }
   }
@@ -105,7 +105,7 @@
 
   .select2-container {
     margin-top: -1px;
-    @media (max-width: $breakpoint-m - 1px) {
+    @media (max-width: $breakpoint - 1px) {
       pointer-events: none;
     }
   }

@@ -417,7 +417,7 @@
     width: 100%;
 
     border-radius: 14px;
-    border: none;
+    border: 1px solid transparent;
     background: rgba($color-black, 0.05);
     transition: $transition;
 
@@ -426,6 +426,10 @@
       color: $color-black;
       @include fsl(14px, 130%);
       transition: $transition;
+    }
+
+    &:focus {
+      border-color: $color-blue;
     }
   }
   &__search-button {

@@ -13,9 +13,14 @@
 
   &__text {
     @include fsl(16px);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   &__icon {
+    margin-left: 10px;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,6 +31,7 @@
   &__svg {
     width: 20px;
     height: 20px;
+    transition: $transition;
 
     path {
       stroke: $color-black;

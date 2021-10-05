@@ -1,5 +1,5 @@
 import 'select2';
-import {mediaQueryTable} from './mediaQueries'
+import {mediaQuery} from './mediaQueries'
 
 // select
 {
@@ -82,7 +82,7 @@ import {mediaQueryTable} from './mediaQueries'
 {
   $(() => {
     const select = $('.select')
-    if (select.length && !mediaQueryTable.matches) {
+    if (select.length && !mediaQuery.matches) {
 
       select.each(function() {
         const selectMobile = $(this).find('.select__mobile')
