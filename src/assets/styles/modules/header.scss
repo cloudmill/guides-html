@@ -21,8 +21,10 @@
 
     height: 300vh;
 
-    // background: rgba($color-black, 0.2);
+    background: rgba($color-black, 0.2);
     pointer-events: none;
+    opacity: 0;
+    transition: $transition;
   }
 
   &--transparent {
@@ -114,6 +116,10 @@
   }
 
   &--menu {
+
+    &::before {
+      opacity: 1;
+    }
 
     #{$comp}__burger {
       &::before {
@@ -269,6 +275,7 @@
     position: relative;
     z-index: 1;
     @media (max-width: $breakpoint - 1px) {
+      z-index: 0;
       margin-left: 15px;
     }
     @media (max-width: $breakpoint-xs - 1px) {

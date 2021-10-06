@@ -8,13 +8,13 @@ mixin header
           .header__row 
             .header__col
               .header__left 
-                .header__left-col(data-aos='fade-up')
+                .header__left-col
                   a.header__logo(href="#")  
                     img.header__img(src="assets/images/logo-black.png", alt="")
                     if (attributes.transparent)
                       img.header__img.header__img--white(src="assets/images/logo-white.png", alt="")
                 .header__left-col 
-                  .header__phone(data-aos='fade-up')
+                  .header__phone
                     a.header__phone-link(href="tel:+78124413163") 
                       |#{data.phone}
                     .header__phone-icon
@@ -26,7 +26,7 @@ mixin header
                               li.header__dropdown-item 
                                 a.header__dropdown-link(href="#") 
                                   |#{item}
-                  .header__category(data-aos='fade-up') 
+                  .header__category 
                     .header__category-item 
                       .header__category-icon 
                         +one-svg.header__category-svg
@@ -42,11 +42,11 @@ mixin header
                 .header__right-col
                   +nav(links = data.nav)
                   form.header__search
-                    .header__search-item(data-aos='fade-up') 
+                    .header__search-item 
                       input.header__search-input(type="text" placeholder="Search")
                       button.header__search-button(type="submit")
                         +search-svg.header__search-icon
-                .header__right-col(data-aos='fade-up')
+                .header__right-col
                   .header__lang 
                     .header__lang-container 
                       .header__lang-row
@@ -70,18 +70,18 @@ mixin header
         .header__mobile
           .header__row 
             .header__col
-              .header__item(data-aos='fade-up')
+              .header__item
                 .header__menu(data-modal-button='menu')
                   .header__burger 
                     span.header__burger-span
                     span.header__burger-span
                     span.header__burger-span
-              .header__item(data-aos='fade-up')
+              .header__item
                 a.header__logo(href="#")
                   img.header__img(src="assets/images/logo-black.png", alt="")
                   if (attributes.transparent)
                     img.header__img.header__img--white(src="assets/images/logo-white.png", alt="")
-              .header__phone(data-aos='fade-up')
+              .header__phone
                 a.header__phone-link(href="tel:+78124413163") 
                   |#{data.phone}
                 .header__phone-icon
@@ -93,13 +93,13 @@ mixin header
                             li.header__dropdown-item 
                               a.header__dropdown-link(href="#") 
                                 |#{item}
-            .header__col(data-aos='fade-up')
+            .header__col
               .header__item
                 .header__search-button(data-modal-button='search')
                   +search-svg.header__search-icon
               .header__item
                 a.header__store(href="#") 
-                  .header__store-count 
+                  .header__store-count.header__store-count--put 
                     .header__store-num 
                       |4
                   .header__store-icon
@@ -108,7 +108,7 @@ mixin header
             .mobile-menu 
               .mobile-menu__container 
                 .mobile-menu__top 
-                  .header__lang(data-aos='fade-up') 
+                  .header__lang
                     .header__lang-container 
                       .header__lang-row
                         .header__lang-text 
@@ -122,7 +122,7 @@ mixin header
                               li.header__dropdown-item 
                                 a.header__dropdown-link(href="#") 
                                   |#{item}
-                .header__category(data-aos='fade-up') 
+                .header__category
                   .header__category-item 
                     .header__category-icon 
                       +one-svg.header__category-svg

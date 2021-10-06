@@ -141,8 +141,12 @@
 
     padding: 0 $padding;
     position: absolute;
-    top: 46px;
-    right: calc(51px - #{$padding});
+    top: calc(30px - 10px);
+    right: calc(30px - #{$padding});
+    @media (min-width: $breakpoint) {
+      top: 46px;
+      right: calc(51px - #{$padding});
+    }
 
     @include fsl(60px, 180%);
     color: $color-white;

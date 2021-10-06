@@ -35,7 +35,7 @@
         header.removeClass('header--up')
       }
 
-      if ($('.page-transparent').length) {
+      if ($('[data-header-transparent]').length) {
         if (scrollTop < 1) {
           header.addClass('header--transparent')
         } else {
