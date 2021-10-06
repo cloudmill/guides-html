@@ -17,35 +17,15 @@ import 'scripts/table.js';
 import 'scripts/aside.js';
 import 'scripts/aos.js';
 import { Tabs } from './assets/scripts/tabs'
+import { Counter } from './assets/scripts/counter'
 
 
 $(() => {
   const tabs = new Tabs('[data-tabs]')
-})
 
-// counter
-{
-  $(() => {
-    const counter = $('.counter')
+  const counters = document.querySelectorAll('.counter')
 
-    if (counter.length) {
-
-      counter.each(function() {
-        const ths = $(this)
-        const counterPlus = ths.find('.counter__item--plus')
-        const counterMinus = ths.find('.counter__item--minus')
-        const number = ths.find('.counter__number')
-
-        counterPlus.on('click', function() {
-          number.text(+number.text() + 1)
-        })
-
-        counterMinus.on('click', function() {
-          if (number.text() > 0) {
-            number.text(+number.text() - 1)
-          }
-        })
-      })
-    }
+  counters.forEach(item => {
+    const counter = new Counter(item)
   })
-}
+})

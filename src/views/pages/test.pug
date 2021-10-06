@@ -3,5 +3,27 @@ extends ../layouts/master.pug
 block header 
 
 block content
+  .test 
+    .counter(data-max-count='4')
+      .counter__item.counter__item--minus.disabled(data-count-minus='')
+        +minus-svg.counter__minus
+      .counter__number 
+        |0
+      .counter__item.counter__item--plus(data-count-plus='')
+        +plus-svg.counter__plus
+    .counter(data-max-count='4')
+      .counter__item.counter__item--minus.disabled(data-count-minus='')
+        +minus-svg.counter__minus
+      .counter__number 
+        |0
+      .counter__item.counter__item--plus(data-count-plus='')
+        +plus-svg.counter__plus
+    .counter(data-max-count='4')
+      .counter__item.counter__item--minus.disabled(data-count-minus='')
+        +minus-svg.counter__minus
+      .counter__number 
+        |0
+      .counter__item.counter__item--plus(data-count-plus='')
+        +plus-svg.counter__plus
   
 block footer
