@@ -218,19 +218,19 @@ mixin calculator
                   .events__head-icon 
                     +arrow-svg.events__head-svg
             .events__body(data-accordion-dropdown='')
-              .events__top
+              .events__top(data-tabs='')
                 .events__top-row 
                   .events__top-col 
                     each item, i in ['Folk show', 'Evening in the Faberge museum', 'Ballet evening', 'Classical Music Evening']
                       .events__top-item(data-aos='fade-up')
-                        .events__tab(class=((i === 0) ? 'events__tab--active' : ''))
+                        .events__tab(data-tabs-item='' class=((i === 0) ? 'active' : ''))
                           |#{item}
                         .events__top-button(data-fancy-button='2')
                           |Read more
                   .events__top-col 
                     each item in ['Evening boat trip', 'Russian dinner', 'Private car/minivan for an evening', 'White Nights Tour" (Draw Bridges)']
                       .events__top-item(data-aos='fade-up')
-                        .events__tab  
+                        .events__tab(data-tabs-item='') 
                           |#{item}
                         .events__top-button(data-fancy-button='2')
                           |Read more

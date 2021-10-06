@@ -34,6 +34,11 @@
         color: $color-blue;
       }
     }
+    #{$comp}__text {
+      &:hover {
+        color: $color-black;
+      }
+    }
   }
 
   &__item {
@@ -90,6 +95,11 @@
     @include fsl(14px);
     @media (min-width: $breakpoint) {
       @include fsl(16px);
+    }
+    transition: $transition;
+
+    &:hover {
+      color: $color-white;
     }
   }
   &__link {

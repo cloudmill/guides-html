@@ -11,10 +11,15 @@ mixin media
       a.media__mail(href="mailto:info@bestguides-spb.com") 
         |info@bestguides-spb.com
     .media__item(data-aos='fade-up')
-      .media__icon 
-        +location-svg.media__svg
-      .media__text
-        |191186, Russia, St. Petersburg, Kanal #[br] Griboedova embankment., H. 5, Off. 205
-        if (attributes.link)
+      if (attributes.link)
+        .media__icon 
+          +location-svg.media__svg
+        .media__text
+          |191186, Russia, St. Petersburg, Kanal #[br] Griboedova embankment., H. 5, Off. 205
           a.media__link(href="#" target='_blank') 
             |#{attributes.link}
+      else
+        .media__icon 
+          +location-svg.media__svg
+        a.media__text(href="#") 
+          |191186, Russia, St. Petersburg, Kanal #[br] Griboedova embankment., H. 5, Off. 205

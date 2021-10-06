@@ -6,7 +6,6 @@ $(window).on('load', function() {
   if (mediaQuery.matches) {
     
     setTimeout(() => {
-      
       update()
     });
 
@@ -44,6 +43,10 @@ $(window).on('load', function() {
     }
 
     window.addEventListener('resize', handeResize)
-    window.addEventListener('scroll', scrollHandler)
+    if (!$('.contacts-page').length) { // ?
+      window.addEventListener('scroll', scrollHandler)
+    } else {
+      $('.footer__overlay').css('opacity', '0');
+    }
   }
 })
