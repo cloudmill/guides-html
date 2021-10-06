@@ -1,5 +1,11 @@
 .sticky {
 
+  @media (min-width: $breakpoint) {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 179px;
+  }
+
   &--width {
     max-width: calc(#{$col-part-d} * 4);
   }

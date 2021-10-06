@@ -9,7 +9,7 @@ include  ../components/excursion-individual
 
 block content
   .excursion-page
-    section.section.section--first 
+    section.section.section--first.section--visible
       .container
         .section__row
           .section__col
@@ -33,8 +33,8 @@ block content
               +sticky-mobile(data = data.landSticky)
             section.section 
               +about
-          .section__col(data-sticky-container='')
-            .sticky.sticky--width(data-margin-top='178')
+          .section__col
+            .sticky
               +navigation(items=['Landmarks', 'Cathedrals and Monasteries of St. Petersburg'] page="Peter and Paul Fortress")
               .sticky__inner 
                 .sticky__grid

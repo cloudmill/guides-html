@@ -13,7 +13,7 @@ block content
   .excursion-page
     section.section.section--panel(data-aos='fade-up')
       +panel.panel--disabled(button = 'Change')
-    section.section.section--md 
+    section.section.section--md.section--visible
       .container
         .section__row
           .section__col
@@ -50,8 +50,8 @@ block content
                 .excursion-page__btn-col(data-aos='fade-up')
                   +button.button--xl(tag = 'div')
                     |View
-          .section__col(data-sticky-container='')
-            .sticky.sticky--width(data-margin-top='178')
+          .section__col
+            .sticky
               +navigation(items=['Shore excursions'] page="Relax tour")
               .sticky__category 
                 .category(data-aos='fade-up')

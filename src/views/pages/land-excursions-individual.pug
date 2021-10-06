@@ -13,7 +13,7 @@ block content
   .excursion-page
     section.section.section--panel 
       +panel.panel--disabled(button = 'Change')
-    section.section.section--md 
+    section.section.section--md.section--visible
       .container
         .section__row
           .section__col
@@ -43,8 +43,8 @@ block content
               +landmarks
             section.section 
               +about
-          .section__col(data-sticky-container='')
-            .sticky.sticky--width(data-margin-top='178')
+          .section__col
+            .sticky
               +navigation(items=['For hotel guests'] page="Walking tour of St. Petersburg")
               .sticky__category(data-aos='fade-up') 
                 .category

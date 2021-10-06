@@ -17,7 +17,7 @@ block content
       },
     ]
   .excursion-page
-    section.section.section--first 
+    section.section.section--first.section--visible 
       .container 
         .section__row 
           .section__col
@@ -41,7 +41,7 @@ block content
             .excursion-page__mobile  
               h1(data-aos='fade-up') 
                 |Russian Ballet
-              .sticky(data-sticky-for='1279')
+              .sticky
                 .sticky__inner 
                   .sticky__grid
                     each item in ddata
@@ -60,8 +60,8 @@ block content
                     |from #[span.sticky__price-discont $159] #[span.sticky__price-price $129] / person
             section.section 
               +about
-          .section__col(data-sticky-container='')
-            .sticky.sticky--width(data-margin-top='178')
+          .section__col
+            .sticky
               +navigation(items=['Shore excursions', 'Relax tour'] page="Russian Ballet")
               .sticky__inner 
                 .sticky__grid

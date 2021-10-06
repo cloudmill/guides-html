@@ -18,7 +18,7 @@ block content
       },
     ]
   .excursion-page
-    section.section.section--first 
+    section.section.section--first.section--visible
       .container 
         .section__row 
           .section__col
@@ -39,7 +39,7 @@ block content
             .excursion-page__mobile  
               h1(data-aos='fade-up') 
                 |Folk show
-              .sticky(data-sticky-for='1279')
+              .sticky
                 .sticky__inner 
                   .sticky__grid
                     each item in ddata
@@ -60,8 +60,8 @@ block content
               +price
             section.section 
               +about
-          .section__col(data-sticky-container='')
-            .sticky.sticky--width(data-margin-top='178')
+          .section__col
+            .sticky
               +navigation(items=['For hotel guests'] page="Folk show")
               .sticky__inner 
                 .sticky__grid

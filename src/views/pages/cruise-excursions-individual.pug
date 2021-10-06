@@ -15,7 +15,7 @@ block content
   .excursion-page
     section.section.section--panel 
       +panel.panel--disabled(button = 'Change')
-    section.section.section--md 
+    section.section.section--md.section--visible
       .container
         .section__row
           .section__col
@@ -53,8 +53,8 @@ block content
                   a.button.button--xl.animation(href='#' data-scroll='#events')
                     span.animation__span 
                       |View
-          .section__col(data-sticky-container='')
-            .sticky.sticky--width(data-margin-top='178')
+          .section__col 
+            .sticky
               +navigation(items=['Shore excursions'] page="Relax tour")
               .sticky__category(data-aos='fade-up') 
                 .category

@@ -7,7 +7,7 @@ import 'scripts/modals.js';
 import 'scripts/accordion.js';
 import 'scripts/select.js';
 import 'scripts/nav-links.js';
-import 'scripts/sticky.js';
+// import 'scripts/sticky.js';
 import 'scripts/parsley.js';
 import 'scripts/hero.js';
 import 'scripts/footer.js';
