@@ -8,10 +8,11 @@
   }
 
   &--first {
-    margin-top: 80px;
+    padding-top: 80px;
     @media (min-width: $breakpoint) {
-      margin-top: 173px;
+      padding-top: 173px;
     }
+    margin: 0;
   }
   &--md {
     margin-top: 20px;

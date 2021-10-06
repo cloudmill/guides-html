@@ -108,7 +108,7 @@
   }
   &__about-title {
     @include f-2;
-    @include fsl(40px);
+    @include fsl(40px, 160%); // 160% - safari issue
     @media (min-width: $breakpoint) {
       @include fsl(110px);
     }

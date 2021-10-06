@@ -137,11 +137,14 @@
   }
 
   &__sign {
+    $padding: 25px;
+
+    padding: 0 $padding;
     position: absolute;
     top: 46px;
-    right: 51px;
+    right: calc(51px - #{$padding});
 
-    @include fsl(60px);
+    @include fsl(60px, 180%);
     color: $color-white;
     @include f-3;
   }

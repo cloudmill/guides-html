@@ -424,7 +424,7 @@
     @include placeholder {
       @include f-main;
       color: $color-black;
-      @include fsl(14px, 130%);
+      @include fsl(14px, 100%);
       transition: $transition;
     }
 
