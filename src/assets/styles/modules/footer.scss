@@ -9,6 +9,13 @@
 
   background: $color-light-blue;
 
+  &__overlay {
+    @include cover;
+
+    background: $color-black;
+    pointer-events: none;
+  }
+
   &__inner {
     padding: 20px 0 40px;
     @media (min-width: $breakpoint) {

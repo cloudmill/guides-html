@@ -4,11 +4,14 @@ const FPS = 60
 
 $(window).on('load', function() {
   if (mediaQuery.matches) {
-    update()
+    
+    setTimeout(() => {
+      
+      update()
+    });
 
     function update() {
       const footerHeight = $('.footer').innerHeight()
-
       $('.main').css('margin-bottom', `${footerHeight}px`)
     }
 
@@ -26,6 +29,21 @@ $(window).on('load', function() {
       }
     })()
 
+    function scrollHandler() {
+      const scrollBottom = this.pageYOffset + $(window).height()
+      const mainHeight = $('.main').innerHeight()
+      const footerHeight = $('.footer').innerHeight()
+
+      if (scrollBottom > mainHeight) {
+        const fadeToggle = ((scrollBottom - mainHeight) / footerHeight) 
+
+        requestAnimationFrame(() => {
+          $('.footer__overlay').css('opacity', (1 - fadeToggle) * 0.75);
+        })
+      }
+    }
+
     window.addEventListener('resize', handeResize)
+    window.addEventListener('scroll', scrollHandler)
   }
 })

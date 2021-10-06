@@ -17,10 +17,6 @@
       #{$comp}__box {
         border-color: $color-blue;
       }
-
-      #{$comp}__link {
-        color: $color-brown;
-      }
     }
 
     &.parsley-error {
@@ -87,6 +83,10 @@
   &__link {
     color: $color-blue;
     transition: $transition;
+
+    &:hover {
+      color: $color-brown;
+    }
   }
 
   .parsley-errors-list  {

@@ -16,8 +16,12 @@ import 'scripts/form-response.js';
 import 'scripts/table.js';
 import 'scripts/aside.js';
 import 'scripts/aos.js';
-import 'scripts/tabs.js';
+import { Tabs } from './assets/scripts/tabs'
 
+
+$(() => {
+  const tabs = new Tabs('[data-tabs]')
+})
 
 // counter
 {

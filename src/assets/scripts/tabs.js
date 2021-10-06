@@ -35,5 +35,4 @@ export class Tabs {
   }
 }
 
-const tabs = new Tabs('[data-tabs]')
 
