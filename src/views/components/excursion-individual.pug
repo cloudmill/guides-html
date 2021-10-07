@@ -122,8 +122,14 @@ mixin calculator
                   +plus-svg.counter__svg.counter__plus
           .calculator__grid-row 
             .calculator__grid-col(data-aos='fade-up') 
-              .calculator__label 
-                |Among them wheelchair users
+              .tooltip 
+                .tooltip__wrapper
+                  .calculator__label 
+                    |Among them wheelchair users
+                  .tooltip__icon 
+                    +tooltip-svg.tooltip__svg
+                  .tooltip__container 
+                    |Attention! In order to visit this tour, you need to apply for a temporary visa. Without a temporary visa, you will not be allowed out of the port.
               .counter 
                 .counter__item.counter__item--minus(data-count-minus='')
                   +minus-svg.counter__svg.counter__minus
@@ -193,8 +199,14 @@ mixin calculator
                 .counter__item.counter__item--plus(data-count-plus='')
                   +plus-svg.counter__svg.counter__plus
           .calculator__item(data-aos='fade-up') 
-            .calculator__label 
+            .tooltip 
+              .calculator__label 
                 |Among them wheelchair users
+                span.tooltip__span
+                  .tooltip__icon 
+                    +tooltip-svg.tooltip__svg
+              .tooltip__container 
+                |Attention! In order to visit this tour, you need to apply for a temporary visa. Without a temporary visa, you will not be allowed out of the port.
           .calculator__item(data-aos='fade-up')
             .counter 
               .counter__item.counter__item--minus(data-count-minus='')

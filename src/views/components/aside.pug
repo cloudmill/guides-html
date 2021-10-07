@@ -39,6 +39,25 @@ mixin aside
                       +check-svg.aside__svg
                     .aside__text 
                       |#{text.text}
+          li.aside__item(data-aos='fade-up') 
+              .aside__top
+                .tooltip 
+                  .aside__type 
+                    |Availability for wheelchair-users
+                    span.tooltip__span
+                      .tooltip__icon 
+                        +tooltip-svg.tooltip__svg
+                  .tooltip__container 
+                    |Attention! In order to visit this tour, you need to apply for a temporary visa. Without a temporary visa, you will not be allowed out of the port.
+                a.aside__select.disabled(href="#") 
+                  |Select
+              .aside__body
+                label.aside__label
+                  input.aside__input(type="checkbox" name='checkbox' value='1')
+                  .aside__checkbox
+                    +check-svg.aside__svg
+                  .aside__text 
+                    |On sale 
         .aside__buttons(data-aos='fade-up')  
           .aside__buttons-item 
             .button-icon.animation(data-clear-button='')
