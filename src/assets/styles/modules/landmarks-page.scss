@@ -16,7 +16,9 @@
   }
 
   &__list {
-    margin-top: 20px;
+    @media (max-width: $breakpoint - 1px) {
+      margin-top: 20px;
+    }
   }
 
   &__item {
@@ -25,7 +27,6 @@
     }
 
     &.active {
-
       
       #{$comp}__button {
         #{$comp}__city {
