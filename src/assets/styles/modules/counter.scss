@@ -1,4 +1,5 @@
 .counter {
+  $comp: &;
   $size: 52px;
   $size-n: 68px;
 
@@ -34,7 +35,9 @@
 
     &.disabled {
       pointer-events: none;
-      opacity: 0.4;
+      #{$comp}__svg {
+        opacity: 0.4;
+      }
     }
   } 
 
@@ -64,5 +67,9 @@
     path {
       stroke: $color-black;
     }
+  }
+
+  &__svg {
+    transition: $transition;
   }
 }
