@@ -113,23 +113,23 @@ mixin calculator
               .calculator__label 
                 |#{item}
             .calculator__item(data-aos='fade-up') 
-              .counter 
-                .counter__item.counter__item--minus
+              .counter(data-max-count='5')
+                .counter__item.counter__item--minus(data-count-minus='')
                   +minus-svg.counter__minus
                 .counter__number 
                   |0
-                .counter__item.counter__item--plus
+                .counter__item.counter__item--plus(data-count-plus='')
                   +plus-svg.counter__plus
           .calculator__grid-row 
             .calculator__grid-col(data-aos='fade-up') 
               .calculator__label 
                 |Among them wheelchair users
               .counter 
-                .counter__item.counter__item--minus
+                .counter__item.counter__item--minus(data-count-minus='')
                   +minus-svg.counter__minus
                 .counter__number 
                   |0
-                .counter__item.counter__item--plus
+                .counter__item.counter__item--plus(data-count-plus='')
                   +plus-svg.counter__plus
               .calculator__description 
                 |Doesn’t influence the cost
@@ -185,23 +185,23 @@ mixin calculator
               .calculator__label 
                 |#{item}
             .calculator__item(data-aos='fade-up')
-              .counter 
-                .counter__item.counter__item--minus
+              .counter(data-max-count='3')
+                .counter__item.counter__item--minus(data-count-minus='')
                   +minus-svg.counter__minus
                 .counter__number 
                   |0
-                .counter__item.counter__item--plus
+                .counter__item.counter__item--plus(data-count-plus='')
                   +plus-svg.counter__plus
           .calculator__item(data-aos='fade-up') 
             .calculator__label 
                 |Among them wheelchair users
           .calculator__item(data-aos='fade-up')
             .counter 
-              .counter__item.counter__item--minus
+              .counter__item.counter__item--minus(data-count-minus='')
                 +minus-svg.counter__minus
               .counter__number 
                 |0
-              .counter__item.counter__item--plus
+              .counter__item.counter__item--plus(data-count-plus='')
                 +plus-svg.counter__plus
             .calculator__description 
               |Doesn’t influence the cost
@@ -249,11 +249,11 @@ mixin calculator
                       .calculator__label
                         |Number of people
                       .counter 
-                        .counter__item.counter__item--minus
+                        .counter__item.counter__item--minus(data-count-minus='')
                           +minus-svg.counter__minus
                         .counter__number 
                           |1
-                        .counter__item.counter__item--plus
+                        .counter__item.counter__item--plus(data-count-plus='')
                           +plus-svg.counter__plus
                   .events__bot-col
                     .events__bot-left(data-aos='fade-up')
@@ -359,11 +359,11 @@ mixin calculator-alt
           .calculator__label 
             |Number of people
           .counter 
-            .counter__item.counter__item--minus
+            .counter__item.counter__item--minus(data-count-minus='')
               +minus-svg.counter__minus
             .counter__number 
               |1
-            .counter__item.counter__item--plus
+            .counter__item.counter__item--plus(data-count-plus='')
               +plus-svg.counter__plus
         .calculator__item(data-aos='fade-up')
           .calculator__label.calculator__label--big

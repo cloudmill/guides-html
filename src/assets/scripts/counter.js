@@ -1,12 +1,11 @@
 
-
 export class Counter {
   constructor(selector) {
     this.root = selector
     this.plus = this.root.querySelector('[data-count-plus]')
     this.minus = this.root.querySelector('[data-count-minus]')
     this.number = this.root.querySelector('.counter__number')
-    this.maxCount = this.root.getAttribute('data-max-count')
+    this.maxCount = this.root.getAttribute('data-max-count') || Infinity
 
     if (this.root) {
       this.init()
@@ -18,28 +17,18 @@ export class Counter {
     window.addEventListener('click', e => {
       const target = e.target.closest('.counter__item')
 
-      switch (target) {
-        case this.minus:
-          this.decrement()
-          break;
-        case this.plus: 
-          this.increment()
-          break;
+      if (target) {
+        switch (target) {
+          case this.minus:
+            this.number.textContent = +this.number.textContent - 1
+            break;
+          case this.plus: 
+            this.number.textContent = +this.number.textContent + 1
+            break;
+        }
+        this.setDisabled()
       }
-      this.setDisabled()
     })
-  }
-
-  increment() {
-    if (+this.maxCount > +this.number.textContent) {
-      this.number.textContent = +this.number.textContent + 1
-    } 
-  }
-
-  decrement() {
-    if (+this.number.textContent) {
-      this.number.textContent = +this.number.textContent - 1
-    } 
   }
 
   setDisabled() {
