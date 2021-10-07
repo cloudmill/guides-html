@@ -21,17 +21,19 @@ $(() => {
       })
     })
     
+    // Количество выбранных фильтров
     let arr = []
     let isOpen = true
     const select = $('[data-aside-select]')
     const buttonText = $('.aside-button__text').text()
     
+    // from accordion.js
     window.addEventListener('accordion-toggle', function () {
       isOpen = !isOpen
 
       if (!isOpen) {
 
-        if (select.val() !== null) {
+        if (select.val()) {
           arr.push(select.val())
         }
         
@@ -51,5 +53,13 @@ $(() => {
         $('.aside-button__text').text(buttonText)
       }
     });
+
+    // clear button
+    const clearButton = aside.find('[data-clear-button]')
+
+    clearButton.on('click', function() {
+      checkbox.prop('checked', false)
+      $('.aside__select').addClass('disabled')
+    })
   }
 })
