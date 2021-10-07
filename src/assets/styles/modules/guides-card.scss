@@ -139,7 +139,7 @@
   &__sign {
     $padding: 25px;
 
-    padding: 0 $padding;
+    padding: 0 $padding; // safari issue
     position: absolute;
     top: calc(30px - 10px);
     right: calc(30px - #{$padding});

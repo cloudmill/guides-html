@@ -74,7 +74,7 @@
     @media (min-width: $breakpoint) {
       @include fsl(60px);
     }
-    transition: $transition;
+    transition: color $transition;
 
     &:hover {
       color: $color-white;
@@ -85,7 +85,7 @@
     @media (min-width: $breakpoint) {
       @include fsl(25px, 130%);
     }
-    transition: $transition;
+    transition: color $transition;
 
     &:hover {
       color: $color-white;
@@ -96,7 +96,7 @@
     @media (min-width: $breakpoint) {
       @include fsl(16px);
     }
-    transition: $transition;
+    transition: color $transition;
 
     &:hover {
       color: $color-white;
@@ -110,7 +110,7 @@
     font-weight: 500;
     @include fsl(14px);
     text-decoration: underline;
-    transition: $transition;
+    transition: color $transition;
 
     &:hover {
       color: $color-blue;

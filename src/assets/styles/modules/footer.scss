@@ -5,7 +5,6 @@
     left: 0;
     right: 0;
   }
-  
 
   background: $color-light-blue;
 
@@ -207,7 +206,7 @@
   &__privacy {
     grid-area: C;
     @include fsl(15px);
-    transition: $transition;
+    transition: color $transition;
 
     &:hover {
       color: $color-white;
@@ -221,6 +220,11 @@
       display: none;
     }
     @include fsl(15px);
+    transition: color $transition;
+
+    &:hover {
+      color: $color-white;
+    }
   }
 
   &__corp {

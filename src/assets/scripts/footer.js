@@ -5,9 +5,8 @@ const FPS = 60
 $(window).on('load', function() {
   if (mediaQuery.matches) {
     
-    setTimeout(() => {
-      update()
-    });
+    update()
+    scrollHandler()
 
     function update() {
       const footerHeight = $('.footer').innerHeight()
@@ -29,7 +28,8 @@ $(window).on('load', function() {
     })()
 
     function scrollHandler() {
-      const scrollBottom = this.pageYOffset + $(window).height()
+      // const scrollBottom = this.pageYOffset + $(window).height() 
+      const scrollBottom = window.pageYOffset + $(window).height() 
       const mainHeight = $('.main').innerHeight()
       const footerHeight = $('.footer').innerHeight()
 
@@ -41,12 +41,13 @@ $(window).on('load', function() {
         })
       }
     }
+    
 
     window.addEventListener('resize', handeResize)
-    if (!$('.contacts-page').length) { // ?
+    // if (!$('.contacts-page').length) { // ?
       window.addEventListener('scroll', scrollHandler)
-    } else {
-      $('.footer__overlay').css('opacity', '0');
-    }
+    // } else {
+    //   $('.footer__overlay').css('opacity', '0');
+    // }
   }
 })
