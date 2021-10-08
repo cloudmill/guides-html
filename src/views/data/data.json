@@ -111,6 +111,10 @@
     {
       "page": "Круизное, анкета / несколько гостей",
       "href": "questionnaire.html"
+    },
+    {
+      "page": "Админка",
+      "href": "admin.html"
     }
   ],
   "nav": [
