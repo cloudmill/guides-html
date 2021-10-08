@@ -1,0 +1,303 @@
+extends ../layouts/master.pug
+
+include ../components/form-components
+
+block header 
+
+block content
+  .admin 
+    .container 
+      .admin__top 
+        .product-tabs
+          each item, i in ['Общая информация', 'Состав тура', 'Календарь', 'Цены'] 
+            .product-tabs__item 
+              .product-tabs__tab(class=(i === 0) ? 'active' : '')
+                h2 
+                  |#{item}
+      form.form(action="/") 
+        .admin__section
+          .admin__block 
+            .admin__text.admin__right 
+              |Название тура
+            .admin__big
+              +input(type = 'text' name = 'name')
+          .admin__block 
+            .admin__text.admin__right 
+              |Активность
+            .checkbox
+              label.checkbox__label
+                input.checkbox__input(type="checkbox" name='checkbox-1' required)
+                .checkbox__box 
+                  +check-svg.checkbox__svg
+          .admin__block 
+            .admin__text.admin__right 
+              |Сортировка
+            .admin__md
+              +input(type = 'text' name = 'name')
+        .admin__section 
+          .admin__block
+            .admin__col  
+              .admin__row 
+                .admin__horiz
+                  .admin__text
+                    |Укажите тип
+                .admin__horiz
+                  .admin__item 
+                    +checkbox(text='Индивидуальные')
+                  .admin__item 
+                    +checkbox(text='Групповые')
+              .admin__row 
+                .admin__horiz
+                  .admin__text
+                    |Укажите особенность
+                .admin__horiz
+                  .admin__item 
+                    +checkbox(text='Popular')
+                  .admin__item 
+                    +checkbox(text='Special interest')
+                  .admin__item 
+                    +checkbox(text='Child friendly')
+          .admin__block 
+            .admin__large
+              .admin__horiz 
+                .admin__text 
+                  |Блок с выводом сообщения о инддивидуальном подходе (только для индивидуальных)
+              .admin__horiz 
+                textarea.form__textarea(name='message')
+        .admin__section
+          .admin__large 
+            .admin__row
+              textarea.form__textarea(name='message')
+            .admin__row
+              textarea.form__textarea(name='message')
+            .admin__row
+              textarea.form__textarea(name='message')
+            .admin__row 
+              a.admin__show(href="#") 
+                |Добавить еще
+        .admin__section 
+          .admin__col  
+            .admin__row 
+              .admin__horiz
+                .admin__text
+                  |Укажите порт
+              .admin__horiz
+                .admin__grid
+                  .admin__item 
+                    +checkbox(text='Санкт-Петербург')
+                  .admin__item 
+                    +checkbox(text='Варнемюнде/Росток')
+                  .admin__item 
+                    +checkbox(text='Стокгольм')
+                  .admin__item.admin__first
+                    +checkbox(text='Таллин')
+                  .admin__item 
+                    +checkbox(text='Хельсинки')
+                  .admin__item 
+                    +checkbox(text='Копенгаген')
+        .admin__section 
+          .admin__col 
+            .admin__row 
+              .admin__text 
+                |Укажите продолжительность экскурсии
+            .admin__row 
+              .admin__block 
+                .admin__block-item 
+                  .admin__ll
+                    +input(type = 'text' name = 'value' placeholder = 'Значение')
+                .admin__block-item 
+                  .admin__ll 
+                    .select-wrapper
+                      .select
+                        select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
+                          option(value = 'hour')
+                            |Часы
+                          option(value = 'days')
+                            |Дни
+        .admin__section 
+          .admin__col 
+            .admin__horiz 
+              .admin__text 
+                |Укажите доступность для инвалидов
+            .admin__horiz
+              +checkbox(text = 'Доступно')
+        .admin__section 
+          .admin__col 
+            .admin__horiz 
+              .admin__text 
+                |Укажите место сбора
+            .admin__horiz
+              .admin__ll
+                +input(type = 'text' name = 'place')
+        .admin__section 
+          .admin__col 
+            .admin__horiz 
+              .admin__text 
+                |Укажите значение активности от 1 до 5
+            .admin__horiz
+              .admin__mid
+                .select-wrapper
+                  .select
+                    select.select__select(name="activity" style='width: 100%' data-select-placeholder='Select language') 
+                      option(value = '1')
+                        |1
+                      option(value = '2')
+                        |2
+                      option(value = '3')
+                        |3
+                      option(value = '4')
+                        |4
+                      option(value = '5')
+                        |5
+        .admin__section
+          .admin__col
+            .admin__container
+              .admin__block 
+                .admin__col
+                  .admin__caption 
+                    |В стоимость тура входит
+                  .admin__row
+                    .admin__ll 
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+              .admin__block 
+                .admin__col
+                  .admin__caption 
+                    |В стоимость тура не входит
+                  .admin__row   
+                    .admin__ll
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+            .admin__row   
+              a.admin__show(href="#") 
+                |Добавить еще
+        .admin__section 
+          .admin__col 
+            .admin__row 
+              .admin__text 
+                |Укажите достопримечательности
+            .admin__row 
+              .admin__horiz 
+                .admin__large 
+                  .select-wrapper
+                    .select
+                      select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
+                        option(value = 'hour')
+                          |Эрмитаж
+                        option(value = 'days')
+                          |Эрмитаж1
+              .admin__horiz 
+                .admin__large 
+                  .select-wrapper
+                    .select
+                      select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
+                        option(value = 'hour')
+                          |Русский музей
+                        option(value = 'days')
+                          |Русский музей1
+              .admin__horiz 
+                .admin__large 
+                  .select-wrapper
+                    .select
+                      select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
+                        option(value = 'hour')
+                          |Выбрать достопримечательность
+                        option(value = 'days')
+                          |Выбрать достопримечательность
+              .admin__horiz 
+                .admin__large 
+                  .select-wrapper
+                    .select
+                      select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
+                        option(value = 'hour')
+                          |Выбрать достопримечательность
+                        option(value = 'days')
+                          |Выбрать достопримечательность
+              .admin__row 
+                a.admin__show(href="#") 
+                  |Добавить еще
+        .admin__section 
+          .admin__col 
+            .admin__row 
+              .admin__text 
+                |Укажите похожие туры
+            .admin__row 
+              .admin__horiz 
+                .admin__large 
+                  .select-wrapper
+                    .select
+                      select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
+                        option(value = 'hour')
+                          |Intensive tour
+                        option(value = 'days')
+                          |Intensive tour1
+              .admin__horiz 
+                .admin__large 
+                  .select-wrapper
+                    .select
+                      select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
+                        option(value = 'hour')
+                          |Relaxed tour 
+                        option(value = 'days')
+                          |Relaxed tour 1
+              .admin__horiz 
+                .admin__large 
+                  .select-wrapper
+                    .select
+                      select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
+                        option(value = 'hour')
+                          |Jewish Heritage
+                        option(value = 'days')
+                          |Jewish Heritage123
+              .admin__horiz 
+                .admin__large 
+                  .select-wrapper
+                    .select
+                      select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
+                        option(value = 'hour')
+                          |Выбрать выбрать похожий тур
+                        option(value = 'days')
+                          |Выбрать выбрать похожий тур123
+              .admin__row 
+                a.admin__show(href="#") 
+                  |Добавить еще
+        .admin__section 
+          .admin__col
+            .admin__row 
+              .admin__caption 
+                |Укажите шаблон для сравнения
+            .admin__row 
+              .admin__large 
+                .select-wrapper
+                  .select
+                    select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
+                      option(value = 'hour')
+                        |Выбрать шаблон для сравнения
+                      option(value = 'days')
+                        |Выбрать шаблон для сравнения123
+            .admin__row 
+              .admin__large 
+                a.button.button--xxl(href="#") 
+                  |Сохранить
+
+block footer

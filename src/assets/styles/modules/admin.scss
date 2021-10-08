@@ -1,0 +1,110 @@
+.admin {
+
+  margin: 140px 60px;
+
+  &__top {
+    margin-bottom: 80px;
+  }
+  // 40 top
+  &__section {
+    margin-top: 40px;
+    
+    display: flex;
+  }
+  // 40 left
+  &__block {
+    display: flex;
+    align-items: center;
+    &:not(:first-child) {
+      margin-left: 40px;
+    }
+  }
+  // 10 left
+  &__block-item {
+    flex-shrink: 0;
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+  }
+  // 10
+  &__right {
+    margin-right: 10px
+  }
+  // fz12
+  &__text {
+    @include fsl(12px);
+  }
+  // fz16
+  &__caption {
+    @include fsl(16px);
+  }
+
+  // w500
+  &__large {
+    width: 500px;
+  }
+  // w300
+  &__big {
+    width: 300px;
+  }
+  // w200
+  &__ll {
+    width: 200px;
+  }
+  // w100
+  &__mid {
+    width: 100px;
+  }
+
+  // 20px top
+  &__row {
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+  // 10px top
+  &__horiz {
+    display: flex;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+  // 20 left
+  &__item {
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+
+  &__show {
+    display: flex;
+    justify-content: center;
+
+    text-decoration: underline;
+    @include fsl(16px);
+    transition: $transition;
+
+    &:hover {
+      color: $color-blue;
+    }
+  }
+
+  &__grid {
+    display: grid;
+
+    row-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__first {
+    &:not(:first-child) {
+      margin-left: 0;
+    }
+  }
+
+  &__container {
+    display: flex;
+  }
+
+}
