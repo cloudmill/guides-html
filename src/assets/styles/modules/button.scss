@@ -17,6 +17,7 @@
   transition: $transition;
   cursor: pointer;
   @include f-main;
+  background: none;
 
   &--m {
     padding: 9px 25px;

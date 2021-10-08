@@ -88,6 +88,10 @@
     &:hover {
       color: $color-blue;
     }
+
+    &--start {
+      justify-content: flex-start;
+    }
   }
 
   &__grid {

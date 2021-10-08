@@ -1,0 +1,49 @@
+extends ../layouts/master.pug
+
+include ../components/form-components
+
+block header 
+
+block content
+  .admin 
+    .container 
+      .admin__top 
+        .product-tabs
+          each item, i in ['Общая информация', 'Состав тура', 'Календарь', 'Цены'] 
+            .product-tabs__item 
+              .product-tabs__tab(class=(i === 2) ? 'active' : '')
+                h2 
+                  |#{item}
+      form.form(action="/") 
+        .admin__section
+          .admin__col 
+            .admin__container
+              .admin__block 
+                .admin__text.admin__right 
+                  |От
+                .admin__mid 
+                  +input(type = 'text' name = 'text')        
+              .admin__block 
+                .admin__text.admin__right 
+                  |До
+                .admin__mid
+                  +input(type = 'text' name = 'text')        
+            .admin__row 
+              .admin__container
+                each item in ['Пн.', 'Вт.', 'Ср.', 'Чт.', 'Пт.', 'Сб.', 'Вс.']
+                  .admin__item 
+                    .admin__horiz
+                      .admin__text
+                        |#{item}
+                    .admin__horiz
+                      .checkbox 
+                      label.checkbox__label
+                        input.checkbox__input(type="checkbox" name='checkbox-1')
+                        .checkbox__box 
+                          +check-svg.checkbox__svg
+        .admin__section 
+          .admin__large 
+            button.button.button--xxl(type='submit')
+              |Изменить
+
+block footer
