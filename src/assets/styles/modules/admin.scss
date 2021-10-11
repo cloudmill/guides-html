@@ -127,4 +127,21 @@
     display: flex;
   }
 
+  &__head {
+    padding-top: 30px;
+
+    border-top: 1px solid $color-black;
+  }
+
+  &__calendar {
+    margin-top: 50px;
+
+  }
+  &__calendar-row {
+    display: flex;
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
 }

@@ -113,7 +113,19 @@
       "href": "questionnaire.html"
     },
     {
-      "page": "Админка",
+      "page": "[Админка] Общая информация",
+      "href": "admin.html"
+    },
+    {
+      "page": "[Админка] Состав тура",
+      "href": "admin.html"
+    },
+    {
+      "page": "[Админка] Календарь",
+      "href": "admin.html"
+    },
+    {
+      "page": "[Админка] Цены",
       "href": "admin.html"
     }
   ],
