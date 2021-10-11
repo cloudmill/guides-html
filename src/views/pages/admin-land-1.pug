@@ -1,0 +1,93 @@
+extends ../layouts/master.pug
+
+include ../components/form-components
+
+block header 
+
+block content
+  .admin 
+    .container 
+      .admin__top 
+        .product-tabs
+          each item, i in ['Общая информация', 'Состав тура', 'Календарь', 'Цены'] 
+            .product-tabs__item 
+              .product-tabs__tab(class=(i === 1) ? 'active' : '')
+                h2 
+                  |#{item}
+      form.form(action="/") 
+        .admin__section
+          .admin__col 
+            .admin__row
+              .admin__text 
+                |Заполните расписание программы
+            .admin__row 
+              .admin__text 
+                |1 день
+            .admin__row 
+              .admin__container
+                .admin__block 
+                  .admin__mid
+                    .admin__text
+                      |Укажите время
+                  .admin__ll
+                    .admin__horiz 
+                      +input(type = 'text' name = 'text')
+                    .admin__horiz 
+                      +input(type = 'text' name = 'text')
+                    .admin__horiz 
+                      +input(type = 'text' name = 'text')
+                .admin__block 
+                  .admin__mid
+                    .admin__text
+                      |Укажите событие
+                  .admin__ll
+                    .admin__horiz 
+                      +input(type = 'text' name = 'text')
+                    .admin__horiz 
+                      +input(type = 'text' name = 'text')
+                    .admin__horiz 
+                      +input(type = 'text' name = 'text')
+            .admin__row 
+              a.admin__show(href="#") 
+                |Добавить еще
+        .admin__section
+          .admin__col 
+            .admin__row 
+              .admin__text 
+                |2 день
+            .admin__row 
+              .admin__container
+                .admin__block 
+                  .admin__mid
+                    .admin__text
+                      |Укажите время
+                  .admin__ll
+                    .admin__horiz 
+                      +input(type = 'text' name = 'text')
+                    .admin__horiz 
+                      +input(type = 'text' name = 'text')
+                    .admin__horiz 
+                      +input(type = 'text' name = 'text')
+                .admin__block 
+                  .admin__mid
+                    .admin__text
+                      |Укажите событие
+                  .admin__ll
+                    .admin__horiz 
+                      +input(type = 'text' name = 'text')
+                    .admin__horiz 
+                      +input(type = 'text' name = 'text')
+                    .admin__horiz 
+                      +input(type = 'text' name = 'text')
+            .admin__row 
+              a.admin__show(href="#") 
+                |Добавить еще
+        .admin__section 
+          a.admin__show.admin__show--start(href="#") 
+            |Добавить еще день
+        .admin__section 
+          .admin__large 
+            button.button.button--xxl(type='submit')
+              |Сохранить
+
+block footer
