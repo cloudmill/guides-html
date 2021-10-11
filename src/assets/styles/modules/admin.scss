@@ -18,6 +18,10 @@
     &:not(:first-child) {
       margin-left: 40px;
     }
+    
+    &--end {
+      justify-content: flex-end;
+    }
   }
   // 10 left
   &__block-item {
@@ -30,9 +34,17 @@
   &__right {
     margin-right: 10px
   }
+  // 25
+  &__left {
+    margin-left: 25px
+  }
   // fz12
   &__text {
     @include fsl(12px);
+
+    &--center {
+      text-align: center
+    }
   }
   // fz16
   &__caption {
@@ -68,6 +80,10 @@
 
     &:not(:first-child) {
       margin-top: 10px;
+    }
+
+    &--noflex {
+      display: block;
     }
   }
   // 20 left
