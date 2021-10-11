@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>guides</title>
+		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
+		<script defer="defer" src="assets/vendor.js"></script>
+		<script defer="defer" src="assets/app.js"></script>
+		<link href="589.css" rel="stylesheet">
+		<link href="app.css" rel="stylesheet">
+	</head>
+
+	<body class="body">
+		<div class="grid-test">
+			<div class="container">
+				<div class="grid-test__row">
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<main class="main">
+				<div class="admin">
+					<div class="container">
+						<div class="admin__top">
+							<div class="product-tabs">
+								<div class="product-tabs__item">
+									<div class="product-tabs__tab">
+										<h2>Общая информация</h2>
+									</div>
+								</div>
+								<div class="product-tabs__item">
+									<div class="product-tabs__tab">
+										<h2>Состав тура</h2>
+									</div>
+								</div>
+								<div class="product-tabs__item">
+									<div class="product-tabs__tab">
+										<h2>Календарь</h2>
+									</div>
+								</div>
+								<div class="product-tabs__item">
+									<div class="product-tabs__tab">
+										<h2>Цены</h2>
+									</div>
+								</div>
+								<div class="product-tabs__item">
+									<div class="product-tabs__tab active">
+										<h2>Справка по расчету</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="admin__section">
+							<div class="admin__block">
+								<div class="admin__col">
+									<div class="admin__caption">Стоимость для круизных туров состоит из суммы:</div>
+									<div class="admin__row admin__big">
+										<h3>Работа гида</h3>
+										<div class="admin__horiz">
+											<div class="admin__caption">Работа гида может быть 2-ух типов: Высокий/Низкий сезон</div>
+										</div>
+										<div class="admin__horiz">
+											<div class="admin__caption">Работа гида зависит от количества человек в туре</div>
+										</div>
+										<div class="admin__horiz">
+											<div class="admin__caption">Наценка за язык на котором проходит эскурсия</div>
+										</div>
+										<div class="admin__horiz">
+											<div class="admin__caption">Время работы гида на экскурсии</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="admin__block admin__block--start">
+								<div class="admin__col">
+									<div class="admin__caption">Обозначения</div>
+									<div class="admin__container admin__row">
+										<div class="admin__caption admin__caption--end admin__small">РГ</div>
+										<div class="admin__item">
+											<div class="admin__caption">Работа гида</div>
+										</div>
+									</div>
+									<div class="admin__container admin__row">
+										<div class="admin__item">
+											<div class="admin__caption admin__caption--end admin__small">РГ_ВС</div>
+											<div class="admin__caption admin__caption--end admin__small">РГ_НС</div>
+										</div>
+										<div class="admin__item">
+											<div class="admin__caption">Работа гида высокий сезон</div>
+											<div class="admin__caption">Работа гида низкий сезон</div>
+										</div>
+									</div>
+									<div class="admin__container admin__row">
+										<div class="admin__caption admin__caption--end admin__small">N</div>
+										<div class="admin__item">
+											<div class="admin__caption">Количество человек в туре</div>
+										</div>
+									</div>
+									<div class="admin__container admin__row">
+										<div class="admin__caption admin__caption--end admin__small">КЯ</div>
+										<div class="admin__item">
+											<div class="admin__caption">Коэффициент наценки за язык</div>
+										</div>
+									</div>
+									<div class="admin__container admin__row">
+										<div class="admin__caption admin__caption--end admin__small">ВГ</div>
+										<div class="admin__item">
+											<div class="admin__caption">Время работы гида</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="admin__block admin__block--start">
+								<div class="admin__col">
+									<div class="admin__caption">Формула для расчета работы гида в общую формулу:</div>
+									<div class="admin__row">
+										<h3>РГ = РГ_ВС_N * КЯ * ВГ</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="admin__section">
+							<div class="admin__col">
+								<div class="admin__row">
+									<h3>Работа транспорта</h3>
+								</div>
+								<div class="admin__container admin__row">
+									<div class="admin__block admin__block--start">
+										<div class="admin__col admin__big">
+											<div class="admin__horiz">
+												<div class="admin__caption">Работа гида может быть 2-ух типов: Высокий/Низкий сезон</div>
+											</div>
+											<div class="admin__horiz">
+												<div class="admin__caption">Работа гида зависит от количества человек в туре</div>
+											</div>
+											<div class="admin__horiz">
+												<div class="admin__caption">Время работы транспорта на экскурсии зависит от количества человек в группе</div>
+											</div>
+										</div>
+									</div>
+									<div class="admin__block admin__block--start">
+										<div class="admin__col">
+											<div class="admin__container admin__row">
+												<div class="admin__item">
+													<div class="admin__caption admin__caption--end admin__small">РГ_ВС</div>
+													<div class="admin__caption admin__caption--end admin__small">РГ_НС</div>
+												</div>
+												<div class="admin__item">
+													<div class="admin__caption">Работа гида высокий сезон</div>
+													<div class="admin__caption">Работа гида низкий сезон</div>
+												</div>
+											</div>
+											<div class="admin__container admin__row">
+												<div class="admin__caption admin__caption--end admin__small">N</div>
+												<div class="admin__item">
+													<div class="admin__caption">Количество человек в туре</div>
+												</div>
+											</div>
+											<div class="admin__container admin__row">
+												<div class="admin__caption admin__caption--end admin__small">ВГ</div>
+												<div class="admin__item">
+													<div class="admin__caption">Время работы гида</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="admin__block admin__block--start">
+										<div class="admin__col">
+											<div class="admin__caption">Формула для расчета работы транспорта в общую формулу:</div>
+											<div class="admin__row">
+												<h3>РТ = РТ_ВС_N * BT</h3>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="admin__section">
+							<div class="admin__col">
+								<h3>Стоимости всех билетов</h3>
+								<div class="admin__container admin__row">
+									<div class="admin__block">
+										<div class="admin__col">
+											<div class="admin__caption admin__big">Один билет = один человек. Типы людей: Взрослые, Студенты, Школьники, Дошкольники. Каждый из типов людей имеет 2 подтипа: Высокий/Низкий сезон</div>
+											<div class="admin__section">
+												<div class="admin__caption">1 человек = 1 билет</div>
+											</div>
+										</div>
+									</div>
+									<div class="admin__block">
+										<div class="admin__col">
+											<div class="admin__container">
+												<div class="admin__small">
+													<div class="admin__caption admin__caption--end">БВ_ВС</div>
+												</div>
+												<div class="admin__block-item">
+													<div class="admin__caption">Билет на взрослого человека в высокий сезон</div>
+												</div>
+											</div>
+											<div class="admin__container">
+												<div class="admin__small">
+													<div class="admin__caption admin__caption--end">БВ_НС</div>
+												</div>
+												<div class="admin__block-item">
+													<div class="admin__caption">Билет на взрослого человека в низкий сезон</div>
+												</div>
+											</div>
+											<div class="admin__container">
+												<div class="admin__small">
+													<div class="admin__caption admin__caption--end">БС_ВС</div>
+												</div>
+												<div class="admin__block-item">
+													<div class="admin__caption">Билет на студента в высокий сезон</div>
+												</div>
+											</div>
+											<div class="admin__container">
+												<div class="admin__small">
+													<div class="admin__caption admin__caption--end">БС_НС</div>
+												</div>
+												<div class="admin__block-item">
+													<div class="admin__caption">Билет на студента в низкий сезон</div>
+												</div>
+											</div>
+											<div class="admin__container">
+												<div class="admin__small">
+													<div class="admin__caption admin__caption--end">БШ_ВС</div>
+												</div>
+												<div class="admin__block-item">
+													<div class="admin__caption">Билет на школьника в низкий сезон</div>
+												</div>
+											</div>
+											<div class="admin__container">
+												<div class="admin__small">
+													<div class="admin__caption admin__caption--end">БШ_НС</div>
+												</div>
+												<div class="admin__block-item">
+													<div class="admin__caption">Билет на школьника в высокий сезон</div>
+												</div>
+											</div>
+											<div class="admin__container">
+												<div class="admin__small">
+													<div class="admin__caption admin__caption--end">БД_ВС</div>
+												</div>
+												<div class="admin__block-item">
+													<div class="admin__caption">Билет на дошкольников в высокий сезон</div>
+												</div>
+											</div>
+											<div class="admin__container">
+												<div class="admin__small">
+													<div class="admin__caption admin__caption--end">БД_НС</div>
+												</div>
+												<div class="admin__block-item">
+													<div class="admin__caption">Билет на дети в низкий сезон</div>
+												</div>
+											</div>
+											<div class="admin__container">
+												<div class="admin__small">
+													<div class="admin__caption admin__caption--end">N</div>
+												</div>
+												<div class="admin__block-item">
+													<div class="admin__caption">Количество билетов в экскурсии</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="admin__section">
+							<div class="admin__col">
+								<h3>Экскурсионка</h3>
+								<div class="admin__container admin__row">
+									<div class="admin__block">
+										<div class="admin__col admin__big">
+											<div class="admin__caption">Это число, который приплюсовывается к общей стоимости экскурсии. Она может быть 2-ух типов: Высокий/Низкий сезон</div>
+											<div class="admin__row">
+												<div class="admin__caption">Экскурсионка зависит от количества человек в туре</div>
+											</div>
+										</div>
+									</div>
+									<div class="admin__block admin__block--start">
+										<div class="admin__col">
+											<div class="admin__container">
+												<div class="admin__small">
+													<div class="admin__caption admin__caption--end">ЭК_ВС</div>
+												</div>
+												<div class="admin__block-item">
+													<div class="admin__caption">Экскурсионка в высокий сезон</div>
+												</div>
+											</div>
+											<div class="admin__container">
+												<div class="admin__small">
+													<div class="admin__caption admin__caption--end">ЭК_НС</div>
+												</div>
+												<div class="admin__block-item">
+													<div class="admin__caption">Экскурсионка в низкий сезон</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="admin__section">
+							<div class="admin__col">
+								<h3>Наушники для прослушивания</h3>
+								<div class="admin__container admin__row">
+									<div class="admin__block">
+										<div class="admin__col admin__big">
+											<div class="admin__caption">Наушники выдаются в тех случаях, когда в группе больше или равно 6 человекам и они имею тип: Взрослый, студент, школьник. Типу дошкольник наушники не считаются.</div>
+											<div class="admin__row">
+												<div class="admin__caption">Количество ушей зависит от количества человек в экскурсии</div>
+											</div>
+										</div>
+									</div>
+									<div class="admin__block admin__block--start">
+										<div class="admin__col">
+											<div class="admin__container">
+												<div class="admin__small">
+													<div class="admin__caption admin__caption--end">ВЗ</div>
+												</div>
+												<div class="admin__block-item">
+													<div class="admin__caption">Взролый человек</div>
+												</div>
+											</div>
+											<div class="admin__container">
+												<div class="admin__small">
+													<div class="admin__caption admin__caption--end">СТ</div>
+												</div>
+												<div class="admin__block-item">
+													<div class="admin__caption">Студент</div>
+												</div>
+											</div>
+											<div class="admin__container">
+												<div class="admin__small">
+													<div class="admin__caption admin__caption--end">ШК</div>
+												</div>
+												<div class="admin__block-item">
+													<div class="admin__caption">Школьник</div>
+												</div>
+											</div>
+											<div class="admin__container admin__row">
+												<div class="admin__small">
+													<div class="admin__caption admin__caption--end">N</div>
+												</div>
+												<div class="admin__block-item">
+													<div class="admin__caption">Количество человек в туре</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="admin__section">
+							<div class="admin__col">
+								<h3>Наценка за прибытие в порт</h3>
+								<div class="admin__container admin__row">
+									<div class="admin__block">
+										<div class="admin__col admin__big">
+											<div class="admin__caption">Тип транспорта (цена стояния данного вида транспорта в порту) на кол-ва часов в порту</div>
+										</div>
+									</div>
+									<div class="admin__block admin__block--start">
+										<div class="admin__col">
+											<div class="admin__container">
+												<div class="admin__small">
+													<div class="admin__caption admin__caption--end">А_Т</div>
+												</div>
+												<div class="admin__block-item">
+													<div class="admin__caption admin__big">Цена стояния данного вида транспорта в порту. Зависит от выбранного значения в админке</div>
+												</div>
+											</div>
+											<div class="admin__container admin__row">
+												<div class="admin__small">
+													<div class="admin__caption admin__caption--end">Ч</div>
+												</div>
+												<div class="admin__block-item">
+													<div class="admin__caption admin__big">Часы, сколько стоит транспорт в порту.</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="admin__row">
+									<h3>Итоговая стоимость расчета в высокий сезон</h3>
+								</div>
+							</div>
+						</div>
+						<div class="admin__section">
+							<div class="admin__icon"><svg width="26" height="30" viewbox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M23.5 1.5H6L23.5 13L6 28.5H23.5" stroke="#505050" stroke-width="3"></path>
+								</svg></div>
+							<div class="admin__col admin__left">
+								<h2>= РГ_ВС_N * КЯ * ВГ + РТ_ВС_N * BT + БВ_ВС * N_БВ + БС_ВС * N_БC + БШ_ВС * N_БШ + ЭК_ВС_ N + УШИ * (ВЗ +СТ+ШК) + сувениры * (N_ДТ + N_ШК) + A_T*Ч</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

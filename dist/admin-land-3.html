@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>guides</title>
+		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
+		<script defer="defer" src="assets/vendor.js"></script>
+		<script defer="defer" src="assets/app.js"></script>
+		<link href="589.css" rel="stylesheet">
+		<link href="app.css" rel="stylesheet">
+	</head>
+
+	<body class="body">
+		<div class="grid-test">
+			<div class="container">
+				<div class="grid-test__row">
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<main class="main">
+				<div class="admin">
+					<div class="container">
+						<div class="admin__top">
+							<div class="product-tabs">
+								<div class="product-tabs__item">
+									<div class="product-tabs__tab">
+										<h2>Общая информация</h2>
+									</div>
+								</div>
+								<div class="product-tabs__item">
+									<div class="product-tabs__tab">
+										<h2>Состав тура</h2>
+									</div>
+								</div>
+								<div class="product-tabs__item">
+									<div class="product-tabs__tab">
+										<h2>Календарь</h2>
+									</div>
+								</div>
+								<div class="product-tabs__item">
+									<div class="product-tabs__tab active">
+										<h2>Цены</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+						<form class="form" action="/">
+							<div class="admin__section">
+								<div class="admin__col">
+									<div class="admin__row">
+										<h3 class="admin__title">Укажите сезон для формирования цены</h3>
+									</div>
+									<div class="admin__row admin__big">
+										<div class="admin__horiz admin__horiz--noflex">
+											<div class="select-wrapper">
+												<div class="select"><select class="select__select" name="activity" style="width: 100%">
+														<option value="1">Высокий сезон 2021</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+													</select></div>
+											</div>
+										</div>
+										<div class="admin__horiz admin__horiz--noflex">
+											<div class="select-wrapper">
+												<div class="select"><select class="select__select" name="activity" style="width: 100%">
+														<option value="1">Низкий сезон 2021</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+													</select></div>
+											</div>
+										</div>
+										<div class="admin__horiz admin__horiz--noflex">
+											<div class="select-wrapper">
+												<div class="select"><select class="select__select" name="activity" style="width: 100%">
+														<option value="1">Выберите сезон</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+													</select></div>
+											</div>
+										</div>
+										<div class="admin__horiz admin__horiz--noflex"><a class="admin__show" href="#">Добавить еще</a></div>
+									</div>
+								</div>
+							</div>
+							<div class="admin__section">
+								<div class="admin__col">
+									<div class="admin__row">
+										<div class="admin__block">
+											<div class="admin__block admin__big"></div>
+											<div class="admin__block">
+												<div class="admin__text">Высокий сезон 2021</div>
+											</div>
+											<div class="admin__left">
+												<div class="admin__text">Низкий сезон 2021</div>
+											</div>
+										</div>
+									</div>
+									<div class="admin__row">
+										<div class="admin__block">
+											<div class="admin__block admin__block--end admin__big">
+												<div class="admin__text">Время работы гида (ВГ)</div>
+											</div>
+											<div class="admin__block">
+												<div class="admin__mid"><input class="form__input" name="text" required="required" /></div>
+											</div>
+											<div class="admin__block">
+												<div class="admin__mid"><input class="form__input" name="text" required="required" /></div>
+											</div>
+											<div class="admin__block admin__big">
+												<div class="admin__text">Наценка за сувинирную продукцию для детей школьников</div>
+											</div>
+											<div class="admin__block">
+												<div class="admin__block-item admin__mid"></div>
+												<div class="admin__block-item">
+													<div class="admin__mid"><input class="form__input" placeholder="стоимость" name="text" required="required" /></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="admin__row">
+										<div class="admin__block">
+											<div class="admin__block admin__block--end admin__big">
+												<div class="admin__text">Время работы транспорта (ВТ)</div>
+											</div>
+											<div class="admin__block">
+												<div class="admin__mid"><input class="form__input" name="text" required="required" /></div>
+											</div>
+											<div class="admin__block">
+												<div class="admin__mid"><input class="form__input" name="text" required="required" /></div>
+											</div>
+											<div class="admin__block admin__big">
+												<div class="admin__text">Количество человек, при котором плюсуюется наценка (УШМИН)</div>
+											</div>
+											<div class="admin__block">
+												<div class="admin__block-item admin__mid">
+													<div class="admin__text">Количество</div>
+												</div>
+												<div class="admin__block-item">
+													<div class="admin__mid"><input class="form__input" placeholder="значение" name="text" required="required" /></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="admin__row">
+										<div class="admin__block">
+											<div class="admin__block admin__block--end admin__big">
+												<div class="admin__text">Билетный пакет для взрослых (БВ)</div>
+											</div>
+											<div class="admin__block">
+												<div class="admin__mid"><input class="form__input" name="text" required="required" /></div>
+											</div>
+											<div class="admin__block">
+												<div class="admin__mid"><input class="form__input" name="text" required="required" /></div>
+											</div>
+										</div>
+									</div>
+									<div class="admin__row">
+										<div class="admin__block">
+											<div class="admin__block admin__block--end admin__big">
+												<div class="admin__text">Билетный пакет для студентов (БС)</div>
+											</div>
+											<div class="admin__block">
+												<div class="admin__mid"><input class="form__input" name="text" required="required" /></div>
+											</div>
+											<div class="admin__block">
+												<div class="admin__mid"><input class="form__input" name="text" required="required" /></div>
+											</div>
+										</div>
+									</div>
+									<div class="admin__row">
+										<div class="admin__block">
+											<div class="admin__block admin__block--end admin__big">
+												<div class="admin__text">Билетный пакет для школьников (БШ)</div>
+											</div>
+											<div class="admin__block">
+												<div class="admin__mid"><input class="form__input" name="text" required="required" /></div>
+											</div>
+											<div class="admin__block">
+												<div class="admin__mid"><input class="form__input" name="text" required="required" /></div>
+											</div>
+										</div>
+									</div>
+									<div class="admin__row">
+										<div class="admin__block">
+											<div class="admin__block admin__block--end admin__big">
+												<div class="admin__text">Количество часов в порту</div>
+											</div>
+											<div class="admin__block">
+												<div class="admin__mid"><input class="form__input" name="text" required="required" /></div>
+											</div>
+											<div class="admin__block">
+												<div class="admin__mid"><input class="form__input" name="text" required="required" /></div>
+											</div>
+										</div>
+									</div>
+									<div class="admin__row"><a class="admin__show" href="#">Добавить произвольное значение</a></div>
+								</div>
+							</div>
+							<div class="admin__section">
+								<div class="admin__col">
+									<div class="admin__row">
+										<div class="admin__horiz">
+											<div class="admin__text">Укажите язык</div>
+										</div>
+										<div class="admin__horiz">
+											<div class="admin__grid">
+												<div class="admin__item">
+													<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+															<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																</svg></div>
+															<div class="checkbox__text">Русский</div>
+														</label></div>
+												</div>
+												<div class="admin__item">
+													<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+															<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																</svg></div>
+															<div class="checkbox__text">Английский</div>
+														</label></div>
+												</div>
+												<div class="admin__item">
+													<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+															<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																</svg></div>
+															<div class="checkbox__text">Немецкий</div>
+														</label></div>
+												</div>
+												<div class="admin__item admin__first">
+													<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+															<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																</svg></div>
+															<div class="checkbox__text">Французский</div>
+														</label></div>
+												</div>
+												<div class="admin__item">
+													<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+															<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																</svg></div>
+															<div class="checkbox__text">Итальянский</div>
+														</label></div>
+												</div>
+												<div class="admin__item">
+													<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+															<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																</svg></div>
+															<div class="checkbox__text">Шведский</div>
+														</label></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="admin__section">
+								<div class="admin__block">
+									<div class="admin__text">Экскурсионка</div>
+									<div class="admin__block">
+										<div class="admin__block-item">
+											<div class="admin__mid">
+												<div class="admin__text admin__text--center">1</div>
+												<div class="admin__horiz"><input class="form__input" placeholder="стоимость" name="text" required="required" /></div>
+											</div>
+										</div>
+										<div class="admin__block-item">
+											<div class="admin__mid">
+												<div class="admin__text admin__text--center">2</div>
+												<div class="admin__horiz"><input class="form__input" placeholder="стоимость" name="text" required="required" /></div>
+											</div>
+										</div>
+										<div class="admin__block-item">
+											<div class="admin__mid">
+												<div class="admin__text admin__text--center">3</div>
+												<div class="admin__horiz"><input class="form__input" placeholder="стоимость" name="text" required="required" /></div>
+											</div>
+										</div>
+										<div class="admin__block-item">
+											<div class="admin__mid">
+												<div class="admin__text admin__text--center">4</div>
+												<div class="admin__horiz"><input class="form__input" placeholder="стоимость" name="text" required="required" /></div>
+											</div>
+										</div>
+										<div class="admin__block-item">
+											<div class="admin__mid">
+												<div class="admin__text admin__text--center">5</div>
+												<div class="admin__horiz"><input class="form__input" placeholder="стоимость" name="text" required="required" /></div>
+											</div>
+										</div>
+										<div class="admin__block-item">
+											<div class="admin__mid">
+												<div class="admin__text admin__text--center">6</div>
+												<div class="admin__horiz"><input class="form__input" placeholder="стоимость" name="text" required="required" /></div>
+											</div>
+										</div>
+										<div class="admin__block-item">
+											<div class="admin__mid">
+												<div class="admin__text admin__text--center">7</div>
+												<div class="admin__horiz"><input class="form__input" placeholder="стоимость" name="text" required="required" /></div>
+											</div>
+										</div>
+										<div class="admin__block-item">
+											<div class="admin__mid">
+												<div class="admin__text admin__text--center">8</div>
+												<div class="admin__horiz"><input class="form__input" placeholder="стоимость" name="text" required="required" /></div>
+											</div>
+										</div>
+										<div class="admin__block-item">
+											<div class="admin__mid">
+												<div class="admin__text admin__text--center">9</div>
+												<div class="admin__horiz"><input class="form__input" placeholder="стоимость" name="text" required="required" /></div>
+											</div>
+										</div>
+										<div class="admin__block-item">
+											<div class="admin__mid">
+												<div class="admin__text admin__text--center">10</div>
+												<div class="admin__horiz"><input class="form__input" placeholder="стоимость" name="text" required="required" /></div>
+											</div>
+										</div>
+										<div class="admin__block-item">
+											<div class="admin__mid">
+												<div class="admin__text admin__text--center">11</div>
+												<div class="admin__horiz"><input class="form__input" placeholder="стоимость" name="text" required="required" /></div>
+											</div>
+										</div>
+										<div class="admin__block-item">
+											<div class="admin__mid">
+												<div class="admin__text admin__text--center">12</div>
+												<div class="admin__horiz"><input class="form__input" placeholder="стоимость" name="text" required="required" /></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="admin__section">
+								<div class="admin__col">
+									<h3>Настройка акций</h3>
+									<div class="admin__row">
+										<div class="admin__container">
+											<div class="addmin__col">
+												<div class="admin__text">Время действия акций</div>
+												<div class="admin__horiz">
+													<div class="admin__block">
+														<div class="admin__text admin__right">от</div>
+														<div class="admin__mid"><input class="form__input" name="text" required="required" /></div>
+													</div>
+													<div class="admin__block">
+														<div class="admin__text admin__right">до</div>
+														<div class="admin__mid"><input class="form__input" name="text" required="required" /></div>
+													</div>
+												</div>
+											</div>
+											<div class="admin__block">
+												<div class="admin__col">
+													<div class="admin__text">Укажите размер скидки в процентах</div>
+													<div class="admin__horiz admin__mid"><input class="form__input" name="text" required="required" /></div>
+												</div>
+											</div>
+										</div>
+										<div class="admin__row"><a class="admin__show" href="#">Добавить еще промежуток</a></div>
+									</div>
+								</div>
+							</div>
+							<div class="admin__section">
+								<div class="admin__large"><button class="button button--xxl" type="submit">Сохранить</button></div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>
