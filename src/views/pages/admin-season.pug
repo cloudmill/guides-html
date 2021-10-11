@@ -1,0 +1,83 @@
+extends ../layouts/master.pug
+
+include ../components/form-components
+
+block header 
+
+block content
+  .admin 
+    .container 
+      .admin__top 
+        .product-tabs
+          each item, i in ['Общая информация', 'Состав тура', 'Календарь', 'Цены'] 
+            .product-tabs__item 
+              .product-tabs__tab(class=(i === 3) ? 'active' : '')
+                h2 
+                  |#{item}
+      form.form(action="/")
+        .admin__section   
+          h3 
+            |Создание сезонов для загрузки в элемент
+        .admin__section 
+          .admin__block 
+            .admin__text.admin__right 
+              |Укажите название сезона
+            .admin__big
+              +input(type = 'text' name = 'name')
+          .admin__block 
+            .admin__text 
+              |Дата действия
+          .admin__block 
+            .admin__text.admin__right 
+              |От
+            .admin__mid
+              +input(type = 'text' name = 'name')
+          .admin__block 
+            .admin__text.admin__right 
+              |До
+            .admin__mid
+              +input(type = 'text' name = 'name')
+        .admin__section 
+          h3 
+            |Укажите ставки
+        .admin__section 
+          .admin__col 
+            .admin__inner 
+              .admin__block
+                .admin__text.admin__text--end.admin__ll
+                  |Количество человек
+              .admin__block 
+                - for (i = 1; i < 13; i++)
+                  .admin__block-item.admin__mid
+                    .admin__text.admin__text--center
+                      |#{i}
+            .admin__inner 
+              .admin__block
+                .admin__text.admin__text--end.admin__ll
+                  |Работа гида
+              .admin__block 
+                - for (i = 0; i < 12; i++)
+                  .admin__block-item.admin__mid 
+                    +input(type='text' name='text' placeholder='стоимость')
+            .admin__inner 
+              .admin__block
+                .admin__text.admin__text--end.admin__ll
+                  |Работа транспорта
+              .admin__block 
+                - for (i = 0; i < 12; i++)
+                  .admin__block-item.admin__mid 
+                    +input(type='text' name='text' placeholder='стоимость')
+            each item in ['Русский наценка', 'Французский наценка', 'Английский наценка', 'Итальянский наценка', 'Немецкий наценка', 'Шведский наценка', 'Цена на человека для расчета УШМИН']
+              .admin__inner 
+                .admin__block
+                  .admin__text.admin__text--end.admin__ll
+                    |#{item}
+                .admin__block 
+                  .admin__block-item.admin__mid 
+                    +input(type='text' name='text' placeholder='стоимость')
+        .admin__section 
+          .admin__large 
+            button.button.button--xxl(type='submit')
+              |Сохранить
+
+block footer

@@ -1,0 +1,295 @@
+extends ../layouts/master.pug
+
+include ../components/form-components
+
+block header 
+
+block content
+  .admin 
+    .container 
+      .admin__top 
+        .product-tabs
+          each item, i in ['Общая информация', 'Состав тура', 'Календарь', 'Цены', 'Справка по расчету'] 
+            .product-tabs__item 
+              .product-tabs__tab(class=(i === 4) ? 'active' : '')
+                h2 
+                  |#{item}
+      .admin__section
+        .admin__block 
+          .admin__col
+            .admin__caption 
+              |Стоимость для круизных туров состоит из суммы:
+            .admin__row.admin__big
+              h3 
+                |Работа гида
+              each item in ['Работа гида может быть 2-ух типов: Высокий/Низкий сезон', 'Работа гида зависит от количества человек в туре', 'Наценка за язык на котором проходит эскурсия', 'Время работы гида на экскурсии']
+                .admin__horiz 
+                  .admin__caption 
+                    |#{item}
+        .admin__block.admin__block--start
+          .admin__col 
+            .admin__caption 
+              |Обозначения
+            .admin__container.admin__row 
+              .admin__caption.admin__caption--end.admin__small
+                |РГ
+              .admin__item 
+                .admin__caption 
+                  |Работа гида
+            .admin__container.admin__row 
+              .admin__item
+                .admin__caption.admin__caption--end.admin__small
+                  |РГ_ВС
+                .admin__caption.admin__caption--end.admin__small
+                  |РГ_НС
+              .admin__item 
+                .admin__caption 
+                  |Работа гида высокий сезон
+                .admin__caption 
+                  |Работа гида низкий сезон
+            -
+              var ddata = [
+                {
+                  label: 'N',
+                  text: 'Количество человек в туре'
+                },
+                {
+                  label: 'КЯ',
+                  text: 'Коэффициент наценки за язык'
+                },
+                {
+                  label: 'ВГ',
+                  text: 'Время работы гида'
+                },
+              ]
+            each item in ddata
+              .admin__container.admin__row 
+                .admin__caption.admin__caption--end.admin__small
+                  |#{item.label}
+                .admin__item 
+                  .admin__caption 
+                    |#{item.text}
+        .admin__block.admin__block--start
+          .admin__col 
+            .admin__caption 
+              |Формула для расчета работы гида в общую формулу: 
+            .admin__row
+              h3
+                |РГ = РГ_ВС_N * КЯ * ВГ 
+      .admin__section
+        .admin__col
+          .admin__row
+            h3 
+              |Работа транспорта
+          .admin__container.admin__row
+            .admin__block.admin__block--start
+              .admin__col.admin__big
+                each item in ['Работа гида может быть 2-ух типов: Высокий/Низкий сезон', 'Работа гида зависит от количества человек в туре', 'Время работы транспорта на экскурсии зависит от количества человек в группе']
+                  .admin__horiz 
+                    .admin__caption 
+                      |#{item}
+            .admin__block.admin__block--start
+              .admin__col 
+                .admin__container.admin__row 
+                  .admin__item
+                    .admin__caption.admin__caption--end.admin__small
+                      |РГ_ВС
+                    .admin__caption.admin__caption--end.admin__small
+                      |РГ_НС
+                  .admin__item 
+                    .admin__caption 
+                      |Работа гида высокий сезон
+                    .admin__caption 
+                      |Работа гида низкий сезон
+                -
+                  var ddata = [
+                    {
+                      label: 'N',
+                      text: 'Количество человек в туре'
+                    },
+                    {
+                      label: 'ВГ',
+                      text: 'Время работы гида'
+                    },
+                  ]
+                each item in ddata
+                  .admin__container.admin__row 
+                    .admin__caption.admin__caption--end.admin__small
+                      |#{item.label}
+                    .admin__item 
+                      .admin__caption 
+                        |#{item.text}
+            .admin__block.admin__block--start
+              .admin__col 
+                .admin__caption 
+                  |Формула для расчета работы транспорта в общую формулу: 
+                .admin__row
+                  h3
+                    |РТ = РТ_ВС_N * BT
+      .admin__section   
+        .admin__col 
+          h3 
+            |Стоимости всех билетов
+          .admin__container.admin__row
+            .admin__block 
+              .admin__col
+                .admin__caption.admin__big
+                  |Один билет = один человек. Типы людей: Взрослые, Студенты, Школьники, Дошкольники. Каждый из типов людей имеет 2 подтипа: Высокий/Низкий сезон
+                .admin__section 
+                  .admin__caption 
+                    |1 человек = 1 билет
+            .admin__block
+              .admin__col
+                -
+                  var ddata = [
+                    {
+                      label: 'БВ_ВС',
+                      text: 'Билет на взрослого человека в высокий сезон'
+                    },
+                    {
+                      label: 'БВ_НС',
+                      text: 'Билет на взрослого человека в низкий сезон'
+                    },
+                    {
+                      label: 'БС_ВС',
+                      text: 'Билет на студента в высокий сезон'
+                    },
+                    {
+                      label: 'БС_НС',
+                      text: 'Билет на студента в низкий сезон'
+                    },
+                    {
+                      label: 'БШ_ВС',
+                      text: 'Билет на школьника в низкий сезон'
+                    },
+                    {
+                      label: 'БШ_НС',
+                      text: 'Билет на школьника в высокий сезон'
+                    },
+                    {
+                      label: 'БД_ВС',
+                      text: 'Билет на дошкольников в высокий сезон'
+                    },
+                    {
+                      label: 'БД_НС',
+                      text: 'Билет на дети в низкий сезон'
+                    },
+                    {
+                      label: 'N',
+                      text: 'Количество билетов в экскурсии'
+                    },
+                  ]
+                each item in ddata
+                  .admin__container
+                    .admin__small
+                      .admin__caption.admin__caption--end
+                        |#{item.label}
+                    .admin__block-item 
+                      .admin__caption 
+                        |#{item.text}
+      .admin__section 
+        .admin__col 
+          h3 
+            |Экскурсионка
+          .admin__container.admin__row
+            .admin__block 
+              .admin__col.admin__big
+                .admin__caption 
+                  |Это число, который приплюсовывается к общей стоимости экскурсии. Она может быть 2-ух типов: Высокий/Низкий сезон
+                .admin__row 
+                  .admin__caption 
+                    |Экскурсионка зависит от количества человек в туре
+            .admin__block.admin__block--start 
+              .admin__col
+                .admin__container 
+                  .admin__small
+                    .admin__caption.admin__caption--end
+                      |ЭК_ВС
+                  .admin__block-item 
+                    .admin__caption 
+                      |Экскурсионка в высокий сезон
+                .admin__container 
+                  .admin__small
+                    .admin__caption.admin__caption--end
+                      |ЭК_НС
+                  .admin__block-item 
+                    .admin__caption 
+                      |Экскурсионка в низкий сезон
+      .admin__section 
+        .admin__col 
+          h3 
+            |Наушники для прослушивания
+          .admin__container.admin__row
+            .admin__block 
+              .admin__col.admin__big
+                .admin__caption 
+                  |Наушники выдаются в тех случаях, когда в группе больше или равно 6 человекам и они имею тип: Взрослый, студент, школьник. Типу дошкольник наушники не считаются.
+                .admin__row 
+                  .admin__caption 
+                    |Количество ушей зависит от количества человек в экскурсии
+            .admin__block.admin__block--start 
+              .admin__col
+                .admin__container 
+                  .admin__small
+                    .admin__caption.admin__caption--end
+                      |ВЗ
+                  .admin__block-item 
+                    .admin__caption 
+                      |Взролый человек
+                .admin__container 
+                  .admin__small
+                    .admin__caption.admin__caption--end
+                      |СТ
+                  .admin__block-item 
+                    .admin__caption 
+                      |Студент
+                .admin__container 
+                  .admin__small
+                    .admin__caption.admin__caption--end
+                      |ШК
+                  .admin__block-item 
+                    .admin__caption 
+                      |Школьник
+                .admin__container.admin__row
+                  .admin__small
+                    .admin__caption.admin__caption--end
+                      |N
+                  .admin__block-item 
+                    .admin__caption 
+                      |Количество человек в туре
+      .admin__section 
+        .admin__col 
+          h3 
+            |Наценка за прибытие в порт
+          .admin__container.admin__row
+            .admin__block 
+              .admin__col.admin__big
+                .admin__caption 
+                  |Тип транспорта (цена стояния данного вида транспорта в порту) на кол-ва часов в порту 
+            .admin__block.admin__block--start 
+              .admin__col
+                .admin__container
+                  .admin__small
+                    .admin__caption.admin__caption--end
+                      |А_Т
+                  .admin__block-item
+                    .admin__caption.admin__big
+                      |Цена стояния данного вида транспорта в порту. Зависит от выбранного значения в админке
+                .admin__container.admin__row
+                  .admin__small
+                    .admin__caption.admin__caption--end
+                      |Ч
+                  .admin__block-item
+                    .admin__caption.admin__big
+                      |Часы, сколько стоит транспорт в порту.
+          .admin__row 
+            h3 
+              |Итоговая стоимость расчета в высокий сезон
+      .admin__section 
+        .admin__icon 
+          +admin-svg
+        .admin__col.admin__left
+          h2
+            |= РГ_ВС_N * КЯ * ВГ + РТ_ВС_N * BT + БВ_ВС * N_БВ + БС_ВС * N_БC + БШ_ВС * N_БШ + ЭК_ВС_ N + УШИ * (ВЗ +СТ+ШК) + сувениры * (N_ДТ + N_ШК) + A_T*Ч
+
+block footer

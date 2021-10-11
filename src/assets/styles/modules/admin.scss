@@ -1,6 +1,6 @@
 .admin {
 
-  margin: 140px 60px;
+  margin: 80px 0;
 
   &__top {
     margin-bottom: 80px;
@@ -21,6 +21,10 @@
     
     &--end {
       justify-content: flex-end;
+    }
+
+    &--start {
+      align-items: flex-start;
     }
   }
   // 10 left
@@ -45,10 +49,17 @@
     &--center {
       text-align: center
     }
+    &--end {
+      text-align: end
+    }
   }
   // fz16
   &__caption {
     @include fsl(16px);
+
+    &--end {
+      text-align: end;
+    }
   }
 
   // w500
@@ -66,6 +77,10 @@
   // w100
   &__mid {
     width: 100px;
+  }
+  // w70
+  &__small {
+    width: 70px;
   }
 
   // 20px top
@@ -143,5 +158,18 @@
     &:not(:first-child) {
       margin-top: 20px;
     }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  &__icon {
+    margin-top: 10px;
   }
 }
