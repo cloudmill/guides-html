@@ -1,0 +1,119 @@
+extends ../layouts/master.pug
+
+include ../components/form-components
+
+block header 
+
+block content
+  .admin 
+    .container 
+      .admin__top 
+        .product-tabs
+          each item, i in ['Общая информация', 'Календарь', 'Цены'] 
+            .product-tabs__item 
+              .product-tabs__tab(class=(i === 1) ? 'active' : '')
+                h2 
+                  |#{item}
+      form.form(action="/") 
+        .admin__section
+          .admin__col 
+            .admin__container
+              .admin__block 
+                .admin__text.admin__right 
+                  |От
+                .admin__mid 
+                  +input(type = 'text' name = 'text')        
+              .admin__block 
+                .admin__text.admin__right 
+                  |До
+                .admin__mid
+                  +input(type = 'text' name = 'text')        
+            .admin__row 
+              .admin__container
+                each item in ['Пн.', 'Вт.', 'Ср.', 'Чт.', 'Пт.', 'Сб.', 'Вс.']
+                  .admin__item 
+                    .admin__horiz
+                      .admin__text
+                        |#{item}
+                    .admin__horiz
+                      .checkbox 
+                      label.checkbox__label
+                        input.checkbox__input(type="checkbox" name='checkbox-1')
+                        .checkbox__box 
+                          +check-svg.checkbox__svg
+        .admin__section 
+          .admin__large 
+            .button.button--xxl(data-fancy-button='1')
+              |Изменить
+        .admin__section 
+          .admin__head 
+            .admin__block 
+              .product-tabs
+                .product-tabs__item 
+                  .product-tabs__tab.active
+                    .admin__text
+                      |2021
+                .product-tabs__item 
+                  .product-tabs__tab
+                    .admin__text
+                      |2022
+              .admin__block
+                a.admin__text(href="#") 
+                  |Добавить
+            each month in ['Январь', 'Февраль', 'Март']
+              .admin__calendar 
+                .admin__calendar-row 
+                  .admin__mid
+                  .admin__text 
+                    |#{month}
+                each week in [1, 2, 3, 4]
+                  .admin__calendar-row 
+                    .admin__mid 
+                      .admin__text 
+                        |Неделя #{week}
+                    .admin__container
+                      each item in [3, 3, 3, 5, 3, 3, 7] 
+                        .admin__block 
+                          .calendar-card 
+                            .calendar-card__container 
+                              .calendar-card__item 
+                                .admin__text 
+                                  |Активен
+                              .calendar-card__item 
+                                .admin__text 
+                                  |11:00
+                                .admin__text.admin__horiz 
+                                  |18:00
+                              .calendar-card__item 
+                                .admin__text 
+                                  |#{item} дня
+        .admin__section 
+          .admin__large 
+            button.button.button--xxl(type='submit')
+              |Сохранить
+  .modals 
+    .modal(data-fancy-modal='1')
+      .modal__container
+        form.form.admin(action="/") 
+          .select-wrapper
+            .select
+              select.select__select(name="time" style='width: 100%' data-select-placeholder='Статус') 
+                option
+                option(value = 'hour')
+                  |1
+                option(value = 'days')
+                  |2
+            .admin__row 
+              .admin__block
+                .admin__text.admin__right 
+                  |Время начала
+                .admin__col
+                  +input(type = 'text' name = 'text')   
+            .admin__row 
+              .admin__block
+                .admin__text.admin__right 
+                  |Время окончания
+                .admin__col
+                  +input(type = 'text' name = 'text')   
+
+block footer

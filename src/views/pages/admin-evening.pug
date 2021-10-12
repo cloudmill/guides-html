@@ -1,0 +1,120 @@
+extends ../layouts/master.pug
+
+include ../components/form-components
+
+block header 
+
+block content
+  .admin 
+    .container 
+      .admin__top 
+        .product-tabs
+          each item, i in ['Общая информация', 'Календарь', 'Цены'] 
+            .product-tabs__item 
+              .product-tabs__tab(class=(i === 0) ? 'active' : '')
+                h2 
+                  |#{item}
+      form.form(action="/") 
+        .admin__section
+          .admin__block 
+            .admin__text.admin__right 
+              |Название тура
+            .admin__big
+              +input(type = 'text' name = 'name')
+          .admin__block 
+            .admin__text.admin__right 
+              |Активность
+            .checkbox
+              label.checkbox__label
+                input.checkbox__input(type="checkbox" name='checkbox-1' required)
+                .checkbox__box 
+                  +check-svg.checkbox__svg
+          .admin__block 
+            .admin__text.admin__right 
+              |Сортировка
+            .admin__md
+              +input(type = 'text' name = 'name')
+        .admin__section 
+          .admin__block
+            .admin__col  
+              .admin__row 
+                .admin__horiz
+                  .admin__text
+                    |Укажите тип
+                .admin__horiz
+                  .admin__item 
+                    +checkbox(text='Индивидуальные')
+                  .admin__item 
+                    +checkbox(text='Групповые')
+        .admin__section 
+          .admin__col 
+            .admin__text 
+              |Укажите продолжительность экскурсии
+            .admin__row 
+              .admin__block 
+                .admin__text
+                  |Часы
+                .admin__block-item.admin__mid
+                  +input(type = 'text' name = 'hour' placeholder = 'Значение')
+        .admin__section 
+          .admin__col 
+            .admin__horiz 
+              .admin__text 
+                |Укажите доступность для инвалидов
+            .admin__horiz
+              +checkbox(text = 'Доступно')
+        .admin__section
+          .admin__col
+            .admin__container
+              .admin__block 
+                .admin__col
+                  .admin__caption 
+                    |В стоимость тура входит
+                  .admin__row
+                    .admin__ll 
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+              .admin__block 
+                .admin__col
+                  .admin__caption 
+                    |В стоимость тура не входит
+                  .admin__row   
+                    .admin__ll
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+            .admin__row   
+              a.admin__show(href="#") 
+                |Добавить еще
+        .admin__section 
+          .admin__col
+            .admin__text 
+              |Описание
+            .admin__row 
+              .admin__big 
+                textarea.form__textarea(name='message')
+        .admin__section 
+          .admin__large 
+            button.button.button--xxl(type='submit')
+              |Сохранить
+
+block footer

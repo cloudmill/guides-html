@@ -143,6 +143,26 @@
     {
       "page": "[Админка наземная экскурсия] Цены",
       "href": "admin-land-3.html"
+    },
+    {
+      "page": "[Админка] Справка по расчету",
+      "href": "admin-land-3.html"
+    },
+    {
+      "page": "[Админка вечернее] Общая информация",
+      "href": "admin-evening.html"
+    },
+    {
+      "page": "[Админка вечернее] Календарь",
+      "href": "admin-evening-1.html"
+    },
+    {
+      "page": "[Админка вечернее] Цены",
+      "href": "admin-evening-2.html"
+    },
+    {
+      "page": "[Админка] Создание сезона",
+      "href": "admin-season.html"
     }
   ],
   "nav": [
