@@ -172,4 +172,12 @@
   &__icon {
     margin-top: 10px;
   }
+
+  &__tab {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
 }

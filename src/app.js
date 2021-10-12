@@ -16,6 +16,7 @@ import 'scripts/form-response.js';
 import 'scripts/file-input.js';
 import 'scripts/table.js';
 import 'scripts/aside.js';
+import 'scripts/admin-tabs.js';
 import 'scripts/aos.js';
 import { Tabs } from './assets/scripts/tabs'
 import { Counter } from './assets/scripts/counter'
