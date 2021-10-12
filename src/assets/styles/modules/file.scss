@@ -1,0 +1,90 @@
+
+.file {
+  $comp: &;
+
+  position: relative;
+  width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+  min-height: 140px;
+
+  border-radius: 12px;
+  border: 1px dashed $color-light-gray;
+  transition: $transition;
+
+  &--downloaded {
+    border-color: transparent;
+    background: $color-aqua;
+
+    #{$comp}__label {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    #{$comp}__container {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__container {
+    @include cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition
+  }
+
+  &__name {
+    margin-bottom: 20px;
+
+    @include fsl(16px);
+  }
+  
+  &__button {
+    @include fsl(14px);
+    color: $color-blue;
+    cursor: pointer;
+  }
+
+  &__label {
+    @include cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: $transition;
+  }
+
+  &__input {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    opacity: 0;
+    pointer-events: 0;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+
+    @include fsl(16px);
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+  }
+
+  &__svg {
+    path {
+      stroke: $color-black;
+    }
+  }
+}

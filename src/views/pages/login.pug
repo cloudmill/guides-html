@@ -1,0 +1,29 @@
+extends ../layouts/master.pug
+
+include ../components/form-components
+
+block header 
+
+block content
+  .login 
+    .login__container
+      form.form(action="/") 
+        .login__row 
+          .login__col 
+            .login__text
+              |Логин 
+          .login__col 
+            +input(type="text" name='login')
+        .login__row 
+          .login__col 
+            .login__text
+              |Пароль 
+          .login__col 
+            +input(type="password" name='password')
+        .login__row 
+          .login__col 
+          .login__col 
+            button.button.button--xxl(type='submit')
+              |Войти
+
+block footer

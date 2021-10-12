@@ -1,0 +1,43 @@
+extends ../layouts/master.pug
+
+include ../components/form-components
+
+block header 
+
+block content
+  .container
+    .test-listing
+      .listing
+        .listing__head 
+          each item, i in ['Наземные экскурсии', 'Круизные экскурсии', 'Вечерние мероприятия тип1', 'Вечерние мероприятия тип 2', 'Список сезонов', 'Справка по расчету']
+            .listing__head-item 
+              a.listing__head-link(href="#" class=(i === 0 ? 'active' : '')) 
+                |#{item}
+        .listing__button 
+          .button.button--xl 
+            |Добавить
+        .listing__body 
+          .listing__top 
+            .listing__row 
+              each item in ['Id', 'Name', 'Activity', 'Sorting']
+                .listing__col 
+                  .listing__label 
+                    |#{item}
+          - for (i = 0; i < 4; i++)
+            .listing__inner 
+              .listing__row
+                .listing__col 
+                  .listing__text 
+                    |#{i + 1}
+                .listing__col 
+                  .listing__text 
+                    |Walking tour of St. Petersburg
+                .listing__col 
+                  .listing__text 
+                    |Yes
+                .listing__col 
+                  .listing__text 
+                    |#{i + 1}
+      
+
+block footer

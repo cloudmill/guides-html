@@ -64,9 +64,19 @@ block content
                     .admin__item 
                       +checkbox(text=item)
         .admin__section
-          .admin__large 
+          .admin__col 
             .admin__row
-              textarea.form__textarea(name='message')
+              .file(data-file-input='') 
+                .file__container
+                  .file__name 
+                  .file__button 
+                    |Delete
+                label.file__label
+                  input.file__input(type="file")
+                  .file__text 
+                    |Upload image for the gallery
+                  .file__icon 
+                    +plus-svg.file__svg
         .admin__section 
           .admin__col  
             .admin__row 
