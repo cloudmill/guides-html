@@ -8,169 +8,316 @@ block content
   .admin 
     .container 
       .admin__top 
-        .product-tabs
+        .product-tabs(data-admin-tabs='')
           each item, i in ['Общая информация', 'Состав тура', 'Календарь', 'Цены'] 
             .product-tabs__item 
-              .product-tabs__tab(class=(i === 0) ? 'active' : '')
+              .product-tabs__tab(data-admin-item='' class=(i === 0) ? 'active' : '')
                 h2 
                   |#{item}
       form.form(action="/") 
-        .admin__section 
-          .admin__large
-            .select-wrapper
-              .select
-                select.select__select(name="time" style='width: 100%') 
-                  option(value = 'hour')
-                    |Вечернее мероприятие для наземников
-                  option(value = 'days')
-                    |Вечернее мероприятие для круизников
-        .admin__section
-          .admin__block 
-            .admin__text.admin__right 
-              |Название тура
-            .admin__big
-              +input(type = 'text' name = 'name')
-          .admin__block 
-            .admin__text.admin__right 
-              |Активность
-            .checkbox
-              label.checkbox__label
-                input.checkbox__input(type="checkbox" name='checkbox-1' required)
-                .checkbox__box 
-                  +check-svg.checkbox__svg
-          .admin__block 
-            .admin__text.admin__right 
-              |Сортировка
-            .admin__md
-              +input(type = 'text' name = 'name')
-        .admin__section 
-          .admin__block
+        .admin__tab.active
+          .admin__section 
+            .admin__large
+              .select-wrapper
+                .select
+                  select.select__select(name="time" style='width: 100%') 
+                    option(value = 'hour')
+                      |Вечернее мероприятие для наземников
+                    option(value = 'days')
+                      |Вечернее мероприятие для круизников
+          .admin__section
+            .admin__block 
+              .admin__text.admin__right 
+                |Название тура
+              .admin__big
+                +input(type = 'text' name = 'name')
+            .admin__block 
+              .admin__text.admin__right 
+                |Активность
+              .checkbox
+                label.checkbox__label
+                  input.checkbox__input(type="checkbox" name='checkbox-1' required)
+                  .checkbox__box 
+                    +check-svg.checkbox__svg
+            .admin__block 
+              .admin__text.admin__right 
+                |Сортировка
+              .admin__md
+                +input(type = 'text' name = 'name')
+          .admin__section 
+            .admin__block
+              .admin__col  
+                .admin__row 
+                  .admin__horiz
+                    .admin__text
+                      |Укажите тип
+                  .admin__horiz
+                    .admin__item 
+                      +checkbox(text='Индивидуальные')
+                    .admin__item 
+                      +checkbox(text='Групповые')
+                .admin__row 
+                  .admin__horiz
+                    .admin__text
+                      |Укажите особенность
+                  .admin__horiz
+                    each item in ['Популярная', 'Необычные', 'Для детей', 'Вечерние/ночные', 'Мастер-классы']
+                      .admin__item 
+                        +checkbox(text=item)
+          .admin__section
+            .admin__col 
+              .admin__row
+                .file(data-file-input='') 
+                  .file__container
+                    .file__name 
+                    .file__button 
+                      |Delete
+                  label.file__label
+                    input.file__input(type="file")
+                    .file__text 
+                      |Upload image for the gallery
+                    .file__icon 
+                      +plus-svg.file__svg
+          .admin__section 
             .admin__col  
               .admin__row 
                 .admin__horiz
                   .admin__text
-                    |Укажите тип
+                    |Укажите локацию
                 .admin__horiz
-                  .admin__item 
-                    +checkbox(text='Индивидуальные')
-                  .admin__item 
-                    +checkbox(text='Групповые')
+                  +checkbox(text='В городе')
+                .admin__horiz
+                  +checkbox(text='В пригороде')
+          .admin__section 
+            .admin__col 
+              .admin__text 
+                |Укажите страну
+              .admin__horiz.admin__mid
+                +input(type = 'text' name = 'place')
+              .admin__horiz 
+                a.admin__show(href="#") 
+                  |Добавить еще
+          .admin__section 
+            .admin__col  
               .admin__row 
                 .admin__horiz
                   .admin__text
-                    |Укажите особенность
+                    |Укажите город
                 .admin__horiz
-                  each item in ['Популярная', 'Необычные', 'Для детей', 'Вечерние/ночные', 'Мастер-классы']
-                    .admin__item 
-                      +checkbox(text=item)
-        .admin__section
-          .admin__col 
-            .admin__row
-              .file(data-file-input='') 
-                .file__container
-                  .file__name 
-                  .file__button 
-                    |Delete
-                label.file__label
-                  input.file__input(type="file")
-                  .file__text 
-                    |Upload image for the gallery
-                  .file__icon 
-                    +plus-svg.file__svg
-        .admin__section 
-          .admin__col  
-            .admin__row 
+                  .admin__block
+                    .admin__text.admin__right 
+                      |Санкт-Петербург
+                    .checkbox
+                      label.checkbox__label
+                        input.checkbox__input(type="checkbox" name='checkbox-1' required)
+                        .checkbox__box 
+                          +check-svg.checkbox__svg
+          .admin__section 
+            .admin__col 
+              .admin__row 
+                .admin__text 
+                  |Укажите продолжительность экскурсии
+              .admin__row 
+                .admin__block 
+                  .admin__block-item 
+                    .admin__ll
+                      +input(type = 'text' name = 'value' placeholder = 'Значение')
+                  .admin__block-item 
+                    .admin__ll 
+                      .select-wrapper
+                        .select
+                          select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
+                            option(value = 'hour')
+                              |Часы
+                            option(value = 'days')
+                              |Дни
+          .admin__section 
+            .admin__col 
+              .admin__horiz 
+                .admin__text 
+                  |Передвижение
               .admin__horiz
-                .admin__text
-                  |Укажите локацию
+                .admin__ll
+                  +input(type = 'text' name = 'place')
+          .admin__section 
+            .admin__col 
+              .admin__horiz 
+                .admin__text 
+                  |Укажите доступность для инвалидов
               .admin__horiz
-                +checkbox(text='В городе')
-              .admin__horiz
-                +checkbox(text='В пригороде')
-        .admin__section 
-          .admin__col 
-            .admin__text 
-              |Укажите страну
-            .admin__horiz.admin__mid
-              +input(type = 'text' name = 'place')
-            .admin__horiz 
-              a.admin__show(href="#") 
-                |Добавить еще
-        .admin__section 
-          .admin__col  
-            .admin__row 
-              .admin__horiz
-                .admin__text
-                  |Укажите город
-              .admin__horiz
-                .admin__block
-                  .admin__text.admin__right 
-                    |Санкт-Петербург
-                  .checkbox
-                    label.checkbox__label
-                      input.checkbox__input(type="checkbox" name='checkbox-1' required)
-                      .checkbox__box 
-                        +check-svg.checkbox__svg
-        .admin__section 
-          .admin__col 
-            .admin__row 
-              .admin__text 
-                |Укажите продолжительность экскурсии
-            .admin__row 
-              .admin__block 
-                .admin__block-item 
-                  .admin__ll
-                    +input(type = 'text' name = 'value' placeholder = 'Значение')
-                .admin__block-item 
-                  .admin__ll 
+                +checkbox(text = 'Доступно')
+          .admin__section
+            .admin__col
+              .admin__container
+                .admin__block 
+                  .admin__col
+                    .admin__caption 
+                      |В стоимость тура входит
+                    .admin__row
+                      .admin__ll 
+                        .admin__horiz 
+                          +input(type = 'text' name = 'text')
+                        .admin__horiz 
+                          +input(type = 'text' name = 'text')
+                        .admin__horiz 
+                          +input(type = 'text' name = 'text')
+                        .admin__horiz 
+                          +input(type = 'text' name = 'text')
+                        .admin__horiz 
+                          +input(type = 'text' name = 'text')
+                        .admin__horiz 
+                          +input(type = 'text' name = 'text')
+                .admin__block 
+                  .admin__col
+                    .admin__caption 
+                      |В стоимость тура не входит
+                    .admin__row   
+                      .admin__ll
+                        .admin__horiz 
+                          +input(type = 'text' name = 'text')
+                        .admin__horiz 
+                          +input(type = 'text' name = 'text')
+                        .admin__horiz 
+                          +input(type = 'text' name = 'text')
+                        .admin__horiz 
+                          +input(type = 'text' name = 'text')
+                        .admin__horiz 
+                          +input(type = 'text' name = 'text')
+                        .admin__horiz 
+                          +input(type = 'text' name = 'text')
+              .admin__row   
+                a.admin__show(href="#") 
+                  |Добавить еще
+          .admin__section 
+            .admin__col 
+              .admin__row 
+                .admin__text 
+                  |Укажите достопримечательности
+              .admin__row 
+                .admin__horiz 
+                  .admin__large 
                     .select-wrapper
                       .select
                         select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
                           option(value = 'hour')
-                            |Часы
+                            |Эрмитаж
                           option(value = 'days')
-                            |Дни
-        .admin__section 
-          .admin__col 
-            .admin__horiz 
+                            |Эрмитаж1
+                .admin__horiz 
+                  .admin__large 
+                    .select-wrapper
+                      .select
+                        select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
+                          option(value = 'hour')
+                            |Русский музей
+                          option(value = 'days')
+                            |Русский музей1
+                .admin__horiz 
+                  .admin__large 
+                    .select-wrapper
+                      .select
+                        select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
+                          option(value = 'hour')
+                            |Выбрать достопримечательность
+                          option(value = 'days')
+                            |Выбрать достопримечательность
+                .admin__horiz 
+                  .admin__large 
+                    .select-wrapper
+                      .select
+                        select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
+                          option(value = 'hour')
+                            |Выбрать достопримечательность
+                          option(value = 'days')
+                            |Выбрать достопримечательность
+                .admin__row 
+                  a.admin__show(href="#") 
+                    |Добавить еще
+          .admin__section 
+            .admin__col
               .admin__text 
-                |Передвижение
-            .admin__horiz
-              .admin__ll
-                +input(type = 'text' name = 'place')
-        .admin__section 
-          .admin__col 
-            .admin__horiz 
-              .admin__text 
-                |Укажите доступность для инвалидов
-            .admin__horiz
-              +checkbox(text = 'Доступно')
-        .admin__section
-          .admin__col
-            .admin__container
-              .admin__block 
-                .admin__col
-                  .admin__caption 
-                    |В стоимость тура входит
-                  .admin__row
-                    .admin__ll 
-                      .admin__horiz 
-                        +input(type = 'text' name = 'text')
-                      .admin__horiz 
-                        +input(type = 'text' name = 'text')
-                      .admin__horiz 
-                        +input(type = 'text' name = 'text')
-                      .admin__horiz 
-                        +input(type = 'text' name = 'text')
-                      .admin__horiz 
-                        +input(type = 'text' name = 'text')
-                      .admin__horiz 
-                        +input(type = 'text' name = 'text')
-              .admin__block 
-                .admin__col
-                  .admin__caption 
-                    |В стоимость тура не входит
-                  .admin__row   
+                |Описание
+              .admin__row 
+                .admin__big 
+                  textarea.form__textarea(name='message')
+              .admin__row 
+                .admin__big 
+                  textarea.form__textarea(name='message')
+          .admin__section 
+            .admin__col  
+              .admin__row 
+                .admin__horiz
+                  .admin__text
+                    |Укажите язык
+                .admin__horiz
+                  .admin__grid
+                    each item, i in ['Русский', 'Английский', 'Немецкий', 'Французский', 'Итальянский', 'Шведский']
+                      .admin__item(class=(i === 3 ? 'admin__first' : '')) 
+                        +checkbox(text=item)
+          .admin__section 
+            .admin__col 
+              .admin__row 
+                .admin__text 
+                  |Укажите похожие туры
+              .admin__row 
+                .admin__horiz 
+                  .admin__large 
+                    .select-wrapper
+                      .select
+                        select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
+                          option(value = 'hour')
+                            |Intensive tour
+                          option(value = 'days')
+                            |Intensive tour1
+                .admin__horiz 
+                  .admin__large 
+                    .select-wrapper
+                      .select
+                        select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
+                          option(value = 'hour')
+                            |Relaxed tour 
+                          option(value = 'days')
+                            |Relaxed tour 1
+                .admin__horiz 
+                  .admin__large 
+                    .select-wrapper
+                      .select
+                        select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
+                          option(value = 'hour')
+                            |Jewish Heritage
+                          option(value = 'days')
+                            |Jewish Heritage123
+                .admin__horiz 
+                  .admin__large 
+                    .select-wrapper
+                      .select
+                        select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
+                          option(value = 'hour')
+                            |Выбрать выбрать похожий тур
+                          option(value = 'days')
+                            |Выбрать выбрать похожий тур123
+                .admin__row 
+                  a.admin__show(href="#") 
+                    |Добавить еще
+          .admin__section 
+            .admin__large 
+              button.button.button--xxl(type='submit')
+                |Сохранить
+        .admin__tab
+          .admin__section
+            .admin__col 
+              .admin__row
+                .admin__text 
+                  |Заполните расписание программы
+              .admin__row 
+                .admin__text 
+                  |1 день
+              .admin__row 
+                .admin__container
+                  .admin__block 
+                    .admin__mid
+                      .admin__text
+                        |Укажите время
                     .admin__ll
                       .admin__horiz 
                         +input(type = 'text' name = 'text')
@@ -178,129 +325,369 @@ block content
                         +input(type = 'text' name = 'text')
                       .admin__horiz 
                         +input(type = 'text' name = 'text')
+                  .admin__block 
+                    .admin__mid
+                      .admin__text
+                        |Укажите событие
+                    .admin__ll
                       .admin__horiz 
                         +input(type = 'text' name = 'text')
                       .admin__horiz 
                         +input(type = 'text' name = 'text')
                       .admin__horiz 
                         +input(type = 'text' name = 'text')
-            .admin__row   
-              a.admin__show(href="#") 
-                |Добавить еще
-        .admin__section 
-          .admin__col 
-            .admin__row 
-              .admin__text 
-                |Укажите достопримечательности
-            .admin__row 
-              .admin__horiz 
-                .admin__large 
-                  .select-wrapper
-                    .select
-                      select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                        option(value = 'hour')
-                          |Эрмитаж
-                        option(value = 'days')
-                          |Эрмитаж1
-              .admin__horiz 
-                .admin__large 
-                  .select-wrapper
-                    .select
-                      select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                        option(value = 'hour')
-                          |Русский музей
-                        option(value = 'days')
-                          |Русский музей1
-              .admin__horiz 
-                .admin__large 
-                  .select-wrapper
-                    .select
-                      select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                        option(value = 'hour')
-                          |Выбрать достопримечательность
-                        option(value = 'days')
-                          |Выбрать достопримечательность
-              .admin__horiz 
-                .admin__large 
-                  .select-wrapper
-                    .select
-                      select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                        option(value = 'hour')
-                          |Выбрать достопримечательность
-                        option(value = 'days')
-                          |Выбрать достопримечательность
               .admin__row 
                 a.admin__show(href="#") 
                   |Добавить еще
-        .admin__section 
-          .admin__col
-            .admin__text 
-              |Описание
-            .admin__row 
-              .admin__big 
-                textarea.form__textarea(name='message')
-            .admin__row 
-              .admin__big 
-                textarea.form__textarea(name='message')
-        .admin__section 
-          .admin__col  
-            .admin__row 
-              .admin__horiz
-                .admin__text
-                  |Укажите язык
-              .admin__horiz
-                .admin__grid
-                  each item, i in ['Русский', 'Английский', 'Немецкий', 'Французский', 'Итальянский', 'Шведский']
-                    .admin__item(class=(i === 3 ? 'admin__first' : '')) 
-                      +checkbox(text=item)
-        .admin__section 
-          .admin__col 
-            .admin__row 
-              .admin__text 
-                |Укажите похожие туры
-            .admin__row 
-              .admin__horiz 
-                .admin__large 
-                  .select-wrapper
-                    .select
-                      select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                        option(value = 'hour')
-                          |Intensive tour
-                        option(value = 'days')
-                          |Intensive tour1
-              .admin__horiz 
-                .admin__large 
-                  .select-wrapper
-                    .select
-                      select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                        option(value = 'hour')
-                          |Relaxed tour 
-                        option(value = 'days')
-                          |Relaxed tour 1
-              .admin__horiz 
-                .admin__large 
-                  .select-wrapper
-                    .select
-                      select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                        option(value = 'hour')
-                          |Jewish Heritage
-                        option(value = 'days')
-                          |Jewish Heritage123
-              .admin__horiz 
-                .admin__large 
-                  .select-wrapper
-                    .select
-                      select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                        option(value = 'hour')
-                          |Выбрать выбрать похожий тур
-                        option(value = 'days')
-                          |Выбрать выбрать похожий тур123
+          .admin__section
+            .admin__col 
+              .admin__row 
+                .admin__text 
+                  |2 день
+              .admin__row 
+                .admin__container
+                  .admin__block 
+                    .admin__mid
+                      .admin__text
+                        |Укажите время
+                    .admin__ll
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                  .admin__block 
+                    .admin__mid
+                      .admin__text
+                        |Укажите событие
+                    .admin__ll
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text')
               .admin__row 
                 a.admin__show(href="#") 
                   |Добавить еще
-        .admin__section 
-          .admin__large 
-            button.button.button--xxl(type='submit')
-              |Сохранить
+          .admin__section 
+            a.admin__show.admin__show--start(href="#") 
+              |Добавить еще день
+          .admin__section 
+            .admin__large 
+              button.button.button--xxl(type='submit')
+                |Сохранить
+        .admin__tab
+          .admin__section
+            .admin__col 
+              .admin__container
+                .admin__block 
+                  .admin__text.admin__right 
+                    |От
+                  .admin__mid 
+                    +input(type = 'text' name = 'text')        
+                .admin__block 
+                  .admin__text.admin__right 
+                    |До
+                  .admin__mid
+                    +input(type = 'text' name = 'text')        
+              .admin__row 
+                .admin__container
+                  each item in ['Пн.', 'Вт.', 'Ср.', 'Чт.', 'Пт.', 'Сб.', 'Вс.']
+                    .admin__item 
+                      .admin__horiz
+                        .admin__text
+                          |#{item}
+                      .admin__horiz
+                        .checkbox 
+                        label.checkbox__label
+                          input.checkbox__input(type="checkbox" name='checkbox-1')
+                          .checkbox__box 
+                            +check-svg.checkbox__svg
+          .admin__section 
+            .admin__large 
+              .button.button--xxl(data-fancy-button='1')
+                |Изменить
+          .admin__section 
+            .admin__head 
+              .admin__block 
+                .product-tabs
+                  .product-tabs__item 
+                    .product-tabs__tab.active
+                      .admin__text
+                        |2021
+                  .product-tabs__item 
+                    .product-tabs__tab
+                      .admin__text
+                        |2022
+                .admin__block
+                  a.admin__text(href="#") 
+                    |Добавить
+              each month in ['Январь', 'Февраль', 'Март']
+                .admin__calendar 
+                  .admin__calendar-row 
+                    .admin__mid
+                    .admin__text 
+                      |#{month}
+                  each week in [1, 2, 3, 4]
+                    .admin__calendar-row 
+                      .admin__mid 
+                        .admin__text 
+                          |Неделя #{week}
+                      .admin__container
+                        each item in [3, 3, 3, 5, 3, 3, 7] 
+                          .admin__block 
+                            .calendar-card 
+                              .calendar-card__container 
+                                .calendar-card__item 
+                                  .admin__text 
+                                    |Активен
+                                .calendar-card__item 
+                                  .admin__text 
+                                    |11:00
+                                  .admin__text.admin__horiz 
+                                    |18:00
+                                .calendar-card__item 
+                                  .admin__text 
+                                    |#{item} дня
+          .admin__section 
+            .admin__large 
+              button.button.button--xxl(type='submit')
+                |Сохранить
+        .admin__tab
+          .admin__section
+            .admin__col 
+              .admin__row 
+                h3.admin__title 
+                  |Укажите сезон для формирования цены
+              .admin__row.admin__big
+                .admin__horiz.admin__horiz--noflex 
+                  .select-wrapper
+                    .select
+                      select.select__select(name="activity" style='width: 100%') 
+                        option(value = '1')
+                          |Высокий сезон 2021
+                        option(value = '2')
+                          |2
+                        option(value = '3')
+                          |3
+                        option(value = '4')
+                          |4
+                        option(value = '5')
+                          |5
+                .admin__horiz.admin__horiz--noflex 
+                  .select-wrapper
+                    .select
+                      select.select__select(name="activity" style='width: 100%') 
+                        option(value = '1')
+                          |Низкий сезон 2021
+                        option(value = '2')
+                          |2
+                        option(value = '3')
+                          |3
+                        option(value = '4')
+                          |4
+                        option(value = '5')
+                          |5
+                .admin__horiz.admin__horiz--noflex 
+                  .select-wrapper
+                    .select
+                      select.select__select(name="activity" style='width: 100%') 
+                        option(value = '1')
+                          |Выберите сезон
+                        option(value = '2')
+                          |2
+                        option(value = '3')
+                          |3
+                        option(value = '4')
+                          |4
+                        option(value = '5')
+                          |5
+                .admin__horiz.admin__horiz--noflex 
+                  a.admin__show(href="#") 
+                    |Добавить еще
+          .admin__section 
+            .admin__col 
+              .admin__row 
+                .admin__block 
+                  .admin__block.admin__big 
+                    
+                  .admin__block 
+                    .admin__text
+                      |Высокий сезон 2021
+                  .admin__left 
+                    .admin__text
+                      |Низкий сезон 2021
+              .admin__row 
+                .admin__block 
+                  .admin__block.admin__block--end.admin__big
+                    .admin__text
+                      |Время работы гида (ВГ)
+                  .admin__block 
+                    .admin__mid 
+                      +input(type = 'text' name = 'text')
+                  .admin__block 
+                    .admin__mid 
+                      +input(type = 'text' name = 'text')
+                  .admin__block.admin__big
+                    .admin__text
+                      |Наценка за сувинирную продукцию для детей школьников
+                  .admin__block 
+                    .admin__block-item.admin__mid
+                    .admin__block-item
+                      .admin__mid 
+                        +input(type = 'text' name = 'text' placeholder='стоимость')
+              .admin__row 
+                .admin__block 
+                  .admin__block.admin__block--end.admin__big
+                    .admin__text
+                      |Время работы транспорта (ВТ)
+                  .admin__block 
+                    .admin__mid 
+                      +input(type = 'text' name = 'text')
+                  .admin__block 
+                    .admin__mid 
+                      +input(type = 'text' name = 'text')
+                  .admin__block.admin__big
+                    .admin__text
+                      |Количество человек, при котором плюсуюется наценка (УШМИН)
+                  .admin__block 
+                    .admin__block-item.admin__mid
+                      .admin__text
+                        |Количество
+                    .admin__block-item
+                      .admin__mid 
+                        +input(type = 'text' name = 'text' placeholder='значение')
+              .admin__row 
+                .admin__block 
+                  .admin__block.admin__block--end.admin__big
+                    .admin__text
+                      |Билетный пакет для взрослых (БВ)
+                  .admin__block 
+                    .admin__mid 
+                      +input(type = 'text' name = 'text')
+                  .admin__block 
+                    .admin__mid 
+                      +input(type = 'text' name = 'text')
+              .admin__row 
+                .admin__block 
+                  .admin__block.admin__block--end.admin__big
+                    .admin__text
+                      |Билетный пакет для студентов (БС)
+                  .admin__block 
+                    .admin__mid 
+                      +input(type = 'text' name = 'text')
+                  .admin__block 
+                    .admin__mid 
+                      +input(type = 'text' name = 'text')
+              .admin__row 
+                .admin__block 
+                  .admin__block.admin__block--end.admin__big
+                    .admin__text
+                      |Билетный пакет для школьников (БШ)
+                  .admin__block 
+                    .admin__mid 
+                      +input(type = 'text' name = 'text')
+                  .admin__block 
+                    .admin__mid 
+                      +input(type = 'text' name = 'text')
+              .admin__row 
+                .admin__block 
+                  .admin__block.admin__block--end.admin__big
+                    .admin__text
+                      |Количество часов в порту
+                  .admin__block 
+                    .admin__mid 
+                      +input(type = 'text' name = 'text')
+                  .admin__block 
+                    .admin__mid 
+                      +input(type = 'text' name = 'text')
+              .admin__row 
+                a.admin__show(href="#") 
+                  |Добавить произвольное значение
+          .admin__section 
+            .admin__col  
+              .admin__row 
+                .admin__horiz
+                  .admin__text
+                    |Укажите язык
+                .admin__horiz
+                  .admin__grid
+                    .admin__item 
+                      +checkbox(text='Русский')
+                    .admin__item 
+                      +checkbox(text='Английский')
+                    .admin__item 
+                      +checkbox(text='Немецкий')
+                    .admin__item.admin__first
+                      +checkbox(text='Французский')
+                    .admin__item 
+                      +checkbox(text='Итальянский')
+                    .admin__item 
+                      +checkbox(text='Шведский')
+          .admin__section 
+            .admin__block 
+              .admin__text 
+                |Экскурсионка
+              .admin__block   
+                - for (i = 1; i < 13; i++)
+                  .admin__block-item
+                    .admin__mid 
+                      .admin__text.admin__text--center
+                        |#{i}
+                      .admin__horiz 
+                        +input(type = 'text' name = 'text' placeholder='стоимость')
+          .admin__section 
+            .admin__col
+              h3
+                |Настройка акций
+              .admin__row
+                .admin__container
+                  .addmin__col
+                    .admin__text 
+                      |Время действия акций
+                    .admin__horiz 
+                      .admin__block 
+                        .admin__text.admin__right 
+                          |от
+                        .admin__mid 
+                          +input(type = 'text' name = 'text')
+                      .admin__block 
+                        .admin__text.admin__right 
+                          |до
+                        .admin__mid 
+                          +input(type = 'text' name = 'text')
+                  .admin__block
+                    .admin__col 
+                      .admin__text 
+                        |Укажите размер скидки в процентах
+                      .admin__horiz.admin__mid 
+                        +input(type = 'text' name = 'text')
+                .admin__row 
+                  a.admin__show(href="#") 
+                    |Добавить еще промежуток
+          .admin__section 
+            .admin__large 
+              button.button.button--xxl(type='submit')
+                |Сохранить
+
+  .modals 
+    .modal(data-fancy-modal='1')
+      .modal__container
+        form.form.admin(action="/") 
+          .select-wrapper
+            .select
+              select.select__select(name="time" style='width: 100%' data-select-placeholder='Статус') 
+                option(value = 'hour')
+                  |1
+                option(value = 'days')
+                  |2
+            .admin__row 
+              .admin__block
+                .admin__text.admin__right 
+                  |Закрытие автотической оплаты
+                .admin__col
+                  +input(type = 'text' name = 'text')   
 
 block footer
