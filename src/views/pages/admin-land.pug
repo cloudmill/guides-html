@@ -386,16 +386,16 @@ block content
                   .admin__text.admin__right 
                     |От
                   .admin__mid 
-                    +input(type = 'text' name = 'text')        
+                    input.form__input(type="text" name='start' data-calendar-start='')        
                 .admin__block 
                   .admin__text.admin__right 
                     |До
                   .admin__mid
-                    +input(type = 'text' name = 'text')        
+                    input.form__input(type="text" name='end' data-calendar-end='')          
               .admin__row 
                 .admin__container
                   each item in ['Пн.', 'Вт.', 'Ср.', 'Чт.', 'Пт.', 'Сб.', 'Вс.']
-                    .admin__item 
+                    .admin__item(data-admin-checkbox-item='')
                       .admin__horiz
                         .admin__text
                           |#{item}
@@ -407,7 +407,7 @@ block content
                             +check-svg.checkbox__svg
           .admin__section 
             .admin__large 
-              .button.button--xxl(data-fancy-button='1')
+              .button.button--xxl(data-admin-button='group')
                 |Изменить
           .admin__section 
             .admin__head 
@@ -424,7 +424,7 @@ block content
                 .admin__block
                   a.admin__text(href="#") 
                     |Добавить
-              each month in ['Январь', 'Февраль', 'Март']
+              each month, index in ['Январь', 'Февраль', 'Март']
                 .admin__calendar 
                   .admin__calendar-row 
                     .admin__mid
@@ -436,20 +436,20 @@ block content
                         .admin__text 
                           |Неделя #{week}
                       .admin__container
-                        each item in [3, 3, 3, 5, 3, 3, 7] 
-                          .admin__block 
+                        each item, i in [3, 3, 3, 5, 3, 3, 7] 
+                          .admin__block(data-admin-button='single' data-calendar-data=`2021-0${index + 1}-0${i + 1}`)
                             .calendar-card 
                               .calendar-card__container 
-                                .calendar-card__item 
-                                  .admin__text 
+                                .calendar-card__item
+                                  .admin__text(data-calendar-status='') 
                                     |Активен
                                 .calendar-card__item 
-                                  .admin__text 
+                                  .admin__text(data-calendar-start='') 
                                     |11:00
-                                  .admin__text.admin__horiz 
+                                  .admin__text.admin__horiz(data-calendar-end='') 
                                     |18:00
-                                .calendar-card__item 
-                                  .admin__text 
+                                .calendar-card__item
+                                  .admin__text(data-calendar-day='')
                                     |#{item} дня
           .admin__section 
             .admin__large 
@@ -673,21 +673,37 @@ block content
                 |Сохранить
 
   .modals 
-    .modal(data-fancy-modal='1')
+    .modal(data-admin-modal='')
       .modal__container
         form.form.admin(action="/") 
-          .select-wrapper
+          .select-wrapper(data-admin-select='')
             .select
               select.select__select(name="time" style='width: 100%' data-select-placeholder='Статус') 
-                option(value = 'hour')
-                  |1
-                option(value = 'days')
-                  |2
-            .admin__row 
-              .admin__block
-                .admin__text.admin__right 
-                  |Закрытие автотической оплаты
-                .admin__col
-                  +input(type = 'text' name = 'text')   
+                option
+                option(value = 'open')
+                  |Активен
+                option(value = 'close')
+                  |Не активен
+          .admin__row 
+            .admin__block 
+              .admin__text 
+                |Время начала
+              .admin__block-item 
+                input.form__input(data-modal-start='' type="text" name='start') 
+          .admin__row 
+            .admin__block 
+              .admin__text 
+                |Время начала
+              .admin__block-item 
+                input.form__input(data-modal-end='' type="text" name='end') 
+          .admin__row 
+            .admin__block
+              .admin__text.admin__right 
+                |Закрытие автотической оплаты
+              .admin__col
+                input.form__input(data-payment-input='' type="text" name='close') 
+          .admin__row 
+            .button.button--xxl(data-admin-change-button='')
+              |Сохранить
 
 block footer
