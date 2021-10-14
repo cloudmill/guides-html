@@ -413,12 +413,12 @@ block content
                   .admin__text.admin__right 
                     |От
                   .admin__mid 
-                    input.form__input(type="text" name='start' data-calendar-start='')
+                    input.form__input(type="text" name='start' data-change-start='')
                 .admin__block 
                   .admin__text.admin__right 
                     |До
                   .admin__mid
-                    input.form__input(type="text" name='end' data-calendar-end='')      
+                    input.form__input(type="text" name='end' data-change-end='')      
               .admin__row 
                 .admin__container
                   each item in ['Пн.', 'Вт.', 'Ср.', 'Чт.', 'Пт.', 'Сб.', 'Вс.']
@@ -452,6 +452,8 @@ block content
                   a.admin__text(href="#") 
                     |Добавить
               each month, index in ['Январь', 'Февраль', 'Март']
+                -
+                  var count = 1
                 .admin__calendar 
                   .admin__calendar-row 
                     .admin__mid
@@ -464,7 +466,7 @@ block content
                           |Неделя #{week}
                       .admin__container
                         each item in [3, 3, 3, 5, 3, 3, 7]
-                          .admin__block(data-admin-button='single' data-calendar-data=`2021-0${index + 1}-${item}`)
+                          .admin__block(data-admin-button='single' data-calendar-data=`2021-0${index + 1}-${count < 10 ? '0' + count++ : count++}`)
                             .calendar-card
                               .calendar-card__container 
                                 .calendar-card__item 
