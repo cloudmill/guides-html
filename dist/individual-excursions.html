@@ -10,7 +10,7 @@
 		<meta name="format-detection" content="address=no">
 		<script defer="defer" src="assets/vendor.js"></script>
 		<script defer="defer" src="assets/app.js"></script>
-		<link href="589.css" rel="stylesheet">
+		<link href="485.css" rel="stylesheet">
 		<link href="app.css" rel="stylesheet">
 	</head>
 
@@ -659,7 +659,7 @@
 					</section>
 					<section class="section" id="calculator">
 						<div class="container">
-							<div class="calculator">
+							<div class="calculator calculator--individ">
 								<div class="calculator__container">
 									<h2 data-aos="fade-up">Calculate the cost</h2>
 									<div class="calculator__mobile">
@@ -796,17 +796,26 @@
 											<div class="calculator__top-col" data-aos="fade-up">
 												<div class="calculator__top-item">
 													<div class="calculator__label">Date</div>
-													<div class="calculator__text">28.10.2021</div>
+													<div class="calculator__data">
+														<div class="data-picker data-picker--small"><label class="data-picker__label">
+																<div class="data-picker__icon"><svg class="data-picker__svg" width="18" height="20" viewbox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M0.833984 7.62091H17.1726" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M13.0727 11.2005H13.0812" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M9.00434 11.2005H9.01283" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M4.92817 11.2005H4.93666" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M13.0727 14.7635H13.0812" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M9.00434 14.7635H9.01283" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M4.92817 14.7635H4.93666" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M12.7059 0.833496V3.85004" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M5.30155 0.833496V3.85004" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path fill-rule="evenodd" clip-rule="evenodd" d="M12.8851 2.28125H5.12338C2.43142 2.28125 0.75 3.78086 0.75 6.53736V14.8329C0.75 17.6327 2.43142 19.167 5.12338 19.167H12.8766C15.577 19.167 17.25 17.6587 17.25 14.9022V6.53736C17.2585 3.78086 15.5855 2.28125 12.8851 2.28125Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div><input class="data-picker__input" placeholder="28.10.2021">
+															</label></div>
+													</div>
 												</div>
 												<div class="calculator__top-item">
-													<div class="calculator__label">Time</div>
-													<div class="calculator__text">11:00</div>
-												</div>
-											</div>
-											<div class="calculator__top-col" data-aos="fade-up">
-												<div class="calculator__select">
 													<div class="select-wrapper">
-														<div class="select select--small"><select class="select__select" name="location" style="width: 100%" data-select-placeholder="Location">
+														<div class="select select--small"><select class="select__select" name="location" style="width: 100%" data-select-placeholder="Language">
 																<option></option>
 																<option value="Value-1">Value-1</option>
 																<option value="Value-2">Value-2</option>
@@ -822,7 +831,7 @@
 												</div>
 												<div class="calculator__top-item">
 													<div class="calculator__label">Total amount</div>
-													<div class="calculator__num">$1265</div>
+													<div class="calculator__num">To be discussed separately.<br>The manager will contact you as soon as possible</div>
 												</div>
 											</div>
 										</div>
@@ -982,7 +991,7 @@
 																					<path d="M12.7059 0.833496V3.85004" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
 																					<path d="M5.30155 0.833496V3.85004" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
 																					<path fill-rule="evenodd" clip-rule="evenodd" d="M12.8851 2.28125H5.12338C2.43142 2.28125 0.75 3.78086 0.75 6.53736V14.8329C0.75 17.6327 2.43142 19.167 5.12338 19.167H12.8766C15.577 19.167 17.25 17.6587 17.25 14.9022V6.53736C17.2585 3.78086 15.5855 2.28125 12.8851 2.28125Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																				</svg></div><input class="data-picker__input" placeholder="28.10.2021" />
+																				</svg></div><input class="data-picker__input" placeholder="28.10.2021">
 																		</label></div>
 																</div>
 															</div>
@@ -1075,24 +1084,15 @@
 										<div class="calculator__price-row">
 											<div class="calculator__price-col">
 												<div class="calculator__price-item" data-aos="fade-up">
-													<div class="calculator__price-label">Old price</div>
-													<div class="calculator__price-num">$1280</div>
+													<div class="calculator__price-label">Total amount</div>
+													<div class="calculator__price-title">To be discussed separately. The manager will contact you as soon as possible</div>
 												</div>
 												<div class="calculator__price-item" data-aos="fade-up">
-													<div class="calculator__price-label">You save money</div>
-													<div class="calculator__price-num">$20</div>
-												</div>
-											</div>
-											<div class="calculator__price-col">
-												<div class="calculator__price-left" data-aos="fade-up">
 													<div class="calculator__price-label">Number of people</div>
 													<div class="calculator__price-number">7</div>
 												</div>
-												<div class="calculator__price-right" data-aos="fade-up">
-													<div class="calculator__price-label">Total amount</div>
-													<div class="calculator__price-number">$1280</div>
-												</div>
 											</div>
+											<div class="calculator__price-col"></div>
 											<div class="calculator__price-col" data-aos="fade-up">
 												<div class="button-icon button-icon--calculator animation" data-fancy-button="11">
 													<div class="button-icon__icon"><svg width="36" height="37" viewbox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">

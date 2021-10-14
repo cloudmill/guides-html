@@ -10,7 +10,7 @@
 		<meta name="format-detection" content="address=no">
 		<script defer="defer" src="assets/vendor.js"></script>
 		<script defer="defer" src="assets/app.js"></script>
-		<link href="589.css" rel="stylesheet">
+		<link href="485.css" rel="stylesheet">
 		<link href="app.css" rel="stylesheet">
 	</head>
 
@@ -563,11 +563,11 @@
 										<div class="admin__container">
 											<div class="admin__block">
 												<div class="admin__text admin__right">От</div>
-												<div class="admin__mid"><input class="form__input" name="start" data-change-start=""></div>
+												<div class="admin__ll"><input class="form__input" name="start" data-change-start="" data-date-input="" placeholder="dd.mm.yyyy"></div>
 											</div>
 											<div class="admin__block">
 												<div class="admin__text admin__right">До</div>
-												<div class="admin__mid"><input class="form__input" name="end" data-change-end=""></div>
+												<div class="admin__ll"><input class="form__input" name="end" data-change-end="" data-date-input="" placeholder="dd.mm.yyyy"></div>
 											</div>
 										</div>
 										<div class="admin__row">
@@ -2226,7 +2226,7 @@
 						<div class="modal__container">
 							<form class="form admin" action="/">
 								<div class="select-wrapper" data-admin-select="">
-									<div class="select"><select class="select__select" name="time" style="width: 100%" data-select-placeholder="Статус">
+									<div class="select"><select class="select__select" name="time" style="width: 100%" data-select-placeholder="Статус" data-select-value="">
 											<option></option>
 											<option value="open">Активен</option>
 											<option value="close">Не активен</option>
@@ -2238,9 +2238,7 @@
 										<div class="admin__col"><input class="form__input" data-payment-input="" name="close"></div>
 									</div>
 								</div>
-								<div class="admin__row">
-									<div class="button button--xxl" data-admin-change-button="">Сохранить</div>
-								</div>
+								<div class="admin__row"><button class="button button--xxl">Сохранить</button></div>
 							</form>
 						</div>
 					</div>
