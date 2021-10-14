@@ -87,7 +87,255 @@ block content
                     |Arrange a tour
     section.section#calculator
       .container
-        +calculator(events=true)
+        .calculator.calculator--individ
+          .calculator__container 
+            h2(data-aos='fade-up') 
+              |Calculate the cost
+            .calculator__mobile 
+              .calculator__top 
+                .calculator__top-col
+                  .calculator__top-item(data-aos='fade-up')  
+                    .calculator__label
+                      |Date
+                    .calculator__text
+                      |28.10.2021
+                  .calculator__top-item(data-aos='fade-up')  
+                    .calculator__label
+                      |Time
+                    .calculator__text
+                      |11:00
+                .calculator__top-col
+                  .calculator__select(data-aos='fade-up')  
+                    .select-wrapper
+                      .select.select--small
+                        select.select__mobile(name="location-mob")
+                          option(value="" disabled selected)
+                            |Location
+                          each item in data.selectValues.language
+                            option(value = item.value)
+                              |#{item.value}
+                        select.select__select(name="location" style='width: 100%' data-select-placeholder='Location') 
+                          option
+                          each item in data.selectValues.language
+                            option(value = item.value)
+                              |#{item.value} 
+              h4.calculator__title(data-aos='fade-up') 
+                |Number of people
+              .calculator__grid
+                each item in ['Adults', 'Students with ISIC', 'Children 6-16 years old', 'Children 0-6 years old',]
+                  .calculator__item(data-aos='fade-up') 
+                    .calculator__label 
+                      |#{item}
+                  .calculator__item(data-aos='fade-up') 
+                    .counter(data-max-count='5')
+                      .counter__item.counter__item--minus(data-count-minus='')
+                        +minus-svg.counter__svg.counter__minus
+                      .counter__number 
+                        |0
+                      .counter__item.counter__item--plus(data-count-plus='')
+                        +plus-svg.counter__svg.counter__plus
+                .calculator__grid-row 
+                  .calculator__grid-col(data-aos='fade-up') 
+                    .tooltip 
+                      .tooltip__wrapper
+                        .calculator__label 
+                          |Among them wheelchair users
+                        .tooltip__icon 
+                          +tooltip-svg.tooltip__svg
+                        .tooltip__container 
+                          |Attention! In order to visit this tour, you need to apply for a temporary visa. Without a temporary visa, you will not be allowed out of the port.
+                    .counter 
+                      .counter__item.counter__item--minus(data-count-minus='')
+                        +minus-svg.counter__svg.counter__minus
+                      .counter__number 
+                        |0
+                      .counter__item.counter__item--plus(data-count-plus='')
+                        +plus-svg.counter__svg.counter__plus
+                    .calculator__description 
+                      |Doesn’t influence the cost
+                  .calculator__grid-col(data-aos='fade-up') 
+                    .calculator__grid-item
+                      .calculator__label
+                        |Number of people
+                      .calculator__num 
+                        |7
+                    .calculator__grid-item
+                      .calculator__label
+                        |Total amount
+                      .calculator__num 
+                        |$1300
+            .calculator__desktop
+              .calculator__top 
+                .calculator__top-col(data-aos='fade-up') 
+                  .calculator__top-item 
+                    .calculator__label
+                      |Date
+                    .calculator__data
+                      .data-picker.data-picker--small
+                        label.data-picker__label
+                          .data-picker__icon 
+                            +calendar-svg.data-picker__svg
+                          input.data-picker__input(type="text" placeholder='28.10.2021')
+                  .calculator__top-item 
+                    .select-wrapper
+                      .select.select--small
+                        select.select__select(name="location" style='width: 100%' data-select-placeholder='Language') 
+                          option
+                          each item in data.selectValues.language
+                            option(value = item.value)
+                              |#{item.value}
+                .calculator__top-col(data-aos='fade-up') 
+                  .calculator__top-item 
+                    .calculator__label
+                      |Number of people
+                    .calculator__num 
+                      |7
+                  .calculator__top-item 
+                    .calculator__label
+                      |Total amount
+                    .calculator__num 
+                      |To be discussed separately. #[br] The manager will contact you as soon as possible
+              h4.calculator__title(data-aos='fade-up') 
+                |Number of people
+              .calculator__grid 
+                each item in ['Adults', 'Students with ISIC', 'Children 6-16 years old', 'Children 0-6 years old',]
+                  .calculator__item(data-aos='fade-up')
+                    .calculator__label 
+                      |#{item}
+                  .calculator__item(data-aos='fade-up')
+                    .counter(data-max-count='3')
+                      .counter__item.counter__item--minus(data-count-minus='')
+                        +minus-svg.counter__svg.counter__minus
+                      .counter__number 
+                        |0
+                      .counter__item.counter__item--plus(data-count-plus='')
+                        +plus-svg.counter__svg.counter__plus
+                .calculator__item(data-aos='fade-up') 
+                  .tooltip 
+                    .calculator__label 
+                      |Among them wheelchair users
+                      span.tooltip__span
+                        .tooltip__icon 
+                          +tooltip-svg.tooltip__svg
+                    .tooltip__container 
+                      |Attention! In order to visit this tour, you need to apply for a temporary visa. Without a temporary visa, you will not be allowed out of the port.
+                .calculator__item(data-aos='fade-up')
+                  .counter 
+                    .counter__item.counter__item--minus(data-count-minus='')
+                      +minus-svg.counter__svg.counter__minus
+                    .counter__number 
+                      |0
+                    .counter__item.counter__item--plus(data-count-plus='')
+                      +plus-svg.counter__svg.counter__plus
+                  .calculator__description 
+                    |Doesn’t influence the cost
+            .events#events.active(data-accordion='')
+              .events__container 
+                .events__head(data-accordion-button='')
+                  .events__head-row 
+                    .events__head-col(data-aos='fade-up')
+                      h4
+                        |Evening events are available
+                    .events__head-col(data-aos='fade-up')
+                      .events__head-icon 
+                        +arrow-svg.events__head-svg
+                .events__body(data-accordion-dropdown='')
+                  .events__top(data-tabs='')
+                    .events__top-row 
+                      .events__top-col 
+                        each item, i in ['Folk show', 'Evening in the Faberge museum', 'Ballet evening', 'Classical Music Evening']
+                          .events__top-item(data-aos='fade-up')
+                            .events__tab(data-tabs-item='' class=((i === 0) ? 'active' : ''))
+                              |#{item}
+                            .events__top-button(data-fancy-button='2')
+                              |Read more
+                      .events__top-col 
+                        each item in ['Evening boat trip', 'Russian dinner', 'Private car/minivan for an evening', 'White Nights Tour" (Draw Bridges)']
+                          .events__top-item(data-aos='fade-up')
+                            .events__tab(data-tabs-item='') 
+                              |#{item}
+                            .events__top-button(data-fancy-button='2')
+                              |Read more
+                  .events__bot
+                    .events__bot-row 
+                      .events__bot-col
+                        .events__bot-item(data-aos='fade-up')
+                          .calculator__label
+                            |Date
+                          .calculator__data  
+                            .data-picker.data-picker--small
+                              label.data-picker__label
+                                .data-picker__icon 
+                                  +calendar-svg.data-picker__svg
+                                input.data-picker__input(type="text" placeholder='28.10.2021')
+                        .events__bot-item(data-aos='fade-up')
+                          .calculator__label
+                            |Number of people
+                          .counter 
+                            .counter__item.counter__item--minus(data-count-minus='')
+                              +minus-svg.counter__svg.counter__minus
+                            .counter__number 
+                              |1
+                            .counter__item.counter__item--plus(data-count-plus='')
+                              +plus-svg.counter__svg.counter__plus
+                      .events__bot-col
+                        .events__bot-left(data-aos='fade-up')
+                          .calculator__label
+                            |Number of tickets
+                          .calculator__num 
+                            |7
+                        .events__bot-right(data-aos='fade-up')
+                          .calculator__label
+                            |Total amount
+                          .events__title
+                            |To be discussed separately. The manager will contact you as soon as possible
+          .calculator__payments
+            .calculator__payments-title(data-aos='fade-up')  
+              |We accept payments
+            .calculator__payments-row(data-aos='fade-up') 
+              .calculator__payments-item 
+                .calculator__payments-icon 
+                  +visa-svg
+              .calculator__payments-item 
+                .calculator__payments-icon 
+                  +master-card-svg
+              .calculator__payments-item 
+                .calculator__payments-icon 
+                  +world-svg
+          .calculator__price 
+            .calculator__price-container
+              .calculator__payments.calculator__payments--mobile
+                .calculator__payments-title(data-aos='fade-up')  
+                  |We accept payments
+                .calculator__payments-row(data-aos='fade-up') 
+                  .calculator__payments-item 
+                    .calculator__payments-icon 
+                      +visa-svg
+                  .calculator__payments-item 
+                    .calculator__payments-icon 
+                      +master-card-svg
+                  .calculator__payments-item 
+                    .calculator__payments-icon 
+                      +world-svg
+              .calculator__price-row 
+                .calculator__price-col
+                  .calculator__price-item(data-aos='fade-up')
+                    .calculator__price-label 
+                      |Total amount
+                    .calculator__price-title 
+                      |To be discussed separately. The manager will contact you as soon as possible
+                  .calculator__price-item(data-aos='fade-up')
+                    .calculator__price-label 
+                      |Number of people
+                    .calculator__price-number
+                      |7
+                .calculator__price-col
+                .calculator__price-col(data-aos='fade-up')
+                  .button-icon.button-icon--calculator.animation(data-fancy-button='11')
+                    .button-icon__icon
+                      +bag-svg
+                    span.button-icon__text.animation__span
+                      |Add to cart
     section.section 
       .container 
         .excursion-page__slider 
