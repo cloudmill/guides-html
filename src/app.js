@@ -1,5 +1,6 @@
 import 'Styles/_app.scss'
 
+import mask from "inputmask";
 import 'scripts/swipers.js';
 import 'scripts/header.js';
 import 'scripts/tooltip.js';
@@ -31,4 +32,7 @@ $(() => {
   counters.forEach(item => {
     const counter = new Counter(item)
   })
+
+  Inputmask({mask: "99.99.9999", showMaskOnHover: false}).mask('[data-date-input]')
+  Inputmask({mask: "99:99", showMaskOnHover: false}).mask('[data-time-input]')
 })

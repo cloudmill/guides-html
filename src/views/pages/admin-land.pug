@@ -385,13 +385,13 @@ block content
                 .admin__block 
                   .admin__text.admin__right 
                     |От
-                  .admin__mid 
-                    input.form__input(type="text" name='start' data-change-start='')        
+                  .admin__ll 
+                    input.form__input(type="text" name='start' data-change-start='' data-date-input='' placeholder='dd.mm.yyyy')        
                 .admin__block 
                   .admin__text.admin__right 
                     |До
-                  .admin__mid
-                    input.form__input(type="text" name='end' data-change-end='')          
+                  .admin__ll
+                    input.form__input(type="text" name='end' data-change-end='' data-date-input='' placeholder='dd.mm.yyyy')          
               .admin__row 
                 .admin__container
                   each item in ['Пн.', 'Вт.', 'Ср.', 'Чт.', 'Пт.', 'Сб.', 'Вс.']
@@ -680,7 +680,7 @@ block content
         form.form.admin(action="/") 
           .select-wrapper(data-admin-select='')
             .select
-              select.select__select(name="time" style='width: 100%' data-select-placeholder='Статус') 
+              select.select__select(name="time" style='width: 100%' data-select-placeholder='Статус' data-select-value='') 
                 option
                 option(value = 'open')
                   |Активен
@@ -691,13 +691,13 @@ block content
               .admin__text 
                 |Время начала
               .admin__block-item 
-                input.form__input(data-modal-start='' type="text" name='start') 
+                input.form__input(data-modal-start='' type="text" name='start' data-time-input='') 
           .admin__row 
             .admin__block 
               .admin__text 
                 |Время начала
               .admin__block-item 
-                input.form__input(data-modal-end='' type="text" name='end') 
+                input.form__input(data-modal-end='' type="text" name='end' data-time-input='') 
           .admin__row 
             .admin__block
               .admin__text.admin__right 
@@ -705,7 +705,7 @@ block content
               .admin__col
                 input.form__input(data-payment-input='' type="text" name='close') 
           .admin__row 
-            .button.button--xxl(data-admin-change-button='')
+            button.button.button--xxl
               |Сохранить
 
 block footer

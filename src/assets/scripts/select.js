@@ -22,11 +22,11 @@ import {mediaQuery} from './mediaQueries'
       });
 
       
-      select.one('change', function() {
+      select.on('change', function() {
         const item = $(this).closest('[data-select-parent]')
         const btn = item.find('[data-select-button]')
-        console.log(btn);
-        console.log(item);
+
+        $(this).attr('data-select-value', this.value)
         btn.removeClass('disabled')
       })
 
