@@ -123,6 +123,14 @@
     {
       "page": "[Админка] Вечернее",
       "href": "admin-evening.html"
+    },
+    {
+      "page": "[Админка] Справка по расчету",
+      "href": "reference.html"
+    },
+    {
+      "page": "[Админка] Создание сезонов",
+      "href": "admin-season.html"
     }
   ],
   "nav": [

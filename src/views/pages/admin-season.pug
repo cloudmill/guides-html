@@ -7,13 +7,6 @@ block header
 block content
   .admin 
     .container 
-      .admin__top 
-        .product-tabs
-          each item, i in ['Общая информация', 'Состав тура', 'Календарь', 'Цены'] 
-            .product-tabs__item 
-              .product-tabs__tab(class=(i === 3) ? 'active' : '')
-                h2 
-                  |#{item}
       form.form(action="/")
         .admin__section   
           h3 
