@@ -19,9 +19,9 @@ import 'scripts/table.js';
 import 'scripts/aside.js';
 import 'scripts/admin-tabs.js';
 import 'scripts/aos.js';
-import 'scripts/calendar-modal.js';
 import { Tabs } from './assets/scripts/tabs'
 import { Counter } from './assets/scripts/counter'
+import { CalendarChanger } from './assets/scripts/calendar-changer'
 
 
 $(() => {
@@ -35,4 +35,6 @@ $(() => {
 
   Inputmask({mask: "99.99.9999", showMaskOnHover: false}).mask('[data-date-input]')
   Inputmask({mask: "99:99", showMaskOnHover: false}).mask('[data-time-input]')
+
+  const calendar = new CalendarChanger('.calendar-card')
 })
