@@ -2,135 +2,135 @@
   "routing": [
     {
       "page": "Главная",
-      "href": "main.html"
+      "href": "main"
     },
     {
       "page": "Наземеная экскурсия",
-      "href": "land-excursions.html"
+      "href": "land-excursions"
     },
     {
       "page": "Наземеная индивидуальная экскурсия",
-      "href": "land-excursions-individual.html"
+      "href": "land-excursions-individual"
     },
     {
       "page": "Круизные экскурсия",
-      "href": "cruise-excursions.html"
+      "href": "cruise-excursions"
     },
     {
       "page": "Круизные экскурсия индивидуальная",
-      "href": "cruise-excursions-individual.html"
+      "href": "cruise-excursions-individual"
     },
     {
       "page": "Экскурсии под запрос",
-      "href": "individual-excursions.html"
+      "href": "individual-excursions"
     },
     {
       "page": "Достопримечательности",
-      "href": "landmarks.html"
+      "href": "landmarks"
     },
     {
       "page": "Достопримечательности, город",
-      "href": "landmarks-city.html"
+      "href": "landmarks-city"
     },
     {
       "page": "Достопримечательности детальная",
-      "href": "landmarks-single.html"
+      "href": "landmarks-single"
     },
     {
       "page": "Сравнение",
-      "href": "comparison.html"
+      "href": "comparison"
     },
     {
       "page": "Наши гиды",
-      "href": "our-guides.html"
+      "href": "our-guides"
     },
     {
       "page": "Корзина",
-      "href": "cart.html"
+      "href": "cart"
     },
     {
       "page": "Корзина без товара",
-      "href": "cart-1.html"
+      "href": "cart-1"
     },
     {
       "page": "Вечернее мероприятие с ценой",
-      "href": "evening-events.html"
+      "href": "evening-events"
     },
     {
       "page": "Вечернее мероприятие без цены",
-      "href": "evening-events-1.html"
+      "href": "evening-events-1"
     },
     {
       "page": "Вечернее мероприятие удобные даты",
-      "href": "evening-events-2.html"
+      "href": "evening-events-2"
     },
     {
       "page": "Клиентам",
-      "href": "clients.html"
+      "href": "clients"
     },
     {
       "page": "Вопрос-ответ",
-      "href": "faq.html"
+      "href": "faq"
     },
     {
       "page": "Контакты",
-      "href": "contacts.html"
+      "href": "contacts"
     },
     {
       "page": "О нас",
-      "href": "about.html"
+      "href": "about"
     },
     {
       "page": "Бронирование тура",
-      "href": "booking.html"
+      "href": "booking"
     },
     {
       "page": "Подтверждение бронирования",
-      "href": "confirmation.html"
+      "href": "confirmation"
     },
     {
       "page": "Сообщение об успешной оплате",
-      "href": "successful.html"
+      "href": "successful"
     },
     {
       "page": "Ручное бронирование",
-      "href": "confirmation-1.html"
+      "href": "confirmation-1"
     },
     {
       "page": "Сообщение после отправки заявки",
-      "href": "successful-1.html"
+      "href": "successful-1"
     },
     {
       "page": "Круизное, подтверждение бронирования",
-      "href": "confirmation-2.html"
+      "href": "confirmation-2"
     },
     {
       "page": "Круизное, ручное бронирования",
-      "href": "confirmation-3.html"
+      "href": "confirmation-3"
     },
     {
       "page": "Круизное, анкета / несколько гостей",
-      "href": "questionnaire.html"
+      "href": "questionnaire"
     },
     {
       "page": "[Админка] Круизная экскурсия",
-      "href": "admin.html"
+      "href": "admin"
     },
     {
       "page": "[Админка] Наземная экскурсия",
-      "href": "admin-land.html"
+      "href": "admin-land"
     },
     {
       "page": "[Админка] Вечернее",
-      "href": "admin-evening.html"
+      "href": "admin-evening"
     },
     {
       "page": "[Админка] Справка по расчету",
-      "href": "reference.html"
+      "href": "reference"
     },
     {
       "page": "[Админка] Создание сезонов",
-      "href": "admin-season.html"
+      "href": "admin-season"
     }
   ],
   "nav": [
