@@ -3,7 +3,7 @@
   $scale-rate: 1.2;
 
   cursor: pointer;
-  
+  transform: scale(calc(1 + .001));
   &:hover {
 
     #{$comp}__img {
@@ -23,6 +23,7 @@
 
     border-radius: 10px;
     overflow: hidden;
+    transform: scale(calc(1 + .001));
 
     &::before {
       content: "";
@@ -51,6 +52,7 @@
     z-index: -1;
 
     transition: $transition;
+    transform: scale(calc(1 + .001));
   }
 
   &__name {

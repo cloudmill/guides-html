@@ -84,6 +84,11 @@
       }
     }
     
+    #{$comp}__search-input {
+      &:focus {
+        border-color: $color-white;
+      }
+    }
     #{$comp}__search-icon {
       circle {
         stroke: $color-white;
@@ -99,6 +104,20 @@
     #{$comp}__store-svg {
       path {
         stroke: $color-white;
+      }
+    }
+
+    #{$comp}__lang-container {
+
+      &:hover {
+        #{$comp}__lang-text {
+          color: $color-white;
+        }
+        #{$comp}__lang-svg {
+          path {
+            stroke: $color-white;
+          }
+        }
       }
     }
   }
@@ -204,9 +223,6 @@
 
   &__left {
     display: flex;
-    // @media (min-width: ) {
-      
-    // }
   }
   &__left-col {
     &:nth-child(1) {

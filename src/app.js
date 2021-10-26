@@ -8,7 +8,6 @@ import 'scripts/modals.js';
 import 'scripts/accordion.js';
 import 'scripts/select.js';
 import 'scripts/nav-links.js';
-// import 'scripts/sticky.js';
 import 'scripts/parsley.js';
 import 'scripts/hero.js';
 import 'scripts/footer.js';
@@ -23,8 +22,9 @@ import { Tabs } from './assets/scripts/tabs'
 import { Counter } from './assets/scripts/counter'
 import { CalendarChanger } from './assets/scripts/calendar-changer'
 
-
 $(() => {
+  require("assets/scripts/backend");
+
   const tabs = new Tabs('[data-tabs]')
 
   const counters = document.querySelectorAll('.counter')
