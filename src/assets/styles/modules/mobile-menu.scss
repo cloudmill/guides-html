@@ -12,6 +12,21 @@
   background: $color-white;
   transition: $transition;
 
+  .header__lang-container:hover {
+
+    .header__lang-text {
+      color: $color-blue;
+    }
+    .header__lang-icon {
+      transform: rotate(180deg);
+    }
+    .header__lang-svg {
+      path {
+        stroke: $color-blue;
+      }
+    }
+  }
+
   &__container {
     padding: 20px 20px 40px;
   }
