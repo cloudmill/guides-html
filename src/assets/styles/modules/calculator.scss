@@ -386,6 +386,9 @@
   }
 
   &__select {
+    @media (min-width: $breakpoint-m) {
+      width: 100%;
+    }
     @media (min-width: $breakpoint) {
       width: 146px;
     }
