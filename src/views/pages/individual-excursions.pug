@@ -13,7 +13,7 @@ block content
   .excursion-page
     section.section.section--panel(data-aos='fade-up')
       +panel.panel--disabled(button = 'Change')
-    section.section.section--md.section--visible
+    section.section.section--md.section--desktop-visible
       .container
         .section__row
           .section__col
@@ -137,12 +137,12 @@ block content
                 .calculator__grid-row 
                   .calculator__grid-col(data-aos='fade-up') 
                     .tooltip 
-                      .tooltip__wrapper
-                        .calculator__label 
-                          |Among them wheelchair users
-                        .tooltip__icon 
-                          +tooltip-svg.tooltip__svg
-                        .tooltip__container 
+                      .calculator__label 
+                        |Among them wheelchair users
+                        span.tooltip__span
+                          .tooltip__icon 
+                            +tooltip-svg.tooltip__svg
+                      .tooltip__container 
                           |Attention! In order to visit this tour, you need to apply for a temporary visa. Without a temporary visa, you will not be allowed out of the port.
                     .counter 
                       .counter__item.counter__item--minus(data-count-minus='')

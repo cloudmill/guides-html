@@ -61,6 +61,12 @@
     overflow: visible;
   }
 
+  &--desktop-visible {
+    @media (min-width: $breakpoint) {
+      overflow: visible;
+    }
+  }
+
   &--panel {
     margin-top: 64px;
 

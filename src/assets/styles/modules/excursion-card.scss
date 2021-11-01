@@ -1,7 +1,6 @@
 .excursion-card {
   $comp: &;
   $scale-rate: 1.2;
-  // display: block;
 
   display: flex;
   flex-direction: column;
@@ -9,9 +8,11 @@
   height: 100%;
 
   width: 290px;
+
   @media (min-width: $breakpoint) {
     width: 360px;
   }
+
   @media (min-width: $breakpoint-xl) {
     width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
   }
@@ -28,6 +29,7 @@
 
   &__body {
     margin-bottom: 15px;
+
     @media (min-width: $breakpoint) {
       margin-bottom: 20px;
     }
@@ -44,6 +46,7 @@
   &__img {
     display: block;
     transition: $transition;
+    transform: scale(calc(1 + .001));
   }
 
   &__items {
@@ -51,9 +54,10 @@
     top: 5px;
     left: 5px;
   }
-  
+
   &__content {
     margin-top: 15px;
+
     @media (min-width: $breakpoint) {
       margin-top: 20px;
     }
@@ -61,12 +65,14 @@
 
   &__title {
     margin-bottom: 15px;
+
     @media (min-width: $breakpoint) {
       margin-bottom: 20px;
     }
 
     font-weight: 500;
     @include fsl(18px);
+
     @media (min-width: $breakpoint) {
       @include fsl(22px);
     }
@@ -97,6 +103,7 @@
 
   &__bot {
     padding-top: 15px;
+
     @media (min-width: $breakpoint) {
       padding-top: 20px;
     }
@@ -107,6 +114,7 @@
   &__info {
     display: flex;
   }
+
   &__info-item {
     display: flex;
     align-items: center;
@@ -115,6 +123,7 @@
       margin-left: 45px;
     }
   }
+
   &__info-icon {
     margin-right: 10px;
 
@@ -122,6 +131,7 @@
     align-items: center;
     justify-content: center;
   }
+
   &__info-text {
     color: $color-gray;
     @include fsl(16px);
@@ -129,6 +139,7 @@
 
   &__wrapper {
     margin-top: 15px;
+
     @media (min-width: $breakpoint) {
       margin-top: 20px;
     }
@@ -137,14 +148,16 @@
   &__price {
     @include fsl(16px);
   }
+
   &__price-discont {
     padding-left: 2px;
 
     font-weight: 700;
-    color: $color-gray;    
+    color: $color-gray;
     @include fsl(22px);
     text-decoration: line-through;
-  } 
+  }
+
   &__price-num {
     padding: 0 3px;
 
@@ -161,14 +174,17 @@
   &__activity {
     display: flex;
   }
+
   &__activity-text {
     margin-right: 10px;
     @include fsl(14px);
   }
+
   &__activity-dots {
     display: flex;
     align-items: center;
   }
+
   &__activity-dot {
     $size: 8px;
 

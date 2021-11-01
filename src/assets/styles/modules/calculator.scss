@@ -483,14 +483,10 @@
     margin-left: -20px;
 
     width: calc(100% + (20px * 2));
-    @media (min-width: $breakpoint-m) {
-      margin-top: 40px;
-      margin-left: 0;
-      padding: 0;
-      width: auto;
-    }
     @media (min-width: $breakpoint) {
       margin: -65px 40px 0;
+      padding: 0;
+      width: auto;
     }
 
     background: $color-aqua;
