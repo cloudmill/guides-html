@@ -1,8 +1,10 @@
 .section {
   margin-top: 60px;
+
   @media (min-width: $breakpoint) {
     margin-top: 80px;
   }
+
   @media (min-width: $breakpoint-l) {
     margin-top: 100px;
   }
@@ -11,34 +13,45 @@
 
   &--first {
     padding-top: 80px;
+
     @media (min-width: $breakpoint) {
       padding-top: 173px;
     }
+
     margin: 0;
   }
+
   &--md {
     margin-top: 20px;
+
     @media (min-width: $breakpoint) {
       margin-top: 50px;
     }
   }
+
   &--l {
     margin-top: 40px;
+
     @media (min-width: $breakpoint) {
       margin-top: 80px;
     }
   }
+
   &--xl {
     margin-top: 87px;
+
     @media (min-width: $breakpoint-m) {
       margin-top: 121px;
     }
+
     @media (min-width: $breakpoint) {
       margin-top: 186px;
     }
   }
+
   &--xxl {
     margin-top: 110px;
+
     @media (min-width: $breakpoint) {
       margin-top: 100px;
     }
@@ -50,6 +63,7 @@
 
   &--panel {
     margin-top: 64px;
+
     @media (min-width: $breakpoint) {
       margin-top: 127px;
     }
@@ -57,6 +71,7 @@
 
   &__inner {
     margin-top: 20px;
+
     @media (min-width: $breakpoint) {
       margin-top: 50px;
     }
@@ -65,6 +80,7 @@
   &__row {
     @media (min-width: $breakpoint) {
       display: flex;
+      justify-content: space-between;
     }
   }
 
@@ -76,12 +92,13 @@
         width: calc(#{$col-part-d} * 7 - #{$col-gap-d});
       }
     }
+
     &:nth-child(2) {
       display: none;
+
       @media (min-width: $breakpoint) {
         display: block;
-        padding-left: calc(#{$col-part-d});
-        width: calc(#{$col-part-d} * 5);
+        width: calc(#{$col-part-d} * 4);
       }
     }
   }
@@ -92,6 +109,7 @@
       align-items: center;
     }
   }
+
   &__nav-item {
 
     &:not(:first-child) {
@@ -100,11 +118,13 @@
       }
     }
   }
+
   &__nav-label {
     text-transform: uppercase;
     color: $color-gray;
     font-weight: 500;
     @include fsl(16px);
+
     @media (min-width: $breakpoint) {
       @include fsl(20px);
     }
