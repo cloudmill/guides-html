@@ -13,6 +13,7 @@ import flatpickr from "flatpickr";
           dateFormat: "d.m.Y",
           monthSelectorType: 'static',
           position: "below left",
+          disableMobile: "true",
         })
       })
     }
