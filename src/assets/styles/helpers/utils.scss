@@ -1,4 +1,10 @@
 .align-end {
   display: flex;
   align-items: flex-end;
+
+  &--table {
+    @media (max-width: $breakpoint-m - 1px) {
+      display: block;
+    }
+  }
 }

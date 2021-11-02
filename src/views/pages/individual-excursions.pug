@@ -97,20 +97,19 @@ block content
                   .calculator__top-item(data-aos='fade-up')  
                     .calculator__label
                       |Date
-                    .calculator__text
-                      |28.10.2021
-                  .calculator__top-item(data-aos='fade-up')  
-                    .calculator__label
-                      |Time
-                    .calculator__text
-                      |11:00
-                .calculator__top-col
+                    .calculator__data
+                      .data-picker.data-picker--small
+                        label.data-picker__label
+                          .data-picker__icon 
+                            +calendar-svg.data-picker__svg
+                          input.data-picker__input(type="text" placeholder='28.10.2021')
+                .calculator__top-col.align-end.align-end--table
                   .calculator__select(data-aos='fade-up')  
                     .select-wrapper
                       .select.select--small
                         select.select__mobile(name="location-mob")
                           option(value="" disabled selected)
-                            |Location
+                            |Language
                           each item in data.selectValues.language
                             option(value = item.value)
                               |#{item.value}
