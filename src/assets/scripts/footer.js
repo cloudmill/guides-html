@@ -28,7 +28,6 @@ $(window).on('load', function() {
     })()
 
     function scrollHandler() {
-      // const scrollBottom = this.pageYOffset + $(window).height() 
       const scrollBottom = window.pageYOffset + $(window).height() 
       const mainHeight = $('.main').innerHeight()
       const footerHeight = $('.footer').innerHeight()
@@ -44,10 +43,6 @@ $(window).on('load', function() {
     
 
     window.addEventListener('resize', handeResize)
-    // if (!$('.contacts-page').length) { // ?
-      window.addEventListener('scroll', scrollHandler)
-    // } else {
-    //   $('.footer__overlay').css('opacity', '0');
-    // }
+    window.addEventListener('scroll', scrollHandler)
   }
 })

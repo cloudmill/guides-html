@@ -9,10 +9,15 @@
   background: $color-light-blue;
 
   &__overlay {
-    @include cover;
+    display: none;
+    @media (min-width: $breakpoint) {
+      @include cover;
 
-    background: $color-black;
-    pointer-events: none;
+      display: block;
+      
+      background: $color-black;
+      pointer-events: none;
+    }
   }
 
   &__inner {
