@@ -418,10 +418,13 @@
     position: absolute;
     display: none;
     @media (min-width: $breakpoint) {
+      top: 15px;
+      right: 20px;
       display: block;
+    }
+    @media (min-width: $breakpoint-ll) {
       top: 58px;
       right: calc(#{$col-width-d});
-      
     }
     
     &--mobile {
