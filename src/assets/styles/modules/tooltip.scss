@@ -6,12 +6,8 @@
   &__icon {
     position: absolute;
     bottom: 100%;
-    // bottom: calc(20px + 15px);
     left: 100%;
     transform: translateY(50%);
-    @media (min-width: $breakpoint) {
-      left: calc(100% - 3px);
-    }
 
     display: flex;
     align-items: center;
