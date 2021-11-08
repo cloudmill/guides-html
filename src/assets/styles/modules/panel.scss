@@ -110,7 +110,7 @@
   }
 
   &__select {
-    width: 100%;
+    width: calc(50% - 5px);
     @media (min-width: $breakpoint-m) {
       flex-shrink: 0;
       width: calc(#{$col-part-m} + 10px);
@@ -120,6 +120,7 @@
     }
 
     &--land {
+      width: 100%;
       @media (min-width: $breakpoint-m) {
         flex-shrink: 0;
         width: 100%;
@@ -133,7 +134,7 @@
   &__date {
     margin-left: 10px;
     
-    width: 137px;
+    width: calc(50% - 5px);
     flex-shrink: 0;
     @media (min-width: $breakpoint-m) {
       flex-shrink: 1;

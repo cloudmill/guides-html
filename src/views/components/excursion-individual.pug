@@ -83,7 +83,7 @@ mixin calculator
             .calculator__top-item(data-aos='fade-up')  
               .calculator__label
                 |Date
-              .calculator__data  
+              .calculator__data.calculator__data--wide 
                 .data-picker.data-picker--small
                   label.data-picker__label
                     .data-picker__icon 
@@ -123,7 +123,35 @@ mixin calculator
         h4.calculator__title(data-aos='fade-up') 
           |Number of people
         .calculator__grid
-          each item in ['Adults', 'Students with ISIC', 'Children 6-16 years old', 'Children 0-6 years old',]
+          .calculator__item(data-aos='fade-up') 
+            .calculator__label 
+              |Adults
+          .calculator__item(data-aos='fade-up') 
+            .counter(data-max-count='5')
+              .counter__item.counter__item--minus(data-count-minus='')
+                +minus-svg.counter__svg.counter__minus
+              .counter__number 
+                |0
+              .counter__item.counter__item--plus(data-count-plus='')
+                +plus-svg.counter__svg.counter__plus
+          .calculator__item(data-aos='fade-up') 
+            .tooltip
+              .calculator__label 
+                |Students with ISIC
+                span.tooltip__span
+                  .tooltip__icon 
+                    +tooltip-svg.tooltip__svg
+                .tooltip__container 
+                  |Attention! In order to visit this tour, you need to apply for a temporary visa. Without a temporary visa, you will not be allowed out of the port.
+          .calculator__item(data-aos='fade-up') 
+            .counter(data-max-count='5')
+              .counter__item.counter__item--minus(data-count-minus='')
+                +minus-svg.counter__svg.counter__minus
+              .counter__number 
+                |0
+              .counter__item.counter__item--plus(data-count-plus='')
+                +plus-svg.counter__svg.counter__plus
+          each item in ['Children 6-16 years old', 'Children 0-6 years old',]
             .calculator__item(data-aos='fade-up') 
               .calculator__label 
                 |#{item}
@@ -204,12 +232,12 @@ mixin calculator
                         |#{item.value}
           .calculator__top-col(data-aos='fade-up') 
             .calculator__top-item 
-              .calculator__label
+              .calculator__label.calculator__label--big
                 |Number of people
               .calculator__num 
                 |7
             .calculator__top-item 
-              .calculator__label
+              .calculator__label.calculator__label--big
                 |Total amount
               .calculator__num 
                 |$1265

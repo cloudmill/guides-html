@@ -44,7 +44,10 @@
   }
 
   &__tabs {
-    margin-top: 60px;
+    margin-top: 20px;
+    @media (min-width: $breakpoint) {
+      margin-top: 60px;
+    }
 
     display: flex;
   }
@@ -251,7 +254,7 @@
     margin-top: 20px;
 
     display: none;
-    @media (min-width: $breakpoint) {
+    @media (min-width: $breakpoint-m) {
       display: flex;
     }
   }
