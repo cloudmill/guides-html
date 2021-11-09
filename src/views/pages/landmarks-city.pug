@@ -25,7 +25,7 @@ block content
                           .landmarks-page__city
                             |#{item}
                           .landmarks-page__icon 
-                            +plus-svg.landmarks-page__svg
+                            +big-plus-svg.landmarks-page__svg
                         .landmarks-page__dropdown(data-accordion-dropdown='' style=((i === 0) ? 'display: block' : ''))
                           ul.landmarks-page__dropdown-list
                             li.landmarks-page__dropdown-item
@@ -36,7 +36,7 @@ block content
                                 .landmarks-page__dropdown-text
                                   |Museums
                                 .landmarks-page__icon 
-                                  +plus-svg.landmarks-page__svg
+                                  +big-plus-svg.landmarks-page__svg
                               .landmarks-page__dropdown(data-accordion-dropdown='')
                                 ul.landmarks-page__dropdown-list
                                   each item in ['Pushkin', 'Peterhof', 'Pavlovsk', 'Kronshtadt', 'Gatchina']
@@ -52,7 +52,7 @@ block content
                                 .landmarks-page__dropdown-text
                                   |Suburbs
                                 .landmarks-page__icon 
-                                  +plus-svg.landmarks-page__svg
+                                  +big-plus-svg.landmarks-page__svg
                               .landmarks-page__dropdown(data-accordion-dropdown='')
                                 ul.landmarks-page__dropdown-list
                                   each item in ['Pushkin', 'Peterhof', 'Pavlovsk', 'Kronshtadt', 'Gatchina']
