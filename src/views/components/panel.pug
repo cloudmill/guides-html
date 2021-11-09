@@ -21,17 +21,30 @@ mixin panel
             .panel__select(class=(!attributes.cruise ? 'panel__select--land' : ''))
               .select-wrapper
                 .select
-                  select.select__mobile(name="location-mob")
-                    option(value="" disabled selected)
-                      |Location
-                    each item in data.selectValues.locations
-                      option(value = item.value)
-                        |#{item.value}
-                  select.select__select(name="location" style='width: 100%' data-select-placeholder='Location') 
-                    option
-                    each item in data.selectValues.locations
-                      option(value = item.value)
-                        |#{item.value} 
+                  if (attributes.select)
+                    select.select__mobile(name="panel-mob")
+                      option(value="" disabled selected)
+                        |#{attributes.select}
+                      each item in data.selectValues.locations
+                        option(value = item.value)
+                          |#{item.value}
+                    select.select__select(name="location" style='width: 100%' data-select-placeholder=attributes.select) 
+                      option
+                      each item in data.selectValues.locations
+                        option(value = item.value)
+                          |#{item.value}
+                  else
+                    select.select__mobile(name="location-mob")
+                      option(value="" disabled selected)
+                        |Location
+                      each item in data.selectValues.locations
+                        option(value = item.value)
+                          |#{item.value}
+                    select.select__select(name="location" style='width: 100%' data-select-placeholder='Location') 
+                      option
+                      each item in data.selectValues.locations
+                        option(value = item.value)
+                          |#{item.value} 
             if (attributes.cruise)
               .panel__date
                 .data-picker
@@ -45,4 +58,3 @@ mixin panel
             a.panel__button.animation(href="#" data-select-button='' class=(attributes.disabled ? 'disabled' : ''))
               span.animation__span 
                 |#{attributes.button}
-//- .excursion-btn__button--active

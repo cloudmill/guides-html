@@ -12,7 +12,7 @@ include  ../components/excursion-individual
 block content 
   .excursion-page
     section.section.section--panel(data-aos='fade-up')
-      +panel.panel--disabled(button = 'Change')
+      +panel.panel--disabled(button = 'Change' cruise=true select = 'Cruise Ship')
     section.section.section--md.section--desktop-visible
       .container
         .section__row
@@ -41,9 +41,9 @@ block content
                 +button.button--xxl(tag = 'div')
                   |Compare
             section.section 
-              +landmarks
+              +landmarks(button = true)
             section.section
-              +programm(label=true)
+              +programm(label = true tabs = true)
               .excursion-page__btn
                 .excursion-page__btn-col(data-aos='fade-up')
                   |Evening events are available
@@ -113,7 +113,7 @@ block content
                           each item in data.selectValues.language
                             option(value = item.value)
                               |#{item.value}
-                        select.select__select(name="location" style='width: 100%' data-select-placeholder='Location') 
+                        select.select__select(name="language" style='width: 100%' data-select-placeholder='Language') 
                           option
                           each item in data.selectValues.language
                             option(value = item.value)
@@ -121,7 +121,35 @@ block content
               h4.calculator__title(data-aos='fade-up') 
                 |Number of people
               .calculator__grid
-                each item in ['Adults', 'Students with ISIC', 'Children 6-16 years old', 'Children 0-6 years old',]
+                .calculator__item(data-aos='fade-up') 
+                  .calculator__label 
+                    |Adults
+                .calculator__item(data-aos='fade-up') 
+                  .counter(data-max-count='5')
+                    .counter__item.counter__item--minus(data-count-minus='')
+                      +minus-svg.counter__svg.counter__minus
+                    .counter__number 
+                      |0
+                    .counter__item.counter__item--plus(data-count-plus='')
+                      +plus-svg.counter__svg.counter__plus
+                .calculator__item(data-aos='fade-up') 
+                  .tooltip
+                    .calculator__label 
+                      |Students with ISIC
+                      span.tooltip__span
+                        .tooltip__icon 
+                          +tooltip-svg.tooltip__svg
+                      .tooltip__container 
+                        |Attention! In order to visit this tour, you need to apply for a temporary visa. Without a temporary visa, you will not be allowed out of the port.
+                .calculator__item(data-aos='fade-up') 
+                  .counter(data-max-count='5')
+                    .counter__item.counter__item--minus(data-count-minus='')
+                      +minus-svg.counter__svg.counter__minus
+                    .counter__number 
+                      |0
+                    .counter__item.counter__item--plus(data-count-plus='')
+                      +plus-svg.counter__svg.counter__plus
+                each item in ['Children 6-16 years old', 'Children 0-6 years old',]
                   .calculator__item(data-aos='fade-up') 
                     .calculator__label 
                       |#{item}
@@ -166,43 +194,72 @@ block content
             .calculator__desktop
               .calculator__top 
                 .calculator__top-col(data-aos='fade-up') 
-                  .calculator__top-item 
+                  .calculator__top-item
                     .calculator__label
                       |Date
-                    .calculator__data
-                      .data-picker.data-picker--small
-                        label.data-picker__label
-                          .data-picker__icon 
-                            +calendar-svg.data-picker__svg
-                          input.data-picker__input(type="text" placeholder='28.10.2021')
-                  .calculator__top-item 
-                    .select-wrapper
-                      .select.select--small
-                        select.select__select(name="location" style='width: 100%' data-select-placeholder='Language') 
-                          option
-                          each item in data.selectValues.language
-                            option(value = item.value)
-                              |#{item.value}
+                    .calculator__top-row
+                      .calculator__data
+                        .data-picker.data-picker--small
+                          label.data-picker__label
+                            .data-picker__icon 
+                              +calendar-svg.data-picker__svg
+                            input.data-picker__input(type="text" placeholder='28.10.2021')
+                      .calculator__top-item 
+                        .select-wrapper
+                          .select.select--small
+                            select.select__select(name="location" style='width: 100%' data-select-placeholder='Language') 
+                              option
+                              each item in data.selectValues.language
+                                option(value = item.value)
+                                  |#{item.value}
                 .calculator__top-col(data-aos='fade-up') 
                   .calculator__top-item 
-                    .calculator__label
+                    .calculator__label.calculator__label--big
                       |Number of people
                     .calculator__num 
                       |7
                   .calculator__top-item 
-                    .calculator__label
+                    .calculator__label.calculator__label--big
                       |Total amount
                     .calculator__num 
                       |To be discussed separately. #[br] The manager will contact you as soon as possible
               h4.calculator__title(data-aos='fade-up') 
                 |Number of people
               .calculator__grid 
-                each item in ['Adults', 'Students with ISIC', 'Children 6-16 years old', 'Children 0-6 years old',]
-                  .calculator__item(data-aos='fade-up')
+                .calculator__item(data-aos='fade-up') 
+                  .calculator__label 
+                    |Adults
+                .calculator__item(data-aos='fade-up') 
+                  .counter(data-max-count='5')
+                    .counter__item.counter__item--minus(data-count-minus='')
+                      +minus-svg.counter__svg.counter__minus
+                    .counter__number 
+                      |0
+                    .counter__item.counter__item--plus(data-count-plus='')
+                      +plus-svg.counter__svg.counter__plus
+                .calculator__item(data-aos='fade-up') 
+                  .tooltip
+                    .calculator__label 
+                      |Students with ISIC
+                      span.tooltip__span
+                        .tooltip__icon 
+                          +tooltip-svg.tooltip__svg
+                      .tooltip__container 
+                        |Attention! In order to visit this tour, you need to apply for a temporary visa. Without a temporary visa, you will not be allowed out of the port.
+                .calculator__item(data-aos='fade-up') 
+                  .counter(data-max-count='5')
+                    .counter__item.counter__item--minus(data-count-minus='')
+                      +minus-svg.counter__svg.counter__minus
+                    .counter__number 
+                      |0
+                    .counter__item.counter__item--plus(data-count-plus='')
+                      +plus-svg.counter__svg.counter__plus
+                each item in ['Children 6-16 years old', 'Children 0-6 years old',]
+                  .calculator__item(data-aos='fade-up') 
                     .calculator__label 
                       |#{item}
-                  .calculator__item(data-aos='fade-up')
-                    .counter(data-max-count='3')
+                  .calculator__item(data-aos='fade-up') 
+                    .counter(data-max-count='5')
                       .counter__item.counter__item--minus(data-count-minus='')
                         +minus-svg.counter__svg.counter__minus
                       .counter__number 
@@ -340,7 +397,7 @@ block content
         .excursion-page__slider 
           .excursion-page__slider-row(data-aos='fade-up') 
             .excursion-page__slider-col
-              h3.excursion-page__title
+              h2
                 |Similar tours
             .excursion-page__slider-col
               +slider-buttons(next = 1 prev = 2)

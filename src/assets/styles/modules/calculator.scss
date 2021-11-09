@@ -133,21 +133,6 @@
 
     #{$comp}__top-col {
 
-      &:nth-child(1) {
-        @media (min-width: $breakpoint) {
-          align-items: flex-end;
-        }
-
-        #{$comp}__top-item {
-
-          &:not(:first-child) {
-            @media (min-width: $breakpoint) {
-              margin-left: 30px;
-            }
-          }
-        }
-      }
-      
       &:nth-child(2) {
         @media (min-width: $breakpoint) {
           margin: 0 60px;
@@ -201,6 +186,9 @@
     @media (min-width: $breakpoint) {
       justify-content: flex-start;
     }
+  }
+  &__top-row {
+    display: flex;
   }
   &__top-col {
     flex-shrink: 0;
@@ -516,7 +504,9 @@
   }
 
   &__price {
-    margin-top: 20px;
+    @media (min-width: $breakpoint-m) {
+      margin-top: 20px;
+    }
     padding: 0 20px;
     margin-left: -20px;
 

@@ -105,17 +105,17 @@ mixin calculator
                       each item in data.selectValues.time
                         option(value = item.value)
                           |#{item.value} 
-          .calculator__top-col.align-end
+          .calculator__top-col.align-end.align-end--table
             .calculator__select(data-aos='fade-up')  
               .select-wrapper
                 .select.select--small
-                  select.select__mobile(name="location-mob")
+                  select.select__mobile(name="language-mob")
                     option(value="" disabled selected)
-                      |Location
+                      |Language
                     each item in data.selectValues.language
                       option(value = item.value)
                         |#{item.value}
-                  select.select__select(name="location" style='width: 100%' data-select-placeholder='Location') 
+                  select.select__select(name="language" style='width: 100%' data-select-placeholder='Language') 
                     option
                     each item in data.selectValues.language
                       option(value = item.value)
@@ -225,7 +225,7 @@ mixin calculator
             .calculator__select 
               .select-wrapper
                 .select.select--small
-                  select.select__select(name="location" style='width: 100%' data-select-placeholder='Location') 
+                  select.select__select(name="language" style='width: 100%' data-select-placeholder='Language') 
                     option
                     each item in data.selectValues.language
                       option(value = item.value)
