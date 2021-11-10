@@ -377,7 +377,7 @@ mixin calculator
         .calculator__payments-item 
           .calculator__payments-icon 
             +world-svg
-    .calculator__price 
+    .calculator__price(class=(attributes.events ? null : 'calculator__price--mt')) 
       .calculator__price-container
         .calculator__payments.calculator__payments--mobile
           .calculator__payments-title(data-aos='fade-up')  
@@ -475,7 +475,7 @@ mixin calculator-alt
             .calculator__num 
               |#{attributes.price}
           else 
-            .calculator__num 
+            .calculator__num
               |To be discussed separately. #[br] The manager will contact you as soon as possible.
     .calculator__payments
       .calculator__payments-title(data-aos='fade-up')  
@@ -519,7 +519,7 @@ mixin calculator-alt
                 .calculator__price-number   
                   |#{attributes.price}
               else 
-                .calculator__num  
+                .calculator__num.calculator__num--mb  
                   |To be discussed separately. #[br] The manager will contact you as soon as possible.
           .calculator__price-col(data-aos='fade-up')
             .button-icon.button-icon--calculator.animation

@@ -144,6 +144,50 @@
         }
       }
     }
+
+    #{$comp}__price-col {
+
+      &:nth-child(1) {
+        @media (max-width: $breakpoint - 1px) {
+          width: 100%;
+        }
+        @media (max-width: $breakpoint-m - 1px) {
+          flex-wrap: wrap;
+        }
+        #{$comp}__price-item {
+          &:nth-child(1) {
+            @media (max-width: $breakpoint - 1px) {
+              width: auto;
+            }
+            @media (max-width: $breakpoint-m - 1px) {
+              width: 100%;
+            }
+          }
+          &:nth-child(2) {
+            @media (max-width: $breakpoint - 1px) {
+              order: -1;
+              width: calc(#{$col-part-m});
+              flex-shrink: 0;
+            }
+            @media (max-width: $breakpoint-m - 1px) {
+              width: 100%;
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+      &:nth-child(2) {
+        @media (max-width: $breakpoint - 1px) {
+          width: auto;
+        }
+      }
+
+      #{$comp}__price-title {
+        @media (max-width: $breakpoint - 1px) {
+          max-width: none;
+        }
+      }
+    }
   }
 
   &__container {
@@ -418,8 +462,13 @@
     @media (min-width: $breakpoint) {
       max-width: 303px;
     }
-    
     font-weight: 500;
+
+    &--mb {
+      @media (max-width: $breakpoint - 1px) {
+        margin-top: 10px;
+      }
+    }
   }
 
   &__text {
@@ -450,10 +499,6 @@
     &--mobile {
       left: 0;
       bottom: 20px;
-      @media (min-width: $breakpoint-m) {
-        left: 20px;
-        bottom: 37px;
-      }
       
       display: block;
       @media (min-width: $breakpoint) {
@@ -521,12 +566,18 @@
     @media (min-width: $breakpoint) {
       border-radius: 14px;
     }
+
+    &--mt {
+      @media (max-width: $breakpoint-m - 1px) {
+        margin-top: 20px;
+      }
+    }
   }
   &__price-container {
     position: relative;
     padding: 20px 0 108px;
     @media (min-width: $breakpoint-m) {
-      padding: 20px 20px 35px;
+      padding: 20px 20px 20px 0;
     }
     @media (min-width: $breakpoint) {
       padding: 34px 40px 24px;
@@ -625,6 +676,10 @@
     font-weight: 500;
   }
   &__price-title {
+    @media (max-width: $breakpoint - 1px) {
+      margin-top: 10px;
+    }
+
     max-width: 418px;
     font-weight: 500;
   }
