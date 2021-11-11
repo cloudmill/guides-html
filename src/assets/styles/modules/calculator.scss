@@ -127,6 +127,30 @@
         ;
       }
     }
+
+    #{$comp}__price {
+      @media (max-width: $breakpoint-m - 1px) {
+        margin-top: 20px;
+      }
+    }
+    #{$comp}__price-col {
+      &:nth-child(1) {
+        @media (max-width: $breakpoint-m - 1px) {
+          flex-wrap: wrap;
+        }
+      }
+    }
+    #{$comp}__price-left {
+      @media (max-width: $breakpoint-m - 1px) {
+        width: 100%;
+      }
+    }
+    #{$comp}__price-right {
+      @media (max-width: $breakpoint-m - 1px) {
+        margin-top: 20px;
+        width: 100%;
+      }
+    }
   }
 
   &--individ {

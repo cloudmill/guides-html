@@ -23,6 +23,12 @@
     @media (min-width: $breakpoint) {
       padding: 20px 80px 60px 20px;
     }
+
+    @media (min-width: $breakpoint) {
+      max-height: 584px;
+      overflow-x: scroll;
+      @include scrollbar-hidden;
+    }
   }
 
   &__row {

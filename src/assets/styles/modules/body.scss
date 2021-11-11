@@ -3,4 +3,8 @@
   &--overflow {
     overflow: hidden;
   }
+
+  &.fancybox-active {
+    overflow: hidden;
+  }
 }

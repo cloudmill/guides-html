@@ -24,9 +24,9 @@
     bottom: -1px;
     z-index: 1;
 
-    width: 135px;
+    width: 115px;
     @media (min-width: $breakpoint-m) {
-      width: 187px;
+      width: 227px;
     }
 
     @media (min-width: $breakpoint) {
@@ -60,17 +60,14 @@
     flex-shrink: 0;
     
     &:nth-child(1) {
-      padding-right: calc(#{$col-gap-m});
-      @media (min-width: $breakpoint-m) {
-        padding-right: calc(#{$col-gap-d});
-      }
+      margin-right: calc(#{$col-gap-d});
 
-      width: 155px;
+      width: 115px;
       @media (min-width: $breakpoint-m) {
         width: 227px;
       }
       @media (min-width: $breakpoint) {
-        width: calc(#{$col-part-d} * 2);
+        width: calc(#{$col-part-d} * 2) - #{$col-gap-d};
       }
     }
     &:nth-child(2) {
@@ -95,10 +92,6 @@
   }
 
   &__grid {
-    // margin-top: 10px;
-    // @media (min-width: $breakpoint-m) {
-    //   margin-top: 20px;
-    // }
     @media (max-width: $breakpoint - 1px) {
       padding-right: 20px;
       width: calc(100% + 20px);
@@ -118,7 +111,6 @@
     }
 
     display: flex;
-    // ali
   }
 
   &__item {
@@ -132,38 +124,28 @@
   }
 
   &__cell {
-    width: 150px;
+    width: 114px;
     @media (min-width: $breakpoint-m) {
       width: 174px;
     }
     @media (min-width: $breakpoint) {
-      width: calc(#{$col-part-d} * 2);
+      width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
     }
 
-    &:last-child {
-      @media (min-width: $breakpoint) {
-        width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
-      }
+    &:not(:last-child) {
+      margin-right: calc(#{$col-gap-d});
     }
     &:first-child {
       @media (max-width: $breakpoint - 1px) {
         width: 227px;
       }
       @media (max-width: $breakpoint-m - 1px) {
-        margin-right: 20px;
-        width: 135px;
+        width: 115px;
       }
     }
   }
 
   &__title {
-    @media (max-width: $breakpoint - 1px) {
-      padding-right: 54px;
-    }
-    @media (max-width: $breakpoint-m - 1px) {
-      padding-right: 36px;
-    }
-
     font-weight: 500;
     @include fsl(20px);
   }
