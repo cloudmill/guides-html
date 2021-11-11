@@ -599,6 +599,7 @@
       width: auto;
     }
     display: flex;
+    justify-content: space-between;
 
     &:nth-child(1) {
       @media (min-width: $breakpoint-m) {
@@ -644,13 +645,13 @@
     }
   }
   &__price-left {
-    width: 50%;
+    width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
     @media (min-width: $breakpoint) {
       width: auto;
     }
   }
   &__price-right {
-    width: 50%;
+    width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
     @media (min-width: $breakpoint) {
       margin-left: 66px;
       width: auto;

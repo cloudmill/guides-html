@@ -86,6 +86,14 @@
     align-items: center;
   }
 
+  &__svg {
+    $size-t: 24px;
+    @media (max-width: $breakpoint - 1px) {
+      width: $size-t;
+      height: $size-t;
+    }
+  }
+
   &__ball {
     $size-d: 178px;
     $size-t: 127px;

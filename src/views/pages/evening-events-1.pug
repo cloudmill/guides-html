@@ -38,9 +38,9 @@ block content
             .excursion-page__mobile  
               h1(data-aos='fade-up')
                 |Folk show
-              .sticky(data-sticky-for='1279')
-                .sticky__inner 
-                  .sticky__grid
+              .sticky
+                .sticky__inner.sticky__inner--small 
+                  .sticky__grid.sticky__grid--area-auto
                     each item in ddata
                       .sticky__item(data-aos='fade-up')
                         .sticky__label 
@@ -54,7 +54,7 @@ block content
                         |3 hours
                 .sticky__inner(data-aos='fade-up') 
                   .sticky__price 
-                    |from #[span.sticky__price-discont $159] #[span.sticky__price-price $129] / person
+                    |#[span.sticky__price-price $129] / person
             section.section 
               +about
           .section__col

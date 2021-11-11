@@ -8,6 +8,17 @@ include  ../components/slider-buttons
 include  ../components/excursion-individual
 
 block content
+  -
+    var ddata = [
+      {
+        label: 'city',
+        text: 'Saint Petersburg'
+      },
+      {
+        label: 'Suburb',
+        text: 'Pushkin'
+      },
+    ]
   .excursion-page
     section.section.section--first.section--desktop-visible
       .container
@@ -21,16 +32,32 @@ block content
                       |Home
                   li.breadcrumb__item 
                     a.breadcrumb__link(href="#") 
-                      |For hotel guests
+                      |Landmarks
+                  li.breadcrumb__item 
+                    a.breadcrumb__link(href="#")
+                      |Cathedrals and Monasteries of St. Petersburg
                   li.breadcrumb__item.breadcrumb__item--active 
                     a.breadcrumb__link(href="#")
-                      |Walking tour of St. Petersburg
+                      |Peter and Paul Fortress
             .excursion-page__thumb-slider(data-aos='fade-up')
               +thumb-slider
             .excursion-page__mobile  
               h1(data-aos='fade-up') 
-                |Walking tour of St. Petersburg
-              +sticky-mobile(data = data.landSticky)
+                |Peter and Paul Fortress
+              .sticky
+                .sticky__inner.sticky__inner--small
+                  .sticky__grid.sticky__grid--area-auto
+                    each item in ddata
+                      .sticky__item(data-aos='fade-up') 
+                        .sticky__label 
+                          |#{item.label}
+                        .sticky__text 
+                          |#{item.text}
+                    .sticky__item(data-aos='fade-up')
+                      .sticky__label 
+                        |landmark type
+                      .sticky__text 
+                        |Cathedrals and monasteries
             section.section 
               +about
           .section__col
@@ -38,23 +65,18 @@ block content
               +navigation(items=['Landmarks', 'Cathedrals and Monasteries of St. Petersburg'] page="Peter and Paul Fortress")
               .sticky__inner 
                 .sticky__grid
-                  -
-                    var ddata = [
-                      {
-                        label: 'city',
-                        text: 'Saint Petersburg'
-                      },
-                      {
-                        label: 'landmark type',
-                        text: 'Cathedrals and monasteries'
-                      },
-                    ]
                   each item in ddata
                     .sticky__item(data-aos='fade-up') 
                       .sticky__label 
                         |#{item.label}
                       .sticky__text 
                         |#{item.text}
+              .sticky__inner 
+                .sticky__item(data-aos='fade-up') 
+                  .sticky__label 
+                    |landmark type
+                  .sticky__text 
+                    |Cathedrals and monasteries
     section.section 
       .container 
         .excursion-page__slider 

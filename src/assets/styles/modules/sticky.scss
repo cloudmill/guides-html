@@ -19,6 +19,12 @@
     @media (min-width: $breakpoint) {
       margin-top: 50px;
     }
+
+    &--small {
+      @media (max-width: $breakpoint - 1px) {
+        margin-top: 20px;
+      }
+    }
   }
 
   &__grid {
@@ -39,6 +45,10 @@
       column-gap: 0;
       grid-template-columns: calc(#{$col-part-d}) calc(#{$col-part-d} * 2) calc(#{$col-part-d});
       row-gap: 40px;
+    }
+
+    &--area-auto {
+      grid-template-areas: none;
     }
   } 
 
