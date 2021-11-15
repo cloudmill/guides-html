@@ -48,6 +48,21 @@
 
       &:nth-child(4) {
         margin: 0;
+        @media (min-width: $breakpoint-ll) {
+          margin-left: 30px;
+        }
+        @media (min-width: $breakpoint-xl) {
+          margin-left: 50px;
+        }
+      }
+
+      &:nth-child(5) {
+        @media (min-width: $breakpoint-ll) {
+          margin-left: 20px;
+        }
+        @media (min-width: $breakpoint-xl) {
+          margin-left: 38px;
+        }
       }
     }
 
@@ -60,6 +75,11 @@
       }
     }
 
+    #{$comp}__price {
+      @media (max-width: $breakpoint - 1px) {
+        margin-top: 40px;
+      }
+    }
     #{$comp}__price-col {
 
       &:nth-child(1) {
@@ -129,14 +149,19 @@
     }
 
     #{$comp}__price {
-      @media (max-width: $breakpoint-m - 1px) {
-        margin-top: 20px;
+      @media (max-width: $breakpoint - 1px) {
+        margin-top: 30px;
       }
     }
     #{$comp}__price-col {
       &:nth-child(1) {
         @media (max-width: $breakpoint-m - 1px) {
           flex-wrap: wrap;
+        }
+      }
+      &:nth-child(2) {
+        @media (max-width: $breakpoint - 1px) {
+          margin-top: 30px;
         }
       }
     }
@@ -458,6 +483,11 @@
     &--big {
       @media (min-width: $breakpoint) {
         margin-bottom: 20px;
+      }
+      &--tablet {
+        @media (min-width: $breakpoint-m) {
+          margin-bottom: 20px;
+        }
       }
     }
   }

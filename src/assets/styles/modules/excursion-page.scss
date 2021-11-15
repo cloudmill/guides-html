@@ -284,11 +284,18 @@
     @include fsl(16px, 160%);
   }
   &__about-dropdown {
-    margin: 40px 0;
+    margin-top: 40px;
+    @media (min-width: $breakpoint) {
+      margin: 40px 0;
+    }
 
     display: none;
   }
   &__about-btn {
+    @media (max-width: $breakpoint - 1px) {
+      margin-top: 20px;
+    }
+
     display: flex;
     justify-content: flex-start;
     @media (min-width: $breakpoint) {
