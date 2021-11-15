@@ -643,6 +643,7 @@
       contain: content;
       background: $color-black;
       transition: .3s;
+      will-change: transform;
     }
 
     &:nth-child(1) {
