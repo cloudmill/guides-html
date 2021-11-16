@@ -4,6 +4,7 @@ include ../components/reviews-card
 include ../components/guides-card
 include ../components/excursion-card 
 include ../components/slider-buttons
+include ../components/modals
 
 block header 
   +header(transparent = true)
@@ -197,3 +198,5 @@ block content
                 +media-twitter-svg.media-card__svg
               .media-card__label 
                 |Twitter
+  .modals 
+    +team-modal(id='1')

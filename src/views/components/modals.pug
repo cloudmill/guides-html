@@ -63,3 +63,40 @@ mixin faq-modal
         .form__response(data-response='1') 
           h3.form__response-message.form__response-message--md
             |Thank you! We have received your question and will respond soon.
+
+//- pages: about, main, our-guides
+mixin team-modal 
+  .team-modal(data-fancy-modal=attributes.id)
+    .team-modal__container 
+      .team-modal__row 
+        .team-modal__col(data-aos='fade-up') 
+          img.team-modal__img(src="assets/images/guide-1.jpg", alt="")
+        .team-modal__col
+          .team-modal__content 
+            h4
+              |Svetlana Polykova 
+            ul.team-modal__list
+              -
+                var ddata = [
+                  {
+                    label: 'Languages',
+                    text: 'English, Spanish, Portuguese'
+                  },
+                  {
+                    label: 'Specialization',
+                    text: 'Jewish excursions, excursions for families with children'
+                  },
+                  {
+                    label: 'Graduated from',
+                    text: 'St. Petersburg State Pedagogical University'
+                  },
+                ]
+              each item in ddata 
+                li.team-modal__item(data-aos='fade-up')  
+                  .team-modal__label 
+                    |#{item.label}
+                  .team-modal__caption
+                    |#{item.text}
+      .team-modal__bottom 
+        p.team-modal__text(data-aos='fade-up') 
+          |Hi! I'm Inna. I graduated from St. Petersburg State University where I majored in philology. I speak English and French. I also teach these languages at the same university. I love art and I'm very much interested in history. That's the main reason why I chose guiding as my second profession or I should rather say my favourite pastime. St. Petersburg is an amazing city, there is so much to see, to discover and experience here. It'll be my pleasure to help you do that!

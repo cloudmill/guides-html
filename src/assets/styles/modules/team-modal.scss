@@ -25,7 +25,7 @@
     }
 
     @media (min-width: $breakpoint) {
-      max-height: 584px;
+      max-height: 770px;
       overflow-x: scroll;
       @include scrollbar-hidden;
     }

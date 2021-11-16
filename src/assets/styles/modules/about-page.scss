@@ -7,6 +7,19 @@
     display: flex;
     align-items: center;
   }
+  &__hero-img {
+    display: none;
+    @media (min-width: $breakpoint) {
+      display: block;
+    }
+
+    &--mobile {
+      display: block;
+      @media (min-width: $breakpoint) {
+        display: none;
+      }
+    }
+  }
   &__hero-content {
     position: absolute;
     bottom: 0;

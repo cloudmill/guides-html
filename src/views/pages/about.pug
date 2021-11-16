@@ -4,6 +4,7 @@ include  ../components/navigation
 include ../components/reviews-card
 include ../components/guides-card
 include ../components/slider-buttons
+include ../components/modals
 
 block content 
   .about-page.main-page
@@ -14,6 +15,7 @@ block content
       .about-page__hero(data-aos='fade-up')
         .about-page__hero-container
           img.about-page__hero-img(src="assets/images/about-hero.jpg", alt="")
+          img.about-page__hero-img--mobile(src="assets/images/about-hero-mobile.jpg", alt="")
         .about-page__hero-content
           .about-page__hero-title 
             |Best Guides
@@ -153,3 +155,5 @@ block content
                         +properties-3-svg
                       .main-page__properties-text 
                         |We always get back to the ship on time
+  .modals 
+    +team-modal(id='1')
