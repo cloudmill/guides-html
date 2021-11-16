@@ -85,8 +85,10 @@
     }
     
     #{$comp}__search-input {
-      &:focus {
-        border-color: $color-white;
+      @media (min-width: $breakpoint) {
+        &:focus {
+          border-color: $color-white;
+        }
       }
     }
     #{$comp}__search-icon {

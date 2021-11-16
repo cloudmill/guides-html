@@ -5,6 +5,9 @@
     position: -webkit-sticky;
     top: 179px;
   }
+  @media (min-width: $breakpoint) and (max-height: $breakpoint-book - 1px) {
+    top: 145px;
+  }
 
   &--width {
     max-width: calc(#{$col-part-d} * 4);
@@ -18,6 +21,9 @@
     margin-top: 40px;
     @media (min-width: $breakpoint) {
       margin-top: 50px;
+    }
+    @media (min-width: $breakpoint) and (max-height: $breakpoint-book - 1px) {
+      margin-top: 30px;
     }
 
     &--small {

@@ -61,7 +61,7 @@
     $('.header').toggleClass(modalName)
     
     if (buttonId === 'search') {
-      searchInput.attr('autofocus', 'autofocus')
+      searchInput.focus()
     }
 
     if (!(buttonId === 'search')) {
@@ -75,7 +75,6 @@
     if (!target.closest('.header__modals').length && !target.closest(button).length) {
       $('.header').removeClass(modalName)
       $('.body').removeClass('body--overflow')
-      searchInput.removeAttr('autofocus')
     }
   });
 }

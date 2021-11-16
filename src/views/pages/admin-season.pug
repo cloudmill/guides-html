@@ -51,7 +51,7 @@ block content
               .admin__block 
                 - for (i = 0; i < 12; i++)
                   .admin__block-item.admin__mid 
-                    +input(type='text' name='text' placeholder='стоимость')
+                    +input.form__input--small(type='text' name='text' placeholder='стоимость')
             .admin__inner 
               .admin__block
                 .admin__text.admin__text--end.admin__ll
@@ -59,7 +59,7 @@ block content
               .admin__block 
                 - for (i = 0; i < 12; i++)
                   .admin__block-item.admin__mid 
-                    +input(type='text' name='text' placeholder='стоимость')
+                    +input.form__input--small(type='text' name='text' placeholder='стоимость')
             each item in ['Русский наценка', 'Французский наценка', 'Английский наценка', 'Итальянский наценка', 'Немецкий наценка', 'Шведский наценка', 'Цена на человека для расчета УШМИН']
               .admin__inner 
                 .admin__block
@@ -67,7 +67,7 @@ block content
                     |#{item}
                 .admin__block 
                   .admin__block-item.admin__mid 
-                    +input(type='text' name='text' placeholder='стоимость')
+                    +input.form__input--small(type='text' name='text' placeholder='стоимость')
         .admin__section 
           .admin__large 
             button.button.button--xxl(type='submit')

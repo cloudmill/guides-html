@@ -57,6 +57,13 @@
     &:focus {
       border-color: $color-blue;
     }
+
+    &--small {
+      font-size: 12px;
+      // @include placeholder {
+      //   font-size: 14px;
+      // }
+    }
   }
 
   &__textarea {
