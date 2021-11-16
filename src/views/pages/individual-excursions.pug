@@ -191,7 +191,7 @@ block content
                         |Total amount
                       .calculator__num 
                         |$1300
-            .calculator__desktop
+            .calculator__desktop.select-wrapper
               .calculator__top 
                 .calculator__top-col(data-aos='fade-up') 
                   .calculator__top-item
@@ -205,13 +205,12 @@ block content
                               +calendar-svg.data-picker__svg
                             input.data-picker__input(type="text" placeholder='28.10.2021')
                       .calculator__top-item 
-                        .select-wrapper
-                          .select.select--small
-                            select.select__select(name="location" style='width: 100%' data-select-placeholder='Language') 
-                              option
-                              each item in data.selectValues.language
-                                option(value = item.value)
-                                  |#{item.value}
+                        .select.select--small
+                          select.select__select(name="location" style='width: 100%' data-select-placeholder='Language') 
+                            option
+                            each item in data.selectValues.language
+                              option(value = item.value)
+                                |#{item.value}
                 .calculator__top-col(data-aos='fade-up') 
                   .calculator__top-item 
                     .calculator__label.calculator__label--big

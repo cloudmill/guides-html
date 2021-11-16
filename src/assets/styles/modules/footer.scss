@@ -178,6 +178,12 @@
       column-gap: 40px;
       align-items: center;
     }
+    @media (min-width: $breakpoint-xl) {
+      grid-template-areas: 
+        "B B C C A A E D"
+      ;
+      grid-template-columns : repeat(8, 1fr);
+    }
   }
 
   &__social {
@@ -221,8 +227,11 @@
   &__award {
     grid-area: D;
     @media (min-width: $breakpoint) {
-      grid-area: none;
       display: none;
+    }
+    @media (min-width: $breakpoint-xl) {
+      display: block;
+      justify-self: end;
     }
     @include fsl(15px);
     transition: color $transition;
@@ -236,6 +245,9 @@
     grid-area: E;
     @media (min-width: $breakpoint) {
       justify-self: end;
+    }
+    @media (min-width: $breakpoint-xl) {
+      justify-self: start;
     }
 
     @include fsl(15px);

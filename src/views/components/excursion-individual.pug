@@ -79,7 +79,7 @@ mixin calculator
         |Calculate the cost
       .calculator__mobile 
         .calculator__top 
-          .calculator__top-col.align-end
+          .calculator__top-col.align-end.select-wrapper
             .calculator__top-item(data-aos='fade-up')  
               .calculator__label
                 |Date
@@ -93,33 +93,31 @@ mixin calculator
               .calculator__label
                 |Time
               .calculator__select
-                .select-wrapper
-                  .select.select--small
-                    select.select__mobile(name="location-mob")
-                      option(value="" disabled selected)
-                        |Location
-                      each item in data.selectValues.language
-                        option(value = item.value)
-                          |#{item.value}
-                    select.select__select(name="location" style='width: 100%') 
-                      each item in data.selectValues.time
-                        option(value = item.value)
-                          |#{item.value} 
-          .calculator__top-col.align-end.align-end--table
-            .calculator__select(data-aos='fade-up')  
-              .select-wrapper
                 .select.select--small
-                  select.select__mobile(name="language-mob")
+                  select.select__mobile(name="location-mob")
                     option(value="" disabled selected)
-                      |Language
+                      |Location
                     each item in data.selectValues.language
                       option(value = item.value)
                         |#{item.value}
-                  select.select__select(name="language" style='width: 100%' data-select-placeholder='Language') 
-                    option
-                    each item in data.selectValues.language
+                  select.select__select(name="location" style='width: 100%') 
+                    each item in data.selectValues.time
                       option(value = item.value)
                         |#{item.value} 
+          .calculator__top-col.align-end.align-end--table.select-wrapper
+            .calculator__select(data-aos='fade-up')  
+              .select.select--small
+                select.select__mobile(name="language-mob")
+                  option(value="" disabled selected)
+                    |Language
+                  each item in data.selectValues.language
+                    option(value = item.value)
+                      |#{item.value}
+                select.select__select(name="language" style='width: 100%' data-select-placeholder='Language') 
+                  option
+                  each item in data.selectValues.language
+                    option(value = item.value)
+                      |#{item.value} 
         h4.calculator__title(data-aos='fade-up') 
           |Number of people
         .calculator__grid
@@ -195,7 +193,7 @@ mixin calculator
                   |$1300
       .calculator__desktop
         .calculator__top 
-          .calculator__top-col.align-end(data-aos='fade-up') 
+          .calculator__top-col.align-end.select-wrapper(data-aos='fade-up') 
             .calculator__top-item 
               .calculator__label
                 |Date
@@ -209,27 +207,25 @@ mixin calculator
               .calculator__label
                 |Time
               .calculator__select
-                .select-wrapper
-                  .select.select--small
-                    select.select__mobile(name="location-mob")
-                      option(value="" disabled selected)
-                        |Location
-                      each item in data.selectValues.language
-                        option(value = item.value)
-                          |#{item.value}
-                    select.select__select(name="location" style='width: 100%') 
-                      each item in data.selectValues.time
-                        option(value = item.value)
-                          |#{item.value} 
-          .calculator__top-col.align-end(data-aos='fade-up') 
-            .calculator__select 
-              .select-wrapper
                 .select.select--small
-                  select.select__select(name="language" style='width: 100%' data-select-placeholder='Language') 
-                    option
+                  select.select__mobile(name="location-mob")
+                    option(value="" disabled selected)
+                      |Location
                     each item in data.selectValues.language
                       option(value = item.value)
                         |#{item.value}
+                  select.select__select(name="location" style='width: 100%') 
+                    each item in data.selectValues.time
+                      option(value = item.value)
+                        |#{item.value} 
+          .calculator__top-col.align-end.select-wrapper(data-aos='fade-up') 
+            .calculator__select 
+              .select.select--small
+                select.select__select(name="language" style='width: 100%' data-select-placeholder='Language') 
+                  option
+                  each item in data.selectValues.language
+                    option(value = item.value)
+                      |#{item.value}
           .calculator__top-col(data-aos='fade-up') 
             .calculator__top-item 
               .calculator__label.calculator__label--big

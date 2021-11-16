@@ -52,12 +52,17 @@
 {
   const button = $('[data-modal-button]')
   let modalName
+  const searchInput = $('.header__mobile').find('.header__search-input')
 
   button.on('click', function() {
     const buttonId = $(this).data('modal-button')
     modalName = 'header--' + buttonId
 
     $('.header').toggleClass(modalName)
+    
+    if (buttonId === 'search') {
+      searchInput.attr('autofocus', 'autofocus')
+    }
 
     if (!(buttonId === 'search')) {
       $('.body').toggleClass('body--overflow')
@@ -70,6 +75,7 @@
     if (!target.closest('.header__modals').length && !target.closest(button).length) {
       $('.header').removeClass(modalName)
       $('.body').removeClass('body--overflow')
+      searchInput.removeAttr('autofocus')
     }
   });
 }
