@@ -11,9 +11,9 @@ $(() => {
         target.closest(accordion).toggleClass('active');
         target.closest(accordion).find('[data-accordion-dropdown]').eq(0).slideToggle()
 
-        if ($('.aside').length && !(mediaQuery.matches)) {
+        // if ($('.aside').length && !(mediaQuery.matches)) {
           window.dispatchEvent(new CustomEvent('accordion-toggle'));
-        }
+        // }
       }
     })
   }

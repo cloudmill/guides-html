@@ -17,17 +17,15 @@ export class Counter {
     window.addEventListener('click', e => {
       const target = e.target.closest('.counter__item')
 
-      if (target) {
-        switch (target) {
-          case this.minus:
-            this.number.textContent = +this.number.textContent - 1
-            break;
-          case this.plus: 
-            this.number.textContent = +this.number.textContent + 1
-            break;
-        }
-        this.setDisabled()
+      if (target === this.minus) {
+        this.number.textContent = +this.number.textContent - 1
       }
+
+      if (target === this.plus) {
+        this.number.textContent = +this.number.textContent + 1
+      }
+      
+      this.setDisabled()
     })
   }
 
