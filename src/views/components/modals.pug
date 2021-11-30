@@ -30,12 +30,12 @@ mixin modal
       h3.modal__title 
         |Excursion added to cart
       .modal__btns 
-        .modal__item.modal__item--active
-          +button.button--xxl(tag='div')
-            |To cart
         .modal__item
           +button.button--xxl(tag='div')
             |Continue purchase
+        .modal__item.modal__item--active
+          +button.button--xxl(tag='div')
+            |To cart
       
 //- Модалка с вопросом
 mixin faq-modal 

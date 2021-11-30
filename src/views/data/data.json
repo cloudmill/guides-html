@@ -21,6 +21,10 @@
       "href": "cruise-excursions-individual"
     },
     {
+      "page": "Групповая экскурсия",
+      "href": "group-excursion"
+    },
+    {
       "page": "Экскурсии под запрос",
       "href": "individual-excursions"
     },

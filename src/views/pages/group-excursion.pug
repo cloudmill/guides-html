@@ -1,0 +1,133 @@
+extends ../layouts/master.pug
+
+include  ../components/panel
+include  ../components/navigation
+include  ../components/thumb-slider
+include  ../components/price
+include  ../components/sticky
+include  ../components/slider-buttons
+include  ../components/form-components
+include  ../components/excursion-card 
+include  ../components/excursion-individual
+include  ../components/modals
+
+block content 
+  .excursion-page
+    section.section.section--panel 
+      +panel.panel--disabled(cruise=true button = 'Change')
+    section.section.section--md.section--desktop-visible
+      .container
+        .section__row
+          .section__col
+            .excursion-page__breadcrumbs 
+              .breadcrumb(data-aos='fade-up')
+                ul.breadcrumb__list 
+                  li.breadcrumb__item 
+                    a.breadcrumb__link(href="#") 
+                      |Home
+                  li.breadcrumb__item 
+                    a.breadcrumb__link(href="#") 
+                      |Shore excursions
+                  li.breadcrumb__item.breadcrumb__item--active 
+                    a.breadcrumb__link(href="#")
+                      |Relax tour
+            .excursion-page__thumb-slider(data-aos='fade-up')
+              +thumb-slider
+            .excursion-page__mobile  
+              h1(data-aos='fade-up') 
+                |Relax tour
+              +sticky-mobile(activity = true)
+            .excursion-page__price 
+              +price
+              .excursion-page__price-btn(data-aos='fade-up')
+                +button.button--xxl(tag = 'a' href="#")
+                  |Compare
+            section.section 
+              +landmarks(button = true)
+            section.section
+              +programm(tabs = true)
+              .excursion-page__btn
+                .excursion-page__btn-col(data-aos='fade-up')
+                  |Evening events are available
+                .excursion-page__btn-col(data-aos='fade-up')
+                  a.button.button--xl.animation(href='#' data-scroll='#events')
+                    span.animation__span 
+                      |View
+          .section__col 
+            .sticky
+              +navigation(items=['Shore excursions'] page="Relax tour")
+              .sticky__category(data-aos='fade-up') 
+                .category
+                  each item in ['Individual', 'First choice', '-20% off']
+                    .category__item
+                      |#{item}
+              .sticky__inner 
+                .sticky__grid
+                  each item in data.cruiseSticky.first
+                    .sticky__item(data-aos='fade-up') 
+                      .sticky__label 
+                        |#{item.label}
+                      .sticky__text 
+                        |#{item.text}
+                  .sticky__item(data-aos='fade-up') 
+                    .sticky__label 
+                      |activity
+                    ul.sticky__dots
+                      - for (i = 0; i < 5; i++)
+                        li.sticky__dot(class=((i < 3) ? 'sticky__dot--active' : ''))
+                  each item in data.cruiseSticky.second
+                    .sticky__item(data-aos='fade-up') 
+                      .sticky__label 
+                        |#{item.label}
+                      .sticky__text 
+                        |#{item.text}
+              .sticky__inner(data-aos='fade-up') 
+                .sticky__price 
+                  |from #[span.sticky__price-discont $159] #[span.sticky__price-price $129] / person
+              .sticky__button(data-aos='fade-up') 
+                a.button.button--sticky.animation(href="#" data-scroll='#calculator') 
+                  span.animation__span 
+                    |Arrange a tour
+    section.section#calculator
+      .container
+        +calculator(events=true)
+    section.section 
+      .container 
+        .excursion-page__slider 
+          .excursion-page__slider-row(data-aos='fade-up') 
+            .excursion-page__slider-col
+              h2
+                |Similar tours
+            .excursion-page__slider-col
+              +slider-buttons(next = 1 prev = 2)
+          .swiper-container.swiper-container--slide-width-auto.swiper-container--visible.swiper-container--slide-height-max(data-slider-id='1' data-slider-next='1' data-slider-prev='2' data-aos='fade-up')
+            .swiper-wrapper
+              each item in data.mainSellers 
+                .swiper-slide 
+                  +excursion-card(tag='div' title = item.title src = item.src cruise=true body = 'a' bodyHref='#')
+  .modals 
+    .modal(data-fancy-modal='2')
+      .modal__container
+        .event-modal
+          .event-modal__item 
+            h3 
+              |Russian Ballet
+          .event-modal__item 
+            .event-modal__row 
+              .event-modal__col
+                .event-modal__label
+                  |Duration
+                .event-modal__caption
+                  |4 hours
+              .event-modal__col
+                .event-modal__label
+                  |type
+                .event-modal__caption
+                  |Group
+          .event-modal__item 
+            +price.price--modal
+          .event-modal__item 
+            p.event-modal__text
+              |Russian ballet is primarily a classical ballet that preserves the traditions of the 19th century. This does not mean that we do not have a modern ballet, we have one, and it is a very good modern ballet (for example, the Boris Eifman troupe). But it is classical ballet that is truly unique, because nowhere else in the world is it raised to such a high level.
+    +form-modal(id = '11')
+    +modal(id = '4')

@@ -51,6 +51,12 @@
         background: $color-blue;
         border-color: $color-blue;
       }
+
+      &:hover {
+        .button {
+          border-color: $color-brown;
+        }
+      }
     }
   }
 }
