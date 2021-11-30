@@ -246,7 +246,7 @@
 									<div class="panel__row">
 										<div class="panel__col">
 											<div class="excursion-btn">
-												<div class="panel__item"><a class="excursion-btn__button" href="#">
+												<div class="panel__item"><a class="excursion-btn__button excursion-btn__button--active" href="#">
 														<div class="excursion-btn__icon"><svg class="excursion-btn__cruise" width="29" height="19" viewbox="0 0 29 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path d="M1.31647 11.2413C1.12934 10.4558 1.72495 9.70166 2.53244 9.70166H23.2145C24.4018 9.70166 24.9203 11.2015 23.9865 11.9348L17.1669 17.2896C16.9467 17.4625 16.6749 17.5565 16.395 17.5565H3.80815C3.22939 17.5565 2.72631 17.1592 2.59219 16.5962L1.31647 11.2413Z" stroke="#5DD7FF" stroke-width="1.5"></path>
 																<path d="M21.5161 9.8872L19.5296 6.62514C19.3481 6.32713 19.0245 6.14526 18.6755 6.14526H6.58254C6.23362 6.14526 5.90993 6.32713 5.72845 6.62514L3.74194 9.8872" stroke="#5DD7FF" stroke-width="1.5"></path>
@@ -254,7 +254,7 @@
 															</svg></div>
 														<div class="excursion-btn__text">Shore excursions</div>
 													</a></div>
-												<div class="panel__item"><a class="excursion-btn__button excursion-btn__button--active" href="#">
+												<div class="panel__item"><a class="excursion-btn__button" href="#">
 														<div class="excursion-btn__icon"><svg class="excursion-btn__walk" width="11" height="22" viewbox="0 0 11 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path d="M5.3565 0.294922C6.76971 0.294922 7.91895 1.44416 7.91895 2.85737C7.91895 4.27058 6.76971 5.42005 5.3565 5.42005C3.94376 5.42005 2.79452 4.27034 2.79452 2.85737C2.79452 1.44439 3.94376 0.294922 5.3565 0.294922ZM5.3565 4.24724C6.12274 4.24724 6.7459 3.62361 6.7459 2.85737C6.7459 2.09113 6.12274 1.46797 5.3565 1.46797C4.59073 1.46797 3.96756 2.09113 3.96756 2.85737C3.96756 3.62361 4.59073 4.24724 5.3565 4.24724Z" fill="#5DD7FF"></path>
 																<path d="M1.15513 13.3959C0.83141 13.3959 0.568842 13.1333 0.568842 12.8091V9.80997C0.568842 6.23248 6.22144 6.19141 6.46207 6.19141C6.78626 6.19141 7.04883 6.45398 7.04883 6.7777V13.2367C7.04883 13.5604 6.78626 13.823 6.46207 13.823C6.13835 13.823 5.87578 13.5604 5.87578 13.2367V7.39643C4.61078 7.50122 1.74165 7.94584 1.74165 9.8102V12.8093C1.74189 13.1333 1.47932 13.3959 1.15513 13.3959Z" fill="#5DD7FF"></path>
@@ -267,7 +267,7 @@
 											</div>
 										</div>
 										<div class="panel__col">
-											<div class="panel__select panel__select--land">
+											<div class="panel__select">
 												<div class="select-wrapper">
 													<div class="select"><select class="select__mobile" name="location-mob">
 															<option value="" disabled="disabled" selected="selected">Location</option>
@@ -282,6 +282,24 @@
 															<option value="Tallin">Tallin</option>
 															<option value="Helsinki">Helsinki</option>
 														</select></div>
+												</div>
+											</div>
+											<div class="panel__date">
+												<div class="data-picker">
+													<div class="panel__date-label">Cruise start date</div><label class="data-picker__label">
+														<div class="data-picker__icon"><svg class="data-picker__svg" width="18" height="20" viewbox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M0.833984 7.62091H17.1726" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M13.0727 11.2005H13.0812" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M9.00434 11.2005H9.01283" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M4.92817 11.2005H4.93666" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M13.0727 14.7635H13.0812" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M9.00434 14.7635H9.01283" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M4.92817 14.7635H4.93666" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M12.7059 0.833496V3.85004" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M5.30155 0.833496V3.85004" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M12.8851 2.28125H5.12338C2.43142 2.28125 0.75 3.78086 0.75 6.53736V14.8329C0.75 17.6327 2.43142 19.167 5.12338 19.167H12.8766C15.577 19.167 17.25 17.6587 17.25 14.9022V6.53736C17.2585 3.78086 15.5855 2.28125 12.8851 2.28125Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															</svg></div><input class="data-picker__input" placeholder="28.10.2021" />
+													</label>
 												</div>
 											</div>
 										</div>
@@ -299,8 +317,8 @@
 										<div class="breadcrumb" data-aos="fade-up">
 											<ul class="breadcrumb__list">
 												<li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Home</a></li>
-												<li class="breadcrumb__item"><a class="breadcrumb__link" href="#">For hotel guests</a></li>
-												<li class="breadcrumb__item breadcrumb__item--active"><a class="breadcrumb__link" href="#">Walking tour of St. Petersburg</a></li>
+												<li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Shore excursions</a></li>
+												<li class="breadcrumb__item breadcrumb__item--active"><a class="breadcrumb__link" href="#">Relax tour</a></li>
 											</ul>
 										</div>
 									</div>
@@ -373,7 +391,7 @@
 										</div>
 									</div>
 									<div class="excursion-page__mobile">
-										<h1 data-aos="fade-up">Walking tour of St. Petersburg</h1>
+										<h1 data-aos="fade-up">Relax tour</h1>
 										<div class="sticky" data-sticky-for="1279">
 											<div class="sticky__category">
 												<div class="category">
@@ -389,20 +407,30 @@
 														<div class="sticky__text">Russia</div>
 													</div>
 													<div class="sticky__item" data-aos="fade-up">
-														<div class="sticky__label">city</div>
+														<div class="sticky__label">port</div>
 														<div class="sticky__text">Saint Petersburg</div>
 													</div>
 													<div class="sticky__item" data-aos="fade-up">
 														<div class="sticky__label">Tour duration</div>
-														<div class="sticky__text">3 hours</div>
+														<div class="sticky__text">10 hours</div>
 													</div>
 													<div class="sticky__item" data-aos="fade-up">
-														<div class="sticky__label">moving</div>
-														<div class="sticky__text">Walking</div>
+														<div class="sticky__label">activity</div>
+														<ul class="sticky__dots">
+															<li class="sticky__dot sticky__dot--active"></li>
+															<li class="sticky__dot sticky__dot--active"></li>
+															<li class="sticky__dot sticky__dot--active"></li>
+															<li class="sticky__dot"></li>
+															<li class="sticky__dot"></li>
+														</ul>
 													</div>
 													<div class="sticky__item" data-aos="fade-up">
 														<div class="sticky__label">Availability for wheelchair-users</div>
 														<div class="sticky__text">Wheelchair-friendly</div>
+													</div>
+													<div class="sticky__item" data-aos="fade-up">
+														<div class="sticky__label">Collection point</div>
+														<div class="sticky__text">Port</div>
 													</div>
 												</div>
 											</div>
@@ -492,10 +520,47 @@
 												</div>
 											</div>
 										</div>
+										<div class="excursion-page__price-btn" data-aos="fade-up"><a class="button animation button--xxl" href="#"><span class="animation__span">Compare</span></a></div>
 									</div>
+									<section class="section">
+										<div class="excursion-page__landmarks">
+											<div class="excursion-page__landmarks-row">
+												<div class="excursion-page__landmarks-col" data-aos="fade-up">
+													<h2>Landmarks</h2>
+												</div>
+												<div class="excursion-page__landmarks-col">
+													<ul class="excursion-page__landmarks-list">
+														<li class="excursion-page__landmarks-item" data-aos="fade-up">Kazan Cathedral</li>
+														<li class="excursion-page__landmarks-item" data-aos="fade-up">Catherine's Garden</li>
+														<li class="excursion-page__landmarks-item" data-aos="fade-up">Anichkov Palace and Anichkov Bridge</li>
+														<li class="excursion-page__landmarks-item" data-aos="fade-up">Shuvalovsky and Sheremetyev palaces</li>
+														<li class="excursion-page__landmarks-item" data-aos="fade-up">Circus and its history</li>
+														<li class="excursion-page__landmarks-item" data-aos="fade-up">Mikhailovsky Castle</li>
+														<li class="excursion-page__landmarks-item" data-aos="fade-up">Arts Square</li>
+													</ul>
+													<div class="excursion-page__landmarks-btn" data-aos="fade-up">
+														<div class="excursion-page__button">Show all</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
 									<section class="section">
 										<div class="excursion-page__programm">
 											<h2 data-aos="fade-up">Programme</h2>
+											<div class="excursion-page__tabs" data-tabs="">
+												<div class="excursion-page__tabs-container">
+													<div class="excursion-page__tabs-item" data-aos="fade-up">
+														<div class="excursion-page__tabs-tab active" data-tabs-item="">1st day</div>
+													</div>
+													<div class="excursion-page__tabs-item" data-aos="fade-up">
+														<div class="excursion-page__tabs-tab" data-tabs-item="">2nd day</div>
+													</div>
+													<div class="excursion-page__tabs-item" data-aos="fade-up">
+														<div class="excursion-page__tabs-tab" data-tabs-item="">3rd day</div>
+													</div>
+												</div>
+											</div>
 											<ul class="excursion-page__programm-list">
 												<li class="excursion-page__programm-item" data-aos="fade-up">
 													<div class="excursion-page__programm-row">
@@ -539,47 +604,9 @@
 												</li>
 											</ul>
 										</div>
-									</section>
-									<section class="section">
-										<div class="excursion-page__landmarks">
-											<div class="excursion-page__landmarks-row">
-												<div class="excursion-page__landmarks-col" data-aos="fade-up">
-													<h2>Landmarks</h2>
-												</div>
-												<div class="excursion-page__landmarks-col">
-													<ul class="excursion-page__landmarks-list">
-														<li class="excursion-page__landmarks-item" data-aos="fade-up">Kazan Cathedral</li>
-														<li class="excursion-page__landmarks-item" data-aos="fade-up">Catherine's Garden</li>
-														<li class="excursion-page__landmarks-item" data-aos="fade-up">Anichkov Palace and Anichkov Bridge</li>
-														<li class="excursion-page__landmarks-item" data-aos="fade-up">Shuvalovsky and Sheremetyev palaces</li>
-														<li class="excursion-page__landmarks-item" data-aos="fade-up">Circus and its history</li>
-														<li class="excursion-page__landmarks-item" data-aos="fade-up">Mikhailovsky Castle</li>
-														<li class="excursion-page__landmarks-item" data-aos="fade-up">Arts Square</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</section>
-									<section class="section">
-										<div class="excursion-page__about" data-accordion="data-accordion">
-											<h2 data-aos="fade-up">About tour</h2>
-											<div class="excursion-page__about-content">
-												<p class="excursion-page__about-text" data-aos="fade-up">Walking tour of St. Petersburg is one of our most popular, most popular excursions. In fact, this is a fascinating walking tour with a guide around St. Petersburg, in the very center, in the most beautiful and romantic places of the city. Fresh air, a beautiful city, an interesting story-what could be better!</p>
-												<p class="excursion-page__about-text" data-aos="fade-up">We tried to include the most beautiful places and the most important sights of St. Petersburg in our excursion-walk. We tried to make this route interesting and dynamic, but the tour route can be changed according to your wishes.</p>
-											</div>
-											<div class="excursion-page__about-dropdown" data-accordion-dropdown="">
-												<div class="video">
-													<div class="video__container" data-aos="fade-up"><iframe class="video__iframe" src="https://www.youtube.com/embed/W85oD8FEF78?enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer"></iframe>
-														<div class="video__img"><img src="assets/images/video.jpg" alt="" /></div>
-														<div class="video__button"><svg class="video__icon" width="12" height="18" viewbox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-																<path d="M1 1L11 9L1 17V1Z" stroke="#292929" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-															</svg></div>
-													</div>
-												</div>
-											</div>
-											<div class="excursion-page__about-btn" data-aos="fade-up">
-												<div class="excursion-page__button" data-accordion-button=""><span class="excursion-page__about-default">Read more </span><span class="excursion-page__about-open">Roll up</span></div>
-											</div>
+										<div class="excursion-page__btn">
+											<div class="excursion-page__btn-col" data-aos="fade-up">Evening events are available</div>
+											<div class="excursion-page__btn-col" data-aos="fade-up"><a class="button button--xl animation" href="#" data-scroll="#events"><span class="animation__span">View</span></a></div>
 										</div>
 									</section>
 								</div>
@@ -590,12 +617,12 @@
 												<div class="breadcrumb">
 													<ul class="breadcrumb__list">
 														<li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Home</a></li>
-														<li class="breadcrumb__item"><a class="breadcrumb__link" href="#">For hotel guests</a></li>
-														<li class="breadcrumb__item breadcrumb__item--active"><a class="breadcrumb__link" href="#">Walking tour of St. Petersburg</a></li>
+														<li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Shore excursions</a></li>
+														<li class="breadcrumb__item breadcrumb__item--active"><a class="breadcrumb__link" href="#">Relax tour</a></li>
 													</ul>
 												</div>
 											</div>
-											<h1>Walking tour of St. Petersburg</h1>
+											<h1>Relax tour</h1>
 										</div>
 										<div class="sticky__category" data-aos="fade-up">
 											<div class="category">
@@ -611,20 +638,30 @@
 													<div class="sticky__text">Russia</div>
 												</div>
 												<div class="sticky__item" data-aos="fade-up">
-													<div class="sticky__label">city</div>
+													<div class="sticky__label">port</div>
 													<div class="sticky__text">Saint Petersburg</div>
 												</div>
 												<div class="sticky__item" data-aos="fade-up">
 													<div class="sticky__label">Tour duration</div>
-													<div class="sticky__text">3 hours</div>
+													<div class="sticky__text">10 hours</div>
 												</div>
 												<div class="sticky__item" data-aos="fade-up">
-													<div class="sticky__label">moving</div>
-													<div class="sticky__text">Walking</div>
+													<div class="sticky__label">activity</div>
+													<ul class="sticky__dots">
+														<li class="sticky__dot sticky__dot--active"></li>
+														<li class="sticky__dot sticky__dot--active"></li>
+														<li class="sticky__dot sticky__dot--active"></li>
+														<li class="sticky__dot"></li>
+														<li class="sticky__dot"></li>
+													</ul>
 												</div>
 												<div class="sticky__item" data-aos="fade-up">
 													<div class="sticky__label">Availability for wheelchair-users</div>
 													<div class="sticky__text">Wheelchair-friendly</div>
+												</div>
+												<div class="sticky__item" data-aos="fade-up">
+													<div class="sticky__label">Collection point</div>
+													<div class="sticky__text">Port</div>
 												</div>
 											</div>
 										</div>
@@ -942,6 +979,112 @@
 											</div>
 										</div>
 									</div>
+									<div class="events active" id="events" data-accordion="">
+										<div class="events__container">
+											<div class="events__head" data-accordion-button="">
+												<div class="events__head-row">
+													<div class="events__head-col" data-aos="fade-up">
+														<h4>Evening events are available</h4>
+													</div>
+													<div class="events__head-col" data-aos="fade-up">
+														<div class="events__head-icon"><svg class="events__head-svg" width="12" height="8" viewbox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M10.6666 1.66669L5.99992 6.33335L1.33325 1.66669" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															</svg></div>
+													</div>
+												</div>
+											</div>
+											<div class="events__body" data-accordion-dropdown="">
+												<div class="events__top" data-tabs="">
+													<div class="events__top-row">
+														<div class="events__top-col">
+															<div class="events__top-item" data-aos="fade-up">
+																<div class="events__tab active" data-tabs-item="">Folk show</div>
+																<div class="events__top-button" data-fancy-button="2">Read more</div>
+															</div>
+															<div class="events__top-item" data-aos="fade-up">
+																<div class="events__tab" data-tabs-item="">Evening in the Faberge museum</div>
+																<div class="events__top-button" data-fancy-button="2">Read more</div>
+															</div>
+															<div class="events__top-item" data-aos="fade-up">
+																<div class="events__tab" data-tabs-item="">Ballet evening</div>
+																<div class="events__top-button" data-fancy-button="2">Read more</div>
+															</div>
+															<div class="events__top-item" data-aos="fade-up">
+																<div class="events__tab" data-tabs-item="">Classical Music Evening</div>
+																<div class="events__top-button" data-fancy-button="2">Read more</div>
+															</div>
+														</div>
+														<div class="events__top-col">
+															<div class="events__top-item" data-aos="fade-up">
+																<div class="events__tab" data-tabs-item="">Evening boat trip</div>
+																<div class="events__top-button" data-fancy-button="2">Read more</div>
+															</div>
+															<div class="events__top-item" data-aos="fade-up">
+																<div class="events__tab" data-tabs-item="">Russian dinner</div>
+																<div class="events__top-button" data-fancy-button="2">Read more</div>
+															</div>
+															<div class="events__top-item" data-aos="fade-up">
+																<div class="events__tab" data-tabs-item="">Private car/minivan for an evening</div>
+																<div class="events__top-button" data-fancy-button="2">Read more</div>
+															</div>
+															<div class="events__top-item" data-aos="fade-up">
+																<div class="events__tab" data-tabs-item="">White Nights Tour&quot; (Draw Bridges)</div>
+																<div class="events__top-button" data-fancy-button="2">Read more</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="events__bot">
+													<div class="events__bot-row">
+														<div class="events__bot-col">
+															<div class="events__bot-item" data-aos="fade-up">
+																<div class="calculator__label">Date</div>
+																<div class="calculator__data">
+																	<div class="data-picker data-picker--small"><label class="data-picker__label">
+																			<div class="data-picker__icon"><svg class="data-picker__svg" width="18" height="20" viewbox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																					<path d="M0.833984 7.62091H17.1726" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																					<path d="M13.0727 11.2005H13.0812" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																					<path d="M9.00434 11.2005H9.01283" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																					<path d="M4.92817 11.2005H4.93666" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																					<path d="M13.0727 14.7635H13.0812" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																					<path d="M9.00434 14.7635H9.01283" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																					<path d="M4.92817 14.7635H4.93666" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																					<path d="M12.7059 0.833496V3.85004" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																					<path d="M5.30155 0.833496V3.85004" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																					<path fill-rule="evenodd" clip-rule="evenodd" d="M12.8851 2.28125H5.12338C2.43142 2.28125 0.75 3.78086 0.75 6.53736V14.8329C0.75 17.6327 2.43142 19.167 5.12338 19.167H12.8766C15.577 19.167 17.25 17.6587 17.25 14.9022V6.53736C17.2585 3.78086 15.5855 2.28125 12.8851 2.28125Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																				</svg></div><input class="data-picker__input" placeholder="28.10.2021" />
+																		</label></div>
+																</div>
+															</div>
+															<div class="events__bot-item" data-aos="fade-up">
+																<div class="calculator__label">Number of people</div>
+																<div class="counter">
+																	<div class="counter__item counter__item--minus" data-count-minus=""><svg class="counter__svg counter__minus" width="16" height="2" viewbox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M1 1H15" stroke="#292929" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		</svg></div>
+																	<div class="counter__number">1</div>
+																	<div class="counter__item counter__item--plus" data-count-plus=""><svg class="counter__svg counter__plus" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																			<path d="M17.699 28.0233L17.699 7.37456" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		</svg></div>
+																</div>
+															</div>
+														</div>
+														<div class="events__bot-col">
+															<div class="events__bot-left" data-aos="fade-up">
+																<div class="calculator__label">Number of tickets</div>
+																<div class="calculator__num">7</div>
+															</div>
+															<div class="events__bot-right" data-aos="fade-up">
+																<div class="calculator__label">Total amount</div>
+																<div class="events__title">To be discussed separately. The manager will contact you as soon as possible</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 								<div class="calculator__payments">
 									<div class="calculator__payments-title" data-aos="fade-up">We accept payments</div>
@@ -977,7 +1120,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="calculator__price calculator__price--mt">
+								<div class="calculator__price">
 									<div class="calculator__price-container">
 										<div class="calculator__payments calculator__payments--mobile">
 											<div class="calculator__payments-title" data-aos="fade-up">We accept payments</div>
@@ -1072,8 +1215,8 @@
 								</div>
 								<div class="swiper-container swiper-container--slide-width-auto swiper-container--visible swiper-container--slide-height-max" data-slider-id="1" data-slider-next="1" data-slider-prev="2" data-aos="fade-up">
 									<div class="swiper-wrapper">
-										<div class="swiper-slide"><a class="excursion-card" href="#">
-												<div class="excursion-card__body">
+										<div class="swiper-slide">
+											<div class="excursion-card"><a class="excursion-card__body" href="#">
 													<div class="excursion-card__container"><img class="excursion-card__img" src="assets/images/sellers-1.jpg" alt="" />
 														<div class="excursion-card__items">
 															<div class="category">
@@ -1099,34 +1242,44 @@
 															</div>
 														</div>
 													</div>
-												</div>
+												</a>
 												<div class="excursion-card__bot">
-													<div class="excursion-card__info">
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																	<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																</svg></div>
-															<div class="excursion-card__info-text">3 hours</div>
+													<div class="excursion-card__row">
+														<div class="excursion-card__col">
+															<div class="excursion-card__info-item">
+																<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="excursion-card__info-text">1 day/10 hours</div>
+															</div>
 														</div>
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="11" height="22" viewbox="0 0 11 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M5.3565 0.294922C6.76971 0.294922 7.91895 1.44416 7.91895 2.85737C7.91895 4.27058 6.76971 5.42005 5.3565 5.42005C3.94376 5.42005 2.79452 4.27034 2.79452 2.85737C2.79452 1.44439 3.94376 0.294922 5.3565 0.294922ZM5.3565 4.24724C6.12274 4.24724 6.7459 3.62361 6.7459 2.85737C6.7459 2.09113 6.12274 1.46797 5.3565 1.46797C4.59073 1.46797 3.96756 2.09113 3.96756 2.85737C3.96756 3.62361 4.59073 4.24724 5.3565 4.24724Z" fill="#5DD7FF"></path>
-																	<path d="M1.15513 13.3959C0.83141 13.3959 0.568842 13.1333 0.568842 12.8091V9.80997C0.568842 6.23248 6.22144 6.19141 6.46207 6.19141C6.78626 6.19141 7.04883 6.45398 7.04883 6.7777V13.2367C7.04883 13.5604 6.78626 13.823 6.46207 13.823C6.13835 13.823 5.87578 13.5604 5.87578 13.2367V7.39643C4.61078 7.50122 1.74165 7.94584 1.74165 9.8102V12.8093C1.74189 13.1333 1.47932 13.3959 1.15513 13.3959Z" fill="#5DD7FF"></path>
-																	<path d="M9.23574 21.4011C8.91202 21.4011 8.64945 21.1385 8.64945 20.8143V20.038C8.64945 16.5016 6.58391 15.713 6.35611 15.6369C3.79973 15.151 3.2823 13.4397 3.36562 12.5649V9.20101C3.36562 8.87683 3.62819 8.61426 3.95191 8.61426C4.27609 8.61426 4.53866 8.87683 4.53866 9.20101V12.5957C4.53866 12.6126 4.5368 12.6392 4.5354 12.6564C4.52209 12.8028 4.47028 14.0965 6.60304 14.4898C6.62078 14.493 6.63805 14.497 6.65556 14.5021C6.78463 14.5385 9.82227 15.4443 9.82227 20.038V20.8143C9.8225 21.1385 9.55993 21.4011 9.23574 21.4011Z" fill="#5DD7FF"></path>
-																	<path d="M0.763103 20.9182C0.704288 20.9364 0.64454 20.9455 0.586191 20.9455C0.337391 20.9455 0.106096 20.7854 0.0272079 20.5357C-0.0703511 20.2267 0.100494 19.8976 0.409743 19.8C2.78711 19.0483 3.87473 15.8734 3.8892 15.83C3.99096 15.5228 4.32215 15.3559 4.62953 15.4575C4.93715 15.5592 5.10402 15.8909 5.0025 16.1983C4.95138 16.3525 3.72046 19.9835 0.763103 20.9182Z" fill="#5DD7FF"></path>
-																	<path d="M8.40931 8.06148C8.41421 8.07641 8.90341 9.58321 10.4137 9.58321C10.7374 9.58321 11 9.84578 11 10.1695C11 10.4937 10.7374 10.7563 10.4137 10.7563C8.52368 10.7563 7.54412 9.22332 7.29018 8.41227C7.19356 8.10326 7.36533 7.77463 7.67435 7.67754C7.98453 7.58022 8.31269 7.75293 8.40931 8.06148Z" fill="#5DD7FF"></path>
-																</svg></div>
-															<div class="excursion-card__info-text">Walking</div>
+														<div class="excursion-card__col">
+															<div class="excursion-card__activity">
+																<div class="excursion-card__activity-text">Activity</div>
+																<ul class="excursion-card__activity-dots">
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																</ul>
+															</div>
 														</div>
 													</div>
 													<div class="excursion-card__wrapper">
-														<div class="excursion-card__price">from <span class="excursion-card__price-num">$129 </span>/ person</div>
+														<div class="excursion-card__row">
+															<div class="excursion-card__col">
+																<div class="excursion-card__price"><span class="excursion-card__price-num">$129 </span>/ person</div>
+															</div>
+															<div class="excursion-card__col"><a class="button animation button-m" href="#"><span class="animation__span">Compare</span></a></div>
+														</div>
 													</div>
 												</div>
-											</a></div>
-										<div class="swiper-slide"><a class="excursion-card" href="#">
-												<div class="excursion-card__body">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="excursion-card"><a class="excursion-card__body" href="#">
 													<div class="excursion-card__container"><img class="excursion-card__img" src="assets/images/sellers-2.jpg" alt="" />
 														<div class="excursion-card__items">
 															<div class="category">
@@ -1152,35 +1305,44 @@
 															</div>
 														</div>
 													</div>
-												</div>
+												</a>
 												<div class="excursion-card__bot">
-													<div class="excursion-card__info">
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																	<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																</svg></div>
-															<div class="excursion-card__info-text">3 hours</div>
+													<div class="excursion-card__row">
+														<div class="excursion-card__col">
+															<div class="excursion-card__info-item">
+																<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="excursion-card__info-text">1 day/10 hours</div>
+															</div>
 														</div>
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="18" height="20" viewbox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M2.5 15.5H7.5V17C7.5 18.3807 6.38071 19.5 5 19.5C3.61929 19.5 2.5 18.3807 2.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M10.5 15.5H15.5V17C15.5 18.3807 14.3807 19.5 13 19.5C11.6193 19.5 10.5 18.3807 10.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M0.5 6C0.5 2.96243 2.96243 0.5 6 0.5H12C15.0376 0.5 17.5 2.96243 17.5 6V15C17.5 15.8284 16.8284 16.5 16 16.5H2C1.17157 16.5 0.5 15.8284 0.5 15V6Z" fill="white" stroke="#5DD7FF"></path>
-																	<rect x="3.5" y="3.5" width="11" height="3" rx="1.5" stroke="#5DD7FF"></rect>
-																	<circle cx="5.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																	<circle cx="12.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																</svg></div>
-															<div class="excursion-card__info-text">Transport</div>
+														<div class="excursion-card__col">
+															<div class="excursion-card__activity">
+																<div class="excursion-card__activity-text">Activity</div>
+																<ul class="excursion-card__activity-dots">
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																</ul>
+															</div>
 														</div>
 													</div>
 													<div class="excursion-card__wrapper">
-														<div class="excursion-card__price">from <span class="excursion-card__price-num">$129 </span>/ person</div>
+														<div class="excursion-card__row">
+															<div class="excursion-card__col">
+																<div class="excursion-card__price"><span class="excursion-card__price-num">$129 </span>/ person</div>
+															</div>
+															<div class="excursion-card__col"><a class="button animation button-m" href="#"><span class="animation__span">Compare</span></a></div>
+														</div>
 													</div>
 												</div>
-											</a></div>
-										<div class="swiper-slide"><a class="excursion-card" href="#">
-												<div class="excursion-card__body">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="excursion-card"><a class="excursion-card__body" href="#">
 													<div class="excursion-card__container"><img class="excursion-card__img" src="assets/images/sellers-3.jpg" alt="" />
 														<div class="excursion-card__items">
 															<div class="category">
@@ -1206,34 +1368,44 @@
 															</div>
 														</div>
 													</div>
-												</div>
+												</a>
 												<div class="excursion-card__bot">
-													<div class="excursion-card__info">
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																	<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																</svg></div>
-															<div class="excursion-card__info-text">3 hours</div>
+													<div class="excursion-card__row">
+														<div class="excursion-card__col">
+															<div class="excursion-card__info-item">
+																<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="excursion-card__info-text">1 day/10 hours</div>
+															</div>
 														</div>
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="11" height="22" viewbox="0 0 11 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M5.3565 0.294922C6.76971 0.294922 7.91895 1.44416 7.91895 2.85737C7.91895 4.27058 6.76971 5.42005 5.3565 5.42005C3.94376 5.42005 2.79452 4.27034 2.79452 2.85737C2.79452 1.44439 3.94376 0.294922 5.3565 0.294922ZM5.3565 4.24724C6.12274 4.24724 6.7459 3.62361 6.7459 2.85737C6.7459 2.09113 6.12274 1.46797 5.3565 1.46797C4.59073 1.46797 3.96756 2.09113 3.96756 2.85737C3.96756 3.62361 4.59073 4.24724 5.3565 4.24724Z" fill="#5DD7FF"></path>
-																	<path d="M1.15513 13.3959C0.83141 13.3959 0.568842 13.1333 0.568842 12.8091V9.80997C0.568842 6.23248 6.22144 6.19141 6.46207 6.19141C6.78626 6.19141 7.04883 6.45398 7.04883 6.7777V13.2367C7.04883 13.5604 6.78626 13.823 6.46207 13.823C6.13835 13.823 5.87578 13.5604 5.87578 13.2367V7.39643C4.61078 7.50122 1.74165 7.94584 1.74165 9.8102V12.8093C1.74189 13.1333 1.47932 13.3959 1.15513 13.3959Z" fill="#5DD7FF"></path>
-																	<path d="M9.23574 21.4011C8.91202 21.4011 8.64945 21.1385 8.64945 20.8143V20.038C8.64945 16.5016 6.58391 15.713 6.35611 15.6369C3.79973 15.151 3.2823 13.4397 3.36562 12.5649V9.20101C3.36562 8.87683 3.62819 8.61426 3.95191 8.61426C4.27609 8.61426 4.53866 8.87683 4.53866 9.20101V12.5957C4.53866 12.6126 4.5368 12.6392 4.5354 12.6564C4.52209 12.8028 4.47028 14.0965 6.60304 14.4898C6.62078 14.493 6.63805 14.497 6.65556 14.5021C6.78463 14.5385 9.82227 15.4443 9.82227 20.038V20.8143C9.8225 21.1385 9.55993 21.4011 9.23574 21.4011Z" fill="#5DD7FF"></path>
-																	<path d="M0.763103 20.9182C0.704288 20.9364 0.64454 20.9455 0.586191 20.9455C0.337391 20.9455 0.106096 20.7854 0.0272079 20.5357C-0.0703511 20.2267 0.100494 19.8976 0.409743 19.8C2.78711 19.0483 3.87473 15.8734 3.8892 15.83C3.99096 15.5228 4.32215 15.3559 4.62953 15.4575C4.93715 15.5592 5.10402 15.8909 5.0025 16.1983C4.95138 16.3525 3.72046 19.9835 0.763103 20.9182Z" fill="#5DD7FF"></path>
-																	<path d="M8.40931 8.06148C8.41421 8.07641 8.90341 9.58321 10.4137 9.58321C10.7374 9.58321 11 9.84578 11 10.1695C11 10.4937 10.7374 10.7563 10.4137 10.7563C8.52368 10.7563 7.54412 9.22332 7.29018 8.41227C7.19356 8.10326 7.36533 7.77463 7.67435 7.67754C7.98453 7.58022 8.31269 7.75293 8.40931 8.06148Z" fill="#5DD7FF"></path>
-																</svg></div>
-															<div class="excursion-card__info-text">Walking</div>
+														<div class="excursion-card__col">
+															<div class="excursion-card__activity">
+																<div class="excursion-card__activity-text">Activity</div>
+																<ul class="excursion-card__activity-dots">
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																</ul>
+															</div>
 														</div>
 													</div>
 													<div class="excursion-card__wrapper">
-														<div class="excursion-card__price">from <span class="excursion-card__price-num">$129 </span>/ person</div>
+														<div class="excursion-card__row">
+															<div class="excursion-card__col">
+																<div class="excursion-card__price"><span class="excursion-card__price-num">$129 </span>/ person</div>
+															</div>
+															<div class="excursion-card__col"><a class="button animation button-m" href="#"><span class="animation__span">Compare</span></a></div>
+														</div>
 													</div>
 												</div>
-											</a></div>
-										<div class="swiper-slide"><a class="excursion-card" href="#">
-												<div class="excursion-card__body">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="excursion-card"><a class="excursion-card__body" href="#">
 													<div class="excursion-card__container"><img class="excursion-card__img" src="assets/images/sellers-4.jpg" alt="" />
 														<div class="excursion-card__items">
 															<div class="category">
@@ -1259,35 +1431,44 @@
 															</div>
 														</div>
 													</div>
-												</div>
+												</a>
 												<div class="excursion-card__bot">
-													<div class="excursion-card__info">
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																	<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																</svg></div>
-															<div class="excursion-card__info-text">3 hours</div>
+													<div class="excursion-card__row">
+														<div class="excursion-card__col">
+															<div class="excursion-card__info-item">
+																<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="excursion-card__info-text">1 day/10 hours</div>
+															</div>
 														</div>
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="18" height="20" viewbox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M2.5 15.5H7.5V17C7.5 18.3807 6.38071 19.5 5 19.5C3.61929 19.5 2.5 18.3807 2.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M10.5 15.5H15.5V17C15.5 18.3807 14.3807 19.5 13 19.5C11.6193 19.5 10.5 18.3807 10.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M0.5 6C0.5 2.96243 2.96243 0.5 6 0.5H12C15.0376 0.5 17.5 2.96243 17.5 6V15C17.5 15.8284 16.8284 16.5 16 16.5H2C1.17157 16.5 0.5 15.8284 0.5 15V6Z" fill="white" stroke="#5DD7FF"></path>
-																	<rect x="3.5" y="3.5" width="11" height="3" rx="1.5" stroke="#5DD7FF"></rect>
-																	<circle cx="5.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																	<circle cx="12.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																</svg></div>
-															<div class="excursion-card__info-text">Transport</div>
+														<div class="excursion-card__col">
+															<div class="excursion-card__activity">
+																<div class="excursion-card__activity-text">Activity</div>
+																<ul class="excursion-card__activity-dots">
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																</ul>
+															</div>
 														</div>
 													</div>
 													<div class="excursion-card__wrapper">
-														<div class="excursion-card__price">from <span class="excursion-card__price-num">$129 </span>/ person</div>
+														<div class="excursion-card__row">
+															<div class="excursion-card__col">
+																<div class="excursion-card__price"><span class="excursion-card__price-num">$129 </span>/ person</div>
+															</div>
+															<div class="excursion-card__col"><a class="button animation button-m" href="#"><span class="animation__span">Compare</span></a></div>
+														</div>
 													</div>
 												</div>
-											</a></div>
-										<div class="swiper-slide"><a class="excursion-card" href="#">
-												<div class="excursion-card__body">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="excursion-card"><a class="excursion-card__body" href="#">
 													<div class="excursion-card__container"><img class="excursion-card__img" src="assets/images/sellers-1.jpg" alt="" />
 														<div class="excursion-card__items">
 															<div class="category">
@@ -1313,34 +1494,44 @@
 															</div>
 														</div>
 													</div>
-												</div>
+												</a>
 												<div class="excursion-card__bot">
-													<div class="excursion-card__info">
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																	<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																</svg></div>
-															<div class="excursion-card__info-text">3 hours</div>
+													<div class="excursion-card__row">
+														<div class="excursion-card__col">
+															<div class="excursion-card__info-item">
+																<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="excursion-card__info-text">1 day/10 hours</div>
+															</div>
 														</div>
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="11" height="22" viewbox="0 0 11 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M5.3565 0.294922C6.76971 0.294922 7.91895 1.44416 7.91895 2.85737C7.91895 4.27058 6.76971 5.42005 5.3565 5.42005C3.94376 5.42005 2.79452 4.27034 2.79452 2.85737C2.79452 1.44439 3.94376 0.294922 5.3565 0.294922ZM5.3565 4.24724C6.12274 4.24724 6.7459 3.62361 6.7459 2.85737C6.7459 2.09113 6.12274 1.46797 5.3565 1.46797C4.59073 1.46797 3.96756 2.09113 3.96756 2.85737C3.96756 3.62361 4.59073 4.24724 5.3565 4.24724Z" fill="#5DD7FF"></path>
-																	<path d="M1.15513 13.3959C0.83141 13.3959 0.568842 13.1333 0.568842 12.8091V9.80997C0.568842 6.23248 6.22144 6.19141 6.46207 6.19141C6.78626 6.19141 7.04883 6.45398 7.04883 6.7777V13.2367C7.04883 13.5604 6.78626 13.823 6.46207 13.823C6.13835 13.823 5.87578 13.5604 5.87578 13.2367V7.39643C4.61078 7.50122 1.74165 7.94584 1.74165 9.8102V12.8093C1.74189 13.1333 1.47932 13.3959 1.15513 13.3959Z" fill="#5DD7FF"></path>
-																	<path d="M9.23574 21.4011C8.91202 21.4011 8.64945 21.1385 8.64945 20.8143V20.038C8.64945 16.5016 6.58391 15.713 6.35611 15.6369C3.79973 15.151 3.2823 13.4397 3.36562 12.5649V9.20101C3.36562 8.87683 3.62819 8.61426 3.95191 8.61426C4.27609 8.61426 4.53866 8.87683 4.53866 9.20101V12.5957C4.53866 12.6126 4.5368 12.6392 4.5354 12.6564C4.52209 12.8028 4.47028 14.0965 6.60304 14.4898C6.62078 14.493 6.63805 14.497 6.65556 14.5021C6.78463 14.5385 9.82227 15.4443 9.82227 20.038V20.8143C9.8225 21.1385 9.55993 21.4011 9.23574 21.4011Z" fill="#5DD7FF"></path>
-																	<path d="M0.763103 20.9182C0.704288 20.9364 0.64454 20.9455 0.586191 20.9455C0.337391 20.9455 0.106096 20.7854 0.0272079 20.5357C-0.0703511 20.2267 0.100494 19.8976 0.409743 19.8C2.78711 19.0483 3.87473 15.8734 3.8892 15.83C3.99096 15.5228 4.32215 15.3559 4.62953 15.4575C4.93715 15.5592 5.10402 15.8909 5.0025 16.1983C4.95138 16.3525 3.72046 19.9835 0.763103 20.9182Z" fill="#5DD7FF"></path>
-																	<path d="M8.40931 8.06148C8.41421 8.07641 8.90341 9.58321 10.4137 9.58321C10.7374 9.58321 11 9.84578 11 10.1695C11 10.4937 10.7374 10.7563 10.4137 10.7563C8.52368 10.7563 7.54412 9.22332 7.29018 8.41227C7.19356 8.10326 7.36533 7.77463 7.67435 7.67754C7.98453 7.58022 8.31269 7.75293 8.40931 8.06148Z" fill="#5DD7FF"></path>
-																</svg></div>
-															<div class="excursion-card__info-text">Walking</div>
+														<div class="excursion-card__col">
+															<div class="excursion-card__activity">
+																<div class="excursion-card__activity-text">Activity</div>
+																<ul class="excursion-card__activity-dots">
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																</ul>
+															</div>
 														</div>
 													</div>
 													<div class="excursion-card__wrapper">
-														<div class="excursion-card__price">from <span class="excursion-card__price-num">$129 </span>/ person</div>
+														<div class="excursion-card__row">
+															<div class="excursion-card__col">
+																<div class="excursion-card__price"><span class="excursion-card__price-num">$129 </span>/ person</div>
+															</div>
+															<div class="excursion-card__col"><a class="button animation button-m" href="#"><span class="animation__span">Compare</span></a></div>
+														</div>
 													</div>
 												</div>
-											</a></div>
-										<div class="swiper-slide"><a class="excursion-card" href="#">
-												<div class="excursion-card__body">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="excursion-card"><a class="excursion-card__body" href="#">
 													<div class="excursion-card__container"><img class="excursion-card__img" src="assets/images/sellers-2.jpg" alt="" />
 														<div class="excursion-card__items">
 															<div class="category">
@@ -1366,35 +1557,44 @@
 															</div>
 														</div>
 													</div>
-												</div>
+												</a>
 												<div class="excursion-card__bot">
-													<div class="excursion-card__info">
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																	<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																</svg></div>
-															<div class="excursion-card__info-text">3 hours</div>
+													<div class="excursion-card__row">
+														<div class="excursion-card__col">
+															<div class="excursion-card__info-item">
+																<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="excursion-card__info-text">1 day/10 hours</div>
+															</div>
 														</div>
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="18" height="20" viewbox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M2.5 15.5H7.5V17C7.5 18.3807 6.38071 19.5 5 19.5C3.61929 19.5 2.5 18.3807 2.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M10.5 15.5H15.5V17C15.5 18.3807 14.3807 19.5 13 19.5C11.6193 19.5 10.5 18.3807 10.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M0.5 6C0.5 2.96243 2.96243 0.5 6 0.5H12C15.0376 0.5 17.5 2.96243 17.5 6V15C17.5 15.8284 16.8284 16.5 16 16.5H2C1.17157 16.5 0.5 15.8284 0.5 15V6Z" fill="white" stroke="#5DD7FF"></path>
-																	<rect x="3.5" y="3.5" width="11" height="3" rx="1.5" stroke="#5DD7FF"></rect>
-																	<circle cx="5.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																	<circle cx="12.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																</svg></div>
-															<div class="excursion-card__info-text">Transport</div>
+														<div class="excursion-card__col">
+															<div class="excursion-card__activity">
+																<div class="excursion-card__activity-text">Activity</div>
+																<ul class="excursion-card__activity-dots">
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																</ul>
+															</div>
 														</div>
 													</div>
 													<div class="excursion-card__wrapper">
-														<div class="excursion-card__price">from <span class="excursion-card__price-num">$129 </span>/ person</div>
+														<div class="excursion-card__row">
+															<div class="excursion-card__col">
+																<div class="excursion-card__price"><span class="excursion-card__price-num">$129 </span>/ person</div>
+															</div>
+															<div class="excursion-card__col"><a class="button animation button-m" href="#"><span class="animation__span">Compare</span></a></div>
+														</div>
 													</div>
 												</div>
-											</a></div>
-										<div class="swiper-slide"><a class="excursion-card" href="#">
-												<div class="excursion-card__body">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="excursion-card"><a class="excursion-card__body" href="#">
 													<div class="excursion-card__container"><img class="excursion-card__img" src="assets/images/sellers-3.jpg" alt="" />
 														<div class="excursion-card__items">
 															<div class="category">
@@ -1420,34 +1620,44 @@
 															</div>
 														</div>
 													</div>
-												</div>
+												</a>
 												<div class="excursion-card__bot">
-													<div class="excursion-card__info">
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																	<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																</svg></div>
-															<div class="excursion-card__info-text">3 hours</div>
+													<div class="excursion-card__row">
+														<div class="excursion-card__col">
+															<div class="excursion-card__info-item">
+																<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="excursion-card__info-text">1 day/10 hours</div>
+															</div>
 														</div>
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="11" height="22" viewbox="0 0 11 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M5.3565 0.294922C6.76971 0.294922 7.91895 1.44416 7.91895 2.85737C7.91895 4.27058 6.76971 5.42005 5.3565 5.42005C3.94376 5.42005 2.79452 4.27034 2.79452 2.85737C2.79452 1.44439 3.94376 0.294922 5.3565 0.294922ZM5.3565 4.24724C6.12274 4.24724 6.7459 3.62361 6.7459 2.85737C6.7459 2.09113 6.12274 1.46797 5.3565 1.46797C4.59073 1.46797 3.96756 2.09113 3.96756 2.85737C3.96756 3.62361 4.59073 4.24724 5.3565 4.24724Z" fill="#5DD7FF"></path>
-																	<path d="M1.15513 13.3959C0.83141 13.3959 0.568842 13.1333 0.568842 12.8091V9.80997C0.568842 6.23248 6.22144 6.19141 6.46207 6.19141C6.78626 6.19141 7.04883 6.45398 7.04883 6.7777V13.2367C7.04883 13.5604 6.78626 13.823 6.46207 13.823C6.13835 13.823 5.87578 13.5604 5.87578 13.2367V7.39643C4.61078 7.50122 1.74165 7.94584 1.74165 9.8102V12.8093C1.74189 13.1333 1.47932 13.3959 1.15513 13.3959Z" fill="#5DD7FF"></path>
-																	<path d="M9.23574 21.4011C8.91202 21.4011 8.64945 21.1385 8.64945 20.8143V20.038C8.64945 16.5016 6.58391 15.713 6.35611 15.6369C3.79973 15.151 3.2823 13.4397 3.36562 12.5649V9.20101C3.36562 8.87683 3.62819 8.61426 3.95191 8.61426C4.27609 8.61426 4.53866 8.87683 4.53866 9.20101V12.5957C4.53866 12.6126 4.5368 12.6392 4.5354 12.6564C4.52209 12.8028 4.47028 14.0965 6.60304 14.4898C6.62078 14.493 6.63805 14.497 6.65556 14.5021C6.78463 14.5385 9.82227 15.4443 9.82227 20.038V20.8143C9.8225 21.1385 9.55993 21.4011 9.23574 21.4011Z" fill="#5DD7FF"></path>
-																	<path d="M0.763103 20.9182C0.704288 20.9364 0.64454 20.9455 0.586191 20.9455C0.337391 20.9455 0.106096 20.7854 0.0272079 20.5357C-0.0703511 20.2267 0.100494 19.8976 0.409743 19.8C2.78711 19.0483 3.87473 15.8734 3.8892 15.83C3.99096 15.5228 4.32215 15.3559 4.62953 15.4575C4.93715 15.5592 5.10402 15.8909 5.0025 16.1983C4.95138 16.3525 3.72046 19.9835 0.763103 20.9182Z" fill="#5DD7FF"></path>
-																	<path d="M8.40931 8.06148C8.41421 8.07641 8.90341 9.58321 10.4137 9.58321C10.7374 9.58321 11 9.84578 11 10.1695C11 10.4937 10.7374 10.7563 10.4137 10.7563C8.52368 10.7563 7.54412 9.22332 7.29018 8.41227C7.19356 8.10326 7.36533 7.77463 7.67435 7.67754C7.98453 7.58022 8.31269 7.75293 8.40931 8.06148Z" fill="#5DD7FF"></path>
-																</svg></div>
-															<div class="excursion-card__info-text">Walking</div>
+														<div class="excursion-card__col">
+															<div class="excursion-card__activity">
+																<div class="excursion-card__activity-text">Activity</div>
+																<ul class="excursion-card__activity-dots">
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																</ul>
+															</div>
 														</div>
 													</div>
 													<div class="excursion-card__wrapper">
-														<div class="excursion-card__price">from <span class="excursion-card__price-num">$129 </span>/ person</div>
+														<div class="excursion-card__row">
+															<div class="excursion-card__col">
+																<div class="excursion-card__price"><span class="excursion-card__price-num">$129 </span>/ person</div>
+															</div>
+															<div class="excursion-card__col"><a class="button animation button-m" href="#"><span class="animation__span">Compare</span></a></div>
+														</div>
 													</div>
 												</div>
-											</a></div>
-										<div class="swiper-slide"><a class="excursion-card" href="#">
-												<div class="excursion-card__body">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="excursion-card"><a class="excursion-card__body" href="#">
 													<div class="excursion-card__container"><img class="excursion-card__img" src="assets/images/sellers-4.jpg" alt="" />
 														<div class="excursion-card__items">
 															<div class="category">
@@ -1473,38 +1683,193 @@
 															</div>
 														</div>
 													</div>
-												</div>
+												</a>
 												<div class="excursion-card__bot">
-													<div class="excursion-card__info">
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																	<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																</svg></div>
-															<div class="excursion-card__info-text">3 hours</div>
+													<div class="excursion-card__row">
+														<div class="excursion-card__col">
+															<div class="excursion-card__info-item">
+																<div class="excursion-card__info-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path fill-rule="evenodd" clip-rule="evenodd" d="M14.335 0.75H5.66598C2.64498 0.75 0.750977 2.889 0.750977 5.916V14.084C0.750977 17.111 2.63498 19.25 5.66598 19.25H14.334C17.365 19.25 19.251 17.111 19.251 14.084V5.916C19.251 2.889 17.365 0.75 14.335 0.75Z" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																		<path d="M13.392 12.0173L10.001 9.9943V5.6333" stroke="#5DD7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="excursion-card__info-text">1 day/10 hours</div>
+															</div>
 														</div>
-														<div class="excursion-card__info-item">
-															<div class="excursion-card__info-icon"><svg width="18" height="20" viewbox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M2.5 15.5H7.5V17C7.5 18.3807 6.38071 19.5 5 19.5C3.61929 19.5 2.5 18.3807 2.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M10.5 15.5H15.5V17C15.5 18.3807 14.3807 19.5 13 19.5C11.6193 19.5 10.5 18.3807 10.5 17V15.5Z" stroke="#5DD7FF"></path>
-																	<path d="M0.5 6C0.5 2.96243 2.96243 0.5 6 0.5H12C15.0376 0.5 17.5 2.96243 17.5 6V15C17.5 15.8284 16.8284 16.5 16 16.5H2C1.17157 16.5 0.5 15.8284 0.5 15V6Z" fill="white" stroke="#5DD7FF"></path>
-																	<rect x="3.5" y="3.5" width="11" height="3" rx="1.5" stroke="#5DD7FF"></rect>
-																	<circle cx="5.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																	<circle cx="12.5" cy="12.5" r="2" stroke="#5DD7FF"></circle>
-																</svg></div>
-															<div class="excursion-card__info-text">Transport</div>
+														<div class="excursion-card__col">
+															<div class="excursion-card__activity">
+																<div class="excursion-card__activity-text">Activity</div>
+																<ul class="excursion-card__activity-dots">
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot excursion-card__activity-dot--active"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																	<li class="excursion-card__activity-dot"></li>
+																</ul>
+															</div>
 														</div>
 													</div>
 													<div class="excursion-card__wrapper">
-														<div class="excursion-card__price">from <span class="excursion-card__price-num">$129 </span>/ person</div>
+														<div class="excursion-card__row">
+															<div class="excursion-card__col">
+																<div class="excursion-card__price"><span class="excursion-card__price-num">$129 </span>/ person</div>
+															</div>
+															<div class="excursion-card__col"><a class="button animation button-m" href="#"><span class="animation__span">Compare</span></a></div>
+														</div>
 													</div>
 												</div>
-											</a></div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</section>
+				</div>
+				<div class="modals">
+					<div class="modal" data-fancy-modal="2">
+						<div class="modal__container">
+							<div class="event-modal">
+								<div class="event-modal__item">
+									<h3>Russian Ballet</h3>
+								</div>
+								<div class="event-modal__item">
+									<div class="event-modal__row">
+										<div class="event-modal__col">
+											<div class="event-modal__label">Duration</div>
+											<div class="event-modal__caption">4 hours</div>
+										</div>
+										<div class="event-modal__col">
+											<div class="event-modal__label">type</div>
+											<div class="event-modal__caption">Group</div>
+										</div>
+									</div>
+								</div>
+								<div class="event-modal__item">
+									<div class="price price--modal">
+										<div class="price__item price__item--blue">
+											<div class="price__container">
+												<h3 class="price__title">The price includes</h3>
+												<ul class="price__list">
+													<li class="price__point" data-aos="fade-up">
+														<div class="price__icon"><svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<circle cx="12.5" cy="12.5" r="12.5" fill="#5DD7FF"></circle>
+																<path d="M7 12.2941L10.8261 16L18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+															</svg></div>
+														<div class="price__text">Guide services</div>
+													</li>
+													<li class="price__point" data-aos="fade-up">
+														<div class="price__icon"><svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<circle cx="12.5" cy="12.5" r="12.5" fill="#5DD7FF"></circle>
+																<path d="M7 12.2941L10.8261 16L18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+															</svg></div>
+														<div class="price__text">Transport (4 hours)</div>
+													</li>
+													<li class="price__point" data-aos="fade-up">
+														<div class="price__icon"><svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<circle cx="12.5" cy="12.5" r="12.5" fill="#5DD7FF"></circle>
+																<path d="M7 12.2941L10.8261 16L18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+															</svg></div>
+														<div class="price__text">Entrance tickets</div>
+													</li>
+													<li class="price__point" data-aos="fade-up">
+														<div class="price__icon"><svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<circle cx="12.5" cy="12.5" r="12.5" fill="#5DD7FF"></circle>
+																<path d="M7 12.2941L10.8261 16L18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+															</svg></div>
+														<div class="price__text">Port fee</div>
+													</li>
+													<li class="price__point" data-aos="fade-up">
+														<div class="price__icon"><svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<circle cx="12.5" cy="12.5" r="12.5" fill="#5DD7FF"></circle>
+																<path d="M7 12.2941L10.8261 16L18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+															</svg></div>
+														<div class="price__text">Lunch</div>
+													</li>
+													<li class="price__point" data-aos="fade-up">
+														<div class="price__icon"><svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<circle cx="12.5" cy="12.5" r="12.5" fill="#5DD7FF"></circle>
+																<path d="M7 12.2941L10.8261 16L18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+															</svg></div>
+														<div class="price__text">Visa service</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="price__item">
+											<div class="price__container">
+												<h3 class="price__title" data-aos="fade-up">The price includes</h3>
+												<ul class="price__list">
+													<li class="price__point" data-aos="fade-up">
+														<div class="price__icon"><svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<circle cx="12.5" cy="12.5" r="12.5" fill="white"></circle>
+																<line x1="8" y1="12" x2="17" y2="12" stroke="#E7E7E7" stroke-width="2" stroke-linecap="round"></line>
+															</svg></div>
+														<div class="price__text">Umbrella</div>
+													</li>
+													<li class="price__point" data-aos="fade-up">
+														<div class="price__icon"><svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<circle cx="12.5" cy="12.5" r="12.5" fill="white"></circle>
+																<line x1="8" y1="12" x2="17" y2="12" stroke="#E7E7E7" stroke-width="2" stroke-linecap="round"></line>
+															</svg></div>
+														<div class="price__text">Blanket</div>
+													</li>
+													<li class="price__point" data-aos="fade-up">
+														<div class="price__icon"><svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<circle cx="12.5" cy="12.5" r="12.5" fill="white"></circle>
+																<line x1="8" y1="12" x2="17" y2="12" stroke="#E7E7E7" stroke-width="2" stroke-linecap="round"></line>
+															</svg></div>
+														<div class="price__text">Drinks</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="event-modal__item">
+									<p class="event-modal__text">Russian ballet is primarily a classical ballet that preserves the traditions of the 19th century. This does not mean that we do not have a modern ballet, we have one, and it is a very good modern ballet (for example, the Boris Eifman troupe). But it is classical ballet that is truly unique, because nowhere else in the world is it raised to such a high level.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal" data-fancy-modal="11">
+						<div class="modal__container">
+							<form class="form" action="/" data-form="1" data-feedback-form="data-feedback-form">
+								<div class="form__container">
+									<h3 class="form__title">You book a tour for a large group, and we are ready to provide you with special conditions/benefits. Please write to us.</h3>
+									<div class="form-modal">
+										<div class="form__item"><input class="form__input" placeholder="Name" name="name" required="required" /></div>
+										<div class="form__item"><input class="form__input" type="email" placeholder="E-mail" name="mail" required="required" /></div>
+										<div class="form__item"><input class="form__input" type="phone" placeholder="Phone" name="phone" required="required" /></div>
+										<div class="form__wrapper">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__text">I give my consent to <a class="checkbox__link" href="#">the processing of personal data</a></div>
+												</label></div>
+										</div>
+										<div class="form__button"><button class="button button--sticky animation" data-form-button="1"><span class="animation__span">Send</span></button></div>
+									</div>
+								</div>
+								<div class="form__response" data-response="1">
+									<h3 class="form__response-message">The application has been sent!<br />We will contact you as soon as possible.</h3>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="modal" data-fancy-modal="4">
+						<div class="modal__container">
+							<h3 class="modal__title">Excursion added to cart</h3>
+							<div class="modal__btns">
+								<div class="modal__item">
+									<div class="button animation button--xxl"><span class="animation__span">Continue purchase</span></div>
+								</div>
+								<div class="modal__item modal__item--active">
+									<div class="button animation button--xxl"><span class="animation__span">To cart</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</main>
 			<footer class="footer">
