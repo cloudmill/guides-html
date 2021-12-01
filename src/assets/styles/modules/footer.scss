@@ -23,7 +23,7 @@
   &__inner {
     padding: 20px 0 40px;
     @media (min-width: $breakpoint) {
-      padding: 60px 0 40px;
+      padding: 60px 0 20px;
     }
   }
 
@@ -54,7 +54,7 @@
     column-gap: 20px;
     @media (min-width: $breakpoint) {
       column-gap: 40px;
-      row-gap: 110px;
+      row-gap: 70px;
     }
   }
 
