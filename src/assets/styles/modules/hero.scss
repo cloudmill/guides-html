@@ -4,7 +4,10 @@
   position: relative;
   z-index: 0;
 
-  height: calc(100vh - 100px);
+  height: calc(100vh - 30px);
+  @media (min-width: $breakpoint-ll) {
+    height: calc(100vh - 100px);
+  }
 
   border-radius: 0 0 20px 20px;
   overflow: hidden;
@@ -138,6 +141,9 @@
     }
     @media (min-width: $breakpoint) {
       width: 360px;
+      height: 255px;
+    }
+    @media (min-width: $breakpoint-ll) {
       height: 323px;
     }
     @media (min-width: $breakpoint-xl) {
@@ -156,7 +162,10 @@
         height: 262px;
       }
       @media (min-width: $breakpoint) {
-      height: 383px;
+        height: 285px;
+      }
+      @media (min-width: $breakpoint-ll) {
+        height: 383px;
       }
 
       #{$comp}__tab-layout {
@@ -183,8 +192,7 @@
   }
 
   &__tab-container {
-    // padding: 20px 20px 37px;
-    padding: 20px 20px;
+    padding: 20px;
     @media (min-width: $breakpoint-m) {
       // padding: 20px 20px 60px;
     }
@@ -200,7 +208,7 @@
 
   &__top {
     margin-bottom: 40px;
-    @media (min-width: $breakpoint) {
+    @media (min-width: $breakpoint-ll) {
       margin-bottom: 70px;
     }
 
