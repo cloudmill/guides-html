@@ -21,18 +21,18 @@ mixin panel
             .panel__select(class=(!attributes.cruise ? 'panel__select--land' : ''))
               .select-wrapper
                 .select
-                  if (attributes.select)
+                  if (attributes.cruise)
                     select.select__mobile(name="panel-mob")
                       option(value="" disabled selected)
-                        |#{attributes.select}
-                      each item in data.selectValues.locations
-                        option(value = item.value)
-                          |#{item.value}
-                    select.select__select(name="location" style='width: 100%' data-select-placeholder=attributes.select) 
+                        |Cruise Ship
+                      each item in data.selectValues.cruise
+                        option(value = item)
+                          |#{item}
+                    select.select__select(name="location" style='width: 100%' data-select-placeholder="Cruise Ship") 
                       option
-                      each item in data.selectValues.locations
-                        option(value = item.value)
-                          |#{item.value}
+                      each item in data.selectValues.cruise
+                        option(value = item)
+                          |#{item}
                   else
                     select.select__mobile(name="location-mob")
                       option(value="" disabled selected)

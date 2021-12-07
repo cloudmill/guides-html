@@ -709,6 +709,7 @@
         "value": "Helsinki"
       }
     ],
+    "cruise": ["AIDAaura", "Crystal Serenity", "Carnival Legend", "Azamara Journey"],
     "excursions": [
       {
         "value": "value-1"
