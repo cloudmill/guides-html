@@ -465,22 +465,6 @@
           "text": "Suburbs"
         }
       ]
-    },
-    {
-      "type": "Availability for wheelchair-users",
-      "options": [
-        {
-          "text": "Wheelchair-friendly"
-        }
-      ]
-    },
-    {
-      "type": "Sale",
-      "options": [
-        {
-          "text": "On sale "
-        }
-      ]
     }
   ],
   "cruiseTour": [

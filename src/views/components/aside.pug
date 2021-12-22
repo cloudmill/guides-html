@@ -181,6 +181,19 @@ mixin aside
                     +check-svg.aside__svg
                   .aside__text 
                     |Wheelchair-friendly
+            li.aside__item(data-aos='fade-up') 
+              .aside__top
+                .aside__type 
+                  |Sale
+                a.aside__select.disabled(href="#") 
+                  |Select
+              .aside__body
+                label.aside__label
+                  input.aside__input(type="checkbox" name='checkbox' value='1')
+                  .aside__checkbox
+                    +check-svg.aside__svg
+                  .aside__text 
+                    |On sale 
         .aside__buttons(data-aos='fade-up')  
           .aside__buttons-item 
             .button-icon.animation(data-clear-button='')
