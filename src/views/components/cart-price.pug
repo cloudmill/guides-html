@@ -6,15 +6,15 @@ mixin cart-price
           -
             var ddata = [
               {
-                text: 'Price without discount',
+                text: 'Initial cost',
                 num: '$3000'
               },
               {
-                text: 'Discount on the promotion',
+                text: 'Current discount',
                 num: '$200'
               },
               {
-                text: 'Discount on the "Baltics+SPB" promotion"',
+                text: 'Package discount"',
                 num: '$200'
               },
             ]
@@ -26,7 +26,7 @@ mixin cart-price
                 |#{item.num}
           .cart-price__item 
             .cart-price__caption 
-              |Discounted price
+              |To be paid
             .cart-price__number 
               |$2800
         .cart-price__col 

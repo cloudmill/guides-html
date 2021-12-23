@@ -556,7 +556,7 @@
       "text": "3 hours"
     },
     {
-      "label": "moving",
+      "label": "Transportation",
       "text": "Walking"
     },
     {
@@ -585,7 +585,7 @@
         "text": "Wheelchair-friendly"
       },
       {
-        "label": "Collection point",
+        "label": "meeting point",
         "text": "Port"
       }
     ]
