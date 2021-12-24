@@ -1,5 +1,11 @@
 .team {
 
+  &--mobile {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+  }
+
   &__item {
     width: 300px;
     @media (min-width: $breakpoint-xs) {
@@ -9,10 +15,27 @@
       width: 335px;
     }
     @media (min-width: $breakpoint) {
-      width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+      width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
     }
-    @media (min-width: $breakpoint-xl) {
-      width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
-    }
+    // @media (min-width: $breakpoint-xl) {
+    //   width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+    // }
   }
+}
+
+.team-grid {
+  --itemsCount: 2;
+  --gap: 40px;
+  @media (max-width: ($breakpoint-m - 1px)) {
+    --itemsCount: 1;
+    --gap: 32px;
+  }
+  @media (min-width: $breakpoint) {
+    display: none;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(var(--itemsCount), 1fr);
+  row-gap: var(--gap);
+  column-gap: var(--gap);
 }

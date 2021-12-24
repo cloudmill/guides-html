@@ -76,6 +76,9 @@ block content
                 .swiper-slide 
                   .team__item
                     +guides-card(sign = item.sign name = item.name src = item.src)
+        .team-grid
+          each item in data.team
+            +guides-card(sign = item.sign name = item.name src = item.src)
     section.section 
       .container 
         .main-page__top(data-aos='fade-up')

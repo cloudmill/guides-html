@@ -8,7 +8,7 @@
     column-gap: 60px;
   }
   @media (min-width: $breakpoint) {
-    grid-template-columns : repeat(3, 1fr);
+    grid-template-columns : repeat(4, 1fr);
     column-gap: 40px;
     row-gap: 70px;
   }

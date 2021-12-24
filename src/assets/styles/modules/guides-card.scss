@@ -56,18 +56,16 @@
   }
 
   &__name {
-    position: absolute;
-    z-index: 1;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-bottom: 10px;
+    @media (min-width: $breakpoint) {
+      margin-bottom: 20px;
+    }
 
-    color: $color-white;
     white-space: nowrap;
     font-weight: 500;
     @include fsl(20px);
     @media (min-width: $breakpoint) {
-      @include fsl(26px);
+      @include fsl(22px);
     }
   }
 
@@ -122,20 +120,11 @@
   }
 
   &__bot {
-    margin-top: 15px;
-    @media (min-width: $breakpoint) {
-      margin-top: 20px;
-    }
-
-    display: flex;
-    align-items: center;
+    margin-top: 20px;
   }
 
   &__label {
-    margin-right: 20px;
-    @media (min-width: $breakpoint) {
-      margin-right: 62px;
-    }
+    margin-bottom: 5px;
 
     font-weight: 500;
     @include fsl(14px);
@@ -147,18 +136,18 @@
   }
 
   &__sign {
-    $padding: 25px;
+    $padding: 15px;
 
     padding: 0 $padding; // safari issue
     position: absolute;
     top: calc(30px - 10px);
-    right: calc(30px - #{$padding});
+    right: calc(26px - #{$padding});
     @media (min-width: $breakpoint) {
-      top: 46px;
-      right: calc(51px - #{$padding});
+      top: 30px;
+      right: calc(40px - #{$padding});
     }
 
-    @include fsl(60px, 180%);
+    @include fsl(40px, 180%);
     color: $color-white;
     @include f-3;
   }

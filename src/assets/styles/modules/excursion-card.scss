@@ -101,16 +101,6 @@
     @include fsl(16px);
   }
 
-  &__bot {
-    padding-top: 15px;
-
-    @media (min-width: $breakpoint) {
-      padding-top: 20px;
-    }
-
-    border-top: 1px solid $color-light-gray;
-  }
-
   &__info {
     display: flex;
   }

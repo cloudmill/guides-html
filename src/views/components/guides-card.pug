@@ -2,14 +2,14 @@ mixin guides-card
   .guides-card(class = attributes.class data-fancy-button='1')
     .guides-card__container 
       img.guides-card__img(src="assets/images/" + attributes.src, alt="")
-      .guides-card__name
-        |#{attributes.name}
       .guides-card__button
         +plus-svg.guides-card__svg
       .guides-card__ball
       .guides-card__sign 
         |#{attributes.sign}
     .guides-card__bot
+      .guides-card__name
+        |#{attributes.name}
       .guides-card__label 
         |Languages
       .guides-card__text
