@@ -33,7 +33,7 @@ mixin panel
                       each item in data.selectValues.cruise
                         option(value = item)
                           |#{item}
-                  else
+                  if (attributes.select)
                     select.select__mobile(name="location-mob")
                       option(value="" disabled selected)
                         |Location

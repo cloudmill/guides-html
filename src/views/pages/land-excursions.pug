@@ -7,7 +7,7 @@ include  ../components/panel
 include  ../components/excursion-card
 
 block content
-  .excursions-page
+  .excursion-page
     section.section.section--panel.section--visible(data-aos='fade-up') 
       +panel(disabled = true button='Apply')
     section.section.section--md(data-aos='fade-up')
@@ -17,6 +17,19 @@ block content
       .container 
         .row 
           .row__col
+            .select-wrapper.excursion-page__select
+              .select
+                select.select__mobile(name="location-mob")
+                  option(value="" disabled selected)
+                    |Location
+                  each item in data.selectValues.locations
+                    option(value = item.value)
+                      |#{item.value}
+                select.select__select(name="location" style='width: 100%' data-select-placeholder='Location') 
+                  option
+                  each item in data.selectValues.locations
+                    option(value = item.value)
+                      |#{item.value} 
             +aside
           .row__col
             .row__grid  
