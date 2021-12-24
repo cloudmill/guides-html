@@ -78,7 +78,7 @@
   &__item {
     width: calc((100% / 2) - 5px);
     @media (min-width: $breakpoint) {
-      width: 200px;
+      min-width: 200px;
     }
 
     &:not(:first-child) {
