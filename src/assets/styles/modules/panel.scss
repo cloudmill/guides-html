@@ -78,6 +78,7 @@
   &__item {
     width: calc((100% / 2) - 5px);
     @media (min-width: $breakpoint) {
+      width: auto;
       min-width: 200px;
     }
 
