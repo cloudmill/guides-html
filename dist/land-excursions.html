@@ -83,7 +83,7 @@
 													<li class="nav__item" data-aos="fade-up"><a class="nav__link" href="#">FAQ</a></li>
 													<li class="nav__item" data-aos="fade-up"><a class="nav__link" href="#">Clients</a></li>
 													<li class="nav__item" data-aos="fade-up"><a class="nav__link" href="#">Contacts</a></li>
-													<li class="nav__item" data-aos="fade-up"><a class="nav__link" href="#">Landmarks</a></li>
+													<li class="nav__item" data-aos="fade-up"><a class="nav__link" href="#">Attractions</a></li>
 												</ul>
 											</nav>
 											<form class="header__search">
@@ -210,7 +210,7 @@
 												<li class="nav__item" data-aos="fade-up"><a class="nav__link" href="#">FAQ</a></li>
 												<li class="nav__item" data-aos="fade-up"><a class="nav__link" href="#">Clients</a></li>
 												<li class="nav__item" data-aos="fade-up"><a class="nav__link" href="#">Contacts</a></li>
-												<li class="nav__item" data-aos="fade-up"><a class="nav__link" href="#">Landmarks</a></li>
+												<li class="nav__item" data-aos="fade-up"><a class="nav__link" href="#">Attractions</a></li>
 											</ul>
 										</nav>
 									</div>
@@ -269,7 +269,19 @@
 										<div class="panel__col">
 											<div class="panel__select panel__select--land">
 												<div class="select-wrapper">
-													<div class="select"></div>
+													<div class="select"><select class="select__mobile" name="location-mob">
+															<option value="" disabled="disabled" selected="selected">Select city</option>
+															<option value="Saint Petersburg">Saint Petersburg</option>
+															<option value="Moscow">Moscow</option>
+															<option value="Tallin">Tallin</option>
+															<option value="Helsinki">Helsinki</option>
+														</select><select class="select__select" name="location" style="width: 100%" data-select-placeholder="Select city">
+															<option></option>
+															<option value="Saint Petersburg">Saint Petersburg</option>
+															<option value="Moscow">Moscow</option>
+															<option value="Tallin">Tallin</option>
+															<option value="Helsinki">Helsinki</option>
+														</select></div>
 												</div>
 											</div>
 										</div>
@@ -298,21 +310,6 @@
 						<div class="container">
 							<div class="row">
 								<div class="row__col">
-									<div class="select-wrapper excursion-page__select">
-										<div class="select"><select class="select__mobile" name="location-mob">
-												<option value="" disabled="disabled" selected="selected">Location</option>
-												<option value="Saint Petersburg">Saint Petersburg</option>
-												<option value="Moscow">Moscow</option>
-												<option value="Tallin">Tallin</option>
-												<option value="Helsinki">Helsinki</option>
-											</select><select class="select__select" name="location" style="width: 100%" data-select-placeholder="Location">
-												<option></option>
-												<option value="Saint Petersburg">Saint Petersburg</option>
-												<option value="Moscow">Moscow</option>
-												<option value="Tallin">Tallin</option>
-												<option value="Helsinki">Helsinki</option>
-											</select></div>
-									</div>
 									<div class="aside active" data-accordion="">
 										<div class="aside__container">
 											<div class="aside-button" data-accordion-button="" data-aos="fade-up">
@@ -330,7 +327,7 @@
 														</div>
 														<div class="aside__body">
 															<div class="select-wrapper">
-																<div class="select select--md"><select class="select__mobile" name="location-mob" data-aside-select="">
+																<div class="select select--md"><select class="select__mobile" name="language-mob" data-aside-select="">
 																		<option value="" disabled="disabled" selected="selected">Select language</option>
 																		<option value="Value-1">Value-1</option>
 																		<option value="Value-2">Value-2</option>
@@ -399,17 +396,17 @@
 																<div class="aside__checkbox"><svg class="aside__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
-																<div class="aside__text">Half-Day tour (3-4 hours)</div>
+																<div class="aside__text">Half-day tours</div>
 															</label><label class="aside__label"><input class="aside__input" type="checkbox" name="checkbox" value="1" />
 																<div class="aside__checkbox"><svg class="aside__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
-																<div class="aside__text">1 day (5-8 hours)</div>
+																<div class="aside__text">1-day tours</div>
 															</label><label class="aside__label"><input class="aside__input" type="checkbox" name="checkbox" value="1" />
 																<div class="aside__checkbox"><svg class="aside__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
-																<div class="aside__text">2 days</div>
+																<div class="aside__text">2-day tours</div>
 															</label></div>
 													</li>
 													<li class="aside__item" data-aos="fade-up">
@@ -499,7 +496,7 @@
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M15.5002 25C15.1673 25 13.417 23.5829 13.417 22.1009C13.417 20.9407 14.3495 20 15.5002 20C16.6509 20 17.5837 20.9407 17.5837 22.1009C17.5837 23.5829 15.8331 25 15.5002 25Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
 																</svg></div>
 															<div class="excursion-card__landmarks">
-																<div class="excursion-card__label">Landmarks</div>
+																<div class="excursion-card__label">Attractions</div>
 																<div class="excursion-card__text">Hermitage, Peterhof, Fountains of Peterhof</div>
 															</div>
 														</div>
@@ -553,7 +550,7 @@
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M15.5002 25C15.1673 25 13.417 23.5829 13.417 22.1009C13.417 20.9407 14.3495 20 15.5002 20C16.6509 20 17.5837 20.9407 17.5837 22.1009C17.5837 23.5829 15.8331 25 15.5002 25Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
 																</svg></div>
 															<div class="excursion-card__landmarks">
-																<div class="excursion-card__label">Landmarks</div>
+																<div class="excursion-card__label">Attractions</div>
 																<div class="excursion-card__text">Hermitage, Peterhof, Fountains of Peterhof</div>
 															</div>
 														</div>
@@ -607,7 +604,7 @@
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M15.5002 25C15.1673 25 13.417 23.5829 13.417 22.1009C13.417 20.9407 14.3495 20 15.5002 20C16.6509 20 17.5837 20.9407 17.5837 22.1009C17.5837 23.5829 15.8331 25 15.5002 25Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
 																</svg></div>
 															<div class="excursion-card__landmarks">
-																<div class="excursion-card__label">Landmarks</div>
+																<div class="excursion-card__label">Attractions</div>
 																<div class="excursion-card__text">Hermitage, Peterhof, Fountains of Peterhof</div>
 															</div>
 														</div>
@@ -661,7 +658,7 @@
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M15.5002 25C15.1673 25 13.417 23.5829 13.417 22.1009C13.417 20.9407 14.3495 20 15.5002 20C16.6509 20 17.5837 20.9407 17.5837 22.1009C17.5837 23.5829 15.8331 25 15.5002 25Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
 																</svg></div>
 															<div class="excursion-card__landmarks">
-																<div class="excursion-card__label">Landmarks</div>
+																<div class="excursion-card__label">Attractions</div>
 																<div class="excursion-card__text">Hermitage, Peterhof, Fountains of Peterhof</div>
 															</div>
 														</div>
@@ -715,7 +712,7 @@
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M15.5002 25C15.1673 25 13.417 23.5829 13.417 22.1009C13.417 20.9407 14.3495 20 15.5002 20C16.6509 20 17.5837 20.9407 17.5837 22.1009C17.5837 23.5829 15.8331 25 15.5002 25Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
 																</svg></div>
 															<div class="excursion-card__landmarks">
-																<div class="excursion-card__label">Landmarks</div>
+																<div class="excursion-card__label">Attractions</div>
 																<div class="excursion-card__text">Hermitage, Peterhof, Fountains of Peterhof</div>
 															</div>
 														</div>
@@ -769,7 +766,7 @@
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M15.5002 25C15.1673 25 13.417 23.5829 13.417 22.1009C13.417 20.9407 14.3495 20 15.5002 20C16.6509 20 17.5837 20.9407 17.5837 22.1009C17.5837 23.5829 15.8331 25 15.5002 25Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
 																</svg></div>
 															<div class="excursion-card__landmarks">
-																<div class="excursion-card__label">Landmarks</div>
+																<div class="excursion-card__label">Attractions</div>
 																<div class="excursion-card__text">Hermitage, Peterhof, Fountains of Peterhof</div>
 															</div>
 														</div>
@@ -823,7 +820,7 @@
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M15.5002 25C15.1673 25 13.417 23.5829 13.417 22.1009C13.417 20.9407 14.3495 20 15.5002 20C16.6509 20 17.5837 20.9407 17.5837 22.1009C17.5837 23.5829 15.8331 25 15.5002 25Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
 																</svg></div>
 															<div class="excursion-card__landmarks">
-																<div class="excursion-card__label">Landmarks</div>
+																<div class="excursion-card__label">Attractions</div>
 																<div class="excursion-card__text">Hermitage, Peterhof, Fountains of Peterhof</div>
 															</div>
 														</div>
@@ -877,7 +874,7 @@
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M15.5002 25C15.1673 25 13.417 23.5829 13.417 22.1009C13.417 20.9407 14.3495 20 15.5002 20C16.6509 20 17.5837 20.9407 17.5837 22.1009C17.5837 23.5829 15.8331 25 15.5002 25Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
 																</svg></div>
 															<div class="excursion-card__landmarks">
-																<div class="excursion-card__label">Landmarks</div>
+																<div class="excursion-card__label">Attractions</div>
 																<div class="excursion-card__text">Hermitage, Peterhof, Fountains of Peterhof</div>
 															</div>
 														</div>
@@ -931,7 +928,7 @@
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M15.5002 25C15.1673 25 13.417 23.5829 13.417 22.1009C13.417 20.9407 14.3495 20 15.5002 20C16.6509 20 17.5837 20.9407 17.5837 22.1009C17.5837 23.5829 15.8331 25 15.5002 25Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
 																</svg></div>
 															<div class="excursion-card__landmarks">
-																<div class="excursion-card__label">Landmarks</div>
+																<div class="excursion-card__label">Attractions</div>
 																<div class="excursion-card__text">Hermitage, Peterhof, Fountains of Peterhof</div>
 															</div>
 														</div>
@@ -995,7 +992,7 @@
 										<li class="nav__item" data-aos="fade-up"><a class="nav__link" href="#">Q&amp;A</a></li>
 										<li class="nav__item" data-aos="fade-up"><a class="nav__link" href="#">Clients</a></li>
 										<li class="nav__item" data-aos="fade-up"><a class="nav__link" href="#">Contacts</a></li>
-										<li class="nav__item" data-aos="fade-up"><a class="nav__link" href="#">Landmarks</a></li>
+										<li class="nav__item" data-aos="fade-up"><a class="nav__link" href="#">Attractions</a></li>
 									</ul>
 								</nav>
 							</div>
