@@ -8,9 +8,6 @@
 
   &__item {
     width: 300px;
-    @media (min-width: $breakpoint-xs) {
-      width: 315px;
-    }
     @media (min-width: $breakpoint-m) {
       width: 335px;
     }

@@ -28,7 +28,7 @@ mixin aside
               .aside__body
                 .select-wrapper
                   .select.select--md
-                    select.select__mobile(name="location-mob" data-aside-select='')
+                    select.select__mobile(name="language-mob" data-aside-select='')
                       option(value="" disabled selected)
                         |Select language
                       each item in data.selectValues.language
@@ -80,13 +80,13 @@ mixin aside
                     +check-svg.aside__svg
                   .tooltip
                     .aside__text 
-                      |Half-day tours (3-4 hours)
+                      |Half-day tours
                       span.tooltip__span 
                         .tooltip__icon 
                           +tooltip-svg.tooltip__svg
                       .tooltip__container   
                         |#{data.tooltipText}
-                each text in ['1 day (5-8 hours)', '2 days', '3 days',]
+                each text in ['1-day tours', '2-day tours', '3-day tours',]
                   label.aside__label
                     input.aside__input(type="checkbox" name='checkbox' value='1')
                     .aside__checkbox
@@ -136,7 +136,7 @@ mixin aside
               .aside__body
                 .select-wrapper
                   .select.select--md
-                    select.select__mobile(name="location-mob" data-aside-select='')
+                    select.select__mobile(name="language-mob" data-aside-select='')
                       option(value="" disabled selected)
                         |Select language
                       each item in data.selectValues.language

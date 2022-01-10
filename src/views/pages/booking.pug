@@ -32,7 +32,7 @@ block content
         {
           type: 'phone',
           name: 'phone',
-          placeholder: 'Phone'
+          placeholder: 'International phone number'
         },
         {
           type: 'text',
@@ -51,7 +51,7 @@ block content
     section.section.section--first
       .container(data-aos='fade-up')
         +navigation(page="Booking an excursion")
-    section.section.section--md 
+    section.section.section--md.section--desktop-visible
       .container
         .booking-page__row 
           .booking-page__col
@@ -64,7 +64,7 @@ block content
                 .booking-page__item
                   each item in ddata.second
                     .form__item(data-aos='fade-up') 
-                      +input(name = item.name placeholder = item.placeholder type = item.type)
+                      +input(name = item.name placeholder = item.placeholder type = item.type data-mask="phone")
               .booking-page__inner 
                 h4.booking-page__title(data-aos='fade-up') 
                   |Tour comment
@@ -80,7 +80,7 @@ block content
                   +button.button--sticky(tag = 'button')
                     |Further
           .booking-page__col
-            .booking-page__grid 
+            .booking-page__grid.booking-page__sticky
               .booking-page__grid-item
                 .booking-page__card 
                   .booking-page__card-container 

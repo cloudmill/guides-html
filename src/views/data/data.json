@@ -154,7 +154,7 @@
       "link": "Contacts"
     },
     {
-      "link": "Landmarks"
+      "link": "Attractions"
     }
   ],
   "navFooter": [
@@ -174,7 +174,7 @@
       "link": "Contacts"
     },
     {
-      "link": "Landmarks"
+      "link": "Attractions"
     }
   ],
   "phone": "+7 812 441-31-63",
@@ -445,13 +445,13 @@
       "type": "Tour duration",
       "options": [
         {
-          "text": "Half-Day tour (3-4 hours)"
+          "text": "Half-day tours"
         },
         {
-          "text": "1 day (5-8 hours)"
+          "text": "1-day tours"
         },
         {
-          "text": "2 days"
+          "text": "2-day tours"
         }
       ]
     },

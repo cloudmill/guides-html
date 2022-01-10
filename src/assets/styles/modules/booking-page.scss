@@ -164,4 +164,11 @@
     }
   }
   &__grid-item {}
+  
+  &__sticky {
+    @media (min-width: $breakpoint) {
+      position: sticky;
+      top: 140px;
+    }
+  }
 }

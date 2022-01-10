@@ -86,7 +86,7 @@ import {mediaQuery} from './mediaQueries'
 
       select.each(function() {
         const selectMobile = $(this).find('.select__mobile')
-        const selectPlaceholder = $(this).find('.select2-selection__placeholder')
+        const selectPlaceholder = $(this).find('.select2-selection__rendered')
 
         selectMobile.on('change', function() {
           selectPlaceholder.text(this.value)

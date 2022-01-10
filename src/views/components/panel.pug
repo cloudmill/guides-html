@@ -36,11 +36,11 @@ mixin panel
                   if (attributes.select)
                     select.select__mobile(name="location-mob")
                       option(value="" disabled selected)
-                        |Location
+                        |Select city
                       each item in data.selectValues.locations
                         option(value = item.value)
                           |#{item.value}
-                    select.select__select(name="location" style='width: 100%' data-select-placeholder='Location') 
+                    select.select__select(name="location" style='width: 100%' data-select-placeholder='Select city') 
                       option
                       each item in data.selectValues.locations
                         option(value = item.value)

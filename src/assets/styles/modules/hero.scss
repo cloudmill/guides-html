@@ -82,8 +82,12 @@
 
   &__label {
     position: absolute;
-    bottom: -5px;
-    right: -79px;
+    bottom: -35px;
+    right: -20px;
+    @media (min-width: $breakpoint-xs) {
+      bottom: -5px;
+      right: -79px;
+    }
     @media (min-width: $breakpoint-m) {
       bottom: 0;
       right: -119px;

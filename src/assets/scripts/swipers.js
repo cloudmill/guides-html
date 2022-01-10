@@ -1,6 +1,7 @@
 import Swiper from 'swiper/bundle';
 
 const BREAKPOINT = 1280;
+const BREAKPOINT_MOBILE = 768
 
 // swiper 
 {
@@ -37,6 +38,22 @@ const BREAKPOINT = 1280;
                 // [BREAKPOINT]: {
                 //   spaceBetween: 60,
                 // },
+              },
+            }
+            break;
+          case 'team':
+            slider_options = {
+              ...slider_options,
+
+              spaceBetween: 10,
+
+              breakpoints: {
+                [BREAKPOINT_MOBILE]: {
+                  spaceBetween: 20,
+                },
+                [BREAKPOINT]: {
+                  spaceBetween: 40,
+                },
               },
             }
             break;

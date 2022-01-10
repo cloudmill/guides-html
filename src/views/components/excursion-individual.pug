@@ -38,7 +38,7 @@ mixin landmarks
     .excursion-page__landmarks-row 
       .excursion-page__landmarks-col(data-aos='fade-up') 
         h2
-          |Landmarks
+          |Attractions
       .excursion-page__landmarks-col
         ul.excursion-page__landmarks-list
           each item in data.landmarks 
@@ -95,13 +95,11 @@ mixin calculator
                 |Start time
               .calculator__select
                 .select.select--small
-                  select.select__mobile(name="location-mob")
-                    option(value="" disabled selected)
-                      |Location
-                    each item in data.selectValues.language
+                  select.select__mobile(name="time-mob")
+                    each item in data.selectValues.time
                       option(value = item.value)
                         |#{item.value}
-                  select.select__select(name="location" style='width: 100%') 
+                  select.select__select(name="time" style='width: 100%') 
                     each item in data.selectValues.time
                       option(value = item.value)
                         |#{item.value} 
@@ -209,13 +207,11 @@ mixin calculator
                 |Start time
               .calculator__select
                 .select.select--small
-                  select.select__mobile(name="location-mob")
-                    option(value="" disabled selected)
-                      |Location
-                    each item in data.selectValues.language
+                  select.select__mobile(name="time-mob")
+                    each item in data.selectValues.time
                       option(value = item.value)
                         |#{item.value}
-                  select.select__select(name="location" style='width: 100%') 
+                  select.select__select(name="time" style='width: 100%') 
                     each item in data.selectValues.time
                       option(value = item.value)
                         |#{item.value} 
@@ -360,7 +356,7 @@ mixin calculator
                       .calculator__label
                         |Total amount
                       .events__title
-                        |To be discussed separately. The manager will contact you as soon as possible
+                        |To be discussed separately. Our manager will get in touch with you ASAP.
     .calculator__payments
       .calculator__payments-title(data-aos='fade-up')  
         |We accept payments
@@ -440,13 +436,11 @@ mixin calculator-alt
           .calculator__select
             .select-wrapper
               .select.select--small
-                select.select__mobile(name="location-mob")
-                  option(value="" disabled selected)
-                    |Location
-                  each item in data.selectValues.language
+                select.select__mobile(name="time-mob")
+                  each item in data.selectValues.time
                     option(value = item.value)
                       |#{item.value}
-                select.select__select(name="location" style='width: 100%') 
+                select.select__select(name="time" style='width: 100%') 
                   each item in data.selectValues.time
                     option(value = item.value)
                       |#{item.value} 
@@ -473,7 +467,7 @@ mixin calculator-alt
               |#{attributes.price}
           else 
             .calculator__num
-              |To be discussed separately. #[br] The manager will contact you as soon as possible.
+              |To be discussed separately. #[br] Our manager will get in touch with you ASAP.
     .calculator__payments
       .calculator__payments-title(data-aos='fade-up')  
         |We accept payments
@@ -517,7 +511,7 @@ mixin calculator-alt
                   |#{attributes.price}
               else 
                 .calculator__num.calculator__num--mb  
-                  |To be discussed separately. #[br] The manager will contact you as soon as possible.
+                  |To be discussed separately. #[br] Our manager will get in touch with you ASAP.
           .calculator__price-col(data-aos='fade-up')
             .button-icon.button-icon--calculator.animation
               .button-icon__icon
