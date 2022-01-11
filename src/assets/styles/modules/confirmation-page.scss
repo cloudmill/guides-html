@@ -133,8 +133,14 @@
       white-space: normal;
     }
 
-    color: $color-gray;
+    color: $color-black;
     @include fsl(12px, 160%);
+    transition: opacity $transition;
+
+    &.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 
   &__pay {

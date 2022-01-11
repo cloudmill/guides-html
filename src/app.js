@@ -15,6 +15,7 @@ import 'scripts/data-picker.js';
 import 'scripts/form-response.js';
 import 'scripts/file-input.js';
 import 'scripts/table.js';
+import 'scripts/label-hide.js';
 import 'scripts/aside.js';
 import 'scripts/video.js';
 import 'scripts/admin-tabs.js';

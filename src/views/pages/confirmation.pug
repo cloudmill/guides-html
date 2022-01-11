@@ -127,8 +127,14 @@ block content
                     .confirmation-page__total-title 
                       |Prepayment
                   .confirmation-page__total-col(data-aos='fade-up')
-                    +tabs
-                    .confirmation-page__total-label 
+                    .tabs(data-tabs='')
+                      .tabs__item 
+                        .tabs__tab(data-tabs-item='' data-hide-button='') 
+                          |100%
+                      .tabs__item 
+                        .tabs__tab.active(data-tabs-item='' data-show-button='')
+                          |30%
+                    .confirmation-page__total-label(data-label='')
                       |- 70% to be paid in cash upon arrival
           .confirmation-page__pay
             .cart-price.cart-price--row

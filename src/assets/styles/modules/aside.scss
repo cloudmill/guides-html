@@ -72,16 +72,18 @@
 
     color: $color-azure;
     @include fsl(14px);
+    opacity: 0.7;
     cursor: pointer;
-    transition: $transition;
+    transition: opacity $transition;
     
     &.disabled {
-      opacity: 0.7;
+      opacity: 0;
       pointer-events: none;
     }
 
     &:hover {
-      color: $color-brown;
+      opacity: 1;
+      // color: $color-brown;
     }
   }
 
