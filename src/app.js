@@ -37,7 +37,7 @@ $(() => {
 
   Inputmask({mask: "99.99.9999", showMaskOnHover: false}).mask('[data-date-input]')
   Inputmask({mask: "99:99", showMaskOnHover: false}).mask('[data-time-input]')
-  Inputmask({ mask: "+7 (999) 999-9999", showMaskOnHover: false }).mask("[data-mask=phone]");
+  Inputmask({ mask: "+9{1,}", showMaskOnHover: false, }).mask("[data-mask=phone]");
 
   const calendar = new CalendarChanger('.calendar-card')
 })

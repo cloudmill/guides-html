@@ -72,9 +72,8 @@
 
     color: $color-azure;
     @include fsl(14px);
-    opacity: 0.7;
     cursor: pointer;
-    transition: opacity $transition;
+    transition: opacity $transition, color $transition;
     
     &.disabled {
       opacity: 0;
@@ -82,8 +81,8 @@
     }
 
     &:hover {
-      opacity: 1;
-      // color: $color-brown;
+      // opacity: 1;
+      color: #C59A70;
     }
   }
 
