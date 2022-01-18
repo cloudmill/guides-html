@@ -4,16 +4,31 @@ mixin panel
       .panel__inner 
         .panel__row 
           .panel__col
-            .excursion-btn
-              .panel__item
-                a.excursion-btn__button(href="#" class=(attributes.cruise ? 'excursion-btn__button--active' : '')) 
-                  .excursion-btn__icon
-                    +cruise-svg.excursion-btn__cruise
-                  .excursion-btn__text
-                    |Shore excursions
-              .panel__item
-                a.excursion-btn__button(href="#" class=(attributes.cruise ? '' : 'excursion-btn__button--active')) 
-                  .excursion-btn__icon 
-                    +walk-svg.excursion-btn__walk
-                  .excursion-btn__text
-                    |For hotel guests
+            if (attributes.default)
+              .excursion-btn
+                .panel__item
+                  a.excursion-btn__button(href="#") 
+                    .excursion-btn__icon
+                      +cruise-svg.excursion-btn__cruise
+                    .excursion-btn__text
+                      |Shore excursions
+                .panel__item
+                  a.excursion-btn__button(href="#") 
+                    .excursion-btn__icon 
+                      +walk-svg.excursion-btn__walk
+                    .excursion-btn__text
+                      |For hotel guests
+            else
+              .excursion-btn
+                .panel__item
+                  a.excursion-btn__button(href="#" class=(attributes.cruise ? 'excursion-btn__button--active' : '')) 
+                    .excursion-btn__icon
+                      +cruise-svg.excursion-btn__cruise
+                    .excursion-btn__text
+                      |Shore excursions
+                .panel__item
+                  a.excursion-btn__button(href="#" class=(attributes.cruise ? '' : 'excursion-btn__button--active')) 
+                    .excursion-btn__icon 
+                      +walk-svg.excursion-btn__walk
+                    .excursion-btn__text
+                      |For hotel guests

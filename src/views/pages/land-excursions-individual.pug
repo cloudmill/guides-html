@@ -6,13 +6,13 @@ include  ../components/thumb-slider
 include  ../components/price
 include  ../components/sticky
 include  ../components/slider-buttons
-include ../components/excursion-card 
+include  ../components/excursion-card 
 include  ../components/excursion-individual
 
 block content 
   .excursion-page
     section.section.section--panel 
-      +panel.panel--disabled(button = 'Change' select = true)
+      +panel(button = 'Change' default = true)
     section.section.section--md.section--desktop-visible
       .container
         .section__row
