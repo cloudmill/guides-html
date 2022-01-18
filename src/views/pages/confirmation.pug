@@ -121,21 +121,6 @@ block content
                   .confirmation-page__total-col(data-aos='fade-up')
                     .confirmation-page__total-text 
                       |$1200
-              .confirmation-page__total-item
-                .confirmation-page__total-row 
-                  .confirmation-page__total-col(data-aos='fade-up')
-                    .confirmation-page__total-title 
-                      |Prepayment
-                  .confirmation-page__total-col(data-aos='fade-up')
-                    .tabs(data-tabs='')
-                      .tabs__item 
-                        .tabs__tab(data-tabs-item='' data-hide-button='') 
-                          |100%
-                      .tabs__item 
-                        .tabs__tab.active(data-tabs-item='' data-show-button='')
-                          |30%
-                    .confirmation-page__total-label(data-label='')
-                      |- 70% to be paid in cash upon arrival
           .confirmation-page__pay
             .cart-price.cart-price--row
               .cart-price__container 
@@ -147,12 +132,8 @@ block content
                       .cart-price__number
                         |$360
                     .cart-price__item(data-aos='fade-up') 
-                      .cart-price__text 
-                        |Payment
-                      .confirmation-page__pay-text 
-                        |Bank card
-                      a.cart-price__link(href="#") 
-                        |Payment security is ensured
+                      .confirmation-page__text
+                        |Our manager will contact you within 24 hours to confirm the order
                   .cart-price__col(data-aos='fade-up')
                     +button.button--sticky(tag = 'a' href='#')
-                      |Pay
+                      |Send
