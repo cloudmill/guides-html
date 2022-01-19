@@ -9,14 +9,14 @@
       grid-template-areas: 
         "A B"
         "C C"
-        "D E"
+        // "D E"
       ;
       align-items: flex-start;
       row-gap: 20px;
       @media (min-width: $breakpoint-m) {
         grid-template-areas: 
           "A B C D"
-          "E E E E"
+          // "E E E E"
         ;
       }
       @media (min-width: $breakpoint) {
@@ -134,13 +134,13 @@
       grid-template-areas: 
         "A B"
         "C C"
-        "D D"
-        "E E"
+        // "D D"
+        // "E E"
       ;
       @media (min-width: $breakpoint-m) {
         grid-template-areas: 
           "A B C D"
-          "E E E E"
+          // "E E E E"
         ;
       }
       @media (min-width: $breakpoint) {
@@ -707,7 +707,10 @@
     }
   }
   &__price-right {
-    width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
+    width: calc(#{$col-part-m} * 2 - 10px);
+    @media (min-width: $breakpoint-m) {
+      width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
+    }
     @media (min-width: $breakpoint) {
       margin-left: 66px;
       width: auto;
@@ -739,5 +742,17 @@
 
     max-width: 418px;
     font-weight: 500;
+  }
+
+  &__time {
+    display: flex;
+  }
+  &__time-icon {
+    margin-right: 6px;
+    margin-top: 2px;
+  }
+  &__time-text {
+    font-weight: 500;
+    max-width: 132px;
   }
 }

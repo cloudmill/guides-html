@@ -93,16 +93,23 @@ mixin calculator
             .calculator__top-item(data-aos='fade-up')  
               .calculator__label
                 |Start time
-              .calculator__select
-                .select.select--small
-                  select.select__mobile(name="time-mob")
-                    each item in data.selectValues.time
-                      option(value = item.value)
-                        |#{item.value}
-                  select.select__select(name="time" style='width: 100%') 
-                    each item in data.selectValues.time
-                      option(value = item.value)
-                        |#{item.value} 
+              if (attributes.time)
+                .calculator__time 
+                  .calculator__time-icon 
+                    +warning-svg
+                  .calculator__time-text 
+                    |1,5h after ship arriving 
+              else
+                .calculator__select
+                  .select.select--small
+                    select.select__mobile(name="time-mob")
+                      each item in data.selectValues.time
+                        option(value = item.value)
+                          |#{item.value}
+                    select.select__select(name="time" style='width: 100%') 
+                      each item in data.selectValues.time
+                        option(value = item.value)
+                          |#{item.value} 
           .calculator__top-col.align-end.align-end--table.select-wrapper
             .calculator__select(data-aos='fade-up')  
               .select.select--small
@@ -179,7 +186,7 @@ mixin calculator
                   +plus-svg.counter__svg.counter__plus
               .calculator__description 
                 |Doesn’t influence the cost
-            .calculator__grid-col(data-aos='fade-up') 
+            //- .calculator__grid-col(data-aos='fade-up') 
               .calculator__grid-item
                 .calculator__label
                   |Number of people
@@ -205,16 +212,23 @@ mixin calculator
             .calculator__top-item 
               .calculator__label
                 |Start time
-              .calculator__select
-                .select.select--small
-                  select.select__mobile(name="time-mob")
-                    each item in data.selectValues.time
-                      option(value = item.value)
-                        |#{item.value}
-                  select.select__select(name="time" style='width: 100%') 
-                    each item in data.selectValues.time
-                      option(value = item.value)
-                        |#{item.value} 
+              if (attributes.time)
+                .calculator__time 
+                  .calculator__time-icon 
+                    +warning-svg
+                  .calculator__time-text 
+                    |1,5h after ship arriving 
+              else
+                .calculator__select
+                  .select.select--small
+                    select.select__mobile(name="time-mob")
+                      each item in data.selectValues.time
+                        option(value = item.value)
+                          |#{item.value}
+                    select.select__select(name="time" style='width: 100%') 
+                      each item in data.selectValues.time
+                        option(value = item.value)
+                          |#{item.value} 
           .calculator__top-col.align-end.select-wrapper(data-aos='fade-up') 
             .calculator__select 
               .select.select--small
@@ -223,7 +237,7 @@ mixin calculator
                   each item in data.selectValues.language
                     option(value = item.value)
                       |#{item.value}
-          .calculator__top-col(data-aos='fade-up') 
+          //- .calculator__top-col(data-aos='fade-up') 
             .calculator__top-item 
               .calculator__label.calculator__label--big
                 |Number of people
@@ -346,7 +360,7 @@ mixin calculator
                           |1
                         .counter__item.counter__item--plus(data-count-plus='')
                           +plus-svg.counter__svg.counter__plus
-                  .events__bot-col
+                  //- .events__bot-col
                     .events__bot-left(data-aos='fade-up')
                       .calculator__label
                         |Number of tickets
@@ -454,20 +468,20 @@ mixin calculator-alt
               |1
             .counter__item.counter__item--plus(data-count-plus='')
               +plus-svg.counter__svg.counter__plus
-        .calculator__item(data-aos='fade-up')
-          .calculator__label.calculator__label--big--tablet
-            |Number of tickets
-          .calculator__num 
-            |7
-        .calculator__item(data-aos='fade-up')
-          .calculator__label.calculator__label--big
-            |Total amount
-          if (attributes.price)
-            .calculator__num 
-              |#{attributes.price}
-          else 
-            .calculator__num
-              |To be discussed separately. #[br] Our manager will get in touch with you ASAP.
+        //- .calculator__item(data-aos='fade-up')
+        //-   .calculator__label.calculator__label--big--tablet
+        //-     |Number of tickets
+        //-   .calculator__num 
+        //-     |7
+        //- .calculator__item(data-aos='fade-up')
+        //-   .calculator__label.calculator__label--big
+        //-     |Total amount
+        //-   if (attributes.price)
+        //-     .calculator__num 
+        //-       |#{attributes.price}
+        //-   else 
+        //-     .calculator__num
+        //-       |To be discussed separately. #[br] Our manager will get in touch with you ASAP.
     .calculator__payments
       .calculator__payments-title(data-aos='fade-up')  
         |We accept payments
