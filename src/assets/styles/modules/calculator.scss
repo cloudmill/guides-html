@@ -746,6 +746,7 @@
 
   &__time {
     display: flex;
+    min-height: 50px;
   }
   &__time-icon {
     margin-right: 6px;
@@ -754,5 +755,6 @@
   &__time-text {
     font-weight: 500;
     max-width: 132px;
+    @include fsl(16px, 140%);
   }
 }
