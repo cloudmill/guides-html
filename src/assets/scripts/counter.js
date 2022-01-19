@@ -18,11 +18,15 @@ export class Counter {
       const target = e.target.closest('.counter__item')
 
       if (target === this.minus) {
-        this.number.textContent = +this.number.textContent - 1
+        if (!target.classList.contains('disabled')) {
+          this.number.textContent = +this.number.textContent - 1
+        }
       }
 
       if (target === this.plus) {
-        this.number.textContent = +this.number.textContent + 1
+        if (!target.classList.contains('disabled')) {
+          this.number.textContent = +this.number.textContent + 1
+        }
       }
       
       this.setDisabled()

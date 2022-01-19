@@ -751,6 +751,8 @@
   &__time-icon {
     margin-right: 6px;
     margin-top: 2px;
+    
+    display: flex;
   }
   &__time-text {
     font-weight: 500;
