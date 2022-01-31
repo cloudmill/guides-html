@@ -25,6 +25,23 @@
     &:not(:first-child) {
       margin-top: 15px;
     }
+
+    &.active {
+      
+      #{$comp}__button {
+        // #{$comp}__city {
+        //   color: $color-blue;
+        // }
+
+        #{$comp}__svg {
+          transform: rotate(135deg);
+        }
+      }
+
+      #{$comp}__city {
+        color: $color-blue;
+      }
+    }
   }
 
   &__button {
@@ -33,6 +50,8 @@
     justify-content: space-between;
 
     cursor: pointer;
+
+    
   }
 
   &__city {
@@ -44,9 +63,9 @@
       color: $color-blue;
     }
 
-    &.active {
-      color: $color-blue;
-    }
+    // &.active {
+    //   color: $color-blue;
+    // }
   }
 
   &__icon {
@@ -83,21 +102,40 @@
   }
   &__dropdown-item {
     margin-top: 10px;
+
+    &.active {
+      #{$comp}__dropdown-button {
+        #{$comp}__dropdown-text {
+          color: $color-blue;
+        }
+        #{$comp}__svg {
+          transform: rotate(135deg);
+        }
+      }
+    }
   }
   &__dropdown-button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    cursor: pointer;
+
+    &:hover {
+      #{$comp}__dropdown-text {
+        color: $color-blue;
+      }
+    }
   }
   &__dropdown-text {
     @include fsl(14px);
     transition: $transition;
 
-    &:hover {
+    &.active {
       color: $color-blue;
     }
 
-    &.active {
+    &:hover {
       color: $color-blue;
     }
   }

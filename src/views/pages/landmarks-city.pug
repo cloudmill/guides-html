@@ -20,20 +20,35 @@ block content
                 .aside__dropdown(data-accordion-dropdown='')
                   ul.landmarks-page__list 
                     each item, i in ['Saint Petersburg', 'Moscow', 'Novgorod', 'Tallinn', 'Helsinki', 'Porvoo', 'Berlin', 'Rostock/Warnemünde', 'Schwerin', 'Stockholm', 'Copenhagen']
-                      li.landmarks-page__item(data-aos='fade-up')
-                        a.landmarks-page__city(class=(i === 0 ? 'active' : '') href="#") 
-                          |#{item}
+                      li.landmarks-page__item(class=(i === 0 ? 'active' : '') data-aos='fade-up')
+                        .landmarks-page__button
+                          a.landmarks-page__city(href="#") 
+                            |#{item}
+                          .landmarks-page__icon 
+                            +big-plus-svg.landmarks-page__svg
                         if (i === 0)
                           ul.landmarks-page__dropdown-list
-                            each landmarks in ['City sights', 'Museums', 'Palaces', 'Cathedrals and monasteries', 'Fortresses', 'Theaters']
-                              li.landmarks-page__dropdown-item
+                            li.landmarks-page__dropdown-item 
+                              .landmarks-page__dropdown-button
+                                a.landmarks-page__dropdown-text(href="#") 
+                                  |City sights
+                            li.landmarks-page__dropdown-item 
+                              .landmarks-page__dropdown-button
+                                a.landmarks-page__dropdown-text(href="#") 
+                                  |Museums
+                                .landmarks-page__icon 
+                                  +big-plus-svg.landmarks-page__svg
+                            each landmarks in ['Palaces', 'Cathedrals and monasteries', 'Fortresses', 'Theaters',]
+                              li.landmarks-page__dropdown-item 
                                 .landmarks-page__dropdown-button
                                   a.landmarks-page__dropdown-text(href="#") 
                                     |#{landmarks}
-                            li.landmarks-page__dropdown-item
+                            li.landmarks-page__dropdown-item.active
                               .landmarks-page__dropdown-button
-                                a.landmarks-page__dropdown-text.active(href="#") 
+                                a.landmarks-page__dropdown-text(href="#") 
                                   |Suburbs
+                                .landmarks-page__icon 
+                                  +big-plus-svg.landmarks-page__svg
                               ul.landmarks-page__dropdown-list 
                                 each el in ['Pushkin', 'Peterhof', 'Pavlovsk', 'Kronshtadt', 'Gatchina']
                                   li.landmarks-page__dropdown-item
