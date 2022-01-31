@@ -22,37 +22,40 @@ $(() => {
     })
     
     // Количество выбранных фильтров
-    let arr = []
-    let isOpen = true
     const select = $('[data-aside-select]')
-    const buttonText = $('.aside-button__text').text()
-    
-    // from accordion.js
-    window.addEventListener('accordion-toggle', function () {
-      isOpen = !isOpen
 
-      if (!isOpen) {
-
-        if (select.val()) {
-          arr.push(select.val())
-        }
-        
-        checkbox.each(function() {
-          if (this.checked === true) {
-            arr.push($(this).siblings('.aside__text').text());
-          }
-        })
+    if (select.length) {
+      let arr = []
+      let isOpen = true
+      const buttonText = $('.aside-button__text').text()
+      
+      // from accordion.js
+      window.addEventListener('accordion-toggle', function () {
+        isOpen = !isOpen
   
-        if (arr.length) {
-          $('.aside-button__text').text(arr.length)
+        if (!isOpen) {
+  
+          if (select.val()) {
+            arr.push(select.val())
+          }
+          
+          checkbox.each(function() {
+            if (this.checked === true) {
+              arr.push($(this).siblings('.aside__text').text());
+            }
+          })
+    
+          if (arr.length) {
+            $('.aside-button__text').text(arr.length)
+          }
+  
+          arr = []
+  
+        } else {
+          $('.aside-button__text').text(buttonText)
         }
-
-        arr = []
-
-      } else {
-        $('.aside-button__text').text(buttonText)
-      }
-    });
+      });
+    }
 
     // clear button
     const clearButton = aside.find('[data-clear-button]')

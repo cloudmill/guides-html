@@ -16,6 +16,15 @@
 
     @include f-3;
   }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__col {
+    width: 30%;
+  }
 }
 
 
@@ -38,3 +47,4 @@
   font-size: 25px;
   width: 100%;
 }
+

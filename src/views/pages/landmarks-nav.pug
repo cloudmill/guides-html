@@ -1,0 +1,97 @@
+extends ../layouts/master.pug
+
+include  ../components/navigation
+include  ../components/tour
+include  ../components/aside
+include  ../components/landmark-card
+
+block content 
+  .landmarks-page
+    section.section.section--first
+      .container
+        +navigation(items=['Attractions'] page="Attractions of Saint Petersburg")
+    section.section.section--md 
+      .container 
+        .test__row
+          .test__col
+            .aside.active(data-accordion='')
+              .aside__container 
+                +aside-button
+                .aside__dropdown(data-accordion-dropdown='')
+                  ul.landmarks-page__list 
+                    each item, i in ['Saint Petersburg', 'Moscow', 'Novgorod', 'Tallinn', 'Helsinki', 'Porvoo', 'Berlin', 'Rostock/Warnemünde', 'Schwerin', 'Stockholm', 'Copenhagen']
+                      li.landmarks-page__item(data-aos='fade-up')
+                        a.landmarks-page__city(href="#") 
+                          |#{item}
+          .test__col
+            .aside.active(data-accordion='')
+              .aside__container 
+                +aside-button
+                .aside__dropdown(data-accordion-dropdown='')
+                  ul.landmarks-page__list 
+                    each item, i in ['Saint Petersburg', 'Moscow', 'Novgorod', 'Tallinn', 'Helsinki', 'Porvoo', 'Berlin', 'Rostock/Warnemünde', 'Schwerin', 'Stockholm', 'Copenhagen']
+                      li.landmarks-page__item(data-aos='fade-up')
+                        a.landmarks-page__city(class=(i === 0 ? 'active' : '') href="#") 
+                          |#{item}
+                        if (i === 0)
+                          ul.landmarks-page__dropdown-list
+                            each landmarks in ['City sights', 'Museums', 'Palaces', 'Cathedrals and monasteries', 'Fortresses', 'Theaters', 'Suburbs']
+                              li.landmarks-page__dropdown-item 
+                                .landmarks-page__dropdown-button
+                                  a.landmarks-page__dropdown-text(href="#") 
+                                    |#{landmarks}
+          .test__col
+            .aside.active(data-accordion='')
+              .aside__container 
+                +aside-button
+                .aside__dropdown(data-accordion-dropdown='')
+                  ul.landmarks-page__list 
+                    each item, i in ['Saint Petersburg', 'Moscow', 'Novgorod', 'Tallinn', 'Helsinki', 'Porvoo', 'Berlin', 'Rostock/Warnemünde', 'Schwerin', 'Stockholm', 'Copenhagen']
+                      li.landmarks-page__item(data-aos='fade-up')
+                        a.landmarks-page__city(class=(i === 0 ? 'active' : '') href="#") 
+                          |#{item}
+                        if (i === 0)
+                          ul.landmarks-page__dropdown-list
+                            each landmarks in ['City sights', 'Museums', 'Palaces', 'Cathedrals and monasteries', 'Fortresses', 'Theaters']
+                              li.landmarks-page__dropdown-item
+                                .landmarks-page__dropdown-button
+                                  a.landmarks-page__dropdown-text(href="#") 
+                                    |#{landmarks}
+                            li.landmarks-page__dropdown-item
+                              .landmarks-page__dropdown-button
+                                a.landmarks-page__dropdown-text.active(href="#") 
+                                  |Suburbs
+                              ul.landmarks-page__dropdown-list 
+                                each el in ['Pushkin', 'Peterhof', 'Pavlovsk', 'Kronshtadt', 'Gatchina']
+                                  li.landmarks-page__dropdown-item
+                                    .landmarks-page__dropdown-wrapper
+                                      a.landmarks-page__dropdown-text(href="#") 
+                                        |#{el}
+        .test__row
+          .test__col
+            .aside.active(data-accordion='')
+              .aside__container 
+                +aside-button
+                .aside__dropdown(data-accordion-dropdown='')
+                  ul.landmarks-page__list 
+                    each item, i in ['Saint Petersburg', 'Moscow', 'Novgorod', 'Tallinn', 'Helsinki', 'Porvoo', 'Berlin', 'Rostock/Warnemünde', 'Schwerin', 'Stockholm', 'Copenhagen']
+                      li.landmarks-page__item( data-aos='fade-up')
+                        a.landmarks-page__city(class=(i === 0 ? 'active' : '') href="#") 
+                          |#{item}
+                        if (i === 0)
+                          ul.landmarks-page__dropdown-list
+                            each landmarks in ['City sights', 'Museums', 'Palaces', 'Cathedrals and monasteries', 'Fortresses', 'Theaters']
+                              li.landmarks-page__dropdown-item
+                                .landmarks-page__dropdown-button
+                                  a.landmarks-page__dropdown-text(href="#") 
+                                    |#{landmarks}
+                            li.landmarks-page__dropdown-item
+                              .landmarks-page__dropdown-button
+                                a.landmarks-page__dropdown-text.active(href="#") 
+                                  |Suburbs
+                              ul.landmarks-page__dropdown-list 
+                                each el, j in ['Pushkin', 'Peterhof', 'Pavlovsk', 'Kronshtadt', 'Gatchina']
+                                  li.landmarks-page__dropdown-item
+                                    .landmarks-page__dropdown-wrapper
+                                      a.landmarks-page__dropdown-text(class=(j === 0 ? 'active' : '') href="#") 
+                                        |#{el}

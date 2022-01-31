@@ -25,19 +25,6 @@
     &:not(:first-child) {
       margin-top: 15px;
     }
-
-    &.active {
-      
-      #{$comp}__button {
-        #{$comp}__city {
-          color: $color-blue;
-        }
-
-        #{$comp}__svg {
-          transform: rotate(135deg);
-        }
-      }
-    }
   }
 
   &__button {
@@ -52,6 +39,14 @@
     font-weight: 500;
     @include fsl(16px);
     transition: $transition;
+
+    &:hover {
+      color: $color-blue;
+    }
+
+    &.active {
+      color: $color-blue;
+    }
   }
 
   &__icon {
@@ -81,35 +76,33 @@
   }
 
   &__dropdown {
-    padding-left: 15px;
-
     display: none;
   }
-  &__dropdown-list {}
+  &__dropdown-list {
+    padding-left: 15px;
+  }
   &__dropdown-item {
-    &:not(:first-child) {
-      margin-top: 10px;
-    }
-
-    &.active {
-      #{$comp}__dropdown-button {
-        #{$comp}__dropdown-text {
-          color: $color-blue;
-        }
-        #{$comp}__svg {
-          transform: rotate(135deg);
-        }
-      }
-    }
+    margin-top: 10px;
   }
   &__dropdown-button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    cursor: pointer;
   }
   &__dropdown-text {
     @include fsl(14px);
+    transition: $transition;
+
+    &:hover {
+      color: $color-blue;
+    }
+
+    &.active {
+      color: $color-blue;
+    }
+  }
+
+  &__dropdown-wrapper {
+    display: flex;
   }
 }
