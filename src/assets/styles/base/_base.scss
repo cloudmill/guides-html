@@ -22,6 +22,9 @@ html {
 }
 
 body {
+  min-width: 100vw;
+  overflow-x: hidden;
+
   @include f-main();
   color: $color-black;
   @include fsl(20px, 130%);
