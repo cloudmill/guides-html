@@ -30,13 +30,27 @@ mixin modal
       h3.modal__title 
         |Excursion added to cart
       .modal__btns 
-        .modal__item
+        .modal__item(data-fancybox-close='')
           +button.button--xxl(tag='div')
             |Continue purchase
         .modal__item.modal__item--active
-          +button.button--xxl(tag='div')
+          +button.button--xxl(tag='a' href='#')
             |To cart
-      
+
+//- Если такая экскурсия уже есть в корзине
+mixin same-modal 
+  .modal(data-fancy-modal=attributes.id)
+    .modal__container 
+      h3.modal__title 
+        |A cruise tour is already in the basket. Empty the shopping cart to add a ground tour?
+      .modal__btns 
+        .modal__item(data-fancybox-close='')
+          +button.button--xxl(tag='div')
+            |No
+        .modal__item.modal__item--active
+          +button.button--xxl(tag='a' href='#')
+            |Yes
+
 //- Модалка с вопросом
 mixin faq-modal 
   .modal(data-fancy-modal=attributes.id)

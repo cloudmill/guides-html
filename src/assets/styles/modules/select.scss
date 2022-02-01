@@ -26,7 +26,7 @@
 
     &.select2-container--open {
       .select2-selection {
-        border-bottom: 0;
+        // border-bottom: 0;
         border-color: $color-blue;
 
         &__arrow {
@@ -112,7 +112,6 @@
 
 .select-wrapper {
 
-
   .select2-container {
     margin-top: -1px;
 
@@ -122,6 +121,8 @@
   }
 
   .select2-dropdown {
+    // padding-top: 7px;
+
     border: 1px solid $color-blue;
     border-top: 0;
     border-radius: 0 0 14px 14px;

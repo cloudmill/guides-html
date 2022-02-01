@@ -5,7 +5,7 @@ mixin aside
       .aside__dropdown(data-accordion-dropdown='')
         if (attributes.cruise)
           ul.aside__list 
-            li.aside__item(data-aos='fade-up') 
+            li.aside__item 
               .aside__top
                 .aside__type 
                   |Port
@@ -19,7 +19,7 @@ mixin aside
                       +check-svg.aside__svg
                     .aside__text 
                       |#{text}
-            li.aside__item.aside__item--select(data-select-parent='' data-aos='fade-up')
+            li.aside__item.aside__item--select(data-select-parent='')
               .aside__top 
                 .aside__type 
                   |Language
@@ -39,7 +39,7 @@ mixin aside
                       each item in data.selectValues.language
                         option(value = item.value)
                           |#{item.value}
-            li.aside__item(data-aos='fade-up') 
+            li.aside__item 
               .aside__top
                 .aside__type 
                   |Type
@@ -53,7 +53,7 @@ mixin aside
                       +check-svg.aside__svg
                     .aside__text 
                       |#{text}
-            li.aside__item(data-aos='fade-up') 
+            li.aside__item 
               .aside__top
                 .aside__type 
                   |Features
@@ -67,7 +67,7 @@ mixin aside
                       +check-svg.aside__svg
                     .aside__text 
                       |#{text}
-            li.aside__item(data-aos='fade-up') 
+            li.aside__item 
               .aside__top
                 .aside__type 
                   |Tour duration
@@ -93,7 +93,7 @@ mixin aside
                       +check-svg.aside__svg
                     .aside__text 
                       |#{text}
-            li.aside__item(data-aos='fade-up') 
+            li.aside__item 
               .aside__top
                 .tooltip.tooltip--padr5
                   .aside__type 
@@ -112,7 +112,7 @@ mixin aside
                     +check-svg.aside__svg
                   .aside__text 
                     |Wheelchair-friendly
-            li.aside__item(data-aos='fade-up') 
+            li.aside__item 
               .aside__top
                 .aside__type 
                   |Sale

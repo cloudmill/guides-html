@@ -18,6 +18,7 @@ import 'scripts/table.js';
 import 'scripts/label-hide.js';
 import 'scripts/aside.js';
 import 'scripts/video.js';
+import 'scripts/cart-button.js';
 import 'scripts/admin-tabs.js';
 import 'scripts/aos.js';
 import { Tabs } from './assets/scripts/tabs'
