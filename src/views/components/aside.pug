@@ -9,8 +9,6 @@ mixin aside
               .aside__top
                 .aside__type 
                   |Port
-                a.aside__select.disabled(href="#") 
-                  |Select
               .aside__body
                 each text in ['Saint Petersburg', 'Warnemunde/Rostok', 'Stokholm', 'Tallin', 'Helsinki', 'Copenhagen']
                   label.aside__label
@@ -23,8 +21,6 @@ mixin aside
               .aside__top 
                 .aside__type 
                   |Language
-                a.aside__select.disabled(data-select-button='' href="#")
-                  |Select
               .aside__body
                 .select-wrapper
                   .select.select--md
@@ -43,8 +39,6 @@ mixin aside
               .aside__top
                 .aside__type 
                   |Type
-                a.aside__select.disabled(href="#") 
-                  |Select
               .aside__body
                 each text in ['Individual', 'Group',]
                   label.aside__label
@@ -57,8 +51,6 @@ mixin aside
               .aside__top
                 .aside__type 
                   |Features
-                a.aside__select.disabled(href="#") 
-                  |Select
               .aside__body
                 each text in ['First choice', 'Special interest', 'Child friendly',]
                   label.aside__label
@@ -71,8 +63,6 @@ mixin aside
               .aside__top
                 .aside__type 
                   |Tour duration
-                a.aside__select.disabled(href="#") 
-                  |Select
               .aside__body
                 label.aside__label
                   input.aside__input(type="checkbox" name='checkbox' value='1')
@@ -103,8 +93,6 @@ mixin aside
                         +tooltip-svg.tooltip__svg
                   .tooltip__container 
                     |#{data.tooltipText}
-                a.aside__select.disabled(href="#") 
-                  |Select
               .aside__body
                 label.aside__label
                   input.aside__input(type="checkbox" name='checkbox' value='1')
@@ -116,8 +104,6 @@ mixin aside
               .aside__top
                 .aside__type 
                   |Sale
-                a.aside__select.disabled(href="#") 
-                  |Select
               .aside__body
                 label.aside__label
                   input.aside__input(type="checkbox" name='checkbox' value='1')
@@ -131,8 +117,6 @@ mixin aside
               .aside__top 
                 .aside__type 
                   |City
-                a.aside__select.disabled(data-select-button='' href="#")
-                  |Select
               .aside__body
                 .select-wrapper
                   .select.select--md
@@ -151,8 +135,6 @@ mixin aside
               .aside__top 
                 .aside__type 
                   |Language
-                a.aside__select.disabled(data-select-button='' href="#")
-                  |Select
               .aside__body
                 .select-wrapper
                   .select.select--md
@@ -172,8 +154,6 @@ mixin aside
                 .aside__top
                   .aside__type 
                     |#{item.type}
-                  a.aside__select.disabled(href="#") 
-                    |Select
                 .aside__body
                   each text in item.options
                     label.aside__label
@@ -192,8 +172,6 @@ mixin aside
                         +tooltip-svg.tooltip__svg
                   .tooltip__container 
                     |#{data.tooltipText}
-                a.aside__select.disabled(href="#") 
-                  |Select
               .aside__body
                 label.aside__label
                   input.aside__input(type="checkbox" name='checkbox' value='1')
@@ -205,8 +183,6 @@ mixin aside
               .aside__top
                 .aside__type 
                   |Sale
-                a.aside__select.disabled(href="#") 
-                  |Select
               .aside__body
                 label.aside__label
                   input.aside__input(type="checkbox" name='checkbox' value='1')
