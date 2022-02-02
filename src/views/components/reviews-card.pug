@@ -5,7 +5,10 @@ mixin reviews-card
         +reviews-item-svg.reviews-card__svg
       .reviews-card__top 
         .reviews-card__icon 
-          +avatar-svg
+          if (attributes.man)
+            +avatar-man-svg
+          else
+            +avatar-svg
         .reviews-card__user 
           .reviews-card__name
             |#{attributes.name} 
@@ -15,5 +18,6 @@ mixin reviews-card
         p.reviews-card__text  
           |Po-trya-sa-yu-shche! &#41;&#41; We visited the Hermitage on August 22 with the mega-guide Elena on the route No. 1, the Jordan Staircase. During the period of restrictions, the museum is given 2 hours to explore and without a guide, at the first visit, there is simply nothing to do...
       .reviews-card__button
-        +button(tag = 'a' href= "#")
-          |Read more
+        a.button.animation(href="#" target="_blank") 
+          span.animation__span 
+            |Read more

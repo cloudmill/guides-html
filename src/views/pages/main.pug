@@ -167,7 +167,7 @@ block content
           .swiper-wrapper
             each item in data.mainReviews
               .swiper-slide
-                +reviews-card(name = item.name)
+                +reviews-card(name = item.name man = item.man)
     section.section   
       .container 
         .main-page__top(data-aos='fade-up')

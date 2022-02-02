@@ -1,0 +1,17 @@
+extends ../layouts/master.pug
+
+include  ../components/button
+
+block content
+  .page404
+    section.section.section--first.page404__section(data-aos='fade-up')
+      .container
+        h1.page404__title 
+          |#[span.page404__span 404.] Page not found
+        p.page404__text
+          |The page were looking for could not be found. It might have been removed, renamed, or did not exist in the first place.
+        .page404__buttons 
+          each item in ['Main', 'Shore excursions', 'For hotel guests']
+            .page404__item 
+              +button(tag = 'a' href = '#')
+                |#{item}

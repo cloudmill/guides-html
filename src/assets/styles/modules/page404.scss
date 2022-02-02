@@ -1,0 +1,39 @@
+.page404 {
+
+  padding-bottom: calc(210px - 60px);
+  @media (min-width: $breakpoint) {
+    padding-bottom: calc(308px - 100px);
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    @media (min-width: $breakpoint) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__span {
+    color: $color-blue;
+  }
+
+  &__text {
+    @include fsl(16px, 140%);
+    @media (min-width: $breakpoint) {
+      @include fsl(18px);
+    }
+  }
+
+  &__buttons {
+    margin-top: 40px;
+    @media (min-width: $breakpoint) {
+      margin-top: 50px;
+    }
+
+    display: flex;
+    flex-wrap: wrap;
+    @media (min-width: $breakpoint) {
+      flex-wrap: nowrap;
+    }
+    gap: 8px;
+  }
+}
