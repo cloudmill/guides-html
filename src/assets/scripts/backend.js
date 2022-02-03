@@ -1,7 +1,12 @@
 $(function() {
   forms();
   selectItem();
+  filter();
 });
+
+function ajaxCallbackErrors(xhr) {
+  alert(`error: ${xhr.status}: ${xhr.statusText}`);
+}
 
 function forms() {
   $(document).on('submit', '[data-type=form-backend]', function(e) {
@@ -27,15 +32,42 @@ function forms() {
           alert(r.message);
         }
       },
-      error: function(xhr, status, error) {
-        alert(`error: ${xhr.status}: ${xhr.statusText}`);
-      }
+      error: ajaxCallbackErrors,
     });
   });
 }
 
 function selectItem() {
   $(document).on('click', '[data-select-item]', function() {
-    $(`[data-form=${$(this).closest('[data-container=tabs-container]').data('form-type')}]`).find('[data-field=sectionId]').val($(this).data('id'));
+    $(`[data-form=${$(this).closest('[data-form-type-container]').data('form-type')}]`).find('[data-field=sectionId]').val($(this).data('id'));
+  });
+}
+
+function filter() {
+  $(document).on('click', '[data-filter]', function() {
+    const thisObj = $(this),
+      data = {
+        'ajax': thisObj.data('ajax'),
+      };
+
+    data[thisObj.data('field')] = thisObj.data('value');
+
+    $.ajax({
+      type: 'GET',
+      url: window.location.href,
+      dataType: 'html',
+      data: data,
+      success: function(r) {
+        thisObj.closest('[tabs-container]').find('active').removeClass('active');
+        thisObj.addClass('active');
+        thisObj.data('container-link').split(' ').forEach(function(item) {
+          const container = $(`[data-container=${item}]`);
+
+          container.empty();
+          container.append($(r).find(`[data-container=${item}]`).children());
+        });
+      },
+      error: ajaxCallbackErrors,
+    });
   });
 }
