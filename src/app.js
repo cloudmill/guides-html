@@ -25,6 +25,19 @@ import { Tabs } from './assets/scripts/tabs'
 import { Counter } from './assets/scripts/counter'
 import { CalendarChanger } from './assets/scripts/calendar-changer'
 
+const siteTemplPath = document.querySelector("[data-type=site-templ-path]");
+
+window.CONFIG =
+  window.location.hostname && window.location.hostname !== "cloudmill.github.io"
+    ? {
+      path: siteTemplPath ? siteTemplPath.value : "/local/templates/main",
+      debug: true,
+    }
+    : {
+      path: "./",
+      debug: true,
+    };
+
 $(() => {
   require("assets/scripts/backend");
 
