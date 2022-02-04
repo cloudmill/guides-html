@@ -2,6 +2,7 @@ $(function() {
   forms();
   selectItem();
   filter();
+  pageNav();
 });
 
 function ajaxCallbackErrors(xhr) {
@@ -39,7 +40,7 @@ function forms() {
 
 function selectItem() {
   $(document).on('click', '[data-select-item]', function() {
-    $(`[data-form=${$(this).closest('[data-form-type-container]').data('form-type')}]`).find('[data-field=sectionId]').val($(this).data('id'));
+    $(`[data-form=${$(this).closest('[data-form-type-container]').data('form-type')}]`).find('[data-field=sectionId]').val($(this).data('value'));
   });
 }
 
@@ -58,7 +59,7 @@ function filter() {
       dataType: 'html',
       data: data,
       success: function(r) {
-        thisObj.closest('[tabs-container]').find('active').removeClass('active');
+        thisObj.closest('[data-tabs-container]').find('.active').removeClass('active');
         thisObj.addClass('active');
         thisObj.data('container-link').split(' ').forEach(function(item) {
           const container = $(`[data-container=${item}]`);
@@ -66,6 +67,37 @@ function filter() {
           container.empty();
           container.append($(r).find(`[data-container=${item}]`).children());
         });
+      },
+      error: ajaxCallbackErrors,
+    });
+  });
+}
+
+function pageNav() {
+  $(document).on('click', '[data-type=page-nav]', function() {
+    const container = $(this).closest('[data-container-main]'),
+      itemsContainer = container.find('[data-container=items]'),
+      pagen = container.find('[data-container=pagen]');
+
+    if (pagen.length) {
+      pagen.remove();
+    }
+
+    $.ajax({
+      type: 'GET',
+      url: $(this).data('url'),
+      dataType: 'html',
+      data: {
+        'ajax': 'pagen',
+      },
+      success: function(r) {
+        const pagen = $(r).find('[data-container=pagen]');
+
+        itemsContainer.append($(r).find('[data-container=items]').children());
+
+        if (pagen) {
+          itemsContainer.after(pagen);
+        }
       },
       error: ajaxCallbackErrors,
     });
