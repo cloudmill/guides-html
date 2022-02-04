@@ -3,6 +3,7 @@ $(function() {
   selectItem();
   filter();
   pageNav();
+  modalAjax();
 });
 
 function ajaxCallbackErrors(xhr) {
@@ -98,6 +99,29 @@ function pageNav() {
         if (pagen) {
           itemsContainer.after(pagen);
         }
+      },
+      error: ajaxCallbackErrors,
+    });
+  });
+}
+
+function modalAjax() {
+  $(document).on('click', '[data-modal-backend]', function() {
+    const container = $(`[data-fancy-modal=${$(this).data('fancy-container-id')}]`);
+
+    $.ajax({
+      type: 'GET',
+      url: window.location.href,
+      dataType: 'html',
+      data: {
+        'id': $(this).data('id'),
+        'ajax': true,
+      },
+      success: function(r) {
+        container.empty();
+        container.append($(r));
+
+        $.fancybox.open(container);
       },
       error: ajaxCallbackErrors,
     });
