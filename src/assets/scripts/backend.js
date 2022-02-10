@@ -48,9 +48,14 @@ function selectItem() {
 function filter() {
   $(document).on('click', '[data-filter]', function() {
     const thisObj = $(this),
+      filterContainer = thisObj.parents('[data-container=filters]'),
       data = {
         'ajax': thisObj.data('ajax'),
       };
+
+    filterContainer.find('[data-filter]').filter('.active').each(function() {
+      data[$(this).data('field')] = $(this).data('value');
+    });
 
     data[thisObj.data('field')] = thisObj.data('value');
 
