@@ -4,10 +4,29 @@ $(function() {
   filter();
   pageNav();
   modalAjax();
+  youtubeInit();
 });
 
 function ajaxCallbackErrors(xhr) {
   alert(`error: ${xhr.status}: ${xhr.statusText}`);
+}
+
+function youtubeInit() {
+  const id = $('[data-yt-id]').val();
+
+  if (!id) {
+    return;
+  }
+
+  const container = $('[data-container=video]');
+
+  if (!container.length) {
+    return;
+  }
+
+  container.find('iframe').attr('src', `https://www.youtube.com/embed/${id}?enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer`);
+  container.find('img').attr('src', `//img.youtube.com/vi/${id}/maxresdefault.jpg`);
+  container.find('[data-button]').append('<svg class="video__icon" width="12" height="18" viewbox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L11 9L1 17V1Z" stroke="#292929" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>');
 }
 
 function forms() {
