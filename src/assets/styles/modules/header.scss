@@ -323,7 +323,7 @@
     cursor: pointer;
     transition: $transition;
 
-    &:hover {
+    &.active {
       background: $color-blue;
 
       #{$comp}__dropdown {
@@ -494,7 +494,7 @@
   &__lang-container {
     position: relative;
 
-    &:hover {
+    &.active {
       #{$comp}__dropdown {
         opacity: 1;
         pointer-events: all;

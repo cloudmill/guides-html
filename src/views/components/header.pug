@@ -17,7 +17,7 @@ mixin header
                   .header__phone
                     a.header__phone-link(href="tel:+78124413163") 
                       |#{data.phone}
-                    .header__phone-icon
+                    .header__phone-icon(data-button="")
                       +arrow-svg.header__phone-svg
                       .header__dropdown 
                         .header__dropdown-container 
@@ -48,7 +48,7 @@ mixin header
                         +search-svg.header__search-icon
                 .header__right-col
                   .header__lang 
-                    .header__lang-container 
+                    .header__lang-container(data-button="")
                       .header__lang-row
                         .header__lang-text 
                           |En 
@@ -110,7 +110,7 @@ mixin header
               .mobile-menu__container 
                 .mobile-menu__top 
                   .header__lang
-                    .header__lang-container 
+                    .header__lang-container(data-button="")
                       .header__lang-row
                         .header__lang-text 
                           |En 

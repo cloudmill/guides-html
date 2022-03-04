@@ -55,3 +55,21 @@ $(() => {
 
   const calendar = new CalendarChanger('.calendar-card')
 })
+
+// header active toggler
+$(() => {
+  let isActive = false;
+  window.addEventListener("click", event => {
+    const target = $(event.target).closest("[data-button]");
+
+    if (target.length) {
+      target.toggleClass('active');
+      isActive = true;
+    } else {
+      if (isActive) {
+        isActive = false;
+        $('[data-button]').removeClass('active');
+      }
+    }
+  })
+})
