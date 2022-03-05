@@ -1,0 +1,18 @@
+.auth-page {
+  margin-top: 343px;
+
+  &__container {
+    margin: 0 auto;
+    width: calc(#{$col-part-d} * 5);
+  }
+
+  &__wrapper {
+    padding: 0 20px;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    @include fsl(50px, 130%);
+  }
+}
