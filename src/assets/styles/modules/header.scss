@@ -169,6 +169,14 @@
     }
   }
 
+  &--alt {
+    #{$comp}__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
   &__inner {
     padding: 10px 0;
     @media (min-width: $breakpoint) {
@@ -684,6 +692,10 @@
         margin-left: 5px;
       }
     }
+  }
+
+  &__button {
+    width: 270px;
   }
 }
 

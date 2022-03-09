@@ -19,8 +19,9 @@ html(lang='en')
     meta(name="format-detection", content="address=no")
 
   body.body
+    block variables 
     +grid-test
-    .wrapper
+    .wrapper(class=(isAuth ? "wrapper--auth" : ""))
       block header
         +header
       main.main

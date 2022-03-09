@@ -1,0 +1,60 @@
+extends ../layouts/master.pug
+
+include  ../components/form-components
+
+block variables
+  -var isAuth = true
+
+
+block header 
+  +header-alt(button = true)
+
+block footer
+  .auth-page__footer 
+    each item in ['Политика конфиденциальности', '© 2021 Best Guides']
+      .auth-page__footer-item 
+        a.auth-page__footer-link(href="#") 
+          |#{item}
+
+block content 
+  .auth-page 
+    section.section.section--first
+      .container
+        h1 
+          |Туры
+    section.section.section--md.section--visible
+      .container 
+        .row 
+          .row__col
+            .nav-page.sticky
+              ul.nav-page__list
+                each item, i in ['Наземные экскурсии', 'Круизные экскурсии', 'Вечерние мероприятия 1', 'Вечерние мероприятия 2', 'Список сезонов', 'Справка по туру']
+                  li.nav-page__item(class=((i === 0) ? 'nav-page__item--active' : ''))
+                    a.nav-page__link(href='#') 
+                      |#{item}
+          .row__col
+            .auth-page__column
+              ul.auth-page__list 
+                - for (i = 0; i < 9; i++)
+                  li.auth-page__item 
+                    .auth-page__tour.auth-page__tour--season
+                      .auth-page__row 
+                        .auth-page__col
+                          .auth-page__label 
+                            |ID
+                          .auth-page__text
+                            |#{i + 1}
+                        .auth-page__col
+                          .auth-page__label 
+                            |Имя
+                          .auth-page__text
+                            |Walking tour of St. Petersburg
+                        .auth-page__col
+                          .auth-page__button 
+                            .auth-page__text 
+                              |Удалить
+                            .auth-page__icon 
+                              +trash-svg
+              .button-wrapper
+                +button(tag='div')
+                  |Показать больше

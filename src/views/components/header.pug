@@ -146,3 +146,15 @@ mixin header
                           +search-svg.search-modal__icon
                   .search-modal__col
                     .search-modal__button(data-modal-button='search') 
+                  
+mixin header-alt 
+  header.header.header--alt(data-header-static='')
+    .container 
+      .header__inner 
+        .header__row 
+          a.header__logo(href="#")  
+            img.header__img(src="assets/images/logo-black.png", alt="")
+          if (attributes.button)
+            .header__button
+              +button.button--sticky 
+                |Добавить тур

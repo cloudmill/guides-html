@@ -2,19 +2,32 @@ extends ../layouts/master.pug
 
 include  ../components/form-components
 
+block variables
+  -var isAuth = true
+
+
+block header 
+  +header-alt
+
 block footer
+  .auth-page__footer 
+    each item in ['Политика конфиденциальности', '© 2021 Best Guides']
+      .auth-page__footer-item 
+        a.auth-page__footer-link(href="#") 
+          |#{item}
 
 block content 
   .auth-page 
-    .auth-page__container
-      form.form(action="/") 
-        .auth-page__title 
-          |Войти в личный кабинет
-        .auth-page__wrapper
-          .form__item 
-            +input(type="text" placeholder="Логин")
-          .form__item 
-            +input(type="password" placeholder="Пароль")
-          .form__item 
-            button.button.button--sticky 
-              |Войти
+    .auth-page__inner
+      .auth-page__container
+        form.form(action="/") 
+          .auth-page__title 
+            |Войти в личный кабинет
+          .auth-page__wrapper
+            .form__item 
+              +input(type="email" placeholder="Логин")
+            .form__item 
+              +input(type="password" placeholder="Пароль")
+            .form__item 
+              button.button.button--sticky 
+                |Войти
