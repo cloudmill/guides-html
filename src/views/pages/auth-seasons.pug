@@ -28,7 +28,7 @@ block content
           .row__col
             .nav-page.sticky
               ul.nav-page__list
-                each item, i in ['Наземные экскурсии', 'Круизные экскурсии', 'Вечерние мероприятия 1', 'Вечерние мероприятия 2', 'Список сезонов', 'Справка по туру']
+                each item, i in ['Наземные экскурсии', 'Круизные экскурсии', 'Вечерние мероприятия', 'Список сезонов', 'Справка по туру']
                   li.nav-page__item(class=((i === 0) ? 'nav-page__item--active' : ''))
                     a.nav-page__link(href='#') 
                       |#{item}
