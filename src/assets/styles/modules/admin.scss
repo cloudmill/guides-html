@@ -52,6 +52,10 @@
     &--end {
       text-align: end
     }
+
+    &--mt {
+      margin-top: 20px;
+    }
   }
   // fz16
   &__caption {
@@ -115,6 +119,7 @@
     text-decoration: underline;
     @include fsl(16px);
     transition: $transition;
+    cursor: pointer;
 
     &:hover {
       color: $color-blue;
@@ -178,6 +183,17 @@
 
     &.active {
       display: block;
+    }
+  }
+
+  &__list {
+
+  }
+
+  &__list-item {
+
+    &:not(:first-child) {
+      margin-top: 20px;
     }
   }
 }

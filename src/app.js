@@ -17,6 +17,7 @@ import 'scripts/file-input.js';
 import 'scripts/table.js';
 import 'scripts/label-hide.js';
 import 'scripts/aside.js';
+import 'scripts/admin/AdminPanel.js';
 import 'scripts/video.js';
 import 'scripts/cart-button.js';
 import 'scripts/admin-tabs.js';

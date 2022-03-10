@@ -66,45 +66,46 @@ block content
                 .admin__horiz 
                   textarea.form__textarea(name='message')
           .admin__section
-            .admin__col 
-              .admin__row
-                .file(data-file-input='') 
-                  .file__container
-                    .file__name 
-                    .file__button 
-                      |Delete
-                  label.file__label
-                    input.file__input(type="file")
-                    .file__text 
-                      |Upload image for the gallery
-                    .file__icon 
-                      +plus-svg.file__svg
-              .admin__row
-                .file(data-file-input='') 
-                  .file__container
-                    .file__name 
-                    .file__button 
-                      |Delete
-                  label.file__label
-                    input.file__input(type="file")
-                    .file__text 
-                      |Upload image for the gallery
-                    .file__icon 
-                      +plus-svg.file__svg
-              .admin__row
-                .file(data-file-input='') 
-                  .file__container
-                    .file__name 
-                    .file__button 
-                      |Delete
-                  label.file__label
-                    input.file__input(type="file")
-                    .file__text 
-                      |Upload image for the gallery
-                    .file__icon 
-                      +plus-svg.file__svg
+            .admin__col(data-add-parent='')
+              .admin__list(data-add-container='')
+                .admin__row(data-add-item='')
+                  .file(data-file-input='') 
+                    .file__container
+                      .file__name 
+                      .file__button 
+                        |Delete
+                    label.file__label
+                      input.file__input(type="file")
+                      .file__text 
+                        |Upload image for the gallery
+                      .file__icon 
+                        +plus-svg.file__svg
+                .admin__row
+                  .file(data-file-input='') 
+                    .file__container
+                      .file__name 
+                      .file__button 
+                        |Delete
+                    label.file__label
+                      input.file__input(type="file")
+                      .file__text 
+                        |Upload image for the gallery
+                      .file__icon 
+                        +plus-svg.file__svg
+                .admin__row
+                  .file(data-file-input='') 
+                    .file__container
+                      .file__name 
+                      .file__button 
+                        |Delete
+                    label.file__label
+                      input.file__input(type="file")
+                      .file__text 
+                        |Upload image for the gallery
+                      .file__icon 
+                        +plus-svg.file__svg
               .admin__row 
-                a.admin__show(href="#") 
+                .admin__show(data-add-button='default')
                   |Добавить еще
           .admin__section 
             .admin__col  
@@ -341,9 +342,9 @@ block content
                   |1 день
               .admin__row 
                 .admin__container
-                  .admin__block 
+                  .admin__block.admin__block--start 
                     .admin__mid
-                      .admin__text
+                      .admin__text.admin__text--mt
                         |Укажите время
                     .admin__ll
                       .admin__horiz 
@@ -352,9 +353,9 @@ block content
                         +input(type = 'text' name = 'text')
                       .admin__horiz 
                         +input(type = 'text' name = 'text')
-                  .admin__block 
+                  .admin__block.admin__block--start
                     .admin__mid
-                      .admin__text
+                      .admin__text.admin__text--mt
                         |Укажите событие
                     .admin__ll
                       .admin__horiz 
@@ -373,9 +374,9 @@ block content
                   |2 день
               .admin__row 
                 .admin__container
-                  .admin__block 
+                  .admin__block.admin__block--start 
                     .admin__mid
-                      .admin__text
+                      .admin__text.admin__text--mt
                         |Укажите время
                     .admin__ll
                       .admin__horiz 
@@ -384,9 +385,9 @@ block content
                         +input(type = 'text' name = 'text')
                       .admin__horiz 
                         +input(type = 'text' name = 'text')
-                  .admin__block 
+                  .admin__block.admin__block--start
                     .admin__mid
-                      .admin__text
+                      .admin__text.admin__text--mt
                         |Укажите событие
                     .admin__ll
                       .admin__horiz 
@@ -677,59 +678,63 @@ block content
             .admin__col
               h3
                 |Настройка акций
-              .admin__row
-                .admin__container
-                  .addmin__col
-                    .admin__text 
-                      |Время действия акций
-                    .admin__horiz 
-                      .admin__block 
-                        .admin__text.admin__right 
-                          |от
-                        .admin__mid 
-                          +input(type = 'text' name = 'text')
-                      .admin__block 
-                        .admin__text.admin__right 
-                          |до
-                        .admin__mid 
-                          +input(type = 'text' name = 'text')
-                  .admin__block
-                    .admin__col 
-                      .admin__text 
-                        |Укажите размер скидки в процентах
-                      .admin__horiz.admin__mid 
-                        +input(type = 'text' name = 'text')
+              .admin__row(data-add-parent='')
+                .admin__list(data-add-container="")
+                  .admin__list-item(data-add-item='')
+                    .admin__container
+                      .addmin__col
+                        .admin__text 
+                          |Время действия акций
+                        .admin__horiz 
+                          .admin__block 
+                            .admin__text.admin__right 
+                              |от
+                            .admin__mid 
+                              +input(type = 'text' name = 'text')
+                          .admin__block 
+                            .admin__text.admin__right 
+                              |до
+                            .admin__mid 
+                              +input(type = 'text' name = 'text')
+                      .admin__block
+                        .admin__col 
+                          .admin__text 
+                            |Укажите размер скидки в процентах
+                          .admin__horiz.admin__mid 
+                            +input(type = 'text' name = 'text')
                 .admin__row 
-                  a.admin__show(href="#") 
+                  .admin__show(data-add-button="default")
                     |Добавить еще промежуток
-            .admin__block
+            .admin__block.admin__block--start
               .admin__col
                 h3
                   |Настройка акций СПБ + Балтика
-                .admin__row
-                  .admin__container
-                    .addmin__col
-                      .admin__text 
-                        |Время действия акций
-                      .admin__horiz 
-                        .admin__block 
-                          .admin__text.admin__right 
-                            |от
-                          .admin__mid 
-                            +input(type = 'text' name = 'text')
-                        .admin__block 
-                          .admin__text.admin__right 
-                            |до
-                          .admin__mid 
-                            +input(type = 'text' name = 'text')
-                    .admin__block
-                      .admin__col 
-                        .admin__text 
-                          |Укажите размер скидки в процентах
-                        .admin__horiz.admin__mid 
-                          +input(type = 'text' name = 'text')
+                .admin__row(data-add-parent='')
+                  .admin__list(data-add-container="")
+                    .admin__list-item(data-add-item='')
+                      .admin__container
+                        .addmin__col
+                          .admin__text 
+                            |Время действия акций
+                          .admin__horiz 
+                            .admin__block 
+                              .admin__text.admin__right 
+                                |от
+                              .admin__mid 
+                                +input(type = 'text' name = 'text')
+                            .admin__block 
+                              .admin__text.admin__right 
+                                |до
+                              .admin__mid 
+                                +input(type = 'text' name = 'text')
+                        .admin__block
+                          .admin__col 
+                            .admin__text 
+                              |Укажите размер скидки в процентах
+                            .admin__horiz.admin__mid 
+                              +input(type = 'text' name = 'text')
                   .admin__row 
-                    a.admin__show(href="#") 
+                    .admin__show(data-add-button="default")
                       |Добавить еще промежуток
           .admin__section 
             .admin__col 
