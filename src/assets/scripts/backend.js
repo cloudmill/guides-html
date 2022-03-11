@@ -5,7 +5,29 @@ $(function() {
   pageNav();
   modalAjax();
   youtubeInit();
+  accordionSidebar();
 });
+
+function accordionSidebar() {
+  const container = $('[data-container=accordion]');
+
+  if (!container.length) {
+    return;
+  }
+
+  const selectLiElement = container.find('li.active'),
+    parentLiElement = selectLiElement.parents('li');
+
+  selectLiElement.find('ul').each(function(i) {
+    if (i === 0) {
+      return;
+    }
+
+    $(this).remove();
+  });
+
+  parentLiElement.length ? parentLiElement.siblings().find('ul').remove() : selectLiElement.siblings().find('ul').remove();
+}
 
 function ajaxCallbackErrors(xhr) {
   alert(`error: ${xhr.status}: ${xhr.statusText}`);
