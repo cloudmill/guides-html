@@ -196,4 +196,15 @@
       margin-top: 20px;
     }
   }
+
+  &__tour {
+    display: flex;
+  }
+  &__tour-col {
+    // width: 200px;
+
+    &:nth-child(2) {
+      margin-left: 40px;
+    }
+  }
 }

@@ -3,6 +3,13 @@
 
   display: flex;
 
+  &--admin {
+    #{$comp}__item {
+      display: flex;
+      align-items: center;
+    }
+  }
+
   &__item {
 
     &:not(:first-child) {
@@ -14,7 +21,7 @@
   }
 
   &__tab {
-    padding-bottom: 10px;
+    padding-bottom: 6px;
 
     @include fsl(16px, 160%);
     @media (min-width: $breakpoint) {
@@ -33,5 +40,13 @@
       color: $color-azure;
       border-color: $color-azure;
     }
+  }
+
+  &__icon {
+    margin-left: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

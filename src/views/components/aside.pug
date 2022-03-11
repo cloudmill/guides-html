@@ -17,7 +17,7 @@ mixin aside
                       +check-svg.aside__svg
                     .aside__text 
                       |#{text}
-            li.aside__item.aside__item--select(data-select-parent='')
+            li.aside__item.aside__item--select
               .aside__top 
                 .aside__type 
                   |Language
@@ -113,7 +113,7 @@ mixin aside
                     |On sale 
         else
           ul.aside__list
-            li.aside__item(data-select-parent='')
+            li.aside__item
               .aside__top 
                 .aside__type 
                   |City
@@ -131,7 +131,7 @@ mixin aside
                       each item in data.selectValues.locations
                         option(value = item.value)
                           |#{item.value} 
-            li.aside__item(data-select-parent='')
+            li.aside__item
               .aside__top 
                 .aside__type 
                   |Language
