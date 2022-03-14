@@ -4,9 +4,12 @@ import { SeasonManager } from './SeasonManager';
 
 class AdminPanel {
   constructor() {
+    const adminPage = document.querySelector('.admin')
     
-    this.onClickAddButton();
-    this.seasonManager = new SeasonManager();
+    if (adminPage) {
+      this.onClickAddButton();
+      this.seasonManager = new SeasonManager();
+    }
   }
 
   onClickAddButton() {
