@@ -82,9 +82,13 @@ export class SeasonManager {
     if (!target.classList.contains('active')) {
       const value = target.closest('[data-season-tab]').getAttribute('data-season-tab')
       const season = document.querySelector(`[data-season-item=${value}]`)
+      const oldSeason = document.querySelector('.active[data-season-item]')
+      const oldTab = document.querySelector('.active[data-change-season]')
 
-      document.querySelector('.active[data-season-item]').classList.remove('active')
-      document.querySelector('.active[data-change-season]').classList.remove('active')
+      if (oldSeason) {
+        oldSeason.classList.remove('active')
+        oldTab.classList.remove('active')
+      }
       
       target.classList.add('active')
       season.classList.add('active')

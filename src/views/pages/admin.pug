@@ -1,6 +1,7 @@
 extends ../layouts/master.pug
 
 include ../components/form-components
+include ../components/calendar
 
 block header 
 
@@ -328,76 +329,83 @@ block content
                 .admin__large 
                   button.button.button--xxl(type='submit')
                     |Сохранить
-        .admin__tab
-          .admin__section
-            .admin__col 
-              .admin__row
-                .admin__text 
-                  |Заполните расписание программы
-              .admin__row 
-                .admin__text 
-                  |1 день
-              .admin__row 
-                .admin__container
-                  .admin__block.admin__block--start 
-                    .admin__mid
-                      .admin__text.admin__text--mt
-                        |Укажите время
-                    .admin__ll
-                      .admin__horiz 
-                        +input(type = 'text' name = 'text')
-                      .admin__horiz 
-                        +input(type = 'text' name = 'text')
-                      .admin__horiz 
-                        +input(type = 'text' name = 'text')
-                  .admin__block.admin__block--start
-                    .admin__mid
-                      .admin__text.admin__text--mt
-                        |Укажите событие
-                    .admin__ll
-                      .admin__horiz 
-                        +input(type = 'text' name = 'text')
-                      .admin__horiz 
-                        +input(type = 'text' name = 'text')
-                      .admin__horiz 
-                        +input(type = 'text' name = 'text')
-              .admin__row 
-                a.admin__show(href="#") 
-                  |Добавить еще
-          .admin__section
-            .admin__col 
-              .admin__row 
-                .admin__text 
-                  |2 день
-              .admin__row 
-                .admin__container
-                  .admin__block.admin__block--start 
-                    .admin__mid
-                      .admin__text.admin__text--mt
-                        |Укажите время
-                    .admin__ll
-                      .admin__horiz 
-                        +input(type = 'text' name = 'text')
-                      .admin__horiz 
-                        +input(type = 'text' name = 'text')
-                      .admin__horiz 
-                        +input(type = 'text' name = 'text')
-                  .admin__block.admin__block--start
-                    .admin__mid
-                      .admin__text.admin__text--mt
-                        |Укажите событие
-                    .admin__ll
-                      .admin__horiz 
-                        +input(type = 'text' name = 'text')
-                      .admin__horiz 
-                        +input(type = 'text' name = 'text')
-                      .admin__horiz 
-                        +input(type = 'text' name = 'text')
-              .admin__row 
-                a.admin__show(href="#") 
-                  |Добавить еще
+        .admin__tab(data-add-parent='')
+          .admin__list(data-add-container='')
+            .admin__section(data-add-item='')
+              .admin__col(data-add-parent='')
+                .admin__row
+                  .admin__text 
+                    |Заполните расписание программы
+                .admin__row 
+                  .admin__text 
+                    |1 день
+                .admin__row 
+                  template(data-add-template='')
+                    .admin__list-item
+                      .admin__container
+                        .admin__block
+                          .admin__mid
+                          .admin__ll
+                            +input(type = 'text' name = 'text')
+                        .admin__block
+                          .admin__mid
+                          .admin__ll
+                            +input(type = 'text' name = 'text')
+                  .admin__list(data-add-container='')
+                    .admin__list-item
+                      .admin__container
+                        .admin__block
+                          .admin__mid
+                            .admin__text
+                              |Укажите время
+                          .admin__ll
+                            +input(type = 'text' name = 'text')
+                        .admin__block
+                          .admin__mid
+                            .admin__text
+                              |Укажите событие
+                          .admin__ll
+                            +input(type = 'text' name = 'text')
+                .admin__row 
+                  .admin__show(data-add-button='template') 
+                    |Добавить еще
+            .admin__section
+              .admin__col(data-add-parent='')
+                .admin__row 
+                  .admin__text 
+                    |2 день
+                .admin__row 
+                  template(data-add-template='')
+                    .admin__list-item
+                      .admin__container
+                        .admin__block
+                          .admin__mid
+                          .admin__ll
+                            +input(type = 'text' name = 'text')
+                        .admin__block
+                          .admin__mid
+                          .admin__ll
+                            +input(type = 'text' name = 'text')
+                  .admin__list(data-add-container='')
+                    .admin__list-item
+                      .admin__container
+                        .admin__block
+                          .admin__mid
+                            .admin__text
+                              |Укажите время
+                          .admin__ll
+                            +input(type = 'text' name = 'text')
+                        .admin__block
+                          .admin__mid
+                            .admin__text
+                              |Укажите событие
+                          .admin__ll
+                            +input(type = 'text' name = 'text')
+                .admin__row 
+                  .admin__show(data-add-button='template') 
+                    |Добавить еще
           .admin__section 
-            a.admin__show.admin__show--start(href="#") 
+            .admin__show.admin__show--start(data-add-button='default')
               |Добавить еще день
           .admin__section 
             .admin__large 
@@ -435,44 +443,28 @@ block content
               .button.button--xxl(data-admin-button='group')
                 |Изменить
           .admin__section 
+            template(data-calendar-template='')
+              .admin__calendar-item(data-tab-block='2022')
+                +calendar
             .admin__head 
-              .admin__block 
-                .product-tabs
+              .admin__block(data-add-parent='')
+                .product-tabs(data-add-container='')
                   .product-tabs__item 
-                    .product-tabs__tab.active
+                    .product-tabs__tab.active(data-real-tabs='2021')
                       .admin__text
                         |2021
-                  .product-tabs__item 
-                    .product-tabs__tab
+                  .product-tabs__item(data-add-item='')
+                    .product-tabs__tab(data-real-tabs='2022')
                       .admin__text
                         |2022
                 .admin__block
-                  a.admin__text(href="#") 
+                  .admin__text(data-add-button='year')
                     |Добавить
-              each month, index in ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь',]
-                -
-                  var count = 1
-                .admin__calendar 
-                  .admin__calendar-row 
-                    .admin__mid
-                    .admin__text 
-                      |#{month}
-                  each week in [1, 2, 3, 4]
-                    .admin__calendar-row(data-calendar-week='')
-                      .admin__mid 
-                        .admin__text 
-                          |Неделя #{week}
-                      .admin__container
-                        each item in [3, 3, 3, 5, 3, 3, 7]
-                          .admin__block(data-admin-button='single' data-calendar-data=`2021-0${index + 1}-${count < 10 ? '0' + count++ : count++}`)
-                            .calendar-card
-                              .calendar-card__container 
-                                .calendar-card__item 
-                                  .admin__text(data-calendar-status='') 
-                                    |Активен
-                                .calendar-card__item 
-                                  .admin__text(data-calendar-day='')
-                                    |#{item} дня
+              .admin__list(data-calendar-parent='')
+                .admin__calendar-item.active(data-tab-block='2021')
+                  +calendar
+                .admin__calendar-item(data-tab-block='2022')
+                  +calendar
           .admin__section 
             .admin__large 
               button.button.button--xxl(type='submit')
@@ -643,27 +635,39 @@ block content
                     .admin__show(data-add-button="default")
                       |Добавить еще промежуток
           .admin__section 
-            .admin__col 
+            .admin__col(data-add-parent='')
               .admin__text 
                 |Добавить вечерние мероприятия
-              .admin__row 
-                each item in ['Russian ballet', 'Folk-show', 'Classical music concerts', 'Выбрать вечерние мероприятие']
-                  .admin__horiz 
+              .admin__row(data-add-container='')
+                .admin__horiz(data-add-item='')
+                  .admin__big 
+                    .select-wrapper
+                      .select
+                        select.select__select(name="activity" style='width: 100%') 
+                          option(value = item selected disabled)
+                            |Выбрать вечерние мероприятие
+                          option(value = '2')
+                            |Folk-show
+                          option(value = '3')
+                            |Classical music concerts
+                          option(value = '5')
+                            |Russian ballet
+                - for (let i = 0; i < 3; i++)
+                  .admin__horiz
                     .admin__big 
                       .select-wrapper
                         .select
-                          select.select__select(name="activity" style='width: 100%' data-select-placeholder=item) 
-                            option
+                          select.select__select(name="activity" style='width: 100%') 
+                            option(value = item selected disabled)
+                              |Выбрать вечерние мероприятие
                             option(value = '2')
-                              |2
+                              |Folk-show
                             option(value = '3')
-                              |3
-                            option(value = '4')
-                              |4
+                              |Classical music concerts
                             option(value = '5')
-                              |5
+                              |Russian ballet
               .admin__row 
-                a.admin__show(href="#") 
+                .admin__show(data-add-button='select') 
                   |Добавить еще
           .admin__section 
             .admin__large 

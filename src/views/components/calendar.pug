@@ -1,0 +1,58 @@
+mixin calendar
+  .admin__year
+    each month, index in ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь',]
+      -
+        var count = 1
+      .admin__calendar 
+        .admin__calendar-row 
+          .admin__mid
+          .admin__text 
+            |#{month}
+        each week in [1, 2, 3, 4]
+          .admin__calendar-row(data-calendar-week='')
+            .admin__mid 
+              .admin__text 
+                |Неделя #{week}
+            .admin__container
+              each item in [3, 3, 3, 5, 3, 3, 7]
+                .admin__block(data-admin-button='single' data-calendar-data=`2021-0${index + 1}-${count < 10 ? '0' + count++ : count++}`)
+                  .calendar-card
+                    .calendar-card__container 
+                      .calendar-card__item 
+                        .admin__text(data-calendar-status='') 
+                          |Активен
+                      .calendar-card__item 
+                        .admin__text(data-calendar-day='')
+                          |#{item} дня
+
+mixin hard-calendar 
+  .admin__year
+    each month, index in ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь',]
+      -
+        var count = 1
+      .admin__calendar 
+        .admin__calendar-row 
+          .admin__mid
+          .admin__text 
+            |#{month}
+        each week in [1, 2, 3, 4]
+          .admin__calendar-row 
+            .admin__mid 
+              .admin__text 
+                |Неделя #{week}
+            .admin__container
+              each item, i in [3, 3, 3, 5, 3, 3, 7] 
+                .admin__block(data-admin-button='single' data-calendar-data=`2021-0${index + 1}-${count < 10 ? '0' + count++ : count++}`)
+                  .calendar-card 
+                    .calendar-card__container 
+                      .calendar-card__item
+                        .admin__text(data-calendar-status='') 
+                          |Активен
+                      .calendar-card__item 
+                        .admin__text(data-calendar-start='') 
+                          |11:00
+                        .admin__text.admin__horiz(data-calendar-end='') 
+                          |18:00
+                      .calendar-card__item
+                        .admin__text(data-calendar-day='')
+                          |#{item} дня

@@ -27,6 +27,14 @@ class AdminPanel {
         if (attrValue === "seasonValue") {
           this.addSeasonValue(target)
         }
+
+        if (attrValue === "year") {
+          this.addYear(target)
+        }
+
+        if (attrValue === "template") {
+          this.addTemplate(target)
+        }
       }
     })
   }
@@ -56,6 +64,41 @@ class AdminPanel {
 
     const text = this.clone.querySelector('.admin__text')
     text.textContent = "Произвольное значение"
+  }
+
+  addYear(button) {
+    this.addElement(button)
+
+    const year = this.clone.querySelector('.admin__text')
+    const attrYear = this.clone.querySelector('[data-real-tabs]')
+    let attrValue = attrYear.getAttribute('data-real-tabs')
+    
+    attrYear.classList.remove('active')
+    attrYear.setAttribute('data-real-tabs', ++attrValue)
+    year.textContent++
+    this.cloneCalendar(attrValue)
+  }
+
+  cloneCalendar(year) {
+    const template = document.querySelector('[data-calendar-template]')
+    const clone = template.content.firstElementChild.cloneNode(true)
+    const cards = clone.querySelectorAll('[data-calendar-data]')
+
+    for (let i = 0; i < cards.length; i++) {
+      let value = cards[i].getAttribute('data-calendar-data')
+      value = value.replace('\d{4}', year)
+      cards[i].setAttribute('data-calendar-data', value)
+    }
+    clone.setAttribute('data-tab-block', year)
+
+    document.querySelector('[data-calendar-parent]').append(clone)
+  }
+  
+  addTemplate(button) {
+    const parent = button.closest('[data-add-parent]')
+    const clone = parent.querySelector('[data-add-template]').content.firstElementChild.cloneNode(true)
+    
+    parent.querySelector('[data-add-container]').append(clone);
   }
 }
 

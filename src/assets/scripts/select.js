@@ -29,6 +29,14 @@ export function initSelect(select) {
     }, 0);
   });
 
+  select.on('change', function() {
+    const item = $(this).closest('[data-select-parent]')
+    const btn = item.find('[data-select-button]')
+
+    $(this).attr('data-select-value', this.value)
+    btn.removeClass('disabled')
+  })
+
   select.on('select2:closing', event => {
     event.preventDefault();
 
