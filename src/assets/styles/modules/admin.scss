@@ -207,4 +207,16 @@
       margin-left: 40px;
     }
   }
+
+  &__seasons {
+    display: flex;
+  }
+
+  &__seasons-item {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
 }

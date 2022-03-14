@@ -1,10 +1,12 @@
 import {initSelect} from '../select'
 import 'select2';
+import { SeasonManager } from './SeasonManager';
 
 class AdminPanel {
   constructor() {
     
     this.onClickAddButton();
+    this.seasonManager = new SeasonManager();
   }
 
   onClickAddButton() {

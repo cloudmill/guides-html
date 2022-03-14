@@ -2,7 +2,6 @@ import 'select2';
 import {mediaQuery} from './mediaQueries'
 
 export function initSelect(select) {
-  // console.log(select);
   const selectWrapper = select.closest('.select-wrapper');
   const selectWrapperStyles = getComputedStyle(selectWrapper[0]);
   const selectPlaceholder = select.data('select-placeholder')
