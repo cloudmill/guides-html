@@ -67,10 +67,14 @@ class AdminPanel {
   }
 
   addYear(button) {
-    this.addElement(button)
+    const parent = button.closest('[data-add-parent]')
+    const container = parent.querySelector('[data-add-container]')
+    const clone = container.lastElementChild.cloneNode(true)
+    
+    container.append(clone);
 
-    const year = this.clone.querySelector('.admin__text')
-    const attrYear = this.clone.querySelector('[data-real-tabs]')
+    const year = clone.querySelector('.admin__text')
+    const attrYear = clone.querySelector('[data-real-tabs]')
     let attrValue = attrYear.getAttribute('data-real-tabs')
     
     attrYear.classList.remove('active')
@@ -86,7 +90,8 @@ class AdminPanel {
 
     for (let i = 0; i < cards.length; i++) {
       let value = cards[i].getAttribute('data-calendar-data')
-      value = value.replace('\d{4}', year)
+      value = value.replace(/\d{4}/, year)
+
       cards[i].setAttribute('data-calendar-data', value)
     }
     clone.setAttribute('data-tab-block', year)

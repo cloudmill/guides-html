@@ -15,7 +15,7 @@ mixin calendar
                 |Неделя #{week}
             .admin__container
               each item in [3, 3, 3, 5, 3, 3, 7]
-                .admin__block(data-admin-button='single' data-calendar-data=`2021-0${index + 1}-${count < 10 ? '0' + count++ : count++}`)
+                .admin__block(data-admin-button='single' data-calendar-data=`2021-${index < 10 ? "0" + index + 1 : index + 1}-${count < 10 ? '0' + count++ : count++}`)
                   .calendar-card
                     .calendar-card__container 
                       .calendar-card__item 
@@ -42,7 +42,7 @@ mixin hard-calendar
                 |Неделя #{week}
             .admin__container
               each item, i in [3, 3, 3, 5, 3, 3, 7] 
-                .admin__block(data-admin-button='single' data-calendar-data=`2021-0${index + 1}-${count < 10 ? '0' + count++ : count++}`)
+                .admin__block(data-admin-button='single' data-calendar-data=`2021-${index < 10 ? "0" + index + 1 : index + 1}-${count < 10 ? '0' + count++ : count++}`)
                   .calendar-card 
                     .calendar-card__container 
                       .calendar-card__item

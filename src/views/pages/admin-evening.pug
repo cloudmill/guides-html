@@ -1,6 +1,7 @@
 extends ../layouts/master.pug
 
 include ../components/form-components
+include ../components/calendar
 
 block header 
 
@@ -47,6 +48,48 @@ block content
                       +checkbox(text='Индивидуальные')
                     .admin__item 
                       +checkbox(text='Групповые')
+          .admin__section
+            .admin__col(data-add-parent='')
+              .admin__list(data-add-container='')
+                .admin__row(data-add-item='')
+                  .file(data-file-input='') 
+                    .file__container
+                      .file__name 
+                      .file__button 
+                        |Delete
+                    label.file__label
+                      input.file__input(type="file")
+                      .file__text 
+                        |Upload image for the gallery
+                      .file__icon 
+                        +plus-svg.file__svg
+                .admin__row
+                  .file(data-file-input='') 
+                    .file__container
+                      .file__name 
+                      .file__button 
+                        |Delete
+                    label.file__label
+                      input.file__input(type="file")
+                      .file__text 
+                        |Upload image for the gallery
+                      .file__icon 
+                        +plus-svg.file__svg
+                .admin__row
+                  .file(data-file-input='') 
+                    .file__container
+                      .file__name 
+                      .file__button 
+                        |Delete
+                    label.file__label
+                      input.file__input(type="file")
+                      .file__text 
+                        |Upload image for the gallery
+                      .file__icon 
+                        +plus-svg.file__svg
+              .admin__row 
+                .admin__show(data-add-button='default')
+                  |Добавить еще
           .admin__section 
             .admin__col 
               .admin__text 
@@ -65,46 +108,41 @@ block content
               .admin__horiz
                 +checkbox(text = 'Доступно')
           .admin__section
-            .admin__col
-              .admin__container
-                .admin__block 
-                  .admin__col
-                    .admin__caption 
-                      |В стоимость тура входит
-                    .admin__row
+            .admin__col(data-add-parent='')
+              .admin__list(data-add-container='')
+                .admin__list-item 
+                  .admin__tour
+                    .admin__tour-col
+                      .admin__caption 
+                        |В стоимость тура входит
+                      .admin__row
+                        .admin__ll 
+                          +input(type = 'text' name = 'text')
+                    .admin__tour-col 
+                      .admin__caption 
+                        |В стоимость тура не входит
+                      .admin__row
+                        .admin__ll   
+                          +input(type = 'text' name = 'text')
+                .admin__list-item(data-add-item='')
+                  .admin__tour
+                    .admin__tour-col
                       .admin__ll 
-                        .admin__horiz 
+                        +input(type = 'text' name = 'text')
+                    .admin__tour-col 
+                      .admin__ll   
+                        +input(type = 'text' name = 'text')
+                - for (i = 0; i < 3; i++)
+                  .admin__list-item
+                    .admin__tour
+                      .admin__tour-col
+                        .admin__ll 
                           +input(type = 'text' name = 'text')
-                        .admin__horiz 
-                          +input(type = 'text' name = 'text')
-                        .admin__horiz 
-                          +input(type = 'text' name = 'text')
-                        .admin__horiz 
-                          +input(type = 'text' name = 'text')
-                        .admin__horiz 
-                          +input(type = 'text' name = 'text')
-                        .admin__horiz 
-                          +input(type = 'text' name = 'text')
-                .admin__block 
-                  .admin__col
-                    .admin__caption 
-                      |В стоимость тура не входит
-                    .admin__row   
-                      .admin__ll
-                        .admin__horiz 
-                          +input(type = 'text' name = 'text')
-                        .admin__horiz 
-                          +input(type = 'text' name = 'text')
-                        .admin__horiz 
-                          +input(type = 'text' name = 'text')
-                        .admin__horiz 
-                          +input(type = 'text' name = 'text')
-                        .admin__horiz 
-                          +input(type = 'text' name = 'text')
-                        .admin__horiz 
+                      .admin__tour-col 
+                        .admin__ll   
                           +input(type = 'text' name = 'text')
               .admin__row   
-                a.admin__show(href="#") 
+                .admin__show(data-add-button='default')
                   |Добавить еще
           .admin__section 
             .admin__col
@@ -117,15 +155,15 @@ block content
             .admin__large 
               button.button.button--xxl(type='submit')
                 |Сохранить
-        .admin__tab 
+        .admin__tab
           .admin__section
             .admin__col 
               .admin__container
                 .admin__block 
                   .admin__text.admin__right 
                     |От
-                  .admin__ll 
-                    input.form__input(type="text" name='start' data-change-start='' data-date-input='' placeholder='dd.mm.yyyy')       
+                  .admin__ll
+                    input.form__input(type="text" name='start' data-change-start='' data-date-input='' placeholder='dd.mm.yyyy')
                 .admin__block 
                   .admin__text.admin__right 
                     |До
@@ -134,7 +172,7 @@ block content
               .admin__row 
                 .admin__container
                   each item in ['Пн.', 'Вт.', 'Ср.', 'Чт.', 'Пт.', 'Сб.', 'Вс.']
-                    .admin__item(data-admin-checkbox-item='') 
+                    .admin__item(data-admin-checkbox-item='')
                       .admin__horiz
                         .admin__text
                           |#{item}
@@ -149,162 +187,103 @@ block content
               .button.button--xxl(data-admin-button='group')
                 |Изменить
           .admin__section 
+            template(data-calendar-template='')
+              .admin__calendar-item(data-tab-block='2022')
+                +hard-calendar
             .admin__head 
-              .admin__block 
-                .product-tabs
+              .admin__block(data-add-parent='')
+                .product-tabs(data-add-container='')
                   .product-tabs__item 
-                    .product-tabs__tab.active
+                    .product-tabs__tab.active(data-real-tabs='2021')
                       .admin__text
                         |2021
-                  .product-tabs__item 
-                    .product-tabs__tab
+                  .product-tabs__item(data-add-item='')
+                    .product-tabs__tab(data-real-tabs='2022')
                       .admin__text
                         |2022
                 .admin__block
-                  a.admin__text(href="#") 
+                  .admin__text(data-add-button='year')
                     |Добавить
-              each month, index in ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь',]
-                -
-                  var count = 1
-                .admin__calendar 
-                  .admin__calendar-row 
-                    .admin__mid
-                    .admin__text 
-                      |#{month}
-                  each week in [1, 2, 3, 4]
-                    .admin__calendar-row 
-                      .admin__mid 
-                        .admin__text 
-                          |Неделя #{week}
-                      .admin__container
-                        each item, i in [3, 3, 3, 5, 3, 3, 7] 
-                          .admin__block(data-admin-button='single' data-calendar-data=`2021-0${index + 1}-${count < 10 ? '0' + count++ : count++}`)
-                            .calendar-card 
-                              .calendar-card__container 
-                                .calendar-card__item 
-                                  .admin__text(data-calendar-status='')  
-                                    |Активен
-                                .calendar-card__item 
-                                  .admin__text(data-calendar-start='')  
-                                    |11:00
-                                  .admin__text.admin__horiz(data-calendar-end='')  
-                                    |18:00
-                                .calendar-card__item 
-                                  .admin__text(data-calendar-day='') 
-                                    |#{item} дня
+              .admin__list(data-calendar-parent='')
+                .admin__calendar-item.active(data-tab-block='2021')
+                  +hard-calendar
+                .admin__calendar-item(data-tab-block='2022')
+                  +hard-calendar
           .admin__section 
             .admin__large 
               button.button.button--xxl(type='submit')
                 |Сохранить
-        .admin__tab 
+        .admin__tab
           .admin__section
             .admin__col 
               .admin__row 
                 h3.admin__title 
                   |Укажите сезон для формирования цены
-              .admin__row.admin__big
-                .admin__horiz.admin__horiz--noflex 
+              .admin__row
+                .admin__horiz.admin__block 
                   .select-wrapper
                     .select
-                      select.select__select(name="activity" style='width: 100%') 
-                        option(value = '1')
+                      select.select__select(name="activity" style='width: 100%' data-season-select='' data-select-placeholder="Выберите сезон") 
+                        option
+                        option(value = 'hight21' disabled)
                           |Высокий сезон 2021
-                        option(value = '2')
-                          |2
-                        option(value = '3')
-                          |3
-                        option(value = '4')
-                          |4
-                        option(value = '5')
-                          |5
-                .admin__horiz.admin__horiz--noflex 
-                  .select-wrapper
-                    .select
-                      select.select__select(name="activity" style='width: 100%') 
-                        option(value = '1')
+                        option(value = 'low21')
                           |Низкий сезон 2021
-                        option(value = '2')
-                          |2
-                        option(value = '3')
-                          |3
-                        option(value = '4')
-                          |4
-                        option(value = '5')
-                          |5
-                .admin__horiz.admin__horiz--noflex 
-                  .select-wrapper
-                    .select
-                      select.select__select(name="activity" style='width: 100%') 
-                        option(value = '1')
-                          |Выберите сезон
-                        option(value = '2')
-                          |2
-                        option(value = '3')
-                          |3
-                        option(value = '4')
-                          |4
-                        option(value = '5')
-                          |5
-                .admin__horiz.admin__horiz--noflex 
-                  a.admin__show(href="#") 
-                    |Добавить еще
-          .admin__section 
+                        option(value = 'hight22')
+                          |Высокий сезон 2022
+                        option(value = 'low22')
+                          |Низкий сезон 2022
+                        option(value = 'sochi')
+                          |sochi
+                  .admin__block-item
+                    .admin__show(data-add-season='')
+                      |Добавить активный сезон
+          .admin__section(data-tabs-parent='')
             .admin__col 
-              .admin__row 
-                .admin__block 
-                  .admin__block.admin__big 
-                  .admin__block 
-                    .admin__text
+              .admin__caption
+                |Активные сезоны
+              .admin__horiz 
+                .product-tabs.product-tabs--admin
+                  .product-tabs__item(data-season-tab='hight21')
+                    .product-tabs__tab.active(data-change-season='')
                       |Высокий сезон 2021
-                  .admin__left 
-                    .admin__text
-                      |Низкий сезон 2021
-              .admin__row 
-                .admin__block 
-                  .admin__block.admin__block--end.admin__big
-                    .admin__text
-                      |Время работы гида (ВГ)
-                  .admin__block 
-                    .admin__mid 
-                      +input(type = 'text' name = 'text')
-                  .admin__block 
-                    .admin__mid 
-                      +input(type = 'text' name = 'text')
-                  .admin__block.admin__big
-                    .admin__text.admin__text--end
-                      |Количество человек, при котором плюсуюется наценка (УШМИН)
-                  .admin__block 
-                    .admin__block-item.admin__mid
-                      .admin__text
-                        |Количество
-                    .admin__block-item
-                      .admin__mid 
-                        +input.form__input--small(type = 'text' name = 'text' placeholder='значение')
-              .admin__row 
-                .admin__block 
-                  .admin__block.admin__block--end.admin__big
-                    .admin__text
-                      |Время работы транспорта (ВТ)
-                  .admin__block 
-                    .admin__mid 
-                      +input(type = 'text' name = 'text')
-                  .admin__block 
-                    .admin__mid 
-                      +input(type = 'text' name = 'text')
-              .admin__row 
-                .admin__block 
-                  .admin__block.admin__block--end.admin__big
-                    .admin__text
-                      |Билетный пакет для взрослых (БВ)
-                  .admin__block 
-                    .admin__mid 
-                      +input(type = 'text' name = 'text')
-                  .admin__block 
-                    .admin__mid 
-                      +input(type = 'text' name = 'text')
-              .admin__row 
-                a.admin__show(href="#") 
-                  |Добавить произвольное значение
+                    .product-tabs__icon(data-remove-season="")
+                      +close-svg.product-tabs__svg
+              .admin__seasons.admin__row
+                .admin__seasons-item.active(data-season-item="hight21" data-add-parent='')
+                  .admin__row(data-add-container='')
+                    each item in ['Время работы гида (ВГ)', 'Время работы транспорта (ВТ)', 'Билетный пакет для взрослых (БВ)', 'Билетный пакет для студентов (БС)', 'Билетный пакет для школьников (БШ)']
+                      .admin__row(data-add-item='')
+                        .admin__block 
+                          .admin__block.admin__block--end.admin__big
+                            .admin__text
+                              |#{item}
+                          .admin__block
+                            .admin__mid 
+                              +input(type = 'text' name = 'text')
+                  .admin__row 
+                    .admin__show(data-add-button='seasonValue')
+                      |Добавить произвольное значение
+          .admin__section 
+            .admin__block 
+              .admin__block.admin__big
+                .admin__text
+                  |Наценка за сувинирную продукцию для детей школьников
+              .admin__block 
+                .admin__block-item.admin__mid
+                .admin__block-item
+                  .admin__mid 
+                    +input.form__input--small(type = 'text' name = 'text' placeholder='стоимость')
+              .admin__block.admin__big
+                .admin__text
+                  |Количество человек, при котором плюсуюется наценка (УШМИН)
+              .admin__block 
+                .admin__block-item.admin__mid
+                  .admin__text
+                    |Количество
+                .admin__block-item
+                  .admin__mid 
+                    +input.form__input--small(type = 'text' name = 'text' placeholder='значение')
           .admin__section 
             .admin__col  
               .admin__row 
@@ -341,35 +320,38 @@ block content
             .admin__col
               h3
                 |Настройка акций
-              .admin__row
-                .admin__container
-                  .addmin__col
-                    .admin__text 
-                      |Время действия акций
-                    .admin__horiz 
-                      .admin__block 
-                        .admin__text.admin__right 
-                          |от
-                        .admin__mid 
-                          +input(type = 'text' name = 'text')
-                      .admin__block 
-                        .admin__text.admin__right 
-                          |до
-                        .admin__mid 
-                          +input(type = 'text' name = 'text')
-                  .admin__block
-                    .admin__col 
-                      .admin__text 
-                        |Укажите размер скидки в процентах
-                      .admin__horiz.admin__mid 
-                        +input(type = 'text' name = 'text')
+              .admin__row(data-add-parent='')
+                .admin__list(data-add-container="")
+                  .admin__list-item(data-add-item='')
+                    .admin__container
+                      .addmin__col
+                        .admin__text 
+                          |Время действия акций
+                        .admin__horiz 
+                          .admin__block 
+                            .admin__text.admin__right 
+                              |от
+                            .admin__mid 
+                              +input(type = 'text' name = 'text')
+                          .admin__block 
+                            .admin__text.admin__right 
+                              |до
+                            .admin__mid 
+                              +input(type = 'text' name = 'text')
+                      .admin__block
+                        .admin__col 
+                          .admin__text 
+                            |Укажите размер скидки в процентах
+                          .admin__horiz.admin__mid 
+                            +input(type = 'text' name = 'text')
                 .admin__row 
-                  a.admin__show(href="#") 
+                  .admin__show(data-add-button="default")
                     |Добавить еще промежуток
           .admin__section 
             .admin__large 
               button.button.button--xxl(type='submit')
                 |Сохранить
+
   .modals 
     .modal(data-admin-modal='')
       .modal__container
