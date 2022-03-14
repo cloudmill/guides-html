@@ -16,9 +16,10 @@ function accordionSidebar() {
   }
 
   const selectLiElement = container.find('li.active'),
-    parentLiElement = selectLiElement.parents('li');
+    parentLiElement = selectLiElement.parents('li'),
+    ulElements = selectLiElement.find('ul').length ? selectLiElement.find('ul') : selectLiElement.closest('li:not(.active)').find('ul');
 
-  selectLiElement.find('ul').each(function(i) {
+  ulElements.each(function(i) {
     if (i === 0) {
       return;
     }
