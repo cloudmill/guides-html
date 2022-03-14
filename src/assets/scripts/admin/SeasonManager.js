@@ -16,8 +16,13 @@ export class SeasonManager {
       if (target.hasAttribute('data-add-season')) {
         this.addSeason()
       }
+
       if (target.closest('[data-remove-season]')) {
         this.removeSeason(target)
+      }
+
+      if (target.hasAttribute('data-change-season')) {
+        this.changeSeason(target)
       }
     })
   }
@@ -42,7 +47,7 @@ export class SeasonManager {
 
     tab.textContent = text
     tab.classList.remove('active')
-    clone.querySelector('[data-remove-season]').setAttribute('data-remove-season', value)
+    clone.setAttribute('data-season-tab', value)
     tabItem.parentElement.append(clone)
   }
 
@@ -59,8 +64,8 @@ export class SeasonManager {
   removeSeason(target) {
     const removeButtons = document.querySelectorAll('[data-remove-season]')
     if (removeButtons.length > 1) {
-      const tab = target.closest('.product-tabs__item')
-      const value = target.closest('[data-remove-season]').getAttribute('data-remove-season')
+      const tab = target.closest('[data-season-tab]')
+      const value = tab.getAttribute('data-season-tab')
       const season = document.querySelector(`[data-season-item=${value}]`)
   
       season.remove()
@@ -70,6 +75,19 @@ export class SeasonManager {
           this.select.options[i].removeAttribute('disabled')
         }
       }
+    }
+  }
+
+  changeSeason(target) {
+    if (!target.classList.contains('active')) {
+      const value = target.closest('[data-season-tab]').getAttribute('data-season-tab')
+      const season = document.querySelector(`[data-season-item=${value}]`)
+
+      document.querySelector('.active[data-season-item]').classList.remove('active')
+      document.querySelector('.active[data-change-season]').classList.remove('active')
+      
+      target.classList.add('active')
+      season.classList.add('active')
     }
   }
 }

@@ -507,17 +507,17 @@ block content
               .admin__caption
                 |Активные сезоны
               .admin__horiz 
-                .product-tabs.product-tabs--admin(data-real-tabs='')
-                  .product-tabs__item(data-season-tab='')
-                    .product-tabs__tab.active(data-tabs-item='')
+                .product-tabs.product-tabs--admin
+                  .product-tabs__item(data-season-tab='hight21')
+                    .product-tabs__tab.active(data-change-season='')
                       |Высокий сезон 2021
-                    .product-tabs__icon(data-remove-season="hight21")
+                    .product-tabs__icon(data-remove-season="")
                       +close-svg.product-tabs__svg
               .admin__seasons.admin__row
-                .admin__seasons-item.active(data-season-item="hight21" data-tabs-block='')
+                .admin__seasons-item.active(data-season-item="hight21" data-add-parent='')
                   .admin__row(data-add-container='')
                     each item in ['Время работы гида (ВГ)', 'Время работы транспорта (ВТ)', 'Билетный пакет для взрослых (БВ)', 'Билетный пакет для студентов (БС)', 'Билетный пакет для школьников (БШ)']
-                      .admin__row 
+                      .admin__row(data-add-item='')
                         .admin__block 
                           .admin__block.admin__block--end.admin__big
                             .admin__text
@@ -526,7 +526,7 @@ block content
                             .admin__mid 
                               +input(type = 'text' name = 'text')
                   .admin__row 
-                    a.admin__show(href="#") 
+                    .admin__show(data-add-button='seasonValue')
                       |Добавить произвольное значение
           .admin__section 
             .admin__block 

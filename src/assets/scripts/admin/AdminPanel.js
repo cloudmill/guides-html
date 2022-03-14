@@ -23,15 +23,19 @@ class AdminPanel {
         if (attrValue === "select") {
           this.addSelect(target)
         }
+
+        if (attrValue === "seasonValue") {
+          this.addSeasonValue(target)
+        }
       }
     })
   }
 
   addElement(button) {
     const parent = button.closest('[data-add-parent]')
-    const clone = parent.querySelector('[data-add-item]').cloneNode(true)
+    this.clone = parent.querySelector('[data-add-item]').cloneNode(true)
     
-    parent.querySelector('[data-add-container]').append(clone);
+    parent.querySelector('[data-add-container]').append(this.clone);
   }
 
   addSelect(button) {
@@ -45,6 +49,13 @@ class AdminPanel {
 
     parent.querySelector('[data-add-container]').append(clone);
     initSelect($(clone.querySelector('.select__select')))
+  }
+
+  addSeasonValue(button) {
+    this.addElement(button)
+
+    const text = this.clone.querySelector('.admin__text')
+    text.textContent = "Произвольное значение"
   }
 }
 
