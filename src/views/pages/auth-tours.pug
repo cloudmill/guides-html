@@ -61,11 +61,14 @@ block content
                             .auth-page__text
                               |#{i + 1}
                         .auth-page__right 
-                          .auth-page__button 
-                            .auth-page__text 
-                              |Удалить
-                            .auth-page__icon 
-                              +trash-svg
+                          .auth-page__buttons
+                            .auth-page__button 
+                              .auth-page__text 
+                                |Удалить
+                              .auth-page__icon 
+                                +trash-svg
+                            a.auth-page__link(href="#") 
+                              |Редактировать
             .button-wrapper
               +button(tag='div')
                 |Показать больше

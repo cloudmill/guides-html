@@ -50,11 +50,14 @@ block content
                           .auth-page__text
                             |Walking tour of St. Petersburg
                         .auth-page__col
-                          .auth-page__button 
-                            .auth-page__text 
-                              |Удалить
-                            .auth-page__icon 
-                              +trash-svg
+                          .auth-page__buttons
+                            .auth-page__button 
+                              .auth-page__text 
+                                |Удалить
+                              .auth-page__icon 
+                                +trash-svg
+                            a.auth-page__link(href="#") 
+                              |Редактировать
               .button-wrapper
                 +button(tag='div')
                   |Показать больше

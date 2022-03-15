@@ -146,4 +146,10 @@
   &__column {
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
   }
+
+  &__link {
+    margin-top: 4px;
+
+    @include fsl(16px, 120%);
+  }
 }
