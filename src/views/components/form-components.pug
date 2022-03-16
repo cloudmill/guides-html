@@ -2,14 +2,33 @@
 
 mixin input
   if (attributes.type === 'phone')
-    input.form__input(class=attributes.class type=attributes.type placeholder=attributes.placeholder name=attributes.name required data-mask='phone')
+    input.form__input(class=attributes.class type=attributes.type placeholder=attributes.placeholder name=attributes.name required data-mask='phone')&attributes(attributes)
   else
-    input.form__input(class=attributes.class type=attributes.type placeholder=attributes.placeholder name=attributes.name required)
+    input.form__input(class=attributes.class type=attributes.type placeholder=attributes.placeholder name=attributes.name required)&attributes(attributes)
+
+mixin input-default 
+  if (attributes.type === 'phone')
+    input.form__input(class=attributes.class type=attributes.type placeholder=attributes.placeholder name=attributes.name data-mask='phone')&attributes(attributes)
+  else
+    input.form__input(class=attributes.class type=attributes.type placeholder=attributes.placeholder name=attributes.name)&attributes(attributes)
 
 mixin checkbox 
   .checkbox 
     label.checkbox__label
-      input.checkbox__input(type="checkbox" name='checkbox-1' required)
+      input.checkbox__input(type="checkbox" name=(attributes.name ? attributes.name : 'checkbox-1') required)&attributes(attributes)
+      .checkbox__box 
+        +check-svg.checkbox__svg
+      if (attributes.text)
+        .checkbox__text 
+          |#{attributes.text}
+      else 
+        .checkbox__text 
+          |I give my consent to #[a.checkbox__link(href='#') the processing of personal data]
+
+mixin checkbox-default
+  .checkbox 
+    label.checkbox__label
+      input.checkbox__input(type="checkbox" name=(attributes.name ? attributes.name : 'checkbox-1'))&attributes(attributes)
       .checkbox__box 
         +check-svg.checkbox__svg
       if (attributes.text)

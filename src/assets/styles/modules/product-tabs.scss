@@ -10,6 +10,10 @@
     }
   }
 
+  &--end {
+    align-items: flex-end;
+  }
+
   &__item {
 
     &:not(:first-child) {

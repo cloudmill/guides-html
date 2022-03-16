@@ -1,0 +1,26 @@
+.parsley-handler {
+
+  &.parsley-error {
+    .checkbox__box {
+      border-color: $color-red;
+    }
+
+    .checkbox__text {
+      color: $color-red;
+    }
+    .checkbox__link {
+      color: $color-red;
+    }
+
+    .file {
+      border-color: $color-red;
+    }
+  }
+}
+
+.custom-error {
+  max-width: 200px;
+  
+  color: $color-red;
+  @include fsl(16px, 140%);
+}

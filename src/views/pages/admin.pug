@@ -9,7 +9,7 @@ block content
   .admin 
     .container 
       .admin__top 
-        .product-tabs(data-admin-tabs='')
+        .product-tabs.product-tabs--end(data-admin-tabs='')
           each item, i in ['Общая информация', 'Состав тура', 'Календарь', 'Цены'] 
             .product-tabs__item
               .product-tabs__tab(data-admin-item='' class=(i === 0) ? 'active' : '')
@@ -43,22 +43,22 @@ block content
                   .admin__horiz
                     .admin__text
                       |Укажите тип
-                  .admin__horiz
+                  .admin__horiz.parsley-handler.qwe
                     .admin__item 
-                      +checkbox(text='Индивидуальные')
+                      +checkbox(name="qwe" text='Индивидуальные' data-parsley-class-handler=".qwe" data-parsley-check="[1,1]")
                     .admin__item 
-                      +checkbox(text='Групповые')
+                      +checkbox(name="qwe" text='Групповые' data-parsley-class-handler=".parsley-handlerq" data-parsley-check="[1,1]")
                 .admin__row 
                   .admin__horiz
                     .admin__text
                       |Укажите особенность
-                  .admin__horiz
+                  .admin__horiz.parsley-handler.zxc
                     .admin__item 
-                      +checkbox(text='Popular')
+                      +checkbox(name="zxc" text='Popular' data-parsley-class-handler=".zxc" data-parsley-check="[1,1]")
                     .admin__item 
-                      +checkbox(text='Special interest')
+                      +checkbox(name="zxc" text='Special interest' data-parsley-class-handler=".zxc" data-parsley-check="[1,1]")
                     .admin__item 
-                      +checkbox(text='Child friendly')
+                      +checkbox(name="zxc" text='Child friendly' data-parsley-class-handler=".zxc" data-parsley-check="[1,1]")
             .admin__block 
               .admin__large
                 .admin__horiz 
@@ -68,7 +68,7 @@ block content
                   textarea.form__textarea(name='message')
           .admin__section
             .admin__col(data-add-parent='')
-              .admin__list(data-add-container='')
+              .admin__list.parsley-handler.files(data-add-container='')
                 .admin__row(data-add-item='')
                   .file(data-file-input='') 
                     .file__container
@@ -76,7 +76,7 @@ block content
                       .file__button 
                         |Delete
                     label.file__label
-                      input.file__input(type="file")
+                      input.file__input(type="file" required data-parsley-class-handler=".files")
                       .file__text 
                         |Upload image for the gallery
                       .file__icon 
@@ -88,7 +88,7 @@ block content
                       .file__button 
                         |Delete
                     label.file__label
-                      input.file__input(type="file")
+                      input.file__input(type="file" required data-parsley-class-handler=".files")
                       .file__text 
                         |Upload image for the gallery
                       .file__icon 
@@ -100,7 +100,7 @@ block content
                       .file__button 
                         |Delete
                     label.file__label
-                      input.file__input(type="file")
+                      input.file__input(type="file" required data-parsley-class-handler=".files")
                       .file__text 
                         |Upload image for the gallery
                       .file__icon 
@@ -114,17 +114,17 @@ block content
                 .admin__horiz
                   .admin__text
                     |Страна
-                .admin__horiz
+                .admin__horiz.parsley-handler.cntr
                   .admin__grid
                     each item in ['Россия', 'Германия', 'Швеция',]
                       .admin__item 
-                        +checkbox(text=item)
+                        +checkbox(text=item name="country" data-parsley-class-handler=".cntr" data-parsley-check="[1,1]")
                     .admin__item.admin__first
-                      +checkbox(text='Эстония')
+                      +checkbox(text='Эстония' name="country" data-parsley-class-handler=".cntr" data-parsley-check="[1,1]")
                     each item in ['Финляндия', 'Дания']
                       .admin__item 
-                        +checkbox(text=item)
-              .admin__row 
+                        +checkbox(text=item name="country" data-parsley-class-handler=".cntr" data-parsley-check="[1,1]")
+              .admin__row.parsley-handler.port
                 .admin__horiz
                   .admin__text
                     |Укажите порт
@@ -132,12 +132,12 @@ block content
                   .admin__grid
                     each item in ['Санкт-Петербург', 'Варнемюнде/Росток', 'Стокгольм',]
                       .admin__item 
-                        +checkbox(text=item)
+                        +checkbox(text=item name="port" data-parsley-class-handler=".port" data-parsley-check="[1,1]")
                     .admin__item.admin__first
-                      +checkbox(text='Таллин')
+                      +checkbox(text='Таллин' name="port" data-parsley-class-handler=".port" data-parsley-check="[1,1]")
                     each item in ['Хельсинки', 'Копенгаген']
                       .admin__item 
-                        +checkbox(text=item)
+                        +checkbox(text=item name="port" data-parsley-class-handler=".port" data-parsley-check="[1,1]")
           .admin__section 
             .admin__col 
               .admin__row 
@@ -163,7 +163,7 @@ block content
                 .admin__text 
                   |Укажите доступность для инвалидов
               .admin__horiz
-                +checkbox(text = 'Доступно')
+                +checkbox-default(text = 'Доступно' name = "opo")
           .admin__section 
             .admin__col 
               .admin__horiz 
@@ -178,10 +178,12 @@ block content
                 .admin__text 
                   |Укажите значение активности от 1 до 5
               .admin__horiz
-                .admin__mid
+                .admin__ll
                   .select-wrapper
                     .select
-                      select.select__select(name="activity" style='width: 100%' data-select-placeholder='Select language') 
+                      select.select__select(name="activity" style='width: 100%' required data-parsley-class-handler=".select")
+                        option(value selected disabled)
+                          |Выберите значение
                         option(value = '1')
                           |1
                         option(value = '2')
@@ -202,30 +204,30 @@ block content
                         |В стоимость тура входит
                       .admin__row
                         .admin__ll 
-                          +input(type = 'text' name = 'text')
+                          +input-default(type = 'text' name = 'text')
                     .admin__tour-col 
                       .admin__caption 
                         |В стоимость тура не входит
                       .admin__row
                         .admin__ll   
-                          +input(type = 'text' name = 'text')
+                          +input-default(type = 'text' name = 'text')
                 .admin__list-item(data-add-item='')
                   .admin__tour
                     .admin__tour-col
                       .admin__ll 
-                        +input(type = 'text' name = 'text')
+                        +input-default(type = 'text' name = 'text')
                     .admin__tour-col 
                       .admin__ll   
-                        +input(type = 'text' name = 'text')
+                        +input-default(type = 'text' name = 'text')
                 - for (i = 0; i < 3; i++)
                   .admin__list-item
                     .admin__tour
                       .admin__tour-col
                         .admin__ll 
-                          +input(type = 'text' name = 'text')
+                          +input-default(type = 'text' name = 'text')
                       .admin__tour-col 
                         .admin__ll   
-                          +input(type = 'text' name = 'text')
+                          +input-default(type = 'text' name = 'text')
               .admin__row   
                 .admin__show(data-add-button='default')
                   |Добавить еще
@@ -337,7 +339,7 @@ block content
                           |Выбрать шаблон для сравнения123
               .admin__row 
                 .admin__large 
-                  button.button.button--xxl(type='submit')
+                  button.button.button--xxl(type='submit' data-admin-save='')
                     |Сохранить
         .admin__tab(data-add-parent='')
           .admin__list(data-add-container='')
@@ -419,7 +421,7 @@ block content
               |Добавить еще день
           .admin__section 
             .admin__large 
-              button.button.button--xxl(type='submit')
+              button.button.button--xxl(type='submit' data-admin-save='')
                 |Сохранить
         .admin__tab
           .admin__section
@@ -477,7 +479,7 @@ block content
                   +calendar
           .admin__section 
             .admin__large 
-              button.button.button--xxl(type='submit')
+              button.button.button--xxl(type='submit'  data-admin-save='')
                 |Сохранить
         .admin__tab
           .admin__section
@@ -681,7 +683,7 @@ block content
                   |Добавить еще
           .admin__section 
             .admin__large 
-              button.button.button--xxl(type='submit')
+              button.button.button--xxl(type='submit' data-admin-save='')
                 |Сохранить
 
   .modals 

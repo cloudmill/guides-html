@@ -5,6 +5,19 @@
     position: relative;
   }
 
+  &.parsley-error {
+    .parsley-errors-list {
+      display: none;
+    }
+
+    .select2-container {
+
+      .select2-selection {
+        border-color: $color-red;
+      }
+    }
+  }
+
   &.select--small {
     .select2-container {
 
