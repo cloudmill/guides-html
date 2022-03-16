@@ -113,21 +113,31 @@ block content
               .admin__row 
                 .admin__horiz
                   .admin__text
+                    |Страна
+                .admin__horiz
+                  .admin__grid
+                    each item in ['Россия', 'Германия', 'Швеция',]
+                      .admin__item 
+                        +checkbox(text=item)
+                    .admin__item.admin__first
+                      +checkbox(text='Эстония')
+                    each item in ['Финляндия', 'Дания']
+                      .admin__item 
+                        +checkbox(text=item)
+              .admin__row 
+                .admin__horiz
+                  .admin__text
                     |Укажите порт
                 .admin__horiz
                   .admin__grid
-                    .admin__item 
-                      +checkbox(text='Санкт-Петербург')
-                    .admin__item 
-                      +checkbox(text='Варнемюнде/Росток')
-                    .admin__item 
-                      +checkbox(text='Стокгольм')
+                    each item in ['Санкт-Петербург', 'Варнемюнде/Росток', 'Стокгольм',]
+                      .admin__item 
+                        +checkbox(text=item)
                     .admin__item.admin__first
                       +checkbox(text='Таллин')
-                    .admin__item 
-                      +checkbox(text='Хельсинки')
-                    .admin__item 
-                      +checkbox(text='Копенгаген')
+                    each item in ['Хельсинки', 'Копенгаген']
+                      .admin__item 
+                        +checkbox(text=item)
           .admin__section 
             .admin__col 
               .admin__row 

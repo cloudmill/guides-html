@@ -59,12 +59,12 @@ mixin about
       p.excursion-page__about-text(data-aos='fade-up') 
         |We tried to include the most beautiful places and the most important sights of St. Petersburg in our excursion-walk. We tried to make this route interesting and dynamic, but the tour route can be changed according to your wishes.
     .excursion-page__about-dropdown(data-accordion-dropdown='')
-      .video 
+      .video(data-video='')
         .video__container(data-aos='fade-up') 
-          iframe.video__iframe(src="https://www.youtube.com/embed/W85oD8FEF78?enablejsapi=1&version=3&playerapiid=ytplayer") 
+          .video__iframe#player(data-video-id='W85oD8FEF78') 
           .video__img
             img(src="assets/images/video.jpg", alt="")
-          .video__button 
+          .video__button(data-video-button='')
             +play-svg.video__icon
     .excursion-page__about-btn(data-aos='fade-up') 
       .excursion-page__button(data-accordion-button='')

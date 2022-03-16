@@ -19,7 +19,7 @@ import 'scripts/label-hide.js';
 import 'scripts/aside.js';
 import 'scripts/real-tabs.js';
 import 'scripts/admin/AdminPanel.js';
-import 'scripts/video.js';
+import 'scripts/YTvideo.js';
 import 'scripts/cart-button.js';
 import 'scripts/admin-tabs.js';
 import 'scripts/aos.js';

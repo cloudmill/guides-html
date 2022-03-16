@@ -1,7 +1,7 @@
 .video {
   $comp: &;
 
-  &--active {
+  &.active {
     #{$comp}__iframe {
       opacity: 1;
       visibility: visible;
