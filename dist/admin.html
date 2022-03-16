@@ -38,7 +38,7 @@
 				<div class="admin">
 					<div class="container">
 						<div class="admin__top">
-							<div class="product-tabs" data-admin-tabs="">
+							<div class="product-tabs product-tabs--end" data-admin-tabs="">
 								<div class="product-tabs__item">
 									<div class="product-tabs__tab active" data-admin-item="">
 										<h2>Общая информация</h2>
@@ -88,9 +88,9 @@
 												<div class="admin__horiz">
 													<div class="admin__text">Укажите тип</div>
 												</div>
-												<div class="admin__horiz">
+												<div class="admin__horiz parsley-handler qwe">
 													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="qwe" required="required" text="Индивидуальные" data-parsley-class-handler=".qwe" data-parsley-check="[1,1]" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -98,7 +98,7 @@
 															</label></div>
 													</div>
 													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="qwe" required="required" text="Групповые" data-parsley-class-handler=".parsley-handlerq" data-parsley-check="[1,1]" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -111,9 +111,9 @@
 												<div class="admin__horiz">
 													<div class="admin__text">Укажите особенность</div>
 												</div>
-												<div class="admin__horiz">
+												<div class="admin__horiz parsley-handler zxc">
 													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="zxc" required="required" text="Popular" data-parsley-class-handler=".zxc" data-parsley-check="[1,1]" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -121,7 +121,7 @@
 															</label></div>
 													</div>
 													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="zxc" required="required" text="Special interest" data-parsley-class-handler=".zxc" data-parsley-check="[1,1]" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -129,7 +129,7 @@
 															</label></div>
 													</div>
 													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="zxc" required="required" text="Child friendly" data-parsley-class-handler=".zxc" data-parsley-check="[1,1]" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -151,13 +151,13 @@
 								</div>
 								<div class="admin__section">
 									<div class="admin__col" data-add-parent="">
-										<div class="admin__list" data-add-container="">
+										<div class="admin__list parsley-handler files" data-add-container="">
 											<div class="admin__row" data-add-item="">
 												<div class="file" data-file-input="">
 													<div class="file__container">
 														<div class="file__name"></div>
 														<div class="file__button">Delete</div>
-													</div><label class="file__label"><input class="file__input" type="file">
+													</div><label class="file__label"><input class="file__input" type="file" required data-parsley-class-handler=".files">
 														<div class="file__text">Upload image for the gallery</div>
 														<div class="file__icon"><svg class="file__svg" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -171,7 +171,7 @@
 													<div class="file__container">
 														<div class="file__name"></div>
 														<div class="file__button">Delete</div>
-													</div><label class="file__label"><input class="file__input" type="file">
+													</div><label class="file__label"><input class="file__input" type="file" required data-parsley-class-handler=".files">
 														<div class="file__text">Upload image for the gallery</div>
 														<div class="file__icon"><svg class="file__svg" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -185,7 +185,7 @@
 													<div class="file__container">
 														<div class="file__name"></div>
 														<div class="file__button">Delete</div>
-													</div><label class="file__label"><input class="file__input" type="file">
+													</div><label class="file__label"><input class="file__input" type="file" required data-parsley-class-handler=".files">
 														<div class="file__text">Upload image for the gallery</div>
 														<div class="file__icon"><svg class="file__svg" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -206,10 +206,10 @@
 											<div class="admin__horiz">
 												<div class="admin__text">Страна</div>
 											</div>
-											<div class="admin__horiz">
+											<div class="admin__horiz parsley-handler cntr">
 												<div class="admin__grid">
 													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="country" required="required" text="Россия" data-parsley-class-handler=".cntr" data-parsley-check="[1,1]" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -217,7 +217,7 @@
 															</label></div>
 													</div>
 													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="country" required="required" text="Германия" data-parsley-class-handler=".cntr" data-parsley-check="[1,1]" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -225,7 +225,7 @@
 															</label></div>
 													</div>
 													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="country" required="required" text="Швеция" data-parsley-class-handler=".cntr" data-parsley-check="[1,1]" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -233,7 +233,7 @@
 															</label></div>
 													</div>
 													<div class="admin__item admin__first">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="country" required="required" text="Эстония" data-parsley-class-handler=".cntr" data-parsley-check="[1,1]" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -241,7 +241,7 @@
 															</label></div>
 													</div>
 													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="country" required="required" text="Финляндия" data-parsley-class-handler=".cntr" data-parsley-check="[1,1]" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -249,7 +249,7 @@
 															</label></div>
 													</div>
 													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="country" required="required" text="Дания" data-parsley-class-handler=".cntr" data-parsley-check="[1,1]" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -259,14 +259,14 @@
 												</div>
 											</div>
 										</div>
-										<div class="admin__row">
+										<div class="admin__row parsley-handler port">
 											<div class="admin__horiz">
 												<div class="admin__text">Укажите порт</div>
 											</div>
 											<div class="admin__horiz">
 												<div class="admin__grid">
 													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="port" required="required" text="Санкт-Петербург" data-parsley-class-handler=".port" data-parsley-check="[1,1]" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -274,7 +274,7 @@
 															</label></div>
 													</div>
 													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="port" required="required" text="Варнемюнде/Росток" data-parsley-class-handler=".port" data-parsley-check="[1,1]" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -282,7 +282,7 @@
 															</label></div>
 													</div>
 													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="port" required="required" text="Стокгольм" data-parsley-class-handler=".port" data-parsley-check="[1,1]" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -290,7 +290,7 @@
 															</label></div>
 													</div>
 													<div class="admin__item admin__first">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="port" required="required" text="Таллин" data-parsley-class-handler=".port" data-parsley-check="[1,1]" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -298,7 +298,7 @@
 															</label></div>
 													</div>
 													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="port" required="required" text="Хельсинки" data-parsley-class-handler=".port" data-parsley-check="[1,1]" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -306,7 +306,7 @@
 															</label></div>
 													</div>
 													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="port" required="required" text="Копенгаген" data-parsley-class-handler=".port" data-parsley-check="[1,1]" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -348,7 +348,7 @@
 											<div class="admin__text">Укажите доступность для инвалидов</div>
 										</div>
 										<div class="admin__horiz">
-											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="opo" text="Доступно" />
 													<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 															<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 														</svg></div>
@@ -373,9 +373,10 @@
 											<div class="admin__text">Укажите значение активности от 1 до 5</div>
 										</div>
 										<div class="admin__horiz">
-											<div class="admin__mid">
+											<div class="admin__ll">
 												<div class="select-wrapper">
-													<div class="select"><select class="select__select" name="activity" style="width: 100%" data-select-placeholder="Select language">
+													<div class="select"><select class="select__select" name="activity" style="width: 100%" required data-parsley-class-handler=".select">
+															<option value selected="selected" disabled="disabled">Выберите значение</option>
 															<option value="1">1</option>
 															<option value="2">2</option>
 															<option value="3">3</option>
@@ -395,13 +396,13 @@
 													<div class="admin__tour-col">
 														<div class="admin__caption">В стоимость тура входит</div>
 														<div class="admin__row">
-															<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
+															<div class="admin__ll"><input class="form__input" name="text" /></div>
 														</div>
 													</div>
 													<div class="admin__tour-col">
 														<div class="admin__caption">В стоимость тура не входит</div>
 														<div class="admin__row">
-															<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
+															<div class="admin__ll"><input class="form__input" name="text" /></div>
 														</div>
 													</div>
 												</div>
@@ -409,40 +410,40 @@
 											<div class="admin__list-item" data-add-item="">
 												<div class="admin__tour">
 													<div class="admin__tour-col">
-														<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
+														<div class="admin__ll"><input class="form__input" name="text" /></div>
 													</div>
 													<div class="admin__tour-col">
-														<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
-													</div>
-												</div>
-											</div>
-											<div class="admin__list-item">
-												<div class="admin__tour">
-													<div class="admin__tour-col">
-														<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
-													</div>
-													<div class="admin__tour-col">
-														<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
+														<div class="admin__ll"><input class="form__input" name="text" /></div>
 													</div>
 												</div>
 											</div>
 											<div class="admin__list-item">
 												<div class="admin__tour">
 													<div class="admin__tour-col">
-														<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
+														<div class="admin__ll"><input class="form__input" name="text" /></div>
 													</div>
 													<div class="admin__tour-col">
-														<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
+														<div class="admin__ll"><input class="form__input" name="text" /></div>
 													</div>
 												</div>
 											</div>
 											<div class="admin__list-item">
 												<div class="admin__tour">
 													<div class="admin__tour-col">
-														<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
+														<div class="admin__ll"><input class="form__input" name="text" /></div>
 													</div>
 													<div class="admin__tour-col">
-														<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
+														<div class="admin__ll"><input class="form__input" name="text" /></div>
+													</div>
+												</div>
+											</div>
+											<div class="admin__list-item">
+												<div class="admin__tour">
+													<div class="admin__tour-col">
+														<div class="admin__ll"><input class="form__input" name="text" /></div>
+													</div>
+													<div class="admin__tour-col">
+														<div class="admin__ll"><input class="form__input" name="text" /></div>
 													</div>
 												</div>
 											</div>
@@ -576,7 +577,7 @@
 											</div>
 										</div>
 										<div class="admin__row">
-											<div class="admin__large"><button class="button button--xxl" type="submit">Сохранить</button></div>
+											<div class="admin__large"><button class="button button--xxl" type="submit" data-admin-save="">Сохранить</button></div>
 										</div>
 									</div>
 								</div>
@@ -677,7 +678,7 @@
 									<div class="admin__show admin__show--start" data-add-button="default">Добавить еще день</div>
 								</div>
 								<div class="admin__section">
-									<div class="admin__large"><button class="button button--xxl" type="submit">Сохранить</button></div>
+									<div class="admin__large"><button class="button button--xxl" type="submit" data-admin-save="">Сохранить</button></div>
 								</div>
 							</div>
 							<div class="admin__tab">
@@ -14145,7 +14146,7 @@
 									</div>
 								</div>
 								<div class="admin__section">
-									<div class="admin__large"><button class="button button--xxl" type="submit">Сохранить</button></div>
+									<div class="admin__large"><button class="button button--xxl" type="submit" data-admin-save="">Сохранить</button></div>
 								</div>
 							</div>
 							<div class="admin__tab">
@@ -14257,7 +14258,7 @@
 										<div class="admin__block">
 											<div class="admin__block-item admin__mid"></div>
 											<div class="admin__block-item">
-												<div class="admin__mid"><input class="form__input form__input--small" placeholder="стоимость" name="text" required="required" /></div>
+												<div class="admin__mid"><input class="form__input form__input--small form__input--small" placeholder="стоимость" name="text" required="required" /></div>
 											</div>
 										</div>
 										<div class="admin__block admin__big">
@@ -14268,7 +14269,7 @@
 												<div class="admin__text">Количество</div>
 											</div>
 											<div class="admin__block-item">
-												<div class="admin__mid"><input class="form__input form__input--small" placeholder="значение" name="text" required="required" /></div>
+												<div class="admin__mid"><input class="form__input form__input--small form__input--small" placeholder="значение" name="text" required="required" /></div>
 											</div>
 										</div>
 									</div>
@@ -14282,7 +14283,7 @@
 											<div class="admin__horiz">
 												<div class="admin__grid">
 													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" text="Русский" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -14290,7 +14291,7 @@
 															</label></div>
 													</div>
 													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" text="Английский" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -14298,7 +14299,7 @@
 															</label></div>
 													</div>
 													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" text="Немецкий" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -14306,7 +14307,7 @@
 															</label></div>
 													</div>
 													<div class="admin__item admin__first">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" text="Французский" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -14314,7 +14315,7 @@
 															</label></div>
 													</div>
 													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" text="Итальянский" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -14322,7 +14323,7 @@
 															</label></div>
 													</div>
 													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" text="Шведский" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 																	</svg></div>
@@ -14341,73 +14342,73 @@
 											<div class="admin__block-item">
 												<div class="admin__mid">
 													<div class="admin__text admin__text--center">1</div>
-													<div class="admin__horiz"><input class="form__input form__input--small" placeholder="стоимость" name="text" required="required" /></div>
+													<div class="admin__horiz"><input class="form__input form__input--small form__input--small" placeholder="стоимость" name="text" required="required" /></div>
 												</div>
 											</div>
 											<div class="admin__block-item">
 												<div class="admin__mid">
 													<div class="admin__text admin__text--center">2</div>
-													<div class="admin__horiz"><input class="form__input form__input--small" placeholder="стоимость" name="text" required="required" /></div>
+													<div class="admin__horiz"><input class="form__input form__input--small form__input--small" placeholder="стоимость" name="text" required="required" /></div>
 												</div>
 											</div>
 											<div class="admin__block-item">
 												<div class="admin__mid">
 													<div class="admin__text admin__text--center">3</div>
-													<div class="admin__horiz"><input class="form__input form__input--small" placeholder="стоимость" name="text" required="required" /></div>
+													<div class="admin__horiz"><input class="form__input form__input--small form__input--small" placeholder="стоимость" name="text" required="required" /></div>
 												</div>
 											</div>
 											<div class="admin__block-item">
 												<div class="admin__mid">
 													<div class="admin__text admin__text--center">4</div>
-													<div class="admin__horiz"><input class="form__input form__input--small" placeholder="стоимость" name="text" required="required" /></div>
+													<div class="admin__horiz"><input class="form__input form__input--small form__input--small" placeholder="стоимость" name="text" required="required" /></div>
 												</div>
 											</div>
 											<div class="admin__block-item">
 												<div class="admin__mid">
 													<div class="admin__text admin__text--center">5</div>
-													<div class="admin__horiz"><input class="form__input form__input--small" placeholder="стоимость" name="text" required="required" /></div>
+													<div class="admin__horiz"><input class="form__input form__input--small form__input--small" placeholder="стоимость" name="text" required="required" /></div>
 												</div>
 											</div>
 											<div class="admin__block-item">
 												<div class="admin__mid">
 													<div class="admin__text admin__text--center">6</div>
-													<div class="admin__horiz"><input class="form__input form__input--small" placeholder="стоимость" name="text" required="required" /></div>
+													<div class="admin__horiz"><input class="form__input form__input--small form__input--small" placeholder="стоимость" name="text" required="required" /></div>
 												</div>
 											</div>
 											<div class="admin__block-item">
 												<div class="admin__mid">
 													<div class="admin__text admin__text--center">7</div>
-													<div class="admin__horiz"><input class="form__input form__input--small" placeholder="стоимость" name="text" required="required" /></div>
+													<div class="admin__horiz"><input class="form__input form__input--small form__input--small" placeholder="стоимость" name="text" required="required" /></div>
 												</div>
 											</div>
 											<div class="admin__block-item">
 												<div class="admin__mid">
 													<div class="admin__text admin__text--center">8</div>
-													<div class="admin__horiz"><input class="form__input form__input--small" placeholder="стоимость" name="text" required="required" /></div>
+													<div class="admin__horiz"><input class="form__input form__input--small form__input--small" placeholder="стоимость" name="text" required="required" /></div>
 												</div>
 											</div>
 											<div class="admin__block-item">
 												<div class="admin__mid">
 													<div class="admin__text admin__text--center">9</div>
-													<div class="admin__horiz"><input class="form__input form__input--small" placeholder="стоимость" name="text" required="required" /></div>
+													<div class="admin__horiz"><input class="form__input form__input--small form__input--small" placeholder="стоимость" name="text" required="required" /></div>
 												</div>
 											</div>
 											<div class="admin__block-item">
 												<div class="admin__mid">
 													<div class="admin__text admin__text--center">10</div>
-													<div class="admin__horiz"><input class="form__input form__input--small" placeholder="стоимость" name="text" required="required" /></div>
+													<div class="admin__horiz"><input class="form__input form__input--small form__input--small" placeholder="стоимость" name="text" required="required" /></div>
 												</div>
 											</div>
 											<div class="admin__block-item">
 												<div class="admin__mid">
 													<div class="admin__text admin__text--center">11</div>
-													<div class="admin__horiz"><input class="form__input form__input--small" placeholder="стоимость" name="text" required="required" /></div>
+													<div class="admin__horiz"><input class="form__input form__input--small form__input--small" placeholder="стоимость" name="text" required="required" /></div>
 												</div>
 											</div>
 											<div class="admin__block-item">
 												<div class="admin__mid">
 													<div class="admin__text admin__text--center">12</div>
-													<div class="admin__horiz"><input class="form__input form__input--small" placeholder="стоимость" name="text" required="required" /></div>
+													<div class="admin__horiz"><input class="form__input form__input--small form__input--small" placeholder="стоимость" name="text" required="required" /></div>
 												</div>
 											</div>
 										</div>
@@ -14542,7 +14543,7 @@
 									</div>
 								</div>
 								<div class="admin__section">
-									<div class="admin__large"><button class="button button--xxl" type="submit">Сохранить</button></div>
+									<div class="admin__large"><button class="button button--xxl" type="submit" data-admin-save="">Сохранить</button></div>
 								</div>
 							</div>
 						</form>
