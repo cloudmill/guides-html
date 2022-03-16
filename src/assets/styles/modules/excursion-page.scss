@@ -202,7 +202,11 @@
     }
   }
 
-  &__landmarks {}
+  &__landmarks {
+    .js-hidden {
+      margin-top: 15px;
+    }
+  }
   &__landmarks-row {
     @media (min-width: $breakpoint-m) {
       display: flex;

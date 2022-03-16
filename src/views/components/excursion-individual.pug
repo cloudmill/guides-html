@@ -39,14 +39,15 @@ mixin landmarks
       .excursion-page__landmarks-col(data-aos='fade-up') 
         h2
           |Attractions
-      .excursion-page__landmarks-col
-        ul.excursion-page__landmarks-list
-          each item in data.landmarks 
-            li.excursion-page__landmarks-item(data-aos='fade-up') 
-              |#{item.text}
+      .excursion-page__landmarks-col(data-accordion='')
+        ul.excursion-page__landmarks-list(data-limited-list='7')
+          - for (i = 0; i < 2; i++)
+            each item in data.landmarks 
+              li.excursion-page__landmarks-item(data-aos='fade-up' data-list-item='') 
+                |#{item.text}
         if (attributes.button)
           .excursion-page__landmarks-btn(data-aos='fade-up') 
-            .excursion-page__button 
+            .excursion-page__button(data-accordion-button='' data-button-show='')
               |Show all
 
 mixin about
