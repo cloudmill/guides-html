@@ -27,7 +27,14 @@ function accordionSidebar() {
     $(this).remove();
   });
 
-  parentLiElement.length ? parentLiElement.siblings().find('ul').remove() : selectLiElement.siblings().find('ul').remove();
+  if (parentLiElement.length) {
+    parentLiElement.siblings().find('ul').remove();
+    parentLiElement.each(function() {
+      $(this).addClass('active');
+    });
+  } else {
+    selectLiElement.siblings().find('ul').remove();
+  }
 }
 
 function ajaxCallbackErrors(xhr) {
@@ -47,7 +54,7 @@ function youtubeInit() {
     return;
   }
 
-  container.find('iframe').attr('src', `https://www.youtube.com/embed/${id}?enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer`);
+  container.find('[data-video-id]').attr('data-video-id', id);
   container.find('img').attr('src', `//img.youtube.com/vi/${id}/maxresdefault.jpg`);
   container.find('[data-button]').append('<svg class="video__icon" width="12" height="18" viewbox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L11 9L1 17V1Z" stroke="#292929" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>');
 }
