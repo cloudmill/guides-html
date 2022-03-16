@@ -27,7 +27,14 @@ function accordionSidebar() {
     $(this).remove();
   });
 
-  parentLiElement.length ? parentLiElement.siblings().find('ul').remove() : selectLiElement.siblings().find('ul').remove();
+  if (parentLiElement.length) {
+    parentLiElement.siblings().find('ul').remove();
+    parentLiElement.each(function() {
+      $(this).addClass('active');
+    });
+  } else {
+    selectLiElement.siblings().find('ul').remove();
+  }
 }
 
 function ajaxCallbackErrors(xhr) {
