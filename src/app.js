@@ -28,7 +28,7 @@ import 'scripts/admin-tabs.js';
 import 'scripts/aos.js';
 import { Tabs } from './assets/scripts/tabs'
 import { Counter } from './assets/scripts/counter'
-import { CalendarChanger } from './assets/scripts/calendar-changer'
+import { CalendarChanger } from './assets/scripts/admin/calendar-changer'
 
 const siteTemplPath = document.querySelector("[data-type=site-templ-path]");
 

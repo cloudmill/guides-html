@@ -15,7 +15,7 @@ block content
               .product-tabs__tab(data-admin-item='' class=(i === 0) ? 'active' : '')
                 h2 
                   |#{item}
-      form.form(action="/") 
+      form.form(action="/" data-admin-form='') 
         .admin__tab.active
           .admin__section
             .admin__block 
@@ -180,8 +180,8 @@ block content
               .admin__horiz
                 .admin__ll
                   .select-wrapper
-                    .select
-                      select.select__select(name="activity" style='width: 100%' required data-parsley-class-handler=".select")
+                    .select.select-handler
+                      select.select__select(name="activity" style='width: 100%' required data-parsley-class-handler=".select-handler")
                         option(value selected disabled)
                           |Выберите значение
                         option(value = '1')
@@ -425,7 +425,7 @@ block content
                 |Сохранить
         .admin__tab
           .admin__section
-            .admin__col 
+            .admin__col(data-error-container='')
               .admin__container
                 .admin__block 
                   .admin__text.admin__right 
@@ -450,6 +450,8 @@ block content
                           input.checkbox__input(type="checkbox" name='checkbox-1')
                           .checkbox__box 
                             +check-svg.checkbox__svg
+              .admin__error 
+                |
           .admin__section 
             .admin__large 
               .button.button--xxl(data-admin-button='group')
@@ -462,20 +464,20 @@ block content
               .admin__block(data-add-parent='')
                 .product-tabs(data-add-container='')
                   .product-tabs__item 
-                    .product-tabs__tab.active(data-real-tabs='2021')
+                    .product-tabs__tab(data-real-tabs='2021')
                       .admin__text
                         |2021
                   .product-tabs__item(data-add-item='')
-                    .product-tabs__tab(data-real-tabs='2022')
+                    .product-tabs__tab.active(data-real-tabs='2022')
                       .admin__text
                         |2022
                 .admin__block
                   .admin__text(data-add-button='year')
                     |Добавить
               .admin__list(data-calendar-parent='')
-                .admin__calendar-item.active(data-tab-block='2021')
+                .admin__calendar-item(data-tab-block='2021')
                   +calendar
-                .admin__calendar-item(data-tab-block='2022')
+                .admin__calendar-item.active(data-tab-block='2022')
                   +calendar
           .admin__section 
             .admin__large 
@@ -690,20 +692,21 @@ block content
     .modal(data-admin-modal='')
       .modal__container
         form.form.admin(action="/") 
-          .select-wrapper(data-admin-select='')
+          .select-wrapper
             .select
-              select.select__select(name="time" style='width: 100%' data-select-placeholder='Статус' data-select-value='') 
+              select.select__select(name="status1" style='width: 100%' data-select-placeholder='Статус' data-admin-select='') 
                 option
-                option(value = 'open')
+                option(value = 'active')
                   |Активен
-                option(value = 'close')
+                option(value = 'inactive')
                   |Не активен
-          .admin__row 
-            .admin__block
-              .admin__text.admin__right 
-                |Закрытие автотической оплаты
-              .admin__col
-                input.form__input(data-close-input='' type="text" name='close')
+          .admin__close
+            .admin__row
+              .admin__block
+                .admin__text.admin__right 
+                  |Закрытие автотической оплаты
+                .admin__col
+                  input.form__input(data-close-input='' type="text" name='close' required)
           .admin__row 
             button.button.button--xxl
               |Сохранить

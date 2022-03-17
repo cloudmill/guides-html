@@ -224,6 +224,34 @@
       display: block;
     }
   }
+
+  &__error {
+    margin-top: 20px;
+
+    display: none;
+
+    color: $color-red;
+  }
+
+  &__close {
+    margin-top: 20px;
+  }
+}
+
+[data-type-error] {
+  .admin__error {
+    display: block;
+  }
+}
+[data-type-error=date] {
+  .form__input {
+    border-color: $color-red;
+  }
+}
+[data-type-error=days] {
+  .checkbox__box {
+    border-color: $color-red;
+  }
 }
 
 [data-tab-block] {
@@ -231,5 +259,24 @@
 
   &.active {
     display: block;
+  }
+}
+
+[data-admin-modal] {
+
+  .admin__close {
+    display: none;
+  }
+
+  &.active {
+    .admin__close {
+      display: block;
+    }
+  }
+}
+
+[data-status=inactive] {
+  [data-calendar-day] {
+    display: none;
   }
 }

@@ -1,19 +1,19 @@
 $(() => {
   if ($('.admin').length) {
-    const button = $('[data-admin-save]')
     let isErrorsExist = false
+    const form = $('[data-admin-form]').parsley()
 
-    button.on('click', function() {
-      setTimeout(() => {
-        const errors = $('.parsley-error')
-        const ERROR_TEXT = "Сохранить не удалось. Есть незаполненые поля"
+    form.on('form:validate', function() {
+      if (!form.isValid()) {
+        setTimeout(() => {
+          const errors = $('.parsley-error')
+          const ERROR_TEXT = "Сохранить не удалось. Есть незаполненые поля"
 
-        if (isErrorsExist) {
-          $('.custom-error').remove()
-          isErrorsExist = false
-        }
-
-        if (errors.length) {
+          if (isErrorsExist) {
+            $('.custom-error').remove()
+            isErrorsExist = false
+          }
+  
           let arr = []
 
           errors.each(function() {
@@ -29,8 +29,8 @@ $(() => {
             }
           })
           isErrorsExist = true
-        }
-      }, 100);
+        });
+      }
     })
   }
 })
