@@ -45,7 +45,7 @@ block content
                       |Укажите тип
                   .admin__horiz.parsley-handler.qwe
                     .admin__item 
-                      +checkbox(name="qwe" text='Индивидуальные' data-parsley-class-handler=".qwe" data-parsley-check="[1,1]")
+                      +checkbox(name="qwe" text='Индивидуальные' data-parsley-class-handler=".qwe" data-parsley-check="[1,1]" data-checkbox-reveal='qwe2')
                     .admin__item 
                       +checkbox(name="qwe" text='Групповые' data-parsley-class-handler=".parsley-handlerq" data-parsley-check="[1,1]")
                 .admin__row 
@@ -60,7 +60,7 @@ block content
                     .admin__item 
                       +checkbox(name="zxc" text='Child friendly' data-parsley-class-handler=".zxc" data-parsley-check="[1,1]")
             .admin__block 
-              .admin__large
+              .admin__large.hidden(data-reveal-target="qwe2")
                 .admin__horiz 
                   .admin__text 
                     |Блок с выводом сообщения о инддивидуальном подходе (только для индивидуальных)

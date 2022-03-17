@@ -15,7 +15,7 @@ block content
               .product-tabs__tab(data-admin-item='' class=(i === 0) ? 'active' : '')
                 h2 
                   |#{item}
-      form.form(action="/") 
+      form.form(action="/" data-admin-form='') 
         .admin__tab.active
           .admin__section
             .admin__block 
@@ -91,6 +91,36 @@ block content
                 .admin__show(data-add-button='default')
                   |Добавить еще
           .admin__section 
+            .admin__col
+              .admin__row 
+                .admin__horiz
+                  .admin__text
+                    |Страна
+                .admin__horiz.parsley-handler.cntr
+                  .admin__grid
+                    each item in ['Россия', 'Германия', 'Швеция',]
+                      .admin__item 
+                        +checkbox(text=item name="country" data-parsley-class-handler=".cntr" data-parsley-check="[1,1]")
+                    .admin__item.admin__first
+                      +checkbox(text='Эстония' name="country" data-parsley-class-handler=".cntr" data-parsley-check="[1,1]")
+                    each item in ['Финляндия', 'Дания']
+                      .admin__item 
+                        +checkbox(text=item name="country" data-parsley-class-handler=".cntr" data-parsley-check="[1,1]")
+              .admin__row.parsley-handler.port
+                .admin__horiz
+                  .admin__text
+                    |Укажите порт
+                .admin__horiz
+                  .admin__grid
+                    each item in ['Санкт-Петербург', 'Варнемюнде/Росток', 'Стокгольм',]
+                      .admin__item 
+                        +checkbox(text=item name="port" data-parsley-class-handler=".port" data-parsley-check="[1,1]")
+                    .admin__item.admin__first
+                      +checkbox(text='Таллин' name="port" data-parsley-class-handler=".port" data-parsley-check="[1,1]")
+                    each item in ['Хельсинки', 'Копенгаген']
+                      .admin__item 
+                        +checkbox(text=item name="port" data-parsley-class-handler=".port" data-parsley-check="[1,1]")
+          .admin__section 
             .admin__col 
               .admin__text 
                 |Укажите продолжительность экскурсии
@@ -107,43 +137,6 @@ block content
                   |Укажите доступность для инвалидов
               .admin__horiz
                 +checkbox(text = 'Доступно')
-          .admin__section
-            .admin__col(data-add-parent='')
-              .admin__list(data-add-container='')
-                .admin__list-item 
-                  .admin__tour
-                    .admin__tour-col
-                      .admin__caption 
-                        |В стоимость тура входит
-                      .admin__row
-                        .admin__ll 
-                          +input(type = 'text' name = 'text')
-                    .admin__tour-col 
-                      .admin__caption 
-                        |В стоимость тура не входит
-                      .admin__row
-                        .admin__ll   
-                          +input(type = 'text' name = 'text')
-                .admin__list-item(data-add-item='')
-                  .admin__tour
-                    .admin__tour-col
-                      .admin__ll 
-                        +input(type = 'text' name = 'text')
-                    .admin__tour-col 
-                      .admin__ll   
-                        +input(type = 'text' name = 'text')
-                - for (i = 0; i < 3; i++)
-                  .admin__list-item
-                    .admin__tour
-                      .admin__tour-col
-                        .admin__ll 
-                          +input(type = 'text' name = 'text')
-                      .admin__tour-col 
-                        .admin__ll   
-                          +input(type = 'text' name = 'text')
-              .admin__row   
-                .admin__show(data-add-button='default')
-                  |Добавить еще
           .admin__section 
             .admin__col
               .admin__text 
@@ -151,13 +144,19 @@ block content
               .admin__row 
                 .admin__big 
                   textarea.form__textarea(name='message')
+              .admin__row 
+                .admin__text 
+                  |Введите id видео
+              .admin__row 
+                .admin__big 
+                  +input.form__input--small(type = 'text' name = 'video')
           .admin__section 
             .admin__large 
               button.button.button--xxl(type='submit')
                 |Сохранить
         .admin__tab
           .admin__section
-            .admin__col 
+            .admin__col(data-error-container='')
               .admin__container
                 .admin__block 
                   .admin__text.admin__right 
@@ -182,6 +181,8 @@ block content
                           input.checkbox__input(type="checkbox" name='checkbox-1')
                           .checkbox__box 
                             +check-svg.checkbox__svg
+              .admin__error 
+                |
           .admin__section 
             .admin__large 
               .button.button--xxl(data-admin-button='group')
@@ -194,20 +195,20 @@ block content
               .admin__block(data-add-parent='')
                 .product-tabs(data-add-container='')
                   .product-tabs__item 
-                    .product-tabs__tab.active(data-real-tabs='2021')
+                    .product-tabs__tab(data-real-tabs='2021')
                       .admin__text
                         |2021
                   .product-tabs__item(data-add-item='')
-                    .product-tabs__tab(data-real-tabs='2022')
+                    .product-tabs__tab.active(data-real-tabs='2022')
                       .admin__text
                         |2022
                 .admin__block
                   .admin__text(data-add-button='year')
                     |Добавить
               .admin__list(data-calendar-parent='')
-                .admin__calendar-item.active(data-tab-block='2021')
+                .admin__calendar-item(data-tab-block='2021')
                   +hard-calendar
-                .admin__calendar-item(data-tab-block='2022')
+                .admin__calendar-item.active(data-tab-block='2022')
                   +hard-calendar
           .admin__section 
             .admin__large 
@@ -356,9 +357,9 @@ block content
     .modal(data-admin-modal='')
       .modal__container
         form.form.admin(action="/") 
-          .select-wrapper(data-admin-select='')
+          .select-wrapper
             .select
-              select.select__select(name="time" style='width: 100%' data-select-placeholder='Статус' data-select-value='') 
+              select.select__select(name="time" style='width: 100%' data-select-placeholder='Статус' data-admin-select='') 
                 option
                 option(value = 'open')
                   |Активен
@@ -376,12 +377,13 @@ block content
                 |Время начала
               .admin__block-item 
                 input.form__input(data-modal-end='' type="text" name='end' data-time-input='') 
-          .admin__row 
-            .admin__block
-              .admin__text.admin__right 
-                |Закрытие автотической оплаты
-              .admin__col
-                input.form__input(data-close-input='' type="text" name='close') 
+          .admin__close
+            .admin__row 
+              .admin__block
+                .admin__text.admin__right 
+                  |Закрытие автотической оплаты
+                .admin__col
+                  input.form__input(data-close-input='' type="text" name='close' required) 
           .admin__row 
             button.button.button--xxl
               |Сохранить

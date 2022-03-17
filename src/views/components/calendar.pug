@@ -13,6 +13,24 @@ mixin calendar
             .admin__container
               each item in [3, 3, 3, 5, 3, 3, 7]
                 .admin__block(data-admin-button='single' data-calendar-data=`2021-${index < 10 ? "0" + x : x}-${count < 10 ? '0' + count++ : count++}` data-status='active')
+                  .admin__col
+                    .admin__date
+                      |#{count < 10 ? '0' + (count - 1) : (count - 1)}.#{index < 10 ? "0" + x : x}.2021
+                    .calendar-card
+                      .calendar-card__container 
+                        .calendar-card__item 
+                          .admin__text(data-calendar-status='') 
+                            |Активен
+                        .calendar-card__item 
+                          .admin__text(data-calendar-day='')
+                            |#{item} дня
+        .admin__calendar-row
+          .admin__container
+            each item in [3, 3, 3,]
+              .admin__block(data-admin-button='single' data-calendar-data=`2021-${index < 10 ? "0" + x : x}-${count < 10 ? '0' + count++ : count++}` data-status='active')
+                .admin__col
+                  .admin__date
+                    |#{count < 10 ? '0' + (count - 1) : (count - 1)}.#{index < 10 ? "0" + x : x}.2021
                   .calendar-card
                     .calendar-card__container 
                       .calendar-card__item 
@@ -21,18 +39,6 @@ mixin calendar
                       .calendar-card__item 
                         .admin__text(data-calendar-day='')
                           |#{item} дня
-        .admin__calendar-row
-          .admin__container
-            each item in [3, 3, 3,]
-              .admin__block(data-admin-button='single' data-calendar-data=`2021-${index < 10 ? "0" + x : x}-${count < 10 ? '0' + count++ : count++}` data-status='active')
-                .calendar-card
-                  .calendar-card__container 
-                    .calendar-card__item 
-                      .admin__text(data-calendar-status='') 
-                        |Активен
-                    .calendar-card__item 
-                      .admin__text(data-calendar-day='')
-                        |#{item} дня
 
 mixin hard-calendar 
   .admin__year
@@ -49,6 +55,29 @@ mixin hard-calendar
             .admin__container
               each item in [3, 3, 3, 5, 3, 3, 7] 
                 .admin__block(data-admin-button='single' data-calendar-data=`2021-${index < 10 ? "0" + x : x}-${count < 10 ? '0' + count++ : count++}` data-status='active')
+                  .admin__col
+                    .admin__date
+                      |#{count < 10 ? '0' + (count - 1) : (count - 1)}.#{index < 10 ? "0" + x : x}.2021
+                    .calendar-card 
+                      .calendar-card__container 
+                        .calendar-card__item
+                          .admin__text(data-calendar-status='') 
+                            |Активен
+                        .calendar-card__item 
+                          .admin__text(data-calendar-start='') 
+                            |11:00
+                          .admin__text.admin__horiz(data-calendar-end='') 
+                            |18:00
+                        .calendar-card__item
+                          .admin__text(data-calendar-day='')
+                            |#{item} дня
+        .admin__calendar-row 
+          .admin__container
+            each item in [3, 3, 3] 
+              .admin__block(data-admin-button='single' data-calendar-data=`2021-${index < 10 ? "0" + x : x}-${count < 10 ? '0' + count++ : count++}` data-status='active')
+                .admin__col
+                  .admin__date
+                    |#{count < 10 ? '0' + (count - 1) : (count - 1)}.#{index < 10 ? "0" + x : x}.2021
                   .calendar-card 
                     .calendar-card__container 
                       .calendar-card__item
@@ -62,20 +91,3 @@ mixin hard-calendar
                       .calendar-card__item
                         .admin__text(data-calendar-day='')
                           |#{item} дня
-        .admin__calendar-row 
-          .admin__container
-            each item in [3, 3, 3] 
-              .admin__block(data-admin-button='single' data-calendar-data=`2021-${index < 10 ? "0" + x : x}-${count < 10 ? '0' + count++ : count++}` data-status='active')
-                .calendar-card 
-                  .calendar-card__container 
-                    .calendar-card__item
-                      .admin__text(data-calendar-status='') 
-                        |Активен
-                    .calendar-card__item 
-                      .admin__text(data-calendar-start='') 
-                        |11:00
-                      .admin__text.admin__horiz(data-calendar-end='') 
-                        |18:00
-                    .calendar-card__item
-                      .admin__text(data-calendar-day='')
-                        |#{item} дня
