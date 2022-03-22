@@ -77,8 +77,7 @@ function forms() {
       data: data,
       success: function(r) {
         if (r.success) {
-          form.attr('data-form-hidden', '');
-          form.find('[data-type=form-response]').attr('data-response-active', '');
+          window.objFormSuccess[form.data('func')](form, r);
         } else {
           alert(r.message);
         }
@@ -86,6 +85,16 @@ function forms() {
       error: ajaxCallbackErrors,
     });
   });
+}
+
+window.objFormSuccess = {
+  formSuccess: function(form, r) {
+    form.attr('data-form-hidden', '');
+    form.find('[data-type=form-response]').attr('data-response-active', '');
+  },
+  formDBSuccess: function(form, r) {
+    console.log(r);
+  }
 }
 
 function selectItem() {
