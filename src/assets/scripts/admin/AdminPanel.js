@@ -1,6 +1,7 @@
 import {initSelect} from '../select'
 import 'select2';
 import { SeasonManager } from './SeasonManager';
+import { changeFile } from '../file-input';
 
 class AdminPanel {
   constructor() {
@@ -47,6 +48,14 @@ class AdminPanel {
     this.clone = parent.querySelector('[data-add-item]').cloneNode(true)
     
     parent.querySelector('[data-add-container]').append(this.clone);
+
+    const fileInput = this.clone.querySelector('.file__input')
+    
+    if (fileInput) {
+      fileInput.onchange = function() {
+        changeFile(fileInput.closest('[data-file-input]'), this)
+      }
+    }
   }
 
   addSelect(button) {

@@ -79,7 +79,7 @@ block content
                   textarea.form__textarea(name='message')
           .admin__section
             .admin__col(data-add-parent='')
-              .admin__list.parsley-handler.files(data-add-container='')
+              .admin__list.parsley-handler.files(data-add-container='' data-file-container='')
                 .admin__row(data-add-item='')
                   .file(data-file-input='') 
                     .file__container
@@ -87,7 +87,7 @@ block content
                       .file__button 
                         |Delete
                     label.file__label
-                      input.file__input(type="file" required data-parsley-class-handler=".files")
+                      input.file__input(name='file' type="file" required data-parsley-class-handler=".files")
                       .file__text 
                         |Upload image for the gallery
                       .file__icon 
