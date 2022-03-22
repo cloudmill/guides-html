@@ -28,14 +28,14 @@ block content
                 |Активность
               .checkbox
                 label.checkbox__label
-                  input.checkbox__input(type="checkbox" name='checkbox-1' required)
+                  input.checkbox__input(type="checkbox" name='activity-check')
                   .checkbox__box 
                     +check-svg.checkbox__svg
             .admin__block 
               .admin__text.admin__right 
                 |Сортировка
               .admin__md
-                +input(type = 'text' name = 'name')
+                +input-default(type = 'text' name = 'name')
           .admin__section 
             .admin__block
               .admin__col  
@@ -43,24 +43,34 @@ block content
                   .admin__horiz
                     .admin__text
                       |Укажите тип
-                  .admin__horiz.parsley-handler.qwe
-                    .admin__item 
-                      +checkbox(name="qwe" text='Индивидуальные' data-parsley-class-handler=".qwe" data-parsley-check="[1,1]" data-checkbox-reveal='qwe2')
-                    .admin__item 
-                      +checkbox(name="qwe" text='Групповые' data-parsley-class-handler=".parsley-handlerq" data-parsley-check="[1,1]")
+                  .admin__horiz
+                    .admin__ll
+                      .select-wrapper
+                        .select.type
+                          select.select__select(name="type" style='width: 100%' data-select-placeholder='Выберите тип' data-select-reveal="individ" required  data-parsley-class-handler=".type") 
+                            option
+                            option(value = 'individ')
+                              |Индивидуальные
+                            option(value = 'group')
+                              |Групповые
                 .admin__row 
                   .admin__horiz
                     .admin__text
                       |Укажите особенность
-                  .admin__horiz.parsley-handler.zxc
-                    .admin__item 
-                      +checkbox(name="zxc" text='Popular' data-parsley-class-handler=".zxc" data-parsley-check="[1,1]")
-                    .admin__item 
-                      +checkbox(name="zxc" text='Special interest' data-parsley-class-handler=".zxc" data-parsley-check="[1,1]")
-                    .admin__item 
-                      +checkbox(name="zxc" text='Child friendly' data-parsley-class-handler=".zxc" data-parsley-check="[1,1]")
+                  .admin__horiz
+                    .admin__ll
+                      .select-wrapper
+                        .select.feature
+                          select.select__select(name="feature" style='width: 100%' data-select-placeholder='Выберите особенность' required  data-parsley-class-handler=".feature") 
+                            option
+                            option(value = 'w2')
+                              |Popular
+                            option(value = 'w3')
+                              |Special interest
+                            option(value = 'w4')
+                              |Child friendly
             .admin__block 
-              .admin__large.hidden(data-reveal-target="qwe2")
+              .admin__large.hidden(data-reveal-target="individ")
                 .admin__horiz 
                   .admin__text 
                     |Блок с выводом сообщения о инддивидуальном подходе (только для индивидуальных)
@@ -81,30 +91,6 @@ block content
                         |Upload image for the gallery
                       .file__icon 
                         +plus-svg.file__svg
-                .admin__row
-                  .file(data-file-input='') 
-                    .file__container
-                      .file__name 
-                      .file__button 
-                        |Delete
-                    label.file__label
-                      input.file__input(type="file" required data-parsley-class-handler=".files")
-                      .file__text 
-                        |Upload image for the gallery
-                      .file__icon 
-                        +plus-svg.file__svg
-                .admin__row
-                  .file(data-file-input='') 
-                    .file__container
-                      .file__name 
-                      .file__button 
-                        |Delete
-                    label.file__label
-                      input.file__input(type="file" required data-parsley-class-handler=".files")
-                      .file__text 
-                        |Upload image for the gallery
-                      .file__icon 
-                        +plus-svg.file__svg
               .admin__row 
                 .admin__show(data-add-button='default')
                   |Добавить еще
@@ -114,30 +100,46 @@ block content
                 .admin__horiz
                   .admin__text
                     |Страна
-                .admin__horiz.parsley-handler.cntr
-                  .admin__grid
-                    each item in ['Россия', 'Германия', 'Швеция',]
-                      .admin__item 
-                        +checkbox(text=item name="country" data-parsley-class-handler=".cntr" data-parsley-check="[1,1]")
-                    .admin__item.admin__first
-                      +checkbox(text='Эстония' name="country" data-parsley-class-handler=".cntr" data-parsley-check="[1,1]")
-                    each item in ['Финляндия', 'Дания']
-                      .admin__item 
-                        +checkbox(text=item name="country" data-parsley-class-handler=".cntr" data-parsley-check="[1,1]")
+                .admin__horiz
+                  .admin__ll
+                    .select-wrapper
+                      .select.countries
+                        select.select__select(name="countries" style='width: 100%' data-select-placeholder='Выберите страну' required  data-parsley-class-handler=".countries") 
+                          option
+                          -
+                            var countries = [
+                              {value: 'rus', text: 'Россия'},
+                              {value: 'ger', text: 'Германия'},
+                              {value: 'swe', text: 'Швеция'},
+                              {value: 'est', text: 'Эстония'},
+                              {value: 'fin', text: 'Финляндия'},
+                              {value: 'dan', text: 'Дания'},
+                            ]
+                          each item in countries
+                            option(value = item.value)
+                              |#{item.text}
               .admin__row.parsley-handler.port
                 .admin__horiz
                   .admin__text
                     |Укажите порт
                 .admin__horiz
-                  .admin__grid
-                    each item in ['Санкт-Петербург', 'Варнемюнде/Росток', 'Стокгольм',]
-                      .admin__item 
-                        +checkbox(text=item name="port" data-parsley-class-handler=".port" data-parsley-check="[1,1]")
-                    .admin__item.admin__first
-                      +checkbox(text='Таллин' name="port" data-parsley-class-handler=".port" data-parsley-check="[1,1]")
-                    each item in ['Хельсинки', 'Копенгаген']
-                      .admin__item 
-                        +checkbox(text=item name="port" data-parsley-class-handler=".port" data-parsley-check="[1,1]")
+                  .admin__ll
+                    .select-wrapper
+                      .select.port
+                        select.select__select(name="port" style='width: 100%' data-select-placeholder='Выберите порт' required  data-parsley-class-handler=".port") 
+                          option
+                          -
+                            var countries = [
+                              {value: 'st', text: 'Санкт-Петербург'},
+                              {value: 'dfs1', text: 'Варнемюнде/Росток'},
+                              {value: 'stock', text: 'Стокгольм'},
+                              {value: 'tal', text: 'Таллин'},
+                              {value: 'hel', text: 'Хельсинки'},
+                              {value: 'kop', text: 'Копенгаген'},
+                            ]
+                          each item in countries
+                            option(value = item.value)
+                              |#{item.text}
           .admin__section 
             .admin__col 
               .admin__row 
@@ -381,41 +383,6 @@ block content
                 .admin__row 
                   .admin__show(data-add-button='template') 
                     |Добавить еще
-            .admin__section
-              .admin__col(data-add-parent='')
-                .admin__row 
-                  .admin__text 
-                    |2 день
-                .admin__row 
-                  template(data-add-template='')
-                    .admin__list-item
-                      .admin__container
-                        .admin__block
-                          .admin__mid
-                          .admin__ll
-                            +input(type = 'text' name = 'text')
-                        .admin__block
-                          .admin__mid
-                          .admin__ll
-                            +input(type = 'text' name = 'text')
-                  .admin__list(data-add-container='')
-                    .admin__list-item
-                      .admin__container
-                        .admin__block
-                          .admin__mid
-                            .admin__text
-                              |Укажите время
-                          .admin__ll
-                            +input(type = 'text' name = 'text')
-                        .admin__block
-                          .admin__mid
-                            .admin__text
-                              |Укажите событие
-                          .admin__ll
-                            +input(type = 'text' name = 'text')
-                .admin__row 
-                  .admin__show(data-add-button='template') 
-                    |Добавить еще
           .admin__section 
             .admin__show.admin__show--start(data-add-button='default')
               |Добавить еще день
@@ -602,18 +569,18 @@ block content
                             .admin__text.admin__right 
                               |от
                             .admin__mid 
-                              +input(type = 'text' name = 'text')
+                              +input-default(type = 'text' name = 'text')
                           .admin__block 
                             .admin__text.admin__right 
                               |до
                             .admin__mid 
-                              +input(type = 'text' name = 'text')
+                              +input-default(type = 'text' name = 'text')
                       .admin__block
                         .admin__col 
                           .admin__text 
                             |Укажите размер скидки в процентах
                           .admin__horiz.admin__mid 
-                            +input(type = 'text' name = 'text')
+                            +input-default(type = 'text' name = 'text')
                 .admin__row 
                   .admin__show(data-add-button="default")
                     |Добавить еще промежуток
@@ -633,18 +600,18 @@ block content
                               .admin__text.admin__right 
                                 |от
                               .admin__mid 
-                                +input(type = 'text' name = 'text')
+                                +input-default(type = 'text' name = 'text')
                             .admin__block 
                               .admin__text.admin__right 
                                 |до
                               .admin__mid 
-                                +input(type = 'text' name = 'text')
+                                +input-default(type = 'text' name = 'text')
                         .admin__block
                           .admin__col 
                             .admin__text 
                               |Укажите размер скидки в процентах
                             .admin__horiz.admin__mid 
-                              +input(type = 'text' name = 'text')
+                              +input-default(type = 'text' name = 'text')
                   .admin__row 
                     .admin__show(data-add-button="default")
                       |Добавить еще промежуток

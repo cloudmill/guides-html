@@ -11,7 +11,7 @@ import 'scripts/nav-links.js';
 import 'scripts/parsley.js';
 import 'scripts/hero.js';
 import 'scripts/footer.js';
-import 'scripts/checkbox-reveal.js';
+import 'scripts/reveal.js';
 import 'scripts/data-picker.js';
 import 'scripts/form-response.js';
 import 'scripts/file-input.js';
