@@ -2,6 +2,7 @@ extends ../layouts/master.pug
 
 include ../components/form-components
 include ../components/calendar
+include ../components/modals
 
 block header 
 
@@ -414,7 +415,7 @@ block content
                       .admin__horiz
                         .checkbox 
                         label.checkbox__label
-                          input.checkbox__input(type="checkbox" name='checkbox-1')
+                          input.checkbox__input(type="checkbox" name='days')
                           .checkbox__box 
                             +check-svg.checkbox__svg
               .admin__error 
@@ -655,6 +656,7 @@ block content
               button.button.button--xxl(type='submit' data-admin-save='')
                 |Сохранить
 
+  +admin-modal
   .modals 
     .modal(data-admin-modal='')
       .modal__container

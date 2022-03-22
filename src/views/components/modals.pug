@@ -78,6 +78,13 @@ mixin faq-modal
           h3.form__response-message.form__response-message--md
             |Thank you! We have received your question and will respond soon.
 
+mixin admin-modal 
+  .modal(data-fancy-modal="admin123")
+    .modal__container
+      .form__response(data-response='1' data-response-active='') 
+        h3.form__response-message.form__response-message--md
+          |Thank you! We have received your question and will respond soon.
+
 //- pages: about, main, our-guides
 mixin team-modal 
   .team-modal(data-fancy-modal=attributes.id)
