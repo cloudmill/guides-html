@@ -6,7 +6,35 @@ $(function() {
   modalAjax();
   youtubeInit();
   accordionSidebar();
+  removeItem();
 });
+
+function removeItem() {
+  $(document).on('click', '[data-type=remove-item]', function() {
+    const thisObj = $(this);
+
+    $.ajax({
+      type: 'POST',
+      url: `${window.CONFIG.path}/include/ajax/ib_el/delete.php`,
+      dataType: 'json',
+      data: {
+        id: $(this).data('id'),
+      },
+      success: function(r) {
+        if (r.success) {
+          thisObj.parents('[data-container=item]').remove();
+        } else {
+          alert(r.message);
+        }
+      },
+      error: ajaxCallbackErrors,
+    });
+  });
+}
+
+function ajaxCallbackErrors(xhr) {
+  alert(`error: ${xhr.status}: ${xhr.statusText}`);
+}
 
 function accordionSidebar() {
   const container = $('[data-container=accordion]');
@@ -35,10 +63,6 @@ function accordionSidebar() {
   } else {
     selectLiElement.siblings().find('ul').remove();
   }
-}
-
-function ajaxCallbackErrors(xhr) {
-  alert(`error: ${xhr.status}: ${xhr.statusText}`);
 }
 
 function youtubeInit() {
