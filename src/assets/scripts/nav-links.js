@@ -3,7 +3,7 @@ import { mediaQuery } from './mediaQueries.js'
 $(window).on('load', () => {
   const headerOffset = $('.header').height() + 10
 
-  if ($('.nav-page').length && mediaQuery.matches) {
+  if ($('[data-nav-page]').length && mediaQuery.matches) {
     const FPS = 60
 
     const navLink = $('.nav-page__link')
