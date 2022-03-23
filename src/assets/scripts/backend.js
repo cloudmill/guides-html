@@ -89,6 +89,16 @@ function youtubeInit() {
   container.find('[data-button]').append('<svg class="video__icon" width="12" height="18" viewbox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L11 9L1 17V1Z" stroke="#292929" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>');
 }
 
+window.objFormSuccess = {
+  formSuccess: function(form, r) {
+    form.attr('data-form-hidden', '');
+    form.find('[data-type=form-response]').attr('data-response-active', '');
+  },
+  formDBSuccess: function(form, r) {
+    console.log(r);
+  }
+}
+
 function forms() {
   $(document).on('submit', '[data-type=form-backend]', function(e) {
     e.preventDefault();
@@ -115,16 +125,6 @@ function forms() {
       error: ajaxCallbackErrors,
     });
   });
-}
-
-window.objFormSuccess = {
-  formSuccess: function(form, r) {
-    form.attr('data-form-hidden', '');
-    form.find('[data-type=form-response]').attr('data-response-active', '');
-  },
-  formDBSuccess: function(form, r) {
-    console.log(r);
-  }
 }
 
 function selectItem() {
