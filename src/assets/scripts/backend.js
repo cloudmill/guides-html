@@ -11,6 +11,12 @@ $(function() {
 
 function removeItem() {
   $(document).on('click', '[data-type=remove-item]', function() {
+    const result = confirm('Подтвердите удаление');
+
+    if (!result) {
+      return;
+    }
+
     const thisObj = $(this);
 
     $.ajax({
