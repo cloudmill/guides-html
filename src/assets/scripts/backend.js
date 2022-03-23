@@ -89,13 +89,32 @@ function youtubeInit() {
   container.find('[data-button]').append('<svg class="video__icon" width="12" height="18" viewbox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L11 9L1 17V1Z" stroke="#292929" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>');
 }
 
+function backRedirect() {
+  const arr = window.location.pathname.split('/'),
+    resultArr = arr.filter(i => i);
+
+  resultArr.pop();
+  window.location.href = `${window.location.protocol}//${window.location.host}/${resultArr.join('/')}`;
+}
+
 window.objFormSuccess = {
   formSuccess: function(form, r) {
     form.attr('data-form-hidden', '');
     form.find('[data-type=form-response]').attr('data-response-active', '');
   },
   formDBSuccess: function(form, r) {
-    console.log(r);
+    backRedirect();
+  }
+}
+
+window.objFormErrors = {
+  adminForm: function(form, r) {
+    form.siblings('[data-type=errors]').remove();
+    form.after(`<div data-type="errors">${r.message}</div>`);
+    form.next().css({
+      'color': 'red',
+      'margin-top': '20px',
+    });
   }
 }
 
@@ -104,6 +123,7 @@ function forms() {
     e.preventDefault();
 
     const form = $(this),
+      action = form.attr('action'),
       data = {};
 
     form.find('[data-type=get-field]').each(function() {
@@ -112,14 +132,16 @@ function forms() {
 
     $.ajax({
       type: 'POST',
-      url: form.attr('action') ? form.attr('action') : `${window.CONFIG.path}/include/ajax/forms/index.php`,
+      url: action ? action : `${window.CONFIG.path}/include/ajax/forms/index.php`,
       dataType: 'json',
       data: data,
       success: function(r) {
         if (r.success) {
           window.objFormSuccess[form.data('func')](form, r);
         } else {
-          alert(r.message);
+          const errorFuncInit = form.data('func-error');
+
+          errorFuncInit ? window.objFormErrors[errorFuncInit](form, r) : alert(r.message);
         }
       },
       error: ajaxCallbackErrors,
