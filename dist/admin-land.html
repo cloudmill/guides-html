@@ -38,7 +38,7 @@
 				<div class="admin">
 					<div class="container">
 						<div class="admin__top">
-							<div class="product-tabs" data-admin-tabs="">
+							<div class="product-tabs product-tabs--end" data-admin-tabs="">
 								<div class="product-tabs__item">
 									<div class="product-tabs__tab active" data-admin-item="">
 										<h2>Общая информация</h2>
@@ -64,32 +64,42 @@
 						<form class="form" action="/" data-admin-form="">
 							<div class="admin__tab active">
 								<div class="admin__section">
-									<div class="admin__large">
-										<div class="select-wrapper">
-											<div class="select"><select class="select__select" name="time" style="width: 100%">
-													<option value="default" selected="selected" disabled="disabled">Выбрать</option>
-													<option value="hour">Вечернее мероприятие для наземников</option>
-													<option value="days">Вечернее мероприятие для круизников</option>
-												</select></div>
+									<div class="admin__block">
+										<div class="admin__col">
+											<div class="admin__row">
+												<div class="admin__horiz">
+													<div class="admin__text">Укажите тип</div>
+												</div>
+												<div class="admin__horiz">
+													<div class="admin__ll">
+														<div class="select-wrapper">
+															<div class="select type"><select class="select__select" name="type" style="width: 100%" data-select-placeholder="Выберите тип" data-select-reveal="individ" required data-parsley-class-handler=".type">
+																	<option></option>
+																	<option value="individ">Индивидуальные</option>
+																	<option value="group">Групповые</option>
+																</select></div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="admin__row">
+												<div class="admin__horiz">
+													<div class="admin__text">Укажите особенность</div>
+												</div>
+												<div class="admin__horiz">
+													<div class="admin__ll">
+														<div class="select-wrapper">
+															<div class="select feature"><select class="select__select" name="feature" style="width: 100%" data-select-placeholder="Выберите особенность" required data-parsley-class-handler=".feature">
+																	<option></option>
+																	<option value="w2">Popular</option>
+																	<option value="w3">Special interest</option>
+																	<option value="w4">Child friendly</option>
+																</select></div>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
-									</div>
-								</div>
-								<div class="admin__section">
-									<div class="admin__block">
-										<div class="admin__text admin__right">Название тура</div>
-										<div class="admin__big"><input class="form__input" name="name" required="required" /></div>
-									</div>
-									<div class="admin__block">
-										<div class="admin__text admin__right">Активность</div>
-										<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required>
-												<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-													</svg></div>
-											</label></div>
-									</div>
-									<div class="admin__block">
-										<div class="admin__text admin__right">Сортировка</div>
-										<div class="admin__md"><input class="form__input" name="name" required="required" /></div>
 									</div>
 								</div>
 								<div class="admin__section">

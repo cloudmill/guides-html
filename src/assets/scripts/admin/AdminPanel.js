@@ -49,12 +49,19 @@ class AdminPanel {
     
     parent.querySelector('[data-add-container]').append(this.clone);
 
+    // file input обработчик
     const fileInput = this.clone.querySelector('.file__input')
-    
     if (fileInput) {
       fileInput.onchange = function() {
         changeFile(fileInput.closest('[data-file-input]'), this)
       }
+    }
+
+    // состав тура увелечение номера дня
+    const day = this.clone.querySelector('[data-add-day]')
+    if (day) {
+      const days = parent.querySelectorAll('[data-add-item]')
+      day.textContent = days.length + " день"
     }
   }
 

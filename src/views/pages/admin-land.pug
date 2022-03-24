@@ -9,7 +9,7 @@ block content
   .admin 
     .container 
       .admin__top 
-        .product-tabs(data-admin-tabs='')
+        .product-tabs.product-tabs--end(data-admin-tabs='')
           each item, i in ['Общая информация', 'Состав тура', 'Календарь', 'Цены'] 
             .product-tabs__item 
               .product-tabs__tab(data-admin-item='' class=(i === 0) ? 'active' : '')
@@ -17,17 +17,6 @@ block content
                   |#{item}
       form.form(action="/" data-admin-form='') 
         .admin__tab.active
-          .admin__section 
-            .admin__large
-              .select-wrapper
-                .select
-                  select.select__select(name="time" style='width: 100%') 
-                    option(value='default' selected disabled)
-                      |Выбрать
-                    option(value = 'hour')
-                      |Вечернее мероприятие для наземников
-                    option(value = 'days')
-                      |Вечернее мероприятие для круизников
           .admin__section
             .admin__block 
               .admin__text.admin__right 
@@ -39,14 +28,14 @@ block content
                 |Активность
               .checkbox
                 label.checkbox__label
-                  input.checkbox__input(type="checkbox" name='checkbox-1' required)
+                  input.checkbox__input(type="checkbox" name='activity-check')
                   .checkbox__box 
                     +check-svg.checkbox__svg
             .admin__block 
               .admin__text.admin__right 
                 |Сортировка
               .admin__md
-                +input(type = 'text' name = 'name')
+                +input-default(type = 'text' name = 'name')
           .admin__section 
             .admin__block
               .admin__col  
@@ -55,32 +44,49 @@ block content
                     .admin__text
                       |Укажите тип
                   .admin__horiz
-                    .admin__item 
-                      +checkbox(text='Индивидуальные')
-                    .admin__item 
-                      +checkbox(text='Групповые')
+                    .admin__ll
+                      .select-wrapper
+                        .select.type
+                          select.select__select(name="type" style='width: 100%' data-select-placeholder='Выберите тип' data-select-reveal="individ" required  data-parsley-class-handler=".type") 
+                            option
+                            option(value = 'individ')
+                              |Индивидуальные
+                            option(value = 'group')
+                              |Групповые
                 .admin__row 
                   .admin__horiz
                     .admin__text
                       |Укажите особенность
                   .admin__horiz
-                    each item in ['Популярная', 'Необычные', 'Для детей', 'Вечерние/ночные', 'Мастер-классы']
-                      .admin__item 
-                        +checkbox(text=item)
+                    .admin__ll
+                      .select-wrapper
+                        .select.feature
+                          select.select__select(name="feature" style='width: 100%' data-select-placeholder='Выберите особенность' required  data-parsley-class-handler=".feature") 
+                            option
+                            option(value = 'w2')
+                              |Popular
+                            option(value = 'w3')
+                              |Special interest
+                            option(value = 'w4')
+                              |Child friendly
           .admin__section
-            .admin__col 
-              .admin__row
-                .file(data-file-input='') 
-                  .file__container
-                    .file__name 
-                    .file__button 
-                      |Delete
-                  label.file__label
-                    input.file__input(type="file")
-                    .file__text 
-                      |Upload image for the gallery
-                    .file__icon 
-                      +plus-svg.file__svg
+            .admin__col(data-add-parent='')
+              .admin__list.parsley-handler.files(data-add-container='' data-file-container='')
+                .admin__row(data-add-item='')
+                  .file(data-file-input='') 
+                    .file__container
+                      .file__name 
+                      .file__button 
+                        |Delete
+                    label.file__label
+                      input.file__input(name='file' type="file" required data-parsley-class-handler=".files")
+                      .file__text 
+                        |Upload image for the gallery
+                      .file__icon 
+                        +plus-svg.file__svg
+              .admin__row 
+                .admin__show(data-add-button='default')
+                  |Добавить еще
           .admin__section 
             .admin__col  
               .admin__row 
@@ -92,16 +98,13 @@ block content
                 .admin__horiz
                   +checkbox(text='В пригороде')
           .admin__section 
-            .admin__col(data-add-parent='')
+            .admin__col
               .admin__text 
                 |Укажите страну
-              .admin__list.admin__row(data-add-container='')
-                .admin__horiz(data-add-item='')
+              .admin__list.admin__row
+                .admin__horiz
                   .admin__mid
                     +input(type = 'text' name = 'place')
-              .admin__horiz 
-                .admin__show(data-add-button='default') 
-                  |Добавить еще
           .admin__section 
             .admin__col  
               .admin__row 
@@ -109,14 +112,13 @@ block content
                   .admin__text
                     |Укажите город
                 .admin__horiz
-                  .admin__block
-                    .admin__text.admin__right 
-                      |Санкт-Петербург
-                    .checkbox
-                      label.checkbox__label
-                        input.checkbox__input(type="checkbox" name='checkbox-1' required)
-                        .checkbox__box 
-                          +check-svg.checkbox__svg
+                  .admin__ll
+                    .select-wrapper
+                      .select.city1
+                        select.select__select(name="city1" style='width: 100%' data-select-placeholder='Выбрать' required  data-parsley-class-handler=".city1") 
+                          option
+                          option(value = 'st')
+                            |Санкт-Петербург
           .admin__section 
             .admin__col 
               .admin__row 
@@ -163,30 +165,30 @@ block content
                         |В стоимость тура входит
                       .admin__row
                         .admin__ll 
-                          +input(type = 'text' name = 'text')
+                          +input-default(type = 'text' name = 'text')
                     .admin__tour-col 
                       .admin__caption 
                         |В стоимость тура не входит
                       .admin__row
                         .admin__ll   
-                          +input(type = 'text' name = 'text')
+                          +input-default(type = 'text' name = 'text')
                 .admin__list-item(data-add-item='')
                   .admin__tour
                     .admin__tour-col
                       .admin__ll 
-                        +input(type = 'text' name = 'text')
+                        +input-default(type = 'text' name = 'text')
                     .admin__tour-col 
                       .admin__ll   
-                        +input(type = 'text' name = 'text')
+                        +input-default(type = 'text' name = 'text')
                 - for (i = 0; i < 3; i++)
                   .admin__list-item
                     .admin__tour
                       .admin__tour-col
                         .admin__ll 
-                          +input(type = 'text' name = 'text')
+                          +input-default(type = 'text' name = 'text')
                       .admin__tour-col 
                         .admin__ll   
-                          +input(type = 'text' name = 'text')
+                          +input-default(type = 'text' name = 'text')
               .admin__row   
                 .admin__show(data-add-button='default')
                   |Добавить еще
@@ -195,55 +197,16 @@ block content
               .admin__row 
                 .admin__text 
                   |Укажите достопримечательности
-              .admin__row(data-add-parent='')
-                .admin__list(data-add-container='')
-                  .admin__horiz(data-add-item='') 
-                    .admin__large 
-                      .select-wrapper
-                        .select
-                          select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                            option(value='default' selected disabled)
-                              |Выбрать
-                            option(value = 'hour')
-                              |Эрмитаж
-                            option(value = 'days')
-                              |Эрмитаж1
-                  .admin__horiz 
-                    .admin__large 
-                      .select-wrapper
-                        .select
-                          select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                            option(value='default' selected disabled)
-                              |Выбрать
-                            option(value = 'hour')
-                              |Русский музей
-                            option(value = 'days')
-                              |Русский музей1
-                  .admin__horiz 
-                    .admin__large 
-                      .select-wrapper
-                        .select
-                          select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                            option(value='default' selected disabled)
-                              |Выбрать
-                            option(value = 'hour')
-                              |Выбрать достопримечательность
-                            option(value = 'days')
-                              |Выбрать достопримечательность
-                  .admin__horiz 
-                    .admin__large 
-                      .select-wrapper
-                        .select
-                          select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                            option(value='default' selected disabled)
-                              |Выбрать
-                            option(value = 'hour')
-                              |Выбрать достопримечательность
-                            option(value = 'days')
-                              |Выбрать достопримечательность
-                .admin__row 
-                  .admin__show(data-add-button='select')
-                    |Добавить еще
+              .admin__row
+                .admin__list
+                  .admin__horiz
+                    - for (i = 0; i < 3; i++)
+                      .admin__item
+                        +checkbox-default(text = 'Эрмитаж' name = 'qw123e')
+                  .admin__horiz   
+                    - for (i = 0; i < 3; i++)
+                      .admin__item
+                        +checkbox-default(text = 'Русский музей' name = 'www')
           .admin__section 
             .admin__col
               .admin__text 
@@ -270,55 +233,16 @@ block content
               .admin__row 
                 .admin__text 
                   |Укажите похожие туры
-              .admin__row(data-add-parent='')
-                .admin__list(data-add-container='')
-                  .admin__horiz(data-add-item='') 
-                    .admin__large 
-                      .select-wrapper
-                        .select
-                          select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language')
-                            option(value='default' selected disabled)
-                              |Выбрать
-                            option(value = 'hour')
-                              |Эрмитаж
-                            option(value = 'days')
-                              |Эрмитаж1
-                  .admin__horiz 
-                    .admin__large 
-                      .select-wrapper
-                        .select
-                          select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                            option(value='default' selected disabled)
-                              |Выбрать
-                            option(value = 'hour')
-                              |Русский музей
-                            option(value = 'days')
-                              |Русский музей1
-                  .admin__horiz 
-                    .admin__large 
-                      .select-wrapper
-                        .select
-                          select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                            option(value='default' selected disabled)
-                              |Выбрать
-                            option(value = 'hour')
-                              |Выбрать достопримечательность
-                            option(value = 'days')
-                              |Выбрать достопримечательность
-                  .admin__horiz 
-                    .admin__large 
-                      .select-wrapper
-                        .select
-                          select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                            option(value='default' selected disabled)
-                              |Выбрать
-                            option(value = 'hour')
-                              |Выбрать достопримечательность
-                            option(value = 'days')
-                              |Выбрать достопримечательность
-                .admin__row 
-                  .admin__show(data-add-button='select')
-                    |Добавить еще
+              .admin__row
+                .admin__list
+                  .admin__horiz
+                    - for (i = 0; i < 3; i++)
+                      .admin__item
+                        +checkbox-default(text = 'Intensive tour' name = 'qw123e')
+                  .admin__horiz   
+                    - for (i = 0; i < 3; i++)
+                      .admin__item
+                        +checkbox-default(text = 'elaxed tour ' name = 'www')
           .admin__section 
             .admin__large 
               button.button.button--xxl(type='submit')
@@ -331,43 +255,8 @@ block content
                   .admin__text 
                     |Заполните расписание программы
                 .admin__row 
-                  .admin__text 
+                  .admin__text(data-add-day='')
                     |1 день
-                .admin__row 
-                  template(data-add-template='')
-                    .admin__list-item
-                      .admin__container
-                        .admin__block
-                          .admin__mid
-                          .admin__ll
-                            +input(type = 'text' name = 'text')
-                        .admin__block
-                          .admin__mid
-                          .admin__ll
-                            +input(type = 'text' name = 'text')
-                  .admin__list(data-add-container='')
-                    .admin__list-item
-                      .admin__container
-                        .admin__block
-                          .admin__mid
-                            .admin__text
-                              |Укажите время
-                          .admin__ll
-                            +input(type = 'text' name = 'text')
-                        .admin__block
-                          .admin__mid
-                            .admin__text
-                              |Укажите событие
-                          .admin__ll
-                            +input(type = 'text' name = 'text')
-                .admin__row 
-                  .admin__show(data-add-button='template') 
-                    |Добавить еще
-            .admin__section
-              .admin__col(data-add-parent='')
-                .admin__row 
-                  .admin__text 
-                    |2 день
                 .admin__row 
                   template(data-add-template='')
                     .admin__list-item
@@ -584,18 +473,18 @@ block content
                             .admin__text.admin__right 
                               |от
                             .admin__mid 
-                              +input(type = 'text' name = 'text')
+                              +input-default(type = 'text' name = 'text')
                           .admin__block 
                             .admin__text.admin__right 
                               |до
                             .admin__mid 
-                              +input(type = 'text' name = 'text')
+                              +input-default(type = 'text' name = 'text')
                       .admin__block
                         .admin__col 
                           .admin__text 
                             |Укажите размер скидки в процентах
                           .admin__horiz.admin__mid 
-                            +input(type = 'text' name = 'text')
+                            +input-default(type = 'text' name = 'text')
                 .admin__row 
                   .admin__show(data-add-button="default")
                     |Добавить еще промежуток
