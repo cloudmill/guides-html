@@ -239,93 +239,31 @@ block content
               .admin__row 
                 .admin__text 
                   |Укажите достопримечательности
-              .admin__row(data-add-parent='')
-                .admin__list(data-add-container='')
-                  .admin__horiz(data-add-item='') 
-                    .admin__large 
-                      .select-wrapper
-                        .select
-                          select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                            option(value = 'hour')
-                              |Эрмитаж
-                            option(value = 'days')
-                              |Эрмитаж1
-                  .admin__horiz 
-                    .admin__large 
-                      .select-wrapper
-                        .select
-                          select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                            option(value = 'hour')
-                              |Русский музей
-                            option(value = 'days')
-                              |Русский музей1
-                  .admin__horiz 
-                    .admin__large 
-                      .select-wrapper
-                        .select
-                          select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                            option(value = 'hour')
-                              |Выбрать достопримечательность
-                            option(value = 'days')
-                              |Выбрать достопримечательность
-                  .admin__horiz 
-                    .admin__large 
-                      .select-wrapper
-                        .select
-                          select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                            option(value = 'hour')
-                              |Выбрать достопримечательность
-                            option(value = 'days')
-                              |Выбрать достопримечательность
-                .admin__row 
-                  .admin__show(data-add-button='select')
-                    |Добавить еще
+              .admin__row
+                .admin__list
+                  .admin__horiz
+                    - for (i = 0; i < 3; i++)
+                      .admin__item
+                        +checkbox-default(text = 'Эрмитаж' name = 'qw123e')
+                  .admin__horiz   
+                    - for (i = 0; i < 3; i++)
+                      .admin__item
+                        +checkbox-default(text = 'Русский музей' name = 'www')
           .admin__section 
             .admin__col 
               .admin__row 
                 .admin__text 
                   |Укажите похожие туры
-              .admin__row(data-add-parent='')
-                .admin__list(data-add-container='')
-                  .admin__horiz(data-add-item='')
-                    .admin__large 
-                      .select-wrapper
-                        .select
-                          select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                            option(value = 'hour')
-                              |Intensive tour
-                            option(value = 'days')
-                              |Intensive tour1
-                  .admin__horiz 
-                    .admin__large 
-                      .select-wrapper
-                        .select
-                          select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                            option(value = 'hour')
-                              |Relaxed tour 
-                            option(value = 'days')
-                              |Relaxed tour 1
-                  .admin__horiz 
-                    .admin__large 
-                      .select-wrapper
-                        .select
-                          select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                            option(value = 'hour')
-                              |Jewish Heritage
-                            option(value = 'days')
-                              |Jewish Heritage123
-                  .admin__horiz 
-                    .admin__large 
-                      .select-wrapper
-                        .select
-                          select.select__select(name="time" style='width: 100%' data-select-placeholder='Select language') 
-                            option(value = 'hour')
-                              |Выбрать выбрать похожий тур
-                            option(value = 'days')
-                              |Выбрать выбрать похожий тур123
-                .admin__row 
-                  .admin__show(data-add-button="select") 
-                    |Добавить еще
+              .admin__row
+                .admin__list
+                  .admin__horiz
+                    - for (i = 0; i < 3; i++)
+                      .admin__item
+                        +checkbox-default(text = 'Intensive tour' name = 'qw123e')
+                  .admin__horiz   
+                    - for (i = 0; i < 3; i++)
+                      .admin__item
+                        +checkbox-default(text = 'elaxed tour ' name = 'www')
           .admin__section 
             .admin__col
               .admin__row 
