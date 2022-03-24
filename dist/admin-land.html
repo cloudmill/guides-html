@@ -65,6 +65,24 @@
 							<div class="admin__tab active">
 								<div class="admin__section">
 									<div class="admin__block">
+										<div class="admin__text admin__right">Название тура</div>
+										<div class="admin__big"><input class="form__input" name="name" required="required" /></div>
+									</div>
+									<div class="admin__block">
+										<div class="admin__text admin__right">Активность</div>
+										<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="activity-check">
+												<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+													</svg></div>
+											</label></div>
+									</div>
+									<div class="admin__block">
+										<div class="admin__text admin__right">Сортировка</div>
+										<div class="admin__md"><input class="form__input" name="name" /></div>
+									</div>
+								</div>
+								<div class="admin__section">
+									<div class="admin__block">
 										<div class="admin__col">
 											<div class="admin__row">
 												<div class="admin__horiz">
@@ -103,96 +121,25 @@
 									</div>
 								</div>
 								<div class="admin__section">
-									<div class="admin__block">
-										<div class="admin__col">
-											<div class="admin__row">
-												<div class="admin__horiz">
-													<div class="admin__text">Укажите тип</div>
-												</div>
-												<div class="admin__horiz">
-													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" text="Индивидуальные" />
-																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-																	</svg></div>
-																<div class="checkbox__text">Индивидуальные</div>
-															</label></div>
-													</div>
-													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" text="Групповые" />
-																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-																	</svg></div>
-																<div class="checkbox__text">Групповые</div>
-															</label></div>
-													</div>
-												</div>
-											</div>
-											<div class="admin__row">
-												<div class="admin__horiz">
-													<div class="admin__text">Укажите особенность</div>
-												</div>
-												<div class="admin__horiz">
-													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" text="Популярная" />
-																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-																	</svg></div>
-																<div class="checkbox__text">Популярная</div>
-															</label></div>
-													</div>
-													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" text="Необычные" />
-																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-																	</svg></div>
-																<div class="checkbox__text">Необычные</div>
-															</label></div>
-													</div>
-													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" text="Для детей" />
-																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-																	</svg></div>
-																<div class="checkbox__text">Для детей</div>
-															</label></div>
-													</div>
-													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" text="Вечерние/ночные" />
-																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-																	</svg></div>
-																<div class="checkbox__text">Вечерние/ночные</div>
-															</label></div>
-													</div>
-													<div class="admin__item">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required="required" text="Мастер-классы" />
-																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-																	</svg></div>
-																<div class="checkbox__text">Мастер-классы</div>
-															</label></div>
-													</div>
+									<div class="admin__col" data-add-parent="">
+										<div class="admin__list parsley-handler files" data-add-container="" data-file-container="">
+											<div class="admin__row" data-add-item="">
+												<div class="file" data-file-input="">
+													<div class="file__container">
+														<div class="file__name"></div>
+														<div class="file__button">Delete</div>
+													</div><label class="file__label"><input class="file__input" name="file" type="file" required data-parsley-class-handler=".files">
+														<div class="file__text">Upload image for the gallery</div>
+														<div class="file__icon"><svg class="file__svg" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M17.699 28.0233L17.699 7.37456" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															</svg></div>
+													</label>
 												</div>
 											</div>
 										</div>
-									</div>
-								</div>
-								<div class="admin__section">
-									<div class="admin__col">
 										<div class="admin__row">
-											<div class="file" data-file-input="">
-												<div class="file__container">
-													<div class="file__name"></div>
-													<div class="file__button">Delete</div>
-												</div><label class="file__label"><input class="file__input" type="file">
-													<div class="file__text">Upload image for the gallery</div>
-													<div class="file__icon"><svg class="file__svg" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-															<path d="M17.699 28.0233L17.699 7.37456" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-														</svg></div>
-												</label>
-											</div>
+											<div class="admin__show" data-add-button="default">Добавить еще</div>
 										</div>
 									</div>
 								</div>
@@ -222,15 +169,12 @@
 									</div>
 								</div>
 								<div class="admin__section">
-									<div class="admin__col" data-add-parent="">
+									<div class="admin__col">
 										<div class="admin__text">Укажите страну</div>
-										<div class="admin__list admin__row" data-add-container="">
-											<div class="admin__horiz" data-add-item="">
+										<div class="admin__list admin__row">
+											<div class="admin__horiz">
 												<div class="admin__mid"><input class="form__input" name="place" required="required" /></div>
 											</div>
-										</div>
-										<div class="admin__horiz">
-											<div class="admin__show" data-add-button="default">Добавить еще</div>
 										</div>
 									</div>
 								</div>
@@ -241,13 +185,13 @@
 												<div class="admin__text">Укажите город</div>
 											</div>
 											<div class="admin__horiz">
-												<div class="admin__block">
-													<div class="admin__text admin__right">Санкт-Петербург</div>
-													<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="checkbox-1" required>
-															<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-																</svg></div>
-														</label></div>
+												<div class="admin__ll">
+													<div class="select-wrapper">
+														<div class="select city1"><select class="select__select" name="city1" style="width: 100%" data-select-placeholder="Выбрать" required data-parsley-class-handler=".city1">
+																<option></option>
+																<option value="st">Санкт-Петербург</option>
+															</select></div>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -311,13 +255,13 @@
 													<div class="admin__tour-col">
 														<div class="admin__caption">В стоимость тура входит</div>
 														<div class="admin__row">
-															<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
+															<div class="admin__ll"><input class="form__input" name="text" /></div>
 														</div>
 													</div>
 													<div class="admin__tour-col">
 														<div class="admin__caption">В стоимость тура не входит</div>
 														<div class="admin__row">
-															<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
+															<div class="admin__ll"><input class="form__input" name="text" /></div>
 														</div>
 													</div>
 												</div>
@@ -325,40 +269,40 @@
 											<div class="admin__list-item" data-add-item="">
 												<div class="admin__tour">
 													<div class="admin__tour-col">
-														<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
+														<div class="admin__ll"><input class="form__input" name="text" /></div>
 													</div>
 													<div class="admin__tour-col">
-														<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
-													</div>
-												</div>
-											</div>
-											<div class="admin__list-item">
-												<div class="admin__tour">
-													<div class="admin__tour-col">
-														<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
-													</div>
-													<div class="admin__tour-col">
-														<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
+														<div class="admin__ll"><input class="form__input" name="text" /></div>
 													</div>
 												</div>
 											</div>
 											<div class="admin__list-item">
 												<div class="admin__tour">
 													<div class="admin__tour-col">
-														<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
+														<div class="admin__ll"><input class="form__input" name="text" /></div>
 													</div>
 													<div class="admin__tour-col">
-														<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
+														<div class="admin__ll"><input class="form__input" name="text" /></div>
 													</div>
 												</div>
 											</div>
 											<div class="admin__list-item">
 												<div class="admin__tour">
 													<div class="admin__tour-col">
-														<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
+														<div class="admin__ll"><input class="form__input" name="text" /></div>
 													</div>
 													<div class="admin__tour-col">
-														<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
+														<div class="admin__ll"><input class="form__input" name="text" /></div>
+													</div>
+												</div>
+											</div>
+											<div class="admin__list-item">
+												<div class="admin__tour">
+													<div class="admin__tour-col">
+														<div class="admin__ll"><input class="form__input" name="text" /></div>
+													</div>
+													<div class="admin__tour-col">
+														<div class="admin__ll"><input class="form__input" name="text" /></div>
 													</div>
 												</div>
 											</div>
@@ -373,55 +317,60 @@
 										<div class="admin__row">
 											<div class="admin__text">Укажите достопримечательности</div>
 										</div>
-										<div class="admin__row" data-add-parent="">
-											<div class="admin__list" data-add-container="">
-												<div class="admin__horiz" data-add-item="">
-													<div class="admin__large">
-														<div class="select-wrapper">
-															<div class="select"><select class="select__select" name="time" style="width: 100%" data-select-placeholder="Select language">
-																	<option value="default" selected="selected" disabled="disabled">Выбрать</option>
-																	<option value="hour">Эрмитаж</option>
-																	<option value="days">Эрмитаж1</option>
-																</select></div>
-														</div>
+										<div class="admin__row">
+											<div class="admin__list">
+												<div class="admin__horiz">
+													<div class="admin__item">
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="qw123e" text="Эрмитаж" />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__text">Эрмитаж</div>
+															</label></div>
+													</div>
+													<div class="admin__item">
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="qw123e" text="Эрмитаж" />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__text">Эрмитаж</div>
+															</label></div>
+													</div>
+													<div class="admin__item">
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="qw123e" text="Эрмитаж" />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__text">Эрмитаж</div>
+															</label></div>
 													</div>
 												</div>
 												<div class="admin__horiz">
-													<div class="admin__large">
-														<div class="select-wrapper">
-															<div class="select"><select class="select__select" name="time" style="width: 100%" data-select-placeholder="Select language">
-																	<option value="default" selected="selected" disabled="disabled">Выбрать</option>
-																	<option value="hour">Русский музей</option>
-																	<option value="days">Русский музей1</option>
-																</select></div>
-														</div>
+													<div class="admin__item">
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="www" text="Русский музей" />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__text">Русский музей</div>
+															</label></div>
+													</div>
+													<div class="admin__item">
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="www" text="Русский музей" />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__text">Русский музей</div>
+															</label></div>
+													</div>
+													<div class="admin__item">
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="www" text="Русский музей" />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__text">Русский музей</div>
+															</label></div>
 													</div>
 												</div>
-												<div class="admin__horiz">
-													<div class="admin__large">
-														<div class="select-wrapper">
-															<div class="select"><select class="select__select" name="time" style="width: 100%" data-select-placeholder="Select language">
-																	<option value="default" selected="selected" disabled="disabled">Выбрать</option>
-																	<option value="hour">Выбрать достопримечательность</option>
-																	<option value="days">Выбрать достопримечательность</option>
-																</select></div>
-														</div>
-													</div>
-												</div>
-												<div class="admin__horiz">
-													<div class="admin__large">
-														<div class="select-wrapper">
-															<div class="select"><select class="select__select" name="time" style="width: 100%" data-select-placeholder="Select language">
-																	<option value="default" selected="selected" disabled="disabled">Выбрать</option>
-																	<option value="hour">Выбрать достопримечательность</option>
-																	<option value="days">Выбрать достопримечательность</option>
-																</select></div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="admin__row">
-												<div class="admin__show" data-add-button="select">Добавить еще</div>
 											</div>
 										</div>
 									</div>
@@ -503,55 +452,60 @@
 										<div class="admin__row">
 											<div class="admin__text">Укажите похожие туры</div>
 										</div>
-										<div class="admin__row" data-add-parent="">
-											<div class="admin__list" data-add-container="">
-												<div class="admin__horiz" data-add-item="">
-													<div class="admin__large">
-														<div class="select-wrapper">
-															<div class="select"><select class="select__select" name="time" style="width: 100%" data-select-placeholder="Select language">
-																	<option value="default" selected="selected" disabled="disabled">Выбрать</option>
-																	<option value="hour">Эрмитаж</option>
-																	<option value="days">Эрмитаж1</option>
-																</select></div>
-														</div>
+										<div class="admin__row">
+											<div class="admin__list">
+												<div class="admin__horiz">
+													<div class="admin__item">
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="qw123e" text="Intensive tour" />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__text">Intensive tour</div>
+															</label></div>
+													</div>
+													<div class="admin__item">
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="qw123e" text="Intensive tour" />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__text">Intensive tour</div>
+															</label></div>
+													</div>
+													<div class="admin__item">
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="qw123e" text="Intensive tour" />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__text">Intensive tour</div>
+															</label></div>
 													</div>
 												</div>
 												<div class="admin__horiz">
-													<div class="admin__large">
-														<div class="select-wrapper">
-															<div class="select"><select class="select__select" name="time" style="width: 100%" data-select-placeholder="Select language">
-																	<option value="default" selected="selected" disabled="disabled">Выбрать</option>
-																	<option value="hour">Русский музей</option>
-																	<option value="days">Русский музей1</option>
-																</select></div>
-														</div>
+													<div class="admin__item">
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="www" text="elaxed tour " />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__text">elaxed tour</div>
+															</label></div>
+													</div>
+													<div class="admin__item">
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="www" text="elaxed tour " />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__text">elaxed tour</div>
+															</label></div>
+													</div>
+													<div class="admin__item">
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="www" text="elaxed tour " />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="13" height="9" viewbox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M1 4.29412L4.82609 8L12 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__text">elaxed tour</div>
+															</label></div>
 													</div>
 												</div>
-												<div class="admin__horiz">
-													<div class="admin__large">
-														<div class="select-wrapper">
-															<div class="select"><select class="select__select" name="time" style="width: 100%" data-select-placeholder="Select language">
-																	<option value="default" selected="selected" disabled="disabled">Выбрать</option>
-																	<option value="hour">Выбрать достопримечательность</option>
-																	<option value="days">Выбрать достопримечательность</option>
-																</select></div>
-														</div>
-													</div>
-												</div>
-												<div class="admin__horiz">
-													<div class="admin__large">
-														<div class="select-wrapper">
-															<div class="select"><select class="select__select" name="time" style="width: 100%" data-select-placeholder="Select language">
-																	<option value="default" selected="selected" disabled="disabled">Выбрать</option>
-																	<option value="hour">Выбрать достопримечательность</option>
-																	<option value="days">Выбрать достопримечательность</option>
-																</select></div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="admin__row">
-												<div class="admin__show" data-add-button="select">Добавить еще</div>
 											</div>
 										</div>
 									</div>
@@ -568,50 +522,7 @@
 												<div class="admin__text">Заполните расписание программы</div>
 											</div>
 											<div class="admin__row">
-												<div class="admin__text">1 день</div>
-											</div>
-											<div class="admin__row"><template data-add-template="">
-													<div class="admin__list-item">
-														<div class="admin__container">
-															<div class="admin__block">
-																<div class="admin__mid"></div>
-																<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
-															</div>
-															<div class="admin__block">
-																<div class="admin__mid"></div>
-																<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
-															</div>
-														</div>
-													</div>
-												</template>
-												<div class="admin__list" data-add-container="">
-													<div class="admin__list-item">
-														<div class="admin__container">
-															<div class="admin__block">
-																<div class="admin__mid">
-																	<div class="admin__text">Укажите время</div>
-																</div>
-																<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
-															</div>
-															<div class="admin__block">
-																<div class="admin__mid">
-																	<div class="admin__text">Укажите событие</div>
-																</div>
-																<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="admin__row">
-												<div class="admin__show" data-add-button="template">Добавить еще</div>
-											</div>
-										</div>
-									</div>
-									<div class="admin__section">
-										<div class="admin__col" data-add-parent="">
-											<div class="admin__row">
-												<div class="admin__text">2 день</div>
+												<div class="admin__text" data-add-day="">1 день</div>
 											</div>
 											<div class="admin__row"><template data-add-template="">
 													<div class="admin__list-item">
@@ -23189,18 +23100,18 @@
 															<div class="admin__horiz">
 																<div class="admin__block">
 																	<div class="admin__text admin__right">от</div>
-																	<div class="admin__mid"><input class="form__input" name="text" required="required" /></div>
+																	<div class="admin__mid"><input class="form__input" name="text" /></div>
 																</div>
 																<div class="admin__block">
 																	<div class="admin__text admin__right">до</div>
-																	<div class="admin__mid"><input class="form__input" name="text" required="required" /></div>
+																	<div class="admin__mid"><input class="form__input" name="text" /></div>
 																</div>
 															</div>
 														</div>
 														<div class="admin__block">
 															<div class="admin__col">
 																<div class="admin__text">Укажите размер скидки в процентах</div>
-																<div class="admin__horiz admin__mid"><input class="form__input" name="text" required="required" /></div>
+																<div class="admin__horiz admin__mid"><input class="form__input" name="text" /></div>
 															</div>
 														</div>
 													</div>
