@@ -124,10 +124,32 @@ function forms() {
 
     const form = $(this),
       action = form.attr('action'),
-      data = {};
+      file = form.find('input[name=file]'),
+      data = file.length ? new FormData() : {};
 
     form.find('[data-type=get-field]').each(function() {
-      data[$(this).data('field')] = $(this).val();
+      const field = $(this).data('field');
+      let val;
+
+      switch ($(this).attr('type')) {
+        case 'checkbox':
+
+          val = $(this).data('val');
+          break;
+        default:
+          val = $(this).val();
+          break;
+      }
+
+      file.length ? data.append(field, val) : data[field] = val;
+    });
+
+    file.each(function(i, item) {
+      if (!item.files.length) {
+        return;
+      }
+
+      data.append('file[]', item.files[0]);
     });
 
     $.ajax({
@@ -135,6 +157,8 @@ function forms() {
       url: action ? action : `${window.CONFIG.path}/include/ajax/forms/index.php`,
       dataType: 'json',
       data: data,
+      contentType: file.length ? false : 'application/x-www-form-urlencoded; charset=UTF-8',
+      processData: !file.length,
       success: function(r) {
         if (r.success) {
           window.objFormSuccess[form.data('func')](form, r);
