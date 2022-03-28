@@ -98,11 +98,11 @@ function backRedirect() {
 }
 
 window.objFormSuccess = {
-  formSuccess: function(form, r) {
+  formSuccess: function(form) {
     form.attr('data-form-hidden', '');
     form.find('[data-type=form-response]').attr('data-response-active', '');
   },
-  formDBSuccess: function(form, r) {
+  formDBSuccess: function() {
     backRedirect();
   }
 }
@@ -127,13 +127,12 @@ function forms() {
       file = form.find('input[name=file]'),
       data = file.length ? new FormData() : {};
 
-    form.find('[data-type=get-field]').each(function() {
+    form.find('[data-type=get-field], input:checked').each(function() {
       const field = $(this).data('field');
       let val;
 
       switch ($(this).attr('type')) {
         case 'checkbox':
-
           val = $(this).data('val');
           break;
         default:
