@@ -128,8 +128,13 @@ function forms() {
       data = file.length ? new FormData() : {};
 
     form.find('[data-type=get-field], input:checked').each(function() {
-      const field = $(this).data('field'),
-        val = $(this).val();
+      const val = $(this).val();
+
+      if (!val) {
+        return;
+      }
+
+      const field = $(this).data('field');
 
       file.length ? data.append(field, val) : data[field] = val;
     });
