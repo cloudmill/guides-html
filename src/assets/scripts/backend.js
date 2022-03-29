@@ -128,17 +128,8 @@ function forms() {
       data = file.length ? new FormData() : {};
 
     form.find('[data-type=get-field], input:checked').each(function() {
-      const field = $(this).data('field');
-      let val;
-
-      switch ($(this).attr('type')) {
-        case 'checkbox':
-          val = $(this).data('val');
-          break;
-        default:
-          val = $(this).val();
-          break;
-      }
+      const field = $(this).data('field'),
+        val = $(this).val();
 
       file.length ? data.append(field, val) : data[field] = val;
     });
@@ -148,7 +139,7 @@ function forms() {
         return;
       }
 
-      data.append('file[]', item.files[0]);
+      data.append(`file[${$(this).parents('[data-file-container]').data('name')}][]`, item.files[0]);
     });
 
     $.ajax({
