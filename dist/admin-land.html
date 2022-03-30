@@ -121,9 +121,27 @@
 									</div>
 								</div>
 								<div class="admin__section">
-									<div class="admin__col" data-add-parent="">
+									<div class="admin__col" data-add-parent=""><template data-add-template="">
+											<div class="admin__row" data-delete-parent="">
+												<div class="file" data-file-input="">
+													<div class="file__delete" data-delete-button=""><svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M0.46967 10.4697C0.176777 10.7626 0.176777 11.2374 0.46967 11.5303C0.762563 11.8232 1.23744 11.8232 1.53033 11.5303L0.46967 10.4697ZM6.53033 6.53033C6.82322 6.23744 6.82322 5.76256 6.53033 5.46967C6.23744 5.17678 5.76256 5.17678 5.46967 5.46967L6.53033 6.53033ZM5.46967 5.46967C5.17678 5.76256 5.17678 6.23744 5.46967 6.53033C5.76256 6.82322 6.23744 6.82322 6.53033 6.53033L5.46967 5.46967ZM11.5303 1.53033C11.8232 1.23744 11.8232 0.762563 11.5303 0.46967C11.2374 0.176777 10.7626 0.176777 10.4697 0.46967L11.5303 1.53033ZM6.53033 5.46967C6.23744 5.17678 5.76256 5.17678 5.46967 5.46967C5.17678 5.76256 5.17678 6.23744 5.46967 6.53033L6.53033 5.46967ZM10.4697 11.5303C10.7626 11.8232 11.2374 11.8232 11.5303 11.5303C11.8232 11.2374 11.8232 10.7626 11.5303 10.4697L10.4697 11.5303ZM5.46967 6.53033C5.76256 6.82322 6.23744 6.82322 6.53033 6.53033C6.82322 6.23744 6.82322 5.76256 6.53033 5.46967L5.46967 6.53033ZM1.53033 0.46967C1.23744 0.176777 0.762563 0.176777 0.46967 0.46967C0.176777 0.762563 0.176777 1.23744 0.46967 1.53033L1.53033 0.46967ZM1.53033 11.5303L6.53033 6.53033L5.46967 5.46967L0.46967 10.4697L1.53033 11.5303ZM6.53033 6.53033L11.5303 1.53033L10.4697 0.46967L5.46967 5.46967L6.53033 6.53033ZM5.46967 6.53033L10.4697 11.5303L11.5303 10.4697L6.53033 5.46967L5.46967 6.53033ZM6.53033 5.46967L1.53033 0.46967L0.46967 1.53033L5.46967 6.53033L6.53033 5.46967Z" fill="black"></path>
+														</svg></div>
+													<div class="file__container">
+														<div class="file__name"></div>
+														<div class="file__button">Delete</div>
+													</div><label class="file__label"><input class="file__input" name="file" type="file" data-parsley-class-handler=".files">
+														<div class="file__text">Upload image for the gallery</div>
+														<div class="file__icon"><svg class="file__svg" width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M28.0234 17.6989L7.37467 17.6989" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																<path d="M17.699 28.0233L17.699 7.37456" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															</svg></div>
+													</label>
+												</div>
+											</div>
+										</template>
 										<div class="admin__list parsley-handler files" data-add-container="" data-file-container="">
-											<div class="admin__row" data-add-item="">
+											<div class="admin__row">
 												<div class="file" data-file-input="">
 													<div class="file__container">
 														<div class="file__name"></div>
@@ -139,7 +157,7 @@
 											</div>
 										</div>
 										<div class="admin__row">
-											<div class="admin__show" data-add-button="default">Добавить еще</div>
+											<div class="admin__show" data-add-button="template">Добавить еще</div>
 										</div>
 									</div>
 								</div>
@@ -514,9 +532,62 @@
 									<div class="admin__large"><button class="button button--xxl" type="submit">Сохранить</button></div>
 								</div>
 							</div>
-							<div class="admin__tab" data-add-parent="">
+							<div class="admin__tab" data-add-parent=""><template data-add-template="">
+									<div class="admin__section" data-count-item="" data-delete-parent="">
+										<div class="admin__col relative" data-add-parent="">
+											<div data-delete-button=""><svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M0.46967 10.4697C0.176777 10.7626 0.176777 11.2374 0.46967 11.5303C0.762563 11.8232 1.23744 11.8232 1.53033 11.5303L0.46967 10.4697ZM6.53033 6.53033C6.82322 6.23744 6.82322 5.76256 6.53033 5.46967C6.23744 5.17678 5.76256 5.17678 5.46967 5.46967L6.53033 6.53033ZM5.46967 5.46967C5.17678 5.76256 5.17678 6.23744 5.46967 6.53033C5.76256 6.82322 6.23744 6.82322 6.53033 6.53033L5.46967 5.46967ZM11.5303 1.53033C11.8232 1.23744 11.8232 0.762563 11.5303 0.46967C11.2374 0.176777 10.7626 0.176777 10.4697 0.46967L11.5303 1.53033ZM6.53033 5.46967C6.23744 5.17678 5.76256 5.17678 5.46967 5.46967C5.17678 5.76256 5.17678 6.23744 5.46967 6.53033L6.53033 5.46967ZM10.4697 11.5303C10.7626 11.8232 11.2374 11.8232 11.5303 11.5303C11.8232 11.2374 11.8232 10.7626 11.5303 10.4697L10.4697 11.5303ZM5.46967 6.53033C5.76256 6.82322 6.23744 6.82322 6.53033 6.53033C6.82322 6.23744 6.82322 5.76256 6.53033 5.46967L5.46967 6.53033ZM1.53033 0.46967C1.23744 0.176777 0.762563 0.176777 0.46967 0.46967C0.176777 0.762563 0.176777 1.23744 0.46967 1.53033L1.53033 0.46967ZM1.53033 11.5303L6.53033 6.53033L5.46967 5.46967L0.46967 10.4697L1.53033 11.5303ZM6.53033 6.53033L11.5303 1.53033L10.4697 0.46967L5.46967 5.46967L6.53033 6.53033ZM5.46967 6.53033L10.4697 11.5303L11.5303 10.4697L6.53033 5.46967L5.46967 6.53033ZM6.53033 5.46967L1.53033 0.46967L0.46967 1.53033L5.46967 6.53033L6.53033 5.46967Z" fill="black"></path>
+												</svg></div>
+											<div class="admin__row">
+												<div class="admin__text">Заполните расписание программы</div>
+											</div>
+											<div class="admin__row">
+												<div class="admin__text" data-add-day="">1 день</div>
+											</div>
+											<div class="admin__row"><template data-add-template="">
+													<div class="admin__list-item" data-delete-parent="">
+														<div data-delete-button=""><svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M0.46967 10.4697C0.176777 10.7626 0.176777 11.2374 0.46967 11.5303C0.762563 11.8232 1.23744 11.8232 1.53033 11.5303L0.46967 10.4697ZM6.53033 6.53033C6.82322 6.23744 6.82322 5.76256 6.53033 5.46967C6.23744 5.17678 5.76256 5.17678 5.46967 5.46967L6.53033 6.53033ZM5.46967 5.46967C5.17678 5.76256 5.17678 6.23744 5.46967 6.53033C5.76256 6.82322 6.23744 6.82322 6.53033 6.53033L5.46967 5.46967ZM11.5303 1.53033C11.8232 1.23744 11.8232 0.762563 11.5303 0.46967C11.2374 0.176777 10.7626 0.176777 10.4697 0.46967L11.5303 1.53033ZM6.53033 5.46967C6.23744 5.17678 5.76256 5.17678 5.46967 5.46967C5.17678 5.76256 5.17678 6.23744 5.46967 6.53033L6.53033 5.46967ZM10.4697 11.5303C10.7626 11.8232 11.2374 11.8232 11.5303 11.5303C11.8232 11.2374 11.8232 10.7626 11.5303 10.4697L10.4697 11.5303ZM5.46967 6.53033C5.76256 6.82322 6.23744 6.82322 6.53033 6.53033C6.82322 6.23744 6.82322 5.76256 6.53033 5.46967L5.46967 6.53033ZM1.53033 0.46967C1.23744 0.176777 0.762563 0.176777 0.46967 0.46967C0.176777 0.762563 0.176777 1.23744 0.46967 1.53033L1.53033 0.46967ZM1.53033 11.5303L6.53033 6.53033L5.46967 5.46967L0.46967 10.4697L1.53033 11.5303ZM6.53033 6.53033L11.5303 1.53033L10.4697 0.46967L5.46967 5.46967L6.53033 6.53033ZM5.46967 6.53033L10.4697 11.5303L11.5303 10.4697L6.53033 5.46967L5.46967 6.53033ZM6.53033 5.46967L1.53033 0.46967L0.46967 1.53033L5.46967 6.53033L6.53033 5.46967Z" fill="black"></path>
+															</svg></div>
+														<div class="admin__container">
+															<div class="admin__block">
+																<div class="admin__mid"></div>
+																<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
+															</div>
+															<div class="admin__block">
+																<div class="admin__mid"></div>
+																<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
+															</div>
+														</div>
+													</div>
+												</template>
+												<div class="admin__list" data-add-container="">
+													<div class="admin__list-item">
+														<div class="admin__container">
+															<div class="admin__block">
+																<div class="admin__mid">
+																	<div class="admin__text">Укажите время</div>
+																</div>
+																<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
+															</div>
+															<div class="admin__block">
+																<div class="admin__mid">
+																	<div class="admin__text">Укажите событие</div>
+																</div>
+																<div class="admin__ll"><input class="form__input" name="text" required="required" /></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="admin__row">
+												<div class="admin__show" data-add-button="template">Добавить еще</div>
+											</div>
+										</div>
+									</div>
+								</template>
 								<div class="admin__list" data-add-container="">
-									<div class="admin__section" data-add-item="">
+									<div class="admin__section" data-count-item="">
 										<div class="admin__col" data-add-parent="">
 											<div class="admin__row">
 												<div class="admin__text">Заполните расписание программы</div>
@@ -525,7 +596,10 @@
 												<div class="admin__text" data-add-day="">1 день</div>
 											</div>
 											<div class="admin__row"><template data-add-template="">
-													<div class="admin__list-item">
+													<div class="admin__list-item" data-delete-parent="">
+														<div data-delete-button=""><svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M0.46967 10.4697C0.176777 10.7626 0.176777 11.2374 0.46967 11.5303C0.762563 11.8232 1.23744 11.8232 1.53033 11.5303L0.46967 10.4697ZM6.53033 6.53033C6.82322 6.23744 6.82322 5.76256 6.53033 5.46967C6.23744 5.17678 5.76256 5.17678 5.46967 5.46967L6.53033 6.53033ZM5.46967 5.46967C5.17678 5.76256 5.17678 6.23744 5.46967 6.53033C5.76256 6.82322 6.23744 6.82322 6.53033 6.53033L5.46967 5.46967ZM11.5303 1.53033C11.8232 1.23744 11.8232 0.762563 11.5303 0.46967C11.2374 0.176777 10.7626 0.176777 10.4697 0.46967L11.5303 1.53033ZM6.53033 5.46967C6.23744 5.17678 5.76256 5.17678 5.46967 5.46967C5.17678 5.76256 5.17678 6.23744 5.46967 6.53033L6.53033 5.46967ZM10.4697 11.5303C10.7626 11.8232 11.2374 11.8232 11.5303 11.5303C11.8232 11.2374 11.8232 10.7626 11.5303 10.4697L10.4697 11.5303ZM5.46967 6.53033C5.76256 6.82322 6.23744 6.82322 6.53033 6.53033C6.82322 6.23744 6.82322 5.76256 6.53033 5.46967L5.46967 6.53033ZM1.53033 0.46967C1.23744 0.176777 0.762563 0.176777 0.46967 0.46967C0.176777 0.762563 0.176777 1.23744 0.46967 1.53033L1.53033 0.46967ZM1.53033 11.5303L6.53033 6.53033L5.46967 5.46967L0.46967 10.4697L1.53033 11.5303ZM6.53033 6.53033L11.5303 1.53033L10.4697 0.46967L5.46967 5.46967L6.53033 6.53033ZM5.46967 6.53033L10.4697 11.5303L11.5303 10.4697L6.53033 5.46967L5.46967 6.53033ZM6.53033 5.46967L1.53033 0.46967L0.46967 1.53033L5.46967 6.53033L6.53033 5.46967Z" fill="black"></path>
+															</svg></div>
 														<div class="admin__container">
 															<div class="admin__block">
 																<div class="admin__mid"></div>
@@ -564,10 +638,10 @@
 									</div>
 								</div>
 								<div class="admin__section">
-									<div class="admin__show admin__show--start" data-add-button="default">Добавить еще день</div>
+									<div class="admin__show admin__show--start" data-add-button="template">Добавить еще день</div>
 								</div>
 								<div class="admin__section">
-									<div class="admin__large"><button class="button button--xxl" type="submit">Сохранить</button></div>
+									<div class="admin__large"><button class="button button--xxl" type="submit" data-admin-save="">Сохранить</button></div>
 								</div>
 							</div>
 							<div class="admin__tab">
