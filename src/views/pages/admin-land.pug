@@ -71,8 +71,23 @@ block content
                               |Child friendly
           .admin__section
             .admin__col(data-add-parent='')
+              template(data-add-template='')
+                .admin__row(data-delete-parent='')
+                  .file(data-file-input='') 
+                    .file__delete(data-delete-button='')
+                      +delete-svg
+                    .file__container
+                      .file__name 
+                      .file__button 
+                        |Delete
+                    label.file__label
+                      input.file__input(name='file' type="file" data-parsley-class-handler=".files")
+                      .file__text 
+                        |Upload image for the gallery
+                      .file__icon 
+                        +plus-svg.file__svg
               .admin__list.parsley-handler.files(data-add-container='' data-file-container='')
-                .admin__row(data-add-item='')
+                .admin__row
                   .file(data-file-input='') 
                     .file__container
                       .file__name 
@@ -85,7 +100,7 @@ block content
                       .file__icon 
                         +plus-svg.file__svg
               .admin__row 
-                .admin__show(data-add-button='default')
+                .admin__show(data-add-button='template')
                   |Добавить еще
           .admin__section 
             .admin__col  
@@ -248,8 +263,51 @@ block content
               button.button.button--xxl(type='submit')
                 |Сохранить
         .admin__tab(data-add-parent='')
+          template(data-add-template='')
+            .admin__section(data-count-item='' data-delete-parent='')
+              .admin__col.relative(data-add-parent='')
+                div(data-delete-button='')
+                  +delete-svg
+                .admin__row
+                  .admin__text 
+                    |Заполните расписание программы
+                .admin__row 
+                  .admin__text(data-add-day='')
+                    |1 день
+                .admin__row 
+                  template(data-add-template='')
+                    .admin__list-item(data-delete-parent='')
+                      div(data-delete-button='')
+                        +delete-svg
+                      .admin__container
+                        .admin__block
+                          .admin__mid
+                          .admin__ll
+                            +input(type = 'text' name = 'text')
+                        .admin__block
+                          .admin__mid
+                          .admin__ll
+                            +input(type = 'text' name = 'text')
+                  .admin__list(data-add-container='')
+                    .admin__list-item
+                      .admin__container
+                        .admin__block
+                          .admin__mid
+                            .admin__text
+                              |Укажите время
+                          .admin__ll
+                            +input(type = 'text' name = 'text')
+                        .admin__block
+                          .admin__mid
+                            .admin__text
+                              |Укажите событие
+                          .admin__ll
+                            +input(type = 'text' name = 'text')
+                .admin__row 
+                  .admin__show(data-add-button='template') 
+                    |Добавить еще
           .admin__list(data-add-container='')
-            .admin__section(data-add-item='')
+            .admin__section(data-count-item='')
               .admin__col(data-add-parent='')
                 .admin__row
                   .admin__text 
@@ -259,7 +317,9 @@ block content
                     |1 день
                 .admin__row 
                   template(data-add-template='')
-                    .admin__list-item
+                    .admin__list-item(data-delete-parent='')
+                      div(data-delete-button='')
+                        +delete-svg
                       .admin__container
                         .admin__block
                           .admin__mid
@@ -288,11 +348,11 @@ block content
                   .admin__show(data-add-button='template') 
                     |Добавить еще
           .admin__section 
-            .admin__show.admin__show--start(data-add-button='default')
+            .admin__show.admin__show--start(data-add-button='template')
               |Добавить еще день
           .admin__section 
             .admin__large 
-              button.button.button--xxl(type='submit')
+              button.button.button--xxl(type='submit' data-admin-save='')
                 |Сохранить
         .admin__tab
           .admin__section

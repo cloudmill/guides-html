@@ -17,6 +17,7 @@ class AdminPanel {
     window.addEventListener('click', event => {
       const target = event.target
 
+      // add elem
       if (target.hasAttribute('data-add-button')) {
         const attrValue = target.getAttribute('data-add-button')
 
@@ -40,6 +41,11 @@ class AdminPanel {
           this.addTemplate(target)
         }
       }
+
+      // delete elem
+      if (target.closest('[data-delete-button]')) {
+        this.deleteElement(target)
+      }
     })
   }
 
@@ -49,20 +55,7 @@ class AdminPanel {
     
     parent.querySelector('[data-add-container]').append(this.clone);
 
-    // file input обработчик
-    const fileInput = this.clone.querySelector('.file__input')
-    if (fileInput) {
-      fileInput.onchange = function() {
-        changeFile(fileInput.closest('[data-file-input]'), this)
-      }
-    }
-
-    // состав тура увелечение номера дня
-    const day = this.clone.querySelector('[data-add-day]')
-    if (day) {
-      const days = parent.querySelectorAll('[data-add-item]')
-      day.textContent = days.length + " день"
-    }
+    
   }
 
   addSelect(button) {
@@ -123,6 +116,26 @@ class AdminPanel {
     const clone = parent.querySelector('[data-add-template]').content.firstElementChild.cloneNode(true)
     
     parent.querySelector('[data-add-container]').append(clone);
+
+    // состав тура увелечение номера дня
+    const day = clone.querySelector('[data-add-day]')
+    if (day) {
+      const days = parent.querySelectorAll('[data-count-item]')
+      day.textContent = days.length + " день"
+    }
+
+    // file input обработчик
+    const fileInput = clone.querySelector('.file__input')
+    if (fileInput) {
+      fileInput.onchange = function() {
+        changeFile(fileInput.closest('[data-file-input]'), this)
+      }
+    }
+  }
+
+  deleteElement(button) {
+    const parent = button.closest('[data-delete-parent]')
+    parent.remove()
   }
 }
 
