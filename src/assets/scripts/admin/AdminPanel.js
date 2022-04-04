@@ -122,6 +122,7 @@ class AdminPanel {
     if (day) {
       const days = parent.querySelectorAll('[data-count-item]')
       day.textContent = days.length + " день"
+      window.dispatchEvent(new CustomEvent('dayAdded'));
     }
 
     // file input обработчик
