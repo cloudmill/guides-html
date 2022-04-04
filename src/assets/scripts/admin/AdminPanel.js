@@ -6,7 +6,7 @@ import { changeFile } from '../file-input';
 class AdminPanel {
   constructor() {
     const adminPage = document.querySelector('.admin')
-    
+
     if (adminPage) {
       this.onClickAddButton();
       this.seasonManager = new SeasonManager();
@@ -52,10 +52,10 @@ class AdminPanel {
   addElement(button) {
     const parent = button.closest('[data-add-parent]')
     this.clone = parent.querySelector('[data-add-item]').cloneNode(true)
-    
+
     parent.querySelector('[data-add-container]').append(this.clone);
 
-    
+
   }
 
   addSelect(button) {
@@ -82,13 +82,13 @@ class AdminPanel {
     const parent = button.closest('[data-add-parent]')
     const container = parent.querySelector('[data-add-container]')
     const clone = container.lastElementChild.cloneNode(true)
-    
+
     container.append(clone);
 
     const year = clone.querySelector('.admin__text')
     const attrYear = clone.querySelector('[data-real-tabs]')
     let attrValue = attrYear.getAttribute('data-real-tabs')
-    
+
     attrYear.classList.remove('active')
     attrYear.setAttribute('data-real-tabs', ++attrValue)
     year.textContent++
@@ -110,11 +110,11 @@ class AdminPanel {
 
     document.querySelector('[data-calendar-parent]').append(clone)
   }
-  
+
   addTemplate(button) {
     const parent = button.closest('[data-add-parent]')
     const clone = parent.querySelector('[data-add-template]').content.firstElementChild.cloneNode(true)
-    
+
     parent.querySelector('[data-add-container]').append(clone);
 
     // состав тура увелечение номера дня
@@ -122,7 +122,7 @@ class AdminPanel {
     if (day) {
       const days = parent.querySelectorAll('[data-count-item]')
       day.textContent = days.length + " день"
-      window.dispatchEvent(new CustomEvent('dayAdded'));
+      window.dispatchEvent(new CustomEvent('dayAdded', {detail: {container: clone, count: days.length}}));
     }
 
     // file input обработчик

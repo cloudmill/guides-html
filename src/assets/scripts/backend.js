@@ -9,6 +9,12 @@ $(function() {
   removeItem();
 });
 
+window.addEventListener('dayAdded', function(e) {
+  const container = $(e.detail.container);
+
+  container.append(`<input type="hidden" data-type="get-field" data-field="PROPERTY_VALUES[HIGHLOAD][7][DATA][UF_DAY]" value="${e.detail.count}">`);
+});
+
 function removeItem() {
   $(document).on('click', '[data-type=remove-item]', function() {
     const result = confirm('Подтвердите удаление');
