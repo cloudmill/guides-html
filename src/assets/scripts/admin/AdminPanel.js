@@ -54,8 +54,6 @@ class AdminPanel {
     this.clone = parent.querySelector('[data-add-item]').cloneNode(true)
 
     parent.querySelector('[data-add-container]').append(this.clone);
-
-
   }
 
   addSelect(button) {
@@ -131,6 +129,17 @@ class AdminPanel {
       fileInput.onchange = function() {
         changeFile(fileInput.closest('[data-file-input]'), this)
       }
+    }
+
+    this.triggerEvents(button, {detail: {container: clone.closest('[data-add-parent]').querySelector('[data-add-container]').firstElementChild}})
+  }
+
+  triggerEvents(button, params) {
+    const element = button.closest('[data-trigger-event]')
+    if (element) {
+      const eventName = element.getAttribute('data-trigger-event')
+
+      window.dispatchEvent(new CustomEvent(eventName, params))
     }
   }
 

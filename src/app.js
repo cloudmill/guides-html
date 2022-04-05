@@ -61,6 +61,10 @@ $(() => {
   Inputmask({ mask: "+9{1,}", showMaskOnHover: false, }).mask("[data-mask=phone]");
 
   const calendar = new CalendarChanger('.calendar-card')
+
+  window.addEventListener('timeAdded', event => {
+    console.log(event);
+  })
 })
 
 // header active toggler
