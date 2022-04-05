@@ -14,8 +14,8 @@ window.addEventListener('dayAdded', function(e) {
     parent = container.parents('.admin__tab'),
     data = parent.data('input');
 
-  container.append(`<input type="hidden" data-type="get-field" data-field="${data.highload}[${e.detail.count}][UF_DAY]" value="${e.detail.count}">`);
-  container.find('[data-type=get-field]').each(function() {
+  container.append(`<input name="day" type="hidden" data-type="get-field" data-field="${data.highload}[${e.detail.count}][UF_DAY]" value="${e.detail.count}">`);
+  container.find('[data-type=get-field]:not([name=day])').each(function() {
     const field = $(this).data('field');
 
     $(this).attr('data-field', `${data.highload}[${e.detail.count}][${field}][]`);
@@ -151,7 +151,7 @@ function forms() {
         return;
       }
 
-      const field = $(this).data('field');
+      const field = $(this).attr('data-field');
 
       file.length ? data.append(field, val) : data[field] = val;
     });
