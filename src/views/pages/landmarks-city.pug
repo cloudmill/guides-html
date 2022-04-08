@@ -62,7 +62,9 @@ block content
             .button-wrapper(data-aos='fade-up')
               +button(tag='div')
                 |Show more
-            +tour(text = data.landmarksTour title = 'Attractions of Saint Petersburg')
+    section.section
+      .container
+        +tour(text = data.landmarksTour title = 'Attractions of Saint Petersburg')
 
 //- ul.landmarks-page__list 
 //-                     each item in ['City sights', 'Museums', 'Palaces', 'Cathedrals and monasteries', 'Fortresses', 'Theaters', 'Suburbs', ]

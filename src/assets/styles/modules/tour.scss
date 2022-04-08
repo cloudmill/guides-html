@@ -1,7 +1,6 @@
 .tour {
-  margin-top: 60px;
   @media (min-width: $breakpoint) {
-    margin-top: 100px;
+    padding-left: calc(#{$col-part-d} * 3);
   }
 
   &__container {
