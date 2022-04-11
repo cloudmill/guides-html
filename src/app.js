@@ -62,8 +62,8 @@ $(() => {
 
   const calendar = new CalendarChanger('.calendar-card')
 
-  window.addEventListener('timeAdded', event => {
-    console.log(event);
+  $('[data-clear-button]')[0].addEventListener('filtersReset', () => {
+    console.log(123);
   })
 })
 
