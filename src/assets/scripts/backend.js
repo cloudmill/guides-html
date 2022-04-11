@@ -7,7 +7,30 @@ $(function() {
   youtubeInit();
   accordionSidebar();
   removeItem();
+  filterChange();
 });
+
+function filterChange() {
+  const data = {};
+
+  $(document).on('change', '[data-type=filter]', function() {
+      data[$(this).data('field')] = $(this).val();
+
+      $.ajax({
+        type: 'POST',
+        url: window.location.href,
+        dataType: 'json',
+        data: data,
+        success: function(r) {
+          if (r.success) {
+          } else {
+            alert(r.message);
+          }
+        },
+        error: ajaxCallbackErrors,
+      });
+  });
+}
 
 window.addEventListener('dayAdded', function(e) {
   const container = $(e.detail.container),
