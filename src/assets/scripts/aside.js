@@ -63,6 +63,7 @@ $(() => {
     clearButton.on('click', function() {
       checkbox.prop('checked', false)
       $('.aside__select').addClass('disabled')
+      this.dispatchEvent(new Event("filtersReset"))
     })
   }
 })
