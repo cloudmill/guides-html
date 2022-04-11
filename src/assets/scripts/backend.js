@@ -10,25 +10,52 @@ $(function() {
   filterChange();
 });
 
+$('[data-clear-button]')[0].addEventListener('filtersReset', function() {
+  const container = $(this).data('link-container');
+
+  $.ajax({
+    type: 'GET',
+    url: window.location.href,
+    dataType: 'html',
+    data: {
+      ajax: 'filter',
+    },
+    success: function(r) {
+      if (r.success) {
+        $(container).empty();
+        $(container).append($(r));
+      } else {
+        alert(r.message);
+      }
+    },
+    error: ajaxCallbackErrors,
+  });
+});
+
 function filterChange() {
-  const data = {};
-
   $(document).on('change', '[data-type=filter]', function() {
-      data[$(this).data('field')] = $(this).val();
+    const container = $(this).parents('.listing'),
+      itemsContainer = $($(this).parents('[data-link-container]').data('link-container')),
+      data = {
+        ajax: 'filter',
+      };
 
-      $.ajax({
-        type: 'POST',
-        url: window.location.href,
-        dataType: 'json',
-        data: data,
-        success: function(r) {
-          if (r.success) {
-          } else {
-            alert(r.message);
-          }
-        },
-        error: ajaxCallbackErrors,
-      });
+    container.addClass('active');
+
+    data[$(this).data('field')] = $(this).val();
+
+    $.ajax({
+      type: 'GET',
+      url: window.location.href,
+      dataType: 'html',
+      data: data,
+      success: function(r) {
+        container.removeClass('active');
+        itemsContainer.empty();
+        itemsContainer.append($(r).children());
+      },
+      error: ajaxCallbackErrors,
+    });
   });
 }
 
