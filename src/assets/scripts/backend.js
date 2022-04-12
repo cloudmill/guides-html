@@ -35,7 +35,9 @@ $('[data-clear-button]')[0].addEventListener('filtersReset', function() {
 function filterChange() {
   $(document).on('change', '[data-type=filter]', function() {
     const container = $(this).parents('.listing'),
-      itemsContainer = $($(this).parents('[data-link-container]').data('link-container')),
+      filterContainer = $(this).parents('[data-link-container]'),
+      linkContainer = filterContainer.data('link-container'),
+      itemsContainer = $(linkContainer),
       data = {
         ajax: 'filter',
       };
@@ -52,7 +54,11 @@ function filterChange() {
       success: function(r) {
         container.removeClass('active');
         itemsContainer.empty();
-        itemsContainer.append($(r).children());
+        itemsContainer.append($(r).find(linkContainer).children());
+
+        // filterContainer.children().each(function() {
+        //
+        // });
       },
       error: ajaxCallbackErrors,
     });
