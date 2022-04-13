@@ -58,36 +58,31 @@ function filterChange() {
         itemsContainer.empty();
         itemsContainer.append($(r).find(linkContainer).children());
 
-        const filterContainerResponse = $(r).find('[data-link-container]');
-
+        const enableStyle = {
+          'opacity': 1,
+          'pointer-events': 'auto',
+        },
+        disableStyle = {
+          'opacity': 0.5,
+          'pointer-events': 'none',
+        };
         let index = 0;
         filterContainer.children().each(function() {
-          const filterBody = $(this).find('[data-type=filter-body]');
+          const filterBody = $(this).find('[data-type=filter-body]'),
+            filterItemResponse = $(r).find('[data-link-container]').children().eq(index);
 
-          if ($(this).find('[data-type=filter-name]').text() !== filterContainerResponse.children().eq(index).find('[data-type=filter-name]').text()) {
-            filterBody.css({
-              'opacity': 0.5,
-              'pointer-events': 'none',
-            });
+          if ($(this).find('[data-type=filter-name]').text() !== filterItemResponse.find('[data-type=filter-name]').text()) {
+            filterBody.css(disableStyle);
           } else {
-            filterBody.css({
-              'opacity': 1,
-              'pointer-events': 'auto',
-            });
-            filterBody.find('[data-type=filter]').each(function(i) {
-              if ($(this).val() === filterContainerResponse.children().eq(index).find('[data-type=filter]').eq(i).val()) {
-                $(this).parents('[data-type=filter-item]').css({
-                  'opacity': 1,
-                  'pointer-events': 'auto',
-                });
+            const arr = filterItemResponse.find('[data-type=filter]').map((arrI, item) => item.value);
 
-                return;
+            filterBody.css(enableStyle);
+            filterBody.find('[data-type=filter]').each(function() {
+              if (Object.values(arr).includes($(this).val())) {
+                $(this).parents('[data-type=filter-item]').css(enableStyle);
+              } else {
+                $(this).parents('[data-type=filter-item]').css(disableStyle);
               }
-
-              $(this).parents('[data-type=filter-item]').css({
-                'opacity': 0.5,
-                'pointer-events': 'none',
-              });
             });
 
             index++;
