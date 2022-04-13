@@ -61,10 +61,6 @@ $(() => {
   Inputmask({ mask: "+9{1,}", showMaskOnHover: false, }).mask("[data-mask=phone]");
 
   const calendar = new CalendarChanger('.calendar-card')
-
-  $('[data-clear-button]')[0].addEventListener('filtersReset', () => {
-    console.log(123);
-  })
 })
 
 // header active toggler

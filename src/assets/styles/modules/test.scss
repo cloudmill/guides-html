@@ -45,20 +45,18 @@
 
     pointer-events: none;
   }
-
+  .row__col {
+    transition: $transition;
+  }
   &.active {
 
     .row__col {
       opacity: 0.5;
+      pointer-events: none;
     }
 
     .loader {
-      display: block;
-    }
-
-    &::before {
-      pointer-events: all;
-      background: rgba($color-black, 0.3);
+      opacity: 1;
     }
   }
 }
@@ -72,7 +70,7 @@
 
   width: 11em;
   height: 11em;
-  display: none;
+  display: block;
 
   overflow:hidden;
   font-size: 10px;
@@ -89,6 +87,8 @@
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
+  opacity: 0;
+  transition: $transition;
 
   &::before {
     width: 50%;
