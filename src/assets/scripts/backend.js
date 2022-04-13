@@ -56,9 +56,13 @@ function filterChange() {
         itemsContainer.empty();
         itemsContainer.append($(r).find(linkContainer).children());
 
-        // filterContainer.children().each(function() {
-        //
-        // });
+        const filterContainerResponse = $(r).find('[data-link-container]');
+
+        filterContainer.children().each(function(i) {
+          if ($(this).find('[data-type=filter-name]').text() !== filterContainerResponse.children().eq(i).find('[data-type=filter-name]').text()) {
+            // $(this).find('[data-type=filter-body]')
+          }
+        });
       },
       error: ajaxCallbackErrors,
     });
