@@ -44,7 +44,9 @@ function filterChange() {
 
     container.addClass('active');
 
-    data[$(this).data('field')] = $(this).val();
+    filterContainer.find('input[type=checkbox]:checked, select').each(function() {
+      data[$(this).data('field')] = $(this).val();
+    });
 
     $.ajax({
       type: 'GET',
@@ -58,9 +60,37 @@ function filterChange() {
 
         const filterContainerResponse = $(r).find('[data-link-container]');
 
-        filterContainer.children().each(function(i) {
-          if ($(this).find('[data-type=filter-name]').text() !== filterContainerResponse.children().eq(i).find('[data-type=filter-name]').text()) {
-            // $(this).find('[data-type=filter-body]')
+        let index = 0;
+        filterContainer.children().each(function() {
+          const filterBody = $(this).find('[data-type=filter-body]');
+
+          if ($(this).find('[data-type=filter-name]').text() !== filterContainerResponse.children().eq(index).find('[data-type=filter-name]').text()) {
+            filterBody.css({
+              'opacity': 0.5,
+              'pointer-events': 'none',
+            });
+          } else {
+            filterBody.css({
+              'opacity': 1,
+              'pointer-events': 'auto',
+            });
+            filterBody.find('[data-type=filter]').each(function(i) {
+              if ($(this).val() === filterContainerResponse.children().eq(index).find('[data-type=filter]').eq(i).val()) {
+                $(this).parents('[data-type=filter-item]').css({
+                  'opacity': 1,
+                  'pointer-events': 'auto',
+                });
+
+                return;
+              }
+
+              $(this).parents('[data-type=filter-item]').css({
+                'opacity': 0.5,
+                'pointer-events': 'none',
+              });
+            });
+
+            index++;
           }
         });
       },
