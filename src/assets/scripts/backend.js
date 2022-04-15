@@ -73,13 +73,17 @@ function filterChange() {
 
           if ($(this).find('[data-type=filter-name]').text() !== filterItemResponse.find('[data-type=filter-name]').text()) {
             filterBody.css(disableStyle);
+            filterBody.find('[data-active]').css(disableStyle);
           } else {
             const arr = filterItemResponse.find('[data-type=filter]').map((arrI, item) => item.value);
 
             filterBody.css(enableStyle);
             filterBody.find('[data-type=filter]').each(function() {
               if (Object.values(arr).includes($(this).val())) {
-                $(this).parents('[data-type=filter-item]').css(enableStyle);
+                const parent = $(this).parents('[data-type=filter-item]');
+
+                parent.css(enableStyle);
+                parent.attr('data-active', true);
               } else {
                 $(this).parents('[data-type=filter-item]').css(disableStyle);
               }
