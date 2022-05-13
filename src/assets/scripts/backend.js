@@ -8,7 +8,23 @@ $(function() {
   accordionSidebar();
   removeItem();
   filterChange();
+  filterOnClient();
 });
+
+function filterOnClient() {
+  $('[data-type=client-filter]').on('click', function() {
+    const id = $(this).data('id'),
+      container = $(this).parents('[data-container=main]'),
+      activeClass = 'active';
+
+    $(this).parent().find(`.${activeClass}`).removeClass(activeClass);
+    $(this).children().addClass(activeClass);
+    container.find('[data-replace]:not([style])').css({
+      'display': 'none',
+    });
+    container.find(`[data-replace=${id}]`).removeAttr('style');
+  });
+}
 
 $('[data-clear-button]')[0].addEventListener('filtersReset', function() {
   const container = $(this).data('link-container');
