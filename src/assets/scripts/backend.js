@@ -11,6 +11,30 @@ $(function() {
   filterOnClient();
 });
 
+window.objFormSuccess = {
+  formSuccess: function(form) {
+    form.attr('data-form-hidden', '');
+    form.find('[data-type=form-response]').attr('data-response-active', '');
+  },
+  formDBSuccess: function() {
+    backRedirect(1);
+  },
+  updateDBSuccess: function() {
+    backRedirect(2);
+  },
+}
+
+window.objFormErrors = {
+  adminForm: function(form, r) {
+    form.siblings('[data-type=errors]').remove();
+    form.after(`<div data-type="errors">${r.message}</div>`);
+    form.next().css({
+      'color': 'red',
+      'margin-top': '20px',
+    });
+  }
+}
+
 function filterOnClient() {
   $('[data-type=client-filter]').on('click', function() {
     const id = $(this).data('id'),
@@ -214,30 +238,6 @@ function backRedirect(count) {
   resultArr.splice(resultArr.length - count, count);
 
   window.location.href = `${window.location.protocol}//${window.location.host}/${resultArr.join('/')}`;
-}
-
-window.objFormSuccess = {
-  formSuccess: function(form) {
-    form.attr('data-form-hidden', '');
-    form.find('[data-type=form-response]').attr('data-response-active', '');
-  },
-  formDBSuccess: function() {
-    backRedirect(1);
-  },
-  updateDBSuccess: function() {
-    backRedirect(2);
-  },
-}
-
-window.objFormErrors = {
-  adminForm: function(form, r) {
-    form.siblings('[data-type=errors]').remove();
-    form.after(`<div data-type="errors">${r.message}</div>`);
-    form.next().css({
-      'color': 'red',
-      'margin-top': '20px',
-    });
-  }
 }
 
 function forms() {
