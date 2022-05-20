@@ -284,7 +284,6 @@
       @include fsl(16px, 160%);
     }
   }
-  
   &__about-dropdown {
     margin-top: 40px;
     @media (min-width: $breakpoint) {
@@ -294,6 +293,8 @@
     display: none;
 
     p {
+      margin-bottom: 20px;
+      
       white-space: pre-line;
       @include fsl(16px, 160%);
     }
