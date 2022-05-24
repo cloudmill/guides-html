@@ -36,12 +36,15 @@ window.objFormErrors = {
 }
 
 function filterOnClient() {
-  $('[data-type=client-filter]').on('click', function() {
+  $('[data-type=client-filter]').on('click', function(e) {
+    e.preventDefault();
+
     const id = $(this).data('id'),
       container = $(this).parents('[data-container=main]'),
-      activeClass = 'active';
+      closestParent = $(this).parent(),
+      activeClass = closestParent.data('active-class');
 
-    $(this).parent().find(`.${activeClass}`).removeClass(activeClass);
+    closestParent.find(`.${activeClass}`).removeClass(activeClass);
     $(this).children().addClass(activeClass);
     container.find('[data-replace]:not([style])').css({
       'display': 'none',
