@@ -34,7 +34,7 @@ export class SeasonManager {
       currentOption.setAttribute('disabled', 'disabled')
       
       $(this.select).val(null).trigger('change')
-  
+      console.log(123);
       this.cloneTab(currentOption.text, value)
       this.cloneSeason(value)
     }
@@ -81,7 +81,7 @@ export class SeasonManager {
   changeSeason(target) {
     if (!target.classList.contains('active')) {
       const value = target.closest('[data-season-tab]').getAttribute('data-season-tab')
-      const season = document.querySelector(`[data-season-item=${value}]`)
+      const season = document.querySelector(`[data-season-item="${value}"]`)
       const oldSeason = document.querySelector('.active[data-season-item]')
       const oldTab = document.querySelector('.active[data-change-season]')
 
