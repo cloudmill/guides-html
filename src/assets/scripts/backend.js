@@ -53,27 +53,29 @@ function filterOnClient() {
   });
 }
 
-$('[data-clear-button]')[0].addEventListener('filtersReset', function() {
-  const container = $(this).data('link-container');
-
-  $.ajax({
-    type: 'GET',
-    url: window.location.href,
-    dataType: 'html',
-    data: {
-      ajax: 'filter',
-    },
-    success: function(r) {
-      if (r.success) {
-        $(container).empty();
-        $(container).append($(r));
-      } else {
-        alert(r.message);
-      }
-    },
-    error: ajaxCallbackErrors,
+if ($('[data-clear-button]').length) {
+  $('[data-clear-button]')[0].addEventListener('filtersReset', function() {
+    const container = $(this).data('link-container');
+  
+    $.ajax({
+      type: 'GET',
+      url: window.location.href,
+      dataType: 'html',
+      data: {
+        ajax: 'filter',
+      },
+      success: function(r) {
+        if (r.success) {
+          $(container).empty();
+          $(container).append($(r));
+        } else {
+          alert(r.message);
+        }
+      },
+      error: ajaxCallbackErrors,
+    });
   });
-});
+}
 
 function filterChange() {
   $(document).on('change', '[data-type=filter]', function() {

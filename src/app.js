@@ -46,7 +46,7 @@ window.CONFIG =
     };
 
 $(() => {
-  // require("assets/scripts/backend");
+  require("assets/scripts/backend");
 
   const tabs = new Tabs('[data-tabs]')
 

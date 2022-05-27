@@ -34,46 +34,53 @@ export class SeasonManager {
       currentOption.setAttribute('disabled', 'disabled')
       
       $(this.select).val(null).trigger('change')
-      console.log(123);
       this.cloneTab(currentOption.text, value)
       this.cloneSeason(value)
     }
   }
 
   cloneTab(text, value) {
-    const tabItem = document.querySelector('[data-season-tab]')
-    const clone = tabItem.cloneNode(true)
+    const template = document.querySelector('[data-season-template]').content
+    const clone = template.querySelector('[data-tab-clone]').cloneNode(true)
     const tab = clone.querySelector('.product-tabs__tab')
-
+    
     tab.textContent = text
-    tab.classList.remove('active')
     clone.setAttribute('data-season-tab', value)
-    tabItem.parentElement.append(clone)
+    
+    const container = document.querySelector('[data-tabs-container]')
+    const tabs = container.querySelectorAll('[data-season-tab]')
+    if (!tabs.length) {
+      tab.classList.add('active')
+    }
+    container.append(clone)
   }
 
   cloneSeason(value) {
-    const container = document.querySelector('.admin__seasons')
-    const clone = container.querySelector('.admin__seasons-item').cloneNode(true)
-
-    clone.classList.remove('active')
+    const template = document.querySelector('[data-season-template]').content
+    const clone = template.querySelector('.admin__seasons-item').cloneNode(true)
+    
     clone.setAttribute('data-season-item', value)
+    
+    const container = document.querySelector('.admin__seasons')
+    const items = container.querySelectorAll('.admin__seasons-item')
+
+    if (!items.length) {
+      clone.classList.add('active')
+    }
 
     container.append(clone)
   }
 
   removeSeason(target) {
-    const removeButtons = document.querySelectorAll('[data-remove-season]')
-    if (removeButtons.length > 1) {
-      const tab = target.closest('[data-season-tab]')
-      const value = tab.getAttribute('data-season-tab')
-      const season = document.querySelector(`[data-season-item=${value}]`)
-  
-      season.remove()
-      tab.remove()
-      for (let i = 0; i < this.select.options.length; i++) {
-        if (this.select.options[i].value === value) {
-          this.select.options[i].removeAttribute('disabled')
-        }
+    const tab = target.closest('[data-season-tab]')
+    const value = tab.getAttribute('data-season-tab')
+    const season = document.querySelector(`[data-season-item="${value}"]`)
+
+    season.remove()
+    tab.remove()
+    for (let i = 0; i < this.select.options.length; i++) {
+      if (this.select.options[i].value === value) {
+        this.select.options[i].removeAttribute('disabled')
       }
     }
   }
