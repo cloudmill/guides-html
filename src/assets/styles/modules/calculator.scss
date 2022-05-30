@@ -605,6 +605,7 @@
   }
 
   &__price {
+    position: relative;
     @media (min-width: $breakpoint-m) {
       margin-top: 20px;
     }
@@ -801,5 +802,52 @@
     font-weight: 500;
     max-width: 132px;
     @include fsl(16px, 140%);
+  }
+}
+
+.loader-price.active {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  // margin: -50px auto 0;
+
+  width: 20px;
+  height: 20px;
+  animation: loader12-u6338d783 1s linear alternate infinite;
+  border-radius: 50%;
+}
+
+@keyframes loader12-u6338d783 {
+  0% {
+    background: rgba(0, 82, 236, 0.2);
+    box-shadow: -60px 0 0 2px #5dd7ff, -30px 0 0 0 rgba(0, 82, 236, 0.2),
+      0 0 0 0 rgba(0, 82, 236, 0.2), 30px 0 0 0 rgba(0, 82, 236, 0.2),
+      60px 0 0 0 rgba(0, 82, 236, 0.2);
+  }
+  25% {
+    background: rgba(0, 82, 236, 0.2);
+    box-shadow: -60px 0 0 0 rgba(0, 82, 236, 0.2), -30px 0 0 2px #5dd7ff,
+      0 0 0 0 rgba(0, 82, 236, 0.2), 30px 0 0 0 rgba(0, 82, 236, 0.2),
+      60px 0 0 0 rgba(0, 82, 236, 0.2);
+  }
+  50% {
+    background: #5dd7ff;
+    box-shadow: -60px 0 0 0 rgba(0, 82, 236, 0.2),
+      -30px 0 0 0 rgba(0, 82, 236, 0.2), 0 0 0 2px #5dd7ff,
+      30px 0 0 0 rgba(0, 82, 236, 0.2), 60px 0 0 0 rgba(0, 82, 236, 0.2);
+  }
+  75% {
+    background: rgba(0, 82, 236, 0.2);
+    box-shadow: -60px 0 0 0 rgba(0, 82, 236, 0.2),
+      -30px 0 0 0 rgba(0, 82, 236, 0.2), 0 0 0 0 rgba(0, 82, 236, 0.2),
+      30px 0 0 2px #5dd7ff, 60px 0 0 0 rgba(0, 82, 236, 0.2);
+  }
+  100% {
+    background: rgba(0, 82, 236, 0.2);
+    box-shadow: -60px 0 0 0 rgba(0, 82, 236, 0.2),
+      -30px 0 0 0 rgba(0, 82, 236, 0.2), 0 0 0 0 rgba(0, 82, 236, 0.2),
+      30px 0 0 0 rgba(0, 82, 236, 0.2), 60px 0 0 2px #5dd7ff;
   }
 }

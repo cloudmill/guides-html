@@ -385,7 +385,8 @@ mixin calculator
         .calculator__payments-item 
           .calculator__payments-icon 
             +world-svg
-    .calculator__price(class=(attributes.events ? null : 'calculator__price--mt')) 
+    .calculator__price(class=(attributes.events ? null : 'calculator__price--mt'))
+      .loader-price
       .calculator__price-container
         .calculator__payments.calculator__payments--mobile
           .calculator__payments-title(data-aos='fade-up')  
