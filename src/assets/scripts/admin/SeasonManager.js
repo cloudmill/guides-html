@@ -3,7 +3,7 @@ export class SeasonManager {
   constructor() {
 
     this.select = document.querySelector("[data-season-select]")
-    
+
     if (this.select) {
       this.clickHandler()
     }
@@ -32,7 +32,7 @@ export class SeasonManager {
     const currentOption = this.select.options[this.select.selectedIndex]
     if (value) {
       currentOption.setAttribute('disabled', 'disabled')
-      
+
       $(this.select).val(null).trigger('change')
       this.cloneTab(currentOption.text, value)
       this.cloneSeason(value)
@@ -43,10 +43,10 @@ export class SeasonManager {
     const template = document.querySelector('[data-season-template]').content
     const clone = template.querySelector('[data-tab-clone]').cloneNode(true)
     const tab = clone.querySelector('.product-tabs__tab')
-    
+
     tab.textContent = text
     clone.setAttribute('data-season-tab', value)
-    
+
     const container = document.querySelector('[data-tabs-container]')
     const tabs = container.querySelectorAll('[data-season-tab]')
     if (!tabs.length) {
@@ -58,9 +58,9 @@ export class SeasonManager {
   cloneSeason(value) {
     const template = document.querySelector('[data-season-template]').content
     const clone = template.querySelector('.admin__seasons-item').cloneNode(true)
-    
+
     clone.setAttribute('data-season-item', value)
-    
+
     const container = document.querySelector('.admin__seasons')
     const items = container.querySelectorAll('.admin__seasons-item')
 
@@ -69,6 +69,8 @@ export class SeasonManager {
     }
 
     container.append(clone)
+
+    window.dispatchEvent(new CustomEvent('seasonAdded', {detail: {item: clone, count: items.length}}));
   }
 
   removeSeason(target) {
@@ -96,7 +98,7 @@ export class SeasonManager {
         oldSeason.classList.remove('active')
         oldTab.classList.remove('active')
       }
-      
+
       target.classList.add('active')
       season.classList.add('active')
     }

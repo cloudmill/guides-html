@@ -56,7 +56,7 @@ function filterOnClient() {
 if ($('[data-clear-button]').length) {
   $('[data-clear-button]')[0].addEventListener('filtersReset', function() {
     const container = $(this).data('link-container');
-  
+
     $.ajax({
       type: 'GET',
       url: window.location.href,
@@ -153,6 +153,14 @@ window.addEventListener('dayAdded', function(e) {
     const field = $(this).data('field');
 
     $(this).attr('data-field', `${data.highload}[${e.detail.count}][${field}][]`);
+  });
+});
+
+window.addEventListener('seasonAdded', function(e) {
+  $(e.detail.item).find('[data-type=get-field]').each(function() {
+    const field = $(this).data('field');
+
+    $(this).attr('data-field', field.replace('[]', `[${e.detail.count}]`));
   });
 });
 
