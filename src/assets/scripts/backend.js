@@ -9,6 +9,7 @@ $(function() {
   removeItem();
   filterChange();
   filterOnClient();
+  calc();
 });
 
 window.objFormSuccess = {
@@ -33,6 +34,17 @@ window.objFormErrors = {
       'margin-top': '20px',
     });
   }
+}
+
+function calc() {
+  $(document).on('click', '[data-calc-backend]', function () {
+    const calcContainer = $(this).parents('[data-container=calc]'),
+      priceContainer = calcContainer.find('[data-container=price]'),
+      loader = priceContainer.find('.loader-price'),
+      loaderActiveClass = 'active';
+
+
+  });
 }
 
 function filterOnClient() {
