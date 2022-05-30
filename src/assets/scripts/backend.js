@@ -40,10 +40,39 @@ function calc() {
   $(document).on('click', '[data-calc-backend]', function () {
     const calcContainer = $(this).parents('[data-container=calc]'),
       priceContainer = calcContainer.find('[data-container=price]'),
-      loader = priceContainer.find('.loader-price'),
-      loaderActiveClass = 'active';
+      loader = calcContainer.find('.loader-price'),
+      loaderActiveClass = 'active',
+      data = {};
 
+    priceContainer.css({
+      'opacity': '0.1',
+    });
 
+    loader.addClass(loaderActiveClass);
+
+    calcContainer.find('[data-field]').each(function() {
+      const inpVal = $(this).val();
+
+      data[$(this).data('field')] = inpVal ? inpVal : $(this).text();
+    });
+
+    $.ajax({
+      type: 'POST',
+      url: calcContainer.data('url'),
+      dataType: 'json',
+      data: data,
+      success: function(r) {
+        if (r.success) {
+          loader.removeClass(loaderActiveClass);
+          priceContainer.css({
+            'opacity': '1',
+          });
+        } else {
+          alert(r.message);
+        }
+      },
+      error: ajaxCallbackErrors,
+    });
   });
 }
 
