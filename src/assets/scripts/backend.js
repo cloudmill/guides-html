@@ -157,7 +157,13 @@ window.addEventListener('dayAdded', function(e) {
 });
 
 window.addEventListener('seasonAdded', function(e) {
-  $(e.detail.item).find('[data-type=get-field]').each(function() {
+  const item = $(e.detail.item),
+    count = e.detail.count,
+    nameData = item.data('name');
+
+  item.append(`<input type=hidden data-type="get-field" data-field="${nameData.field.replace('[]', `[${count}]`)}" value="${nameData.name}">`);
+  item.append(`<input type=hidden data-type="get-field" data-field="${item.data('season').replace('[]', `[${count}]`)}" value="${e.detail.selectValue}">`);
+  item.find('[data-type=get-field]').each(function() {
     const field = $(this).data('field');
 
     $(this).attr('data-field', field.replace('[]', `[${e.detail.count}]`));

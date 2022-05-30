@@ -70,7 +70,7 @@ export class SeasonManager {
 
     container.append(clone)
 
-    window.dispatchEvent(new CustomEvent('seasonAdded', {detail: {item: clone, count: items.length}}));
+    window.dispatchEvent(new CustomEvent('seasonAdded', {detail: {item: clone, count: items.length, selectValue: value}}));
   }
 
   removeSeason(target) {
