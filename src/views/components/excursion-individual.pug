@@ -405,13 +405,17 @@ mixin calculator
             .calculator__price-item(data-aos='fade-up')
               .calculator__price-label 
                 |Old price
-              .calculator__price-num
+              .calculator__price-num.hidden(data-calculator-price='')
                 |$1280
+              .calculator__price-tooltip(data-calculator-tooltip='')
+                |Please calculate price
             .calculator__price-item(data-aos='fade-up')
               .calculator__price-label 
                 |You save money
-              .calculator__price-num
+              .calculator__price-num.hidden(data-calculator-price='')
                 |$20
+              .calculator__price-tooltip(data-calculator-tooltip='')
+                |Please calculate price
           .calculator__price-col
             .calculator__price-left(data-aos='fade-up')
               .calculator__price-label
@@ -421,14 +425,21 @@ mixin calculator
             .calculator__price-right(data-aos='fade-up')
               .calculator__price-label
                 |Total amount
-              .calculator__price-number   
+              .calculator__price-number.hidden(data-calculator-price='')  
                 |$1280
+              .calculator__price-tooltip(data-calculator-tooltip='')
+                |Please calculate price
           .calculator__price-col(data-aos='fade-up')
-            .button-icon.button-icon--calculator.animation(data-fancy-button='4' data-cart-button='')
-              .button-icon__icon
-                +bag-svg
-              span.button-icon__text.animation__span
-                |Add to cart
+            .calculator__price-btn
+              .button.button--calc.animation(data-calculator-calculate='')
+                span.animation__span
+                  |Calculate price
+            .calculator__price-btn
+              .button-icon.button-icon--calculator.animation(data-fancy-button='4' data-cart-button='')
+                .button-icon__icon
+                  +bag-svg
+                span.button-icon__text.animation__span
+                  |Add to cart
 
 mixin calculator-alt 
   .calculator.calculator--simple(class=attributes.class)

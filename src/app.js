@@ -10,6 +10,7 @@ import 'scripts/select.js';
 import 'scripts/nav-links.js';
 import 'scripts/parsley.js';
 import 'scripts/hero.js';
+import 'scripts/calculator.js';
 import 'scripts/admin/admin.js';
 import 'scripts/footer.js';
 import 'scripts/reveal.js';

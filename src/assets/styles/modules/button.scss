@@ -22,6 +22,14 @@
   &--m {
     padding: 9px 25px;
   }
+  
+  &--calc {
+    padding: 19px 25px;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+    }
+  }
 
   &--xl {
     padding: 19px 0; 
