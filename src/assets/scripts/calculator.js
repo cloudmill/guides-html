@@ -1,3 +1,4 @@
+import {mediaQuery} from './mediaQueries'
 
 // please calculate tooltip show/hide
 {
@@ -12,6 +13,16 @@
         tooltips.addClass('hidden')
         prices.removeClass('hidden')
       })
+    }
+  })
+}
+
+{
+  $(() => {
+    if (mediaQuery.matches) {
+      $('.calculator__desktop').addClass('active')
+    } else {
+      $('.calculator__mobile').addClass('active')
     }
   })
 }
