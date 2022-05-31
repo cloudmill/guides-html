@@ -39,10 +39,7 @@ window.objFormErrors = {
 window.getValue = {
   input: elem => elem.val(),
   text: elem => elem.text(),
-  date: elem => {
-    const date = flatpickr(elem, {});
-    console.log(date);
-  }
+  date: elem => flatpickr(elem, {}).input.value,
 }
 
 function calc() {
@@ -59,7 +56,7 @@ function calc() {
 
     loader.addClass(loaderActiveClass);
 
-    calcContainer.find('[data-field]').each(function() {
+    calcContainer.find('[data-container=get-data].active').find('[data-field]').each(function() {
       try {
         data[$(this).data('field')] = window.getValue[$(this).data('func')]($(this));
       } catch (e) {
