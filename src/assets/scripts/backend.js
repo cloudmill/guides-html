@@ -36,6 +36,15 @@ window.objFormErrors = {
   }
 }
 
+window.getValue = {
+  input: elem => elem.val(),
+  text: elem => elem.text(),
+  date: elem => {
+    const date = flatpickr(elem, {});
+    console.log(date);
+  }
+}
+
 function calc() {
   $(document).on('click', '[data-calc-backend]', function () {
     const calcContainer = $(this).parents('[data-container=calc]'),
@@ -51,9 +60,11 @@ function calc() {
     loader.addClass(loaderActiveClass);
 
     calcContainer.find('[data-field]').each(function() {
-      const inpVal = $(this).val();
-
-      data[$(this).data('field')] = inpVal ? inpVal : $(this).text();
+      try {
+        data[$(this).data('field')] = window.getValue[$(this).data('func')]($(this));
+      } catch (e) {
+        console.log('У элемента не установлен атрибут [data-func]');
+      }
     });
 
     $.ajax({
