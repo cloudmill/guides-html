@@ -71,6 +71,11 @@ function calc() {
       data: data,
       success: function(r) {
         if (r.success) {
+          const total = priceContainer.find('[data-calc-total]');
+
+          priceContainer.find('[data-calc-text]').addClass('hidden');
+          total.text(r.price);
+          total.removeClass('hidden');
           loader.removeClass(loaderActiveClass);
           priceContainer.css({
             'opacity': '1',
