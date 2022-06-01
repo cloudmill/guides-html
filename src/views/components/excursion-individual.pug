@@ -132,7 +132,7 @@ mixin calculator
             .calculator__label 
               |Adults
           .calculator__item(data-aos='fade-up') 
-            .counter(data-max-count='5')
+            .counter(data-max-count='12' data-counter='1')
               button.counter__item.counter__item--minus(data-count-minus='')
                 +minus-svg.counter__svg.counter__minus
               .counter__number 
@@ -149,7 +149,7 @@ mixin calculator
                 .tooltip__container 
                   |Attention! In order to visit this tour, you need to apply for a temporary visa. Without a temporary visa, you will not be allowed out of the port.
           .calculator__item(data-aos='fade-up') 
-            .counter(data-max-count='5')
+            .counter(data-max-count='12' data-counter='1')
               button.counter__item.counter__item--minus(data-count-minus='')
                 +minus-svg.counter__svg.counter__minus
               .counter__number 
@@ -161,7 +161,7 @@ mixin calculator
               .calculator__label 
                 |#{item}
             .calculator__item(data-aos='fade-up') 
-              .counter(data-max-count='5')
+              .counter(data-max-count='12' data-counter='1')
                 button.counter__item.counter__item--minus(data-count-minus='')
                   +minus-svg.counter__svg.counter__minus
                 .counter__number 
@@ -178,7 +178,7 @@ mixin calculator
                       +tooltip-svg.tooltip__svg
                 .tooltip__container 
                     |Attention! In order to visit this tour, you need to apply for a temporary visa. Without a temporary visa, you will not be allowed out of the port.
-              .counter 
+              .counter(data-counter='1')
                 button.counter__item.counter__item--minus(data-count-minus='')
                   +minus-svg.counter__svg.counter__minus
                 .counter__number 
@@ -256,7 +256,7 @@ mixin calculator
             .calculator__label 
               |Adults 
           .calculator__item(data-aos='fade-up')
-            .counter(data-max-count='3')
+            .counter(data-max-count='12' data-counter='1')
               button.counter__item.counter__item--minus(data-count-minus='')
                 +minus-svg.counter__svg.counter__minus
               .counter__number 
@@ -273,7 +273,7 @@ mixin calculator
               .tooltip__container 
                 |Attention! In order to visit this tour, you need to apply for a temporary visa. Without a temporary visa, you will not be allowed out of the port.
           .calculator__item(data-aos='fade-up')
-            .counter(data-max-count='3')
+            .counter(data-max-count='12' data-counter='1')
               button.counter__item.counter__item--minus(data-count-minus='')
                 +minus-svg.counter__svg.counter__minus
               .counter__number 
@@ -285,7 +285,7 @@ mixin calculator
               .calculator__label 
                 |#{item}
             .calculator__item(data-aos='fade-up')
-              .counter(data-max-count='3')
+              .counter(data-max-count='12' data-counter='1')
                 button.counter__item.counter__item--minus(data-count-minus='')
                   +minus-svg.counter__svg.counter__minus
                 .counter__number 
@@ -302,7 +302,7 @@ mixin calculator
               .tooltip__container 
                 |Attention! In order to visit this tour, you need to apply for a temporary visa. Without a temporary visa, you will not be allowed out of the port.
           .calculator__item(data-aos='fade-up')
-            .counter 
+            .counter(data-counter='1')
               button.counter__item.counter__item--minus(data-count-minus='')
                 +minus-svg.counter__svg.counter__minus
               .counter__number 
@@ -421,8 +421,8 @@ mixin calculator
             .calculator__price-left(data-aos='fade-up')
               .calculator__price-label
                 |Number of people
-              .calculator__price-number   
-                |7
+              .calculator__price-number(data-count-number='1')  
+                |0
             .calculator__price-right(data-aos='fade-up')
               .calculator__price-label
                 |Total amount
@@ -474,7 +474,7 @@ mixin calculator-alt
         .calculator__item(data-aos='fade-up')
           .calculator__label 
             |Number of people
-          .counter 
+          .counter(data-counter='1')
             button.counter__item.counter__item--minus(data-count-minus='')
               +minus-svg.counter__svg.counter__minus
             .counter__number 

@@ -30,7 +30,7 @@ import 'scripts/cart-button.js';
 import 'scripts/admin-tabs.js';
 import 'scripts/aos.js';
 import { Tabs } from './assets/scripts/tabs'
-import { Counter } from './assets/scripts/counter'
+import './assets/scripts/counter'
 import { CalendarChanger } from './assets/scripts/admin/calendar-changer'
 
 const siteTemplPath = document.querySelector("[data-type=site-templ-path]");
@@ -51,11 +51,7 @@ $(() => {
 
   const tabs = new Tabs('[data-tabs]')
 
-  const counters = document.querySelectorAll('.counter')
-
-  counters.forEach(item => {
-    const counter = new Counter(item)
-  })
+  
 
   Inputmask({mask: "99.99.9999", showMaskOnHover: false}).mask('[data-date-input]')
   Inputmask({mask: "99:99", showMaskOnHover: false}).mask('[data-time-input]')
