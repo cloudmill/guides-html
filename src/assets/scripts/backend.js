@@ -63,22 +63,25 @@ window.basket = {
   },
   basketEventCallable: {
     add: elem => {
-
+      console.log($(`[data-fancy-modal=${elem.data('modal-id')}]`));
+      $.fancybox.open($(`[data-fancy-modal=${elem.data('modal-id')}]`));
     }
   }
 }
 
 function basket() {
   $(document).on('click', '[data-type=basket]', function() {
-    const func = $(this).data('func');
+    const thisElem = $(this),
+      funcMore = thisElem.data('func-more'),
+      funcCallable = thisElem.data('func-callable');
 
     let data = {
-        id: $(this).data('id'),
-        event: $(this).data('event-type'),
+        id: thisElem.data('id'),
+        event: thisElem.data('event-type'),
       };
 
-    if (func) {
-      data = Object.assign(data, window.basketMoreData[func]($(this)));
+    if (funcMore) {
+      data = Object.assign(data, window.basket.basketMoreData[funcMore](thisElem));
     }
 
     $.ajax({
@@ -88,7 +91,7 @@ function basket() {
       data: data,
       success: function(r) {
         if (r.success) {
-
+          window.basket.basketEventCallable[funcCallable](thisElem);
         } else {
           alert(r.message);
         }
