@@ -57,8 +57,15 @@ window.getValue = {
   date: elem => flatpickr(elem, {}).input.value,
 }
 
-window.basketMoreData = {
-  add: elem => getData(elem.parents('[data-container=calc]').find('[data-container=get-data].active')),
+window.basket = {
+  basketMoreData: {
+    add: elem => getData(elem.parents('[data-container=calc]').find('[data-container=get-data].active')),
+  },
+  basketEventCallable: {
+    add: elem => {
+
+    }
+  }
 }
 
 function basket() {
