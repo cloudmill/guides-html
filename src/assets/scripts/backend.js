@@ -13,6 +13,20 @@ $(function() {
   basket();
 });
 
+function getData(container) {
+  const data = {};
+
+  container.find('[data-field]').each(function() {
+    try {
+      data[$(this).data('field')] = window.getValue[$(this).data('func')]($(this));
+    } catch (e) {
+      console.log('У элемента не установлен атрибут [data-func]');
+    }
+  });
+
+  return data;
+}
+
 window.objFormSuccess = {
   formSuccess: function(form) {
     form.attr('data-form-hidden', '');
@@ -43,34 +57,21 @@ window.getValue = {
   date: elem => flatpickr(elem, {}).input.value,
 }
 
-window.basketAddData = {
-  add: (elem, data) => Object.assign(getData(elem.parents('[data-container=calc]').find('[data-container=get-data].active')), data),
-}
-
-function getData(container) {
-  const data = {};
-
-  container.find('[data-field]').each(function() {
-    try {
-      data[$(this).data('field')] = window.getValue[$(this).data('func')]($(this));
-    } catch (e) {
-      console.log('У элемента не установлен атрибут [data-func]');
-    }
-  });
-
-  return data;
+window.basketMoreData = {
+  add: elem => getData(elem.parents('[data-container=calc]').find('[data-container=get-data].active')),
 }
 
 function basket() {
   $(document).on('click', '[data-type=basket]', function() {
-    const func = $(this).data('func'),
-      data = {
+    const func = $(this).data('func');
+
+    let data = {
         id: $(this).data('id'),
         event: $(this).data('event-type'),
       };
 
     if (func) {
-      window.basketAddData[func]($(this), data);
+      data = Object.assign(data, window.basketMoreData[func]($(this)));
     }
 
     $.ajax({
