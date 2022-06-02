@@ -43,6 +43,10 @@ window.getValue = {
   date: elem => flatpickr(elem, {}).input.value,
 }
 
+window.basketAddData = {
+  add: (elem, data) => Object.assign(getData(elem.parents('[data-container=calc]').find('[data-container=get-data].active')), data),
+}
+
 function getData(container) {
   const data = {};
 
@@ -59,8 +63,30 @@ function getData(container) {
 
 function basket() {
   $(document).on('click', '[data-type=basket]', function() {
-    const container = $(this).parents('[data-container=calc]'),
-      data = getData(container.find('[data-container=get-data].active'));
+    const func = $(this).data('func'),
+      data = {
+        id: $(this).data('id'),
+        event: $(this).data('event-type'),
+      };
+
+    if (func) {
+      window.basketAddData[func]($(this), data);
+    }
+
+    $.ajax({
+      type: 'POST',
+      url: `${window.CONFIG.path}/include/ajax/basket/event.php`,
+      dataType: 'json',
+      data: data,
+      success: function(r) {
+        if (r.success) {
+
+        } else {
+          alert(r.message);
+        }
+      },
+      error: ajaxCallbackErrors,
+    });
   });
 }
 
