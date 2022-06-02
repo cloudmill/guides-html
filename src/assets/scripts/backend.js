@@ -10,6 +10,7 @@ $(function() {
   filterChange();
   filterOnClient();
   calc();
+  basket();
 });
 
 window.objFormSuccess = {
@@ -42,13 +43,33 @@ window.getValue = {
   date: elem => flatpickr(elem, {}).input.value,
 }
 
+function getData(container) {
+  const data = {};
+
+  container.find('[data-field]').each(function() {
+    try {
+      data[$(this).data('field')] = window.getValue[$(this).data('func')]($(this));
+    } catch (e) {
+      console.log('У элемента не установлен атрибут [data-func]');
+    }
+  });
+
+  return data;
+}
+
+function basket() {
+  $(document).on('click', '[data-type=basket]', function() {
+    const container = $(this).parents('[data-container=calc]'),
+      data = getData(container.find('[data-container=get-data].active'));
+  });
+}
+
 function calc() {
   $(document).on('click', '[data-calc-backend]', function () {
     const calcContainer = $(this).parents('[data-container=calc]'),
       priceContainer = calcContainer.find('[data-container=price]'),
       loader = calcContainer.find('.loader-price'),
-      loaderActiveClass = 'active',
-      data = {};
+      loaderActiveClass = 'active';
 
     priceContainer.css({
       'opacity': '0.1',
@@ -56,19 +77,11 @@ function calc() {
 
     loader.addClass(loaderActiveClass);
 
-    calcContainer.find('[data-container=get-data].active').find('[data-field]').each(function() {
-      try {
-        data[$(this).data('field')] = window.getValue[$(this).data('func')]($(this));
-      } catch (e) {
-        console.log('У элемента не установлен атрибут [data-func]');
-      }
-    });
-
     $.ajax({
       type: 'POST',
       url: calcContainer.data('url'),
       dataType: 'json',
-      data: data,
+      data: getData(calcContainer.find('[data-container=get-data].active')),
       success: function(r) {
         if (r.success) {
           const total = priceContainer.find('[data-calc-total]');
