@@ -63,8 +63,22 @@ window.basket = {
   },
   basketEventCallable: {
     add: elem => {
-      console.log($(`[data-fancy-modal=${elem.data('modal-id')}]`));
       $.fancybox.open($(`[data-fancy-modal=${elem.data('modal-id')}]`));
+    },
+    delete: elem => {
+      $.ajax({
+        type: 'GET',
+        url: window.location.href,
+        dataType: 'html',
+        data: {},
+        success: function(r) {
+          const container = elem.parents('[data-container=main]');
+
+          container.empty();
+          container.append($(r));
+        },
+        error: ajaxCallbackErrors,
+      });
     }
   }
 }
