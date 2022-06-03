@@ -18,6 +18,11 @@
     // background: $color-brown;
   }
 
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
   &--calculator {
     @media (min-width: $breakpoint) {
       width: 200px;

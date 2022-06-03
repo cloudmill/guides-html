@@ -44,7 +44,13 @@ export class Counter {
         this.globalNumber.textContent = +this.globalNumber.textContent - 1
         this.number.textContent = +this.number.textContent - 1
         $.fancybox.open($(`[data-fancy-modal="11"]`))
-      } 
+      }
+
+      window.dispatchEvent(new CustomEvent('personCountChange', {
+        detail: {
+          count: +this.globalNumber.textContent
+        }
+      }));
     }
   }
 

@@ -51,7 +51,19 @@ $(() => {
 
   const tabs = new Tabs('[data-tabs]')
 
-  
+  const cartBtn = $('[data-cart-button]')
+
+  if (cartBtn.length) {
+    window.addEventListener('personCountChange', event => {
+      const count = event.detail.count
+
+      if (count) {
+        cartBtn.removeClass('disabled')
+      } else {
+        cartBtn.addClass('disabled')
+      }
+    })
+  }
 
   Inputmask({mask: "99.99.9999", showMaskOnHover: false}).mask('[data-date-input]')
   Inputmask({mask: "99:99", showMaskOnHover: false}).mask('[data-time-input]')
