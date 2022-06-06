@@ -4,6 +4,7 @@ import mask from "inputmask";
 import 'scripts/swipers.js';
 import 'scripts/header.js';
 import 'scripts/tooltip.js';
+import 'scripts/addGuest.js';
 import 'scripts/modals.js';
 import 'scripts/accordion.js';
 import 'scripts/select.js';

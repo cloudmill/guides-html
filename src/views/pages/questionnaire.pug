@@ -66,37 +66,66 @@ block content
       .container
         .booking-page__row 
           .booking-page__col
-            form.form(action="/") 
-              .booking-page__inner  
-                h3.form__title.form__title--left(data-aos='fade-up') 
-                  |Guest 1
-                .booking-page__top
-                  .booking-page__item
-                    each item in ddata.first
-                      .form__item(data-aos='fade-up')  
-                        +input(name = item.name placeholder = item.placeholder type = item.type)
-                    .form__item.select-wrapper(data-aos='fade-up')  
-                      .select
-                        select.select__mobile(name="gender-mob")
-                          option(value="" disabled selected)
-                            |Gender
-                          option(value = 'Male')
-                            |Male
-                          option(value = 'Female')
-                            |Female
-                        select.select__select(name="gender" style='width: 100%' data-select-placeholder='Gender') 
-                          option
-                          option(value = 'Male')
-                            |Male
-                          option(value = 'Female')
-                            |Female
-                  .booking-page__item
-                    each item in ddata.second
-                      .form__item(data-aos='fade-up')  
-                        +input(name = item.name placeholder = item.placeholder type = item.type)
+            form.form(action="/")
+              template(data-guests-template='')
+                .booking-page__inner  
+                  h3.form__title.form__title--left(data-aos='fade-up' data-guests-title='') 
+                    |Guest 1
+                  .booking-page__top
+                    .booking-page__item
+                      each item in ddata.first
+                        .form__item(data-aos='fade-up')  
+                          +input(name = item.name placeholder = item.placeholder type = item.type)
+                      .form__item.select-wrapper(data-aos='fade-up')  
+                        .select
+                          select.select__mobile(name="gender-mob")
+                            option(value="" disabled selected)
+                              |Gender
+                            option(value = 'Male')
+                              |Male
+                            option(value = 'Female')
+                              |Female
+                          select.select__select(name="gender" style='width: 100%' data-select-placeholder='Gender' data-guests-select='') 
+                            option
+                            option(value = 'Male')
+                              |Male
+                            option(value = 'Female')
+                              |Female
+                    .booking-page__item
+                      each item in ddata.second
+                        .form__item(data-aos='fade-up')  
+                          +input(name = item.name placeholder = item.placeholder type = item.type)
+              .booking-page__container(data-guests-container='')
+                .booking-page__inner  
+                  h3.form__title.form__title--left(data-aos='fade-up') 
+                    |Guest 1
+                  .booking-page__top
+                    .booking-page__item
+                      each item in ddata.first
+                        .form__item(data-aos='fade-up')  
+                          +input(name = item.name placeholder = item.placeholder type = item.type)
+                      .form__item.select-wrapper(data-aos='fade-up')  
+                        .select
+                          select.select__mobile(name="gender-mob")
+                            option(value="" disabled selected)
+                              |Gender
+                            option(value = 'Male')
+                              |Male
+                            option(value = 'Female')
+                              |Female
+                          select.select__select(name="gender" style='width: 100%' data-select-placeholder='Gender') 
+                            option
+                            option(value = 'Male')
+                              |Male
+                            option(value = 'Female')
+                              |Female
+                    .booking-page__item
+                      each item in ddata.second
+                        .form__item(data-aos='fade-up')  
+                          +input(name = item.name placeholder = item.placeholder type = item.type)
               .booking-page__inner
                 .form__item(data-aos='fade-up') 
-                  .button-icon.animation
+                  .button-icon.animation(data-add-guest='')
                     .button-icon__icon 
                       +plus-svg.button-icon__svg.button-icon__plus
                     span.button-icon__text.animation__span
