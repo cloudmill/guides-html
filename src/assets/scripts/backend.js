@@ -38,6 +38,9 @@ window.objFormSuccess = {
   updateDBSuccess: function() {
     backRedirect(2);
   },
+  bookingUserData: form => {
+    window.location.href = form.data('redirect');
+  },
 }
 
 window.objFormErrors = {
