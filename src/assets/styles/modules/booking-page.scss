@@ -162,6 +162,13 @@
       grid-template-columns: 1fr;
       column-gap: 0;
     }
+
+    &--row {
+      @media (min-width: $breakpoint) {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+      }
+    }
   }
   &__grid-item {}
   
