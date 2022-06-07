@@ -386,7 +386,7 @@ function forms() {
       file = form.find('input[name=file]'),
       data = file.length ? new FormData() : {};
 
-    form.find('[data-type=get-field], input:checked').each(function() {
+    form.find('[data-type=get-field], input:checked[data-field]').each(function() {
       const val = $(this).val();
 
       if (!val) {
