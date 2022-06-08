@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (button) {
     const template = document.querySelector('[data-guests-template]').content.firstElementChild
     const container = document.querySelector('[data-guests-container]')
-    
+
     button.addEventListener('click', () => {
       const clone = template.cloneNode(true)
       const select = $(clone.querySelector('[data-guests-select]'))
@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
       clone.querySelector('[data-guests-title]').textContent = `Guest ${items.length + 1}`
       initSelect(select)
       container.append(clone)
+
+      window.dispatchEvent(new CustomEvent('guestAdded', {detail: {container: clone, counter: items.length}}));
     })
   }
 })
