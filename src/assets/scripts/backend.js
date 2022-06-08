@@ -277,6 +277,16 @@ window.addEventListener('dayAdded', function(e) {
   });
 });
 
+window.addEventListener('guestAdded', function(e) {
+  const container = $(e.detail.container);
+
+  container.find('[data-type=get-field]').each(function() {
+    const field = $(this).data('field');
+
+    $(this).attr('data-field', field.replace('[]', `[${e.detail.counter}]`));
+  });
+});
+
 window.addEventListener('seasonAdded', function(e) {
   const item = $(e.detail.item),
     count = e.detail.count,
